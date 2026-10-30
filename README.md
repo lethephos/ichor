@@ -20,7 +20,10 @@ npm run preview  # serve the build
   - `sources.json` — the “All versions” label and note, and the source groups (`id`, `label`, `full`, `note`).
 - `src/data.js` — loads the JSON and adds layout coordinates.
 - `src/main.js` — tree, controls, card, curse and thread panels.
-- `src/style.css` — styles.
+- `src/styles/` — styles. `index.css` imports the rest in order:
+  - `tokens.css` — design tokens: colours for the light (black-figure) and dark (red-figure) themes, fonts, shadow. Change a colour here, nowhere else.
+  - `base.css` — page frame, box sizing, focus rings.
+  - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
 - `prototype/ichor-atreidae.html` — the original single-file prototype, kept as the reference.
 
 Source group ids: `E` Homer & epic, `H` Hesiod, `T` Lyric & tragedy, `A` Apollodorus, `L` Later writers.

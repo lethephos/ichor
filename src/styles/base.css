@@ -1,0 +1,9 @@
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:var(--ui);font-size:14px;line-height:1.5;display:flex;flex-direction:column;overflow:hidden}
+.tab:focus-visible,.toggle:focus-visible,.act:focus-visible,.rel:focus-visible,.close:focus-visible{outline:1.5px solid var(--transform);outline-offset:3px}

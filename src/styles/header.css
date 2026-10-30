@@ -1,0 +1,10 @@
+header{padding:18px 20px 0}
+.wordmark{font-family:var(--display);font-weight:400;font-size:52px;line-height:.9;margin:0;letter-spacing:.01em}
+.sub{font-family:var(--display);font-size:19px;margin-top:6px}
+.sub span{color:var(--muted)}
+.branch{font:500 13px var(--ui);margin-top:10px}
+.branch span{color:var(--muted);margin-right:8px}
+.meander{display:block;width:100%;height:10px;color:var(--line);margin:14px 0 0;opacity:.7}
+@media (min-width:900px){
+  header{padding:22px 28px 0}
+}

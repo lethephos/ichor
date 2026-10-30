@@ -1,0 +1,30 @@
+#card{position:fixed;left:0;right:0;bottom:0;max-height:66%;overflow-y:auto;background:var(--bg-2);border-top:1px solid var(--rule);padding:22px 22px calc(22px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .3s ease;z-index:5;box-shadow:0 -12px 30px var(--shadow)}
+#card.open{transform:none}
+@media (min-width:900px){
+  #card{left:auto;top:calc(env(safe-area-inset-top,0px) + 20px);bottom:20px;right:20px;width:400px;max-height:none;border:1px solid var(--rule);transform:translateX(125%)}
+}
+@media (prefers-reduced-motion: reduce){#card{transition:none}}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.greek{font-family:var(--display);font-size:20px;color:var(--muted)}
+.close{flex:0 0 auto;background:none;border:none;color:var(--muted);font:500 13px var(--ui);cursor:pointer;padding:2px 0}
+.card-name{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;margin:4px 0 0}
+.card-tag{font-family:var(--display);font-size:21px;line-height:1.35;margin:10px 0 0}
+.card-role{color:var(--muted);margin:6px 0 0}
+.card-story{font-family:var(--display);font-size:17px;line-height:1.6;margin:14px 0 0}
+.sec{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.sec h3{font:500 12px var(--ui);color:var(--muted);margin:0 0 8px}
+.rels{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.rels li{display:flex;flex-wrap:wrap;column-gap:10px;align-items:baseline}
+.rel{background:none;border:none;padding:0;font:17px var(--display);color:var(--text);cursor:pointer;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.rel:hover{text-decoration-color:var(--figure)}
+.rel.static{text-decoration:none;cursor:default}
+.srcs{font-size:12px;color:var(--muted)}
+.srcs b{font-weight:600;color:var(--text)}
+.note{font-family:var(--display);font-size:15px;color:var(--muted);flex-basis:100%}
+.ver{font-family:var(--display);font-size:16px;line-height:1.6;border-left:2px solid var(--transform);padding:2px 0 2px 14px}
+.art li{display:block}
+.art .t{font-family:var(--display);font-size:16px}
+.art a.t{color:var(--text);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.art a.t:hover{text-decoration-color:var(--figure)}
+.art .m{font-size:12px;color:var(--muted)}
+.legend{font-size:12px;color:var(--muted);margin-top:22px}

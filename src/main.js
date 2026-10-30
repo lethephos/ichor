@@ -67,10 +67,10 @@ jump.onchange = () => { if (jump.value) { select(jump.value, true); jump.value =
 /* ---------- graph ---------- */
 const svg = d3.select("#graph");
 const defs = svg.append("defs");
-[["curse","var(--curse)"],["transform","var(--transform)"]].forEach(([id,c]) => {
+["curse","transform"].forEach(id => {
   defs.append("marker").attr("id","arr-"+id).attr("viewBox","0 0 10 10").attr("refX",8).attr("refY",5)
     .attr("markerWidth",6).attr("markerHeight",6).attr("orient","auto-start-reverse")
-    .append("path").attr("d","M0,0 L10,5 L0,10 z").style("fill",c);
+    .append("path").attr("class","arrow-"+id).attr("d","M0,0 L10,5 L0,10 z");
 });
 const root = svg.append("g");
 const gGrid = root.append("g");
@@ -102,20 +102,12 @@ function edgePath(e){
   return `M${a.x+u1[0]*(RN+2)},${a.y+u1[1]*(RN+2)} Q${cx},${cy} ${b.x-u2[0]*pad},${b.y-u2[1]*pad}`;
 }
 const BASE = {parent:1.2, marriage:4, affair:1.2, feud:1.2, transform:1.8, curse:1.7};
-const edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class","e");
+const edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class", e => `e e-${e.type}`);
 edgeSel.each(function(e){
   const g = d3.select(this), d = edgePath(e);
-  if (e.type==="marriage") {
-    g.append("path").attr("class","edge main").attr("d",d).style("stroke","var(--line)");
-    g.append("path").attr("class","edge inner").attr("d",d).style("stroke","var(--bg)").attr("stroke-width",1.3);
-  } else {
-    const p = g.append("path").attr("class","edge main").attr("d",d);
-    if (e.type==="parent") p.style("stroke","var(--line)");
-    if (e.type==="affair") p.style("stroke","var(--line)").attr("stroke-dasharray","5 4");
-    if (e.type==="feud") p.style("stroke","var(--line)").attr("stroke-dasharray","9 3 1.5 3");
-    if (e.type==="transform") p.style("stroke","var(--transform)").attr("stroke-dasharray","1 5").attr("stroke-linecap","round").attr("marker-end","url(#arr-transform)");
-    if (e.type==="curse") p.style("stroke","var(--curse)").attr("marker-end","url(#arr-curse)");
-  }
+  const p = g.append("path").attr("class","edge main").attr("d",d);
+  if (e.type==="marriage") g.append("path").attr("class","edge inner").attr("d",d);
+  if (e.type==="transform" || e.type==="curse") p.attr("marker-end",`url(#arr-${e.type})`);
 });
 
 const nodeSel = gNodes.selectAll("g.node").data(P).join("g")
@@ -125,20 +117,12 @@ const nodeSel = gNodes.selectAll("g.node").data(P).join("g")
   .on("keydown", (ev,d) => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); nodeClick(d.id); } });
 nodeSel.each(function(d){
   const g = d3.select(this);
-  g.append("circle").attr("r",26).style("fill","transparent");
+  g.append("circle").attr("class","hit").attr("r",26);
   g.append("circle").attr("class","halo").attr("r",16);
-  if (d.kind==="god") {
-    g.append("circle").attr("r",RN+4).style("fill","none").style("stroke","var(--figure)").attr("stroke-width",1);
-    g.append("circle").attr("r",RN).style("fill","var(--figure)");
-  } else if (d.kind==="other-cycle") {
-    g.append("circle").attr("r",RN).style("fill","var(--bg)").style("stroke","var(--figure)").attr("stroke-width",1.3).attr("stroke-dasharray","2.5 2.5");
-  } else if (d.kind==="nymph") {
-    g.append("circle").attr("r",RN-2).style("fill","var(--figure)");
-  } else {
-    g.append("circle").attr("r",RN).style("fill","var(--figure)");
-  }
+  if (d.kind==="god") g.append("circle").attr("class","ring").attr("r",RN+4);
+  g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
   if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
-      .attr("transform",`translate(${RN+7},${-RN-3})`).style("fill","var(--transform)");
+      .attr("transform",`translate(${RN+7},${-RN-3})`);
   g.append("text").attr("class","lbl" + (d.kind==="god"?" god":"")).attr("text-anchor","middle").attr("y", d.kind==="god" ? 34 : 30).text(d.name);
 });
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
@@ -247,7 +231,7 @@ function renderNode(id){
     <p class="card-tag">${p.tagline}</p>
     <p class="card-role">${p.role}</p>
     <p class="card-story">${p.story}</p>
-    ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel" style="text-decoration:none;cursor:default">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
+    ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
     ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
     ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(({title:t, meta:m, where:w, url:u}) => `<li>${u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t">${t}</span>`}<br><span class="m">${m}. ${w}</span></li>`).join("")}</ul></div>` : ""}
@@ -280,10 +264,10 @@ function openCurse(key){
   threadBtn.setAttribute("aria-pressed","false");
   shell(`
     <div class="card-top"><span class="greek">Ἀρά</span><button class="close" data-close>Close</button></div>
-    <h2 class="card-name" style="font-size:32px">${c.title}</h2>
+    <h2 class="card-name curse-title">${c.title}</h2>
     <p class="card-tag">${c.lead}</p>
     <div class="sec"><h3>Generation by generation</h3><ol class="steps">
-      ${c.steps.map(({generation:g, figures:who, text:t}) => `<li><span class="g">${g}</span><div><div class="t">${t}</div><div style="margin-top:4px">${who.map(id => `<button class="rel" data-go="${id}" style="font-size:15px;margin-right:10px">${N[id].name}</button>`).join("")}</div></div></li>`).join("")}
+      ${c.steps.map(({generation:g, figures:who, text:t}) => `<li><span class="g">${g}</span><div><div class="t">${t}</div><div class="who">${who.map(id => `<button class="rel" data-go="${id}">${N[id].name}</button>`).join("")}</div></div></li>`).join("")}
     </ol></div>
     <p class="legend">Highlighted on the tree: the bloodline, the crimes and the curses that carry it forward.</p>`);
   apply(true);
@@ -297,7 +281,7 @@ function openThread(){
   const opts = [...P].sort((a,b) => a.name.localeCompare(b.name)).map(p => `<option value="${p.id}">${p.name}</option>`).join("");
   shell(`
     <div class="card-top"><span class="greek">Μίτος</span><button class="close" data-close>Close</button></div>
-    <h2 class="card-name" style="font-size:34px">Ariadne’s thread</h2>
+    <h2 class="card-name thread-title">Ariadne’s thread</h2>
     <p class="card-tag">Pick any two figures to find the shortest path between them.</p>
     <div class="pick">
       <label>From<select id="tFrom"><option value="">Choose, or tap the tree</option>${opts}</select></label>
