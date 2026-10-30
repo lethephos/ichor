@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, OX, W, H, P, N, E, CURSES} from "./data.js";
+import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, CURSES, BRANCH, HOUSES} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -81,8 +81,7 @@ ROWY.forEach((y,i) => {
   gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
   if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
 });
-gGrid.append("text").attr("class","house").attr("x",OX-470).attr("y",ROWY[1]+8).attr("text-anchor","middle").text("House of Labdacus");
-gGrid.append("text").attr("class","house").attr("x",OX+430).attr("y",ROWY[1]+60).attr("text-anchor","middle").text("House of Atreus");
+HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
 
 const RN = 8;
 function norm(x,y){ const l = Math.hypot(x,y)||1; return [x/l, y/l]; }
@@ -134,7 +133,7 @@ const wide = () => window.innerWidth >= 900;
 function fitTo(ids, animate){
   const pts = ids ? ids.map(id => N[id]) : P;
   const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
-  const x0 = Math.min(...xs) - (ids?80:OX), x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
+  const x0 = ids ? Math.min(...xs) - 80 : -20, x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
   const w = graphEl.clientWidth - (wide() ? 420 : 0), h = wide() ? graphEl.clientHeight : graphEl.clientHeight * (ids ? 0.42 : 1);
   const k = Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95);
   const t = d3.zoomIdentity.translate((w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
@@ -153,7 +152,8 @@ function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min(w/W, h/H) >= 0.5) { fitTo(null, false); return; }
   const k = 0.55;
-  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - (OX+380)*k, h/2 - 480*k).scale(k));
+  const cy = (ROWY[0] + ROWY[ROWY.length-1]) / 2;
+  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[BRANCH.focus].x*k, h/2 - cy*k).scale(k));
 }
 
 /* ---------- visibility ---------- */
