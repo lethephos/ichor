@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ichor — The family tree of the Greek gods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<header>
+  <h1 class="wordmark">Ichor</h1>
+  <div class="sub">The family tree of the Greek gods</div>
+  <div class="branch"><span>Now exploring</span> Two cursed houses: Atreus and Labdacus</div>
+  <svg class="meander" aria-hidden="true" preserveAspectRatio="none">
+    <defs><pattern id="mq" width="20" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 9.5 H17 V0.5 H5 V6 H12 V3.5" fill="none" stroke="currentColor" stroke-width="1"/>
+    </pattern></defs>
+    <rect width="100%" height="10" fill="url(#mq)"/>
+  </svg>
+</header>
+
+<div class="controls">
+  <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
+  <p class="src-note" id="srcNote" aria-live="polite"></p>
+  <div class="row" id="layerRow" role="group" aria-label="Layers"><span class="row-label">Show</span></div>
+  <div class="row">
+    <span class="row-label">Explore</span>
+    <select class="act" id="curseSel" aria-label="Trace a curse">
+      <option value="">Trace a curse</option>
+    </select>
+    <button class="act" id="threadBtn" aria-pressed="false">Ariadne’s thread</button>
+    <button class="act" id="fitBtn">See the whole tree</button>
+    <select class="act" id="jump" aria-label="Find a figure"><option value="">Find a figure</option></select>
+  </div>
+</div>
+
+<div id="stage">
+  <svg id="graph" role="img" aria-label="Family tree of the houses of Atreus and Labdacus"></svg>
+  <div class="hint">Tap a figure to open its card. Pinch or scroll to zoom.</div>
+</div>
+
+<aside id="card" aria-live="polite"></aside>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

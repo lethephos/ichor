@@ -1,0 +1,91 @@
+[
+  {
+    "id": "atreus",
+    "title": "The curse on the House of Atreus",
+    "lead": "Five generations, each paying for the last.",
+    "pairs": [
+      ["tantalus", "pelops"],
+      ["myrtilus", "pelops"],
+      ["pelops", "atreus"],
+      ["pelops", "thyestes"],
+      ["atreus", "thyestes"],
+      ["thyestes", "aerope"],
+      ["atreus", "agamemnon"],
+      ["thyestes", "aegisthus"],
+      ["aegisthus", "atreus"],
+      ["agamemnon", "iphigenia"],
+      ["clytemnestra", "agamemnon"],
+      ["aegisthus", "agamemnon"],
+      ["agamemnon", "orestes"],
+      ["orestes", "clytemnestra"],
+      ["orestes", "aegisthus"]
+    ],
+    "steps": [
+      {
+        "generation": "Generation I",
+        "figures": ["tantalus"],
+        "text": "Tantalus serves his son Pelops to the gods. The gods restore the boy; Tantalus is punished forever."
+      },
+      {
+        "generation": "Generation II",
+        "figures": ["pelops", "myrtilus"],
+        "text": "Pelops wins Hippodamia by bribing Myrtilus, then throws him into the sea. Falling, Myrtilus curses Pelops and all his line."
+      },
+      {
+        "generation": "Generation III",
+        "figures": ["atreus", "thyestes"],
+        "text": "Thyestes seduces his brother’s wife and steals the golden lamb. Atreus feeds Thyestes his own sons, and Thyestes curses the house of Atreus."
+      },
+      {
+        "generation": "Generation IV",
+        "figures": ["agamemnon", "clytemnestra", "aegisthus"],
+        "text": "Agamemnon sacrifices Iphigenia to sail for Troy. On his return, Clytemnestra and Aegisthus kill him."
+      },
+      {
+        "generation": "Generation V",
+        "figures": ["orestes"],
+        "text": "Orestes kills his mother and Aegisthus. Hunted by the Furies, he is tried in Athens and acquitted. The chain breaks."
+      }
+    ]
+  },
+  {
+    "id": "labdacus",
+    "title": "The curse on the House of Labdacus",
+    "lead": "A crime in Pelops’s house echoes through Thebes.",
+    "pairs": [
+      ["pelops", "laius"],
+      ["pelops", "chrysippus"],
+      ["laius", "chrysippus"],
+      ["labdacus", "laius"],
+      ["laius", "oedipus"],
+      ["oedipus", "laius"],
+      ["oedipus", "jocasta"],
+      ["oedipus", "eteocles"],
+      ["oedipus", "polynices"],
+      ["eteocles", "polynices"],
+      ["oedipus", "antigone"]
+    ],
+    "steps": [
+      {
+        "generation": "Generation II",
+        "figures": ["pelops"],
+        "text": "Laius abducts Chrysippus, the son of Pelops, and Pelops curses him. Only later sources tell this origin."
+      },
+      {
+        "generation": "Generation III",
+        "figures": ["laius"],
+        "text": "An oracle warns Laius that his son will kill him. He has the infant exposed on a mountain."
+      },
+      {
+        "generation": "Generation IV",
+        "figures": ["oedipus", "jocasta"],
+        "text": "Grown and unaware, Oedipus kills Laius at a crossroads and marries the widowed queen, his mother. When the truth comes out, Jocasta dies and Oedipus blinds himself."
+      },
+      {
+        "generation": "Generation V",
+        "figures": ["eteocles", "polynices", "antigone"],
+        "text": "Oedipus curses his sons, and they kill each other over Thebes. Antigone buries Polynices against the king’s order and is condemned."
+      }
+    ]
+  }
+]

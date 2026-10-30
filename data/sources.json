@@ -1,0 +1,38 @@
+{
+  "all": {
+    "label": "All versions",
+    "note": "Every version at once. Pick a source and watch the family rearrange itself."
+  },
+  "groups": [
+    {
+      "id": "E",
+      "label": "Homer & epic",
+      "full": "Homer, the Homeric Hymns, the Cypria",
+      "note": "In Homer, Atreus fathers Agamemnon, Tyndareus fathers both twins, and Iphigenia does not exist."
+    },
+    {
+      "id": "H",
+      "label": "Hesiod",
+      "full": "Theogony, Catalogue of Women",
+      "note": "In Hesiod, Pleisthenes fathers Agamemnon, Zeus fathers both twins, and Iphigenia becomes Hecate."
+    },
+    {
+      "id": "T",
+      "label": "Lyric & tragedy",
+      "full": "Pindar, Stesichorus, Aeschylus, Sophocles, Euripides",
+      "note": "In tragedy, Clytemnestra strikes the blow herself, and Oedipus blinds himself."
+    },
+    {
+      "id": "A",
+      "label": "Apollodorus",
+      "full": "The Library",
+      "note": "Apollodorus records rival versions side by side: two fathers for Agamemnon, two mothers for Helen."
+    },
+    {
+      "id": "L",
+      "label": "Later writers",
+      "full": "Pausanias, Hyginus, Ovid",
+      "note": "In later writers, Nemesis is Helen’s mother and Pelops’s curse falls on Thebes."
+    }
+  ]
+}

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ichor — The family tree of the Greek gods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#D9A27B; --bg-2:#E6BA95; --rule:#B4784F;
+  --text:#1F150E; --muted:#5E3D27; --line:#1F150E; --figure:#1F150E;
+  --curse:#7D1C10; --transform:#FBF3E4;
+  --display:"GFS Didot", "Didot", "Bodoni 72", Georgia, serif;
+  --ui:"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#120D09; --bg-2:#1D150F; --rule:#3B2B1F;
+    --text:#EBC7A4; --muted:#9E7B5F; --line:#C9814F; --figure:#C9814F;
+    --curse:#B8452D; --transform:#F1E7D4;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#120D09; --bg-2:#1D150F; --rule:#3B2B1F;
+  --text:#EBC7A4; --muted:#9E7B5F; --line:#C9814F; --figure:#C9814F;
+  --curse:#B8452D; --transform:#F1E7D4;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:var(--ui);font-size:14px;line-height:1.5;display:flex;flex-direction:column;overflow:hidden}
+
+header{padding:18px 20px 0}
+.wordmark{font-family:var(--display);font-weight:400;font-size:52px;line-height:.9;margin:0;letter-spacing:.01em}
+.sub{font-family:var(--display);font-size:19px;margin-top:6px}
+.sub span{color:var(--muted)}
+.branch{font:500 13px var(--ui);margin-top:10px}
+.branch span{color:var(--muted);margin-right:8px}
+.meander{display:block;width:100%;height:10px;color:var(--line);margin:14px 0 0;opacity:.7}
+
+.controls{padding:10px 20px 6px;display:flex;flex-direction:column;gap:2px;border-bottom:1px solid var(--rule)}
+.row{display:flex;gap:18px;align-items:center;overflow-x:auto;scrollbar-width:none;padding:4px 0;white-space:nowrap}
+.row::-webkit-scrollbar{display:none}
+.row-label{flex:0 0 auto;color:var(--muted);font-size:12px;width:52px}
+.src-note{font-family:var(--display);font-size:15px;color:var(--muted);margin:0 0 4px 70px;min-height:1.5em}
+.tab{flex:0 0 auto;background:none;border:none;padding:4px 0;font:500 13px var(--ui);color:var(--muted);cursor:pointer;border-bottom:1.5px solid transparent}
+.tab[aria-pressed="true"]{color:var(--text);border-bottom-color:var(--figure)}
+.toggle{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;background:none;border:none;padding:4px 0;font:500 13px var(--ui);color:var(--text);cursor:pointer}
+.toggle[aria-pressed="false"]{opacity:.35}
+.toggle svg{width:26px;height:10px;overflow:visible}
+.act{flex:0 0 auto;background:none;border:1px solid var(--rule);border-radius:2px;padding:5px 10px;font:500 13px var(--ui);color:var(--text);cursor:pointer}
+.act[aria-pressed="true"]{border-color:var(--transform);box-shadow:inset 0 0 0 1px var(--transform)}
+select.act{appearance:none;-webkit-appearance:none;padding-right:22px;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 12px) 50%,calc(100% - 8px) 50%;background-size:4px 4px;background-repeat:no-repeat}
+select.act option{background:var(--bg-2);color:var(--text)}
+.tab:focus-visible,.toggle:focus-visible,.act:focus-visible,.rel:focus-visible,.close:focus-visible{outline:1.5px solid var(--transform);outline-offset:3px}
+
+#stage{flex:1;position:relative;min-height:0}
+#graph{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#graph:active{cursor:grabbing}
+.gen{font-family:var(--display);font-size:15px;fill:var(--muted)}
+.genrule{stroke:var(--rule);stroke-width:1}
+.house{font-family:var(--display);font-size:22px;fill:var(--muted)}
+.lbl{font-family:var(--display);font-size:17px;fill:var(--text);paint-order:stroke;stroke:var(--bg);stroke-width:6px;stroke-linejoin:round;pointer-events:none}
+.lbl.god{fill:var(--muted)}
+.node{cursor:pointer;transition:opacity .3s}
+.node:focus{outline:none}
+.node:focus-visible .halo{stroke:var(--transform)}
+.halo{fill:none;stroke:transparent;stroke-width:1.2}
+.node.sel .halo,.node.ends .halo{stroke:var(--transform)}
+.node.pulse .halo{animation:pulse 1.4s ease-out}
+@keyframes pulse{0%{stroke:var(--transform);stroke-width:6}100%{stroke:transparent;stroke-width:1.2}}
+.edge{fill:none}
+.e.thread .main{stroke:var(--transform)!important;stroke-dasharray:none!important}
+.e.thread .inner{display:none}
+.hint{position:absolute;left:20px;bottom:14px;font-size:12px;color:var(--muted);pointer-events:none}
+
+#card{position:fixed;left:0;right:0;bottom:0;max-height:66%;overflow-y:auto;background:var(--bg-2);border-top:1px solid var(--rule);padding:22px 22px calc(22px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .3s ease;z-index:5;box-shadow:0 -12px 30px rgba(0,0,0,.18)}
+#card.open{transform:none}
+@media (min-width:900px){
+  #card{left:auto;top:calc(env(safe-area-inset-top,0px) + 20px);bottom:20px;right:20px;width:400px;max-height:none;border:1px solid var(--rule);transform:translateX(125%)}
+  header{padding:22px 28px 0}
+  .controls{padding:10px 28px 6px}
+}
+@media (prefers-reduced-motion: reduce){#card,.node{transition:none}.node.pulse .halo{animation:none}}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.greek{font-family:var(--display);font-size:20px;color:var(--muted)}
+.close{flex:0 0 auto;background:none;border:none;color:var(--muted);font:500 13px var(--ui);cursor:pointer;padding:2px 0}
+.card-name{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;margin:4px 0 0}
+.card-tag{font-family:var(--display);font-size:21px;line-height:1.35;margin:10px 0 0}
+.card-role{color:var(--muted);margin:6px 0 0}
+.card-story{font-family:var(--display);font-size:17px;line-height:1.6;margin:14px 0 0}
+.sec{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.sec h3{font:500 12px var(--ui);color:var(--muted);margin:0 0 8px}
+.rels{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.rels li{display:flex;flex-wrap:wrap;column-gap:10px;align-items:baseline}
+.rel{background:none;border:none;padding:0;font:17px var(--display);color:var(--text);cursor:pointer;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.rel:hover{text-decoration-color:var(--figure)}
+.srcs{font-size:12px;color:var(--muted)}
+.srcs b{font-weight:600;color:var(--text)}
+.note{font-family:var(--display);font-size:15px;color:var(--muted);flex-basis:100%}
+.ver{font-family:var(--display);font-size:16px;line-height:1.6;border-left:2px solid var(--transform);padding:2px 0 2px 14px}
+.art li{display:block}
+.art .t{font-family:var(--display);font-size:16px}
+.art a.t{color:var(--text);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.art a.t:hover{text-decoration-color:var(--figure)}
+.art .m{font-size:12px;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:none}
+.steps li{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--rule)}
+.steps li:first-child{border-top:none}
+.steps .g{font-size:12px;color:var(--muted);padding-top:3px}
+.steps .t{font-family:var(--display);font-size:16px;line-height:1.55}
+.pick{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.pick label{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.pick select{font:16px var(--display);color:var(--text);background:var(--bg);border:1px solid var(--rule);padding:8px 10px;border-radius:2px}
+.go{align-self:flex-start;background:var(--figure);color:var(--bg);border:none;border-radius:2px;padding:9px 14px;font:600 13px var(--ui);cursor:pointer;margin-top:4px}
+.thread-steps{list-style:none;margin:0;padding:0}
+.thread-steps li{font-family:var(--display);font-size:16px;line-height:1.55;padding:8px 0 8px 18px;border-left:2px solid var(--transform);margin-left:4px}
+.legend{font-size:12px;color:var(--muted);margin-top:22px}
+</style>
+</head>
+<body>
+<header>
+  <h1 class="wordmark">Ichor</h1>
+  <div class="sub">The family tree of the Greek gods</div>
+  <div class="branch"><span>Now exploring</span> Two cursed houses: Atreus and Labdacus</div>
+  <svg class="meander" aria-hidden="true" preserveAspectRatio="none">
+    <defs><pattern id="mq" width="20" height="10" patternUnits="userSpaceOnUse">
+      <path d="M0 9.5 H17 V0.5 H5 V6 H12 V3.5" fill="none" stroke="currentColor" stroke-width="1"/>
+    </pattern></defs>
+    <rect width="100%" height="10" fill="url(#mq)"/>
+  </svg>
+</header>
+
+<div class="controls">
+  <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
+  <p class="src-note" id="srcNote" aria-live="polite"></p>
+  <div class="row" id="layerRow" role="group" aria-label="Layers"><span class="row-label">Show</span></div>
+  <div class="row">
+    <span class="row-label">Explore</span>
+    <select class="act" id="curseSel" aria-label="Trace a curse">
+      <option value="">Trace a curse</option>
+      <option value="atreus">The curse on the House of Atreus</option>
+      <option value="labdacus">The curse on the House of Labdacus</option>
+    </select>
+    <button class="act" id="threadBtn" aria-pressed="false">Ariadne’s thread</button>
+    <button class="act" id="fitBtn">See the whole tree</button>
+    <select class="act" id="jump" aria-label="Find a figure"><option value="">Find a figure</option></select>
+  </div>
+</div>
+
+<div id="stage">
+  <svg id="graph" role="img" aria-label="Family tree of the houses of Atreus and Labdacus"></svg>
+  <div class="hint">Tap a figure to open its card. Pinch or scroll to zoom.</div>
+</div>
+
+<aside id="card" aria-live="polite"></aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script>
+const SRC = {E:"Homer & epic", H:"Hesiod", T:"Lyric & tragedy", A:"Apollodorus", L:"Later writers"};
+const SRC_FULL = {
+  E:"Homer, the Homeric Hymns, the Cypria",
+  H:"Theogony, Catalogue of Women",
+  T:"Pindar, Stesichorus, Aeschylus, Sophocles, Euripides",
+  A:"The Library",
+  L:"Pausanias, Hyginus, Ovid"
+};
+const SRC_NOTE = {
+  all:"Every version at once. Pick a source and watch the family rearrange itself.",
+  E:"In Homer, Atreus fathers Agamemnon, Tyndareus fathers both twins, and Iphigenia does not exist.",
+  H:"In Hesiod, Pleisthenes fathers Agamemnon, Zeus fathers both twins, and Iphigenia becomes Hecate.",
+  T:"In tragedy, Clytemnestra strikes the blow herself, and Oedipus blinds himself.",
+  A:"Apollodorus records rival versions side by side: two fathers for Agamemnon, two mothers for Helen.",
+  L:"In later writers, Nemesis is Helen’s mother and Pelops’s curse falls on Thebes."
+};
+const ROWY = [90, 245, 400, 555, 710, 865];
+const GENS = ["Gods", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V"];
+const OX = 720;
+const W = 2440, H = 950;
+
+const P = [
+  {id:"ares", n:"Ares", gr:"Ἄρης", g:"m", row:0, x:140, kind:"god", role:"God of war", tag:"The war god, grandfather of a doomed bride.", story:"Father of King Oenomaus in Apollodorus and Pausanias.", art:[["Ludovisi Ares","Roman copy, 2nd century AD, of a Greek original","Palazzo Altemps, Rome","https://en.wikipedia.org/wiki/Ludovisi_Ares"]]},
+  {id:"hermes", n:"Hermes", gr:"Ἑρμῆς", g:"m", row:0, x:300, kind:"god", role:"Messenger of the gods", tag:"His son’s murder starts the curse.", story:"Father of Myrtilus, whose dying curse fell on the house of Pelops. In Apollodorus he carried the advice from Zeus that won Atreus back the throne.", art:[["Hermes and the Infant Dionysus","attributed to Praxiteles; some scholars date it later","Archaeological Museum of Olympia","https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus"]]},
+  {id:"pluto", n:"Plouto", gr:"Πλουτώ", g:"f", row:0, x:520, kind:"nymph", role:"Nymph", tag:"A nymph at the root of the tree.", story:"Later authors name her as the mother of Tantalus by Zeus."},
+  {id:"zeus", n:"Zeus", gr:"Ζεύς", g:"m", row:0, x:760, kind:"god", role:"King of the gods", tag:"Where it all begins.", story:"Father of Tantalus. In some versions, also father of Helen and of one or both of the Dioscuri.", tr:{t:"A swan, to seduce Leda", s:"TA"}, art:[["Artemision Bronze, Zeus or Poseidon","c. 460 BC","National Archaeological Museum, Athens","https://en.wikipedia.org/wiki/Artemision_Bronze"]]},
+  {id:"nemesis", n:"Nemesis", gr:"Νέμεσις", g:"f", row:0, x:1060, kind:"god", role:"Goddess of retribution", tag:"Retribution herself, and perhaps Helen’s mother.", story:"In the Cypria she fled Zeus through many shapes and became the mother of Helen.", tr:{t:"A goose, fleeing Zeus", s:"EA"}, art:[["Head of the Nemesis of Rhamnous","by Agoracritus, 5th century BC","British Museum, London","https://en.wikipedia.org/wiki/Agoracritus"]]},
+  {id:"artemis", n:"Artemis", gr:"Ἄρτεμις", g:"f", row:0, x:1300, kind:"god", role:"Goddess of the hunt", tag:"She demanded a daughter for a deer.", story:"Agamemnon killed her sacred deer and boasted of it. Her price was Iphigenia.", art:[["Diana of Versailles","Roman copy of a Greek bronze attributed to Leochares","Louvre, Paris","https://collections.louvre.fr/ark:/53355/cl010278930"]]},
+
+  {id:"oenomaus", n:"Oenomaus", gr:"Οἰνόμαος", g:"m", row:1, x:160, kind:"mortal", role:"King of Pisa", tag:"Killed every suitor who raced for his daughter.", story:"Son of Ares. He raced his daughter’s suitors in chariots and killed every one who lost.", ver:"Most writers make him a son of Ares. Pausanias, sceptical of divine fathers, also reports a mortal one, Alxion.", art:[["East pediment, Temple of Zeus at Olympia","c. 460 BC","Archaeological Museum of Olympia","https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"]]},
+  {id:"tantalus", n:"Tantalus", gr:"Τάνταλος", g:"m", row:1, x:560, kind:"mortal", role:"King, son of Zeus", tag:"Served his son to the gods.", story:"Tested the gods by serving them his own son, Pelops, and was punished forever in the underworld.", ver:"Most sources make Zeus his father and the nymph Plouto his mother; one ancient commentary on Euripides names the mountain god Tmolus instead. Homer punishes him with endless hunger and thirst; Pindar and Euripides hang a great stone over his head. Pindar even rejects the cannibal feast: in his telling Tantalus stole the gods’ nectar and ambrosia.", art:[["Tantalus, from The Four Disgracers","Hendrick Goltzius after Cornelis van Haarlem, 1588","engraving; this impression at the Metropolitan Museum of Art","https://www.metmuseum.org/art/collection/search/343579"]]},
+
+  {id:"labdacus", n:"Labdacus", gr:"Λάβδακος", g:"m", row:2, x:-300, kind:"mortal", role:"King of Thebes", tag:"Founder of a doomed line.", story:"Grandson of Cadmus and father of Laius. The Labdacids take their name from him."},
+  {id:"myrtilus", n:"Myrtilus", gr:"Μυρτίλος", g:"m", row:2, x:60, kind:"mortal", role:"Charioteer of Oenomaus", tag:"Betrayed his master, was betrayed in turn, and cursed them all.", story:"Son of Hermes. He sabotaged his master’s chariot so Pelops could win. Thrown into the sea by Pelops, he cursed his line as he fell.", art:[["East pediment, Temple of Zeus at Olympia","c. 460 BC; a kneeling figure is often identified as Myrtilus","Archaeological Museum of Olympia","https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"]]},
+  {id:"hippodamia", n:"Hippodamia", gr:"Ἱπποδάμεια", g:"f", row:2, x:220, kind:"mortal", role:"Princess of Pisa", tag:"The prize of a rigged race.", story:"Daughter of Oenomaus, wife of Pelops, mother of Atreus and Thyestes.", art:[["East pediment, Temple of Zeus at Olympia","c. 460 BC","Archaeological Museum of Olympia","https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"]]},
+  {id:"pelops", n:"Pelops", gr:"Πέλοψ", g:"m", row:2, x:400, kind:"mortal", role:"King who gave his name to the Peloponnese", tag:"Won his bride by cheating, then drowned his accomplice.", story:"Son of Tantalus, restored to life by the gods after the terrible feast. He won Hippodamia by treachery and killed Myrtilus. The curse on the house begins here.", ver:"Pindar rejects the terrible feast: in his telling Poseidon fell in love with the boy and carried him off to Olympus.", art:[["East pediment, Temple of Zeus at Olympia","c. 460 BC","Archaeological Museum of Olympia","https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"]]},
+  {id:"niobe", n:"Niobe", gr:"Νιόβη", g:"f", row:2, x:640, kind:"mortal", role:"Queen of Thebes", tag:"Boasted of her children and lost every one.", story:"Daughter of Tantalus. She boasted to Leto of her many children; Apollo and Artemis killed them, and Niobe turned to stone on Mount Sipylus, a rock that still weeps.", tr:{t:"Stone on Mount Sipylus", s:"ETAL"}, art:[["Niobe with Her Younger Daughter","Roman, first half of the 2nd century AD","Uffizi, Florence","https://www.uffizi.it/en/artworks/niobe-with-her-younger-daughter"],["Apollo and Diana Attacking the Children of Niobe","Jacques-Louis David, 1772","Dallas Museum of Art","https://en.wikipedia.org/wiki/Diana_and_Apollo_Killing_Niobe%27s_Children"]]},
+
+  {id:"jocasta", n:"Jocasta", gr:"Ἰοκάστη", g:"f", row:3, x:-470, kind:"mortal", role:"Queen of Thebes", tag:"Wife of Laius, then of her own son.", story:"Mother and wife of Oedipus. When the truth came out, she hanged herself.", ver:"Homer calls her Epicaste. In the lost epic Oedipodeia, as Pausanias reports, Oedipus’s four children are born to a second wife, Euryganeia."},
+  {id:"laius", n:"Laius", gr:"Λάϊος", g:"m", row:3, x:-300, kind:"mortal", role:"King of Thebes", tag:"Abducted a prince and brought a curse on Thebes.", story:"Abducted Chrysippus, son of Pelops, and was cursed for it. Warned that his son would kill him, he had the infant Oedipus exposed.", ver:"The abduction and Pelops’s curse appear only in later sources, probably after Euripides’ lost play Chrysippus.", art:[["The Murder of Laius by Oedipus","Joseph Blanc, 1867","École des Beaux-Arts, Paris","https://en.wikipedia.org/wiki/Joseph_Blanc"]]},
+  {id:"chrysippus", n:"Chrysippus", gr:"Χρύσιππος", g:"m", row:3, x:220, kind:"mortal", role:"Son of Pelops", tag:"The stolen son who links two cursed houses.", story:"Abducted as a youth by Laius of Thebes, whom Pelops then cursed."},
+  {id:"atreus", n:"Atreus", gr:"Ἀτρεύς", g:"m", row:3, x:400, kind:"mortal", role:"King of Mycenae", tag:"Served his brother a dinner of his own children.", story:"On learning of his wife’s affair with his brother, he killed the sons of Thyestes and served them to their father at a feast."},
+  {id:"aerope", n:"Aerope", gr:"Ἀερόπη", g:"f", row:3, x:560, kind:"mortal", role:"Cretan princess", tag:"Gave her husband’s golden lamb to his brother.", story:"Granddaughter of Minos. Wife of Atreus, unfaithful to him with Thyestes."},
+  {id:"thyestes", n:"Thyestes", gr:"Θυέστης", g:"m", row:3, x:720, kind:"mortal", role:"Brother and rival of Atreus", tag:"Seduced his brother’s wife and ate his own sons.", story:"After the terrible feast he cursed the house of Atreus. Father of Aegisthus."},
+  {id:"tyndareus", n:"Tyndareus", gr:"Τυνδάρεως", g:"m", row:3, x:1000, kind:"mortal", role:"King of Sparta", tag:"A mortal king raising the children of Zeus.", story:"Husband of Leda and mortal father of Clytemnestra and Castor."},
+  {id:"leda", n:"Leda", gr:"Λήδα", g:"f", row:3, x:1160, kind:"mortal", role:"Queen of Sparta", tag:"Visited by a swan.", story:"Wife of Tyndareus. Zeus came to her in the form of a swan.", art:[["Leda and the Swan","Correggio, c. 1532","Gemäldegalerie, Berlin","https://recherche.smb.museum/detail/862455/leda-mit-dem-schwan"]]},
+  {id:"theseus", n:"Theseus", gr:"Θησεύς", g:"m", row:3, x:1430, kind:"outer", role:"Hero of Athens", tag:"Kidnapped Helen when she was a girl.", story:"In Stesichorus, Iphigenia is their daughter.", art:[["Theseus and the Minotaur","Antonio Canova, 1781–82","Victoria and Albert Museum, London","https://collections.vam.ac.uk/item/O96376/theseus-and-the-minotaur-statue-canova-antonio"]]},
+
+  {id:"oedipus", n:"Oedipus", gr:"Οἰδίπους", g:"m", row:4, x:-385, kind:"mortal", role:"King of Thebes", tag:"Killed his father, married his mother.", story:"Exposed as a baby, he grew up in Corinth, killed Laius at a crossroads and married Jocasta. Learning the truth, he blinded himself and cursed his sons.", ver:"Homer: Epicaste hangs herself and Oedipus goes on ruling Thebes. Sophocles: he blinds himself and goes into exile. The epic Thebaid already has him curse his sons, over his father’s golden cup and a slighting cut of meat.", art:[["Oedipus and the Sphinx","Jean-Auguste-Dominique Ingres, 1808, reworked 1827","Louvre, Paris","https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_(Ingres)"],["Oedipus and Antigone, or The Plague of Thebes","Charles Jalabert, 1842","Musée des Beaux-Arts, Marseille","https://en.wikipedia.org/wiki/Charles_Jalabert"]]},
+  {id:"pleisthenes", n:"Pleisthenes", gr:"Πλεισθένης", g:"m", row:4, x:250, kind:"mortal", role:"Prince of Mycenae", tag:"The forgotten father, written out of Homer.", story:"In the Catalogue of Women and Apollodorus, the true father of Agamemnon and Menelaus. He died young, and Atreus raised his sons.", ver:"Homer never mentions him. Tzetzes, citing Hesiod and Aeschylus, makes him a son of Atreus and Aerope."},
+  {id:"agamemnon", n:"Agamemnon", gr:"Ἀγαμέμνων", g:"m", row:4, x:420, kind:"mortal", role:"King of Mycenae, leader of the Greeks at Troy", tag:"Sacrificed his daughter to win a war.", story:"Murdered in his own house on his return from Troy.", ver:"Homer: son of Atreus. The Catalogue of Women, Aeschylus (as reported by Tzetzes) and Apollodorus: son of Pleisthenes, raised by Atreus. His mother is Aerope, or in one report Cleolla.", art:[["The Mask of Agamemnon","gold funerary mask, c. 1550–1500 BC, centuries older than any Trojan War","National Archaeological Museum, Athens","https://en.wikipedia.org/wiki/Mask_of_Agamemnon"]]},
+  {id:"menelaus", n:"Menelaus", gr:"Μενέλαος", g:"m", row:4, x:580, kind:"mortal", role:"King of Sparta", tag:"The husband left behind.", story:"Husband of Helen. Her flight with Paris sparked the Trojan War.", ver:"As with Agamemnon: son of Atreus or of Pleisthenes, depending on the source.", art:[["The Pasquino Group, Menelaus Supporting the Body of Patroclus","Roman copy; some scholars read it as Ajax with Achilles","Loggia dei Lanzi, Florence","https://en.wikipedia.org/wiki/Pasquino_Group"]]},
+  {id:"pelopia", n:"Pelopia", gr:"Πελόπεια", g:"f", row:4, x:760, kind:"mortal", role:"Daughter of Thyestes", tag:"Bore a son to avenge her father.", story:"In Hyginus, mother of Aegisthus, the son born to avenge Thyestes on Atreus."},
+  {id:"clytemnestra", n:"Clytemnestra", gr:"Κλυταιμνήστρα", g:"f", row:4, x:940, kind:"mortal", role:"Queen of Mycenae", tag:"Waited ten years to kill her husband.", story:"She avenged Iphigenia by killing Agamemnon, and died at her son’s hand.", ver:"Homer: an accomplice, while Aegisthus strikes the blow. Aeschylus: she kills Agamemnon herself.", art:[["Clytemnestra","John Collier, 1882","Guildhall Art Gallery, London","https://en.wikipedia.org/wiki/Clytemnestra_(Collier)"],["Clytemnestra Hesitates before Killing the Sleeping Agamemnon","Pierre-Narcisse Guérin, 1817","Louvre, Paris","https://mythopedia.com/topics/clytemnestra/"]]},
+  {id:"helen", n:"Helen", gr:"Ἑλένη", g:"f", row:4, x:1120, kind:"mortal", role:"Queen of Sparta", tag:"The face that launched a thousand ships.", story:"She left her husband Menelaus and sailed with Paris to Troy.", ver:"Homer: daughter of Zeus, her mother unnamed. Euripides and Apollodorus: daughter of Zeus and Leda, hatched from an egg. The Cypria and Pausanias: her mother is Nemesis, and Leda only nursed her.", art:[["Helen of Troy","Evelyn De Morgan, 1898","De Morgan Collection, shown at Wightwick Manor","https://en.wikipedia.org/wiki/Helen_of_Troy_(painting)"],["The Abduction of Helen","Guido Reni, 1628–31","Louvre, Paris","https://en.wikipedia.org/wiki/The_Abduction_of_Helen_(Reni)"]]},
+  {id:"paris", n:"Paris", gr:"Πάρις", g:"m", row:4, x:1280, kind:"outer", role:"Prince of Troy", tag:"Chose Aphrodite and took Helen.", story:"Carried Helen away from Sparta.", art:[["The Judgement of Paris","Peter Paul Rubens, probably 1632–35","National Gallery, London","https://www.nationalgallery.org.uk/paintings/NG194"]]},
+  {id:"castor", n:"Castor", gr:"Κάστωρ", g:"m", row:4, x:1430, kind:"mortal", role:"One of the Dioscuri", tag:"The mortal twin.", story:"Usually a son of Tyndareus, though some sources make both twins sons of Zeus.", art:[["The San Ildefonso Group","Roman, c. 10 BC; read as Castor and Pollux, or as Orestes and Pylades","Prado, Madrid","https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62"]]},
+  {id:"polydeuces", n:"Polydeuces", gr:"Πολυδεύκης", g:"m", row:4, x:1580, kind:"mortal", role:"One of the Dioscuri", tag:"Shared his immortality with his brother.", story:"The immortal twin, who gave up half his immortality to share it with Castor.", ver:"The Odyssey: both twins are sons of Tyndareus. Hesiod and the Homeric Hymns: both are sons of Zeus. Pindar and Apollodorus: only Polydeuces is the son of Zeus, and so immortal.", art:[["The Rape of the Daughters of Leucippus","Peter Paul Rubens with Jan Wildens, c. 1618","Alte Pinakothek, Munich","https://www.sammlung.pinakothek.de/en/artwork/5RGQJo84z3/peter-paul-rubens/raub-der-toechter-des-leukippos"]]},
+
+  {id:"eteocles", n:"Eteocles", gr:"Ἐτεοκλῆς", g:"m", row:5, x:-560, kind:"mortal", role:"King of Thebes", tag:"Refused to share the throne.", story:"Son of Oedipus. He kept Thebes from his brother, and they killed each other in single combat."},
+  {id:"polynices", n:"Polynices", gr:"Πολυνείκης", g:"m", row:5, x:-440, kind:"mortal", role:"Exiled prince of Thebes", tag:"Marched an army against his own city.", story:"Son of Oedipus. Exiled, he led the Seven against Thebes and died by his brother’s hand.", art:[["Antigone in Front of the Dead Polyneikes","Nikiforos Lytras, 1865","National Gallery, Athens","https://www.nationalgallery.gr/en/artist/lytras-nikephoros/"]]},
+  {id:"antigone", n:"Antigone", gr:"Ἀντιγόνη", g:"f", row:5, x:-320, kind:"mortal", role:"Daughter of Oedipus", tag:"Buried her brother against the king’s law.", story:"She guided her blind father in exile, then buried Polynices in defiance of Creon and was condemned to death.", art:[["Antigone in Front of the Dead Polyneikes","Nikiforos Lytras, 1865","National Gallery, Athens","https://www.nationalgallery.gr/en/artist/lytras-nikephoros/"],["Oedipus and Antigone, or The Plague of Thebes","Charles Jalabert, 1842","Musée des Beaux-Arts, Marseille","https://en.wikipedia.org/wiki/Charles_Jalabert"]]},
+  {id:"ismene", n:"Ismene", gr:"Ἰσμήνη", g:"f", row:5, x:-200, kind:"mortal", role:"Daughter of Oedipus", tag:"The sister who stayed silent.", story:"She would not join Antigone in defying Creon."},
+  {id:"pylades", n:"Pylades", gr:"Πυλάδης", g:"m", row:5, x:140, kind:"mortal", role:"Friend of Orestes", tag:"The friend who never left.", story:"Orestes’s cousin and his companion in exile and revenge. He marries Electra.", art:[["Pylades and Orestes Brought as Victims before Iphigenia","Benjamin West, 1766","Tate Britain, London","https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia"],["The San Ildefonso Group","Roman, c. 10 BC; the Prado reads it as Orestes and Pylades","Prado, Madrid","https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62"]]},
+  {id:"electra", n:"Electra", gr:"Ἠλέκτρα", g:"f", row:5, x:280, kind:"mortal", role:"Daughter of Agamemnon", tag:"Lived for her father’s revenge.", story:"She helped her brother avenge their father.", ver:"Homer names Agamemnon’s daughters as Chrysothemis, Laodice and Iphianassa. The Catalogue of Women already has Electra, beside Iphimede. The lyric poet Xanthus says Electra was first called Laodice.", art:[["Electra at the Tomb of Agamemnon","Frederic Leighton, c. 1869","Ferens Art Gallery, Hull","https://www.rbkc.gov.uk/lordleightonsdrawings/ldcollection/paintingrecord.asp?workid=762"]]},
+  {id:"chrysothemis", n:"Chrysothemis", gr:"Χρυσόθεμις", g:"f", row:5, x:420, kind:"mortal", role:"Daughter of Agamemnon", tag:"The sister who would not take sides.", story:"In Sophocles she tried to talk Electra out of revenge."},
+  {id:"iphigenia", n:"Iphigenia", gr:"Ἰφιγένεια", g:"f", row:5, x:560, kind:"mortal", role:"Daughter of Agamemnon", tag:"The daughter on the altar.", story:"Sacrificed to Artemis so the Greek fleet could sail for Troy.", tr:{t:"Replaced by a deer, or made immortal", s:"EHTA"}, ver:"Homer does not know her. The Cypria: Artemis swaps her for a deer and makes her immortal. Catalogue of Women: as Iphimede she becomes Hecate by the will of Artemis. Aeschylus: she dies at the altar. Euripides: Artemis carries her to the land of the Taurians. Stesichorus, via Pausanias: she is the daughter of Theseus and Helen, raised by Clytemnestra.", art:[["The Sacrifice of Iphigenia","Giovanni Battista Tiepolo, 1757","Villa Valmarana ai Nani, Vicenza","https://venetoaroundme.regione.veneto.it/en/node/96060"],["The Sacrifice of Iphigenia, wall painting","1st century AD, from the House of the Tragic Poet, Pompeii","National Archaeological Museum, Naples (inv. 9112)","https://www.worldhistory.org/image/3853/the-sacrifice-of-iphigenia/"]]},
+  {id:"orestes", n:"Orestes", gr:"Ὀρέστης", g:"m", row:5, x:700, kind:"mortal", role:"Son of Agamemnon", tag:"Killed his mother and ended the curse.", story:"Hunted by the Furies after the killing, he was tried in Athens and acquitted.", art:[["Orestes Pursued by the Furies (The Remorse of Orestes)","William-Adolphe Bouguereau, 1862","Chrysler Museum of Art, Norfolk","https://chrysler.emuseum.com/objects/27206"],["Pylades and Orestes Brought as Victims before Iphigenia","Benjamin West, 1766","Tate Britain, London","https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia"]]},
+  {id:"aegisthus", n:"Aegisthus", gr:"Αἴγισθος", g:"m", row:5, x:840, kind:"mortal", role:"Son of Thyestes", tag:"Born to kill, and he did.", story:"Clytemnestra’s lover. He killed Atreus, then Agamemnon.", ver:"Homer: Aegisthus kills Agamemnon. Aeschylus: Clytemnestra strikes the blow. Apollodorus and Hyginus: Aegisthus is the son of Thyestes by his own daughter, whom Hyginus names Pelopia.", art:[["Clytemnestra Hesitates before Killing the Sleeping Agamemnon","Pierre-Narcisse Guérin, 1817; Aegisthus urges her on","Louvre, Paris","https://mythopedia.com/topics/clytemnestra/"]]},
+  {id:"hermione", n:"Hermione", gr:"Ἑρμιόνη", g:"f", row:5, x:1000, kind:"mortal", role:"Daughter of Menelaus and Helen", tag:"Promised to two men.", story:"Promised to Orestes, given to Neoptolemus, and finally married to Orestes after all."}
+];
+
+const E = [
+  ["parent","zeus","tantalus","TL"],
+  ["parent","pluto","tantalus","L"],
+  ["parent","tantalus","pelops","TAL"],
+  ["parent","tantalus","niobe","TAL"],
+  ["parent","ares","oenomaus","AL"],
+  ["parent","oenomaus","hippodamia","TAL"],
+  ["parent","hermes","myrtilus","AL"],
+  ["parent","pelops","atreus","TAL"],
+  ["parent","hippodamia","atreus","TAL"],
+  ["parent","pelops","thyestes","TAL"],
+  ["parent","hippodamia","thyestes","TAL"],
+  ["parent","pelops","chrysippus","AL"],
+  ["parent","atreus","pleisthenes","HT"],
+  ["parent","atreus","agamemnon","ETAL"],
+  ["parent","atreus","menelaus","ETAL"],
+  ["parent","pleisthenes","agamemnon","HTA"],
+  ["parent","pleisthenes","menelaus","HTA"],
+  ["parent","aerope","agamemnon","HTAL"],
+  ["parent","aerope","menelaus","HTAL"],
+  ["parent","thyestes","pelopia","L"],
+  ["parent","thyestes","aegisthus","ETAL"],
+  ["parent","pelopia","aegisthus","L"],
+  ["parent","tyndareus","clytemnestra","EHTA"],
+  ["parent","leda","clytemnestra","TA"],
+  ["parent","zeus","helen","ETA"],
+  ["parent","leda","helen","TA"],
+  ["parent","nemesis","helen","EAL"],
+  ["parent","tyndareus","castor","EAL"],
+  ["parent","zeus","castor","EHAL"],
+  ["parent","leda","castor","EA"],
+  ["parent","tyndareus","polydeuces","E"],
+  ["parent","zeus","polydeuces","EHTAL"],
+  ["parent","leda","polydeuces","EA"],
+  ["parent","agamemnon","iphigenia","EHTL"],
+  ["parent","clytemnestra","iphigenia","HTL"],
+  ["parent","theseus","iphigenia","TL","Stesichorus’s version"],
+  ["parent","helen","iphigenia","TL","Stesichorus’s version"],
+  ["parent","agamemnon","electra","HTAL"],
+  ["parent","clytemnestra","electra","HTAL"],
+  ["parent","agamemnon","chrysothemis","ET"],
+  ["parent","clytemnestra","chrysothemis","T"],
+  ["parent","agamemnon","orestes","EHTAL"],
+  ["parent","clytemnestra","orestes","EHTAL"],
+  ["parent","menelaus","hermione","ETA"],
+  ["parent","helen","hermione","ETA"],
+  ["parent","labdacus","laius","TAL"],
+  ["parent","laius","oedipus","ETAL"],
+  ["parent","jocasta","oedipus","ETAL"],
+  ["parent","oedipus","eteocles","TAL"],
+  ["parent","oedipus","polynices","TAL"],
+  ["parent","oedipus","antigone","TAL"],
+  ["parent","oedipus","ismene","TAL"],
+  ["parent","jocasta","eteocles","TA"],
+  ["parent","jocasta","polynices","TA"],
+  ["parent","jocasta","antigone","TA"],
+  ["parent","jocasta","ismene","TA"],
+
+  ["marriage","pelops","hippodamia","TAL"],
+  ["marriage","atreus","aerope","TA"],
+  ["marriage","pleisthenes","aerope","HTA"],
+  ["marriage","agamemnon","clytemnestra","EHTAL"],
+  ["marriage","menelaus","helen","ETAL"],
+  ["marriage","tyndareus","leda","EAL"],
+  ["marriage","orestes","hermione","TA"],
+  ["marriage","pylades","electra","TA"],
+  ["marriage","laius","jocasta","TAL"],
+  ["marriage","oedipus","jocasta","ETAL","without knowing she was his mother"],
+
+  ["affair","thyestes","aerope","TAL","seduced Aerope, his brother’s wife"],
+  ["affair","aegisthus","clytemnestra","ET","became the lover of Clytemnestra while Agamemnon was at Troy"],
+  ["affair","zeus","leda","TAL","came to Leda in the form of a swan"],
+  ["affair","zeus","nemesis","EAL","pursued Nemesis through many shapes"],
+  ["affair","paris","helen","ETA","carried Helen off to Troy"],
+  ["affair","theseus","helen","TAL","abducted Helen when she was a girl"],
+
+  ["feud","zeus","tantalus","ETAL","punished Tantalus forever in the underworld"],
+  ["feud","pelops","oenomaus","TAL","beat Oenomaus in the chariot race; the king died in the wreck"],
+  ["feud","pelops","myrtilus","TAL","threw Myrtilus into the sea"],
+  ["feud","artemis","niobe","EAL","killed the children of Niobe, with Apollo"],
+  ["feud","atreus","thyestes","TAL","served Thyestes his own sons at a feast"],
+  ["feud","aegisthus","atreus","AL","killed Atreus"],
+  ["feud","agamemnon","artemis","ETAL","killed a deer sacred to Artemis and boasted of it"],
+  ["feud","agamemnon","iphigenia","ETAL","sacrificed Iphigenia at Aulis"],
+  ["feud","clytemnestra","agamemnon","ETAL","killed Agamemnon on his return from Troy"],
+  ["feud","aegisthus","agamemnon","EA","killed Agamemnon at a feast"],
+  ["feud","orestes","clytemnestra","EHTAL","killed Clytemnestra, his own mother"],
+  ["feud","orestes","aegisthus","ETAL","killed Aegisthus to avenge his father"],
+  ["feud","menelaus","paris","E","fought Paris in single combat"],
+  ["feud","laius","chrysippus","AL","abducted Chrysippus"],
+  ["feud","oedipus","laius","ETAL","killed Laius at a crossroads, not knowing he was his father"],
+  ["feud","eteocles","polynices","TAL","killed Polynices at the gates of Thebes and died by his hand"],
+
+  ["transform","artemis","iphigenia","EHTA","replaced Iphigenia with a deer, or made her immortal"],
+
+  ["curse","myrtilus","pelops","TA","cursed Pelops and all his line as he fell into the sea"],
+  ["curse","thyestes","atreus","T","cursed the house of Atreus after the feast"],
+  ["curse","pelops","laius","L","cursed Laius for abducting Chrysippus, in a tradition known only from later sources"],
+  ["curse","oedipus","eteocles","ETA","cursed his son Eteocles"],
+  ["curse","oedipus","polynices","ETA","cursed his son Polynices"]
+].map(([type,a,b,s,note],i) => ({i,type,a,b,src:s.split(""),note:note||""}));
+
+const N = Object.fromEntries(P.map(p => [p.id, p]));
+P.forEach(p => { p.y = ROWY[p.row]; p.x = p.x + OX; });
+
+const LAYERS = [
+  {k:"parent", label:"Bloodlines"},
+  {k:"marriage", label:"Marriages"},
+  {k:"affair", label:"Affairs"},
+  {k:"feud", label:"Feuds & killings"},
+  {k:"transform", label:"Transformations"},
+  {k:"curse", label:"Curses"}
+];
+const SAMPLE = {
+  parent:`<line x1="0" y1="5" x2="26" y2="5" stroke="var(--line)" stroke-width="1.4"/>`,
+  marriage:`<line x1="0" y1="5" x2="26" y2="5" stroke="var(--line)" stroke-width="4"/><line x1="0" y1="5" x2="26" y2="5" stroke="var(--bg)" stroke-width="1.3"/>`,
+  affair:`<line x1="0" y1="5" x2="26" y2="5" stroke="var(--line)" stroke-width="1.4" stroke-dasharray="5 4"/>`,
+  feud:`<path d="M0,5 L4,1 L8,9 L12,1 L16,9 L20,1 L24,9 L26,5" fill="none" stroke="var(--line)" stroke-width="1.2"/>`,
+  transform:`<line x1="0" y1="5" x2="26" y2="5" stroke="var(--transform)" stroke-width="2" stroke-dasharray="1 4" stroke-linecap="round"/>`,
+  curse:`<line x1="0" y1="5" x2="22" y2="5" stroke="var(--curse)" stroke-width="1.8"/><path d="M20,1 L26,5 L20,9 z" fill="var(--curse)"/>`
+};
+
+const CURSES = {
+  atreus:{
+    title:"The curse on the House of Atreus",
+    lead:"Five generations, each paying for the last.",
+    pairs:[["tantalus","pelops"],["myrtilus","pelops"],["pelops","atreus"],["pelops","thyestes"],["atreus","thyestes"],["thyestes","aerope"],["atreus","agamemnon"],["thyestes","aegisthus"],["aegisthus","atreus"],["agamemnon","iphigenia"],["clytemnestra","agamemnon"],["aegisthus","agamemnon"],["agamemnon","orestes"],["orestes","clytemnestra"],["orestes","aegisthus"]],
+    steps:[
+      ["Generation I", ["tantalus"], "Tantalus serves his son Pelops to the gods. The gods restore the boy; Tantalus is punished forever."],
+      ["Generation II", ["pelops","myrtilus"], "Pelops wins Hippodamia by bribing Myrtilus, then throws him into the sea. Falling, Myrtilus curses Pelops and all his line."],
+      ["Generation III", ["atreus","thyestes"], "Thyestes seduces his brother’s wife and steals the golden lamb. Atreus feeds Thyestes his own sons, and Thyestes curses the house of Atreus."],
+      ["Generation IV", ["agamemnon","clytemnestra","aegisthus"], "Agamemnon sacrifices Iphigenia to sail for Troy. On his return, Clytemnestra and Aegisthus kill him."],
+      ["Generation V", ["orestes"], "Orestes kills his mother and Aegisthus. Hunted by the Furies, he is tried in Athens and acquitted. The chain breaks."]
+    ]
+  },
+  labdacus:{
+    title:"The curse on the House of Labdacus",
+    lead:"A crime in Pelops’s house echoes through Thebes.",
+    pairs:[["pelops","laius"],["pelops","chrysippus"],["laius","chrysippus"],["labdacus","laius"],["laius","oedipus"],["oedipus","laius"],["oedipus","jocasta"],["oedipus","eteocles"],["oedipus","polynices"],["eteocles","polynices"],["oedipus","antigone"]],
+    steps:[
+      ["Generation II", ["pelops"], "Laius abducts Chrysippus, the son of Pelops, and Pelops curses him. Only later sources tell this origin."],
+      ["Generation III", ["laius"], "An oracle warns Laius that his son will kill him. He has the infant exposed on a mountain."],
+      ["Generation IV", ["oedipus","jocasta"], "Grown and unaware, Oedipus kills Laius at a crossroads and marries the widowed queen, his mother. When the truth comes out, Jocasta dies and Oedipus blinds himself."],
+      ["Generation V", ["eteocles","polynices","antigone"], "Oedipus curses his sons, and they kill each other over Thebes. Antigone buries Polynices against the king’s order and is condemned."]
+    ]
+  }
+};
+CURSES.atreus.nodes = new Set(CURSES.atreus.pairs.flat());
+CURSES.labdacus.nodes = new Set(CURSES.labdacus.pairs.flat());
+
+const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, mode:null, curseKey:null, path:null};
+
+/* ---------- controls ---------- */
+const srcRow = document.getElementById("srcRow");
+const srcNote = document.getElementById("srcNote");
+[["all","All versions"], ...Object.entries(SRC)].forEach(([k,label]) => {
+  const b = document.createElement("button");
+  b.className = "tab"; b.textContent = label; b.dataset.src = k;
+  b.setAttribute("aria-pressed", k===state.src);
+  if (k!=="all") b.title = SRC_FULL[k];
+  b.onclick = () => setSource(k);
+  srcRow.appendChild(b);
+});
+function setSource(k){
+  state.src = k;
+  srcRow.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x.dataset.src===k));
+  srcNote.textContent = SRC_NOTE[k];
+  if (state.mode==="thread" && state.threadEnds) runThread(...state.threadEnds, true);
+  apply(true);
+  if (state.mode==="node" && state.sel) renderNode(state.sel);
+  nodeSel.filter(d => d.ver).classed("pulse", false);
+  requestAnimationFrame(() => nodeSel.filter(d => d.ver).classed("pulse", true));
+}
+srcNote.textContent = SRC_NOTE.all;
+
+const layerRow = document.getElementById("layerRow");
+LAYERS.forEach(L => {
+  const b = document.createElement("button");
+  b.className = "toggle"; b.setAttribute("aria-pressed","true");
+  b.innerHTML = `<svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}`;
+  b.onclick = () => { state.layers[L.k] = !state.layers[L.k]; b.setAttribute("aria-pressed", state.layers[L.k]); apply(true); };
+  layerRow.appendChild(b);
+});
+const curseSel = document.getElementById("curseSel");
+curseSel.onchange = () => { if (curseSel.value) openCurse(curseSel.value); else resetMode(); };
+const threadBtn = document.getElementById("threadBtn");
+threadBtn.onclick = () => state.mode==="thread" ? resetMode() : openThread();
+const jump = document.getElementById("jump");
+[...P].sort((a,b) => a.n.localeCompare(b.n)).forEach(p => {
+  const o = document.createElement("option"); o.value = p.id; o.textContent = p.n; jump.appendChild(o);
+});
+jump.onchange = () => { if (jump.value) { select(jump.value, true); jump.value = ""; } };
+
+/* ---------- graph ---------- */
+const svg = d3.select("#graph");
+const defs = svg.append("defs");
+[["curse","var(--curse)"],["transform","var(--transform)"]].forEach(([id,c]) => {
+  defs.append("marker").attr("id","arr-"+id).attr("viewBox","0 0 10 10").attr("refX",8).attr("refY",5)
+    .attr("markerWidth",6).attr("markerHeight",6).attr("orient","auto-start-reverse")
+    .append("path").attr("d","M0,0 L10,5 L0,10 z").style("fill",c);
+});
+const root = svg.append("g");
+const gGrid = root.append("g");
+const gEdges = root.append("g");
+const gNodes = root.append("g");
+
+ROWY.forEach((y,i) => {
+  gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
+  if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
+});
+gGrid.append("text").attr("class","house").attr("x",OX-470).attr("y",ROWY[1]+8).attr("text-anchor","middle").text("House of Labdacus");
+gGrid.append("text").attr("class","house").attr("x",OX+430).attr("y",ROWY[1]+60).attr("text-anchor","middle").text("House of Atreus");
+
+const RN = 8;
+function norm(x,y){ const l = Math.hypot(x,y)||1; return [x/l, y/l]; }
+function edgePath(e){
+  const a = N[e.a], b = N[e.b];
+  if (e.type==="parent") {
+    const my = (a.y + b.y)/2 + 6;
+    return `M${a.x},${a.y+RN+2} C${a.x},${my} ${b.x},${my} ${b.x},${b.y-RN-2}`;
+  }
+  const dx = b.x-a.x, dy = b.y-a.y;
+  const k = e.type==="affair" ? 1.25 : e.type==="feud" ? -1 : 1;
+  let cx, cy;
+  if (Math.abs(dy) < 1) { cx = (a.x+b.x)/2; cy = a.y - (24 + Math.abs(dx)*0.14) * k; }
+  else { cx = (a.x+b.x)/2 - dy*0.14*k; cy = (a.y+b.y)/2 + dx*0.14*k; }
+  const u1 = norm(cx-a.x, cy-a.y), u2 = norm(b.x-cx, b.y-cy);
+  const pad = (e.type==="curse"||e.type==="transform") ? RN+8 : RN+2;
+  return `M${a.x+u1[0]*(RN+2)},${a.y+u1[1]*(RN+2)} Q${cx},${cy} ${b.x-u2[0]*pad},${b.y-u2[1]*pad}`;
+}
+const BASE = {parent:1.2, marriage:4, affair:1.2, feud:1.2, transform:1.8, curse:1.7};
+const edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class","e");
+edgeSel.each(function(e){
+  const g = d3.select(this), d = edgePath(e);
+  if (e.type==="marriage") {
+    g.append("path").attr("class","edge main").attr("d",d).style("stroke","var(--line)");
+    g.append("path").attr("class","edge inner").attr("d",d).style("stroke","var(--bg)").attr("stroke-width",1.3);
+  } else {
+    const p = g.append("path").attr("class","edge main").attr("d",d);
+    if (e.type==="parent") p.style("stroke","var(--line)");
+    if (e.type==="affair") p.style("stroke","var(--line)").attr("stroke-dasharray","5 4");
+    if (e.type==="feud") p.style("stroke","var(--line)").attr("stroke-dasharray","9 3 1.5 3");
+    if (e.type==="transform") p.style("stroke","var(--transform)").attr("stroke-dasharray","1 5").attr("stroke-linecap","round").attr("marker-end","url(#arr-transform)");
+    if (e.type==="curse") p.style("stroke","var(--curse)").attr("marker-end","url(#arr-curse)");
+  }
+});
+
+const nodeSel = gNodes.selectAll("g.node").data(P).join("g")
+  .attr("class","node").attr("transform", d => `translate(${d.x},${d.y})`)
+  .attr("tabindex",0).attr("role","button").attr("aria-label", d => d.n)
+  .on("click", (ev,d) => { ev.stopPropagation(); nodeClick(d.id); })
+  .on("keydown", (ev,d) => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); nodeClick(d.id); } });
+nodeSel.each(function(d){
+  const g = d3.select(this);
+  g.append("circle").attr("r",26).style("fill","transparent");
+  g.append("circle").attr("class","halo").attr("r",16);
+  if (d.kind==="god") {
+    g.append("circle").attr("r",RN+4).style("fill","none").style("stroke","var(--figure)").attr("stroke-width",1);
+    g.append("circle").attr("r",RN).style("fill","var(--figure)");
+  } else if (d.kind==="outer") {
+    g.append("circle").attr("r",RN).style("fill","var(--bg)").style("stroke","var(--figure)").attr("stroke-width",1.3).attr("stroke-dasharray","2.5 2.5");
+  } else if (d.kind==="nymph") {
+    g.append("circle").attr("r",RN-2).style("fill","var(--figure)");
+  } else {
+    g.append("circle").attr("r",RN).style("fill","var(--figure)");
+  }
+  if (d.tr) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
+      .attr("transform",`translate(${RN+7},${-RN-3})`).style("fill","var(--transform)");
+  g.append("text").attr("class","lbl" + (d.kind==="god"?" god":"")).attr("text-anchor","middle").attr("y", d.kind==="god" ? 34 : 30).text(d.n);
+});
+svg.on("click", () => { if (state.mode==="node") resetMode(); });
+
+const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => root.attr("transform", ev.transform));
+svg.call(zoom).on("dblclick.zoom", null);
+const graphEl = document.getElementById("graph");
+const wide = () => window.innerWidth >= 900;
+function fitTo(ids, animate){
+  const pts = ids ? ids.map(id => N[id]) : P;
+  const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+  const x0 = Math.min(...xs) - (ids?80:OX), x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
+  const w = graphEl.clientWidth - (wide() ? 420 : 0), h = wide() ? graphEl.clientHeight : graphEl.clientHeight * (ids ? 0.42 : 1);
+  const k = Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95);
+  const t = d3.zoomIdentity.translate((w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
+  (animate ? svg.transition().duration(600) : svg).call(zoom.transform, t);
+}
+function focusOn(id){
+  const w = graphEl.clientWidth, h = graphEl.clientHeight;
+  const cur = d3.zoomTransform(graphEl);
+  const k = Math.max(cur.k, Math.min(1, w/700));
+  const p = N[id];
+  const tx = wide() ? (w-420)/2 : w/2, ty = wide() ? h/2 : h*0.3;
+  svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx-p.x*k, ty-p.y*k).scale(k));
+}
+document.getElementById("fitBtn").onclick = () => fitTo(null, true);
+function initialView(){
+  const w = graphEl.clientWidth, h = graphEl.clientHeight;
+  if (Math.min(w/W, h/H) >= 0.5) { fitTo(null, false); return; }
+  const k = 0.55;
+  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - (OX+380)*k, h/2 - 480*k).scale(k));
+}
+
+/* ---------- visibility ---------- */
+const attested = e => state.src==="all" || e.src.includes(state.src);
+const edgeVisible = e => state.layers[e.type] && attested(e);
+const samePair = (e, [x,y]) => (e.a===x && e.b===y) || (e.a===y && e.b===x);
+function apply(animate){
+  const sel = state.mode==="node" ? state.sel : null;
+  const curse = state.mode==="curse" ? CURSES[state.curseKey] : null;
+  const path = state.mode==="thread" ? state.path : null;
+  const pathEdges = new Set(path ? path.edges : []);
+  const pathNodes = new Set(path ? path.nodes : []);
+  const visible = new Set();
+  edgeSel.each(function(e){
+    let vis = edgeVisible(e);
+    const inCurse = curse && ["parent","curse","feud","affair","marriage"].includes(e.type) && curse.pairs.some(p => samePair(e,p)) && attested(e);
+    const inPath = pathEdges.has(e.i);
+    if (inPath) vis = true;
+    const hot = (sel && (e.a===sel || e.b===sel)) || inCurse || inPath;
+    let op = (e.type==="curse"||e.type==="transform") ? 0.9 : 0.55;
+    if (sel || curse || path) op = hot ? 1 : 0.06;
+    if (!vis && !inCurse) op = 0;
+    if (vis) { visible.add(e.a); visible.add(e.b); }
+    const g = d3.select(this).classed("thread", inPath);
+    (animate ? g.transition().duration(380) : g).style("opacity", op);
+    g.select(".main").attr("stroke-width", inPath ? 3 : hot ? BASE[e.type]*1.7 : BASE[e.type]);
+  });
+  const neigh = new Set();
+  if (sel) { neigh.add(sel); E.forEach(e => { if (edgeVisible(e) && (e.a===sel||e.b===sel)) { neigh.add(e.a); neigh.add(e.b); } }); }
+  nodeSel.classed("sel", d => d.id===sel).classed("ends", d => !!(path && (d.id===path.nodes[0] || d.id===path.nodes[path.nodes.length-1])));
+  const nOp = d => {
+    if (sel) return neigh.has(d.id) ? 1 : 0.2;
+    if (curse) return curse.nodes.has(d.id) ? 1 : 0.18;
+    if (path) return pathNodes.has(d.id) ? 1 : 0.18;
+    if (state.src!=="all") return (visible.has(d.id) || (d.tr && d.tr.s.includes(state.src))) ? 1 : 0.18;
+    return 1;
+  };
+  (animate ? nodeSel.transition().duration(380) : nodeSel).style("opacity", nOp);
+  nodeSel.selectAll(".badge").style("display", d => state.layers.transform && (state.src==="all" || d.tr.s.includes(state.src)) ? null : "none");
+}
+
+/* ---------- card ---------- */
+const card = document.getElementById("card");
+const srcText = src => `<span class="srcs">${src.map(s => state.src===s ? `<b>${SRC[s]}</b>` : SRC[s]).join(", ")}</span>`;
+function sentence(e){
+  const A = N[e.a].n, B = N[e.b].n;
+  if (e.type==="parent") return `${A} is the ${N[e.a].g==="f"?"mother":"father"} of ${B}${e.note?` (${e.note})`:""}.`;
+  if (e.type==="marriage") return `${A} married ${B}${e.note?`, ${e.note}`:""}.`;
+  return `${A} ${e.note}.`;
+}
+const relItem = (id, e, withSentence) => `<li><button class="rel" data-go="${id}">${N[id].n}</button>${srcText(e.src)}${withSentence?`<span class="note">${sentence(e)}</span>`:(e.note?`<span class="note">${e.note}</span>`:"")}</li>`;
+function shell(inner){
+  card.innerHTML = inner;
+  card.querySelectorAll("[data-close]").forEach(b => b.onclick = resetMode);
+  card.querySelectorAll("[data-go]").forEach(b => b.onclick = () => select(b.dataset.go, true));
+  card.classList.add("open"); card.scrollTop = 0;
+}
+function renderNode(id){
+  const p = N[id];
+  const touches = e => e.a===id || e.b===id;
+  const other = e => e.a===id ? e.b : e.a;
+  const pick = (f, s) => E.filter(f).map(e => relItem(other(e), e, s));
+  const groups = [
+    ["Born to", pick(e => e.type==="parent" && e.b===id, false)],
+    ["Married", pick(e => e.type==="marriage" && touches(e), false)],
+    ["Affairs", pick(e => e.type==="affair" && touches(e), true)],
+    ["Feuds & killings", pick(e => e.type==="feud" && touches(e), true)],
+    ["Transformations", pick(e => e.type==="transform" && touches(e), true)],
+    ["Curses", pick(e => e.type==="curse" && touches(e), true)],
+    ["Children", pick(e => e.type==="parent" && e.a===id, false)]
+  ].filter(g => g[1].length);
+  shell(`
+    <div class="card-top"><span class="greek" lang="grc">${p.gr}</span><button class="close" data-close>Close</button></div>
+    <h2 class="card-name">${p.n}</h2>
+    <p class="card-tag">${p.tag}</p>
+    <p class="card-role">${p.role}</p>
+    <p class="card-story">${p.story}</p>
+    ${p.tr ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel" style="text-decoration:none;cursor:default">${p.tr.t}</span>${srcText(p.tr.s.split(""))}</li></ul></div>` : ""}
+    ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
+    ${p.ver ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.ver}</div></div>` : ""}
+    ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(([t,m,w,u]) => `<li>${u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t">${t}</span>`}<br><span class="m">${m}. ${w}</span></li>`).join("")}</ul></div>` : ""}
+    <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work.</p>`);
+}
+function select(id, move){
+  state.mode = "node"; state.sel = id; state.path = null;
+  curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
+  renderNode(id); apply(true);
+  if (move) focusOn(id);
+}
+function nodeClick(id){
+  if (state.mode==="thread") {
+    const a = document.getElementById("tFrom"), b = document.getElementById("tTo");
+    if (a && b) { if (!a.value || (a.value && b.value)) { a.value = id; b.value = ""; } else { b.value = id; runThread(a.value, b.value); } }
+    return;
+  }
+  select(id);
+}
+function resetMode(){
+  state.mode = null; state.sel = null; state.path = null; state.curseKey = null; state.threadEnds = null;
+  curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
+  card.classList.remove("open"); apply(true);
+}
+
+/* curses */
+function openCurse(key){
+  const c = CURSES[key];
+  state.mode = "curse"; state.curseKey = key; state.sel = null; state.path = null;
+  threadBtn.setAttribute("aria-pressed","false");
+  shell(`
+    <div class="card-top"><span class="greek">Ἀρά</span><button class="close" data-close>Close</button></div>
+    <h2 class="card-name" style="font-size:32px">${c.title}</h2>
+    <p class="card-tag">${c.lead}</p>
+    <div class="sec"><h3>Generation by generation</h3><ol class="steps">
+      ${c.steps.map(([g, who, t]) => `<li><span class="g">${g}</span><div><div class="t">${t}</div><div style="margin-top:4px">${who.map(id => `<button class="rel" data-go="${id}" style="font-size:15px;margin-right:10px">${N[id].n}</button>`).join("")}</div></div></li>`).join("")}
+    </ol></div>
+    <p class="legend">Highlighted on the tree: the bloodline, the crimes and the curses that carry it forward.</p>`);
+  apply(true);
+  fitTo([...c.nodes], true);
+}
+
+/* Ariadne’s thread */
+function openThread(){
+  state.mode = "thread"; state.sel = null; state.path = null; state.curseKey = null;
+  curseSel.value = ""; threadBtn.setAttribute("aria-pressed","true");
+  const opts = [...P].sort((a,b) => a.n.localeCompare(b.n)).map(p => `<option value="${p.id}">${p.n}</option>`).join("");
+  shell(`
+    <div class="card-top"><span class="greek">Μίτος</span><button class="close" data-close>Close</button></div>
+    <h2 class="card-name" style="font-size:34px">Ariadne’s thread</h2>
+    <p class="card-tag">Pick any two figures to find the shortest path between them.</p>
+    <div class="pick">
+      <label>From<select id="tFrom"><option value="">Choose, or tap the tree</option>${opts}</select></label>
+      <label>To<select id="tTo"><option value="">Choose, or tap the tree</option>${opts}</select></label>
+      <button class="go" id="tGo">Follow the thread</button>
+    </div>
+    <div id="tOut"></div>`);
+  document.getElementById("tGo").onclick = () => {
+    const a = document.getElementById("tFrom").value, b = document.getElementById("tTo").value;
+    if (a && b) runThread(a, b);
+  };
+  apply(true);
+}
+function shortestPath(a, b){
+  const adj = {};
+  E.forEach(e => { if (!attested(e)) return; (adj[e.a] ||= []).push([e.b, e]); (adj[e.b] ||= []).push([e.a, e]); });
+  const prev = {[a]:null}, q = [a];
+  while (q.length) {
+    const u = q.shift(); if (u===b) break;
+    (adj[u]||[]).forEach(([v, e]) => { if (!(v in prev)) { prev[v] = [u, e]; q.push(v); } });
+  }
+  if (!(b in prev)) return null;
+  const nodes = [b], edges = [];
+  let cur = b;
+  while (prev[cur]) { const [u, e] = prev[cur]; edges.unshift(e); nodes.unshift(u); cur = u; }
+  return {nodes, edges};
+}
+function runThread(a, b, silent){
+  state.threadEnds = [a, b];
+  const out = document.getElementById("tOut");
+  if (a===b) { if (out) out.innerHTML = `<p class="card-story">Pick two different figures.</p>`; return; }
+  const res = shortestPath(a, b);
+  if (!res) {
+    state.path = null; apply(true);
+    if (out) out.innerHTML = `<p class="card-story">In ${state.src==="all" ? "these sources" : SRC[state.src]}, no thread connects ${N[a].n} and ${N[b].n}. Try “All versions”.</p>`;
+    return;
+  }
+  state.path = {nodes:res.nodes, edges:res.edges.map(e => e.i)};
+  if (out) out.innerHTML = `
+    <div class="sec"><h3>${res.edges.length} ${res.edges.length===1?"link":"links"} apart${state.src==="all"?"":`, in ${SRC[state.src]}`}</h3>
+    <ol class="thread-steps">${res.edges.map(e => `<li>${sentence(e)} ${srcText(e.src)}</li>`).join("")}</ol></div>`;
+  apply(true);
+  if (!silent) fitTo(res.nodes, true);
+}
+
+initialView();
+apply(false);
+</script>
+</body>
+</html>

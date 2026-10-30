@@ -1,0 +1,597 @@
+[
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "tantalus",
+    "sources": ["T", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pluto",
+    "to": "tantalus",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "tantalus",
+    "to": "pelops",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "tantalus",
+    "to": "niobe",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "oenomaus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oenomaus",
+    "to": "hippodamia",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hermes",
+    "to": "myrtilus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "atreus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hippodamia",
+    "to": "atreus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "thyestes",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hippodamia",
+    "to": "thyestes",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "chrysippus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "atreus",
+    "to": "pleisthenes",
+    "sources": ["H", "T"]
+  },
+  {
+    "type": "parent",
+    "from": "atreus",
+    "to": "agamemnon",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "atreus",
+    "to": "menelaus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pleisthenes",
+    "to": "agamemnon",
+    "sources": ["H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pleisthenes",
+    "to": "menelaus",
+    "sources": ["H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aerope",
+    "to": "agamemnon",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aerope",
+    "to": "menelaus",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "thyestes",
+    "to": "pelopia",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "thyestes",
+    "to": "aegisthus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pelopia",
+    "to": "aegisthus",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "tyndareus",
+    "to": "clytemnestra",
+    "sources": ["E", "H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "clytemnestra",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "helen",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "helen",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "nemesis",
+    "to": "helen",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "tyndareus",
+    "to": "castor",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "castor",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "castor",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyndareus",
+    "to": "polydeuces",
+    "sources": ["E"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "polydeuces",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "polydeuces",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "iphigenia",
+    "sources": ["E", "H", "T", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "iphigenia",
+    "sources": ["H", "T", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "theseus",
+    "to": "iphigenia",
+    "sources": ["T", "L"],
+    "note": "Stesichorus’s version"
+  },
+  {
+    "type": "parent",
+    "from": "helen",
+    "to": "iphigenia",
+    "sources": ["T", "L"],
+    "note": "Stesichorus’s version"
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "electra",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "electra",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "chrysothemis",
+    "sources": ["E", "T"]
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "chrysothemis",
+    "sources": ["T"]
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "orestes",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "orestes",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "menelaus",
+    "to": "hermione",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "helen",
+    "to": "hermione",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "labdacus",
+    "to": "laius",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "laius",
+    "to": "oedipus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "oedipus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "eteocles",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "polynices",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "antigone",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "ismene",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "eteocles",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "polynices",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "antigone",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "ismene",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "pelops",
+    "to": "hippodamia",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "atreus",
+    "to": "aerope",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "pleisthenes",
+    "to": "aerope",
+    "sources": ["H", "T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "agamemnon",
+    "to": "clytemnestra",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "menelaus",
+    "to": "helen",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "tyndareus",
+    "to": "leda",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "orestes",
+    "to": "hermione",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "pylades",
+    "to": "electra",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "laius",
+    "to": "jocasta",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "oedipus",
+    "to": "jocasta",
+    "sources": ["E", "T", "A", "L"],
+    "note": "without knowing she was his mother"
+  },
+  {
+    "type": "affair",
+    "from": "thyestes",
+    "to": "aerope",
+    "sources": ["T", "A", "L"],
+    "note": "seduced Aerope, his brother’s wife"
+  },
+  {
+    "type": "affair",
+    "from": "aegisthus",
+    "to": "clytemnestra",
+    "sources": ["E", "T"],
+    "note": "became the lover of Clytemnestra while Agamemnon was at Troy"
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "leda",
+    "sources": ["T", "A", "L"],
+    "note": "came to Leda in the form of a swan"
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "nemesis",
+    "sources": ["E", "A", "L"],
+    "note": "pursued Nemesis through many shapes"
+  },
+  {
+    "type": "affair",
+    "from": "paris",
+    "to": "helen",
+    "sources": ["E", "T", "A"],
+    "note": "carried Helen off to Troy"
+  },
+  {
+    "type": "affair",
+    "from": "theseus",
+    "to": "helen",
+    "sources": ["T", "A", "L"],
+    "note": "abducted Helen when she was a girl"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "tantalus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "punished Tantalus forever in the underworld"
+  },
+  {
+    "type": "feud",
+    "from": "pelops",
+    "to": "oenomaus",
+    "sources": ["T", "A", "L"],
+    "note": "beat Oenomaus in the chariot race; the king died in the wreck"
+  },
+  {
+    "type": "feud",
+    "from": "pelops",
+    "to": "myrtilus",
+    "sources": ["T", "A", "L"],
+    "note": "threw Myrtilus into the sea"
+  },
+  {
+    "type": "feud",
+    "from": "artemis",
+    "to": "niobe",
+    "sources": ["E", "A", "L"],
+    "note": "killed the children of Niobe, with Apollo"
+  },
+  {
+    "type": "feud",
+    "from": "atreus",
+    "to": "thyestes",
+    "sources": ["T", "A", "L"],
+    "note": "served Thyestes his own sons at a feast"
+  },
+  {
+    "type": "feud",
+    "from": "aegisthus",
+    "to": "atreus",
+    "sources": ["A", "L"],
+    "note": "killed Atreus"
+  },
+  {
+    "type": "feud",
+    "from": "agamemnon",
+    "to": "artemis",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed a deer sacred to Artemis and boasted of it"
+  },
+  {
+    "type": "feud",
+    "from": "agamemnon",
+    "to": "iphigenia",
+    "sources": ["E", "T", "A", "L"],
+    "note": "sacrificed Iphigenia at Aulis"
+  },
+  {
+    "type": "feud",
+    "from": "clytemnestra",
+    "to": "agamemnon",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Agamemnon on his return from Troy"
+  },
+  {
+    "type": "feud",
+    "from": "aegisthus",
+    "to": "agamemnon",
+    "sources": ["E", "A"],
+    "note": "killed Agamemnon at a feast"
+  },
+  {
+    "type": "feud",
+    "from": "orestes",
+    "to": "clytemnestra",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "killed Clytemnestra, his own mother"
+  },
+  {
+    "type": "feud",
+    "from": "orestes",
+    "to": "aegisthus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Aegisthus to avenge his father"
+  },
+  {
+    "type": "feud",
+    "from": "menelaus",
+    "to": "paris",
+    "sources": ["E"],
+    "note": "fought Paris in single combat"
+  },
+  {
+    "type": "feud",
+    "from": "laius",
+    "to": "chrysippus",
+    "sources": ["A", "L"],
+    "note": "abducted Chrysippus"
+  },
+  {
+    "type": "feud",
+    "from": "oedipus",
+    "to": "laius",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Laius at a crossroads, not knowing he was his father"
+  },
+  {
+    "type": "feud",
+    "from": "eteocles",
+    "to": "polynices",
+    "sources": ["T", "A", "L"],
+    "note": "killed Polynices at the gates of Thebes and died by his hand"
+  },
+  {
+    "type": "transform",
+    "from": "artemis",
+    "to": "iphigenia",
+    "sources": ["E", "H", "T", "A"],
+    "note": "replaced Iphigenia with a deer, or made her immortal"
+  },
+  {
+    "type": "curse",
+    "from": "myrtilus",
+    "to": "pelops",
+    "sources": ["T", "A"],
+    "note": "cursed Pelops and all his line as he fell into the sea"
+  },
+  {
+    "type": "curse",
+    "from": "thyestes",
+    "to": "atreus",
+    "sources": ["T"],
+    "note": "cursed the house of Atreus after the feast"
+  },
+  {
+    "type": "curse",
+    "from": "pelops",
+    "to": "laius",
+    "sources": ["L"],
+    "note": "cursed Laius for abducting Chrysippus, in a tradition known only from later sources"
+  },
+  {
+    "type": "curse",
+    "from": "oedipus",
+    "to": "eteocles",
+    "sources": ["E", "T", "A"],
+    "note": "cursed his son Eteocles"
+  },
+  {
+    "type": "curse",
+    "from": "oedipus",
+    "to": "polynices",
+    "sources": ["E", "T", "A"],
+    "note": "cursed his son Polynices"
+  }
+]

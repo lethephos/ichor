@@ -1,0 +1,872 @@
+[
+  {
+    "id": "ares",
+    "name": "Ares",
+    "greek": "Ἄρης",
+    "gender": "m",
+    "generation": 0,
+    "x": 140,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "God of war",
+    "tagline": "The war god, grandfather of a doomed bride.",
+    "story": "Father of King Oenomaus in Apollodorus and Pausanias.",
+    "art": [
+      {
+        "title": "Ludovisi Ares",
+        "meta": "Roman copy, 2nd century AD, of a Greek original",
+        "where": "Palazzo Altemps, Rome",
+        "url": "https://en.wikipedia.org/wiki/Ludovisi_Ares"
+      }
+    ]
+  },
+  {
+    "id": "hermes",
+    "name": "Hermes",
+    "greek": "Ἑρμῆς",
+    "gender": "m",
+    "generation": 0,
+    "x": 300,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Messenger of the gods",
+    "tagline": "His son’s murder starts the curse.",
+    "story": "Father of Myrtilus, whose dying curse fell on the house of Pelops. In Apollodorus he carried the advice from Zeus that won Atreus back the throne.",
+    "art": [
+      {
+        "title": "Hermes and the Infant Dionysus",
+        "meta": "attributed to Praxiteles; some scholars date it later",
+        "where": "Archaeological Museum of Olympia",
+        "url": "https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus"
+      }
+    ]
+  },
+  {
+    "id": "pluto",
+    "name": "Plouto",
+    "greek": "Πλουτώ",
+    "gender": "f",
+    "generation": 0,
+    "x": 520,
+    "kind": "nymph",
+    "branch": "cursed-houses",
+    "role": "Nymph",
+    "tagline": "A nymph at the root of the tree.",
+    "story": "Later authors name her as the mother of Tantalus by Zeus."
+  },
+  {
+    "id": "zeus",
+    "name": "Zeus",
+    "greek": "Ζεύς",
+    "gender": "m",
+    "generation": 0,
+    "x": 760,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "King of the gods",
+    "tagline": "Where it all begins.",
+    "story": "Father of Tantalus. In some versions, also father of Helen and of one or both of the Dioscuri.",
+    "transformation": {
+      "text": "A swan, to seduce Leda",
+      "sources": ["T", "A"]
+    },
+    "art": [
+      {
+        "title": "Artemision Bronze, Zeus or Poseidon",
+        "meta": "c. 460 BC",
+        "where": "National Archaeological Museum, Athens",
+        "url": "https://en.wikipedia.org/wiki/Artemision_Bronze"
+      }
+    ]
+  },
+  {
+    "id": "nemesis",
+    "name": "Nemesis",
+    "greek": "Νέμεσις",
+    "gender": "f",
+    "generation": 0,
+    "x": 1060,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Goddess of retribution",
+    "tagline": "Retribution herself, and perhaps Helen’s mother.",
+    "story": "In the Cypria she fled Zeus through many shapes and became the mother of Helen.",
+    "transformation": {
+      "text": "A goose, fleeing Zeus",
+      "sources": ["E", "A"]
+    },
+    "art": [
+      {
+        "title": "Head of the Nemesis of Rhamnous",
+        "meta": "by Agoracritus, 5th century BC",
+        "where": "British Museum, London",
+        "url": "https://en.wikipedia.org/wiki/Agoracritus"
+      }
+    ]
+  },
+  {
+    "id": "artemis",
+    "name": "Artemis",
+    "greek": "Ἄρτεμις",
+    "gender": "f",
+    "generation": 0,
+    "x": 1300,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Goddess of the hunt",
+    "tagline": "She demanded a daughter for a deer.",
+    "story": "Agamemnon killed her sacred deer and boasted of it. Her price was Iphigenia.",
+    "art": [
+      {
+        "title": "Diana of Versailles",
+        "meta": "Roman copy of a Greek bronze attributed to Leochares",
+        "where": "Louvre, Paris",
+        "url": "https://collections.louvre.fr/ark:/53355/cl010278930"
+      }
+    ]
+  },
+  {
+    "id": "oenomaus",
+    "name": "Oenomaus",
+    "greek": "Οἰνόμαος",
+    "gender": "m",
+    "generation": 1,
+    "x": 160,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Pisa",
+    "tagline": "Killed every suitor who raced for his daughter.",
+    "story": "Son of Ares. He raced his daughter’s suitors in chariots and killed every one who lost.",
+    "versions": "Most writers make him a son of Ares. Pausanias, sceptical of divine fathers, also reports a mortal one, Alxion.",
+    "art": [
+      {
+        "title": "East pediment, Temple of Zeus at Olympia",
+        "meta": "c. 460 BC",
+        "where": "Archaeological Museum of Olympia",
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+      }
+    ]
+  },
+  {
+    "id": "tantalus",
+    "name": "Tantalus",
+    "greek": "Τάνταλος",
+    "gender": "m",
+    "generation": 1,
+    "x": 560,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King, son of Zeus",
+    "tagline": "Served his son to the gods.",
+    "story": "Tested the gods by serving them his own son, Pelops, and was punished forever in the underworld.",
+    "versions": "Most sources make Zeus his father and the nymph Plouto his mother; one ancient commentary on Euripides names the mountain god Tmolus instead. Homer punishes him with endless hunger and thirst; Pindar and Euripides hang a great stone over his head. Pindar even rejects the cannibal feast: in his telling Tantalus stole the gods’ nectar and ambrosia.",
+    "art": [
+      {
+        "title": "Tantalus, from The Four Disgracers",
+        "meta": "Hendrick Goltzius after Cornelis van Haarlem, 1588",
+        "where": "engraving; this impression at the Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/art/collection/search/343579"
+      }
+    ]
+  },
+  {
+    "id": "labdacus",
+    "name": "Labdacus",
+    "greek": "Λάβδακος",
+    "gender": "m",
+    "generation": 2,
+    "x": -300,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Thebes",
+    "tagline": "Founder of a doomed line.",
+    "story": "Grandson of Cadmus and father of Laius. The Labdacids take their name from him."
+  },
+  {
+    "id": "myrtilus",
+    "name": "Myrtilus",
+    "greek": "Μυρτίλος",
+    "gender": "m",
+    "generation": 2,
+    "x": 60,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Charioteer of Oenomaus",
+    "tagline": "Betrayed his master, was betrayed in turn, and cursed them all.",
+    "story": "Son of Hermes. He sabotaged his master’s chariot so Pelops could win. Thrown into the sea by Pelops, he cursed his line as he fell.",
+    "art": [
+      {
+        "title": "East pediment, Temple of Zeus at Olympia",
+        "meta": "c. 460 BC; a kneeling figure is often identified as Myrtilus",
+        "where": "Archaeological Museum of Olympia",
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+      }
+    ]
+  },
+  {
+    "id": "hippodamia",
+    "name": "Hippodamia",
+    "greek": "Ἱπποδάμεια",
+    "gender": "f",
+    "generation": 2,
+    "x": 220,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Princess of Pisa",
+    "tagline": "The prize of a rigged race.",
+    "story": "Daughter of Oenomaus, wife of Pelops, mother of Atreus and Thyestes.",
+    "art": [
+      {
+        "title": "East pediment, Temple of Zeus at Olympia",
+        "meta": "c. 460 BC",
+        "where": "Archaeological Museum of Olympia",
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+      }
+    ]
+  },
+  {
+    "id": "pelops",
+    "name": "Pelops",
+    "greek": "Πέλοψ",
+    "gender": "m",
+    "generation": 2,
+    "x": 400,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King who gave his name to the Peloponnese",
+    "tagline": "Won his bride by cheating, then drowned his accomplice.",
+    "story": "Son of Tantalus, restored to life by the gods after the terrible feast. He won Hippodamia by treachery and killed Myrtilus. The curse on the house begins here.",
+    "versions": "Pindar rejects the terrible feast: in his telling Poseidon fell in love with the boy and carried him off to Olympus.",
+    "art": [
+      {
+        "title": "East pediment, Temple of Zeus at Olympia",
+        "meta": "c. 460 BC",
+        "where": "Archaeological Museum of Olympia",
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+      }
+    ]
+  },
+  {
+    "id": "niobe",
+    "name": "Niobe",
+    "greek": "Νιόβη",
+    "gender": "f",
+    "generation": 2,
+    "x": 640,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Thebes",
+    "tagline": "Boasted of her children and lost every one.",
+    "story": "Daughter of Tantalus. She boasted to Leto of her many children; Apollo and Artemis killed them, and Niobe turned to stone on Mount Sipylus, a rock that still weeps.",
+    "transformation": {
+      "text": "Stone on Mount Sipylus",
+      "sources": ["E", "T", "A", "L"]
+    },
+    "art": [
+      {
+        "title": "Niobe with Her Younger Daughter",
+        "meta": "Roman, first half of the 2nd century AD",
+        "where": "Uffizi, Florence",
+        "url": "https://www.uffizi.it/en/artworks/niobe-with-her-younger-daughter"
+      },
+      {
+        "title": "Apollo and Diana Attacking the Children of Niobe",
+        "meta": "Jacques-Louis David, 1772",
+        "where": "Dallas Museum of Art",
+        "url": "https://en.wikipedia.org/wiki/Diana_and_Apollo_Killing_Niobe%27s_Children"
+      }
+    ]
+  },
+  {
+    "id": "jocasta",
+    "name": "Jocasta",
+    "greek": "Ἰοκάστη",
+    "gender": "f",
+    "generation": 3,
+    "x": -470,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Thebes",
+    "tagline": "Wife of Laius, then of her own son.",
+    "story": "Mother and wife of Oedipus. When the truth came out, she hanged herself.",
+    "versions": "Homer calls her Epicaste. In the lost epic Oedipodeia, as Pausanias reports, Oedipus’s four children are born to a second wife, Euryganeia."
+  },
+  {
+    "id": "laius",
+    "name": "Laius",
+    "greek": "Λάϊος",
+    "gender": "m",
+    "generation": 3,
+    "x": -300,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Thebes",
+    "tagline": "Abducted a prince and brought a curse on Thebes.",
+    "story": "Abducted Chrysippus, son of Pelops, and was cursed for it. Warned that his son would kill him, he had the infant Oedipus exposed.",
+    "versions": "The abduction and Pelops’s curse appear only in later sources, probably after Euripides’ lost play Chrysippus.",
+    "art": [
+      {
+        "title": "The Murder of Laius by Oedipus",
+        "meta": "Joseph Blanc, 1867",
+        "where": "École des Beaux-Arts, Paris",
+        "url": "https://en.wikipedia.org/wiki/Joseph_Blanc"
+      }
+    ]
+  },
+  {
+    "id": "chrysippus",
+    "name": "Chrysippus",
+    "greek": "Χρύσιππος",
+    "gender": "m",
+    "generation": 3,
+    "x": 220,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Son of Pelops",
+    "tagline": "The stolen son who links two cursed houses.",
+    "story": "Abducted as a youth by Laius of Thebes, whom Pelops then cursed."
+  },
+  {
+    "id": "atreus",
+    "name": "Atreus",
+    "greek": "Ἀτρεύς",
+    "gender": "m",
+    "generation": 3,
+    "x": 400,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Mycenae",
+    "tagline": "Served his brother a dinner of his own children.",
+    "story": "On learning of his wife’s affair with his brother, he killed the sons of Thyestes and served them to their father at a feast."
+  },
+  {
+    "id": "aerope",
+    "name": "Aerope",
+    "greek": "Ἀερόπη",
+    "gender": "f",
+    "generation": 3,
+    "x": 560,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Cretan princess",
+    "tagline": "Gave her husband’s golden lamb to his brother.",
+    "story": "Granddaughter of Minos. Wife of Atreus, unfaithful to him with Thyestes."
+  },
+  {
+    "id": "thyestes",
+    "name": "Thyestes",
+    "greek": "Θυέστης",
+    "gender": "m",
+    "generation": 3,
+    "x": 720,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Brother and rival of Atreus",
+    "tagline": "Seduced his brother’s wife and ate his own sons.",
+    "story": "After the terrible feast he cursed the house of Atreus. Father of Aegisthus."
+  },
+  {
+    "id": "tyndareus",
+    "name": "Tyndareus",
+    "greek": "Τυνδάρεως",
+    "gender": "m",
+    "generation": 3,
+    "x": 1000,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Sparta",
+    "tagline": "A mortal king raising the children of Zeus.",
+    "story": "Husband of Leda and mortal father of Clytemnestra and Castor."
+  },
+  {
+    "id": "leda",
+    "name": "Leda",
+    "greek": "Λήδα",
+    "gender": "f",
+    "generation": 3,
+    "x": 1160,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Sparta",
+    "tagline": "Visited by a swan.",
+    "story": "Wife of Tyndareus. Zeus came to her in the form of a swan.",
+    "art": [
+      {
+        "title": "Leda and the Swan",
+        "meta": "Correggio, c. 1532",
+        "where": "Gemäldegalerie, Berlin",
+        "url": "https://recherche.smb.museum/detail/862455/leda-mit-dem-schwan"
+      }
+    ]
+  },
+  {
+    "id": "theseus",
+    "name": "Theseus",
+    "greek": "Θησεύς",
+    "gender": "m",
+    "generation": 3,
+    "x": 1430,
+    "kind": "other-cycle",
+    "branch": "cursed-houses",
+    "role": "Hero of Athens",
+    "tagline": "Kidnapped Helen when she was a girl.",
+    "story": "In Stesichorus, Iphigenia is their daughter.",
+    "art": [
+      {
+        "title": "Theseus and the Minotaur",
+        "meta": "Antonio Canova, 1781–82",
+        "where": "Victoria and Albert Museum, London",
+        "url": "https://collections.vam.ac.uk/item/O96376/theseus-and-the-minotaur-statue-canova-antonio"
+      }
+    ]
+  },
+  {
+    "id": "oedipus",
+    "name": "Oedipus",
+    "greek": "Οἰδίπους",
+    "gender": "m",
+    "generation": 4,
+    "x": -385,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Thebes",
+    "tagline": "Killed his father, married his mother.",
+    "story": "Exposed as a baby, he grew up in Corinth, killed Laius at a crossroads and married Jocasta. Learning the truth, he blinded himself and cursed his sons.",
+    "versions": "Homer: Epicaste hangs herself and Oedipus goes on ruling Thebes. Sophocles: he blinds himself and goes into exile. The epic Thebaid already has him curse his sons, over his father’s golden cup and a slighting cut of meat.",
+    "art": [
+      {
+        "title": "Oedipus and the Sphinx",
+        "meta": "Jean-Auguste-Dominique Ingres, 1808, reworked 1827",
+        "where": "Louvre, Paris",
+        "url": "https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_(Ingres)"
+      },
+      {
+        "title": "Oedipus and Antigone, or The Plague of Thebes",
+        "meta": "Charles Jalabert, 1842",
+        "where": "Musée des Beaux-Arts, Marseille",
+        "url": "https://en.wikipedia.org/wiki/Charles_Jalabert"
+      }
+    ]
+  },
+  {
+    "id": "pleisthenes",
+    "name": "Pleisthenes",
+    "greek": "Πλεισθένης",
+    "gender": "m",
+    "generation": 4,
+    "x": 250,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Prince of Mycenae",
+    "tagline": "The forgotten father, written out of Homer.",
+    "story": "In the Catalogue of Women and Apollodorus, the true father of Agamemnon and Menelaus. He died young, and Atreus raised his sons.",
+    "versions": "Homer never mentions him. Tzetzes, citing Hesiod and Aeschylus, makes him a son of Atreus and Aerope."
+  },
+  {
+    "id": "agamemnon",
+    "name": "Agamemnon",
+    "greek": "Ἀγαμέμνων",
+    "gender": "m",
+    "generation": 4,
+    "x": 420,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Mycenae, leader of the Greeks at Troy",
+    "tagline": "Sacrificed his daughter to win a war.",
+    "story": "Murdered in his own house on his return from Troy.",
+    "versions": "Homer: son of Atreus. The Catalogue of Women, Aeschylus (as reported by Tzetzes) and Apollodorus: son of Pleisthenes, raised by Atreus. His mother is Aerope, or in one report Cleolla.",
+    "art": [
+      {
+        "title": "The Mask of Agamemnon",
+        "meta": "gold funerary mask, c. 1550–1500 BC, centuries older than any Trojan War",
+        "where": "National Archaeological Museum, Athens",
+        "url": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon"
+      }
+    ]
+  },
+  {
+    "id": "menelaus",
+    "name": "Menelaus",
+    "greek": "Μενέλαος",
+    "gender": "m",
+    "generation": 4,
+    "x": 580,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Sparta",
+    "tagline": "The husband left behind.",
+    "story": "Husband of Helen. Her flight with Paris sparked the Trojan War.",
+    "versions": "As with Agamemnon: son of Atreus or of Pleisthenes, depending on the source.",
+    "art": [
+      {
+        "title": "The Pasquino Group, Menelaus Supporting the Body of Patroclus",
+        "meta": "Roman copy; some scholars read it as Ajax with Achilles",
+        "where": "Loggia dei Lanzi, Florence",
+        "url": "https://en.wikipedia.org/wiki/Pasquino_Group"
+      }
+    ]
+  },
+  {
+    "id": "pelopia",
+    "name": "Pelopia",
+    "greek": "Πελόπεια",
+    "gender": "f",
+    "generation": 4,
+    "x": 760,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Thyestes",
+    "tagline": "Bore a son to avenge her father.",
+    "story": "In Hyginus, mother of Aegisthus, the son born to avenge Thyestes on Atreus."
+  },
+  {
+    "id": "clytemnestra",
+    "name": "Clytemnestra",
+    "greek": "Κλυταιμνήστρα",
+    "gender": "f",
+    "generation": 4,
+    "x": 940,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Mycenae",
+    "tagline": "Waited ten years to kill her husband.",
+    "story": "She avenged Iphigenia by killing Agamemnon, and died at her son’s hand.",
+    "versions": "Homer: an accomplice, while Aegisthus strikes the blow. Aeschylus: she kills Agamemnon herself.",
+    "art": [
+      {
+        "title": "Clytemnestra",
+        "meta": "John Collier, 1882",
+        "where": "Guildhall Art Gallery, London",
+        "url": "https://en.wikipedia.org/wiki/Clytemnestra_(Collier)"
+      },
+      {
+        "title": "Clytemnestra Hesitates before Killing the Sleeping Agamemnon",
+        "meta": "Pierre-Narcisse Guérin, 1817",
+        "where": "Louvre, Paris",
+        "url": "https://mythopedia.com/topics/clytemnestra/"
+      }
+    ]
+  },
+  {
+    "id": "helen",
+    "name": "Helen",
+    "greek": "Ἑλένη",
+    "gender": "f",
+    "generation": 4,
+    "x": 1120,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Sparta",
+    "tagline": "The face that launched a thousand ships.",
+    "story": "She left her husband Menelaus and sailed with Paris to Troy.",
+    "versions": "Homer: daughter of Zeus, her mother unnamed. Euripides and Apollodorus: daughter of Zeus and Leda, hatched from an egg. The Cypria and Pausanias: her mother is Nemesis, and Leda only nursed her.",
+    "art": [
+      {
+        "title": "Helen of Troy",
+        "meta": "Evelyn De Morgan, 1898",
+        "where": "De Morgan Collection, shown at Wightwick Manor",
+        "url": "https://en.wikipedia.org/wiki/Helen_of_Troy_(painting)"
+      },
+      {
+        "title": "The Abduction of Helen",
+        "meta": "Guido Reni, 1628–31",
+        "where": "Louvre, Paris",
+        "url": "https://en.wikipedia.org/wiki/The_Abduction_of_Helen_(Reni)"
+      }
+    ]
+  },
+  {
+    "id": "paris",
+    "name": "Paris",
+    "greek": "Πάρις",
+    "gender": "m",
+    "generation": 4,
+    "x": 1280,
+    "kind": "other-cycle",
+    "branch": "cursed-houses",
+    "role": "Prince of Troy",
+    "tagline": "Chose Aphrodite and took Helen.",
+    "story": "Carried Helen away from Sparta.",
+    "art": [
+      {
+        "title": "The Judgement of Paris",
+        "meta": "Peter Paul Rubens, probably 1632–35",
+        "where": "National Gallery, London",
+        "url": "https://www.nationalgallery.org.uk/paintings/NG194"
+      }
+    ]
+  },
+  {
+    "id": "castor",
+    "name": "Castor",
+    "greek": "Κάστωρ",
+    "gender": "m",
+    "generation": 4,
+    "x": 1430,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "One of the Dioscuri",
+    "tagline": "The mortal twin.",
+    "story": "Usually a son of Tyndareus, though some sources make both twins sons of Zeus.",
+    "art": [
+      {
+        "title": "The San Ildefonso Group",
+        "meta": "Roman, c. 10 BC; read as Castor and Pollux, or as Orestes and Pylades",
+        "where": "Prado, Madrid",
+        "url": "https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62"
+      }
+    ]
+  },
+  {
+    "id": "polydeuces",
+    "name": "Polydeuces",
+    "greek": "Πολυδεύκης",
+    "gender": "m",
+    "generation": 4,
+    "x": 1580,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "One of the Dioscuri",
+    "tagline": "Shared his immortality with his brother.",
+    "story": "The immortal twin, who gave up half his immortality to share it with Castor.",
+    "versions": "The Odyssey: both twins are sons of Tyndareus. Hesiod and the Homeric Hymns: both are sons of Zeus. Pindar and Apollodorus: only Polydeuces is the son of Zeus, and so immortal.",
+    "art": [
+      {
+        "title": "The Rape of the Daughters of Leucippus",
+        "meta": "Peter Paul Rubens with Jan Wildens, c. 1618",
+        "where": "Alte Pinakothek, Munich",
+        "url": "https://www.sammlung.pinakothek.de/en/artwork/5RGQJo84z3/peter-paul-rubens/raub-der-toechter-des-leukippos"
+      }
+    ]
+  },
+  {
+    "id": "eteocles",
+    "name": "Eteocles",
+    "greek": "Ἐτεοκλῆς",
+    "gender": "m",
+    "generation": 5,
+    "x": -560,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Thebes",
+    "tagline": "Refused to share the throne.",
+    "story": "Son of Oedipus. He kept Thebes from his brother, and they killed each other in single combat."
+  },
+  {
+    "id": "polynices",
+    "name": "Polynices",
+    "greek": "Πολυνείκης",
+    "gender": "m",
+    "generation": 5,
+    "x": -440,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Exiled prince of Thebes",
+    "tagline": "Marched an army against his own city.",
+    "story": "Son of Oedipus. Exiled, he led the Seven against Thebes and died by his brother’s hand.",
+    "art": [
+      {
+        "title": "Antigone in Front of the Dead Polyneikes",
+        "meta": "Nikiforos Lytras, 1865",
+        "where": "National Gallery, Athens",
+        "url": "https://www.nationalgallery.gr/en/artist/lytras-nikephoros/"
+      }
+    ]
+  },
+  {
+    "id": "antigone",
+    "name": "Antigone",
+    "greek": "Ἀντιγόνη",
+    "gender": "f",
+    "generation": 5,
+    "x": -320,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Oedipus",
+    "tagline": "Buried her brother against the king’s law.",
+    "story": "She guided her blind father in exile, then buried Polynices in defiance of Creon and was condemned to death.",
+    "art": [
+      {
+        "title": "Antigone in Front of the Dead Polyneikes",
+        "meta": "Nikiforos Lytras, 1865",
+        "where": "National Gallery, Athens",
+        "url": "https://www.nationalgallery.gr/en/artist/lytras-nikephoros/"
+      },
+      {
+        "title": "Oedipus and Antigone, or The Plague of Thebes",
+        "meta": "Charles Jalabert, 1842",
+        "where": "Musée des Beaux-Arts, Marseille",
+        "url": "https://en.wikipedia.org/wiki/Charles_Jalabert"
+      }
+    ]
+  },
+  {
+    "id": "ismene",
+    "name": "Ismene",
+    "greek": "Ἰσμήνη",
+    "gender": "f",
+    "generation": 5,
+    "x": -200,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Oedipus",
+    "tagline": "The sister who stayed silent.",
+    "story": "She would not join Antigone in defying Creon."
+  },
+  {
+    "id": "pylades",
+    "name": "Pylades",
+    "greek": "Πυλάδης",
+    "gender": "m",
+    "generation": 5,
+    "x": 140,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Friend of Orestes",
+    "tagline": "The friend who never left.",
+    "story": "Orestes’s cousin and his companion in exile and revenge. He marries Electra.",
+    "art": [
+      {
+        "title": "Pylades and Orestes Brought as Victims before Iphigenia",
+        "meta": "Benjamin West, 1766",
+        "where": "Tate Britain, London",
+        "url": "https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia"
+      },
+      {
+        "title": "The San Ildefonso Group",
+        "meta": "Roman, c. 10 BC; the Prado reads it as Orestes and Pylades",
+        "where": "Prado, Madrid",
+        "url": "https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62"
+      }
+    ]
+  },
+  {
+    "id": "electra",
+    "name": "Electra",
+    "greek": "Ἠλέκτρα",
+    "gender": "f",
+    "generation": 5,
+    "x": 280,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Agamemnon",
+    "tagline": "Lived for her father’s revenge.",
+    "story": "She helped her brother avenge their father.",
+    "versions": "Homer names Agamemnon’s daughters as Chrysothemis, Laodice and Iphianassa. The Catalogue of Women already has Electra, beside Iphimede. The lyric poet Xanthus says Electra was first called Laodice.",
+    "art": [
+      {
+        "title": "Electra at the Tomb of Agamemnon",
+        "meta": "Frederic Leighton, c. 1869",
+        "where": "Ferens Art Gallery, Hull",
+        "url": "https://www.rbkc.gov.uk/lordleightonsdrawings/ldcollection/paintingrecord.asp?workid=762"
+      }
+    ]
+  },
+  {
+    "id": "chrysothemis",
+    "name": "Chrysothemis",
+    "greek": "Χρυσόθεμις",
+    "gender": "f",
+    "generation": 5,
+    "x": 420,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Agamemnon",
+    "tagline": "The sister who would not take sides.",
+    "story": "In Sophocles she tried to talk Electra out of revenge."
+  },
+  {
+    "id": "iphigenia",
+    "name": "Iphigenia",
+    "greek": "Ἰφιγένεια",
+    "gender": "f",
+    "generation": 5,
+    "x": 560,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Agamemnon",
+    "tagline": "The daughter on the altar.",
+    "story": "Sacrificed to Artemis so the Greek fleet could sail for Troy.",
+    "versions": "Homer does not know her. The Cypria: Artemis swaps her for a deer and makes her immortal. Catalogue of Women: as Iphimede she becomes Hecate by the will of Artemis. Aeschylus: she dies at the altar. Euripides: Artemis carries her to the land of the Taurians. Stesichorus, via Pausanias: she is the daughter of Theseus and Helen, raised by Clytemnestra.",
+    "transformation": {
+      "text": "Replaced by a deer, or made immortal",
+      "sources": ["E", "H", "T", "A"]
+    },
+    "art": [
+      {
+        "title": "The Sacrifice of Iphigenia",
+        "meta": "Giovanni Battista Tiepolo, 1757",
+        "where": "Villa Valmarana ai Nani, Vicenza",
+        "url": "https://venetoaroundme.regione.veneto.it/en/node/96060"
+      },
+      {
+        "title": "The Sacrifice of Iphigenia, wall painting",
+        "meta": "1st century AD, from the House of the Tragic Poet, Pompeii",
+        "where": "National Archaeological Museum, Naples (inv. 9112)",
+        "url": "https://www.worldhistory.org/image/3853/the-sacrifice-of-iphigenia/"
+      }
+    ]
+  },
+  {
+    "id": "orestes",
+    "name": "Orestes",
+    "greek": "Ὀρέστης",
+    "gender": "m",
+    "generation": 5,
+    "x": 700,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Son of Agamemnon",
+    "tagline": "Killed his mother and ended the curse.",
+    "story": "Hunted by the Furies after the killing, he was tried in Athens and acquitted.",
+    "art": [
+      {
+        "title": "Orestes Pursued by the Furies (The Remorse of Orestes)",
+        "meta": "William-Adolphe Bouguereau, 1862",
+        "where": "Chrysler Museum of Art, Norfolk",
+        "url": "https://chrysler.emuseum.com/objects/27206"
+      },
+      {
+        "title": "Pylades and Orestes Brought as Victims before Iphigenia",
+        "meta": "Benjamin West, 1766",
+        "where": "Tate Britain, London",
+        "url": "https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia"
+      }
+    ]
+  },
+  {
+    "id": "aegisthus",
+    "name": "Aegisthus",
+    "greek": "Αἴγισθος",
+    "gender": "m",
+    "generation": 5,
+    "x": 840,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Son of Thyestes",
+    "tagline": "Born to kill, and he did.",
+    "story": "Clytemnestra’s lover. He killed Atreus, then Agamemnon.",
+    "versions": "Homer: Aegisthus kills Agamemnon. Aeschylus: Clytemnestra strikes the blow. Apollodorus and Hyginus: Aegisthus is the son of Thyestes by his own daughter, whom Hyginus names Pelopia.",
+    "art": [
+      {
+        "title": "Clytemnestra Hesitates before Killing the Sleeping Agamemnon",
+        "meta": "Pierre-Narcisse Guérin, 1817; Aegisthus urges her on",
+        "where": "Louvre, Paris",
+        "url": "https://mythopedia.com/topics/clytemnestra/"
+      }
+    ]
+  },
+  {
+    "id": "hermione",
+    "name": "Hermione",
+    "greek": "Ἑρμιόνη",
+    "gender": "f",
+    "generation": 5,
+    "x": 1000,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Menelaus and Helen",
+    "tagline": "Promised to two men.",
+    "story": "Promised to Orestes, given to Neoptolemus, and finally married to Orestes after all."
+  }
+]
