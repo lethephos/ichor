@@ -2702,7 +2702,8 @@
         "note": "named by Apollodorus"
       }
     ],
-    "members_note": "Apollodorus names three, and Euripides has three, unnamed; Pindar speaks of eight sons, ‘bronze-armoured’."
+    "members_note": "Apollodorus names three, and Euripides has three, unnamed; Pindar speaks of eight sons, ‘bronze-armoured’.",
+    "members_label": "brothers"
   },
   {
     "id": "erichthonius-athens",
@@ -2996,5 +2997,323 @@
     "tagline": "Took his best friend to the underworld to steal a queen.",
     "story": "King of the Lapiths, and Theseus’s closest friend. At his wedding the drunken centaurs tried to carry off the bride, and the Lapiths fought them. With Theseus he went down to the underworld to carry off Persephone; Hades sat them on a chair of forgetfulness, and they could not rise. Heracles freed Theseus, but Pirithous stayed for ever.",
     "versions": "Homer: son of Zeus by the wife of Ixion. Apollodorus: son of Ixion."
+  },
+  {
+    "id": "sisyphus",
+    "name": "Sisyphus",
+    "greek": "Σίσυφος",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Corinth",
+    "tagline": "Cheated death twice, and pushes a stone uphill forever.",
+    "story": "Son of Aeolus, founder of Corinth, and the craftiest of men. He married Merope, one of the Pleiades. When Autolycus kept stealing his cattle, he marked their hooves and tracked them down, and while he was in Autolycus’ house he lay with his daughter Anticleia. He told the river Asopus who had carried off his daughter, and for that, or for cheating Death, he rolls a stone up a hill in the underworld, and it always rolls down again.",
+    "versions": "Homer: he rolls the stone in Hades, and is ‘the craftiest of men’, but is not Odysseus’ father. Euripides, Sophocles and Ovid: Odysseus is called ‘son of Sisyphus’, as an insult."
+  },
+  {
+    "id": "autolycus",
+    "name": "Autolycus",
+    "greek": "Αὐτόλυκος",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Master thief",
+    "tagline": "The best liar and thief in the world, and Odysseus’ grandfather.",
+    "story": "Son of Hermes, who gave him his gift: he could steal anything, and change the look of what he stole. He named his grandson Odysseus, ‘the man of wrath’, and it was hunting a boar with Autolycus’ sons that Odysseus got the scar his old nurse knew him by.",
+    "versions": "Homer: Hermes favoured him, for the sacrifices he made. Hesiod, Apollodorus and Ovid: Hermes was his father."
+  },
+  {
+    "id": "arcesius",
+    "name": "Arcesius",
+    "greek": "Ἀρκείσιος",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Ithaca",
+    "tagline": "Father of an only son, who had an only son.",
+    "story": "King of Ithaca, and father of Laertes. Homer says Zeus gave the house only one son in each generation: Arcesius, Laertes, Odysseus, Telemachus.",
+    "versions": "Ovid: a son of Zeus, so Odysseus could claim Zeus as his great-grandfather."
+  },
+  {
+    "id": "laertes",
+    "name": "Laertes",
+    "greek": "Λαέρτης",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Ithaca",
+    "tagline": "Waited twenty years for his son, on a farm, in rags.",
+    "story": "Son of Arcesius, and king of Ithaca; in Apollodorus he sailed with the Argonauts. He married Anticleia, daughter of Autolycus. While Odysseus was away he left the palace and lived on his farm among the slaves, grieving. Odysseus found him there after killing the suitors, and Athena made him young enough to fight beside his son and grandson one last time."
+  },
+  {
+    "id": "anticleia",
+    "name": "Anticleia",
+    "greek": "Ἀντίκλεια",
+    "gender": "f",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Ithaca",
+    "tagline": "Died of longing for her son.",
+    "story": "Daughter of Autolycus, and wife of Laertes. She died of grief while Odysseus was away. When he went down to the edge of the underworld, he found her ghost there, and tried three times to hold her, and three times she slipped through his arms like a shadow.",
+    "versions": "Euripides and Hyginus: Sisyphus lay with her before her marriage, and Odysseus was his son."
+  },
+  {
+    "id": "icarius",
+    "name": "Icarius",
+    "greek": "Ἰκάριος",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Prince of Sparta",
+    "tagline": "Wanted his daughter to stay home, and lost her to an islander.",
+    "story": "Father of Penelope. He wanted Odysseus to live with them in Sparta, and when the couple left he followed their chariot, begging her to stay. Penelope said nothing, and covered her face with her veil; he understood, and let her go.",
+    "versions": "Apollodorus: a brother of Tyndareus, so Penelope is a cousin of Helen and Clytemnestra."
+  },
+  {
+    "id": "odysseus",
+    "name": "Odysseus",
+    "greek": "Ὀδυσσεύς",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Ithaca",
+    "tagline": "Took twenty years to come home, and lied the whole way.",
+    "story": "Son of Laertes and Anticleia, king of the small island of Ithaca, and the cleverest of the Greeks. He tried to dodge the war by feigning madness, and was found out. At Troy he thought of the wooden horse. Coming home he blinded the Cyclops Polyphemus, and Poseidon kept him at sea for ten years; he lost every ship and every man, lived a year with Circe and seven years with Calypso, and came home alone, in rags. With his son Telemachus he killed the suitors who had been courting his wife and eating up his house.",
+    "versions": "Homer: his death will come gently, ‘from the sea’, in old age. Apollodorus and Hyginus: his son by Circe, Telegonus, killed him without knowing him."
+  },
+  {
+    "id": "penelope",
+    "name": "Penelope",
+    "greek": "Πηνελόπεια",
+    "gender": "f",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Ithaca",
+    "tagline": "Wove by day and unwove by night, for three years.",
+    "story": "Daughter of Icarius, and wife of Odysseus. For twenty years she waited. When suitors filled her house, she told them she would choose one when she had finished a shroud for Laertes; she wove it by day and unpicked it by night, until a maid betrayed her. When Odysseus came home in disguise, she tested him with the secret of their bed, built round an olive tree, before she let herself believe it was him.",
+    "versions": "Apollodorus and Hyginus: after Odysseus’ death she married his son Telegonus. Apollodorus also tells that she was unfaithful, and Odysseus sent her home to her father, or killed her."
+  },
+  {
+    "id": "telemachus",
+    "name": "Telemachus",
+    "greek": "Τηλέμαχος",
+    "gender": "m",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Prince of Ithaca",
+    "tagline": "Grew up without a father, and went looking for one.",
+    "story": "Son of Odysseus and Penelope, a baby when his father left. At twenty, guided by Athena, he sailed to Pylos and Sparta for news of his father, and slipped past the suitors who waited to kill him on his way home. He found Odysseus in the swineherd’s hut, and fought beside him in the hall.",
+    "versions": "Hyginus: after Odysseus’ death he married Circe."
+  },
+  {
+    "id": "telegonus",
+    "name": "Telegonus",
+    "greek": "Τηλέγονος",
+    "gender": "m",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Son of Odysseus and Circe",
+    "tagline": "Killed the father he had sailed to find.",
+    "story": "Son of Odysseus and Circe, born after Odysseus left her island. Grown, he sailed to Ithaca to find his father. Raiding for cattle, he was met by an old man defending them, and killed him with a spear tipped with a stingray’s spine. It was Odysseus. He took his father’s body and Penelope back to Circe.",
+    "versions": "Hesiod, in lines thought to be later: Circe bore Odysseus Agrius and Latinus, and Telegonus. The lost Telegony told his story."
+  },
+  {
+    "id": "calypso",
+    "name": "Calypso",
+    "greek": "Καλυψώ",
+    "gender": "f",
+    "generation": 2,
+    "kind": "nymph",
+    "branch": "cursed-houses",
+    "role": "Nymph of Ogygia",
+    "tagline": "Kept Odysseus for seven years, and offered him forever.",
+    "story": "Daughter of Atlas, a goddess living alone in a cave on the island of Ogygia. She rescued Odysseus from the sea and kept him seven years, and offered to make him deathless and ageless if he stayed. He sat on the shore each day and wept for home. At last Zeus sent Hermes to order her to let him go, and she helped him build a raft.",
+    "versions": "Hesiod: an Oceanid, daughter of Oceanus and Tethys; and she bore Odysseus two sons, Nausithous and Nausinous. Apollodorus: she kept him five years, and bore him Latinus."
+  },
+  {
+    "id": "polyphemus",
+    "name": "Polyphemus",
+    "greek": "Πολύφημος",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Cyclops",
+    "tagline": "Ate his guests, and was blinded by Nobody.",
+    "story": "Son of Poseidon and the sea-nymph Thoosa, a one-eyed giant who kept sheep in a cave on the island of the Cyclopes. He shut Odysseus and his men in, and ate them two at a time. Odysseus told him his name was ‘Nobody’, made him drunk, and drove a burning stake into his eye; when the other Cyclopes came, he cried that Nobody was killing him. The Greeks escaped tied under his sheep. Odysseus shouted his real name from the ship, and Polyphemus prayed to his father for revenge.",
+    "versions": "Euripides tells it as a satyr play, with Silenus and the satyrs as his slaves. Ovid: he loved the sea-nymph Galatea, and crushed her lover Acis with a rock."
+  },
+  {
+    "id": "nausithous",
+    "name": "Nausithous",
+    "greek": "Ναυσίθοος",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of the Phaeacians",
+    "tagline": "Led his people to the edge of the world.",
+    "story": "Son of Poseidon, and king of the Phaeacians. He led them away from the Cyclopes, their neighbours, to the island of Scheria, and built them a city with walls and temples."
+  },
+  {
+    "id": "alcinous",
+    "name": "Alcinous",
+    "greek": "Ἀλκίνοος",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of the Phaeacians",
+    "tagline": "Heard Odysseus’ story, and sent him home asleep.",
+    "story": "Son of Nausithous, king of the Phaeacians, married to his niece Arete. He took in Odysseus as a stranger, and at his feast Odysseus told the story of his wanderings. The Phaeacians carried him home to Ithaca overnight and left him asleep on the beach; Poseidon turned their ship to stone as it came back into harbour.",
+    "versions": "Apollodorus: years before, he gave shelter to Jason and Medea, and Arete had them married that night, so that he could not give Medea back to her father."
+  },
+  {
+    "id": "arete",
+    "name": "Arete",
+    "greek": "Ἀρήτη",
+    "gender": "f",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of the Phaeacians",
+    "tagline": "Honoured above all other wives, and the one to win over.",
+    "story": "Daughter of Rhexenor, Alcinous’ brother, and wife of Alcinous. Her husband honoured her above all women, and she settled the quarrels of her people. Nausicaa told Odysseus to go past her father and clasp her mother’s knees, if he wanted to get home."
+  },
+  {
+    "id": "nausicaa",
+    "name": "Nausicaa",
+    "greek": "Ναυσικάα",
+    "gender": "f",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Princess of the Phaeacians",
+    "tagline": "Found a naked stranger on the beach, and did not run.",
+    "story": "Daughter of Alcinous and Arete. Athena sent her a dream to go and wash clothes by the sea, and there Odysseus, shipwrecked and naked, came out of the bushes. Her maids ran; she stood her ground, gave him clothes, and told him how to reach her father’s hall. She half hoped he would stay and marry her."
+  },
+  {
+    "id": "palamedes",
+    "name": "Palamedes",
+    "greek": "Παλαμήδης",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Son of Nauplius",
+    "tagline": "Outwitted Odysseus once, and paid with his life.",
+    "story": "Son of Nauplius of Euboea, a clever man, said to have invented letters, numbers and dice. When Odysseus feigned madness to stay out of the war, Palamedes exposed him through his baby son. At Troy Odysseus took his revenge: he hid gold in Palamedes’ tent and forged a letter from Priam, and the Greeks stoned Palamedes as a traitor.",
+    "versions": "The Cypria: Odysseus and Diomedes drowned him while he was out fishing. Euripides, Apollodorus and Hyginus: stoned for treason, on forged evidence."
+  },
+  {
+    "id": "telamon",
+    "name": "Telamon",
+    "greek": "Τελαμών",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Salamis",
+    "tagline": "First over the walls of Troy, a generation early.",
+    "story": "Son of Aeacus, and brother of Peleus; the brothers killed their half-brother Phocus and were driven from Aegina. Telamon became king of Salamis. He sailed with Heracles against Laomedon’s Troy and was the first over the wall, and Heracles gave him Laomedon’s daughter Hesione as his prize. His sons were Ajax and Teucer.",
+    "versions": "Homer: father of Ajax and of Teucer, but his own father is not named."
+  },
+  {
+    "id": "ajax",
+    "name": "Ajax",
+    "greek": "Αἴας",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Prince of Salamis",
+    "tagline": "The best fighter after Achilles, beaten by a speech.",
+    "story": "Son of Telamon, a giant with a shield like a tower, the best of the Greeks after Achilles. When Achilles died, Ajax carried his body out of the battle. His arms were to go to the bravest Greek, and they were given to Odysseus. Ajax went mad with shame and anger, slaughtered the army’s cattle thinking they were his enemies, and fell on his sword. In the underworld he would not speak to Odysseus.",
+    "versions": "Not Ajax son of Oileus, who dragged Cassandra from Athena’s altar."
+  },
+  {
+    "id": "suitors",
+    "name": "Suitors of Penelope",
+    "greek": "μνηστῆρες",
+    "gender": "m",
+    "generation": 8,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Young lords of Ithaca and the islands",
+    "tagline": "Ate a man’s house for three years, and courted his wife.",
+    "story": "The young lords of Ithaca and the islands nearby who came to court Penelope while Odysseus was away. For three years they feasted in his hall on his cattle and wine, slept with his maids, and plotted to kill his son. When Odysseus came home as a beggar, they mocked him; then he strung the great bow none of them could string, and shot them down in the hall.",
+    "count": "A hundred and eight",
+    "members_label": "suitors",
+    "members": [
+      {
+        "name": "Antinous",
+        "greek": "Ἀντίνοος",
+        "note": "the worst of them, and the first to die"
+      },
+      {
+        "name": "Eurymachus",
+        "greek": "Εὐρύμαχος",
+        "note": "blamed it all on Antinous, and died next"
+      },
+      {
+        "name": "Amphinomus",
+        "greek": "Ἀμφίνομος",
+        "note": "the kindest; Odysseus warned him to leave, and he stayed"
+      },
+      {
+        "name": "Leodes",
+        "greek": "Λειώδης",
+        "note": "their soothsayer, who begged for mercy"
+      },
+      {
+        "name": "Ctesippus",
+        "greek": "Κτήσιππος",
+        "note": "threw a cow’s hoof at the beggar"
+      }
+    ],
+    "members_note": "Homer counts them: fifty-two from Dulichium, twenty-four from Same, twenty from Zacynthus and twelve from Ithaca. Apollodorus lists more names."
+  },
+  {
+    "id": "companions",
+    "name": "Companions of Odysseus",
+    "greek": "ἑταῖροι",
+    "gender": "m",
+    "generation": 7,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "The crews of Odysseus’ ships",
+    "tagline": "Sailed home with Odysseus, and none of them got there.",
+    "story": "The men of the twelve ships Odysseus took to Troy. On the way home the Cyclops ate some, the Laestrygonians sank eleven ships, and Circe turned a crew into pigs. Starving on the island of the Sun, they ate the cattle of Helios, though they had sworn not to, and when they put to sea Zeus struck their ship with a thunderbolt. Odysseus alone survived.",
+    "members": [
+      {
+        "name": "Eurylochus",
+        "greek": "Εὐρύλοχος",
+        "note": "escaped Circe’s pigsty; led the others to eat the cattle of the Sun"
+      },
+      {
+        "name": "Elpenor",
+        "greek": "Ἐλπήνωρ",
+        "note": "fell asleep drunk on Circe’s roof, and fell off"
+      },
+      {
+        "name": "Polites",
+        "greek": "Πολίτης",
+        "note": "the dearest of Odysseus’ men, turned into a pig"
+      }
+    ],
+    "transformation": {
+      "text": "Pigs, for a while, until Circe turned them back",
+      "sources": ["E", "A", "L"]
+    }
   }
 ]
