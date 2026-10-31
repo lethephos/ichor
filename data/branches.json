@@ -7,7 +7,8 @@
     "focus": "pelops",
     "houses": [
       {"label": "House of Labdacus", "founder": "labdacus"},
-      {"label": "House of Atreus", "founder": "pelops"}
+      {"label": "House of Atreus", "founder": "pelops"},
+      {"label": "House of Perseus", "founder": "perseus"}
     ],
     "dividers": [
       {"before": 4, "label": "Heroes and mortals"}
@@ -26,7 +27,7 @@
         "title": "The gods",
         "note": "From Gaia and Uranus to the younger gods.",
         "focus": "zeus",
-        "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis", "themis", "mnemosyne", "erinyes", "oceanids", "pleiades", "muses", "horae", "moirai", "charites", "crius", "hyperion", "theia", "iapetus", "prometheus", "epimetheus", "menoetius", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "hecate"]
+        "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis", "themis", "mnemosyne", "erinyes", "oceanids", "pleiades", "muses", "horae", "moirai", "charites", "crius", "hyperion", "theia", "iapetus", "prometheus", "epimetheus", "menoetius", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "hecate", "hebe"]
       },
       {
         "id": "titans",
@@ -42,7 +43,7 @@
         "title": "Zeus and his loves",
         "note": "His wives and lovers, and the children they bore him.",
         "focus": "zeus",
-        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria"]
+        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria", "hebe", "danae", "perseus", "alcmene", "heracles"]
       },
       {
         "id": "thebes",
@@ -51,7 +52,7 @@
         "note": "The house of Cadmus and the Labdacids.",
         "houses": ["House of Labdacus"],
         "focus": "cadmus",
-        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops"]
+        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops", "menoeceus", "creon"]
       },
       {
         "id": "atreus",
@@ -60,6 +61,15 @@
         "note": "From Tantalus to Orestes.",
         "focus": "atreus",
         "figures": ["zeus", "pluto", "ares", "hermes", "artemis", "nemesis", "tantalus", "niobe", "oenomaus", "hippodamia", "myrtilus", "pelops", "chrysippus", "atreus", "thyestes", "aerope", "pleisthenes", "pelopia", "agamemnon", "menelaus", "clytemnestra", "helen", "aegisthus", "tyndareus", "leda", "castor", "polydeuces", "theseus", "paris", "iphigenia", "orestes", "electra", "chrysothemis", "pylades", "hermione", "erinyes", "hecate"]
+      },
+      {
+        "id": "perseus",
+        "label": "Perseus and Heracles",
+        "title": "Perseus and Heracles",
+        "note": "The house of Perseus, from Danaë’s prison to Heracles on Olympus.",
+        "houses": ["House of Perseus"],
+        "focus": "heracles",
+        "figures": ["zeus", "hera", "poseidon", "hebe", "pelops", "acrisius", "danae", "perseus", "andromeda", "medusa", "alcaeus", "electryon", "sthenelus", "nicippe", "amphitryon", "alcmene", "eurystheus", "heracles", "iphicles", "menoeceus", "creon", "megara", "deianira"]
       }
     ]
   }

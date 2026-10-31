@@ -1490,5 +1490,256 @@
     "to": "hecate",
     "sources": ["H"],
     "note": "became Hecate, by the will of Artemis"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hebe",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "hebe",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "acrisius",
+    "to": "danae",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "danae",
+    "sources": ["E", "T", "A", "L"],
+    "note": "As a shower of gold"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "perseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "danae",
+    "to": "perseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "acrisius",
+    "sources": ["A", "L"],
+    "note": "By accident, with a discus, as the oracle foretold"
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "medusa",
+    "sources": ["H", "T", "A", "L"],
+    "note": "Cut off her head"
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "medusa",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "perseus",
+    "to": "andromeda",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "perseus",
+    "to": "alcaeus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromeda",
+    "to": "alcaeus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "perseus",
+    "to": "electryon",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromeda",
+    "to": "electryon",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "perseus",
+    "to": "sthenelus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromeda",
+    "to": "sthenelus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "nicippe",
+    "sources": ["A"]
+  },
+  {
+    "type": "marriage",
+    "from": "sthenelus",
+    "to": "nicippe",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "sthenelus",
+    "to": "eurystheus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "nicippe",
+    "to": "eurystheus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "alcaeus",
+    "to": "amphitryon",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "electryon",
+    "to": "alcmene",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "amphitryon",
+    "to": "electryon",
+    "sources": ["H", "A"],
+    "note": "Over cattle: in anger in Hesiod, by accident in Apollodorus"
+  },
+  {
+    "type": "marriage",
+    "from": "amphitryon",
+    "to": "alcmene",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "alcmene",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "In Amphitryon’s likeness"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "heracles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "alcmene",
+    "to": "heracles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "amphitryon",
+    "to": "iphicles",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "alcmene",
+    "to": "iphicles",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "heracles",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "Hated him from before his birth, and sent him mad"
+  },
+  {
+    "type": "feud",
+    "from": "eurystheus",
+    "to": "heracles",
+    "sources": ["E", "T", "A", "L"],
+    "note": "Set him his labours"
+  },
+  {
+    "type": "parent",
+    "from": "menoeceus",
+    "to": "jocasta",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "menoeceus",
+    "to": "creon",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "creon",
+    "to": "megara",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "heracles",
+    "to": "megara",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "megara",
+    "sources": ["T", "L"],
+    "note": "In madness; Apollodorus has him kill only their children"
+  },
+  {
+    "type": "marriage",
+    "from": "heracles",
+    "to": "deianira",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "deianira",
+    "to": "heracles",
+    "sources": ["H", "T", "A", "L"],
+    "note": "Unknowing, with the poisoned robe"
+  },
+  {
+    "type": "marriage",
+    "from": "heracles",
+    "to": "hebe",
+    "sources": ["E", "H", "T", "A"],
+    "note": "After he was made a god"
+  },
+  {
+    "type": "feud",
+    "from": "creon",
+    "to": "antigone",
+    "sources": ["T", "A"],
+    "note": "Walled her up alive for burying Polynices"
   }
 ]
