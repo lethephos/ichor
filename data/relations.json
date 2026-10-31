@@ -1152,5 +1152,134 @@
     "to": "pentheus",
     "sources": ["T", "A", "L"],
     "note": "tore her son apart in a Bacchic frenzy, taking him for a wild beast"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "themis",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "mnemosyne",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "themis",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "mnemosyne",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "zeus",
+    "to": "themis",
+    "sources": ["H"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "mnemosyne",
+    "sources": ["H", "A"],
+    "note": "lay with Mnemosyne for nine nights"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "muses",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "mnemosyne",
+    "to": "muses",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "horae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "moirai",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "themis",
+    "to": "horae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "themis",
+    "to": "moirai",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "moirai",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "charites",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "oceanids",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "oceanids",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "atlas",
+    "to": "pleiades",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "erinyes",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "erinyes",
+    "sources": ["H", "A"],
+    "note": "from his spilled blood"
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "erinyes",
+    "sources": ["T"]
+  },
+  {
+    "type": "feud",
+    "from": "erinyes",
+    "to": "orestes",
+    "sources": ["T", "A", "L"],
+    "note": "hunted Orestes across Greece for killing his mother"
   }
 ]

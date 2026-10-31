@@ -13,7 +13,7 @@ The first branch is **"Two cursed houses"**: the House of Atreus and the House o
 
 The site is live at https://ichor-orpin.vercel.app (Vite + D3, data in `/data`, deployed from `main` by Vercel). The original prototype, `prototype/ichor-atreidae.html`, stays as the reference for behaviour and tone.
 
-- 74 figures, 184 relations, from Gaia and Uranus to Orestes and Antigone, in rows computed from `generation`; pan and pinch-zoom.
+- 83 figures, 205 relations, from Gaia and Uranus to Orestes and Antigone, in rows computed from `generation`; pan and pinch-zoom.
 - **Source switcher**: All versions / Homer & epic / Hesiod / Lyric & tragedy / Apollodorus / Later writers. Links not attested in the chosen source fade out; a one-line note says what changes.
 - **Layer toggles**: Bloodlines, Marriages, Affairs, Feuds & killings, Transformations, Curses.
 - **Figure card**: Greek name, name, tagline, role, story, The Twelve (for Olympians), Born to / Married / Affairs / Feuds & killings / Transformations / Curses / Children (each with its sources), Where the sources disagree, In art.
@@ -30,9 +30,9 @@ The site is live at https://ichor-orpin.vercel.app (Vite + D3, data in `/data`, 
   - Light: bg `#E8CFB2`, panel `#F3E3D0`, rule `#C9A07D`, text `#1E140D`, lines `#2A1D14`, muted `#5A3F2C`, curse `#A82A17`, gold `#8A5E00`.
   - Dark: bg `#14100C`, panel `#1F1812`, rule `#3D3024`, text `#EAD3B8`, lines `#B98C66`, muted `#A68E76`, curse `#E0533C`, gold `#E8B54A`.
   - All text meets WCAG AA contrast on both bg and panel.
-- Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation, a small peak marks one of the Twelve Olympians (hollow for Hestia and Dionysus).
+- Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation, a small peak marks one of the Twelve Olympians (hollow for Hestia and Dionysus); a group (the Muses, the Fates…) is a ringed medallion holding three small dots.
 - Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted gold with arrow; curse = red with arrow.
-- Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of Greek myth", then the branch as the page title, "From Gaia to Orestes". "Now exploring" sits above the title, and the title opens the family switcher: Whole tree, The gods, Zeus and his loves, Thebes, The House of Atreus (`families` in `data/branches.json`; the choice lives in the URL, `?family=thebes`). Everyone goes into the one pool of data; families keep the tree readable as it grows. Collectives (the Muses, the Moirai, the Oceanids…) are planned as one medallion each. Sources are pills, the chosen one filled; on desktop their note sits on the same line.
+- Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of Greek myth", then the branch as the page title, "From Gaia to Orestes". "Now exploring" sits above the title, and the title opens the family switcher: Whole tree, The gods, Zeus and his loves, Thebes, The House of Atreus (`families` in `data/branches.json`; the choice lives in the URL, `?family=thebes`). Everyone goes into the one pool of data; families keep the tree readable as it grows. Collectives are one medallion each (`kind: group`): the Muses, Moirai, Horae, Charites, Oceanids, Pleiades and Erinyes; the card lists the sisters. Sources are pills, the chosen one filled; on desktop their note sits on the same line.
 - Tools: on desktop the layer toggles, Trace a curse, Ariadne’s thread and the search box float in a dock at the bottom of the tree; on phones four buttons (Layers, Curses, Thread, Find) float at the bottom and open panels in the card sheet. "Whole tree" sits in the top corner of the tree.
 
 **Tone**
@@ -49,7 +49,7 @@ Keep it simple: a static site, no backend.
 
 - Vite + vanilla TypeScript (or plain JS) + D3.
 - Data out of the code, in `/data`:
-  - `people.json` — id, name, greek, gender, generation, kind (god / nymph / mortal / other-cycle), branch, role, tagline, story, versions, transformation, art.
+  - `people.json` — id, name, greek, gender, generation, kind (god / nymph / mortal / other-cycle / group), branch, role, tagline, story, versions, transformation, art; a group adds count, members and members_note.
   - `relations.json` — type, from, to, sources, note.
   - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` still needs checking against the sources; the three myths (Hippodamia, Leda, Iphigenia) have been checked.
   - `sources.json` — source groups and their labels.

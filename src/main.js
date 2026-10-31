@@ -275,15 +275,18 @@ function drawTree(){
     const g = d3.select(this);
     g.append("circle").attr("class","hit").attr("r",26);
     g.append("circle").attr("class","halo").attr("r",16);
-    if (d.kind==="god") g.append("circle").attr("class","ring").attr("r",RN+4);
-    g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
+    if (d.kind==="god" || d.kind==="group") g.append("circle").attr("class","ring").attr("r",RN+4);
+    // a group (the Muses, the Fates…) is one medallion holding three small ones
+    if (d.kind==="group") [[0,-3.6],[-3.6,2.6],[3.6,2.6]].forEach(([x,y]) => g.append("circle").attr("class","dot group").attr("cx",x).attr("cy",y).attr("r",3.4));
+    else g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
     if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
         .attr("transform",`translate(${RN+7},${-RN-3})`);
     // Olympus: a small peak at the upper left; hollow where only some lists count the god
     if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z")
         .attr("transform",`translate(${-RN-7},${-RN-3})`)
         .append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
-    g.append("text").attr("class","lbl" + (d.kind==="god"?" god":"")).attr("text-anchor","middle").attr("y", d.kind==="god" ? 34 : 30).text(d.name);
+    const ringed = d.kind==="god" || d.kind==="group";
+    g.append("text").attr("class","lbl" + (ringed?" god":"")).attr("text-anchor","middle").attr("y", ringed ? 34 : 30).text(d.name);
   });
 }
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
@@ -380,8 +383,10 @@ function apply(animate){
 /* ---------- card ---------- */
 const cardBody = document.getElementById("cardBody");
 const srcText = src => `<span class="srcs">${src.map(s => state.src===s ? `<b>${SRC[s]}</b>` : SRC[s]).join(", ")}</span>`;
+// a group reads as “the Muses” inside a sentence, “The Muses” at its start
+const named = (id, start) => N[id].kind==="group" ? `${start ? "The" : "the"} ${N[id].name}` : N[id].name;
 function sentence(e){
-  const A = N[e.from].name, B = N[e.to].name;
+  const A = named(e.from, true), B = named(e.to);
   if (e.type==="parent") return `${A} is the ${N[e.from].gender==="f"?"mother":"father"} of ${B}${e.note?` (${e.note})`:""}.`;
   if (e.type==="marriage") return `${A} married ${B}${e.note?`, ${e.note}`:""}.`;
   return `${A} ${e.note}.`;
@@ -432,6 +437,7 @@ function renderNode(id){
     <p class="card-tag">${p.tagline}</p>
     <p class="card-role">${p.role}</p>
     <p class="card-story">${p.story}</p>
+    ${p.members ? `<div class="sec"><h3>${p.count ? `${p.count} sisters` : "Who they are"}</h3><ul class="rels members">${p.members.map(m => `<li>${m.id && N[m.id] ? `<button class="rel" data-go="${m.id}">${m.name}</button>` : `<span class="rel static">${m.name}</span>`} <span class="greek-sm" lang="grc">${m.greek}</span>${m.note ? `<span class="note">${m.note}</span>` : ""}</li>`).join("")}</ul>${p.members_note ? `<p class="oly-note">${p.members_note}</p>` : ""}</div>` : ""}
     ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
     ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
@@ -680,7 +686,7 @@ function runThread(a, b, silent){
   const res = shortestPath(a, b);
   if (!res) {
     state.path = null; apply(true);
-    if (out) out.innerHTML = `<p class="card-story">In ${state.src==="all" ? "these sources" : SRC[state.src]}, no thread connects ${N[a].name} and ${N[b].name}. Try “${SRC_ALL_LABEL}”.</p>`;
+    if (out) out.innerHTML = `<p class="card-story">In ${state.src==="all" ? "these sources" : SRC[state.src]}, no thread connects ${named(a)} and ${named(b)}. Try “${SRC_ALL_LABEL}”.</p>`;
     return;
   }
   state.path = {nodes:res.nodes, edges:res.edges.map(e => e.i)};
