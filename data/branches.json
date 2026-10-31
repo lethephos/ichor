@@ -173,6 +173,15 @@
         "focus": "orpheus",
         "houses": [],
         "figures": ["gaia", "nyx", "erebus", "hypnos", "thanatos", "zeus", "hera", "hades", "persephone", "demeter", "leto", "apollo", "artemis", "dionysus", "muses", "tityos", "cerberus", "tantalus", "sisyphus", "ixion", "pirithous", "theseus", "oeagrus", "orpheus", "eurydice", "maenads", "agave", "pentheus", "cretheus", "tyro", "pheres", "pelias", "admetus", "alcestis", "heracles"]
+      },
+      {
+        "id": "trojan-war",
+        "label": "The Trojan War",
+        "title": "The Trojan War",
+        "note": "From the apple of Eris to the fall of Troy and the wrecks on the way home: the quarrels of the Iliad, the allies who came to Priam, and the killings on the last night.",
+        "focus": "achilles",
+        "houses": [],
+        "figures": ["nyx", "eris", "zeus", "hera", "athena", "aphrodite", "apollo", "poseidon", "ares", "eos", "thetis", "peleus", "tithonus", "priam", "hecuba", "eetion", "chryses", "neleus", "poeas", "oileus", "tyro", "achilles", "patroclus", "agamemnon", "menelaus", "helen", "paris", "hector", "andromache", "cassandra", "helenus", "troilus", "deiphobus", "polyxena", "odysseus", "ajax", "ajax-lesser", "nestor", "antilochus", "memnon", "penthesilea", "philoctetes", "chryseis", "briseis", "laocoon", "neoptolemus", "astyanax"]
       }
     ]
   }

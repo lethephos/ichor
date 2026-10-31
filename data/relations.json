@@ -4456,5 +4456,229 @@
     "to": "thanatos",
     "sources": ["T", "A"],
     "note": "wrestled Death at the tomb of Alcestis and brought her back"
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "eris",
+    "sources": ["H"]
+  },
+  {
+    "type": "feud",
+    "from": "eris",
+    "to": "thetis",
+    "sources": ["E", "A", "L"],
+    "note": "threw the golden apple among the goddesses at the wedding of Thetis and Peleus"
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "paris",
+    "sources": ["E", "A", "L"],
+    "note": "hated Paris and Troy for judging Aphrodite the fairest"
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "paris",
+    "sources": ["E", "A", "L"],
+    "note": "hated Paris and Troy for judging Aphrodite the fairest"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "neleus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "neleus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "neleus",
+    "to": "nestor",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "neleus",
+    "sources": ["E", "H", "A"],
+    "note": "killed Neleus and all his sons but Nestor"
+  },
+  {
+    "type": "parent",
+    "from": "nestor",
+    "to": "antilochus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "eos",
+    "to": "memnon",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "tithonus",
+    "to": "memnon",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "memnon",
+    "to": "antilochus",
+    "sources": ["E", "T", "A"],
+    "note": "killed Antilochus, who stood in front of his father"
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "memnon",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Memnon to avenge Antilochus"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "penthesilea",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "penthesilea",
+    "sources": ["E", "A"],
+    "note": "killed Penthesilea, and loved her as she died"
+  },
+  {
+    "type": "parent",
+    "from": "poeas",
+    "to": "philoctetes",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "philoctetes",
+    "sources": ["T", "A"],
+    "note": "left Philoctetes on Lemnos with his wound, and ten years later came back for his bow"
+  },
+  {
+    "type": "feud",
+    "from": "philoctetes",
+    "to": "paris",
+    "sources": ["E", "T", "A"],
+    "note": "shot Paris with the bow of Heracles"
+  },
+  {
+    "type": "parent",
+    "from": "oileus",
+    "to": "ajax-lesser",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "ajax-lesser",
+    "to": "cassandra",
+    "sources": ["E", "A", "L"],
+    "note": "dragged Cassandra from the image of Athena"
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "ajax-lesser",
+    "sources": ["A"],
+    "note": "wrecked Ajax’s ship on his way home"
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "ajax-lesser",
+    "sources": ["E", "A"],
+    "note": "drowned Ajax when he boasted he had escaped the sea"
+  },
+  {
+    "type": "parent",
+    "from": "chryses",
+    "to": "chryseis",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "agamemnon",
+    "to": "chryseis",
+    "sources": ["E", "A"],
+    "note": "took Chryseis as his prize, and refused her father’s ransom"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "agamemnon",
+    "sources": ["E", "A"],
+    "note": "sent a plague on the Greeks when Agamemnon refused Chryses"
+  },
+  {
+    "type": "affair",
+    "from": "achilles",
+    "to": "briseis",
+    "sources": ["E", "A", "L"],
+    "note": "took Briseis as his prize, and loved her"
+  },
+  {
+    "type": "parent",
+    "from": "eetion",
+    "to": "andromache",
+    "sources": ["E", "T"]
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "eetion",
+    "sources": ["E"],
+    "note": "sacked Thebe and killed Eetion and his seven sons"
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "helenus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "helenus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "helenus",
+    "sources": ["E", "T", "A"],
+    "note": "captured Helenus and made him tell how Troy could be taken"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "laocoon",
+    "sources": ["E", "A"],
+    "note": "sent two serpents over the sea to kill Laocoon"
+  },
+  {
+    "type": "feud",
+    "from": "neoptolemus",
+    "to": "astyanax",
+    "sources": ["E", "L"],
+    "note": "threw Astyanax from the walls of Troy"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "astyanax",
+    "sources": ["E", "T"],
+    "note": "killed Astyanax, or had the Greeks throw him from the walls"
   }
 ]
