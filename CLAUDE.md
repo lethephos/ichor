@@ -3,7 +3,7 @@
 ## What this is
 
 **Ichor** is an interactive family tree of Greek mythology for an English-speaking audience.
-Subtitle: *The family tree of the Greek gods*.
+Subtitle: *The family tree of Greek myth* (gods and mortals alike, so not “of the Greek gods”).
 
 It shows not only who descends from whom, but marriages, affairs, feuds and killings, transformations and curses. Its main difference from existing family trees is the **versions layer**: every link records which ancient sources tell it, and the user can switch source (Homer, Hesiod, the tragedians, Apollodorus, later writers) and watch the family rearrange itself.
 
@@ -33,7 +33,7 @@ Features in the prototype:
   - All text meets WCAG AA contrast on both bg and panel.
 - Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation, a small peak marks one of the Twelve Olympians (hollow for Hestia and Dionysus).
 - Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted gold with arrow; curse = red with arrow.
-- Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of the Greek gods", then "Now exploring", then the branch as the page title, "Two cursed houses", with "Atreus and Labdacus" beside it on desktop and under it on phones. The title will become a branch switcher. Sources are pills, the chosen one filled; on desktop their note sits on the same line.
+- Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of Greek myth", then the branch as the page title, "The gods and two cursed houses". "Now exploring" was dropped while there is only one branch; bring back a context line only when it says something (a branch switcher, a chosen family). Sources are pills, the chosen one filled; on desktop their note sits on the same line.
 - Tools: on desktop the layer toggles, Trace a curse, Ariadne’s thread and the search box float in a dock at the bottom of the tree; on phones four buttons (Layers, Curses, Thread, Find) float at the bottom and open panels in the card sheet. "Whole tree" sits in the top corner of the tree.
 
 **Tone**
