@@ -42,6 +42,7 @@ function setSource(k){
   if (state.mode==="thread" && state.threadEnds) runThread(...state.threadEnds, true);
   apply(true);
   if (state.mode==="node" && state.sel) renderNode(state.sel);
+  if (state.mode==="curse") openCurse(state.curseKey, state.step);
   nodeSel.filter(d => d.versions).classed("pulse", false);
   requestAnimationFrame(() => nodeSel.filter(d => d.versions).classed("pulse", true));
 }
@@ -404,15 +405,26 @@ function openFind(){
 
 /* Stories: a curse told one generation at a time. Step 0 introduces it, steps 1…n tell it and
    reveal on the tree only the figures met so far, step n+1 shows the whole line at once. */
-function reveal(c, k){
+/* Telling a story by one source uses only what is already in relations.json: a generation is
+   told by a source when one of its links to the story so far is attested there. */
+const STORY_TYPES = ["parent","curse","feud","affair","marriage"];
+const storyEdge = (c, e) => STORY_TYPES.includes(e.type) && c.pairs.some(p => samePair(e, p));
+function stepLinks(c, i){   // the links that tell step i (0-based): from its figures to anyone met by then
+  const figs = new Set(c.steps[i].figures), later = new Set(c.steps.slice(i+1).flatMap(s => s.figures));
+  return E.filter(e => storyEdge(c, e) && (figs.has(e.from) || figs.has(e.to))
+    && !later.has(figs.has(e.from) ? e.to : e.from));
+}
+const toldSteps = c => c.steps.map((_, i) => state.src==="all" || stepLinks(c, i).some(attested));
+function reveal(c, k, told = toldSteps(c)){
   const now = new Set(c.steps[k-1].figures);
-  const told = new Set(c.steps.slice(0, k).flatMap(s => s.figures));
-  const later = new Set(c.steps.slice(k).flatMap(s => s.figures));
-  const shown = new Set(told);
+  const met = new Set(c.steps.slice(0, k).flatMap((s, i) => told[i] ? s.figures : []));
+  const later = new Set(c.steps.slice(k).flatMap((s, i) => told[k+i] ? s.figures : []));
+  const shown = new Set([...met, ...now]);
   // bring in the people the story has just touched (Aerope, Chrysippus…), unless their own step is still to come
+  const touched = (a, b) => E.some(e => storyEdge(c, e) && samePair(e, [a, b]) && attested(e));
   c.pairs.forEach(([a, b]) => {
-    if (told.has(a) && !later.has(b)) shown.add(b);
-    if (told.has(b) && !later.has(a)) shown.add(a);
+    if (met.has(a) && !later.has(b) && touched(a, b)) shown.add(b);
+    if (met.has(b) && !later.has(a) && touched(a, b)) shown.add(a);
   });
   // the camera follows the step: its figures, with their parents, children and spouses already met
   const family = (a, b) => E.some(e => (e.type==="parent" || e.type==="marriage") && samePair(e, [a, b]));
@@ -423,43 +435,63 @@ function reveal(c, k){
   });
   return {now, shown, focus};
 }
+const nextStep = (c, step, told) => { for (let i = step+1; i <= c.steps.length; i++) if (told[i-1]) return i; return c.steps.length + 1; };
+const prevStep = (c, step, told) => { for (let i = Math.min(step-1, c.steps.length); i >= 1; i--) if (told[i-1]) return i; return 0; };
 const whoLinks = ids => `<div class="who">${ids.map(id => `<button class="rel" data-go="${id}">${N[id].name}</button>`).join("")}</div>`;
+const ORDER = {curse:0, feud:1, affair:2, marriage:3, parent:4};
 function openCurse(key, step = 0){
-  const c = CURSES[key], n = c.steps.length;
+  const c = CURSES[key], n = c.steps.length, told = toldSteps(c), src = state.src, by = SRC[src];
   state.mode = "curse"; state.curseKey = key; state.step = step; state.sel = null; state.path = null;
   curseSel.value = key;
-  const dots = `<div class="dots" aria-hidden="true">${c.steps.map((_, i) => `<span class="${i+1===step ? "on" : i+1<step ? "past" : ""}"></span>`).join("")}</div>`;
-  const nav = (back, next) => `<div class="story-nav">${back ? `<button class="act" data-step="${step-1}">← ${back}</button>` : "<span></span>"}${dots}${next ? `<button class="go" data-step="${step+1}">${next} →</button>` : "<span></span>"}</div>`;
+  const back = prevStep(c, step, told), next = nextStep(c, step, told);
+  const dots = `<div class="dots" aria-hidden="true">${c.steps.map((_, i) => `<span class="${!told[i] ? "skip" : i+1===step ? "on" : i+1<step ? "past" : ""}"></span>`).join("")}</div>`;
+  const nav = (backLabel, nextLabel) => `<div class="story-nav">${backLabel ? `<button class="act" data-step="${back}">← ${backLabel}</button>` : "<span></span>"}${dots}${nextLabel ? `<button class="go" data-step="${next}">${nextLabel} →</button>` : "<span></span>"}</div>`;
+  const pick = `<div class="story-src" role="group" aria-label="Told by"><span>Told by</span>${[["all", "All sources"], ...Object.entries(SRC)].map(([k, l]) =>
+    `<button class="tab" data-src="${k}" aria-pressed="${src===k}">${l}</button>`).join("")}</div>`;
+  const count = told.filter(Boolean).length;
   let body;
   if (step===0) body = `
     <h2 class="card-name curse-title">${c.title}</h2>
     <p class="card-tag">${c.lead}</p>
-    <p class="story-hint">Told generation by generation. The tree fills in as the story goes.</p>
-    ${nav(null, "Begin")}`;
-  else if (step<=n) { const s = c.steps[step-1]; body = `
+    ${pick}
+    <p class="story-hint">${src==="all" ? "Told generation by generation. The tree fills in as the story goes. Choose a source to hear only what it tells."
+      : count===n ? `Every generation is told in ${by}.` : count ? `${count} of ${n} generations are told in ${by}; the others are skipped.` : `This story is not told in ${by}.`}</p>
+    ${count ? nav(null, "Begin") : `<div class="story-nav"><span></span><button class="act" data-step="${n+1}">See the whole curse →</button></div>`}`;
+  else if (step<=n) {
+    const s = c.steps[step-1];
+    const says = src==="all" ? "" : told[step-1]
+      ? `<div class="story-says"><h3>In ${by}</h3><ul>${stepLinks(c, step-1).filter(attested).sort((a, b) => ORDER[a.type] - ORDER[b.type])
+          .map(e => `<li>${sentence(e)}${e.sources.length===1 ? ` <span class="only">only here</span>` : ""}</li>`).join("")}</ul></div>`
+      : `<p class="story-hint">This part is not told in ${by}.</p>`;
+    body = `
     <p class="story-of">${c.title}</p>
+    ${pick}
     <p class="story-step">${s.generation} <span>· ${step} of ${n}</span></p>
     <p class="story-text">${s.text}</p>
     ${whoLinks(s.figures)}
-    ${nav("Back", step===n ? "The whole curse" : "Next")}`; }
+    ${says}
+    ${nav(back ? "Back" : "Start", next>n ? "The whole curse" : "Next")}`;
+  }
   else body = `
     <h2 class="card-name curse-title">${c.title}</h2>
     <p class="card-tag">${c.lead}</p>
+    ${pick}
     <div class="sec"><h3>Generation by generation</h3><ol class="steps">
-      ${c.steps.map(({generation:g, figures:who, text:t}) => `<li><span class="g">${g}</span><div><div class="t">${t}</div>${whoLinks(who)}</div></li>`).join("")}
+      ${c.steps.map(({generation:g, figures:who, text:t}, i) => `<li class="${told[i] ? "" : "untold"}"><span class="g">${g}${told[i] ? "" : `<br>Not in ${by}`}</span><div><div class="t">${t}</div>${whoLinks(who)}</div></li>`).join("")}
     </ol></div>
-    <div class="story-nav"><button class="act" data-step="${n}">← Back</button><button class="act" data-step="1">Tell it again</button></div>
-    <p class="legend">Highlighted on the tree: the bloodline, the crimes and the curses that carry it forward.</p>`;
+    <div class="story-nav"><button class="act" data-step="${back}">← Back</button>${count ? `<button class="act" data-step="${nextStep(c, 0, told)}">Tell it again</button>` : ""}</div>
+    <p class="legend">Highlighted on the tree: the bloodline, the crimes and the curses that carry it forward${src==="all" ? "" : `, as ${by} records them`}.</p>`;
   shell(`<div class="card-top"><span class="greek">Ἀρά</span><button class="close" data-close>Close</button></div>${body}`);
   card.querySelectorAll("[data-step]").forEach(b => b.onclick = () => openCurse(key, +b.dataset.step));
+  card.querySelectorAll(".story-src [data-src]").forEach(b => b.onclick = () => setSource(b.dataset.src));
   apply(true);
-  fitTo(step>=1 && step<=n ? [...reveal(c, step).focus] : [...c.nodes], true);
+  fitTo(step>=1 && step<=n ? [...reveal(c, step, told).focus] : [...c.nodes], true);
 }
 document.addEventListener("keydown", ev => {
   if (state.mode!=="curse" || ev.target.closest("input, select, textarea")) return;
-  const n = CURSES[state.curseKey].steps.length;
-  if (ev.key==="ArrowRight" && state.step<=n) openCurse(state.curseKey, state.step+1);
-  if (ev.key==="ArrowLeft" && state.step>0) openCurse(state.curseKey, state.step-1);
+  const c = CURSES[state.curseKey], told = toldSteps(c);
+  if (ev.key==="ArrowRight" && state.step<=c.steps.length && told.some(Boolean)) openCurse(state.curseKey, nextStep(c, state.step, told));
+  if (ev.key==="ArrowLeft" && state.step>0) openCurse(state.curseKey, prevStep(c, state.step, told));
 });
 
 /* Ariadne’s thread */
