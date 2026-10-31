@@ -78,4 +78,4 @@
 .cf-me .dot{fill:var(--accent)}
 .cf-note{font-size:12px;color:var(--muted);margin:6px 0 0}
 .cf-l{paint-order:stroke;stroke:var(--bg-2);stroke-width:5px;stroke-linejoin:round}
-.cf .e-feud .main,.cf .e-curse .main,.cf .e-transform .main{opacity:.7}
+.cf-wheel{margin-top:14px;border-top:1px solid var(--rule);padding-top:10px}

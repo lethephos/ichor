@@ -19,7 +19,7 @@ The site is live at https://ichor-orpin.vercel.app (Vite + D3, data in `/data`, 
 - **Figure card**: Greek name, name, tagline, role, story, The Twelve (for Olympians), Born to / Married / Affairs / Feuds & killings / Transformations / Curses / Children (each with its sources), Where the sources disagree, In art.
 - **Stories**: the two curses and the myths of Cadmus, Hippodamia, Leda and Iphigenia, told step by step, by all sources or as one source tells it, with “Versions differ” and “Read as” inline.
 - **Ariadne’s thread**: the shortest path between two figures, respecting the chosen source.
-- **Close family**: each card draws a small map of the figure’s nearest links (parents above, children below, husbands and wives to the left, lovers to the right, feuds and fates in a band at the bottom), as the chosen source tells it, so versions show as extra parents; tapping a name moves to them. A prototype, chosen over a mind-map layout of the whole tree, which would lose fixed positions when the source changes.
+- **Close family**: each card draws a small map of the figure’s nearest links (parents above, children below, husbands and wives to the left, lovers to the right), with feuds, curses and transformations on a ring around the figure below it, as the chosen source tells it, so versions show as extra parents; tapping a name moves to them. A prototype, chosen over a mind-map layout of the whole tree, which would lose fixed positions when the source changes.
 - Light / dark theme switch; search with live filtering.
 
 ## Decisions made so far (can be revisited)

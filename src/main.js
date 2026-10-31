@@ -487,7 +487,6 @@ function closeFamily(id){
   col(wed, 96, "Married", "end"); col(loves, CF_W-96, "Loves", "start");
   y = midTop + side*30 + (wed.length > CF_MAX || loves.length > CF_MAX ? 30 : 14);
   band("Children", children);
-  band("Feuds and fates", fates);
   const H = y + 6, C = {x: CF_W/2, y: cy};
   const paths = edges.map(([e, n]) => {
     const a = e.from===id ? C : n, b = e.from===id ? n : C;
@@ -506,7 +505,42 @@ function closeFamily(id){
   return `<div class="sec cf"><h3>Close family</h3><svg class="cf-svg" viewBox="-8 0 ${CF_W+16} ${H}" role="img" aria-label="Close family of ${esc(me.name)}">
     ${out.join("")}${paths.join("")}${fig}
     <g class="cf-me">${dot(me, C.x, C.y, 7)}<text class="cf-l me" x="${C.x}" y="${C.y+24}" text-anchor="middle">${esc(me.name)}</text></g>
-  </svg><p class="cf-note">${state.src==="all" ? "All versions at once: a figure may have more parents than one." : "As " + SRC[state.src] + " tell it."} Tap a name to move to them.</p></div>`;
+  </svg>${fateWheel(id, me, fates, dot)}<p class="cf-note">${state.src==="all" ? "All versions at once: a figure may have more parents than one." : "As " + SRC[state.src] + " tell it."} Tap a name to move to them.</p></div>`;
+}
+
+/* Feuds and fates: rivals, curses and transformations on a ring around the figure,
+   so their links never cross the family above. */
+const WHEEL_MAX = 14;
+function fateWheel(id, me, fates, dot){
+  if (!fates.length) return "";
+  const other = e => e.from===id ? e.to : e.from;
+  const shown = fates.slice(0, WHEEL_MAX), n = shown.length;
+  // a tall, narrow ring leaves room at the sides for the names
+  const rx = n > 8 ? 70 : 62, ry = n > 8 ? 124 : 78, C = {x: CF_W/2, y: ry + 40};
+  const parts = shown.map((e, i) => {
+    const t = -Math.PI/2 + (i + (n % 2 ? 0 : 0.5)) * 2*Math.PI/n, c = Math.cos(t), s = Math.sin(t);
+    const x = C.x + rx*c, y = C.y + ry*s, o = other(e), p = N[o];
+    const a = e.from===id ? C : {x, y}, b = e.from===id ? {x, y} : C;
+    const len = Math.hypot(b.x-a.x, b.y-a.y), cut = (e.from===id ? 10 : 12) / len;
+    const bx = b.x - (b.x-a.x)*cut, by = b.y - (b.y-a.y)*cut;
+    const arrow = e.type==="curse" || e.type==="transform" ? ` marker-end="url(#arr-${e.type})"` : "";
+    const anchor = c > 0.1 ? "start" : c < -0.1 ? "end" : "middle";
+    const lx = x + (anchor==="start" ? 11 : anchor==="end" ? -11 : 0), ly = anchor==="middle" ? (s < 0 ? y-11 : y+19) : y+4;
+    // a long name breaks onto two lines at its middle space
+    const words = p.name.split(" "), half = Math.ceil(words.length/2);
+    const label = p.name.length > 13 && words.length > 1
+      ? `<tspan x="${lx}" dy="-7">${esc(words.slice(0, half).join(" "))}</tspan><tspan x="${lx}" dy="15">${esc(words.slice(half).join(" "))}</tspan>`
+      : esc(p.name);
+    return {edge: `<g class="e e-${e.type}"><path class="edge main" d="M${a.x},${a.y} L${bx},${by}" stroke-width="1.2"${arrow}/></g>`,
+      fig: `<g class="cf-n" data-go="${o}" role="button" tabindex="0" aria-label="${esc(p.name)}"><circle class="hit" cx="${x}" cy="${y}" r="16"/>${dot(p, x, y, 5)}<text class="cf-l" x="${lx}" y="${ly}" text-anchor="${anchor}">${label}</text></g>`};
+  });
+  const H = C.y + ry + 36 + (fates.length > WHEEL_MAX ? 16 : 0);
+  return `<svg class="cf-svg cf-wheel" viewBox="-8 0 ${CF_W+16} ${H}" role="img" aria-label="Feuds and fates of ${esc(me.name)}">
+    <text class="cf-h" x="0" y="12">Feuds and fates</text>
+    ${parts.map(q => q.edge).join("")}${parts.map(q => q.fig).join("")}
+    <g class="cf-me">${dot(me, C.x, C.y, 7)}<text class="cf-l me" x="${C.x}" y="${C.y+4}" dx="12" text-anchor="start"></text></g>
+    ${fates.length > WHEEL_MAX ? `<text class="cf-more" x="${CF_W/2}" y="${H-6}" text-anchor="middle">and ${fates.length - WHEEL_MAX} more</text>` : ""}
+  </svg>`;
 }
 function renderNode(id){
   const p = N[id];
