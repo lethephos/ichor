@@ -4306,5 +4306,155 @@
     "to": "sphinx",
     "sources": ["T", "A", "L"],
     "note": "answered the Sphinx’s riddle, and she threw herself to her death"
+  },
+  {
+    "type": "marriage",
+    "from": "nyx",
+    "to": "erebus",
+    "sources": ["H"],
+    "note": "her brother"
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "hypnos",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "thanatos",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "tityos",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "tityos",
+    "to": "leto",
+    "sources": ["E", "T", "A", "L"],
+    "note": "tried to rape Leto"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "tityos",
+    "sources": ["A", "L"],
+    "note": "shot Tityos for his assault on Leto"
+  },
+  {
+    "type": "feud",
+    "from": "artemis",
+    "to": "tityos",
+    "sources": ["T", "A"],
+    "note": "shot Tityos for his assault on Leto"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "ixion",
+    "sources": ["T", "A", "L"],
+    "note": "bound Ixion to a fiery wheel, for trying to seduce Hera"
+  },
+  {
+    "type": "parent",
+    "from": "ixion",
+    "to": "pirithous",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "sisyphus",
+    "sources": ["E", "A", "L"],
+    "note": "condemned Sisyphus to roll a stone uphill for ever"
+  },
+  {
+    "type": "feud",
+    "from": "hades",
+    "to": "pirithous",
+    "sources": ["A", "L"],
+    "note": "held Pirithous fast on the chair of forgetfulness"
+  },
+  {
+    "type": "feud",
+    "from": "hades",
+    "to": "theseus",
+    "sources": ["A"],
+    "note": "held Theseus fast on the chair of forgetfulness, until Heracles pulled him free"
+  },
+  {
+    "type": "parent",
+    "from": "oeagrus",
+    "to": "orpheus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "apollo",
+    "to": "orpheus",
+    "sources": ["A"],
+    "note": "in name only, Apollodorus says"
+  },
+  {
+    "type": "marriage",
+    "from": "orpheus",
+    "to": "eurydice",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "maenads",
+    "to": "orpheus",
+    "sources": ["A", "L"],
+    "note": "tore Orpheus to pieces"
+  },
+  {
+    "type": "feud",
+    "from": "maenads",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"],
+    "note": "tore Pentheus to pieces on the mountain"
+  },
+  {
+    "type": "parent",
+    "from": "cretheus",
+    "to": "pheres",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "pheres",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pheres",
+    "to": "admetus",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pelias",
+    "to": "alcestis",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "admetus",
+    "to": "alcestis",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "thanatos",
+    "sources": ["T", "A"],
+    "note": "wrestled Death at the tomb of Alcestis and brought her back"
   }
 ]

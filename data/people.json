@@ -2244,7 +2244,7 @@
     "branch": "cursed-houses",
     "role": "Singer of the Argo",
     "tagline": "Out-sang the Sirens.",
-    "story": "Son of the Muse Calliope. His lyre moved trees and stones. He sailed with the Argonauts, and when they passed the Sirens he played so loudly that his crewmates heard him instead.",
+    "story": "Son of the Muse Calliope. His lyre moved trees and stones. He sailed with the Argonauts, and when they passed the Sirens he played so loudly that his crewmates heard him instead. When his wife Eurydice died, he went down to Hades and sang until he was allowed to lead her back, but he looked round too soon and lost her. In the end the Maenads tore him apart in Thrace.",
     "versions": "Apollodorus: son of Calliope and Oeagrus. Pindar seems to make him a son of Apollo. Pausanias denies that his mother was a Muse."
   },
   {
@@ -4455,5 +4455,161 @@
     "tagline": "Killed everyone who could not answer her riddle.",
     "story": "A monster with a woman’s face, a lion’s body and a bird’s wings, sent to Thebes by Hera. She sat on a mountain above the city and asked a riddle: what has one voice, and goes on four feet, then two, then three? Whoever failed she devoured. Oedipus answered: man. She threw herself from the citadel, and Thebes made him king.",
     "versions": "Hesiod: a child of Orthus, by the Chimera or by Echidna. Apollodorus and Hyginus: a child of Typhon and Echidna."
+  },
+  {
+    "id": "erebus",
+    "name": "Erebus",
+    "greek": "Ἔρεβος",
+    "gender": "m",
+    "generation": 0,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Darkness",
+    "tagline": "The darkness under the earth.",
+    "story": "Born of Chaos with his sister Night, the darkness that lies under the earth, on the way to the house of Hades. He lay with Night, and she bore Aether, the bright upper air, and Day."
+  },
+  {
+    "id": "hypnos",
+    "name": "Hypnos",
+    "greek": "Ὕπνος",
+    "gender": "m",
+    "generation": 1,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Sleep",
+    "tagline": "Gentle to men, and once put Zeus himself to sleep.",
+    "story": "Son of Night, twin brother of Death. He goes quietly over land and sea and is kind to men. At Hera’s request he put Zeus to sleep, so that she could help the Greeks at Troy, and afterwards he and his brother carried the body of Sarpedon home to Lycia."
+  },
+  {
+    "id": "thanatos",
+    "name": "Thanatos",
+    "greek": "Θάνατος",
+    "gender": "m",
+    "generation": 1,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Death",
+    "tagline": "Has a heart of iron, and lets no one go.",
+    "story": "Son of Night, twin brother of Sleep, hateful even to the gods: whoever he seizes he holds. He came for Alcestis, who had agreed to die in her husband’s place, but Heracles wrestled him at her tomb and brought her back.",
+    "versions": "Euripides: Heracles wrestles Death at the tomb. Apollodorus: Persephone sent Alcestis back, or, as some say, Heracles fought Hades."
+  },
+  {
+    "id": "tityos",
+    "name": "Tityos",
+    "greek": "Τιτυός",
+    "gender": "m",
+    "generation": 3,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Giant, son of Earth",
+    "tagline": "Laid hands on Leto, and vultures eat his liver.",
+    "story": "A giant son of Gaia. When Leto passed through Panopeus on her way to Delphi, he tried to rape her. Her children shot him dead, and in the underworld he lies stretched over nine acres while two vultures tear at his liver.",
+    "versions": "Apollodorus: his mother was Elara, a daughter of Orchomenus, whom Zeus hid under the earth, so that Earth brought the child to birth."
+  },
+  {
+    "id": "ixion",
+    "name": "Ixion",
+    "greek": "Ἰξίων",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of the Lapiths",
+    "tagline": "Tried to seduce Hera, and was bound to a wheel for ever.",
+    "story": "King of the Lapiths in Thessaly, the first man to kill a kinsman. Zeus pitied him, purified him and took him up to Olympus, where Ixion fell in love with Hera. Zeus shaped a cloud like her, and Ixion lay with it, and from that union came the Centaurs. Then Zeus bound him to a winged, fiery wheel that turns through the air for ever.",
+    "versions": "Homer makes Pirithous a son of Zeus by Ixion’s wife; Apollodorus and Hyginus make him Ixion’s son."
+  },
+  {
+    "id": "oeagrus",
+    "name": "Oeagrus",
+    "greek": "Οἴαγρος",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Thrace",
+    "tagline": "Father of Orpheus, at least in name.",
+    "story": "A king of Thrace, sometimes called a river god. With the Muse Calliope he had Orpheus, the singer."
+  },
+  {
+    "id": "eurydice",
+    "name": "Eurydice",
+    "greek": "Εὐρυδίκη",
+    "gender": "f",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Wife of Orpheus",
+    "tagline": "Followed her husband out of Hades, until he looked back.",
+    "story": "Wife of Orpheus. Soon after the wedding she was bitten by a snake and died. Orpheus went down to the underworld and sang until Hades and Persephone let her go, on one condition: that he not turn round until they reached the light. Near the top he looked back, and she slipped away a second time."
+  },
+  {
+    "id": "maenads",
+    "name": "Maenads",
+    "greek": "Μαινάδες",
+    "gender": "f",
+    "generation": 6,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Women of Dionysus",
+    "tagline": "Tore apart a king and a singer.",
+    "story": "The women who followed Dionysus into the mountains, dressed in fawnskins, carrying the thyrsus, mad with the god. In Thebes, led by Agave, they tore Pentheus to pieces. In Thrace they tore Orpheus apart, and his head floated down the river, still singing.",
+    "versions": "Ovid: the women of the Ciconians killed Orpheus because he had turned away from women after Eurydice. Apollodorus says only that the Maenads tore him to pieces.",
+    "members": [
+      {
+        "name": "Agave",
+        "greek": "Ἀγαύη",
+        "note": "killed her son Pentheus",
+        "id": "agave"
+      },
+      {
+        "name": "Ino",
+        "greek": "Ἰνώ",
+        "note": "her sister",
+        "id": "ino"
+      },
+      {
+        "name": "Autonoe",
+        "greek": "Αὐτονόη",
+        "note": "her sister"
+      }
+    ],
+    "members_note": "In Euripides’ Bacchae the three daughters of Cadmus lead the women of Thebes; the Thracian women who killed Orpheus have no names."
+  },
+  {
+    "id": "pheres",
+    "name": "Pheres",
+    "greek": "Φέρης",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Pherae",
+    "tagline": "Refused to die for his son.",
+    "story": "Son of Cretheus and Tyro, brother of Aeson, founder of Pherae in Thessaly. When his son Admetus was granted a substitute in death, Pheres, old as he was, refused."
+  },
+  {
+    "id": "admetus",
+    "name": "Admetus",
+    "greek": "Ἄδμητος",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Pherae",
+    "tagline": "Let his wife die in his place.",
+    "story": "Son of Pheres, king of Pherae, an Argonaut. Apollo served him a year as a herdsman, as a punishment from Zeus, and was so fond of him that he won from the Fates the right for Admetus to escape death, if someone would die instead. His parents refused; his wife Alcestis agreed."
+  },
+  {
+    "id": "alcestis",
+    "name": "Alcestis",
+    "greek": "Ἄλκηστις",
+    "gender": "f",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Pherae",
+    "tagline": "Died in her husband’s place, and came back.",
+    "story": "The loveliest of the daughters of Pelias. Admetus won her by yoking a lion and a boar to a chariot, with Apollo’s help. When death came for him, she died in his place, and Heracles, his guest, wrestled Death at the tomb and brought her back veiled."
   }
 ]
