@@ -2204,7 +2204,8 @@
     "branch": "cursed-houses",
     "role": "Prince of Colchis",
     "tagline": "Cut to pieces to slow his father down.",
-    "story": "Son of Aeetes. Medea took him with her when she fled. As their father’s ship gained on them, she killed him and scattered the pieces, so that Aeetes stopped to gather his son."
+    "story": "Son of Aeetes. Medea took him with her when she fled. As their father’s ship gained on them, she killed him and scattered the pieces, so that Aeetes stopped to gather his son.",
+    "versions": "Euripides: she killed him at home, by the hearth, before she fled. Hyginus: Aeetes sent him after the Argo, and Jason killed him. Ovid sets the killing at Tomis, which he says took its name from the cutting."
   },
   {
     "id": "glauce",
@@ -2217,7 +2218,7 @@
     "role": "Princess of Corinth",
     "tagline": "A wedding gift set her on fire.",
     "story": "Daughter of Creon of Corinth, and Jason’s new bride. Medea sent her a robe and a golden crown as gifts; when she put them on, they burned her and her father to death.",
-    "versions": "Apollodorus calls her Glauce; in Euripides she is only the princess; Hyginus calls her Creusa."
+    "versions": "Apollodorus calls her Glauce; in Euripides she is only the princess. Hyginus calls her Creusa: a poisoned golden crown burns her, Creon and Jason with her."
   },
   {
     "id": "hypsipyle",
