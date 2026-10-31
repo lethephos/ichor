@@ -3911,5 +3911,265 @@
     "tagline": "A man of bronze, with one vein, stopped with a nail.",
     "story": "A giant of bronze who guarded Crete, running round the island three times a day and stoning any ship that came near. A single vein ran from his neck to his ankle, closed with a bronze nail. When the Argo came, Medea drugged him, or promised him immortality and pulled out the nail, and his ichor ran out.",
     "versions": "Apollodorus: he was the last of the bronze race of men, or a gift of Hephaestus to Minos; some said Poeas shot him in the ankle."
+  },
+  {
+    "id": "inachus",
+    "name": "Inachus",
+    "greek": "Ἴναχος",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "River of Argos",
+    "tagline": "The river who judged between Hera and Poseidon.",
+    "story": "Son of Ocean and Tethys, the river of Argos and its first king. When Hera and Poseidon both claimed the land, he judged it with two other rivers, Cephisus and Asterion, and they gave it to Hera. Poseidon dried up their waters, so that they run only after rain.",
+    "versions": "In the tragedians and Apollodorus, Inachus is Io’s father; Hesiod, as Apollodorus reports, makes her the daughter of Peiren."
+  },
+  {
+    "id": "io",
+    "name": "Io",
+    "greek": "Ἰώ",
+    "gender": "f",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Priestess of Hera at Argos",
+    "tagline": "Loved by Zeus, turned into a cow, and driven across the world.",
+    "story": "Daughter of Inachus and priestess of Hera. Zeus loved her, and when Hera found them he turned Io into a white cow and swore he had never touched her. Hera asked for the cow, and set hundred-eyed Argus to guard her. After Hermes killed Argus, Hera sent a gadfly, and Io ran maddened through Europe and Asia, across the strait that bears her name, the Bosporus, to Egypt. There she took back her form and bore Epaphus by the Nile.",
+    "versions": "Apollodorus: Zeus turned her into a cow; others say Hera did. In Aeschylus she meets Prometheus chained on his rock, and he foretells her wandering and her descendants.",
+    "transformation": {
+      "text": "Turned into a white heifer, and back into a woman in Egypt.",
+      "sources": ["T", "A", "L"]
+    },
+    "immortal": {
+      "text": "Worshipped in Egypt as the goddess Isis.",
+      "sources": ["A", "L"]
+    }
+  },
+  {
+    "id": "argus",
+    "name": "Argus",
+    "greek": "Ἄργος",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The hundred-eyed watchman",
+    "tagline": "Saw everything, and slept with only half his eyes.",
+    "story": "A giant with eyes all over his body, set by Hera to watch Io. Hermes lulled him with his pipes and stories and killed him, at Zeus’ bidding. Hera set his eyes in the tail of her peacock.",
+    "versions": "Apollodorus: Argus is earth-born, or a son of Arestor; Hermes killed him with a stone. Ovid: Hermes sent him to sleep, then cut off his head; Hera put his eyes in the peacock’s tail."
+  },
+  {
+    "id": "epaphus",
+    "name": "Epaphus",
+    "greek": "Ἔπαφος",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Egypt",
+    "tagline": "Born of a touch of Zeus’ hand, by the Nile.",
+    "story": "Son of Zeus and Io, born in Egypt; his name means ‘touch’, for Zeus made Io whole again with a touch. Hera had the Curetes carry him off, and Io searched for him as far as Syria. He became king of Egypt and founded Memphis, named after his wife."
+  },
+  {
+    "id": "libya",
+    "name": "Libya",
+    "greek": "Λιβύη",
+    "gender": "f",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Epaphus",
+    "tagline": "Gave her name to Africa.",
+    "story": "Daughter of Epaphus and Memphis. Poseidon loved her, and she bore him twins, Agenor and Belus. The land of Libya, all of Africa west of Egypt, is named after her."
+  },
+  {
+    "id": "belus",
+    "name": "Belus",
+    "greek": "Βῆλος",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Egypt",
+    "tagline": "Father of the twins whose fifty children were made to marry.",
+    "story": "Son of Poseidon and Libya, twin of Agenor. He stayed in Egypt and ruled there, married Anchinoe, a daughter of the Nile, and had the twins Aegyptus and Danaus."
+  },
+  {
+    "id": "agenor",
+    "name": "Agenor",
+    "greek": "Ἀγήνωρ",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Phoenicia",
+    "tagline": "Sent his sons after Europa, and told them not to come back without her.",
+    "story": "Son of Poseidon and Libya, twin of Belus. He went to Phoenicia and reigned there. When Zeus carried off his daughter Europa, he sent his sons to find her and forbade them to return until they did. None of them came back.",
+    "versions": "Homer calls Europa a daughter of Phoenix, not Agenor."
+  },
+  {
+    "id": "danaus",
+    "name": "Danaus",
+    "greek": "Δαναός",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Argos",
+    "tagline": "Gave his fifty daughters daggers for their wedding night.",
+    "story": "Son of Belus, twin of Aegyptus, who ruled Libya. Fearing his brother’s fifty sons, he built the first ship, by Athena’s advice, and fled with his fifty daughters to Argos, where the king gave up the throne to him. The sons of Aegyptus followed and asked for the girls in marriage. Danaus agreed, and gave each daughter a dagger. The Greeks were called Danaans after him.",
+    "versions": "Aeschylus’ Suppliants: the daughters flee the marriage, and Argos takes them in under King Pelasgus."
+  },
+  {
+    "id": "aegyptus",
+    "name": "Aegyptus",
+    "greek": "Αἴγυπτος",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Egypt",
+    "tagline": "Sent his fifty sons to marry their cousins.",
+    "story": "Son of Belus, twin of Danaus. He conquered the land of the Melampodes and named it Egypt after himself. He had fifty sons, and wanted them to marry Danaus’ fifty daughters."
+  },
+  {
+    "id": "danaids",
+    "name": "Danaids",
+    "greek": "Δαναΐδες",
+    "gender": "f",
+    "generation": 4,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Daughters of Danaus",
+    "tagline": "Fifty brides, forty-nine murderers.",
+    "story": "The fifty daughters of Danaus. Their cousins, the sons of Aegyptus, came to Argos to marry them, and their father gave each a dagger. On the wedding night they killed their husbands, all but Hypermnestra. They buried the heads at Lerna, and Athena and Hermes purified them at Zeus’ command. Danaus then gave them to the winners of a footrace.",
+    "versions": "Later writers say that in Hades they carry water for ever in jars that leak.",
+    "count": "Fifty",
+    "members": [
+      {
+        "name": "Hypermnestra",
+        "greek": "Ὑπερμνήστρα",
+        "note": "spared her husband",
+        "id": "hypermnestra"
+      },
+      {
+        "name": "Amymone",
+        "greek": "Ἀμυμώνη",
+        "note": "loved by Poseidon",
+        "id": "amymone"
+      }
+    ],
+    "members_note": "Apollodorus names all fifty, each with the cousin she married; Hyginus gives another list.",
+    "members_label": "daughters"
+  },
+  {
+    "id": "sons-of-aegyptus",
+    "name": "Sons of Aegyptus",
+    "greek": "Αἰγύπτου παῖδες",
+    "gender": "m",
+    "generation": 4,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Sons of Aegyptus",
+    "tagline": "Fifty bridegrooms, killed on their wedding night.",
+    "story": "The fifty sons of Aegyptus. They followed their cousins to Argos, made Danaus agree to the marriage, and drew their brides by lot. Each was killed by his bride on the wedding night, all but Lynceus.",
+    "count": "Fifty",
+    "members": [
+      {
+        "name": "Lynceus",
+        "greek": "Λυγκεύς",
+        "note": "spared by Hypermnestra",
+        "id": "lynceus"
+      }
+    ],
+    "members_note": "Apollodorus names all fifty, each with his bride.",
+    "members_label": "brothers"
+  },
+  {
+    "id": "hypermnestra",
+    "name": "Hypermnestra",
+    "greek": "Ὑπερμνήστρα",
+    "gender": "f",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Danaus",
+    "tagline": "The one bride who spared her husband.",
+    "story": "Eldest of the daughters of Danaus. On the wedding night she spared Lynceus, because he had respected her maidenhood. Her father put her in chains, but she was later given back to Lynceus, and their son Abas ruled Argos."
+  },
+  {
+    "id": "lynceus",
+    "name": "Lynceus",
+    "greek": "Λυγκεύς",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Argos",
+    "tagline": "The only bridegroom to wake up.",
+    "story": "Son of Aegyptus, the one of the fifty whose bride spared him. He reigned in Argos after Danaus, with Hypermnestra."
+  },
+  {
+    "id": "amymone",
+    "name": "Amymone",
+    "greek": "Ἀμυμώνη",
+    "gender": "f",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Danaus",
+    "tagline": "Went to find water, and found Poseidon.",
+    "story": "One of the daughters of Danaus. Poseidon had dried up the springs of Argos, and Danaus sent her to look for water. She threw a dart at a deer and hit a sleeping satyr, who tried to rape her. Poseidon appeared and the satyr fled. She lay with Poseidon, and he showed her the springs of Lerna."
+  },
+  {
+    "id": "abas",
+    "name": "Abas",
+    "greek": "Ἄβας",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Argos",
+    "tagline": "Father of the twins who fought over Argos.",
+    "story": "Son of Lynceus and Hypermnestra, king of Argos. He married Aglaia and had the twins Acrisius and Proetus."
+  },
+  {
+    "id": "cepheus",
+    "name": "Cepheus",
+    "greek": "Κηφεύς",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Ethiopia",
+    "tagline": "Chained his daughter to a rock to save his kingdom.",
+    "story": "King of the Ethiopians. When the sea god sent a monster to punish his wife’s boast, the oracle of Ammon said he could be rid of it only by giving his daughter Andromeda to it. His people forced him, and he chained her to a rock by the sea. Perseus killed the monster and married her.",
+    "versions": "Apollodorus: Euripides makes Cepheus and Phineus sons of Belus."
+  },
+  {
+    "id": "cassiopeia",
+    "name": "Cassiopeia",
+    "greek": "Κασσιέπεια",
+    "gender": "f",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Ethiopia",
+    "tagline": "Said she was lovelier than the Nereids.",
+    "story": "Wife of Cepheus, mother of Andromeda. She boasted that she was more beautiful than the Nereids, and they took it to Poseidon, who flooded the land and sent a sea monster."
+  },
+  {
+    "id": "phineus",
+    "name": "Phineus",
+    "greek": "Φινεύς",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Brother of Cepheus",
+    "tagline": "Came to claim his bride, and was turned to stone.",
+    "story": "Brother of Cepheus, betrothed to his niece Andromeda. He did nothing to save her from the monster, and when Perseus had freed her, he plotted against him. Perseus showed him the Gorgon’s head, and he and his men were turned to stone.",
+    "versions": "Ovid sets the fight at the wedding feast, with Phineus and his men bursting in."
   }
 ]
