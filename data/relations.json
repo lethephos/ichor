@@ -1997,5 +1997,366 @@
     "to": "orpheus",
     "sources": ["A"],
     "note": "Calliope"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "dardanus",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pleiades",
+    "to": "dardanus",
+    "sources": ["H", "A", "L"],
+    "note": "Electra"
+  },
+  {
+    "type": "parent",
+    "from": "dardanus",
+    "to": "erichthonius",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "erichthonius",
+    "to": "tros",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tros",
+    "to": "ilus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tros",
+    "to": "assaracus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tros",
+    "to": "ganymede",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "ganymede",
+    "sources": ["E", "T", "A", "L"],
+    "note": "carried Ganymede off to Olympus to pour his wine"
+  },
+  {
+    "type": "parent",
+    "from": "ilus",
+    "to": "laomedon",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "assaracus",
+    "to": "capys",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "capys",
+    "to": "anchises",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "laomedon",
+    "to": "priam",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "laomedon",
+    "to": "tithonus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "laomedon",
+    "to": "hesione",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "laomedon",
+    "to": "poseidon",
+    "sources": ["E", "A", "L"],
+    "note": "refused Poseidon his wages for the walls of Troy"
+  },
+  {
+    "type": "feud",
+    "from": "laomedon",
+    "to": "apollo",
+    "sources": ["E", "A", "L"],
+    "note": "refused Apollo his wages for a year’s labour"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "laomedon",
+    "sources": ["E", "A", "L"],
+    "note": "sacked Troy when Laomedon cheated him of his horses"
+  },
+  {
+    "type": "marriage",
+    "from": "eos",
+    "to": "tithonus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "aphrodite",
+    "to": "anchises",
+    "sources": ["E", "H", "A", "L"],
+    "note": "came to Anchises on Mount Ida in the shape of a mortal girl"
+  },
+  {
+    "type": "parent",
+    "from": "anchises",
+    "to": "aeneas",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aphrodite",
+    "to": "aeneas",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "priam",
+    "to": "hecuba",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "hector",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "hector",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "paris",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "paris",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "cassandra",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "cassandra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "polyxena",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "polyxena",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "troilus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "troilus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "deiphobus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "deiphobus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "curse",
+    "from": "apollo",
+    "to": "cassandra",
+    "sources": ["T", "A", "L"],
+    "note": "made sure no one would ever believe Cassandra’s prophecies"
+  },
+  {
+    "type": "marriage",
+    "from": "hector",
+    "to": "andromache",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hector",
+    "to": "astyanax",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromache",
+    "to": "astyanax",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "deiphobus",
+    "to": "helen",
+    "sources": ["T", "A"],
+    "note": "after Paris died"
+  },
+  {
+    "type": "feud",
+    "from": "menelaus",
+    "to": "deiphobus",
+    "sources": ["A"],
+    "note": "killed Deiphobus on the night Troy fell"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "aeacus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aeacus",
+    "to": "peleus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "peleus",
+    "to": "thetis",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "peleus",
+    "to": "achilles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "thetis",
+    "to": "achilles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "agamemnon",
+    "to": "achilles",
+    "sources": ["E", "A"],
+    "note": "took Briseis, Achilles’ prize, and lost him from the fighting"
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "troilus",
+    "sources": ["E", "A"],
+    "note": "ambushed Troilus outside Troy and killed him"
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "hector",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Hector, and dragged his body behind his chariot"
+  },
+  {
+    "type": "feud",
+    "from": "paris",
+    "to": "achilles",
+    "sources": ["E", "T", "A", "L"],
+    "note": "shot Achilles with an arrow, guided by Apollo"
+  },
+  {
+    "type": "parent",
+    "from": "achilles",
+    "to": "neoptolemus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "neoptolemus",
+    "to": "priam",
+    "sources": ["T", "A", "L"],
+    "note": "killed Priam at the altar of Zeus"
+  },
+  {
+    "type": "feud",
+    "from": "neoptolemus",
+    "to": "polyxena",
+    "sources": ["T", "L"],
+    "note": "sacrificed Polyxena on Achilles’ tomb"
+  },
+  {
+    "type": "affair",
+    "from": "neoptolemus",
+    "to": "andromache",
+    "sources": ["T", "A", "L"],
+    "note": "took Andromache as his prize"
+  },
+  {
+    "type": "marriage",
+    "from": "neoptolemus",
+    "to": "hermione",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "orestes",
+    "to": "neoptolemus",
+    "sources": ["T", "A"],
+    "note": "had Neoptolemus killed at Delphi, or killed him himself"
+  },
+  {
+    "type": "affair",
+    "from": "agamemnon",
+    "to": "cassandra",
+    "sources": ["E", "T", "A"],
+    "note": "took Cassandra home from Troy as his prize"
+  },
+  {
+    "type": "feud",
+    "from": "clytemnestra",
+    "to": "cassandra",
+    "sources": ["E", "T", "A"],
+    "note": "killed Cassandra with Agamemnon"
   }
 ]
