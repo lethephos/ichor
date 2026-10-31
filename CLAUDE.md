@@ -13,7 +13,7 @@ The first branch is **"Two cursed houses"**: the House of Atreus and the House o
 
 The site is live at https://ichor-orpin.vercel.app (Vite + D3, data in `/data`, deployed from `main` by Vercel). The original prototype, `prototype/ichor-atreidae.html`, stays as the reference for behaviour and tone.
 
-- 98 figures, 241 relations, from Gaia and Uranus to Orestes and Antigone, in rows computed from `generation`; a row grows a line downwards for a child whose parent shares the row, and a very wide line is staggered; pan and pinch-zoom.
+- 98 figures, 241 relations, from Gaia and Uranus to Orestes and Antigone, in rows computed from `generation`; a row grows a line downwards for a child whose parent shares the row (with its spouse), so lower always means descended; no staggering, which made height ambiguous; pan and pinch-zoom.
 - **Source switcher**: All versions / Homer & epic / Hesiod / Lyric & tragedy / Apollodorus / Later writers. Links not attested in the chosen source fade out; a one-line note says what changes.
 - **Layer toggles**: Bloodlines, Marriages, Affairs, Feuds & killings, Transformations, Curses.
 - **Figure card**: Greek name, name, tagline, role, story, The Twelve (for Olympians), Born to / Married / Affairs / Feuds & killings / Transformations / Curses / Children (each with its sources), Where the sources disagree, In art.

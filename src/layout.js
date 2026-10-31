@@ -6,27 +6,23 @@
    which also breaks ties, so the result is stable.
 
    A row can grow downwards. A child whose parent sits on the same row (Atlas and his
-   daughters the Pleiades) goes on a line below the parent, inside the row. A line too
-   wide to read is staggered: every other figure drops a little, so neighbours’ labels
-   no longer meet and the line needs about half the width. */
+   daughters the Pleiades) goes on a line below the parent, inside the row, with its
+   spouse. So lower on a row always means descended. */
 
 export const TOP = 90;          // y of the first row
 export const ROW_GAP = 155;     // vertical distance between rows
-export const LEFT = 160;        // x of the leftmost figure; generation labels sit at x = 0
+export const LEFT = 190;        // x of the leftmost figure; generation labels sit at x = 0
 export const RIGHT_PAD = 140;   // space after the rightmost figure
 export const BOTTOM_PAD = 85;   // space after the last row
 
 const PULL = {parent:1, marriage:1, affair:0.3, feud:0.2, curse:0.2, transform:0.1};
 const INERTIA = 0.5;            // how strongly a figure holds its previous place
-const MIN_GAP = 120;            // minimum distance between neighbours on a row
-const LABEL_PAD = 34;           // extra room between two labels
+const MIN_GAP = 92;             // minimum distance between neighbours on a row
+const LABEL_PAD = 24;           // extra room between two labels
 const FAMILY_GAP = 160;         // extra room between two unrelated families on a row
 const CHAR_W = 8.6;             // rough width of one character of a label
 const ROUNDS = 120;
 const SUB_GAP = 78;             // vertical distance between two lines of one row
-const STAGGER = 52;             // how far every other figure drops on a staggered line
-const STAGGER_FROM = 1700;      // a line wider than this (in px, unstaggered) is staggered
-const STAGGER_MIN = 66;         // minimum distance between neighbours on a staggered line
 
 const labelWidth = name => name.length * CHAR_W;
 
@@ -94,9 +90,7 @@ export function tierLayout(people, relations){
   });
   const gap = (a, b) => Math.max(MIN_GAP, (labelWidth(name[a]) + labelWidth(name[b]))/2 + LABEL_PAD)
     + (fam[a] && fam[b] && fam[a]!==fam[b] ? FAMILY_GAP : 0);
-  const fullGaps = row => row.slice(1).map((id, i) => gap(row[i], id));
-  const staggered = new Set(rows.filter(row => fullGaps(row).reduce((a, b) => a + b, 0) > STAGGER_FROM));
-  const gapsOf = row => staggered.has(row) ? fullGaps(row).map(g => Math.max(STAGGER_MIN, g * 0.55)) : fullGaps(row);
+  const gapsOf = row => row.slice(1).map((id, i) => gap(row[i], id));
 
   // start: each row in data order, centred on 0
   const x = {};
@@ -121,7 +115,7 @@ export function tierLayout(people, relations){
     });
   }
 
-  // heights: each line of a row below the one before; a staggered line is taller
+  // heights: each line of a row below the one before
   const minX = Math.min(...people.map(p => x[p.id]));
   const rowY = [], rowBottom = [], y = {};
   let top = TOP;
@@ -129,10 +123,10 @@ export function tierLayout(people, relations){
     rowY[r] = top;
     let lineY = top;
     ls.forEach((line, l) => {
-      if (l > 0) lineY += SUB_GAP + (staggered.has(ls[l-1]) ? STAGGER : 0);
-      line.forEach((id, i) => y[id] = lineY + (staggered.has(line) && i % 2 ? STAGGER : 0));
+      if (l > 0) lineY += SUB_GAP;
+      line.forEach(id => y[id] = lineY);
     });
-    rowBottom[r] = lineY + (staggered.has(ls[ls.length-1]) ? STAGGER : 0);
+    rowBottom[r] = lineY;
     top = rowBottom[r] + ROW_GAP;
   });
   const pos = Object.fromEntries(people.map(p => [p.id, {x: Math.round(x[p.id] - minX + LEFT), y: y[p.id]}]));
