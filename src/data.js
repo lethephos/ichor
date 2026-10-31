@@ -18,7 +18,7 @@ export const BRANCH = branches[0];
 // It is chosen in the URL (?family=thebes), so every family has its own address.
 export const FAMILIES = BRANCH.families || [{id: "all", label: "Whole tree", title: BRANCH.title}];
 // The family is read from the URL (?family=thebes) and changed in place by setFamily.
-export let FAMILY, ROWY, W, H, GENS, P, N, E, FOCUS, DIVIDERS, HOUSES, STORIES;
+export let FAMILY, ROWY, ROWB, W, H, GENS, P, N, E, FOCUS, DIVIDERS, HOUSES, STORIES;
 
 export function familyOf(id) { return FAMILIES.find(f => f.id === id) || FAMILIES[0]; }
 
@@ -34,7 +34,7 @@ export function setFamily(id) {
   const gens = [...new Set(people_.map(p => p.generation))].sort((a, b) => a - b);
   const rowOf = Object.fromEntries(gens.map((g, i) => [g, i]));
   const layout = tierLayout(people_.map(p => ({...p, generation: rowOf[p.generation]})), relations_);
-  ROWY = layout.rowY;
+  ROWY = layout.rowY; ROWB = layout.rowBottom;
   W = layout.width; H = layout.height;
   // row names come from the branch; rows it does not name are simply numbered
   GENS = gens.map(g => (BRANCH.tiers || [])[g] || `Row ${g + 1}`);
@@ -52,7 +52,7 @@ export function setFamily(id) {
   // a family may name the houses it labels; otherwise every house whose founder it holds
   HOUSES = BRANCH.houses.filter(h => N[h.founder] && (!FAMILY.houses || FAMILY.houses.includes(h.label))).map(h => {
     const f = N[h.founder];
-    return {label: h.label, x: f.x, y: f.row > 0 ? ROWY[f.row-1] + 60 : f.y - 40};
+    return {label: h.label, x: f.x, y: f.row > 0 ? ROWB[f.row-1] + 60 : f.y - 40};
   });
 
   /* ---------- stories (the curses among them) ---------- */

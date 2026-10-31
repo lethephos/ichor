@@ -1281,5 +1281,226 @@
     "to": "orestes",
     "sources": ["T", "A", "L"],
     "note": "hunted Orestes across Greece for killing his mother"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "crius",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "crius",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "hyperion",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "hyperion",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "theia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "theia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "iapetus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "iapetus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "dione",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "dione",
+    "sources": ["A"]
+  },
+  {
+    "type": "marriage",
+    "from": "hyperion",
+    "to": "theia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hyperion",
+    "to": "helios",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "theia",
+    "to": "helios",
+    "sources": ["H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hyperion",
+    "to": "selene",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "theia",
+    "to": "selene",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hyperion",
+    "to": "eos",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "theia",
+    "to": "eos",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "atlas",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "prometheus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "epimetheus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "menoetius",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "themis",
+    "to": "prometheus",
+    "sources": ["T"]
+  },
+  {
+    "type": "parent",
+    "from": "crius",
+    "to": "astraeus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "crius",
+    "to": "pallas",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "crius",
+    "to": "perses",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "coeus",
+    "to": "asteria",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phoebe",
+    "to": "asteria",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "perses",
+    "to": "asteria",
+    "sources": ["H"]
+  },
+  {
+    "type": "marriage",
+    "from": "astraeus",
+    "to": "eos",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "perses",
+    "to": "hecate",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "asteria",
+    "to": "hecate",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "prometheus",
+    "sources": ["H", "T", "A"],
+    "note": "chained Prometheus and sent an eagle to eat his liver"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "menoetius",
+    "sources": ["H", "A"],
+    "note": "struck Menoetius down with a thunderbolt"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "atlas",
+    "sources": ["H"],
+    "note": "set Atlas to hold up the sky at the ends of the earth"
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "asteria",
+    "sources": ["A", "L"],
+    "note": "pursued Asteria, who escaped him as a quail"
+  },
+  {
+    "type": "transform",
+    "from": "iphigenia",
+    "to": "hecate",
+    "sources": ["H"],
+    "note": "became Hecate, by the will of Artemis"
   }
 ]
