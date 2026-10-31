@@ -52,7 +52,7 @@ Keep it simple: a static site, no backend.
 - Data out of the code, in `/data`:
   - `people.json` — id, name, greek, gender, generation, kind (god / nymph / mortal / other-cycle), branch, role, tagline, story, versions, transformation, art.
   - `relations.json` — type, from, to, sources, note.
-  - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` was assembled from existing card texts and relation notes and still needs checking.
+  - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` still needs checking against the sources; the three myths (Hippodamia, Leda, Iphigenia) have been checked.
   - `sources.json` — source groups and their labels.
 - Styles as design tokens (CSS variables) in one file; components separate (tree, card, controls, curse panel, thread panel).
 - Layout computed from data (generation tiers), so new branches can be added by editing JSON only.

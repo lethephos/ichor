@@ -93,7 +93,6 @@
   {
     "id": "hippodamia",
     "kind": "story",
-    "draft": true,
     "title": "The race for Hippodamia",
     "lead": "A king who killed his daughter’s suitors, and the cheat who beat him.",
     "pairs": [
@@ -113,24 +112,23 @@
       {
         "label": "The charioteer",
         "figures": ["pelops", "myrtilus"],
-        "text": "Pelops comes to win her. Myrtilus, a son of Hermes and the king’s own charioteer, sabotages his master’s chariot so that Pelops can win."
+        "text": "Pelops comes to win her. Myrtilus, a son of Hermes and the king’s own charioteer, takes the linchpins out of his master’s chariot, or swaps them for wax, so that Pelops can win. Pindar tells it without a cheat: Poseidon gives Pelops a golden chariot with winged horses."
       },
       {
         "label": "The race",
         "figures": ["pelops", "oenomaus", "hippodamia"],
-        "text": "Pelops wins the race. Oenomaus dies in the wreck, and Hippodamia becomes the wife of Pelops."
+        "text": "Pelops wins the race. Oenomaus dies in the wreck, dragged by his own horses, or in some versions killed by Pelops. Hippodamia becomes the wife of Pelops."
       },
       {
         "label": "The fall",
         "figures": ["myrtilus", "pelops"],
-        "text": "Pelops throws Myrtilus into the sea. Falling, Myrtilus curses Pelops and all his line. The curse on the House of Atreus begins here."
+        "text": "Pelops throws Myrtilus into the sea, which is named the Myrtoan Sea after him. The sources give different reasons. Falling, Myrtilus curses Pelops and all his line. For many tellers, the curse on the House of Atreus begins here."
       }
     ]
   },
   {
     "id": "leda",
     "kind": "story",
-    "draft": true,
     "title": "The children of Leda",
     "lead": "A swan, a goose, an egg, and four famous children.",
     "pairs": [
@@ -159,12 +157,12 @@
       {
         "label": "The goose",
         "figures": ["nemesis"],
-        "text": "The Cypria tells another story. Zeus pursues Nemesis, goddess of retribution, through many shapes, and she becomes a goose to escape him."
+        "text": "The Cypria tells another story. Zeus pursues Nemesis, goddess of retribution, over land and sea, and she turns into a fish and into wild beasts to escape him. In Apollodorus she becomes a goose, and Zeus a swan."
       },
       {
         "label": "Helen",
         "figures": ["helen"],
-        "text": "Helen is born, a daughter of Zeus. In Euripides and Apollodorus she is Leda’s child, hatched from an egg. In the Cypria and Pausanias her mother is Nemesis, and Leda only nurses her."
+        "text": "Helen is born, a daughter of Zeus. In Euripides she is Leda’s child, hatched from an egg. In the Cypria and Pausanias her mother is Nemesis, and Leda only nurses her. Apollodorus tells both: Helen is Leda’s child, but some say a shepherd found the egg of Nemesis and gave it to Leda, who raised the girl as her own."
       },
       {
         "label": "The twins",
@@ -181,7 +179,6 @@
   {
     "id": "iphigenia",
     "kind": "story",
-    "draft": true,
     "title": "Iphigenia at Aulis",
     "lead": "A deer for a daughter.",
     "pairs": [
@@ -195,27 +192,27 @@
       {
         "label": "The deer",
         "figures": ["agamemnon", "artemis"],
-        "text": "Agamemnon kills a deer sacred to Artemis and boasts of it."
+        "text": "Agamemnon kills a deer sacred to Artemis and boasts that he is a better hunter than the goddess. In Aeschylus her anger has another cause: an omen of two eagles tearing apart a pregnant hare."
       },
       {
         "label": "The price",
         "figures": ["iphigenia"],
-        "text": "The goddess names her price: Agamemnon’s daughter, Iphigenia."
+        "text": "Winds hold the Greek fleet at Aulis. Through the seer Calchas, the goddess names her price: Agamemnon’s daughter, Iphigenia."
       },
       {
         "label": "The altar",
         "figures": ["agamemnon", "iphigenia"],
-        "text": "At Aulis, Agamemnon sacrifices Iphigenia so that the Greek fleet can sail for Troy."
+        "text": "Iphigenia is brought to Aulis with the excuse that she will marry Achilles. Agamemnon sacrifices her so that the fleet can sail for Troy."
       },
       {
         "label": "What the altar saw",
         "figures": ["artemis", "iphigenia"],
-        "text": "Here the sources part ways. In Aeschylus she dies at the altar. In the Cypria, Artemis puts a deer in her place and makes her immortal. In the Catalogue of Women she becomes Hecate. In Euripides, Artemis carries her off to the land of the Taurians."
+        "text": "Here the sources part ways. In Aeschylus she dies at the altar. In the Cypria, Artemis puts a deer in her place, carries her off to the land of the Taurians and makes her immortal. In the Catalogue of Women, where she is called Iphimede, Artemis makes her immortal; Pausanias reports that Hesiod made her Hecate. In Euripides, Artemis puts a deer in her place and takes her to the Taurians to serve as her priestess."
       },
       {
         "label": "The mother",
         "figures": ["clytemnestra", "agamemnon"],
-        "text": "Clytemnestra avenges her daughter. When Agamemnon comes home from Troy, she kills him."
+        "text": "Clytemnestra avenges her daughter. When Agamemnon comes home from Troy, she kills him. In Homer, Aegisthus strikes the blow, and the sacrifice is never mentioned."
       }
     ]
   }

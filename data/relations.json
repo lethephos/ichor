@@ -141,7 +141,7 @@
     "type": "parent",
     "from": "leda",
     "to": "clytemnestra",
-    "sources": ["T", "A"]
+    "sources": ["H", "T", "A"]
   },
   {
     "type": "parent",
