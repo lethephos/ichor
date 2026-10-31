@@ -13,3 +13,4 @@ header{padding:16px 16px 6px}
   .branch-title{font-size:34px}
   .branch-sub{font-size:19px;margin:0}
 }
+.branch-sub:empty{display:none}

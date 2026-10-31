@@ -18,8 +18,8 @@ export const BRANCH = branches[0];
 const layout = tierLayout(people, relations);
 export const ROWY = layout.rowY;
 export const W = layout.width, H = layout.height;
-const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
-export const GENS = ROWY.map((_, i) => i===0 ? "Gods" : `Generation ${ROMAN[i]}`);
+// row names come from the branch; rows it does not name are simply numbered
+export const GENS = ROWY.map((_, i) => (BRANCH.tiers || [])[i] || `Row ${i + 1}`);
 export const P = people.map(p => ({...p, ...layout.pos[p.id]}));
 export const N = Object.fromEntries(P.map(p => [p.id, p]));
 export const E = relations.map((r, i) => ({...r, i, note: r.note || ""}));

@@ -53,3 +53,4 @@
 }
 @media (max-width:899px) and (prefers-reduced-motion: reduce){#card{transition:none}}
 .found .none,.finder-list .none{font:15px var(--display);color:var(--muted)}
+.card-name .draft{font-size:10px;margin-left:10px;position:relative;top:-6px}

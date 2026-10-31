@@ -593,5 +593,567 @@
     "to": "polynices",
     "sources": ["E", "T", "A"],
     "note": "cursed his son Polynices"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "uranus",
+    "sources": ["H"],
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "uranus",
+    "to": "gaia",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "cronus",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "cronus",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "rhea",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "rhea",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "oceanus",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "oceanus",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "tethys",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "tethys",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "coeus",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "coeus",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "phoebe",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "phoebe",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "dione",
+    "sources": ["A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "dione",
+    "sources": ["A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "aphrodite",
+    "sources": ["H"],
+    "note": "from the sea foam around his severed flesh",
+    "draft": true
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "uranus",
+    "sources": ["H", "A"],
+    "note": "castrated Uranus with a sickle, at Gaia’s urging",
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "nemesis",
+    "sources": ["H"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "nemesis",
+    "sources": ["L"],
+    "note": "Pausanias’s version",
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "cronus",
+    "to": "rhea",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "hestia",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "hestia",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "demeter",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "demeter",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "hades",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "hades",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "poseidon",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "poseidon",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "hera",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "hera",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "zeus",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "zeus",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "cronus",
+    "sources": ["H", "A"],
+    "note": "overthrew Cronus and freed the brothers and sisters he had swallowed",
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "oceanus",
+    "to": "tethys",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "pluto",
+    "sources": ["H"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "pluto",
+    "sources": ["H"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "metis",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "metis",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "dione",
+    "sources": ["H"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "dione",
+    "sources": ["H"],
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "coeus",
+    "to": "phoebe",
+    "sources": ["H"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "coeus",
+    "to": "leto",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "phoebe",
+    "to": "leto",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "atlas",
+    "to": "maia",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "zeus",
+    "to": "hera",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "zeus",
+    "to": "metis",
+    "sources": ["H"],
+    "note": "his first wife",
+    "draft": true
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "metis",
+    "sources": ["H", "A"],
+    "note": "swallowed Metis while she was pregnant with Athena",
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "athena",
+    "sources": ["E", "H", "T", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "metis",
+    "to": "athena",
+    "sources": ["H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "ares",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "ares",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hephaestus",
+    "sources": ["E", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "hephaestus",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "leto",
+    "sources": ["E", "H", "A"],
+    "note": "lay with Leto, who bore him Apollo and Artemis",
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "apollo",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "leto",
+    "to": "apollo",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "artemis",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "leto",
+    "to": "artemis",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "maia",
+    "sources": ["E", "H", "A"],
+    "note": "visited Maia in her cave by night",
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hermes",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "maia",
+    "to": "hermes",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "semele",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "loved Semele, a mortal",
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "dionysus",
+    "sources": ["E", "H", "T", "A", "L"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "semele",
+    "to": "dionysus",
+    "sources": ["E", "H", "T", "A", "L"],
+    "draft": true
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "semele",
+    "sources": ["A", "L"],
+    "note": "tricked Semele into asking to see Zeus in his glory, and his lightning burned her",
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "persephone",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "demeter",
+    "to": "persephone",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "affair",
+    "from": "hades",
+    "to": "persephone",
+    "sources": ["E", "H", "A", "L"],
+    "note": "carried Persephone off to the underworld",
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "hades",
+    "to": "persephone",
+    "sources": ["E", "H", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "aphrodite",
+    "sources": ["E", "A"],
+    "draft": true
+  },
+  {
+    "type": "parent",
+    "from": "dione",
+    "to": "aphrodite",
+    "sources": ["E", "A"],
+    "draft": true
+  },
+  {
+    "type": "marriage",
+    "from": "hephaestus",
+    "to": "aphrodite",
+    "sources": ["E", "L"],
+    "draft": true
+  },
+  {
+    "type": "affair",
+    "from": "ares",
+    "to": "aphrodite",
+    "sources": ["E", "L"],
+    "note": "became the lover of Aphrodite, Hephaestus’s wife",
+    "draft": true
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "pelops",
+    "sources": ["T"],
+    "note": "fell in love with the boy Pelops and carried him off to Olympus",
+    "draft": true
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "niobe",
+    "sources": ["E", "A", "L"],
+    "note": "killed the children of Niobe, with Artemis",
+    "draft": true
+  },
+  {
+    "type": "feud",
+    "from": "niobe",
+    "to": "leto",
+    "sources": ["E", "A", "L"],
+    "note": "boasted that she had more children than Leto",
+    "draft": true
+  },
+  {
+    "type": "feud",
+    "from": "demeter",
+    "to": "pelops",
+    "sources": ["L"],
+    "note": "ate the shoulder of Pelops at Tantalus’s feast",
+    "draft": true
   }
 ]
