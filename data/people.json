@@ -4171,5 +4171,289 @@
     "tagline": "Came to claim his bride, and was turned to stone.",
     "story": "Brother of Cepheus, betrothed to his niece Andromeda. He did nothing to save her from the monster, and when Perseus had freed her, he plotted against him. Perseus showed him the Gorgon’s head, and he and his men were turned to stone.",
     "versions": "Ovid sets the fight at the wedding feast, with Phineus and his men bursting in."
+  },
+  {
+    "id": "tartarus",
+    "name": "Tartarus",
+    "greek": "Τάρταρος",
+    "gender": "m",
+    "generation": 0,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "The pit beneath the earth",
+    "tagline": "As far below the earth as the sky is above it.",
+    "story": "One of the first beings, after Chaos and Gaia: the misty pit as far beneath the earth as the sky is above it, where a bronze anvil would fall nine days to reach the bottom. Zeus shut the Titans there, and Typhon after them. With Gaia he fathered Typhon."
+  },
+  {
+    "id": "pontus",
+    "name": "Pontus",
+    "greek": "Πόντος",
+    "gender": "m",
+    "generation": 1,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "The sea",
+    "tagline": "Born of Gaia without love.",
+    "story": "The barren sea, which Gaia bore by herself, without love, before she lay with Uranus. With his mother he fathered the old gods of the sea: Nereus, Phorcys and Ceto."
+  },
+  {
+    "id": "nereus",
+    "name": "Nereus",
+    "greek": "Νηρεύς",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "The Old Man of the Sea",
+    "tagline": "Never lied, and changed shape to avoid saying anything.",
+    "story": "Eldest son of Pontus and Gaia, the truthful and gentle Old Man of the Sea. He married Doris, a daughter of Ocean, and had fifty daughters, the Nereids. Heracles seized him as he slept and held on while he turned into every kind of shape, until he told him where to find the apples of the Hesperides."
+  },
+  {
+    "id": "phorcys",
+    "name": "Phorcys",
+    "greek": "Φόρκυς",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Old god of the sea",
+    "tagline": "Father of the Gorgons, the Graeae and a dragon.",
+    "story": "Son of Pontus and Gaia. With his sister Ceto he fathered the strangest brood in Hesiod: the grey-haired Graeae, the Gorgons, and the serpent that guards the golden apples."
+  },
+  {
+    "id": "ceto",
+    "name": "Ceto",
+    "greek": "Κητώ",
+    "gender": "f",
+    "generation": 2,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Goddess of sea monsters",
+    "tagline": "Mother of monsters.",
+    "story": "Daughter of Pontus and Gaia, with a name that means ‘sea monster’. With her brother Phorcys she bore the Graeae, the Gorgons and the serpent Ladon, and perhaps Echidna too."
+  },
+  {
+    "id": "typhon",
+    "name": "Typhon",
+    "greek": "Τυφῶν",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "The last enemy of Zeus",
+    "tagline": "Had a hundred snakes’ heads, and nearly took the sky.",
+    "story": "Last child of Gaia, by Tartarus, born to avenge the Titans. From his shoulders grew a hundred snakes’ heads, and he spoke in the voices of bulls, lions and dogs. He would have ruled gods and men, but Zeus struck him with thunderbolts, burned all his heads, and threw him down into Tartarus. The winds of storm come from him.",
+    "versions": "In the Homeric Hymn to Apollo, Hera bore Typhon alone, in anger at Zeus for bearing Athena without her. In Apollodorus, Typhon cut out Zeus’ sinews and hid them in a cave, before Zeus buried him under Mount Etna."
+  },
+  {
+    "id": "echidna",
+    "name": "Echidna",
+    "greek": "Ἔχιδνα",
+    "gender": "f",
+    "generation": 3,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "Mother of monsters",
+    "tagline": "Half a lovely nymph, half a speckled snake.",
+    "story": "Above, a nymph with bright eyes and fair cheeks; below, a huge speckled serpent, eating raw flesh in a cave under the earth, immortal and never ageing. She lay with Typhon and bore Orthus, Cerberus and the Hydra.",
+    "versions": "In Hesiod her mother is probably Ceto, though the line may mean Callirhoe; in Apollodorus she is a daughter of Tartarus and Gaia. Argus is said to have killed her as she slept."
+  },
+  {
+    "id": "graeae",
+    "name": "Graeae",
+    "greek": "Γραῖαι",
+    "gender": "f",
+    "generation": 3,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Sisters of the Gorgons",
+    "tagline": "Three sisters, one eye, one tooth.",
+    "story": "Daughters of Phorcys and Ceto, grey-haired from birth. They shared one eye and one tooth between them, passing them hand to hand. Perseus stole the eye and would not give it back until they showed him the way to the nymphs who had the cap of darkness, winged sandals and wallet.",
+    "count": "Two, or three",
+    "members": [
+      {
+        "name": "Pemphredo",
+        "greek": "Πεμφρηδώ",
+        "note": "in Hesiod and Apollodorus"
+      },
+      {
+        "name": "Enyo",
+        "greek": "Ἐνυώ",
+        "note": "in Hesiod and Apollodorus"
+      },
+      {
+        "name": "Deino",
+        "greek": "Δεινώ",
+        "note": "in Apollodorus"
+      }
+    ],
+    "members_note": "Hesiod names two; Apollodorus adds a third."
+  },
+  {
+    "id": "gorgons",
+    "name": "Gorgons",
+    "greek": "Γοργόνες",
+    "gender": "f",
+    "generation": 3,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Daughters of Phorcys and Ceto",
+    "tagline": "A face that turned men to stone.",
+    "story": "Three sisters who lived beyond Ocean, near the Hesperides, with heads wreathed in snakes, tusks like boars’, hands of bronze and golden wings. Whoever looked at them was turned to stone. Two were immortal and never aged; only Medusa could die.",
+    "count": "Three",
+    "members": [
+      {
+        "name": "Stheno",
+        "greek": "Σθεννώ",
+        "note": "immortal"
+      },
+      {
+        "name": "Euryale",
+        "greek": "Εὐρυάλη",
+        "note": "immortal"
+      },
+      {
+        "name": "Medusa",
+        "greek": "Μέδουσα",
+        "note": "mortal",
+        "id": "medusa"
+      }
+    ],
+    "members_note": "Hesiod and Apollodorus agree on the three names."
+  },
+  {
+    "id": "nereids",
+    "name": "Nereids",
+    "greek": "Νηρηΐδες",
+    "gender": "f",
+    "generation": 3,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Nymphs of the sea",
+    "tagline": "Fifty sisters of the sea, quick to take offence.",
+    "story": "The fifty daughters of Nereus and Doris, who live with their father in the depths of the sea. Thetis, the mother of Achilles, is one of them, and so is Amphitrite, Poseidon’s wife. When Cassiopeia boasted she was lovelier than all of them, they took it to Poseidon.",
+    "count": "Fifty",
+    "members": [
+      {
+        "name": "Thetis",
+        "greek": "Θέτις",
+        "note": "mother of Achilles",
+        "id": "thetis"
+      },
+      {
+        "name": "Amphitrite",
+        "greek": "Ἀμφιτρίτη",
+        "note": "wife of Poseidon"
+      },
+      {
+        "name": "Galatea",
+        "greek": "Γαλάτεια",
+        "note": "loved by Polyphemus"
+      }
+    ],
+    "members_note": "Hesiod names all fifty; Homer gives a list of his own in the Iliad."
+  },
+  {
+    "id": "ladon",
+    "name": "Ladon",
+    "greek": "Λάδων",
+    "gender": "m",
+    "generation": 3,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The serpent of the golden apples",
+    "tagline": "Never slept, and spoke with a hundred voices.",
+    "story": "The great serpent that coils around the tree of the golden apples, at the edge of the world, in the garden of the Hesperides. In Apollodorus he has a hundred heads and speaks with many different voices.",
+    "versions": "Hesiod: a child of Phorcys and Ceto. Apollodorus and Hyginus: a child of Typhon and Echidna."
+  },
+  {
+    "id": "chrysaor",
+    "name": "Chrysaor",
+    "greek": "Χρυσάωρ",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Son of Medusa",
+    "tagline": "Sprang from Medusa’s neck, holding a golden sword.",
+    "story": "When Perseus cut off Medusa’s head, Chrysaor sprang from her neck together with the winged horse Pegasus, both sons of Poseidon. His name means ‘golden sword’. He married Callirhoe, a daughter of Ocean, and fathered three-bodied Geryon."
+  },
+  {
+    "id": "orthus",
+    "name": "Orthus",
+    "greek": "Ὄρθος",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Hound of Geryon",
+    "tagline": "The two-headed dog who guarded the red cattle.",
+    "story": "Son of Typhon and Echidna, brother of Cerberus, a dog with two heads. He guarded the red cattle of Geryon on the island of Erytheia, far in the west, with the herdsman Eurytion. Heracles killed him with his club.",
+    "versions": "Hesiod makes him the father of the Sphinx and the Nemean lion; the mother is unclear, the Chimera or Echidna."
+  },
+  {
+    "id": "geryon",
+    "name": "Geryon",
+    "greek": "Γηρυών",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Herdsman of the red cattle",
+    "tagline": "Three men from the waist up, and one below.",
+    "story": "Son of Chrysaor and Callirhoe, with three bodies joined at the waist. He kept his red cattle on Erytheia, beyond the Ocean stream. Heracles came for them as his tenth labour, killed his dog Orthus and herdsman Eurytion, and shot Geryon with his arrows.",
+    "versions": "Stesichorus told his death in a long poem, the Geryoneis, from Geryon’s side."
+  },
+  {
+    "id": "nemean-lion",
+    "name": "Nemean Lion",
+    "greek": "Λέων Νεμέας",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The lion of Nemea",
+    "tagline": "No weapon could pierce its hide.",
+    "story": "A lion reared by Hera and set loose on the hills of Nemea, with a hide no weapon could pierce. Heracles’ arrows bounced off it, so he trapped it in its cave and choked it with his arms. He wore its skin ever after. This was his first labour.",
+    "versions": "Hesiod: a child of Orthus, by the Chimera or by Echidna. Apollodorus: a child of Typhon."
+  },
+  {
+    "id": "hydra",
+    "name": "Hydra",
+    "greek": "Ὕδρα",
+    "gender": "f",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The water snake of Lerna",
+    "tagline": "Grew two heads for every one cut off.",
+    "story": "Daughter of Typhon and Echidna, reared by Hera in the swamp of Lerna to harm Heracles. She had nine heads, one of them immortal, and for every head Heracles struck off, two grew back. His nephew Iolaus burned the stumps with torches, and Heracles buried the immortal head under a rock. He dipped his arrows in her poison.",
+    "versions": "Hesiod gives no number of heads; Apollodorus nine; others more. Apollodorus adds that Hera sent a crab to bite Heracles’ foot."
+  },
+  {
+    "id": "cerberus",
+    "name": "Cerberus",
+    "greek": "Κέρβερος",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Hound of Hades",
+    "tagline": "Fawns on those who come in, eats those who try to leave.",
+    "story": "Son of Typhon and Echidna, the dog who guards the house of Hades. He wags his tail at the dead as they enter, and devours anyone who tries to leave. For his last labour Heracles went down, mastered him with his bare hands, showed him to Eurystheus and took him back.",
+    "versions": "Hesiod gives him fifty heads; Apollodorus three heads of a dog, a dragon’s tail, and snakes along his back."
+  },
+  {
+    "id": "sphinx",
+    "name": "Sphinx",
+    "greek": "Σφίγξ",
+    "gender": "f",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The riddler of Thebes",
+    "tagline": "Killed everyone who could not answer her riddle.",
+    "story": "A monster with a woman’s face, a lion’s body and a bird’s wings, sent to Thebes by Hera. She sat on a mountain above the city and asked a riddle: what has one voice, and goes on four feet, then two, then three? Whoever failed she devoured. Oedipus answered: man. She threw herself from the citadel, and Thebes made him king.",
+    "versions": "Hesiod: a child of Orthus, by the Chimera or by Echidna. Apollodorus and Hyginus: a child of Typhon and Echidna."
   }
 ]
