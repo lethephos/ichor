@@ -3493,5 +3493,176 @@
     "to": "patroclus",
     "sources": ["E"],
     "note": "killed Patroclus, who was wearing Achilles’ armour"
+  },
+  {
+    "type": "marriage",
+    "from": "asterion",
+    "to": "europa",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "rhadamanthys",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "europa",
+    "to": "rhadamanthys",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "rhadamanthys",
+    "to": "alcmene",
+    "sources": ["A"],
+    "note": "after Amphitryon’s death"
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "catreus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "catreus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "deucalion-crete",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "deucalion-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "deucalion-crete",
+    "to": "idomeneus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "catreus",
+    "to": "aerope",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "catreus",
+    "to": "clymene-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "catreus",
+    "to": "althaemenes",
+    "sources": ["A"]
+  },
+  {
+    "type": "feud",
+    "from": "catreus",
+    "to": "aerope",
+    "sources": ["T", "A"],
+    "note": "gave Aerope to Nauplius, to be drowned or sold abroad"
+  },
+  {
+    "type": "feud",
+    "from": "althaemenes",
+    "to": "catreus",
+    "sources": ["A"],
+    "note": "killed his father without knowing him, as the oracle had said"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "nauplius",
+    "sources": ["A"]
+  },
+  {
+    "type": "marriage",
+    "from": "nauplius",
+    "to": "clymene-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "nauplius",
+    "to": "palamedes",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "clymene-crete",
+    "to": "palamedes",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "glaucus-crete",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "glaucus-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "feud",
+    "from": "minos",
+    "to": "polyidus",
+    "sources": ["A", "L"],
+    "note": "shut Polyidus in the tomb with his dead son, until he brought him back"
+  },
+  {
+    "type": "parent",
+    "from": "daedalus",
+    "to": "icarus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "daedalus",
+    "to": "perdix",
+    "sources": ["A", "L"],
+    "note": "threw his nephew Perdix off the Acropolis, jealous of his inventions"
+  },
+  {
+    "type": "transform",
+    "from": "athena",
+    "to": "perdix",
+    "sources": ["L"],
+    "note": "caught Perdix as he fell, and turned him into a partridge"
+  },
+  {
+    "type": "feud",
+    "from": "minos",
+    "to": "daedalus",
+    "sources": ["A", "L"],
+    "note": "kept Daedalus and his son prisoners on Crete"
+  },
+  {
+    "type": "feud",
+    "from": "cocalus",
+    "to": "minos",
+    "sources": ["A", "L"],
+    "note": "had his daughters scald Minos to death in his bath, to keep Daedalus"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "talos",
+    "sources": ["A"],
+    "note": "pulled the nail from Talos’ ankle, and his ichor ran out"
   }
 ]

@@ -138,6 +138,14 @@
         "note": "From Sisyphus of Corinth to Bellerophon and the Chimera, and his grandsons, who fought for Troy.",
         "focus": "bellerophon",
         "figures": ["zeus", "poseidon", "artemis", "aeolus", "sisyphus", "glaucus-corinth", "medusa", "pegasus", "iobates", "proetus", "stheneboea", "philonoe", "bellerophon", "chimera", "hippolochus", "laodamia", "glaucus-lycia", "sarpedon", "patroclus", "hector"]
+      },
+      {
+        "id": "minos",
+        "label": "The house of Minos",
+        "title": "The house of Minos",
+        "note": "Europa’s sons in Crete, the children of Minos and Pasiphae, and Daedalus, who built for them and fled them.",
+        "focus": "minos",
+        "figures": ["zeus", "poseidon", "helios", "athena", "oceanids", "europa", "asterion", "minos", "rhadamanthys", "pasiphae", "minotaur", "androgeus", "ariadne", "phaedra", "catreus", "deucalion-crete", "glaucus-crete", "polyidus", "aerope", "clymene-crete", "althaemenes", "nauplius", "palamedes", "idomeneus", "daedalus", "icarus", "perdix", "cocalus", "talos", "medea", "theseus", "dionysus", "aegeus", "alcmene", "atreus"]
       }
     ]
   }
