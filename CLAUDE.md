@@ -30,7 +30,7 @@ The site is live at https://ichor-orpin.vercel.app (Vite + D3, data in `/data`, 
   - Light: bg `#E8CFB2`, panel `#F3E3D0`, rule `#C9A07D`, text `#1E140D`, lines `#2A1D14`, muted `#5A3F2C`, curse `#A82A17`, gold `#8A5E00`.
   - Dark: bg `#14100C`, panel `#1F1812`, rule `#3D3024`, text `#EAD3B8`, lines `#B98C66`, muted `#A68E76`, curse `#E0533C`, gold `#E8B54A`.
   - All text meets WCAG AA contrast on both bg and panel.
-- Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation, a small peak marks one of the Twelve Olympians (hollow for Hestia and Dionysus); a group (the Muses, the Fates…) is a ringed medallion holding three small dots.
+- Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation, a small gold star marks a mortal made immortal (Semele, Cadmus, Helen, Menelaus, the Dioscuri, Iphigenia; it hides when the chosen source doesn’t tell it), a small peak marks one of the Twelve Olympians (hollow for Hestia and Dionysus); a group (the Muses, the Fates…) is a ringed medallion holding three small dots.
 - Row names sit in a column pinned to the left edge of the screen (small caps, interface font, fixed size at any zoom); the tree slides beneath it and the names follow their rows up and down. The “Heroes and mortals” divider is named there too.
 - Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted gold with arrow; curse = red with arrow.
 - Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of Greek myth", then the branch as the page title, "From Gaia to Orestes". "Now exploring" sits above the title, and the title opens the family switcher: Whole tree, The gods, Zeus and his loves, Thebes, The House of Atreus (`families` in `data/branches.json`; the choice lives in the URL, `?family=thebes`). Everyone goes into the one pool of data; families keep the tree readable as it grows. Collectives are one medallion each (`kind: group`): the Muses, Moirai, Horae, Charites, Oceanids, Pleiades and Erinyes; the card lists the sisters. Sources are pills, the chosen one filled; on desktop their note sits on the same line.
@@ -50,7 +50,7 @@ Keep it simple: a static site, no backend.
 
 - Vite + vanilla TypeScript (or plain JS) + D3.
 - Data out of the code, in `/data`:
-  - `people.json` — id, name, greek, gender, generation, kind (god / nymph / mortal / other-cycle / group), branch, role, tagline, story, versions, transformation, art; a group adds count, members and members_note.
+  - `people.json` — id, name, greek, gender, generation, kind (god / nymph / mortal / other-cycle / group), branch, role, tagline, story, versions, transformation, immortal (text and sources), art; a group adds count, members and members_note.
   - `relations.json` — type, from, to, sources, note.
   - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` still needs checking against the sources; the three myths (Hippodamia, Leda, Iphigenia) have been checked.
   - `sources.json` — source groups and their labels.
