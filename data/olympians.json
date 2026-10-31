@@ -1,0 +1,10 @@
+{
+  "title": "The Twelve Olympians",
+  "note": "No ancient list of the Twelve is fixed, and none of the poets this tree follows names all twelve. The Parthenon frieze and the Latin list of Ennius agree on eleven gods; the twelfth seat changes.",
+  "core": ["zeus", "hera", "poseidon", "demeter", "athena", "apollo", "artemis", "ares", "aphrodite", "hephaestus", "hermes"],
+  "core_text": "One of the Twelve Olympians, on the east frieze of the Parthenon (about 440 BC) and in the Latin list of Ennius.",
+  "twelfth": [
+    {"id": "hestia", "text": "One of the Twelve in some lists: Plato’s Phaedrus counts her among them, and Ennius names her as Vesta. On the Parthenon frieze Dionysus takes her place."},
+    {"id": "dionysus", "text": "One of the Twelve on the east frieze of the Parthenon, where he takes the place of Hestia. Plato and Ennius count Hestia instead."}
+  ]
+}

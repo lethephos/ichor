@@ -7,7 +7,7 @@ Subtitle: *The family tree of the Greek gods*.
 
 It shows not only who descends from whom, but marriages, affairs, feuds and killings, transformations and curses. Its main difference from existing family trees is the **versions layer**: every link records which ancient sources tell it, and the user can switch source (Homer, Hesiod, the tragedians, Apollodorus, later writers) and watch the family rearrange itself.
 
-The first branch is **"Two cursed houses"**: the House of Atreus and the House of Labdacus (Thebes), linked through Pelops and Chrysippus. Above them sit the gods (checked against Hesiod, Homer, the Homeric Hymns, Pindar, Euripides, Apollodorus, Pausanias, Hyginus and Ovid): the primordial gods, the Titans, the Olympians and the younger gods, so the tree runs from Gaia and Uranus down to Orestes. The page heading is now "The gods and two cursed houses".
+The first branch is **"Two cursed houses"**: the House of Atreus and the House of Labdacus (Thebes), linked through Pelops and Chrysippus. Above them sit the gods (checked against Hesiod, Homer, the Homeric Hymns, Pindar, Euripides, Apollodorus, Pausanias, Hyginus and Ovid): so the tree runs from Gaia and Uranus down to Orestes. Rows: The first gods, Titans, Children of the Titans (Zeus, his siblings and the goddesses he loved; Nemesis, a daughter of Night, and the mortal Semele sit there as his lovers), Children of Zeus; then a “Mortals” divider and Generation I–V. Rows show a figure’s place in the story rather than a strict generation (Aphrodite, born of Uranus in Hesiod, sits with the children of Zeus). The Olympians are not a row: they span two, and are marked instead by a small peak beside the medallion (`data/olympians.json`). No poet in our source groups lists all twelve, so the list follows the Parthenon east frieze (Dionysus) and Ennius (Vesta = Hestia), with Plato’s Phaedrus for Hestia; the twelfth seat is hollow. The idea that Hestia gave her seat to Dionysus is modern; don’t add it. The page heading is now "The gods and two cursed houses".
 
 ## Current state
 
@@ -31,7 +31,7 @@ Features in the prototype:
   - Light: bg `#E8CFB2`, panel `#F3E3D0`, rule `#C9A07D`, text `#1E140D`, lines `#2A1D14`, muted `#5A3F2C`, curse `#A82A17`, gold `#8A5E00`.
   - Dark: bg `#14100C`, panel `#1F1812`, rule `#3D3024`, text `#EAD3B8`, lines `#B98C66`, muted `#A68E76`, curse `#E0533C`, gold `#E8B54A`.
   - All text meets WCAG AA contrast on both bg and panel.
-- Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation.
+- Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation, a small peak marks one of the Twelve Olympians (hollow for Hestia and Dionysus).
 - Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted gold with arrow; curse = red with arrow.
 - Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of the Greek gods", then "Now exploring", then the branch as the page title, "Two cursed houses", with "Atreus and Labdacus" beside it on desktop and under it on phones. The title will become a branch switcher. Sources are pills, the chosen one filled; on desktop their note sits on the same line.
 - Tools: on desktop the layer toggles, Trace a curse, Ariadne’s thread and the search box float in a dock at the bottom of the tree; on phones four buttons (Layers, Curses, Thread, Find) float at the bottom and open panels in the card sheet. "Whole tree" sits in the top corner of the tree.
@@ -52,7 +52,7 @@ Keep it simple: a static site, no backend.
 - Data out of the code, in `/data`:
   - `people.json` — id, name, greek, gender, generation, kind (god / nymph / mortal / other-cycle), branch, role, tagline, story, versions, transformation, art.
   - `relations.json` — type, from, to, sources, note.
-  - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` was assembled from existing card texts and relation notes and still needs checking.
+  - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` still needs checking against the sources; the three myths (Hippodamia, Leda, Iphigenia) have been checked.
   - `sources.json` — source groups and their labels.
 - Styles as design tokens (CSS variables) in one file; components separate (tree, card, controls, curse panel, thread panel).
 - Layout computed from data (generation tiers), so new branches can be added by editing JSON only.

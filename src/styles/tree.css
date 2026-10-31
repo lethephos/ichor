@@ -3,6 +3,8 @@
 #graph:active{cursor:grabbing}
 .gen{font-family:var(--display);font-size:15px;fill:var(--muted)}
 .genrule{stroke:var(--rule);stroke-width:1}
+.divider{stroke:var(--muted);stroke-width:1.5}
+.divider-label{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;fill:var(--muted);paint-order:stroke;stroke:var(--bg);stroke-width:10px;stroke-linejoin:round}
 .house{font-family:var(--display);font-size:22px;fill:var(--muted);paint-order:stroke;stroke:var(--bg);stroke-width:8px;stroke-linejoin:round}
 
 /* nodes: small medallions */
@@ -18,6 +20,8 @@
 .dot.other-cycle{fill:var(--bg);stroke:var(--figure);stroke-width:1.3;stroke-dasharray:2.5 2.5}
 .ring{fill:none;stroke:var(--figure);stroke-width:1}
 .badge{fill:var(--transform)}
+.oly{fill:var(--figure);stroke:var(--figure);stroke-width:1;stroke-linejoin:round}
+.oly.some{fill:var(--bg)}
 .lbl{font-family:var(--display);font-size:17px;fill:var(--text);paint-order:stroke;stroke:var(--bg);stroke-width:6px;stroke-linejoin:round;pointer-events:none}
 .lbl.god{fill:var(--muted)}
 

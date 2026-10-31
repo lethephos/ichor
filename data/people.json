@@ -403,9 +403,9 @@
     "branch": "cursed-houses",
     "role": "Goddess of retribution",
     "tagline": "Retribution herself, and perhaps Helen’s mother.",
-    "story": "In the Cypria she fled Zeus through many shapes and became the mother of Helen.",
+    "story": "In the Cypria she fled Zeus through many shapes and became the mother of Helen. In Apollodorus she became a goose, and Zeus a swan.",
     "transformation": {
-      "text": "A goose, fleeing Zeus",
+      "text": "Many shapes, fleeing Zeus; in Apollodorus a goose",
       "sources": ["E", "A"]
     },
     "art": [
@@ -501,7 +501,7 @@
     "branch": "cursed-houses",
     "role": "Charioteer of Oenomaus",
     "tagline": "Betrayed his master, was betrayed in turn, and cursed them all.",
-    "story": "Son of Hermes. He sabotaged his master’s chariot so Pelops could win. Thrown into the sea by Pelops, he cursed his line as he fell.",
+    "story": "Son of Hermes. He sabotaged his master’s chariot so Pelops could win. Thrown into the sea by Pelops, he cursed his line as he fell, and the Myrtoan Sea is named after him.",
     "art": [
       {
         "title": "East pediment, Temple of Zeus at Olympia",
@@ -848,7 +848,7 @@
     "role": "Queen of Sparta",
     "tagline": "The face that launched a thousand ships.",
     "story": "She left her husband Menelaus and sailed with Paris to Troy.",
-    "versions": "Homer: daughter of Zeus, her mother unnamed. Euripides and Apollodorus: daughter of Zeus and Leda, hatched from an egg. The Cypria and Pausanias: her mother is Nemesis, and Leda only nursed her.",
+    "versions": "Homer: daughter of Zeus, her mother unnamed. Euripides: daughter of Zeus and Leda, hatched from an egg. The Cypria and Pausanias: her mother is Nemesis, and Leda only nursed her. Apollodorus tells both, and in his Nemesis version a shepherd brings the egg to Leda.",
     "art": [
       {
         "title": "Helen of Troy",
@@ -1065,7 +1065,7 @@
     "role": "Daughter of Agamemnon",
     "tagline": "The daughter on the altar.",
     "story": "Sacrificed to Artemis so the Greek fleet could sail for Troy.",
-    "versions": "Homer does not know her. The Cypria: Artemis swaps her for a deer and makes her immortal. Catalogue of Women: as Iphimede she becomes Hecate by the will of Artemis. Aeschylus: she dies at the altar. Euripides: Artemis carries her to the land of the Taurians. Stesichorus, via Pausanias: she is the daughter of Theseus and Helen, raised by Clytemnestra.",
+    "versions": "Homer does not know her. The Cypria: Artemis swaps her for a deer, carries her to the Taurians and makes her immortal. Catalogue of Women: as Iphimede she becomes Hecate by the will of Artemis. Aeschylus: she dies at the altar. Euripides: Artemis carries her to the land of the Taurians. Stesichorus, via Pausanias: she is the daughter of Theseus and Helen, raised by Clytemnestra.",
     "transformation": {
       "text": "Replaced by a deer, or made immortal",
       "sources": ["E", "H", "T", "A"]

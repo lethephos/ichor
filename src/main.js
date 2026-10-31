@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES} from "./data.js";
+import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -145,6 +145,12 @@ ROWY.forEach((y,i) => {
   gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
   if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
 });
+// a divider is a stronger rule between two rows, named on the left (e.g. where the gods end and mortals begin)
+(BRANCH.dividers || []).forEach(d => {
+  const y = (ROWY[d.before-1] + ROWY[d.before]) / 2 + 12;
+  gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
+  gGrid.append("text").attr("class","divider-label").attr("x",0).attr("y",y+4).text(d.label);
+});
 HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
 
 const RN = 8;
@@ -189,6 +195,10 @@ nodeSel.each(function(d){
   g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
   if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
       .attr("transform",`translate(${RN+7},${-RN-3})`);
+  // Olympus: a small peak at the upper left; hollow where only some lists count the god
+  if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z")
+      .attr("transform",`translate(${-RN-7},${-RN-3})`)
+      .append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
   g.append("text").attr("class","lbl" + (d.kind==="god"?" god":"")).attr("text-anchor","middle").attr("y", d.kind==="god" ? 34 : 30).text(d.name);
 });
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
@@ -337,6 +347,7 @@ function renderNode(id){
     <p class="card-tag">${p.tagline}</p>
     <p class="card-role">${p.role}</p>
     <p class="card-story">${p.story}</p>
+    ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
     ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
