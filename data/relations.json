@@ -3326,5 +3326,172 @@
     "to": "creon",
     "sources": ["T", "A", "L"],
     "note": "made war on Creon to bury the Argive dead"
+  },
+  {
+    "type": "parent",
+    "from": "sisyphus",
+    "to": "glaucus-corinth",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "glaucus-corinth",
+    "to": "bellerophon",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "bellerophon",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "iobates",
+    "to": "stheneboea",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iobates",
+    "to": "philonoe",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "proetus",
+    "to": "stheneboea",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "stheneboea",
+    "to": "bellerophon",
+    "sources": ["E", "T", "A", "L"],
+    "note": "accused Bellerophon of trying to seduce her, when he had refused her"
+  },
+  {
+    "type": "feud",
+    "from": "proetus",
+    "to": "bellerophon",
+    "sources": ["E", "A", "L"],
+    "note": "sent Bellerophon to Lycia with a letter asking for his death"
+  },
+  {
+    "type": "feud",
+    "from": "iobates",
+    "to": "bellerophon",
+    "sources": ["E", "A", "L"],
+    "note": "sent Bellerophon against the Chimera, the Solymi and the Amazons, hoping he would die"
+  },
+  {
+    "type": "feud",
+    "from": "bellerophon",
+    "to": "stheneboea",
+    "sources": ["T"],
+    "note": "carried Stheneboea off on Pegasus and dropped her into the sea"
+  },
+  {
+    "type": "marriage",
+    "from": "bellerophon",
+    "to": "philonoe",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "pegasus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "medusa",
+    "to": "pegasus",
+    "sources": ["H", "A", "L"],
+    "note": "from her severed neck"
+  },
+  {
+    "type": "feud",
+    "from": "bellerophon",
+    "to": "chimera",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "killed the Chimera"
+  },
+  {
+    "type": "feud",
+    "from": "pegasus",
+    "to": "bellerophon",
+    "sources": ["T"],
+    "note": "threw Bellerophon when he tried to ride up to Olympus"
+  },
+  {
+    "type": "parent",
+    "from": "bellerophon",
+    "to": "hippolochus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "philonoe",
+    "to": "hippolochus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "bellerophon",
+    "to": "laodamia",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "philonoe",
+    "to": "laodamia",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "laodamia",
+    "sources": ["E"],
+    "note": "lay with Laodamia, who bore him Sarpedon"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "sarpedon",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "laodamia",
+    "to": "sarpedon",
+    "sources": ["E"]
+  },
+  {
+    "type": "feud",
+    "from": "artemis",
+    "to": "laodamia",
+    "sources": ["E"],
+    "note": "killed Laodamia in anger"
+  },
+  {
+    "type": "parent",
+    "from": "hippolochus",
+    "to": "glaucus-lycia",
+    "sources": ["E"]
+  },
+  {
+    "type": "feud",
+    "from": "patroclus",
+    "to": "sarpedon",
+    "sources": ["E"],
+    "note": "killed Sarpedon, and Zeus let it happen"
+  },
+  {
+    "type": "feud",
+    "from": "hector",
+    "to": "patroclus",
+    "sources": ["E"],
+    "note": "killed Patroclus, who was wearing Achilles’ armour"
   }
 ]

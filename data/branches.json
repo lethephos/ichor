@@ -130,6 +130,14 @@
         "note": "Seven champions from Argos at the seven gates of Thebes, the families they came from, and the sons who finished their war.",
         "focus": "polynices",
         "figures": ["zeus", "hera", "athena", "aphrodite", "ares", "oedipus", "jocasta", "creon", "eteocles", "polynices", "antigone", "ismene", "haemon", "tiresias", "oeneus", "althaea", "meleager", "deianira", "atalanta", "adrastus", "argia", "deipyle", "amphiaraus", "eriphyle", "tydeus", "capaneus", "evadne", "parthenopaeus", "diomedes", "alcmaeon", "thersander", "theseus"]
+      },
+      {
+        "id": "bellerophon",
+        "label": "Bellerophon and Corinth",
+        "title": "Bellerophon",
+        "note": "From Sisyphus of Corinth to Bellerophon and the Chimera, and his grandsons, who fought for Troy.",
+        "focus": "bellerophon",
+        "figures": ["zeus", "poseidon", "artemis", "aeolus", "sisyphus", "glaucus-corinth", "medusa", "pegasus", "iobates", "proetus", "stheneboea", "philonoe", "bellerophon", "chimera", "hippolochus", "laodamia", "glaucus-lycia", "sarpedon", "patroclus", "hector"]
       }
     ]
   }
