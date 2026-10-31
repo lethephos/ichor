@@ -7,20 +7,19 @@ Subtitle: *The family tree of Greek myth* (gods and mortals alike, so not “of 
 
 It shows not only who descends from whom, but marriages, affairs, feuds and killings, transformations and curses. Its main difference from existing family trees is the **versions layer**: every link records which ancient sources tell it, and the user can switch source (Homer, Hesiod, the tragedians, Apollodorus, later writers) and watch the family rearrange itself.
 
-The first branch is **"Two cursed houses"**: the House of Atreus and the House of Labdacus (Thebes), linked through Pelops and Chrysippus. Above them sit the gods (checked against Hesiod, Homer, the Homeric Hymns, Pindar, Euripides, Apollodorus, Pausanias, Hyginus and Ovid): so the tree runs from Gaia and Uranus down to Orestes. Rows: The first gods, Titans, Children of the Titans (Zeus, his siblings and the goddesses he loved; Nemesis, a daughter of Night, and the mortal Semele sit there as his lovers), Children of Zeus; then a “Mortals” divider and Generation I–V. Rows show a figure’s place in the story rather than a strict generation (Aphrodite, born of Uranus in Hesiod, sits with the children of Zeus). The Olympians are not a row: they span two, and are marked instead by a small peak beside the medallion (`data/olympians.json`). No poet in our source groups lists all twelve, so the list follows the Parthenon east frieze (Dionysus) and Ennius (Vesta = Hestia), with Plato’s Phaedrus for Hestia; the twelfth seat is hollow. The idea that Hestia gave her seat to Dionysus is modern; don’t add it. The page heading is "From Gaia to Orestes" ("The gods and two cursed houses" sounded wrong).
+The first branch is **"Two cursed houses"**: the House of Atreus and the House of Labdacus (Thebes), linked through Pelops and Chrysippus. Above them sit the gods (checked against Hesiod, Homer, the Homeric Hymns, Pindar, Euripides, Apollodorus, Pausanias, Hyginus and Ovid): so the tree runs from Gaia and Uranus down to Orestes. Rows: The first gods, Titans, Children of the Titans (Zeus, his siblings and the goddesses he loved; Nemesis, a daughter of Night, sits there as his lover), Children of Zeus; then a “Mortals” divider and Generation I–VI. Thebes runs Cadmus and Harmonia (I), Polydorus, Agave and Semele (II), Labdacus and Pentheus (III), down to Eteocles and his sisters (VI); Semele’s son Dionysus stays with the gods, so his bloodline is the one drawn upwards. Rows show a figure’s place in the story rather than a strict generation (Aphrodite, born of Uranus in Hesiod, sits with the children of Zeus). The Olympians are not a row: they span two, and are marked instead by a small peak beside the medallion (`data/olympians.json`). No poet in our source groups lists all twelve, so the list follows the Parthenon east frieze (Dionysus) and Ennius (Vesta = Hestia), with Plato’s Phaedrus for Hestia; the twelfth seat is hollow. The idea that Hestia gave her seat to Dionysus is modern; don’t add it. The page heading is "From Gaia to Orestes" ("The gods and two cursed houses" sounded wrong).
 
 ## Current state
 
-A working single-file prototype: `ichor-atreidae.html` (HTML + CSS + JS, D3 7.8.5 from cdnjs). All content is already fact-checked. Treat it as the reference for behaviour, content and style.
+The site is live at https://ichor-orpin.vercel.app (Vite + D3, data in `/data`, deployed from `main` by Vercel). The original prototype, `prototype/ichor-atreidae.html`, stays as the reference for behaviour and tone.
 
-Features in the prototype:
-
-- 43 figures, ~95 relations, laid out in tiers by generation (Gods, Generation I–V), pan and pinch-zoom.
-- **Source switcher**: All versions / Homer & epic / Hesiod / Lyric & tragedy / Apollodorus / Later writers. Links not attested in the chosen source fade out; figures with disputed versions pulse; a one-line note says what changes.
+- 74 figures, 184 relations, from Gaia and Uranus to Orestes and Antigone, in rows computed from `generation`; pan and pinch-zoom.
+- **Source switcher**: All versions / Homer & epic / Hesiod / Lyric & tragedy / Apollodorus / Later writers. Links not attested in the chosen source fade out; a one-line note says what changes.
 - **Layer toggles**: Bloodlines, Marriages, Affairs, Feuds & killings, Transformations, Curses.
-- **Figure card** (bottom sheet on mobile, side panel on desktop): Greek name, name, one-line dramatic tagline, role, story, Born to / Married / Affairs / Feuds & killings / Transformations / Curses / Children (each with its sources), "Where the sources disagree", "In art" (1–2 works with links).
-- **Trace a curse**: the curse on the House of Atreus and on the House of Labdacus, told generation by generation and highlighted on the tree.
-- **Ariadne’s thread**: pick two figures, get the shortest path between them (respects the selected source), narrated step by step.
+- **Figure card**: Greek name, name, tagline, role, story, The Twelve (for Olympians), Born to / Married / Affairs / Feuds & killings / Transformations / Curses / Children (each with its sources), Where the sources disagree, In art.
+- **Stories**: the two curses and the myths of Cadmus, Hippodamia, Leda and Iphigenia, told step by step, by all sources or as one source tells it, with “Versions differ” and “Read as” inline.
+- **Ariadne’s thread**: the shortest path between two figures, respecting the chosen source.
+- Light / dark theme switch; search with live filtering.
 
 ## Decisions made so far (can be revisited)
 

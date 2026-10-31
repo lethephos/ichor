@@ -181,7 +181,9 @@ function edgePath(e){
   const a = N[e.from], b = N[e.to];
   if (e.type==="parent") {
     const my = (a.y + b.y)/2 + 6;
-    return `M${a.x},${a.y+RN+2} C${a.x},${my} ${b.x},${my} ${b.x},${b.y-RN-2}`;
+    // a child drawn above the parent (Dionysus, a god, over his mortal mother Semele) leaves from the top
+    const up = b.y < a.y ? -1 : 1;
+    return `M${a.x},${a.y+up*(RN+2)} C${a.x},${my} ${b.x},${my} ${b.x},${b.y-up*(RN+2)}`;
   }
   const dx = b.x-a.x, dy = b.y-a.y;
   const k = e.type==="affair" ? 1.25 : e.type==="feud" ? -1 : 1;

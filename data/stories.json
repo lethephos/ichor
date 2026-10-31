@@ -74,19 +74,74 @@
         "text": "Laius abducts Chrysippus, the son of Pelops, and Pelops curses him. Only later sources tell this origin."
       },
       {
-        "label": "Generation III",
+        "label": "Generation IV",
         "figures": ["laius"],
         "text": "An oracle warns Laius that his son will kill him. He has the infant exposed on a mountain."
       },
       {
-        "label": "Generation IV",
+        "label": "Generation V",
         "figures": ["oedipus", "jocasta"],
         "text": "Grown and unaware, Oedipus kills Laius at a crossroads and marries the widowed queen, his mother. When the truth comes out, Jocasta dies and Oedipus blinds himself."
       },
       {
-        "label": "Generation V",
+        "label": "Generation VI",
         "figures": ["eteocles", "polynices", "antigone"],
         "text": "Oedipus curses his sons, and they kill each other over Thebes. Antigone buries Polynices against the king’s order and is condemned."
+      }
+    ]
+  },
+  {
+    "id": "cadmus",
+    "kind": "story",
+    "title": "The house of Cadmus",
+    "lead": "A city sown from dragon’s teeth, and a god who came home.",
+    "pairs": [
+      ["cadmus", "ares"],
+      ["cadmus", "harmonia"],
+      ["ares", "harmonia"],
+      ["aphrodite", "harmonia"],
+      ["cadmus", "semele"],
+      ["harmonia", "semele"],
+      ["zeus", "semele"],
+      ["cadmus", "agave"],
+      ["harmonia", "agave"],
+      ["cadmus", "polydorus"],
+      ["harmonia", "polydorus"],
+      ["semele", "dionysus"],
+      ["dionysus", "pentheus"],
+      ["agave", "pentheus"],
+      ["polydorus", "labdacus"]
+    ],
+    "steps": [
+      {
+        "label": "The serpent",
+        "figures": ["cadmus", "ares"],
+        "text": "Cadmus comes looking for his sister Europa and founds Thebes instead. He kills the serpent of Ares that guards the spring and, on Athena’s advice, sows its teeth. Armed men spring up and kill each other until five are left."
+      },
+      {
+        "label": "The wedding",
+        "figures": ["cadmus", "harmonia"],
+        "text": "Cadmus marries Harmonia, daughter of Ares and Aphrodite. The gods come down to the wedding, and the Muses sing."
+      },
+      {
+        "label": "The daughters",
+        "figures": ["semele", "agave", "polydorus"],
+        "text": "Harmonia bears Ino, Semele, Agave, Autonoe and a son, Polydorus. Zeus loves Semele, and she dies of it. Her sisters say she lied about her lover."
+      },
+      {
+        "label": "The god comes home",
+        "figures": ["dionysus", "pentheus"],
+        "text": "Semele’s son Dionysus comes back to Thebes as a god. Agave’s son Pentheus, now king, refuses his rites."
+      },
+      {
+        "label": "The mountain",
+        "figures": ["agave", "pentheus"],
+        "text": "Maddened by the god, Agave and the women of Thebes tear Pentheus apart on Mount Cithaeron. Agave comes home carrying his head, taking it for a beast’s."
+      },
+      {
+        "label": "The serpents",
+        "figures": ["cadmus", "harmonia", "polydorus", "labdacus"],
+        "text": "Cadmus and Harmonia leave Thebes and are turned into serpents. The throne passes to Polydorus and then to his son Labdacus, whose house the curse will follow."
       }
     ]
   },

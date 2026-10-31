@@ -1065,5 +1065,92 @@
     "to": "pelops",
     "sources": ["L"],
     "note": "ate the shoulder of Pelops at Tantalus’s feast"
+  },
+  {
+    "type": "marriage",
+    "from": "cadmus",
+    "to": "harmonia",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "harmonia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aphrodite",
+    "to": "harmonia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "polydorus",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "polydorus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "semele",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "semele",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "agave",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "agave",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "polydorus",
+    "to": "labdacus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "agave",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "cadmus",
+    "to": "ares",
+    "sources": ["T", "A", "L"],
+    "note": "killed the serpent of Ares that guarded the spring of Thebes"
+  },
+  {
+    "type": "feud",
+    "from": "dionysus",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"],
+    "note": "drove the women of Thebes mad when Pentheus refused his rites, and they tore him apart"
+  },
+  {
+    "type": "feud",
+    "from": "agave",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"],
+    "note": "tore her son apart in a Bacchic frenzy, taking him for a wild beast"
   }
 ]
