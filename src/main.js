@@ -403,6 +403,8 @@ const srcText = src => `<span class="srcs">${src.map(s => state.src===s ? `<b>${
 const named = (id, start) => N[id].kind==="group" ? `${start ? "The" : "the"} ${N[id].name}` : N[id].name;
 function sentence(e){
   const A = named(e.from, true), B = named(e.to);
+  // a parent from a group names the sister: “Perse, one of the Oceanids, is the mother of Circe.”
+  if (e.type==="parent" && N[e.from].kind==="group" && e.note) return `${e.note}, one of ${named(e.from)}, is the mother of ${B}.`;
   if (e.type==="parent") return `${A} is the ${N[e.from].gender==="f"?"mother":"father"} of ${B}${e.note?` (${e.note})`:""}.`;
   if (e.type==="marriage") return `${A} married ${B}${e.note?`, ${e.note}`:""}.`;
   return `${A} ${e.note}.`;
