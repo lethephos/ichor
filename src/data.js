@@ -3,6 +3,7 @@ import relations from "../data/relations.json";
 import stories from "../data/stories.json";
 import sources from "../data/sources.json";
 import branches from "../data/branches.json";
+import olympians from "../data/olympians.json";
 import {tierLayout} from "./layout.js";
 
 /* ---------- sources ---------- */
@@ -32,3 +33,11 @@ export const HOUSES = BRANCH.houses.map(h => {
 
 /* ---------- stories (the curses among them) ---------- */
 export const STORIES = Object.fromEntries(stories.map(c => [c.id, {...c, nodes: new Set(c.pairs.flat())}]));
+
+/* ---------- the Twelve Olympians: a mark on the figure, not a row ---------- */
+// "all": in every list we follow; "some": the twelfth seat, which changes between lists
+export const OLY = Object.fromEntries([
+  ...olympians.core.map(id => [id, {in: "all", text: olympians.core_text}]),
+  ...olympians.twelfth.map(t => [t.id, {in: "some", text: t.text}])
+]);
+export const OLY_NOTE = olympians.note;
