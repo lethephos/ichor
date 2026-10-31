@@ -476,15 +476,18 @@ function openCurse(key, step = 0){
     const s = c.steps[step-1];
     const alts = s.figures.flatMap(id => altParents(id).map(g => ({id, g})));
     const vers = s.figures.filter(id => N[id].versions);
+    const readers = Object.keys(SRC).filter(k => stepLinks(c, step-1).some(e => e.sources.includes(k)));
     const differ = src!=="all" || !(alts.length || vers.length) ? "" : `
       <details class="story-ver"><summary>Versions differ <span>· ${[...new Set([...alts.map(a => a.id), ...vers])].map(id => N[id].name).join(", ")}</span></summary>
         ${alts.map(({id, g}) => `<p><b>${N[id].name}’s ${N[g[0].from].gender==="f" ? "mother" : "father"}:</b> ${g.map(e => `${N[e.from].name} <span class="srcs">(${e.sources.map(x => SRC[x]).join(", ")})</span>`).join(" or ")}.</p>`).join("")}
         ${vers.map(id => `<p><b>${N[id].name}.</b> ${N[id].versions}</p>`).join("")}
+        ${readers.length ? `<div class="read-as"><span>Read this generation as</span>${readers.map(k => `<button class="tab" data-read="${k}">${SRC[k]}</button>`).join("")}</div>` : ""}
       </details>`;
     const says = src==="all" ? differ : told[step-1]
       ? `<div class="story-says"><h3>In ${by}</h3><ul>${stepLinks(c, step-1).filter(attested).sort((a, b) => ORDER[a.type] - ORDER[b.type])
-          .map(e => `<li>${sentence(e)}${e.sources.length===1 ? ` <span class="only">only here</span>` : ""}</li>`).join("")}</ul></div>`
-      : `<p class="story-hint">This part is not told in ${by}.</p>`;
+          .map(e => `<li>${sentence(e)}${e.sources.length===1 ? ` <span class="only">only here</span>` : ""}</li>`).join("")}</ul>
+          <div class="read-as"><button class="tab" data-read="all">← All versions</button></div></div>`
+      : `<p class="story-hint">This part is not told in ${by}.</p><div class="read-as"><button class="tab" data-read="all">← All versions</button></div>`;
     body = `
     <p class="story-of">${c.title}</p>
     ${pick}
@@ -506,6 +509,7 @@ function openCurse(key, step = 0){
   shell(`<div class="card-top"><span class="greek">Ἀρά</span><button class="close" data-close>Close</button></div>${body}`);
   card.querySelectorAll("[data-step]").forEach(b => b.onclick = () => openCurse(key, +b.dataset.step));
   card.querySelectorAll(".story-src [data-src]").forEach(b => b.onclick = () => { state.pickOpen = false; setSource(b.dataset.src); });
+  card.querySelectorAll("[data-read]").forEach(b => b.onclick = () => setSource(b.dataset.read));
   card.querySelectorAll(".story-ver").forEach(d => d.addEventListener("toggle", () => { if (d.open && !wide()) setFull(true); }));
   card.querySelectorAll(".story-src-toggle").forEach(b => b.onclick = () => { state.pickOpen = !state.pickOpen; openCurse(key, step); });
   apply(true);

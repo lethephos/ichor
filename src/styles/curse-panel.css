@@ -60,3 +60,6 @@
 .story-ver summary span{font-weight:500;color:var(--muted)}
 .story-ver p{font-family:var(--display);font-size:16px;line-height:1.55;margin:10px 0 0}
 .story-ver .srcs{font-family:var(--ui)}
+.read-as{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.read-as span{font:500 12px var(--ui);color:var(--muted);margin-right:2px}
+.read-as .tab{padding:3px 10px;font-size:12px}
