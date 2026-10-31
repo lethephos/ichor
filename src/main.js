@@ -145,6 +145,12 @@ ROWY.forEach((y,i) => {
   gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
   if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
 });
+// a divider is a stronger rule between two rows, named on the left (e.g. where the gods end and mortals begin)
+(BRANCH.dividers || []).forEach(d => {
+  const y = (ROWY[d.before-1] + ROWY[d.before]) / 2 + 12;
+  gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
+  gGrid.append("text").attr("class","divider-label").attr("x",0).attr("y",y+4).text(d.label);
+});
 HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
 
 const RN = 8;
