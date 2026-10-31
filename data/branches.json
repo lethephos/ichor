@@ -3,7 +3,7 @@
     "id": "cursed-houses",
     "title": "From Gaia to Orestes",
     "subtitle": "",
-    "tiers": ["The first gods", "Titans", "Children of the Titans", "The younger gods", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V", "Generation VI"],
+    "tiers": ["The first gods", "Titans", "Children of the Titans", "The younger gods", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V", "Generation VI", "Generation VII"],
     "focus": "pelops",
     "houses": [
       {
@@ -122,6 +122,14 @@
         "note": "The house of Odysseus, the women who kept him and the enemies he made, on the way to Troy and the long way home.",
         "focus": "odysseus",
         "figures": ["zeus", "poseidon", "hermes", "helios", "atlas", "circe", "calypso", "aeolus", "sisyphus", "autolycus", "arcesius", "laertes", "anticleia", "icarius", "odysseus", "penelope", "telemachus", "telegonus", "polyphemus", "companions", "suitors", "nausithous", "alcinous", "arete", "nausicaa", "palamedes", "aeacus", "telamon", "hesione", "ajax"]
+      },
+      {
+        "id": "seven",
+        "label": "The Seven against Thebes",
+        "title": "The Seven",
+        "note": "Seven champions from Argos at the seven gates of Thebes, the families they came from, and the sons who finished their war.",
+        "focus": "polynices",
+        "figures": ["zeus", "hera", "athena", "aphrodite", "ares", "oedipus", "jocasta", "creon", "eteocles", "polynices", "antigone", "ismene", "haemon", "tiresias", "oeneus", "althaea", "meleager", "deianira", "atalanta", "adrastus", "argia", "deipyle", "amphiaraus", "eriphyle", "tydeus", "capaneus", "evadne", "parthenopaeus", "diomedes", "alcmaeon", "thersander", "theseus"]
       }
     ]
   }
