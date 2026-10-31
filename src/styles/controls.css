@@ -9,7 +9,7 @@
 .toggle[aria-pressed="false"]{opacity:.35}
 .toggle svg{width:26px;height:10px;overflow:visible}
 .act{flex:0 0 auto;background:none;border:1px solid var(--rule);border-radius:2px;padding:5px 10px;font:500 13px var(--ui);color:var(--text);cursor:pointer}
-.act[aria-pressed="true"]{border-color:var(--transform);box-shadow:inset 0 0 0 1px var(--transform)}
+.act[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 select.act{appearance:none;-webkit-appearance:none;padding-right:22px;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 12px) 50%,calc(100% - 8px) 50%;background-size:4px 4px;background-repeat:no-repeat}
 select.act option{background:var(--bg-2);color:var(--text)}
 @media (min-width:900px){

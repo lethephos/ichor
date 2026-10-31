@@ -23,7 +23,7 @@ npm run preview  # serve the build
 - `src/data.js` — loads the JSON and runs the layout.
 - `src/main.js` — tree, controls, card, curse and thread panels.
 - `src/styles/` — styles. `index.css` imports the rest in order:
-  - `tokens.css` — design tokens: colours for the light (black-figure) and dark (red-figure) themes, fonts, shadow. Change a colour here, nowhere else.
+  - `tokens.css` — design tokens: colours for the light (pale clay) and dark (black glaze) themes, the gold accent, fonts, shadow. Change a colour here, nowhere else.
   - `base.css` — page frame, box sizing, focus rings.
   - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
 - `prototype/ichor-atreidae.html` — the original single-file prototype, kept as the reference.
