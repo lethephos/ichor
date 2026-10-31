@@ -220,6 +220,7 @@ const gEdges = root.append("g");
 const gNodes = root.append("g");
 
 const RN = 8;
+const STAR = "M0,-6 L1.6,-1.6 L6,0 L1.6,1.6 L0,6 L-1.6,1.6 L-6,0 L-1.6,-1.6 Z";   // ambrosia: made immortal
 function norm(x,y){ const l = Math.hypot(x,y)||1; return [x/l, y/l]; }
 function edgePath(e){
   const a = N[e.from], b = N[e.to];
@@ -283,6 +284,10 @@ function drawTree(){
     else g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
     if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
         .attr("transform",`translate(${RN+7},${-RN-3})`);
+    // made immortal: a small gold star at the upper left (only mortals have one, so it never meets the peak)
+    if (d.immortal) g.append("path").attr("class","imm").attr("d",STAR)
+        .attr("transform",`translate(${-RN-7},${-RN-3})`)
+        .append("title").text("Made immortal in some sources");
     // Olympus: a small peak at the upper left; hollow where only some lists count the god
     if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z")
         .attr("transform",`translate(${-RN-7},${-RN-3})`)
@@ -386,6 +391,7 @@ function apply(animate){
     return 1;
   };
   (dur ? nodeSel.transition().duration(dur) : nodeSel).style("opacity", nOp);
+  nodeSel.selectAll(".imm").style("display", d => state.src==="all" || d.immortal.sources.includes(state.src) ? null : "none");
   nodeSel.selectAll(".badge").style("display", d => state.layers.transform && (state.src==="all" || d.transformation.sources.includes(state.src)) ? null : "none");
   syncTools();
 }
@@ -450,6 +456,7 @@ function renderNode(id){
     ${p.members ? `<div class="sec"><h3>${p.count ? `${p.count} sisters` : "Who they are"}</h3><ul class="rels members">${p.members.map(m => `<li>${m.id && N[m.id] ? `<button class="rel" data-go="${m.id}">${m.name}</button>` : `<span class="rel static">${m.name}</span>`} <span class="greek-sm" lang="grc">${m.greek}</span>${m.note ? `<span class="note">${m.note}</span>` : ""}</li>`).join("")}</ul>${p.members_note ? `<p class="oly-note">${p.members_note}</p>` : ""}</div>` : ""}
     ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
+    ${p.immortal ? `<div class="sec"><h3>Made immortal</h3><ul class="rels"><li><span class="rel static"><svg class="imm-mark" viewBox="-6 -6 12 12" aria-hidden="true"><path class="imm" d="${STAR}"/></svg>${p.immortal.text}</span>${srcText(p.immortal.sources)}</li></ul></div>` : ""}
     ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
     ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(({title:t, meta:m, where:w, url:u}) => `<li>${u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t">${t}</span>`}<br><span class="m">${m}. ${w}</span></li>`).join("")}</ul></div>` : ""}

@@ -21,6 +21,7 @@
 .badge{fill:var(--transform)}
 .oly{fill:var(--figure);stroke:var(--figure);stroke-width:1;stroke-linejoin:round}
 .oly.some{fill:var(--bg)}
+.imm{fill:var(--accent)}
 .lbl{font-family:var(--display);font-size:17px;fill:var(--text);paint-order:stroke;stroke:var(--bg);stroke-width:6px;stroke-linejoin:round;pointer-events:none}
 .lbl.god{fill:var(--muted)}
 

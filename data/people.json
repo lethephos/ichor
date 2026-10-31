@@ -580,7 +580,11 @@
     "role": "Theban princess",
     "tagline": "Asked to see a god in his glory, and died of it.",
     "story": "Daughter of Cadmus, the founder of Thebes. Zeus loved her. Tricked by Hera, she asked him to come to her as he came to Hera, and died when he arrived in thunder and lightning. Zeus saved her unborn son, Dionysus.",
-    "versions": "Apollodorus: she died of fright at his thunder and lightning. Ovid: she was burned by his fire. In Ovid, Hera tricks her disguised as her old nurse, Beroe."
+    "versions": "Apollodorus: she died of fright at his thunder and lightning. Ovid: she was burned by his fire. In Ovid, Hera tricks her disguised as her old nurse, Beroe.",
+    "immortal": {
+      "text": "Made a goddess. Dionysus brings her up from Hades, and in Apollodorus she rises to heaven as Thyone",
+      "sources": ["H", "T", "A", "L"]
+    }
   },
   {
     "id": "athena",
@@ -996,6 +1000,10 @@
     "transformation": {
       "text": "A serpent, with Harmonia, at the end of his life",
       "sources": ["T", "A", "L"]
+    },
+    "immortal": {
+      "text": "Sent with Harmonia to the Isles of the Blessed, or the Elysian Fields",
+      "sources": ["T", "A"]
     }
   },
   {
@@ -1363,6 +1371,10 @@
     "tagline": "The husband left behind.",
     "story": "Husband of Helen. Her flight with Paris sparked the Trojan War.",
     "versions": "As with Agamemnon: son of Atreus or of Pleisthenes, depending on the source.",
+    "immortal": {
+      "text": "Not fated to die: sent to the Elysian Fields as Zeus’s son-in-law",
+      "sources": ["E", "T", "A"]
+    },
     "art": [
       {
         "title": "The Pasquino Group, Menelaus Supporting the Body of Patroclus",
@@ -1423,6 +1435,10 @@
     "tagline": "The face that launched a thousand ships.",
     "story": "She left her husband Menelaus and sailed with Paris to Troy.",
     "versions": "Homer: daughter of Zeus, her mother unnamed. Euripides: daughter of Zeus and Leda, hatched from an egg. The Cypria and Pausanias: her mother is Nemesis, and Leda only nursed her. Apollodorus tells both, and in his Nemesis version a shepherd brings the egg to Leda.",
+    "immortal": {
+      "text": "Made a goddess, honoured beside her brothers; or taken with Menelaus to the Elysian Fields",
+      "sources": ["T", "A", "L"]
+    },
     "art": [
       {
         "title": "Helen of Troy",
@@ -1469,6 +1485,10 @@
     "role": "One of the Dioscuri",
     "tagline": "The mortal twin.",
     "story": "Usually a son of Tyndareus, though some sources make both twins sons of Zeus.",
+    "immortal": {
+      "text": "Shares his brother’s immortality: the twins live on alternate days",
+      "sources": ["E", "T", "A", "L"]
+    },
     "art": [
       {
         "title": "The San Ildefonso Group",
@@ -1490,6 +1510,10 @@
     "tagline": "Shared his immortality with his brother.",
     "story": "The immortal twin, who gave up half his immortality to share it with Castor.",
     "versions": "The Odyssey: both twins are sons of Tyndareus. Hesiod and the Homeric Hymns: both are sons of Zeus. Pindar and Apollodorus: only Polydeuces is the son of Zeus, and so immortal.",
+    "immortal": {
+      "text": "Immortal as the son of Zeus, and shared it with Castor: the twins live on alternate days",
+      "sources": ["E", "T", "A", "L"]
+    },
     "art": [
       {
         "title": "The Rape of the Daughters of Leucippus",
@@ -1643,6 +1667,10 @@
     "transformation": {
       "text": "Replaced by a deer, or made immortal",
       "sources": ["E", "H", "T", "A"]
+    },
+    "immortal": {
+      "text": "Made immortal by Artemis, or made Hecate",
+      "sources": ["E", "H"]
     },
     "art": [
       {
