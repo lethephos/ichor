@@ -1,8 +1,9 @@
 [
   {
     "id": "cursed-houses",
-    "title": "Two cursed houses",
-    "subtitle": "Atreus and Labdacus",
+    "title": "The gods and two cursed houses",
+    "subtitle": "",
+    "tiers": ["Primordial gods", "Titans", "Olympians", "Younger gods", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V"],
     "focus": "pelops",
     "houses": [
       {"label": "House of Labdacus", "founder": "labdacus"},

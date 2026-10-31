@@ -7,7 +7,7 @@ Subtitle: *The family tree of the Greek gods*.
 
 It shows not only who descends from whom, but marriages, affairs, feuds and killings, transformations and curses. Its main difference from existing family trees is the **versions layer**: every link records which ancient sources tell it, and the user can switch source (Homer, Hesiod, the tragedians, Apollodorus, later writers) and watch the family rearrange itself.
 
-The first branch is **"Two cursed houses"**: the House of Atreus and the House of Labdacus (Thebes), linked through Pelops and Chrysippus.
+The first branch is **"Two cursed houses"**: the House of Atreus and the House of Labdacus (Thebes), linked through Pelops and Chrysippus. Above them sit the gods (checked against Hesiod, Homer, the Homeric Hymns, Pindar, Euripides, Apollodorus, Pausanias, Hyginus and Ovid): the primordial gods, the Titans, the Olympians and the younger gods, so the tree runs from Gaia and Uranus down to Orestes. The page heading is now "The gods and two cursed houses".
 
 ## Current state
 

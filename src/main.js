@@ -22,7 +22,7 @@ const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:
 
 /* ---------- header ---------- */
 document.getElementById("branchTitle").textContent = BRANCH.title;
-document.getElementById("branchSub").textContent = BRANCH.subtitle;
+document.getElementById("branchSub").textContent = BRANCH.subtitle || "";
 
 /* ---------- controls ---------- */
 const srcRow = document.getElementById("srcRow");
@@ -291,7 +291,8 @@ function sentence(e){
   if (e.type==="marriage") return `${A} married ${B}${e.note?`, ${e.note}`:""}.`;
   return `${A} ${e.note}.`;
 }
-const relItem = (id, e, withSentence) => `<li><button class="rel" data-go="${id}">${N[id].name}</button>${srcText(e.sources)}${withSentence?`<span class="note">${sentence(e)}</span>`:(e.note?`<span class="note">${e.note}</span>`:"")}</li>`;
+const draftTag = x => x.draft ? ` <em class="draft" title="Not yet checked">draft</em>` : "";
+const relItem = (id, e, withSentence) => `<li><button class="rel" data-go="${id}">${N[id].name}</button>${srcText(e.sources)}${draftTag(e)}${withSentence?`<span class="note">${sentence(e)}</span>`:(e.note?`<span class="note">${e.note}</span>`:"")}</li>`;
 function shell(inner){
   cardBody.innerHTML = inner;
   card.querySelectorAll("[data-close]").forEach(b => b.onclick = resetMode);
@@ -331,7 +332,8 @@ function renderNode(id){
   ].filter(g => g[1].length);
   shell(`
     <div class="card-top"><span class="greek" lang="grc">${p.greek}</span><button class="close" data-close>Close</button></div>
-    <h2 class="card-name">${p.name}</h2>
+    <h2 class="card-name">${p.name}${draftTag(p)}</h2>
+    ${p.draft ? `<p class="draft-note">This figure was added from Hesiod, Homer, the Homeric Hymns, Apollodorus, Pindar and Hyginus, and is not yet checked.</p>` : ""}
     <p class="card-tag">${p.tagline}</p>
     <p class="card-role">${p.role}</p>
     <p class="card-story">${p.story}</p>
