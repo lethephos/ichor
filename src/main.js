@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE} from "./data.js";
+import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -21,7 +21,34 @@ const SAMPLE = {
 const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, hover:null, mode:null, curseKey:null, step:0, pickOpen:false, path:null};
 
 /* ---------- header ---------- */
-document.getElementById("branchTitle").textContent = BRANCH.title;
+document.getElementById("branchTitle").textContent = FAMILY.title;
+if (FAMILY.id !== FAMILIES[0].id) document.title = `${FAMILY.title} · Ichor`;
+
+/* ---------- family switcher: the title opens a list of families ---------- */
+const familyBtn = document.getElementById("familyBtn"), familyMenu = document.getElementById("familyMenu");
+familyMenu.innerHTML = FAMILIES.map(f => `<li role="option" aria-selected="${f.id===FAMILY.id}" data-family="${f.id}" tabindex="-1">
+  <span class="fm-label">${f.label}</span>${f.note ? `<span class="fm-note">${f.note}</span>` : ""}</li>`).join("");
+const familyItems = [...familyMenu.querySelectorAll("li")];
+function openFamilies(open){
+  familyMenu.hidden = !open; familyBtn.setAttribute("aria-expanded", String(open));
+  if (open) (familyItems.find(li => li.getAttribute("aria-selected")==="true") || familyItems[0]).focus();
+}
+function goFamily(id){
+  if (id === FAMILY.id) { openFamilies(false); familyBtn.focus(); return; }
+  const url = new URL(location.href);
+  if (id === FAMILIES[0].id) url.searchParams.delete("family"); else url.searchParams.set("family", id);
+  location.href = url.toString();
+}
+familyBtn.addEventListener("click", ev => { ev.stopPropagation(); openFamilies(familyMenu.hidden); });
+familyMenu.addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) goFamily(li.dataset.family); });
+familyMenu.addEventListener("keydown", ev => {
+  const i = familyItems.indexOf(document.activeElement);
+  if (ev.key==="ArrowDown") { ev.preventDefault(); familyItems[Math.min(i+1, familyItems.length-1)].focus(); }
+  else if (ev.key==="ArrowUp") { ev.preventDefault(); familyItems[Math.max(i-1, 0)].focus(); }
+  else if (ev.key==="Enter" || ev.key===" ") { ev.preventDefault(); if (i>=0) goFamily(familyItems[i].dataset.family); }
+  else if (ev.key==="Escape" || ev.key==="Tab") { openFamilies(false); if (ev.key==="Escape") familyBtn.focus(); }
+});
+document.addEventListener("click", ev => { if (!familyMenu.hidden && !familyMenu.contains(ev.target)) openFamilies(false); });
 document.getElementById("branchSub").textContent = BRANCH.subtitle || "";
 
 /* ---------- light and dark theme ----------
@@ -87,6 +114,8 @@ const curseSel = document.getElementById("curseSel");
 Object.values(STORIES).forEach(c => {
   const o = document.createElement("option"); o.value = c.id; o.textContent = c.title + (c.draft ? " (draft)" : ""); curseSel.appendChild(o);
 });
+// a family with no stories of its own shows no story controls
+if (!Object.keys(STORIES).length) { curseSel.hidden = true; document.querySelector('[data-tool="curses"]').hidden = true; }
 curseSel.onchange = () => { if (curseSel.value) openCurse(curseSel.value); else resetMode(); };
 const threadBtn = document.getElementById("threadBtn");
 threadBtn.onclick = () => state.mode==="thread" ? resetMode() : openThread();
@@ -168,7 +197,7 @@ ROWY.forEach((y,i) => {
   if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
 });
 // a divider is a stronger rule between two rows, named on the left (e.g. where the gods end and mortals begin)
-(BRANCH.dividers || []).forEach(d => {
+DIVIDERS.forEach(d => {
   const y = (ROWY[d.before-1] + ROWY[d.before]) / 2 + 12;
   gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
   gGrid.append("text").attr("class","divider-label").attr("x",0).attr("y",y+4).text(d.label);
@@ -264,7 +293,7 @@ function initialView(){
   if (Math.min(w/W, h/H) >= 0.5) { fitTo(null, false); return; }
   const k = 0.55;
   const cy = (ROWY[0] + ROWY[ROWY.length-1]) / 2;
-  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[BRANCH.focus].x*k, viewH()/2 - cy*k).scale(k));
+  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[FOCUS].x*k, viewH()/2 - cy*k).scale(k));
 }
 
 /* ---------- visibility ---------- */

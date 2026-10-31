@@ -11,6 +11,48 @@
     ],
     "dividers": [
       {"before": 4, "label": "Mortals"}
+    ],
+    "families": [
+      {
+        "id": "all",
+        "label": "Whole tree",
+        "title": "From Gaia to Orestes",
+        "note": "Every figure, from the first gods to the last of both houses.",
+        "focus": "pelops"
+      },
+      {
+        "id": "gods",
+        "label": "The gods",
+        "title": "The gods",
+        "note": "From Gaia and Uranus to the children of Zeus.",
+        "focus": "zeus",
+        "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "pluto", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis"]
+      },
+      {
+        "id": "zeus",
+        "label": "Zeus and his loves",
+        "title": "Zeus and his loves",
+        "note": "His wives and lovers, and the children they bore him.",
+        "focus": "zeus",
+        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces"]
+      },
+      {
+        "id": "thebes",
+        "label": "Thebes",
+        "title": "Thebes, from Cadmus to Antigone",
+        "note": "The house of Cadmus and the Labdacids.",
+        "houses": ["House of Labdacus"],
+        "focus": "cadmus",
+        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops"]
+      },
+      {
+        "id": "atreus",
+        "label": "The House of Atreus",
+        "title": "The House of Atreus",
+        "note": "From Tantalus to Orestes.",
+        "focus": "atreus",
+        "figures": ["zeus", "pluto", "ares", "hermes", "artemis", "nemesis", "tantalus", "niobe", "oenomaus", "hippodamia", "myrtilus", "pelops", "chrysippus", "atreus", "thyestes", "aerope", "pleisthenes", "pelopia", "agamemnon", "menelaus", "clytemnestra", "helen", "aegisthus", "tyndareus", "leda", "castor", "polydeuces", "theseus", "paris", "iphigenia", "orestes", "electra", "chrysothemis", "pylades", "hermione"]
+      }
     ]
   }
 ]
