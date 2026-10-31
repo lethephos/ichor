@@ -108,6 +108,31 @@
     "story": "Daughter of Uranus and Gaia, wife of Coeus and mother of Leto."
   },
   {
+    "gender": "f",
+    "kind": "god",
+    "branch": "gods",
+    "id": "themis",
+    "name": "Themis",
+    "greek": "Θέμις",
+    "generation": 1,
+    "role": "Titaness of divine law",
+    "tagline": "Zeus’s second wife, who gave birth to Order, Justice and Peace.",
+    "story": "A daughter of Gaia and Uranus. In Hesiod she was Zeus’s second wife, after Metis, and bore him the Horae and the Moirai.",
+    "versions": "In Aeschylus’s Prometheus Bound, Themis and Gaia are one goddess under two names, and she is Prometheus’s mother. In Hesiod his mother is the Oceanid Clymene."
+  },
+  {
+    "gender": "f",
+    "kind": "god",
+    "branch": "gods",
+    "id": "mnemosyne",
+    "name": "Mnemosyne",
+    "greek": "Μνημοσύνη",
+    "generation": 1,
+    "role": "Titaness of memory",
+    "tagline": "Nine nights with Zeus, nine daughters.",
+    "story": "A daughter of Gaia and Uranus. Zeus lay with her for nine nights in Pieria, and when a year had passed she bore the nine Muses."
+  },
+  {
     "id": "atlas",
     "name": "Atlas",
     "greek": "Ἄτλας",
@@ -118,6 +143,38 @@
     "role": "Titan who holds up the sky",
     "tagline": "Holds up the sky, forever.",
     "story": "Son of the Titan Iapetus. Zeus condemned him to hold up the sky at the ends of the earth. Father of Maia."
+  },
+  {
+    "gender": "f",
+    "kind": "group",
+    "branch": "gods",
+    "id": "erinyes",
+    "name": "Erinyes",
+    "greek": "Ἐρινύες",
+    "generation": 1,
+    "role": "The Furies",
+    "tagline": "Born of a father’s blood, they hunt down whoever spills a kinsman’s.",
+    "story": "When Cronus cut down his father, drops of Uranus’s blood fell on the Earth, and she bore the Erinyes. They pursue those who kill their own kin. They drove Orestes across Greece until a court in Athens acquitted him.",
+    "count": "Three",
+    "members": [
+      {
+        "name": "Alecto",
+        "greek": "Ἀληκτώ",
+        "note": "the Unceasing"
+      },
+      {
+        "name": "Tisiphone",
+        "greek": "Τισιφόνη",
+        "note": "the Avenger of Murder"
+      },
+      {
+        "name": "Megaera",
+        "greek": "Μέγαιρα",
+        "note": "the Grudging"
+      }
+    ],
+    "members_note": "Apollodorus names three. In Aeschylus they come on stage as a whole chorus, unnamed.",
+    "versions": "In Hesiod and Apollodorus, Gaia bore them from Uranus’s blood. In Aeschylus’s Eumenides they are the daughters of Night."
   },
   {
     "id": "hestia",
@@ -216,6 +273,59 @@
     "story": "Daughter of Atlas. In a cave on Mount Cyllene she bore Zeus a son, Hermes."
   },
   {
+    "gender": "f",
+    "kind": "group",
+    "branch": "gods",
+    "id": "pleiades",
+    "name": "Pleiades",
+    "greek": "Πληιάδες",
+    "generation": 2,
+    "role": "The seven daughters of Atlas",
+    "tagline": "Seven sisters, set among the stars.",
+    "story": "Daughters of Atlas and the Oceanid Pleione. Three of them bore sons to Zeus: Maia, Electra and Taygete. They became the stars that still carry their name.",
+    "count": "Seven",
+    "members": [
+      {
+        "name": "Maia",
+        "greek": "Μαῖα",
+        "id": "maia",
+        "note": "the eldest, mother of Hermes"
+      },
+      {
+        "name": "Electra",
+        "greek": "Ἠλέκτρα",
+        "note": "mother of Dardanus, by Zeus"
+      },
+      {
+        "name": "Taygete",
+        "greek": "Ταϋγέτη",
+        "note": "mother of Lacedaemon, by Zeus"
+      },
+      {
+        "name": "Alcyone",
+        "greek": "Ἀλκυόνη",
+        "note": "loved by Poseidon"
+      },
+      {
+        "name": "Celaeno",
+        "greek": "Κελαινώ",
+        "note": "loved by Poseidon"
+      },
+      {
+        "name": "Sterope",
+        "greek": "Στερόπη",
+        "note": "in later writers Oenomaus’s mother, or his wife"
+      },
+      {
+        "name": "Merope",
+        "greek": "Μερόπη",
+        "note": "the one who married a mortal, Sisyphus"
+      }
+    ],
+    "members_note": "Maia is drawn on her own.",
+    "versions": "Hesiod calls them simply ‘born of Atlas’; Apollodorus and Ovid name their mother, Pleione. Ovid says only six can be seen: Merope hides because she married a mortal, or Electra, because she could not bear to watch Troy fall."
+  },
+  {
     "id": "dione",
     "name": "Dione",
     "greek": "Διώνη",
@@ -227,6 +337,59 @@
     "tagline": "Aphrodite’s mother, or no one’s.",
     "story": "In Homer she comforts her wounded daughter Aphrodite.",
     "versions": "Homer and Apollodorus make her the mother of Aphrodite by Zeus; Hesiod has Aphrodite born from the sea. Hesiod counts Dione among the Oceanids, Apollodorus among the Titans."
+  },
+  {
+    "gender": "f",
+    "kind": "group",
+    "branch": "gods",
+    "id": "oceanids",
+    "name": "Oceanids",
+    "greek": "Ὠκεανίδες",
+    "generation": 2,
+    "role": "The daughters of Ocean",
+    "tagline": "Three thousand sisters, scattered over the earth.",
+    "story": "Daughters of Oceanus and Tethys: nymphs of springs, rivers and the sea. Hesiod names forty-one of them. The greatest, Styx, gave her name to the water by which the gods swear.",
+    "count": "Three thousand",
+    "members": [
+      {
+        "name": "Styx",
+        "greek": "Στύξ",
+        "note": "the greatest of them; the gods swear by her water"
+      },
+      {
+        "name": "Metis",
+        "greek": "Μῆτις",
+        "id": "metis",
+        "note": "Zeus’s first wife"
+      },
+      {
+        "name": "Dione",
+        "greek": "Διώνη",
+        "id": "dione",
+        "note": "an Oceanid in Hesiod; in Homer, Aphrodite’s mother"
+      },
+      {
+        "name": "Eurynome",
+        "greek": "Εὐρυνόμη",
+        "note": "mother of the Charites, by Zeus"
+      },
+      {
+        "name": "Clymene",
+        "greek": "Κλυμένη",
+        "note": "in Hesiod, mother of Atlas and Prometheus"
+      },
+      {
+        "name": "Doris",
+        "greek": "Δωρίς",
+        "note": "mother of the fifty Nereids"
+      },
+      {
+        "name": "Electra",
+        "greek": "Ἠλέκτρη",
+        "note": "mother of Iris"
+      }
+    ],
+    "members_note": "Hesiod names forty-one; these are the ones the tree meets. Metis and Dione are drawn on their own."
   },
   {
     "id": "semele",
@@ -436,6 +599,154 @@
         "url": "https://collections.louvre.fr/ark:/53355/cl010278930"
       }
     ]
+  },
+  {
+    "gender": "f",
+    "kind": "group",
+    "branch": "gods",
+    "id": "muses",
+    "name": "Muses",
+    "greek": "Μοῦσαι",
+    "generation": 3,
+    "role": "Goddesses of song",
+    "tagline": "Daughters of Memory, who taught a shepherd to sing.",
+    "story": "Hesiod met them on Mount Helicon while he tended sheep. They gave him a laurel staff and breathed a poet’s voice into him. Homer calls on them at the start of both his epics.",
+    "count": "Nine",
+    "members": [
+      {
+        "name": "Calliope",
+        "greek": "Καλλιόπη",
+        "note": "the first of them all, in Hesiod"
+      },
+      {
+        "name": "Clio",
+        "greek": "Κλειώ"
+      },
+      {
+        "name": "Euterpe",
+        "greek": "Εὐτέρπη"
+      },
+      {
+        "name": "Thalia",
+        "greek": "Θάλεια"
+      },
+      {
+        "name": "Melpomene",
+        "greek": "Μελπομένη"
+      },
+      {
+        "name": "Terpsichore",
+        "greek": "Τερψιχόρη"
+      },
+      {
+        "name": "Erato",
+        "greek": "Ἐρατώ"
+      },
+      {
+        "name": "Polymnia",
+        "greek": "Πολύμνια"
+      },
+      {
+        "name": "Urania",
+        "greek": "Οὐρανία"
+      }
+    ],
+    "members_note": "Hesiod names all nine. Each Muse’s own art (Calliope epic, Clio history and the rest) was settled much later.",
+    "versions": "Homer once speaks of nine, singing at Achilles’ funeral. Pausanias reports that the first to honour them on Helicon, the sons of Aloeus, knew only three: Melete, Mneme and Aoede, Practice, Memory and Song."
+  },
+  {
+    "gender": "f",
+    "kind": "group",
+    "branch": "gods",
+    "id": "horae",
+    "name": "Horae",
+    "greek": "Ὧραι",
+    "generation": 3,
+    "role": "The Seasons",
+    "tagline": "Order, Justice and Peace, who keep the gates of heaven.",
+    "story": "Daughters of Zeus and Themis. In Homer they keep the cloud gates of Olympus, rolling the clouds back for the gods’ chariots.",
+    "count": "Three",
+    "members": [
+      {
+        "name": "Eunomia",
+        "greek": "Εὐνομίη",
+        "note": "Good Order"
+      },
+      {
+        "name": "Dike",
+        "greek": "Δίκη",
+        "note": "Justice"
+      },
+      {
+        "name": "Eirene",
+        "greek": "Εἰρήνη",
+        "note": "Peace"
+      }
+    ],
+    "members_note": "Hesiod and Apollodorus name these three; other writers give other names and numbers."
+  },
+  {
+    "gender": "f",
+    "kind": "group",
+    "branch": "gods",
+    "id": "moirai",
+    "name": "Moirai",
+    "greek": "Μοῖραι",
+    "generation": 3,
+    "role": "The Fates",
+    "tagline": "Daughters of Night, or of Zeus: not even the poets could settle who made fate.",
+    "story": "They give each mortal a share of good and evil at birth. Clotho spins the thread of a life, Lachesis allots it, and Atropos, who cannot be turned, cuts it.",
+    "count": "Three",
+    "members": [
+      {
+        "name": "Clotho",
+        "greek": "Κλωθώ",
+        "note": "the Spinner"
+      },
+      {
+        "name": "Lachesis",
+        "greek": "Λάχεσις",
+        "note": "the Allotter"
+      },
+      {
+        "name": "Atropos",
+        "greek": "Ἄτροπος",
+        "note": "the Unturning"
+      }
+    ],
+    "versions": "Hesiod gives them two births: as daughters of Night alone, and later as daughters of Zeus and Themis. Apollodorus follows the second; Hyginus makes them children of Night and Erebus. Homer mostly speaks of a single Moira."
+  },
+  {
+    "gender": "f",
+    "kind": "group",
+    "branch": "gods",
+    "id": "charites",
+    "name": "Charites",
+    "greek": "Χάριτες",
+    "generation": 3,
+    "role": "The Graces",
+    "tagline": "Three sisters of beauty and delight, one of them married to the smith.",
+    "story": "Daughters of Zeus and the Oceanid Eurynome. In Hesiod the youngest, Aglaea, married Hephaestus; in the Iliad his wife is called simply Charis, a Grace.",
+    "count": "Three",
+    "members": [
+      {
+        "name": "Aglaea",
+        "greek": "Ἀγλαΐη",
+        "note": "Splendour"
+      },
+      {
+        "name": "Euphrosyne",
+        "greek": "Εὐφροσύνη",
+        "note": "Good Cheer"
+      },
+      {
+        "name": "Thalia",
+        "greek": "Θαλίη",
+        "note": "Festivity"
+      }
+    ],
+    "members_note": "Hesiod and Apollodorus name these three.",
+    "versions": "Pausanias records other counts and names: the Spartans honoured two, Cleta and Phaenna, and the Athenians two, Auxo and Hegemone."
   },
   {
     "id": "oenomaus",

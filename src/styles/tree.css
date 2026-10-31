@@ -17,6 +17,7 @@
 .node.pulse .halo{animation:pulse 1.4s ease-out}
 @keyframes pulse{0%{stroke:var(--accent);stroke-width:6}100%{stroke:transparent;stroke-width:1.2}}
 .dot{fill:var(--figure)}
+.dot.group{fill:var(--figure)}
 .dot.other-cycle{fill:var(--bg);stroke:var(--figure);stroke-width:1.3;stroke-dasharray:2.5 2.5}
 .ring{fill:none;stroke:var(--figure);stroke-width:1}
 .badge{fill:var(--transform)}
