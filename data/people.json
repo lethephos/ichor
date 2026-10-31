@@ -9,8 +9,7 @@
     "branch": "gods",
     "role": "Earth, mother of the Titans",
     "tagline": "The Earth herself, who armed her son against his father.",
-    "story": "She bore Uranus, the sky, and with him the Titans. When Uranus kept their children hidden inside her, she gave Cronus a sickle.",
-    "draft": true
+    "story": "She bore Uranus, the sky, and with him the Titans. When Uranus kept their children hidden inside her, she gave Cronus a sickle."
   },
   {
     "id": "uranus",
@@ -22,8 +21,7 @@
     "branch": "gods",
     "role": "The Sky, first ruler of the world",
     "tagline": "The first father, and the first to be overthrown.",
-    "story": "Husband of Gaia and father of the Titans. He kept his children from the light until Cronus castrated him.",
-    "draft": true
+    "story": "Husband of Gaia and father of the Titans. He kept his children from the light until Cronus castrated him."
   },
   {
     "id": "nyx",
@@ -35,8 +33,7 @@
     "branch": "gods",
     "role": "Night",
     "tagline": "Night, mother of retribution.",
-    "story": "In Hesiod she bore Nemesis and many other dark powers, without a father.",
-    "draft": true
+    "story": "In Hesiod she bore Nemesis and many other dark powers, without a father."
   },
   {
     "id": "cronus",
@@ -48,8 +45,7 @@
     "branch": "gods",
     "role": "King of the Titans",
     "tagline": "Swallowed his children to keep his throne.",
-    "story": "Son of Uranus and Gaia. He castrated his father and took his place. Warned that a son would overthrow him, he swallowed his children as they were born, until Rhea hid Zeus and gave him a stone instead.",
-    "draft": true
+    "story": "Son of Uranus and Gaia. He castrated his father and took his place. Warned that a son would overthrow him, he swallowed his children as they were born, until Rhea hid Zeus and gave him a stone instead."
   },
   {
     "id": "rhea",
@@ -61,8 +57,7 @@
     "branch": "gods",
     "role": "Titaness, mother of the Olympians",
     "tagline": "Fed her husband a stone to save her son.",
-    "story": "Wife of Cronus. To save her youngest son, Zeus, she wrapped a stone in swaddling clothes and gave it to Cronus to swallow.",
-    "draft": true
+    "story": "Wife of Cronus. To save her youngest son, Zeus, she wrapped a stone in swaddling clothes and gave it to Cronus to swallow."
   },
   {
     "id": "oceanus",
@@ -74,8 +69,7 @@
     "branch": "gods",
     "role": "The river that circles the world",
     "tagline": "Father of three thousand daughters.",
-    "story": "A Titan, son of Uranus and Gaia. With Tethys he fathered the rivers and the Oceanids.",
-    "draft": true
+    "story": "A Titan, son of Uranus and Gaia. With Tethys he fathered the rivers and the Oceanids."
   },
   {
     "id": "tethys",
@@ -87,8 +81,7 @@
     "branch": "gods",
     "role": "Titaness of the sea",
     "tagline": "Mother of the rivers.",
-    "story": "Wife of Oceanus and mother of the rivers and the Oceanids. In Homer, she and Oceanus raised Hera.",
-    "draft": true
+    "story": "Wife of Oceanus and mother of the rivers and the Oceanids. In Homer, she and Oceanus raised Hera."
   },
   {
     "id": "coeus",
@@ -100,8 +93,7 @@
     "branch": "gods",
     "role": "Titan",
     "tagline": "A Titan remembered for his daughter.",
-    "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto.",
-    "draft": true
+    "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto."
   },
   {
     "id": "phoebe",
@@ -113,8 +105,7 @@
     "branch": "gods",
     "role": "Titaness",
     "tagline": "Grandmother of Apollo and Artemis.",
-    "story": "Daughter of Uranus and Gaia, wife of Coeus and mother of Leto.",
-    "draft": true
+    "story": "Daughter of Uranus and Gaia, wife of Coeus and mother of Leto."
   },
   {
     "id": "atlas",
@@ -126,8 +117,7 @@
     "branch": "gods",
     "role": "Titan who holds up the sky",
     "tagline": "Holds up the sky, forever.",
-    "story": "Son of the Titan Iapetus. Zeus condemned him to hold up the sky at the ends of the earth. Father of Maia.",
-    "draft": true
+    "story": "Son of the Titan Iapetus. Zeus condemned him to hold up the sky at the ends of the earth. Father of Maia."
   },
   {
     "id": "hestia",
@@ -139,8 +129,7 @@
     "branch": "gods",
     "role": "Goddess of the hearth",
     "tagline": "The eldest, who stayed by the fire.",
-    "story": "Eldest daughter of Cronus and Rhea: the first to be swallowed and the last to be released. She vowed to remain a virgin.",
-    "draft": true
+    "story": "Eldest daughter of Cronus and Rhea: the first to be swallowed and the last to be released. She vowed to remain a virgin."
   },
   {
     "id": "demeter",
@@ -152,8 +141,7 @@
     "branch": "gods",
     "role": "Goddess of the harvest",
     "tagline": "Lost her daughter to the underworld.",
-    "story": "Daughter of Cronus and Rhea, mother of Persephone by Zeus. When Hades carried off her daughter, she searched the whole earth. In Hyginus, she ate the shoulder of Pelops at Tantalus’s feast.",
-    "draft": true
+    "story": "Daughter of Cronus and Rhea, mother of Persephone by Zeus. When Hades carried off her daughter, she searched the whole earth. In Hyginus, she ate the shoulder of Pelops at Tantalus’s feast."
   },
   {
     "id": "hades",
@@ -165,8 +153,7 @@
     "branch": "gods",
     "role": "King of the underworld",
     "tagline": "Stole a bride from the world above.",
-    "story": "Son of Cronus and Rhea. With Zeus’s consent he carried off Persephone to rule the dead beside him.",
-    "draft": true
+    "story": "Son of Cronus and Rhea. With Zeus’s consent he carried off Persephone to rule the dead beside him."
   },
   {
     "id": "poseidon",
@@ -178,8 +165,7 @@
     "branch": "gods",
     "role": "God of the sea",
     "tagline": "Loved Pelops and carried him to Olympus.",
-    "story": "Son of Cronus and Rhea, brother of Zeus, lord of the sea. In Pindar he fell in love with the boy Pelops and carried him off to Olympus.",
-    "draft": true
+    "story": "Son of Cronus and Rhea, brother of Zeus, lord of the sea. In Pindar he fell in love with the boy Pelops and carried him off to Olympus."
   },
   {
     "id": "hera",
@@ -191,8 +177,7 @@
     "branch": "gods",
     "role": "Queen of the gods",
     "tagline": "Married to Zeus, and at war with his lovers.",
-    "story": "Daughter of Cronus and Rhea, sister and wife of Zeus, mother of Ares and Hephaestus. She pursued Zeus’s lovers and their children.",
-    "draft": true
+    "story": "Daughter of Cronus and Rhea, sister and wife of Zeus, mother of Ares and Hephaestus. She pursued Zeus’s lovers and their children."
   },
   {
     "id": "metis",
@@ -204,8 +189,7 @@
     "branch": "gods",
     "role": "Goddess of wisdom",
     "tagline": "Swallowed whole by her husband.",
-    "story": "An Oceanid, Zeus’s first wife in Hesiod. Warned that her son would rule, Zeus swallowed her while she was pregnant, and Athena was born from his head.",
-    "draft": true
+    "story": "An Oceanid, Zeus’s first wife in Hesiod. Warned that her son would rule, Zeus swallowed her while she was pregnant, and Athena was born from his head."
   },
   {
     "id": "leto",
@@ -217,8 +201,7 @@
     "branch": "gods",
     "role": "Mother of Apollo and Artemis",
     "tagline": "Insulted by Niobe, avenged by her children.",
-    "story": "Daughter of Coeus and Phoebe. She bore Apollo and Artemis to Zeus. When Niobe boasted of having more children than she did, Leto’s twins killed them.",
-    "draft": true
+    "story": "Daughter of Coeus and Phoebe. She bore Apollo and Artemis to Zeus. When Niobe boasted of having more children than she did, Leto’s twins killed them."
   },
   {
     "id": "maia",
@@ -230,8 +213,7 @@
     "branch": "gods",
     "role": "Nymph, eldest of the Pleiades",
     "tagline": "Mother of the trickster god.",
-    "story": "Daughter of Atlas. In a cave on Mount Cyllene she bore Zeus a son, Hermes.",
-    "draft": true
+    "story": "Daughter of Atlas. In a cave on Mount Cyllene she bore Zeus a son, Hermes."
   },
   {
     "id": "dione",
@@ -244,8 +226,7 @@
     "role": "Goddess, mother of Aphrodite in Homer",
     "tagline": "Aphrodite’s mother, or no one’s.",
     "story": "In Homer she comforts her wounded daughter Aphrodite.",
-    "versions": "Homer and Apollodorus make her the mother of Aphrodite by Zeus; Hesiod has Aphrodite born from the sea. Hesiod counts Dione among the Oceanids, Apollodorus among the Titans.",
-    "draft": true
+    "versions": "Homer and Apollodorus make her the mother of Aphrodite by Zeus; Hesiod has Aphrodite born from the sea. Hesiod counts Dione among the Oceanids, Apollodorus among the Titans."
   },
   {
     "id": "semele",
@@ -256,9 +237,9 @@
     "kind": "mortal",
     "branch": "gods",
     "role": "Theban princess",
-    "tagline": "Asked to see a god as he is, and burned.",
-    "story": "Daughter of Cadmus, the founder of Thebes. Zeus loved her. Tricked by Hera, she asked to see him in his true form and was consumed by his lightning. Zeus saved her unborn son, Dionysus.",
-    "draft": true
+    "tagline": "Asked to see a god in his glory, and died of it.",
+    "story": "Daughter of Cadmus, the founder of Thebes. Zeus loved her. Tricked by Hera, she asked him to come to her as he came to Hera, and died when he arrived in thunder and lightning. Zeus saved her unborn son, Dionysus.",
+    "versions": "Apollodorus: she died of fright at his thunder and lightning. Ovid: she was burned by his fire. In Ovid, Hera tricks her disguised as her old nurse, Beroe."
   },
   {
     "id": "athena",
@@ -271,8 +252,7 @@
     "role": "Goddess of wisdom and war",
     "tagline": "Born fully armed from her father’s head.",
     "story": "Daughter of Zeus. Zeus swallowed her mother Metis, and Athena sprang from his head.",
-    "versions": "Homer calls her simply Zeus’s daughter. Hesiod and Apollodorus tell of Metis and the birth from his head.",
-    "draft": true
+    "versions": "Homer calls her simply Zeus’s daughter. Hesiod and Apollodorus tell of Metis and the birth from his head."
   },
   {
     "id": "apollo",
@@ -284,8 +264,7 @@
     "branch": "gods",
     "role": "God of prophecy, music and plague",
     "tagline": "Killed Niobe’s sons for his mother’s honour.",
-    "story": "Son of Zeus and Leto, twin of Artemis. With his sister he shot down the children of Niobe.",
-    "draft": true
+    "story": "Son of Zeus and Leto, twin of Artemis. With his sister he shot down the children of Niobe."
   },
   {
     "id": "aphrodite",
@@ -298,8 +277,7 @@
     "role": "Goddess of love",
     "tagline": "Born from the sea, or from Zeus.",
     "story": "Wife of Hephaestus and lover of Ares.",
-    "versions": "Hesiod: she rose from the sea foam around the severed flesh of Uranus. Homer and Apollodorus: daughter of Zeus and Dione.",
-    "draft": true
+    "versions": "Hesiod: she rose from the sea foam around the severed flesh of Uranus. Homer and Apollodorus: daughter of Zeus and Dione."
   },
   {
     "id": "hephaestus",
@@ -312,8 +290,7 @@
     "role": "God of fire and the forge",
     "tagline": "The lame smith who caught his wife in a net.",
     "story": "Son of Hera. In the Odyssey he caught Aphrodite and Ares together in a net of fine chains.",
-    "versions": "Hesiod: Hera bore him alone, without a father. Homer: son of Zeus and Hera. Apollodorus gives both. The Odyssey makes Aphrodite his wife; Hesiod gives him Aglaea, one of the Graces.",
-    "draft": true
+    "versions": "Hesiod: Hera bore him alone, without a father. Homer seems to make him a son of Zeus and Hera, and Apollodorus reads him so, while himself telling the Hesiodic version. The Odyssey makes Aphrodite his wife; Hesiod gives him Aglaea, youngest of the Graces."
   },
   {
     "id": "dionysus",
@@ -325,8 +302,7 @@
     "branch": "gods",
     "role": "God of wine",
     "tagline": "Born twice: from his mother, then from his father’s thigh.",
-    "story": "Son of Zeus and the Theban princess Semele. When his mother burned, Zeus sewed the unborn child into his thigh until he was ready to be born.",
-    "draft": true
+    "story": "Son of Zeus and the Theban princess Semele. When his mother burned, Zeus sewed the unborn child into his thigh until he was ready to be born."
   },
   {
     "id": "persephone",
@@ -338,8 +314,8 @@
     "branch": "gods",
     "role": "Queen of the underworld",
     "tagline": "Carried off to rule the dead.",
-    "story": "Daughter of Zeus and Demeter. Hades seized her as she picked flowers and made her queen of the underworld. She returns to her mother for part of each year.",
-    "draft": true
+    "story": "Daughter of Zeus and Demeter. Hades seized her as she picked flowers, with Zeus’s leave, and made her queen of the underworld. She spends a third of each year with him and the rest with her mother.",
+    "versions": "The Homeric Hymn to Demeter and Hesiod make her Demeter’s daughter. Apollodorus names her mother as Styx, though his story of the abduction has Demeter searching for her."
   },
   {
     "id": "ares",
