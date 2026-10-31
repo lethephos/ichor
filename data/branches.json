@@ -3,7 +3,7 @@
     "id": "cursed-houses",
     "title": "The gods and two cursed houses",
     "subtitle": "",
-    "tiers": ["The first gods", "Titans", "Zeus’s generation", "Children of Zeus", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V"],
+    "tiers": ["The first gods", "Titans", "Children of the Titans", "Children of Zeus", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V"],
     "focus": "pelops",
     "houses": [
       {"label": "House of Labdacus", "founder": "labdacus"},
