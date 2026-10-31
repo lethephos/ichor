@@ -2482,5 +2482,350 @@
     "to": "eurystheus",
     "sources": ["T", "A"],
     "note": "took her revenge on Eurystheus"
+  },
+  {
+    "type": "affair",
+    "from": "hephaestus",
+    "to": "athena",
+    "sources": ["A", "L"],
+    "note": "tried to force Athena, and his seed fell on the earth"
+  },
+  {
+    "type": "parent",
+    "from": "hephaestus",
+    "to": "erichthonius-athens",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "erichthonius-athens",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "erichthonius-athens",
+    "to": "pandion",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion",
+    "to": "erechtheus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion",
+    "to": "procne",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion",
+    "to": "philomela",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "tereus",
+    "to": "procne",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "tereus",
+    "to": "philomela",
+    "sources": ["T", "A", "L"],
+    "note": "raped Philomela and cut out her tongue"
+  },
+  {
+    "type": "parent",
+    "from": "tereus",
+    "to": "itys",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "procne",
+    "to": "itys",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "procne",
+    "to": "itys",
+    "sources": ["T", "A", "L"],
+    "note": "killed her son Itys, and served him to Tereus"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "tereus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "erechtheus",
+    "to": "cecrops-ii",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "cecrops-ii",
+    "to": "pandion-ii",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion-ii",
+    "to": "aegeus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "aegeus",
+    "to": "aethra",
+    "sources": ["A", "L"],
+    "note": "lay with Aethra in Troezen on his way home from Delphi"
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "aethra",
+    "sources": ["A", "L"],
+    "note": "lay with Aethra the same night as Aegeus"
+  },
+  {
+    "type": "parent",
+    "from": "aegeus",
+    "to": "theseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "theseus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aethra",
+    "to": "theseus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "aegeus",
+    "to": "medea",
+    "sources": ["A", "L"],
+    "note": "after she fled Corinth"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "theseus",
+    "sources": ["A", "L"],
+    "note": "tried to poison Theseus at his father’s table"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "aegeus",
+    "sources": ["A", "L"],
+    "note": "forgot to change his black sail, and his father threw himself into the sea"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "minos",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "europa",
+    "to": "minos",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "europa",
+    "sources": ["E", "H", "A", "L"],
+    "note": "carried Europa over the sea to Crete in the shape of a bull"
+  },
+  {
+    "type": "parent",
+    "from": "helios",
+    "to": "pasiphae",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "pasiphae",
+    "sources": ["A"],
+    "note": "Perse"
+  },
+  {
+    "type": "marriage",
+    "from": "minos",
+    "to": "pasiphae",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "curse",
+    "from": "poseidon",
+    "to": "pasiphae",
+    "sources": ["A"],
+    "note": "made Pasiphae fall in love with the bull Minos had refused to sacrifice"
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "minotaur",
+    "sources": ["T", "A", "L"],
+    "note": "by the bull from the sea"
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "androgeus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "androgeus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "ariadne",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "ariadne",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "phaedra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "phaedra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "aegeus",
+    "to": "androgeus",
+    "sources": ["A"],
+    "note": "sent Androgeus against the bull of Marathon, which killed him"
+  },
+  {
+    "type": "feud",
+    "from": "minos",
+    "to": "aegeus",
+    "sources": ["A", "L"],
+    "note": "made war on Athens for his son’s death, and demanded its children for the Minotaur"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "minotaur",
+    "sources": ["A", "L"],
+    "note": "killed the Minotaur in the Labyrinth"
+  },
+  {
+    "type": "affair",
+    "from": "theseus",
+    "to": "ariadne",
+    "sources": ["E", "H", "A", "L"],
+    "note": "carried Ariadne off from Crete, and did not keep her"
+  },
+  {
+    "type": "marriage",
+    "from": "dionysus",
+    "to": "ariadne",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "theseus",
+    "to": "phaedra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "theseus",
+    "to": "antiope",
+    "sources": ["A", "L"],
+    "note": "carried off Antiope, queen of the Amazons"
+  },
+  {
+    "type": "parent",
+    "from": "theseus",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "antiope",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "phaedra",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"],
+    "note": "accused Hippolytus of rape when he refused her"
+  },
+  {
+    "type": "curse",
+    "from": "theseus",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"],
+    "note": "cursed his son Hippolytus, and Poseidon’s bull killed him"
+  },
+  {
+    "type": "parent",
+    "from": "theseus",
+    "to": "demophon",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phaedra",
+    "to": "demophon",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "pirithous",
+    "sources": ["E"]
+  },
+  {
+    "type": "affair",
+    "from": "pirithous",
+    "to": "persephone",
+    "sources": ["A", "L"],
+    "note": "went down to the underworld to carry off Persephone"
+  },
+  {
+    "type": "feud",
+    "from": "hades",
+    "to": "theseus",
+    "sources": ["A", "L"],
+    "note": "bound Theseus and Pirithous to a chair of forgetfulness"
   }
 ]

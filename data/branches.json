@@ -106,6 +106,14 @@
         "note": "His wives and lovers, his sons and daughters, and their war with Eurystheus.",
         "focus": "hyllus",
         "figures": ["zeus", "hera", "hebe", "alcmene", "amphitryon", "iphicles", "heracles", "megara", "creon", "deianira", "iole", "omphale", "eurystheus", "sthenelus", "achilles", "sons-of-megara", "hyllus", "macaria", "telephus", "tlepolemus", "iolaus"]
+      },
+      {
+        "id": "athens",
+        "label": "Theseus and Athens",
+        "title": "Theseus and Athens",
+        "note": "The kings of Athens, from the earth-born Erichthonius to Theseus, and the Cretan family he married into.",
+        "focus": "theseus",
+        "figures": ["gaia", "zeus", "poseidon", "hades", "helios", "ares", "hephaestus", "athena", "dionysus", "persephone", "oceanids", "erichthonius-athens", "pandion", "erechtheus", "procne", "philomela", "tereus", "itys", "cecrops-ii", "pandion-ii", "aegeus", "aethra", "theseus", "medea", "europa", "minos", "pasiphae", "androgeus", "ariadne", "phaedra", "minotaur", "antiope", "hippolytus", "demophon", "pirithous", "helen"]
       }
     ]
   }
