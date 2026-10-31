@@ -3108,5 +3108,223 @@
     "to": "circe",
     "sources": ["L"],
     "note": "after Odysseus’ death"
+  },
+  {
+    "type": "parent",
+    "from": "oeneus",
+    "to": "deianira",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "althaea",
+    "to": "deianira",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oeneus",
+    "to": "meleager",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "althaea",
+    "to": "meleager",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "oeneus",
+    "to": "althaea",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "curse",
+    "from": "althaea",
+    "to": "meleager",
+    "sources": ["E"],
+    "note": "called on Hades and Persephone to kill her son for her brother’s death, and the Erinys heard"
+  },
+  {
+    "type": "feud",
+    "from": "althaea",
+    "to": "meleager",
+    "sources": ["T", "A", "L"],
+    "note": "burned the log Meleager’s life hung on, to avenge her brothers"
+  },
+  {
+    "type": "affair",
+    "from": "meleager",
+    "to": "atalanta",
+    "sources": ["A", "L"],
+    "note": "gave Atalanta the boar’s hide, for love"
+  },
+  {
+    "type": "parent",
+    "from": "atalanta",
+    "to": "parthenopaeus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oeneus",
+    "to": "tydeus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "adrastus",
+    "to": "argia",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "adrastus",
+    "to": "deipyle",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "polynices",
+    "to": "argia",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "tydeus",
+    "to": "deipyle",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "polynices",
+    "to": "thersander",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "argia",
+    "to": "thersander",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "tydeus",
+    "to": "diomedes",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deipyle",
+    "to": "diomedes",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "amphiaraus",
+    "to": "eriphyle",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "amphiaraus",
+    "to": "alcmaeon",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "eriphyle",
+    "to": "alcmaeon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "eriphyle",
+    "to": "amphiaraus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "took a necklace to send her husband to his death"
+  },
+  {
+    "type": "feud",
+    "from": "alcmaeon",
+    "to": "eriphyle",
+    "sources": ["A", "L"],
+    "note": "killed his mother, as his father had told him"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "capaneus",
+    "sources": ["T", "A", "L"],
+    "note": "struck Capaneus off the wall of Thebes with a thunderbolt, for his boast"
+  },
+  {
+    "type": "marriage",
+    "from": "capaneus",
+    "to": "evadne",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "tydeus",
+    "sources": ["A"],
+    "note": "turned away the immortality she had brought Tydeus, when she saw him eat his enemy’s brains"
+  },
+  {
+    "type": "feud",
+    "from": "diomedes",
+    "to": "aphrodite",
+    "sources": ["E", "A", "L"],
+    "note": "wounded Aphrodite in the hand at Troy"
+  },
+  {
+    "type": "feud",
+    "from": "diomedes",
+    "to": "ares",
+    "sources": ["E"],
+    "note": "wounded Ares with Athena guiding his spear"
+  },
+  {
+    "type": "feud",
+    "from": "diomedes",
+    "to": "palamedes",
+    "sources": ["E"],
+    "note": "drowned Palamedes with Odysseus, while he was out fishing"
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "tiresias",
+    "sources": ["A", "L"],
+    "note": "blinded Tiresias for saying women take more pleasure in love"
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "tiresias",
+    "sources": ["A"],
+    "note": "blinded Tiresias when he saw her bathing"
+  },
+  {
+    "type": "parent",
+    "from": "creon",
+    "to": "haemon",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "haemon",
+    "to": "antigone",
+    "sources": ["T", "L"],
+    "note": "betrothed, in Sophocles; married in secret, in Hyginus"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "creon",
+    "sources": ["T", "A", "L"],
+    "note": "made war on Creon to bury the Argive dead"
   }
 ]
