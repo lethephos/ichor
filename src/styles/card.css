@@ -64,3 +64,18 @@
 .greek-sm{font-family:var(--display);font-size:15px;color:var(--muted)}
 /* made immortal */
 .imm-mark{width:11px;height:11px;margin-right:7px;vertical-align:-1px;overflow:visible}
+/* close family: a small map of the figure's nearest links */
+.cf-svg{width:100%;height:auto;display:block;overflow:visible}
+.cf-h{font:600 9px var(--ui);letter-spacing:.1em;text-transform:uppercase;fill:var(--muted)}
+.cf-l{font:14px var(--display);fill:var(--text)}
+.cf-l.me{font-size:16px}
+.cf-more{font:12px var(--ui);fill:var(--muted)}
+.cf .e-marriage .inner{stroke:var(--bg-2)}
+.cf-n{cursor:pointer}
+.cf-n .hit{fill:transparent}
+.cf-n:hover .cf-l,.cf-n:focus-visible .cf-l{text-decoration:underline}
+.cf-n:focus{outline:none}
+.cf-me .dot{fill:var(--accent)}
+.cf-note{font-size:12px;color:var(--muted);margin:6px 0 0}
+.cf-l{paint-order:stroke;stroke:var(--bg-2);stroke-width:5px;stroke-linejoin:round}
+.cf .e-feud .main,.cf .e-curse .main,.cf .e-transform .main{opacity:.7}
