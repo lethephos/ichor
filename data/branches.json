@@ -114,6 +114,14 @@
         "note": "The kings of Athens, from the earth-born Erichthonius to Theseus, and the Cretan family he married into.",
         "focus": "theseus",
         "figures": ["gaia", "zeus", "poseidon", "hades", "helios", "ares", "hephaestus", "athena", "dionysus", "persephone", "oceanids", "erichthonius-athens", "pandion", "erechtheus", "procne", "philomela", "tereus", "itys", "cecrops-ii", "pandion-ii", "aegeus", "aethra", "theseus", "medea", "europa", "minos", "pasiphae", "androgeus", "ariadne", "phaedra", "minotaur", "antiope", "hippolytus", "demophon", "pirithous", "helen"]
+      },
+      {
+        "id": "odyssey",
+        "label": "The Odyssey",
+        "title": "The Odyssey",
+        "note": "The house of Odysseus, the women who kept him and the enemies he made, on the way to Troy and the long way home.",
+        "focus": "odysseus",
+        "figures": ["zeus", "poseidon", "hermes", "helios", "atlas", "circe", "calypso", "aeolus", "sisyphus", "autolycus", "arcesius", "laertes", "anticleia", "icarius", "odysseus", "penelope", "telemachus", "telegonus", "polyphemus", "companions", "suitors", "nausithous", "alcinous", "arete", "nausicaa", "palamedes", "aeacus", "telamon", "hesione", "ajax"]
       }
     ]
   }

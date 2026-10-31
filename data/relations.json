@@ -2827,5 +2827,286 @@
     "to": "theseus",
     "sources": ["A", "L"],
     "note": "bound Theseus and Pirithous to a chair of forgetfulness"
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "sisyphus",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hermes",
+    "to": "autolycus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "autolycus",
+    "to": "sisyphus",
+    "sources": ["L"],
+    "note": "kept stealing Sisyphus’ cattle, until Sisyphus marked their hooves"
+  },
+  {
+    "type": "affair",
+    "from": "sisyphus",
+    "to": "anticleia",
+    "sources": ["T", "L"],
+    "note": "lay with Anticleia while he was getting his cattle back from her father"
+  },
+  {
+    "type": "parent",
+    "from": "autolycus",
+    "to": "anticleia",
+    "sources": ["E", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "arcesius",
+    "sources": ["L"],
+    "note": "Ovid’s version"
+  },
+  {
+    "type": "parent",
+    "from": "arcesius",
+    "to": "laertes",
+    "sources": ["E", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "laertes",
+    "to": "anticleia",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "laertes",
+    "to": "odysseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "anticleia",
+    "to": "odysseus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "sisyphus",
+    "to": "odysseus",
+    "sources": ["T", "L"],
+    "note": "as his enemies told it"
+  },
+  {
+    "type": "parent",
+    "from": "icarius",
+    "to": "penelope",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "odysseus",
+    "to": "penelope",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "odysseus",
+    "to": "telemachus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "penelope",
+    "to": "telemachus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "odysseus",
+    "to": "circe",
+    "sources": ["E", "H", "A", "L"],
+    "note": "stayed a year in Circe’s house, and in her bed"
+  },
+  {
+    "type": "parent",
+    "from": "odysseus",
+    "to": "telegonus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "circe",
+    "to": "telegonus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "atlas",
+    "to": "calypso",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "calypso",
+    "to": "odysseus",
+    "sources": ["E", "H", "A", "L"],
+    "note": "kept Odysseus on her island for seven years"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "polyphemus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "by the sea-nymph Thoosa"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "polyphemus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "blinded Polyphemus with a burning stake, and got away under his sheep"
+  },
+  {
+    "type": "feud",
+    "from": "polyphemus",
+    "to": "companions",
+    "sources": ["E", "T", "A", "L"],
+    "note": "shut Odysseus’ men in his cave and ate them, two at a time"
+  },
+  {
+    "type": "curse",
+    "from": "polyphemus",
+    "to": "odysseus",
+    "sources": ["E"],
+    "note": "prayed to his father that Odysseus come home late, alone, on a stranger’s ship, to trouble in his house"
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "odysseus",
+    "sources": ["E", "A"],
+    "note": "kept Odysseus wandering for years, for his son’s eye"
+  },
+  {
+    "type": "transform",
+    "from": "circe",
+    "to": "companions",
+    "sources": ["E", "A", "L"],
+    "note": "turned Odysseus’ men into pigs"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "companions",
+    "sources": ["E", "A"],
+    "note": "struck their ship with a thunderbolt, because they ate the cattle of the Sun"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "nausithous",
+    "sources": ["E"]
+  },
+  {
+    "type": "parent",
+    "from": "nausithous",
+    "to": "alcinous",
+    "sources": ["E"]
+  },
+  {
+    "type": "marriage",
+    "from": "alcinous",
+    "to": "arete",
+    "sources": ["E", "A"],
+    "note": "his brother’s daughter"
+  },
+  {
+    "type": "parent",
+    "from": "alcinous",
+    "to": "nausicaa",
+    "sources": ["E"]
+  },
+  {
+    "type": "parent",
+    "from": "arete",
+    "to": "nausicaa",
+    "sources": ["E"]
+  },
+  {
+    "type": "feud",
+    "from": "palamedes",
+    "to": "odysseus",
+    "sources": ["E", "A", "L"],
+    "note": "exposed Odysseus’ feigned madness by threatening his baby son"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "palamedes",
+    "sources": ["E", "T", "A", "L"],
+    "note": "had Palamedes killed, by drowning or by a forged charge of treason"
+  },
+  {
+    "type": "parent",
+    "from": "aeacus",
+    "to": "telamon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "telamon",
+    "to": "ajax",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "telamon",
+    "to": "hesione",
+    "sources": ["T", "A", "L"],
+    "note": "his prize when Heracles took Troy"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "ajax",
+    "sources": ["E", "T", "A", "L"],
+    "note": "won the arms of Achilles from Ajax, who killed himself"
+  },
+  {
+    "type": "feud",
+    "from": "suitors",
+    "to": "telemachus",
+    "sources": ["E"],
+    "note": "lay in wait to kill Telemachus on his way home"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "suitors",
+    "sources": ["E", "A", "L"],
+    "note": "came home as a beggar and shot the suitors down in his own hall"
+  },
+  {
+    "type": "feud",
+    "from": "telegonus",
+    "to": "odysseus",
+    "sources": ["A", "L"],
+    "note": "killed his father without knowing him, with a spear tipped with a stingray’s spine"
+  },
+  {
+    "type": "marriage",
+    "from": "telegonus",
+    "to": "penelope",
+    "sources": ["A", "L"],
+    "note": "after Odysseus’ death"
+  },
+  {
+    "type": "marriage",
+    "from": "telemachus",
+    "to": "circe",
+    "sources": ["L"],
+    "note": "after Odysseus’ death"
   }
 ]
