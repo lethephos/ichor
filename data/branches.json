@@ -6,12 +6,24 @@
     "tiers": ["The first gods", "Titans", "Children of the Titans", "The younger gods", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V", "Generation VI"],
     "focus": "pelops",
     "houses": [
-      {"label": "House of Labdacus", "founder": "labdacus"},
-      {"label": "House of Atreus", "founder": "pelops"},
-      {"label": "House of Perseus", "founder": "perseus"}
+      {
+        "label": "House of Labdacus",
+        "founder": "labdacus"
+      },
+      {
+        "label": "House of Atreus",
+        "founder": "pelops"
+      },
+      {
+        "label": "House of Perseus",
+        "founder": "perseus"
+      }
     ],
     "dividers": [
-      {"before": 4, "label": "Heroes and mortals"}
+      {
+        "before": 4,
+        "label": "Heroes and mortals"
+      }
     ],
     "families": [
       {
@@ -43,7 +55,7 @@
         "title": "Zeus and his loves",
         "note": "His wives and lovers, and the children they bore him.",
         "focus": "zeus",
-        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria", "hebe", "danae", "perseus", "alcmene", "heracles"]
+        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria", "hebe", "danae", "perseus", "alcmene", "heracles", "pleiades", "dardanus", "ganymede", "aeacus"]
       },
       {
         "id": "thebes",
@@ -60,7 +72,7 @@
         "title": "The House of Atreus",
         "note": "From Tantalus to Orestes.",
         "focus": "atreus",
-        "figures": ["zeus", "pluto", "ares", "hermes", "artemis", "nemesis", "tantalus", "niobe", "oenomaus", "hippodamia", "myrtilus", "pelops", "chrysippus", "atreus", "thyestes", "aerope", "pleisthenes", "pelopia", "agamemnon", "menelaus", "clytemnestra", "helen", "aegisthus", "tyndareus", "leda", "castor", "polydeuces", "theseus", "paris", "iphigenia", "orestes", "electra", "chrysothemis", "pylades", "hermione", "erinyes", "hecate"]
+        "figures": ["zeus", "pluto", "ares", "hermes", "artemis", "nemesis", "tantalus", "niobe", "oenomaus", "hippodamia", "myrtilus", "pelops", "chrysippus", "atreus", "thyestes", "aerope", "pleisthenes", "pelopia", "agamemnon", "menelaus", "clytemnestra", "helen", "aegisthus", "tyndareus", "leda", "castor", "polydeuces", "theseus", "paris", "iphigenia", "orestes", "electra", "chrysothemis", "pylades", "hermione", "erinyes", "hecate", "cassandra", "neoptolemus"]
       },
       {
         "id": "perseus",
@@ -78,6 +90,14 @@
         "note": "The house of Aeolus, the Golden Fleece, and Medea.",
         "focus": "jason",
         "figures": ["zeus", "poseidon", "helios", "oceanids", "muses", "circe", "cadmus", "harmonia", "aeolus", "salmoneus", "cretheus", "tyro", "athamas", "nephele", "ino", "phrixus", "helle", "pelias", "aeson", "aeetes", "creon-corinth", "jason", "medea", "absyrtus", "glauce", "hypsipyle", "orpheus", "heracles", "castor", "polydeuces"]
+      },
+      {
+        "id": "troy",
+        "label": "Troy",
+        "title": "The house of Priam",
+        "note": "From Dardanus, son of Zeus, to the fall of Troy.",
+        "focus": "priam",
+        "figures": ["zeus", "aphrodite", "apollo", "poseidon", "eos", "pleiades", "dardanus", "erichthonius", "tros", "ilus", "assaracus", "ganymede", "laomedon", "capys", "priam", "hecuba", "tithonus", "hesione", "anchises", "hector", "andromache", "paris", "cassandra", "polyxena", "troilus", "deiphobus", "aeneas", "astyanax", "heracles", "aeacus", "peleus", "thetis", "achilles", "neoptolemus", "helen", "menelaus", "agamemnon", "clytemnestra", "orestes", "hermione"]
       }
     ]
   }
