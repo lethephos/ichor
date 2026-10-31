@@ -3664,5 +3664,272 @@
     "to": "talos",
     "sources": ["A"],
     "note": "pulled the nail from Talos’ ankle, and his ichor ran out"
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "inachus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "inachus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "inachus",
+    "to": "io",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "io",
+    "sources": ["H", "T", "A", "L"],
+    "note": "loved Io, and swore to Hera he had never touched her"
+  },
+  {
+    "type": "transform",
+    "from": "zeus",
+    "to": "io",
+    "sources": ["T", "A", "L"],
+    "note": "turned Io into a white cow to hide her from Hera"
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "io",
+    "sources": ["T", "A", "L"],
+    "note": "set hundred-eyed Argus to guard Io, then sent a gadfly to drive her across the world"
+  },
+  {
+    "type": "feud",
+    "from": "hermes",
+    "to": "argus",
+    "sources": ["T", "A", "L"],
+    "note": "killed Argus, at Zeus’ bidding, to free Io"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "epaphus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "io",
+    "to": "epaphus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "epaphus",
+    "to": "libya",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "libya",
+    "sources": ["A"],
+    "note": "loved Libya, who bore him twins"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "belus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "libya",
+    "to": "belus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "agenor",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "libya",
+    "to": "agenor",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "agenor",
+    "to": "cadmus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "agenor",
+    "to": "europa",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "danaus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "aegyptus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "cepheus",
+    "sources": ["T", "A"],
+    "note": "in Euripides, as Apollodorus reports"
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "phineus",
+    "sources": ["T", "A"],
+    "note": "in Euripides, as Apollodorus reports"
+  },
+  {
+    "type": "feud",
+    "from": "aegyptus",
+    "to": "danaus",
+    "sources": ["T", "A"],
+    "note": "drove Danaus out of Libya, with his fifty sons"
+  },
+  {
+    "type": "parent",
+    "from": "danaus",
+    "to": "danaids",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "danaus",
+    "to": "hypermnestra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "danaus",
+    "to": "amymone",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aegyptus",
+    "to": "sons-of-aegyptus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aegyptus",
+    "to": "lynceus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "danaids",
+    "to": "sons-of-aegyptus",
+    "sources": ["T", "A"],
+    "note": "their cousins"
+  },
+  {
+    "type": "feud",
+    "from": "danaids",
+    "to": "sons-of-aegyptus",
+    "sources": ["T", "A", "L"],
+    "note": "killed their husbands on their wedding night, all but one"
+  },
+  {
+    "type": "marriage",
+    "from": "lynceus",
+    "to": "hypermnestra",
+    "sources": ["A", "L"],
+    "note": "who spared him"
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "amymone",
+    "sources": ["A", "L"],
+    "note": "saved Amymone from a satyr, lay with her, and showed her the springs of Lerna"
+  },
+  {
+    "type": "parent",
+    "from": "amymone",
+    "to": "nauplius",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "lynceus",
+    "to": "abas",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hypermnestra",
+    "to": "abas",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "abas",
+    "to": "acrisius",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "abas",
+    "to": "proetus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "acrisius",
+    "to": "proetus",
+    "sources": ["A", "L"],
+    "note": "fought Proetus for the kingdom of Argos"
+  },
+  {
+    "type": "marriage",
+    "from": "cepheus",
+    "to": "cassiopeia",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "cepheus",
+    "to": "andromeda",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "cassiopeia",
+    "to": "andromeda",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "cassiopeia",
+    "sources": ["A", "L"],
+    "note": "sent a flood and a sea monster, when she boasted she was lovelier than the Nereids"
+  },
+  {
+    "type": "transform",
+    "from": "perseus",
+    "to": "phineus",
+    "sources": ["A", "L"],
+    "note": "turned Phineus to stone with the Gorgon’s head"
   }
 ]

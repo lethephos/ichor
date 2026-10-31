@@ -146,6 +146,15 @@
         "note": "Europa’s sons in Crete, the children of Minos and Pasiphae, and Daedalus, who built for them and fled them.",
         "focus": "minos",
         "figures": ["zeus", "poseidon", "helios", "athena", "oceanids", "europa", "asterion", "minos", "rhadamanthys", "pasiphae", "minotaur", "androgeus", "ariadne", "phaedra", "catreus", "deucalion-crete", "glaucus-crete", "polyidus", "aerope", "clymene-crete", "althaemenes", "nauplius", "palamedes", "idomeneus", "daedalus", "icarus", "perdix", "cocalus", "talos", "medea", "theseus", "dionysus", "aegeus", "alcmene", "atreus"]
+      },
+      {
+        "id": "argos",
+        "label": "Io and the Danaids",
+        "title": "Io and the Danaids",
+        "note": "From the river Inachus and his daughter Io, whom Zeus loved, through Egypt and back to Argos with the fifty daughters of Danaus, down to Acrisius, Danaë and Andromeda.",
+        "focus": "io",
+        "figures": ["oceanus", "tethys", "inachus", "zeus", "hera", "hermes", "poseidon", "io", "argus", "epaphus", "libya", "belus", "agenor", "cadmus", "europa", "danaus", "aegyptus", "danaids", "sons-of-aegyptus", "hypermnestra", "lynceus", "amymone", "nauplius", "abas", "acrisius", "proetus", "danae", "perseus", "cepheus", "cassiopeia", "phineus", "andromeda"],
+        "houses": []
       }
     ]
   }
