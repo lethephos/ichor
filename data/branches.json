@@ -27,7 +27,7 @@
         "title": "The gods",
         "note": "From Gaia and Uranus to the younger gods.",
         "focus": "zeus",
-        "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis", "themis", "mnemosyne", "erinyes", "oceanids", "pleiades", "muses", "horae", "moirai", "charites", "crius", "hyperion", "theia", "iapetus", "prometheus", "epimetheus", "menoetius", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "hecate", "hebe"]
+        "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis", "themis", "mnemosyne", "erinyes", "oceanids", "pleiades", "muses", "horae", "moirai", "charites", "crius", "hyperion", "theia", "iapetus", "prometheus", "epimetheus", "menoetius", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "hecate", "hebe", "circe"]
       },
       {
         "id": "titans",
@@ -52,7 +52,7 @@
         "note": "The house of Cadmus and the Labdacids.",
         "houses": ["House of Labdacus"],
         "focus": "cadmus",
-        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops", "menoeceus", "creon"]
+        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops", "menoeceus", "creon", "ino"]
       },
       {
         "id": "atreus",
@@ -70,6 +70,14 @@
         "houses": ["House of Perseus"],
         "focus": "heracles",
         "figures": ["zeus", "hera", "poseidon", "hebe", "pelops", "acrisius", "danae", "perseus", "andromeda", "medusa", "alcaeus", "electryon", "sthenelus", "nicippe", "amphitryon", "alcmene", "eurystheus", "heracles", "iphicles", "menoeceus", "creon", "megara", "deianira"]
+      },
+      {
+        "id": "argonauts",
+        "label": "The Argonauts",
+        "title": "Jason and the Argonauts",
+        "note": "The house of Aeolus, the Golden Fleece, and Medea.",
+        "focus": "jason",
+        "figures": ["zeus", "poseidon", "helios", "oceanids", "muses", "circe", "cadmus", "harmonia", "aeolus", "salmoneus", "cretheus", "tyro", "athamas", "nephele", "ino", "phrixus", "helle", "pelias", "aeson", "aeetes", "creon-corinth", "jason", "medea", "absyrtus", "glauce", "hypsipyle", "orpheus", "heracles", "castor", "polydeuces"]
       }
     ]
   }

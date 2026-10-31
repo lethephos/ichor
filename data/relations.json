@@ -1514,7 +1514,7 @@
     "from": "zeus",
     "to": "danae",
     "sources": ["E", "T", "A", "L"],
-    "note": "As a shower of gold"
+    "note": "came to Danaë as a shower of gold"
   },
   {
     "type": "parent",
@@ -1533,20 +1533,21 @@
     "from": "perseus",
     "to": "acrisius",
     "sources": ["A", "L"],
-    "note": "By accident, with a discus, as the oracle foretold"
+    "note": "killed Acrisius by accident with a discus, as the oracle foretold"
   },
   {
     "type": "feud",
     "from": "perseus",
     "to": "medusa",
     "sources": ["H", "T", "A", "L"],
-    "note": "Cut off her head"
+    "note": "cut off Medusa’s head"
   },
   {
     "type": "affair",
     "from": "poseidon",
     "to": "medusa",
-    "sources": ["H", "A", "L"]
+    "sources": ["H", "A", "L"],
+    "note": "lay with Medusa, who bore him Pegasus and Chrysaor"
   },
   {
     "type": "marriage",
@@ -1631,7 +1632,7 @@
     "from": "amphitryon",
     "to": "electryon",
     "sources": ["H", "A"],
-    "note": "Over cattle: in anger in Hesiod, by accident in Apollodorus"
+    "note": "killed Electryon over cattle: in anger in Hesiod, by accident in Apollodorus"
   },
   {
     "type": "marriage",
@@ -1644,7 +1645,7 @@
     "from": "zeus",
     "to": "alcmene",
     "sources": ["E", "H", "T", "A", "L"],
-    "note": "In Amphitryon’s likeness"
+    "note": "came to Alcmene in Amphitryon’s likeness"
   },
   {
     "type": "parent",
@@ -1675,14 +1676,14 @@
     "from": "hera",
     "to": "heracles",
     "sources": ["E", "H", "T", "A", "L"],
-    "note": "Hated him from before his birth, and sent him mad"
+    "note": "hated Heracles from before his birth, and sent him mad"
   },
   {
     "type": "feud",
     "from": "eurystheus",
     "to": "heracles",
     "sources": ["E", "T", "A", "L"],
-    "note": "Set him his labours"
+    "note": "set Heracles his labours"
   },
   {
     "type": "parent",
@@ -1713,7 +1714,7 @@
     "from": "heracles",
     "to": "megara",
     "sources": ["T", "L"],
-    "note": "In madness; Apollodorus has him kill only their children"
+    "note": "killed Megara and their children in his madness; in Apollodorus only the children"
   },
   {
     "type": "marriage",
@@ -1726,20 +1727,275 @@
     "from": "deianira",
     "to": "heracles",
     "sources": ["H", "T", "A", "L"],
-    "note": "Unknowing, with the poisoned robe"
+    "note": "killed Heracles unknowingly, with the poisoned robe"
   },
   {
     "type": "marriage",
     "from": "heracles",
     "to": "hebe",
     "sources": ["E", "H", "T", "A"],
-    "note": "After he was made a god"
+    "note": "after he was made a god"
   },
   {
     "type": "feud",
     "from": "creon",
     "to": "antigone",
     "sources": ["T", "A"],
-    "note": "Walled her up alive for burying Polynices"
+    "note": "walled Antigone up alive for burying Polynices"
+  },
+  {
+    "type": "parent",
+    "from": "helios",
+    "to": "circe",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "circe",
+    "sources": ["E", "H", "A"],
+    "note": "Perse"
+  },
+  {
+    "type": "parent",
+    "from": "helios",
+    "to": "aeetes",
+    "sources": ["E", "H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "aeetes",
+    "sources": ["E", "H"],
+    "note": "Perse"
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "salmoneus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "cretheus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "athamas",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "salmoneus",
+    "sources": ["H", "A", "L"],
+    "note": "struck Salmoneus with a thunderbolt for playing Zeus"
+  },
+  {
+    "type": "parent",
+    "from": "salmoneus",
+    "to": "tyro",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "tyro",
+    "sources": ["E", "H", "A"],
+    "note": "came to Tyro in the shape of the river Enipeus"
+  },
+  {
+    "type": "marriage",
+    "from": "cretheus",
+    "to": "tyro",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "pelias",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "pelias",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cretheus",
+    "to": "aeson",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "aeson",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "pelias",
+    "to": "aeson",
+    "sources": ["A"],
+    "note": "took Aeson’s throne, and drove him to his death"
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "ino",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "ino",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "athamas",
+    "to": "nephele",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "athamas",
+    "to": "ino",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "athamas",
+    "to": "phrixus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "nephele",
+    "to": "phrixus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "athamas",
+    "to": "helle",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "nephele",
+    "to": "helle",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "ino",
+    "to": "phrixus",
+    "sources": ["A", "L"],
+    "note": "plotted to have Phrixus sacrificed"
+  },
+  {
+    "type": "parent",
+    "from": "aeson",
+    "to": "jason",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "pelias",
+    "to": "jason",
+    "sources": ["H", "T", "A", "L"],
+    "note": "sent Jason for the Golden Fleece"
+  },
+  {
+    "type": "feud",
+    "from": "aeetes",
+    "to": "jason",
+    "sources": ["T", "A", "L"],
+    "note": "set Jason the fire-breathing bulls and the dragon’s teeth"
+  },
+  {
+    "type": "parent",
+    "from": "aeetes",
+    "to": "medea",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "medea",
+    "sources": ["H", "A"],
+    "note": "Idyia"
+  },
+  {
+    "type": "parent",
+    "from": "aeetes",
+    "to": "absyrtus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "jason",
+    "to": "medea",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "absyrtus",
+    "sources": ["T", "A", "L"],
+    "note": "killed her brother Absyrtus"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "pelias",
+    "sources": ["T", "A", "L"],
+    "note": "tricked Pelias’s daughters into killing him"
+  },
+  {
+    "type": "parent",
+    "from": "creon-corinth",
+    "to": "glauce",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "jason",
+    "to": "glauce",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "glauce",
+    "sources": ["T", "A", "L"],
+    "note": "burned Glauce to death with a poisoned robe and crown"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "creon-corinth",
+    "sources": ["T", "A", "L"],
+    "note": "burned Creon with his daughter"
+  },
+  {
+    "type": "affair",
+    "from": "jason",
+    "to": "hypsipyle",
+    "sources": ["E", "T", "A", "L"],
+    "note": "became Hypsipyle’s lover on Lemnos, and had sons by her"
+  },
+  {
+    "type": "parent",
+    "from": "muses",
+    "to": "orpheus",
+    "sources": ["A"],
+    "note": "Calliope"
   }
 ]
