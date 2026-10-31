@@ -1331,18 +1331,6 @@
     "sources": ["H", "A"]
   },
   {
-    "type": "parent",
-    "from": "gaia",
-    "to": "dione",
-    "sources": ["A"]
-  },
-  {
-    "type": "parent",
-    "from": "uranus",
-    "to": "dione",
-    "sources": ["A"]
-  },
-  {
     "type": "marriage",
     "from": "hyperion",
     "to": "theia",
