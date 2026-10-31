@@ -98,6 +98,14 @@
         "note": "From Dardanus, son of Zeus, to the fall of Troy.",
         "focus": "priam",
         "figures": ["zeus", "aphrodite", "apollo", "poseidon", "eos", "pleiades", "dardanus", "erichthonius", "tros", "ilus", "assaracus", "ganymede", "laomedon", "capys", "priam", "hecuba", "tithonus", "hesione", "anchises", "hector", "andromache", "paris", "cassandra", "polyxena", "troilus", "deiphobus", "aeneas", "astyanax", "heracles", "aeacus", "peleus", "thetis", "achilles", "neoptolemus", "helen", "menelaus", "agamemnon", "clytemnestra", "orestes", "hermione"]
+      },
+      {
+        "id": "heraclids",
+        "label": "The children of Heracles",
+        "title": "The children of Heracles",
+        "note": "His wives and lovers, his sons and daughters, and their war with Eurystheus.",
+        "focus": "hyllus",
+        "figures": ["zeus", "hera", "hebe", "alcmene", "amphitryon", "iphicles", "heracles", "megara", "creon", "deianira", "iole", "omphale", "eurystheus", "sthenelus", "achilles", "sons-of-megara", "hyllus", "macaria", "telephus", "tlepolemus", "iolaus"]
       }
     ]
   }

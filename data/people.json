@@ -2584,5 +2584,123 @@
     "tagline": "Killed an old king at an altar, and died at one himself.",
     "story": "Son of Achilles, brought to Troy after his father died. He was one of the men in the Wooden Horse. When the city fell he killed Priam at the altar of Zeus, and took Andromache as his prize. He married Hermione, Menelaus’s daughter, who had been promised to Orestes, and was killed at Delphi.",
     "versions": "Who killed him at Delphi: in Euripides, the Delphians, stirred up by Orestes; in Apollodorus, Orestes, or a Delphian named Machaereus; in Pindar, a man in a quarrel over the sacrificial meat."
+  },
+  {
+    "id": "iole",
+    "name": "Iole",
+    "greek": "Ἰόλη",
+    "gender": "f",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Princess of Oechalia",
+    "tagline": "The prize of a war, and the cause of a death.",
+    "story": "Daughter of Eurytus, king of Oechalia. Her father promised her to whoever could beat him with the bow, and when Heracles won, refused him. Heracles sacked the city, killed Eurytus, and sent Iole home to Deianira as a captive. Afraid of losing her husband to the girl, Deianira sent him the poisoned robe. Dying, Heracles made his son Hyllus promise to marry her."
+  },
+  {
+    "id": "omphale",
+    "name": "Omphale",
+    "greek": "Ὀμφάλη",
+    "gender": "f",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of Lydia",
+    "tagline": "Bought the strongest man alive as her slave.",
+    "story": "Queen of Lydia. When Heracles murdered his guest Iphitus, he was sold to her as a slave for a year, to be cleansed of the killing. In Ovid she wears his lion skin and carries his club, while he spins wool among her women.",
+    "versions": "Their son: Agelaus in Apollodorus, Lamus in Ovid."
+  },
+  {
+    "id": "hyllus",
+    "name": "Hyllus",
+    "greek": "Ὕλλος",
+    "gender": "m",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Eldest son of Heracles and Deianira",
+    "tagline": "Built his father’s pyre, and brought his enemy’s head to his grandmother.",
+    "story": "Son of Heracles and Deianira. He carried his dying father to Mount Oeta and built his pyre, and at his command married Iole. Hunted by Eurystheus, he and his brothers and sisters found refuge in Athens; when Eurystheus marched on the city, he was killed. Hyllus tried to win back the Peloponnese, and fell in single combat at the Isthmus. Three generations later his descendants returned and took it."
+  },
+  {
+    "id": "macaria",
+    "name": "Macaria",
+    "greek": "Μακαρία",
+    "gender": "f",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Heracles",
+    "tagline": "Died so her brothers might live.",
+    "story": "Daughter of Heracles. When Eurystheus marched on Athens, an oracle demanded that a girl of noble birth be sacrificed to Persephone, and she offered herself, so that her brothers would be saved. A spring at Marathon took her name.",
+    "versions": "Euripides leaves her unnamed; Pausanias calls her Macaria, daughter of Deianira."
+  },
+  {
+    "id": "telephus",
+    "name": "Telephus",
+    "greek": "Τήλεφος",
+    "gender": "m",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Mysia",
+    "tagline": "Wounded by Achilles, and healed by the same spear.",
+    "story": "Son of Heracles and Auge, a priestess of Athena, who left him on a mountain, where a doe suckled him. He became king of Mysia. When the Greeks, sailing for Troy, landed there by mistake, Achilles wounded him. The wound would not heal, until an oracle said that what had wounded him would cure him: rust scraped from Achilles’ spear. In return he showed the Greeks the way to Troy."
+  },
+  {
+    "id": "tlepolemus",
+    "name": "Tlepolemus",
+    "greek": "Τληπόλεμος",
+    "gender": "m",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Leader of the Rhodians",
+    "tagline": "Killed his father’s uncle, and fled across the sea.",
+    "story": "Son of Heracles and Astyoche. He killed Licymnius, his father’s uncle, and fled over the sea to Rhodes with a band of followers, who settled its three cities. He led nine ships from Rhodes to Troy, and was killed there by Sarpedon, son of Zeus."
+  },
+  {
+    "id": "iolaus",
+    "name": "Iolaus",
+    "greek": "Ἰόλαος",
+    "gender": "m",
+    "generation": 8,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Charioteer of Heracles",
+    "tagline": "Held the torch while his uncle cut off the Hydra’s heads.",
+    "story": "Son of Iphicles, and Heracles’ nephew and charioteer. He helped kill the Hydra, searing each neck with a torch so the heads could not grow back. When he was old, he stood by Heracles’ children against Eurystheus, and for one day the gods made him young again.",
+    "versions": "Euripides: young again for a day, he takes Eurystheus alive. Pindar: he kills him."
+  },
+  {
+    "id": "sons-of-megara",
+    "name": "Sons of Megara",
+    "greek": "Μεγάρας παῖδες",
+    "gender": "m",
+    "generation": 8,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Children of Heracles and Megara",
+    "tagline": "Killed by their father, who thought they were his enemy’s.",
+    "story": "The sons Heracles had by Megara in Thebes. Hera sent him mad, and he killed them, believing them the children of Eurystheus. The Thebans honoured them each year with sacrifices and fires above the Electran Gate.",
+    "count": "Three, or eight",
+    "members": [
+      {
+        "name": "Therimachus",
+        "greek": "Θηρίμαχος",
+        "note": "named by Apollodorus"
+      },
+      {
+        "name": "Creontiades",
+        "greek": "Κρεοντιάδης",
+        "note": "named by Apollodorus"
+      },
+      {
+        "name": "Deicoon",
+        "greek": "Δηικόων",
+        "note": "named by Apollodorus"
+      }
+    ],
+    "members_note": "Apollodorus names three, and Euripides has three, unnamed; Pindar speaks of eight sons, ‘bronze-armoured’."
   }
 ]
