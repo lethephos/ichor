@@ -244,15 +244,17 @@ let edgeSel, nodeSel;
 function drawTree(){
   gGrid.selectAll("*").remove(); gEdges.selectAll("*").remove(); gNodes.selectAll("*").remove();
   ROWY.forEach((y,i) => {
-    gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
     if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWB[i-1]+y)/2+12).attr("y2",(ROWB[i-1]+y)/2+12);
   });
-  // a divider is a stronger rule between two rows, named on the left (e.g. where the gods end and mortals begin)
+  // a divider is a stronger rule between two rows (e.g. where the gods end and mortals begin)
+  const labels = GENS.map((g, i) => ({text: g, y: ROWY[i], cls: "rl"}));
   DIVIDERS.forEach(d => {
     const y = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12;
     gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
-    gGrid.append("text").attr("class","divider-label").attr("x",0).attr("y",y+4).text(d.label);
+    labels.push({text: d.label, y, cls: "rl rl-divider"});
   });
+  // row names live in a column pinned to the left edge of the screen (see placeRowLabels)
+  rowLabels.innerHTML = `<div class="rl-col"></div>` + labels.map(l => `<div class="${l.cls}" data-y="${l.y}">${l.text}</div>`).join("");
   HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
 
   edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class", e => `e e-${e.type}`);
@@ -291,7 +293,13 @@ function drawTree(){
 }
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
 
-const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => { root.attr("transform", ev.transform); if (ev.sourceEvent) hideHint(); });
+/* Row names stay readable at any zoom: they sit in a column on the left of the screen,
+   at a fixed size, and only follow their row up and down. */
+const rowLabels = document.getElementById("rowLabels");
+function placeRowLabels(t){
+  rowLabels.querySelectorAll("[data-y]").forEach(el => el.style.top = `${t.y + el.dataset.y * t.k}px`);
+}
+const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => { root.attr("transform", ev.transform); placeRowLabels(ev.transform); if (ev.sourceEvent) hideHint(); });
 svg.call(zoom).on("dblclick.zoom", null);
 const graphEl = document.getElementById("graph");
 const wide = () => window.innerWidth >= 900;
@@ -305,13 +313,15 @@ const viewH = () => {
   const covered = Math.max(card.classList.contains("open") ? card.offsetHeight : 0, toolsEl.offsetHeight + 12);
   return Math.max(120, graphEl.clientHeight - covered);
 };
+// the width of the row-name column, which the tree should not start under
+const inset = () => rowLabels.querySelector(".rl-col")?.offsetWidth || 0;
 function fitTo(ids, animate){
   const pts = ids ? ids.map(id => N[id]) : P;
   const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
-  const x0 = ids ? Math.min(...xs) - 80 : -20, x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
-  const w = viewW(), h = viewH();
+  const x0 = Math.min(...xs) - 80, x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
+  const left = inset(), w = viewW() - left, h = viewH();
   const k = Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95);
-  const t = d3.zoomIdentity.translate((w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
+  const t = d3.zoomIdentity.translate(left + (w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
   (animate ? svg.transition().duration(600) : svg).call(zoom.transform, t);
 }
 function focusOn(id){
@@ -325,7 +335,7 @@ function focusOn(id){
 document.getElementById("fitFloat").onclick = () => fitTo(null, true);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
-  if (Math.min(w/W, h/H) >= 0.5) { fitTo(null, false); return; }
+  if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }
   const k = 0.55;
   const cy = (ROWY[0] + ROWY[ROWY.length-1]) / 2;
   svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[FOCUS].x*k, viewH()/2 - cy*k).scale(k));
