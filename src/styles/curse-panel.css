@@ -1,0 +1,8 @@
+.card-name.curse-title{font-size:32px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:none}
+.steps li{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--rule)}
+.steps li:first-child{border-top:none}
+.steps .g{font-size:12px;color:var(--muted);padding-top:3px}
+.steps .t{font-family:var(--display);font-size:16px;line-height:1.55}
+.steps .who{margin-top:4px}
+.steps .who .rel{font-size:15px;margin-right:10px}
