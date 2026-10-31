@@ -1,10 +1,8 @@
 #stage{flex:1;position:relative;min-height:0}
 #graph{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
 #graph:active{cursor:grabbing}
-.gen{font-family:var(--display);font-size:15px;fill:var(--muted)}
 .genrule{stroke:var(--rule);stroke-width:1}
 .divider{stroke:var(--muted);stroke-width:1.5}
-.divider-label{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;fill:var(--muted);paint-order:stroke;stroke:var(--bg);stroke-width:10px;stroke-linejoin:round}
 .house{font-family:var(--display);font-size:22px;fill:var(--muted);paint-order:stroke;stroke:var(--bg);stroke-width:8px;stroke-linejoin:round}
 
 /* nodes: small medallions */
@@ -39,13 +37,23 @@
 .e.thread .main{stroke:var(--accent)!important;stroke-dasharray:none!important}
 .e.thread .inner{display:none}
 
-.hint{position:absolute;left:20px;top:12px;font-size:12px;color:var(--muted);pointer-events:none}
+.hint{position:absolute;left:158px;top:12px;font-size:12px;color:var(--muted);pointer-events:none}
 @media (prefers-reduced-motion: reduce){.node{transition:none}.node.pulse .halo{animation:none}}
 .hint{transition:opacity .5s}
 .hint.gone{opacity:0}
 .fit-float{position:absolute;right:16px;top:10px;background:var(--bg-2)}
 @media (max-width:899px){
-  .hint{left:16px;top:10px;max-width:calc(100% - 150px)}
+  .hint{left:92px;top:10px;max-width:calc(100% - 220px)}
 }
 /* in a story, the parents different sources give a figure: dashed gold */
 .e.alt .main{stroke:var(--accent)!important;stroke-dasharray:4 4}
+
+/* row names: a column pinned to the left of the screen; the tree slides beneath it */
+.row-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.rl-col{position:absolute;left:0;top:0;bottom:0;width:150px;background:linear-gradient(to right,var(--bg) 0,var(--bg) 72%,transparent)}
+.rl{position:absolute;left:20px;width:122px;transform:translateY(-50%);font:600 11px/1.35 var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rl-divider{color:var(--text)}
+@media (max-width:899px){
+  .rl-col{width:86px}
+  .rl{left:12px;width:66px;font-size:9px;letter-spacing:.05em}
+}

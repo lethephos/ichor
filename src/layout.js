@@ -11,7 +11,7 @@
 
 export const TOP = 90;          // y of the first row
 export const ROW_GAP = 155;     // vertical distance between rows
-export const LEFT = 190;        // x of the leftmost figure; generation labels sit at x = 0
+export const LEFT = 60;         // x of the leftmost figure; rules start at x = 0
 export const RIGHT_PAD = 140;   // space after the rightmost figure
 export const BOTTOM_PAD = 85;   // space after the last row
 
