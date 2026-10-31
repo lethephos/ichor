@@ -18,7 +18,7 @@ const SAMPLE = {
   curse:`<line x1="0" y1="5" x2="22" y2="5" stroke="var(--curse)" stroke-width="1.8"/><path d="M20,1 L26,5 L20,9 z" fill="var(--curse)"/>`
 };
 
-const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, hover:null, mode:null, curseKey:null, path:null};
+const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, hover:null, mode:null, curseKey:null, step:0, path:null};
 
 /* ---------- header ---------- */
 document.getElementById("branchTitle").textContent = BRANCH.title;
@@ -120,6 +120,7 @@ const OPEN = {layers:() => openLayers(), curses:() => openCurses(), thread:() =>
 const toolBtns = document.querySelectorAll("[data-tool]");
 toolBtns.forEach(b => b.onclick = () => TOOL_OF[state.mode]===b.dataset.tool ? resetMode() : OPEN[b.dataset.tool]());
 function syncTools(){
+  document.body.classList.toggle("story", state.mode==="curse");
   toolBtns.forEach(b => b.setAttribute("aria-pressed", TOOL_OF[state.mode]===b.dataset.tool));
   threadBtn.setAttribute("aria-pressed", state.mode==="thread");
 }
@@ -241,19 +242,21 @@ function apply(animate){
   const hover = state.mode!=="curse" && state.mode!=="thread" ? state.hover : null;
   const sel = hover || (state.mode==="node" ? state.sel : null);
   const curse = state.mode==="curse" ? CURSES[state.curseKey] : null;
+  const story = curse && state.step>=1 && state.step<=curse.steps.length ? reveal(curse, state.step) : null;
   const path = state.mode==="thread" ? state.path : null;
   const pathEdges = new Set(path ? path.edges : []);
   const pathNodes = new Set(path ? path.nodes : []);
   const visible = new Set();
   edgeSel.each(function(e){
     let vis = edgeVisible(e);
-    const inCurse = curse && ["parent","curse","feud","affair","marriage"].includes(e.type) && curse.pairs.some(p => samePair(e,p)) && attested(e);
+    let inCurse = curse && ["parent","curse","feud","affair","marriage"].includes(e.type) && curse.pairs.some(p => samePair(e,p)) && attested(e);
+    if (story && inCurse && !(story.shown.has(e.from) && story.shown.has(e.to))) inCurse = false;   // not told yet
     const inPath = pathEdges.has(e.i);
     if (inPath) vis = true;
-    const hot = (sel && (e.from===sel || e.to===sel)) || inCurse || inPath;
+    const hot = (sel && (e.from===sel || e.to===sel)) || (inCurse && (!story || story.now.has(e.from) || story.now.has(e.to))) || inPath;
     // at rest, feuds and affairs stay faint so the bloodlines read first; they light up when selected
     let op = (e.type==="curse"||e.type==="transform") ? 0.9 : (e.type==="feud"||e.type==="affair") ? 0.3 : 0.55;
-    if (sel || curse || path) op = hot ? 1 : 0.06;
+    if (sel || curse || path) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
     if (!vis && !inCurse) op = 0;
     if (vis) { visible.add(e.from); visible.add(e.to); }
     const g = d3.select(this).classed("thread", inPath);
@@ -262,9 +265,10 @@ function apply(animate){
   });
   const neigh = new Set();
   if (sel) { neigh.add(sel); E.forEach(e => { if (edgeVisible(e) && (e.from===sel||e.to===sel)) { neigh.add(e.from); neigh.add(e.to); } }); }
-  nodeSel.classed("sel", d => d.id===sel || (state.mode==="node" && d.id===state.sel)).classed("ends", d => !!(path && (d.id===path.nodes[0] || d.id===path.nodes[path.nodes.length-1])));
+  nodeSel.classed("sel", d => d.id===sel || (state.mode==="node" && d.id===state.sel)).classed("ends", d => !!(path && (d.id===path.nodes[0] || d.id===path.nodes[path.nodes.length-1])) || !!(story && story.now.has(d.id)));
   const nOp = d => {
     if (sel) return neigh.has(d.id) ? 1 : 0.2;
+    if (story) return story.now.has(d.id) ? 1 : story.shown.has(d.id) ? 0.8 : 0.08;
     if (curse) return curse.nodes.has(d.id) ? 1 : 0.18;
     if (path) return pathNodes.has(d.id) ? 1 : 0.18;
     if (state.src!=="all") return (visible.has(d.id) || (d.transformation && d.transformation.sources.includes(state.src))) ? 1 : 0.18;
@@ -371,8 +375,8 @@ function openCurses(){
   state.mode = "curses"; state.sel = null; state.path = null; state.curseKey = null;
   curseSel.value = "";
   shell(`${panelTop("Ἀραί")}
-    <h2 class="card-name thread-title">Trace a curse</h2>
-    <p class="card-tag">Follow a curse down the generations.</p>
+    <h2 class="card-name thread-title">Stories</h2>
+    <p class="card-tag">Follow a curse down the generations, one step at a time.</p>
     <ul class="opts">${Object.values(CURSES).map(c => `<li><button class="opt" data-curse="${c.id}"><span>${c.title}<small>${c.lead}</small></span></button></li>`).join("")}</ul>`);
   card.querySelectorAll("[data-curse]").forEach(b => b.onclick = () => openCurse(b.dataset.curse));
   apply(true);
@@ -398,22 +402,65 @@ function openFind(){
   apply(true);
 }
 
-/* curses */
-function openCurse(key){
-  const c = CURSES[key];
-  state.mode = "curse"; state.curseKey = key; state.sel = null; state.path = null;
-  threadBtn.setAttribute("aria-pressed","false");
-  shell(`
-    <div class="card-top"><span class="greek">Ἀρά</span><button class="close" data-close>Close</button></div>
+/* Stories: a curse told one generation at a time. Step 0 introduces it, steps 1…n tell it and
+   reveal on the tree only the figures met so far, step n+1 shows the whole line at once. */
+function reveal(c, k){
+  const now = new Set(c.steps[k-1].figures);
+  const told = new Set(c.steps.slice(0, k).flatMap(s => s.figures));
+  const later = new Set(c.steps.slice(k).flatMap(s => s.figures));
+  const shown = new Set(told);
+  // bring in the people the story has just touched (Aerope, Chrysippus…), unless their own step is still to come
+  c.pairs.forEach(([a, b]) => {
+    if (told.has(a) && !later.has(b)) shown.add(b);
+    if (told.has(b) && !later.has(a)) shown.add(a);
+  });
+  // the camera follows the step: its figures, with their parents, children and spouses already met
+  const family = (a, b) => E.some(e => (e.type==="parent" || e.type==="marriage") && samePair(e, [a, b]));
+  const focus = new Set(now);
+  c.pairs.forEach(([a, b]) => {
+    if (now.has(a) && shown.has(b) && family(a, b)) focus.add(b);
+    if (now.has(b) && shown.has(a) && family(a, b)) focus.add(a);
+  });
+  return {now, shown, focus};
+}
+const whoLinks = ids => `<div class="who">${ids.map(id => `<button class="rel" data-go="${id}">${N[id].name}</button>`).join("")}</div>`;
+function openCurse(key, step = 0){
+  const c = CURSES[key], n = c.steps.length;
+  state.mode = "curse"; state.curseKey = key; state.step = step; state.sel = null; state.path = null;
+  curseSel.value = key;
+  const dots = `<div class="dots" aria-hidden="true">${c.steps.map((_, i) => `<span class="${i+1===step ? "on" : i+1<step ? "past" : ""}"></span>`).join("")}</div>`;
+  const nav = (back, next) => `<div class="story-nav">${back ? `<button class="act" data-step="${step-1}">← ${back}</button>` : "<span></span>"}${dots}${next ? `<button class="go" data-step="${step+1}">${next} →</button>` : "<span></span>"}</div>`;
+  let body;
+  if (step===0) body = `
+    <h2 class="card-name curse-title">${c.title}</h2>
+    <p class="card-tag">${c.lead}</p>
+    <p class="story-hint">Told generation by generation. The tree fills in as the story goes.</p>
+    ${nav(null, "Begin")}`;
+  else if (step<=n) { const s = c.steps[step-1]; body = `
+    <p class="story-of">${c.title}</p>
+    <p class="story-step">${s.generation} <span>· ${step} of ${n}</span></p>
+    <p class="story-text">${s.text}</p>
+    ${whoLinks(s.figures)}
+    ${nav("Back", step===n ? "The whole curse" : "Next")}`; }
+  else body = `
     <h2 class="card-name curse-title">${c.title}</h2>
     <p class="card-tag">${c.lead}</p>
     <div class="sec"><h3>Generation by generation</h3><ol class="steps">
-      ${c.steps.map(({generation:g, figures:who, text:t}) => `<li><span class="g">${g}</span><div><div class="t">${t}</div><div class="who">${who.map(id => `<button class="rel" data-go="${id}">${N[id].name}</button>`).join("")}</div></div></li>`).join("")}
+      ${c.steps.map(({generation:g, figures:who, text:t}) => `<li><span class="g">${g}</span><div><div class="t">${t}</div>${whoLinks(who)}</div></li>`).join("")}
     </ol></div>
-    <p class="legend">Highlighted on the tree: the bloodline, the crimes and the curses that carry it forward.</p>`);
+    <div class="story-nav"><button class="act" data-step="${n}">← Back</button><button class="act" data-step="1">Tell it again</button></div>
+    <p class="legend">Highlighted on the tree: the bloodline, the crimes and the curses that carry it forward.</p>`;
+  shell(`<div class="card-top"><span class="greek">Ἀρά</span><button class="close" data-close>Close</button></div>${body}`);
+  card.querySelectorAll("[data-step]").forEach(b => b.onclick = () => openCurse(key, +b.dataset.step));
   apply(true);
-  fitTo([...c.nodes], true);
+  fitTo(step>=1 && step<=n ? [...reveal(c, step).focus] : [...c.nodes], true);
 }
+document.addEventListener("keydown", ev => {
+  if (state.mode!=="curse" || ev.target.closest("input, select, textarea")) return;
+  const n = CURSES[state.curseKey].steps.length;
+  if (ev.key==="ArrowRight" && state.step<=n) openCurse(state.curseKey, state.step+1);
+  if (ev.key==="ArrowLeft" && state.step>0) openCurse(state.curseKey, state.step-1);
+});
 
 /* Ariadne’s thread */
 function openThread(){

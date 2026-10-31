@@ -6,3 +6,25 @@
 .steps .t{font-family:var(--display);font-size:16px;line-height:1.55}
 .steps .who{margin-top:4px}
 .steps .who .rel{font-size:15px;margin-right:10px}
+
+/* story mode: one step at a time */
+.story-of{font:500 12px var(--ui);color:var(--muted);margin:6px 0 0}
+.story-step{font-family:var(--display);font-size:26px;line-height:1.1;margin:6px 0 0}
+.story-step span{font:500 12px var(--ui);color:var(--muted);vertical-align:middle}
+.story-text{font-family:var(--display);font-size:20px;line-height:1.5;margin:12px 0 0}
+.story-hint{font-family:var(--display);font-size:16px;color:var(--muted);margin:14px 0 0}
+.card-tag + .story-hint{margin-top:10px}
+.story-text + .who{margin-top:10px}
+.story-text + .who .rel{font-size:16px}
+.story-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+.story-nav .go{margin:0}
+.dots{display:flex;gap:6px}
+.dots span{width:6px;height:6px;border-radius:50%;background:var(--rule)}
+.dots span.past{background:var(--muted)}
+.dots span.on{background:var(--accent)}
+.who .rel{margin-right:10px}
+
+/* phones: while a story is told, the header and sources step aside so the tree fills the screen above the text */
+@media (max-width:899px){
+  body.story header,body.story .controls,body.story .hint{display:none}
+}
