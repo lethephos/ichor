@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS} from "./data.js";
+import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -21,8 +21,12 @@ const SAMPLE = {
 const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, hover:null, mode:null, curseKey:null, step:0, pickOpen:false, path:null};
 
 /* ---------- header ---------- */
-document.getElementById("branchTitle").textContent = FAMILY.title;
-if (FAMILY.id !== FAMILIES[0].id) document.title = `${FAMILY.title} · Ichor`;
+const SITE_TITLE = document.title;
+function showFamily(){
+  document.getElementById("branchTitle").textContent = FAMILY.title;
+  document.title = FAMILY.id === FAMILIES[0].id ? SITE_TITLE : `${FAMILY.title} · Ichor`;
+  familyItems.forEach(li => li.setAttribute("aria-selected", String(li.dataset.family === FAMILY.id)));
+}
 
 /* ---------- family switcher: the title opens a list of families ---------- */
 const familyBtn = document.getElementById("familyBtn"), familyMenu = document.getElementById("familyMenu");
@@ -33,12 +37,26 @@ function openFamilies(open){
   familyMenu.hidden = !open; familyBtn.setAttribute("aria-expanded", String(open));
   if (open) (familyItems.find(li => li.getAttribute("aria-selected")==="true") || familyItems[0]).focus();
 }
+/* Switching family redraws the tree in place: the chosen source and layers stay as they are,
+   and the address changes so the family can be shared and the back button returns to the last one. */
+function switchFamily(id){
+  hideHint(); state.hover = null; resetMode();
+  setFamily(id);
+  showFamily(); buildStories(); indexPeople(); drawTree();
+  initialView(); apply(false);
+}
 function goFamily(id){
-  if (id === FAMILY.id) { openFamilies(false); familyBtn.focus(); return; }
+  openFamilies(false); familyBtn.focus();
+  if (familyOf(id).id === FAMILY.id) return;
   const url = new URL(location.href);
   if (id === FAMILIES[0].id) url.searchParams.delete("family"); else url.searchParams.set("family", id);
-  location.href = url.toString();
+  history.pushState({family: id}, "", url);
+  switchFamily(id);
 }
+addEventListener("popstate", () => {
+  const id = new URLSearchParams(location.search).get("family");
+  if (familyOf(id).id !== FAMILY.id) switchFamily(id);
+});
 familyBtn.addEventListener("click", ev => { ev.stopPropagation(); openFamilies(familyMenu.hidden); });
 familyMenu.addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) goFamily(li.dataset.family); });
 familyMenu.addEventListener("keydown", ev => {
@@ -111,19 +129,28 @@ LAYERS.forEach(L => {
   layerRow.appendChild(b);
 });
 const curseSel = document.getElementById("curseSel");
-Object.values(STORIES).forEach(c => {
-  const o = document.createElement("option"); o.value = c.id; o.textContent = c.title + (c.draft ? " (draft)" : ""); curseSel.appendChild(o);
-});
-// a family with no stories of its own shows no story controls
-if (!Object.keys(STORIES).length) { curseSel.hidden = true; document.querySelector('[data-tool="curses"]').hidden = true; }
+const curseFirst = curseSel.querySelector('option[value=""]');
+function buildStories(){
+  curseSel.replaceChildren(...(curseFirst ? [curseFirst] : []));
+  Object.values(STORIES).forEach(c => {
+    const o = document.createElement("option"); o.value = c.id; o.textContent = c.title + (c.draft ? " (draft)" : ""); curseSel.appendChild(o);
+  });
+  curseSel.value = "";
+  // a family with no stories of its own shows no story controls
+  const none = !Object.keys(STORIES).length;
+  curseSel.hidden = none; document.querySelector('[data-tool="curses"]').hidden = none;
+}
 curseSel.onchange = () => { if (curseSel.value) openCurse(curseSel.value); else resetMode(); };
 const threadBtn = document.getElementById("threadBtn");
 threadBtn.onclick = () => state.mode==="thread" ? resetMode() : openThread();
 /* Find a figure: names (English or Greek, accents ignored) narrow down as you type;
    names that start with what was typed come first. */
-const PEOPLE = [...P].sort((a,b) => a.name.localeCompare(b.name));
 const fold = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-const KEY = Object.fromEntries(P.map(p => [p.id, fold(p.name + " " + p.greek)]));
+let PEOPLE, KEY;
+function indexPeople(){
+  PEOPLE = [...P].sort((a,b) => a.name.localeCompare(b.name));
+  KEY = Object.fromEntries(P.map(p => [p.id, fold(p.name + " " + p.greek)]));
+}
 function findFigures(query){
   const q = fold(query.trim());
   if (!q) return PEOPLE;
@@ -192,18 +219,6 @@ const gGrid = root.append("g");
 const gEdges = root.append("g");
 const gNodes = root.append("g");
 
-ROWY.forEach((y,i) => {
-  gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
-  if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
-});
-// a divider is a stronger rule between two rows, named on the left (e.g. where the gods end and mortals begin)
-DIVIDERS.forEach(d => {
-  const y = (ROWY[d.before-1] + ROWY[d.before]) / 2 + 12;
-  gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
-  gGrid.append("text").attr("class","divider-label").attr("x",0).attr("y",y+4).text(d.label);
-});
-HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
-
 const RN = 8;
 function norm(x,y){ const l = Math.hypot(x,y)||1; return [x/l, y/l]; }
 function edgePath(e){
@@ -224,36 +239,53 @@ function edgePath(e){
   return `M${a.x+u1[0]*(RN+2)},${a.y+u1[1]*(RN+2)} Q${cx},${cy} ${b.x-u2[0]*pad},${b.y-u2[1]*pad}`;
 }
 const BASE = {parent:1.2, marriage:4, affair:1.2, feud:1.2, transform:1.8, curse:1.7};
-const edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class", e => `e e-${e.type}`);
-edgeSel.each(function(e){
-  const g = d3.select(this), d = edgePath(e);
-  const p = g.append("path").attr("class","edge main").attr("d",d);
-  if (e.type==="marriage") g.append("path").attr("class","edge inner").attr("d",d);
-  if (e.type==="transform" || e.type==="curse") p.attr("marker-end",`url(#arr-${e.type})`);
-});
+let edgeSel, nodeSel;
+/* The tree of the chosen family: rows, dividers and houses, then links, then figures. */
+function drawTree(){
+  gGrid.selectAll("*").remove(); gEdges.selectAll("*").remove(); gNodes.selectAll("*").remove();
+  ROWY.forEach((y,i) => {
+    gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
+    if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
+  });
+  // a divider is a stronger rule between two rows, named on the left (e.g. where the gods end and mortals begin)
+  DIVIDERS.forEach(d => {
+    const y = (ROWY[d.before-1] + ROWY[d.before]) / 2 + 12;
+    gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
+    gGrid.append("text").attr("class","divider-label").attr("x",0).attr("y",y+4).text(d.label);
+  });
+  HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
 
-const nodeSel = gNodes.selectAll("g.node").data(P).join("g")
-  .attr("class","node").attr("transform", d => `translate(${d.x},${d.y})`)
-  .attr("tabindex",0).attr("role","button").attr("aria-label", d => d.name)
-  .on("click", (ev,d) => { ev.stopPropagation(); nodeClick(d.id); })
-  .on("keydown", (ev,d) => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); nodeClick(d.id); } })
-  // with a mouse, hovering a figure previews its links; touch keeps tap-to-open
-  .on("pointerenter", (ev,d) => { if (ev.pointerType==="mouse") { state.hover = d.id; apply(150); } })
-  .on("pointerleave", (ev,d) => { if (state.hover===d.id) { state.hover = null; apply(150); } });
-nodeSel.each(function(d){
-  const g = d3.select(this);
-  g.append("circle").attr("class","hit").attr("r",26);
-  g.append("circle").attr("class","halo").attr("r",16);
-  if (d.kind==="god") g.append("circle").attr("class","ring").attr("r",RN+4);
-  g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
-  if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
-      .attr("transform",`translate(${RN+7},${-RN-3})`);
-  // Olympus: a small peak at the upper left; hollow where only some lists count the god
-  if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z")
-      .attr("transform",`translate(${-RN-7},${-RN-3})`)
-      .append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
-  g.append("text").attr("class","lbl" + (d.kind==="god"?" god":"")).attr("text-anchor","middle").attr("y", d.kind==="god" ? 34 : 30).text(d.name);
-});
+  edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class", e => `e e-${e.type}`);
+  edgeSel.each(function(e){
+    const g = d3.select(this), d = edgePath(e);
+    const p = g.append("path").attr("class","edge main").attr("d",d);
+    if (e.type==="marriage") g.append("path").attr("class","edge inner").attr("d",d);
+    if (e.type==="transform" || e.type==="curse") p.attr("marker-end",`url(#arr-${e.type})`);
+  });
+
+  nodeSel = gNodes.selectAll("g.node").data(P).join("g")
+    .attr("class","node").attr("transform", d => `translate(${d.x},${d.y})`)
+    .attr("tabindex",0).attr("role","button").attr("aria-label", d => d.name)
+    .on("click", (ev,d) => { ev.stopPropagation(); nodeClick(d.id); })
+    .on("keydown", (ev,d) => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); nodeClick(d.id); } })
+    // with a mouse, hovering a figure previews its links; touch keeps tap-to-open
+    .on("pointerenter", (ev,d) => { if (ev.pointerType==="mouse") { state.hover = d.id; apply(150); } })
+    .on("pointerleave", (ev,d) => { if (state.hover===d.id) { state.hover = null; apply(150); } });
+  nodeSel.each(function(d){
+    const g = d3.select(this);
+    g.append("circle").attr("class","hit").attr("r",26);
+    g.append("circle").attr("class","halo").attr("r",16);
+    if (d.kind==="god") g.append("circle").attr("class","ring").attr("r",RN+4);
+    g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
+    if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
+        .attr("transform",`translate(${RN+7},${-RN-3})`);
+    // Olympus: a small peak at the upper left; hollow where only some lists count the god
+    if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z")
+        .attr("transform",`translate(${-RN-7},${-RN-3})`)
+        .append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
+    g.append("text").attr("class","lbl" + (d.kind==="god"?" god":"")).attr("text-anchor","middle").attr("y", d.kind==="god" ? 34 : 30).text(d.name);
+  });
+}
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
 
 const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => { root.attr("transform", ev.transform); if (ev.sourceEvent) hideHint(); });
@@ -659,5 +691,6 @@ function runThread(a, b, silent){
   if (!silent) fitTo(res.nodes, true);
 }
 
+showFamily(); buildStories(); indexPeople(); drawTree();
 initialView();
 apply(false);
