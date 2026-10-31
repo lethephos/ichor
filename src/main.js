@@ -414,7 +414,10 @@ const relItem = (id, e, withSentence) => `<li><button class="rel" data-go="${id}
 function shell(inner){
   cardBody.innerHTML = inner;
   card.querySelectorAll("[data-close]").forEach(b => b.onclick = resetMode);
-  card.querySelectorAll("[data-go]").forEach(b => b.onclick = () => select(b.dataset.go, true));
+  card.querySelectorAll("[data-go]").forEach(b => {
+    b.onclick = () => select(b.dataset.go, true);
+    if (b.tagName!=="BUTTON") b.onkeydown = ev => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); select(b.dataset.go, true); } };
+  });
   setFull(false); card.classList.add("open"); card.scrollTop = 0;
 }
 
@@ -434,6 +437,111 @@ grip.addEventListener("pointerup", ev => {
   if (dy < 0) setFull(true); else if (card.classList.contains("full")) setFull(false); else resetMode();
 });
 grip.addEventListener("click", () => { if (dragged) { dragged = false; return; } setFull(!card.classList.contains("full")); });
+
+/* Close family: the figure in the middle, parents above, children below, husbands and
+   wives to the left, lovers to the right, rivals and fates in a band at the bottom.
+   Only links the chosen source tells are drawn, so versions show as extra parents. */
+const CF_W = 340, CF_MAX = 9;
+const esc = t => String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function closeFamily(id){
+  const mine = E.filter(e => (e.from===id || e.to===id) && attested(e));
+  const other = e => e.from===id ? e.to : e.from;
+  const uniq = es => { const seen = new Set(); return es.filter(e => { const o = other(e); if (seen.has(o)) return false; seen.add(o); return true; }); };
+  const parents = uniq(mine.filter(e => e.type==="parent" && e.to===id));
+  const children = uniq(mine.filter(e => e.type==="parent" && e.from===id));
+  const wed = uniq(mine.filter(e => e.type==="marriage"));
+  const loves = uniq(mine.filter(e => e.type==="affair"));
+  const fates = uniq(mine.filter(e => ["feud","curse","transform"].includes(e.type)));
+  if (!mine.length) return "";
+  const out = [], nodes = [], edges = [];
+  let y = 18;
+  // a band of figures in lines of three, with a small heading on the left
+  const placed = {};
+  const band = (label, es) => {
+    // figures already drawn (a son who is also a rival) keep their place; only the link is added
+    const extra = es.filter(e => placed[other(e)]); es = es.filter(e => !placed[other(e)]);
+    extra.forEach(e => edges.push([e, placed[other(e)]]));
+    if (!es.length) return;
+    const shown = es.slice(0, CF_MAX);
+    const per = shown.some(e => N[other(e)].name.length > 12) ? 2 : 3, gap = per===3 ? 112 : 170;
+    const lines = Math.ceil(shown.length/per);
+    out.push(`<text class="cf-h" x="0" y="${y-4}">${label}</text>`);
+    shown.forEach((e, i) => {
+      const line = Math.floor(i/per), inLine = Math.min(per, shown.length - line*per), k = i - line*per;
+      put(e, {x: CF_W/2 + (k - (inLine-1)/2) * gap, y: y + 14 + line*44});
+    });
+    y += lines*44 + (es.length > CF_MAX ? 16 : 0) + 10;
+    if (es.length > CF_MAX) out.push(`<text class="cf-more" x="${CF_W/2}" y="${y-14}" text-anchor="middle">and ${es.length - CF_MAX} more</text>`);
+  };
+  const put = (e, n) => { n.id = other(e); placed[n.id] = n; nodes.push(n); edges.push([e, n]); };
+  band("Parents", parents);
+  // the middle: spouses stacked on the left, lovers on the right
+  const side = Math.max(Math.min(wed.length, CF_MAX), Math.min(loves.length, CF_MAX), 1);
+  const midTop = y + 8, cy = midTop + (side-1)*15 + 10;
+  const col = (es, x, label, anchor) => {
+    if (!es.length) return;
+    out.push(`<text class="cf-h" x="${anchor==="end" ? 0 : CF_W}" y="${midTop-8}" text-anchor="${anchor==="end" ? "start" : "end"}">${label}</text>`);
+    es.slice(0, CF_MAX).forEach((e, i) => placed[other(e)] ? edges.push([e, placed[other(e)]]) : put(e, {x, y: midTop + 10 + i*30 - (Math.min(es.length,CF_MAX)-side)*15, side: anchor}));
+    if (es.length > CF_MAX) out.push(`<text class="cf-more" x="${x}" y="${midTop + 10 + CF_MAX*30}" text-anchor="middle">and ${es.length - CF_MAX} more</text>`);
+  };
+  col(wed, 96, "Married", "end"); col(loves, CF_W-96, "Loves", "start");
+  y = midTop + side*30 + (wed.length > CF_MAX || loves.length > CF_MAX ? 30 : 14);
+  band("Children", children);
+  const H = y + 6, C = {x: CF_W/2, y: cy};
+  const paths = edges.map(([e, n]) => {
+    const a = e.from===id ? C : n, b = e.from===id ? n : C;
+    const d = n.side ? `M${a.x},${a.y} L${b.x},${b.y}` : `M${a.x},${a.y} C${a.x},${(a.y+b.y)/2} ${b.x},${(a.y+b.y)/2} ${b.x},${b.y}`;
+    const arrow = e.type==="curse" || e.type==="transform" ? ` marker-end="url(#arr-${e.type})"` : "";
+    return `<g class="e e-${e.type}"><path class="edge main" d="${d}" stroke-width="${e.type==="marriage" ? 4 : 1.2}"${arrow}/>${e.type==="marriage" ? `<path class="edge inner" d="${d}"/>` : ""}</g>`;
+  });
+  const dot = (p, x, y, r) => `${p.kind==="god" || p.kind==="group" ? `<circle class="ring" cx="${x}" cy="${y}" r="${r+3}"/>` : ""}<circle class="dot ${p.kind==="group" ? "" : p.kind}" cx="${x}" cy="${y}" r="${r}"/>`;
+  const fig = nodes.map(n => {
+    const o = n.id, p = N[o];
+    const lx = n.side==="end" ? n.x-12 : n.side==="start" ? n.x+12 : n.x, ly = n.side ? n.y+4 : n.y+20;
+    const anchor = n.side==="end" ? "end" : n.side==="start" ? "start" : "middle";
+    return `<g class="cf-n" data-go="${o}" role="button" tabindex="0" aria-label="${esc(p.name)}"><circle class="hit" cx="${n.x}" cy="${n.y}" r="16"/>${dot(p, n.x, n.y, 5)}<text class="cf-l" x="${lx}" y="${ly}" text-anchor="${anchor}">${esc(p.name)}</text></g>`;
+  }).join("");
+  const me = N[id];
+  return `<div class="sec cf"><h3>Close family</h3><svg class="cf-svg" viewBox="-8 0 ${CF_W+16} ${H}" role="img" aria-label="Close family of ${esc(me.name)}">
+    ${out.join("")}${paths.join("")}${fig}
+    <g class="cf-me">${dot(me, C.x, C.y, 7)}<text class="cf-l me" x="${C.x}" y="${C.y+24}" text-anchor="middle">${esc(me.name)}</text></g>
+  </svg>${fateWheel(id, me, fates, dot)}<p class="cf-note">${state.src==="all" ? "All versions at once: a figure may have more parents than one." : "As " + SRC[state.src] + " tell it."} Tap a name to move to them.</p></div>`;
+}
+
+/* Feuds and fates: rivals, curses and transformations on a ring around the figure,
+   so their links never cross the family above. */
+const WHEEL_MAX = 14;
+function fateWheel(id, me, fates, dot){
+  if (!fates.length) return "";
+  const other = e => e.from===id ? e.to : e.from;
+  const shown = fates.slice(0, WHEEL_MAX), n = shown.length;
+  // a tall, narrow ring leaves room at the sides for the names
+  const rx = n > 8 ? 70 : 62, ry = n > 8 ? 124 : 78, C = {x: CF_W/2, y: ry + 40};
+  const parts = shown.map((e, i) => {
+    const t = -Math.PI/2 + (i + (n % 2 ? 0 : 0.5)) * 2*Math.PI/n, c = Math.cos(t), s = Math.sin(t);
+    const x = C.x + rx*c, y = C.y + ry*s, o = other(e), p = N[o];
+    const a = e.from===id ? C : {x, y}, b = e.from===id ? {x, y} : C;
+    const len = Math.hypot(b.x-a.x, b.y-a.y), cut = (e.from===id ? 10 : 12) / len;
+    const bx = b.x - (b.x-a.x)*cut, by = b.y - (b.y-a.y)*cut;
+    const arrow = e.type==="curse" || e.type==="transform" ? ` marker-end="url(#arr-${e.type})"` : "";
+    const anchor = c > 0.1 ? "start" : c < -0.1 ? "end" : "middle";
+    const lx = x + (anchor==="start" ? 11 : anchor==="end" ? -11 : 0), ly = anchor==="middle" ? (s < 0 ? y-11 : y+19) : y+4;
+    // a long name breaks onto two lines at its middle space
+    const words = p.name.split(" "), half = Math.ceil(words.length/2);
+    const label = p.name.length > 13 && words.length > 1
+      ? `<tspan x="${lx}" dy="-7">${esc(words.slice(0, half).join(" "))}</tspan><tspan x="${lx}" dy="15">${esc(words.slice(half).join(" "))}</tspan>`
+      : esc(p.name);
+    return {edge: `<g class="e e-${e.type}"><path class="edge main" d="M${a.x},${a.y} L${bx},${by}" stroke-width="1.2"${arrow}/></g>`,
+      fig: `<g class="cf-n" data-go="${o}" role="button" tabindex="0" aria-label="${esc(p.name)}"><circle class="hit" cx="${x}" cy="${y}" r="16"/>${dot(p, x, y, 5)}<text class="cf-l" x="${lx}" y="${ly}" text-anchor="${anchor}">${label}</text></g>`};
+  });
+  const H = C.y + ry + 36 + (fates.length > WHEEL_MAX ? 16 : 0);
+  return `<svg class="cf-svg cf-wheel" viewBox="-8 0 ${CF_W+16} ${H}" role="img" aria-label="Feuds and fates of ${esc(me.name)}">
+    <text class="cf-h" x="0" y="12">Feuds and fates</text>
+    ${parts.map(q => q.edge).join("")}${parts.map(q => q.fig).join("")}
+    <g class="cf-me">${dot(me, C.x, C.y, 7)}<text class="cf-l me" x="${C.x}" y="${C.y+4}" dx="12" text-anchor="start"></text></g>
+    ${fates.length > WHEEL_MAX ? `<text class="cf-more" x="${CF_W/2}" y="${H-6}" text-anchor="middle">and ${fates.length - WHEEL_MAX} more</text>` : ""}
+  </svg>`;
+}
 function renderNode(id){
   const p = N[id];
   const touches = e => e.from===id || e.to===id;
@@ -455,6 +563,7 @@ function renderNode(id){
     <p class="card-tag">${p.tagline}</p>
     <p class="card-role">${p.role}</p>
     <p class="card-story">${p.story}</p>
+    ${closeFamily(id)}
     ${p.members ? `<div class="sec"><h3>${p.count ? `${p.count} ${p.members_label || "sisters"}` : "Who they are"}</h3><ul class="rels members">${p.members.map(m => `<li>${m.id && N[m.id] ? `<button class="rel" data-go="${m.id}">${m.name}</button>` : `<span class="rel static">${m.name}</span>`} <span class="greek-sm" lang="grc">${m.greek}</span>${m.note ? `<span class="note">${m.note}</span>` : ""}</li>`).join("")}</ul>${p.members_note ? `<p class="oly-note">${p.members_note}</p>` : ""}</div>` : ""}
     ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
