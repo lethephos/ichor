@@ -13,26 +13,13 @@
 <header>
   <div class="kicker"><span class="brand">Ichor</span> · The family tree of the Greek gods</div>
   <div class="now">Now exploring</div>
-  <h1 class="branch-title" id="branchTitle"></h1>
-  <div class="branch-sub" id="branchSub"></div>
+  <div class="title-line"><h1 class="branch-title" id="branchTitle"></h1><div class="branch-sub" id="branchSub"></div></div>
 </header>
 
 <div class="controls">
-  <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
-  <p class="src-note" id="srcNote" aria-live="polite"></p>
-  <div class="row" id="layerRow" role="group" aria-label="Layers"><span class="row-label">Show</span></div>
-  <div class="row" id="exploreRow">
-    <span class="row-label">Explore</span>
-    <select class="act" id="curseSel" aria-label="Trace a curse">
-      <option value="">Trace a curse</option>
-    </select>
-    <button class="act" id="threadBtn" aria-pressed="false">Ariadne’s thread</button>
-    <button class="act" id="fitBtn">See the whole tree</button>
-    <div class="finder">
-      <input class="act" id="finder" type="search" placeholder="Find a figure" autocomplete="off" spellcheck="false"
-        role="combobox" aria-label="Find a figure" aria-autocomplete="list" aria-expanded="false" aria-controls="finderList">
-      <ul class="finder-list" id="finderList" role="listbox" aria-label="Figures" hidden></ul>
-    </div>
+  <div class="srcline">
+    <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
+    <p class="src-note" id="srcNote" aria-live="polite"></p>
   </div>
   <div class="row tools" id="tools" role="group" aria-label="Explore">
     <button class="act" data-tool="layers" aria-pressed="false">Layers</button>
@@ -49,6 +36,22 @@
 </div>
 
 <aside id="card"><button class="grip" id="grip" aria-label="Expand card" aria-expanded="false"></button><div id="cardBody" aria-live="polite"></div></aside>
+<div class="dock" id="dock">
+  <div class="row" id="layerRow" role="group" aria-label="Layers"><span class="row-label">Show</span></div>
+  <span class="dock-sep" aria-hidden="true"></span>
+  <div class="row" id="exploreRow">
+    <span class="row-label">Explore</span>
+    <select class="act" id="curseSel" aria-label="Trace a curse">
+      <option value="">Trace a curse</option>
+    </select>
+    <button class="act" id="threadBtn" aria-pressed="false">Ariadne’s thread</button>
+    <div class="finder">
+      <input class="act" id="finder" type="search" placeholder="Find a figure" autocomplete="off" spellcheck="false"
+        role="combobox" aria-label="Find a figure" aria-autocomplete="list" aria-expanded="false" aria-controls="finderList">
+      <ul class="finder-list" id="finderList" role="listbox" aria-label="Figures" hidden></ul>
+    </div>
+  </div>
+</div>
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>

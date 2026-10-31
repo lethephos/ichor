@@ -8,7 +8,8 @@ header{padding:16px 16px 6px}
 @media (min-width:900px){
   header{padding:22px 28px 8px}
   .kicker{font-size:11px}
-  .now{margin-top:16px}
-  .branch-title{font-size:40px}
-  .branch-sub{font-size:19px}
+  .now{margin-top:12px}
+  .title-line{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px}
+  .branch-title{font-size:34px}
+  .branch-sub{font-size:19px;margin:0}
 }

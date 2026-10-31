@@ -34,12 +34,11 @@
 .e.thread .main{stroke:var(--accent)!important;stroke-dasharray:none!important}
 .e.thread .inner{display:none}
 
-.hint{position:absolute;left:20px;bottom:14px;font-size:12px;color:var(--muted);pointer-events:none}
+.hint{position:absolute;left:20px;top:12px;font-size:12px;color:var(--muted);pointer-events:none}
 @media (prefers-reduced-motion: reduce){.node{transition:none}.node.pulse .halo{animation:none}}
 .hint{transition:opacity .5s}
 .hint.gone{opacity:0}
-.fit-float{display:none}
+.fit-float{position:absolute;right:16px;top:10px;background:var(--bg-2)}
 @media (max-width:899px){
-  .hint{left:16px;top:10px;bottom:auto;max-width:calc(100% - 150px)}
-  .fit-float{display:block;position:absolute;right:16px;top:10px;background:var(--bg-2)}
+  .hint{left:16px;top:10px;max-width:calc(100% - 150px)}
 }

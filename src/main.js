@@ -199,8 +199,9 @@ const wide = () => window.innerWidth >= 900;
 const card = document.getElementById("card");
 const viewW = () => graphEl.clientWidth - (wide() && card.classList.contains("open") ? 420 : 0);
 const toolsEl = document.getElementById("tools");
+const dockEl = document.getElementById("dock");
 const viewH = () => {
-  if (wide()) return graphEl.clientHeight;
+  if (wide()) return Math.max(120, graphEl.clientHeight - dockEl.offsetHeight - 26);
   const covered = Math.max(card.classList.contains("open") ? card.offsetHeight : 0, toolsEl.offsetHeight + 12);
   return Math.max(120, graphEl.clientHeight - covered);
 };
@@ -208,7 +209,7 @@ function fitTo(ids, animate){
   const pts = ids ? ids.map(id => N[id]) : P;
   const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
   const x0 = ids ? Math.min(...xs) - 80 : -20, x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
-  const w = ids ? viewW() : graphEl.clientWidth - (wide() ? 420 : 0), h = viewH();
+  const w = viewW(), h = viewH();
   const k = Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95);
   const t = d3.zoomIdentity.translate((w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
   (animate ? svg.transition().duration(600) : svg).call(zoom.transform, t);
@@ -221,7 +222,6 @@ function focusOn(id){
   const tx = wide() ? (w-420)/2 : w/2, ty = viewH()/2;
   svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx-p.x*k, ty-p.y*k).scale(k));
 }
-document.getElementById("fitBtn").onclick = () => fitTo(null, true);
 document.getElementById("fitFloat").onclick = () => fitTo(null, true);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;

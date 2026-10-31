@@ -14,15 +14,30 @@
 .act[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 select.act{appearance:none;-webkit-appearance:none;padding-right:22px;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 12px) 50%,calc(100% - 8px) 50%;background-size:4px 4px;background-repeat:no-repeat}
 select.act option{background:var(--bg-2);color:var(--text)}
-@media (min-width:900px){
-  .controls{padding:10px 28px 6px}
-}
 .tools{display:none}
+
+/* desktop: the sources and their note share one line; layers and explore tools sit in a dock over the bottom of the tree */
+.dock{display:none}
+@media (min-width:900px){
+  .controls{padding:6px 28px 10px}
+  .srcline{display:flex;align-items:center;gap:22px}
+  .srcline #srcRow{flex:0 0 auto}
+  .srcline .src-note{flex:1;min-width:260px;margin:0;min-height:0;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .dock{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 20px;position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:4;width:max-content;max-width:calc(100% - 40px);padding:8px 16px;background:var(--bg-2);border:1px solid var(--rule);border-radius:14px;box-shadow:0 8px 24px var(--shadow)}
+  .dock .row{padding:0;overflow:visible;flex-wrap:wrap;justify-content:center;row-gap:8px}
+  .dock .row-label{display:none}
+  .dock-sep{width:1px;align-self:stretch;background:var(--rule)}
+  #card.open ~ .dock .dock-sep{display:none}   /* the dock wraps onto two lines here */
+  .dock #curseSel{width:170px}
+  .dock .finder-list{top:auto;bottom:calc(100% + 12px)}
+  /* with the card open, the dock centres on the part of the tree left beside it */
+  #card.open ~ .dock{left:calc(50% - 210px);max-width:calc(100% - 480px)}
+}
 
 /* phones and narrow tablets: sources stay in view, everything else sits behind four buttons */
 @media (max-width:899px){
   .controls{padding:6px 16px 8px;gap:4px}
-  .row-label,#layerRow,#exploreRow{display:none}
+  .row-label{display:none}
   #srcRow{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
   #srcRow.at-end{-webkit-mask-image:none;mask-image:none}
   .src-note{margin:0;font-size:14px;line-height:1.4;min-height:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -45,6 +60,4 @@ select.act option{background:var(--bg-2);color:var(--text)}
 .finder-list .n{font:17px var(--display);color:var(--text)}
 .finder-list .r{font:12px var(--ui);color:var(--muted)}
 .finder-list .none{cursor:default}
-@media (min-width:900px){
-  #exploreRow{overflow:visible}   /* let the suggestions hang below the row */
-}
+@media (min-width:900px) and (max-width:1359px){.dock-sep{display:none}}

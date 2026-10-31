@@ -33,8 +33,8 @@ Features in the prototype:
   - All text meets WCAG AA contrast on both bg and panel.
 - Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation.
 - Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted gold with arrow; curse = red with arrow.
-- Thin meander band under the header.
-- Header: **Ichor** / *The family tree of the Greek gods* / small line "Now exploring · Two cursed houses: Atreus and Labdacus" (this line will become a branch switcher).
+- Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of the Greek gods", then "Now exploring", then the branch as the page title, "Two cursed houses", with "Atreus and Labdacus" beside it on desktop and under it on phones. The title will become a branch switcher. Sources are pills, the chosen one filled; on desktop their note sits on the same line.
+- Tools: on desktop the layer toggles, Trace a curse, Ariadne’s thread and the search box float in a dock at the bottom of the tree; on phones four buttons (Layers, Curses, Thread, Find) float at the bottom and open panels in the card sheet. "Whole tree" sits in the top corner of the tree.
 
 **Tone**
 - Taglines read like a family drama ("Served his brother a dinner of his own children."). Stories: short sentences, past tense.
