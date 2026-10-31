@@ -29,6 +29,14 @@
         "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis", "themis", "mnemosyne", "erinyes", "oceanids", "pleiades", "muses", "horae", "moirai", "charites", "crius", "hyperion", "theia", "iapetus", "prometheus", "epimetheus", "menoetius", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "hecate"]
       },
       {
+        "id": "titans",
+        "label": "The Titans",
+        "title": "The Titans",
+        "note": "Gaia and Uranus, their twelve children, and the gods the Titans fathered.",
+        "focus": "cronus",
+        "figures": ["gaia", "uranus", "erinyes", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "crius", "hyperion", "theia", "iapetus", "themis", "mnemosyne", "hestia", "demeter", "hades", "poseidon", "hera", "zeus", "atlas", "pleiades", "maia", "prometheus", "epimetheus", "menoetius", "oceanids", "metis", "dione", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "leto", "hecate", "muses", "horae", "moirai"]
+      },
+      {
         "id": "zeus",
         "label": "Zeus and his loves",
         "title": "Zeus and his loves",
