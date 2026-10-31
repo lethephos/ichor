@@ -3,7 +3,7 @@
     "id": "cursed-houses",
     "title": "From Gaia to Orestes",
     "subtitle": "",
-    "tiers": ["The first gods", "Titans", "Children of the Titans", "Children of Zeus", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V"],
+    "tiers": ["The first gods", "Titans", "Children of the Titans", "Children of Zeus", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V", "Generation VI"],
     "focus": "pelops",
     "houses": [
       {"label": "House of Labdacus", "founder": "labdacus"},
