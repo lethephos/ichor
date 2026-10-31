@@ -30,8 +30,6 @@
 }
 
 /* telling a story by one source */
-.story-src{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
-.story-src span{font:500 12px var(--ui);color:var(--muted);margin-right:4px}
 .story-src .tab{padding:3px 10px;font-size:12px}
 .story-says{margin-top:16px;padding:12px 14px;border-left:2px solid var(--accent);background:var(--bg)}
 .story-says h3{font:500 12px var(--ui);color:var(--muted);margin:0 0 6px}
@@ -48,3 +46,17 @@
   body.story #card{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
   .story-nav{bottom:calc(-22px - env(safe-area-inset-bottom,0px));padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
 }
+
+/* Told by, folded into one line */
+.story-src{margin-top:14px}
+.story-src-toggle{background:none;border:none;padding:0;font:500 12px var(--ui);color:var(--muted);cursor:pointer}
+.story-src-toggle b{font-weight:600;color:var(--text)}
+.story-src-toggle:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.story-src-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+
+/* where the versions part ways, inside a step */
+.story-ver{margin-top:16px;border-left:2px solid var(--accent);padding:2px 0 2px 14px}
+.story-ver summary{font:600 13px var(--ui);color:var(--accent);cursor:pointer;list-style-position:outside}
+.story-ver summary span{font-weight:500;color:var(--muted)}
+.story-ver p{font-family:var(--display);font-size:16px;line-height:1.55;margin:10px 0 0}
+.story-ver .srcs{font-family:var(--ui)}

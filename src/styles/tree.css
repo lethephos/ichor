@@ -42,3 +42,5 @@
 @media (max-width:899px){
   .hint{left:16px;top:10px;max-width:calc(100% - 150px)}
 }
+/* in a story, the parents different sources give a figure: dashed gold */
+.e.alt .main{stroke:var(--accent)!important;stroke-dasharray:4 4}

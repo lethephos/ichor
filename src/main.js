@@ -18,7 +18,7 @@ const SAMPLE = {
   curse:`<line x1="0" y1="5" x2="22" y2="5" stroke="var(--curse)" stroke-width="1.8"/><path d="M20,1 L26,5 L20,9 z" fill="var(--curse)"/>`
 };
 
-const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, hover:null, mode:null, curseKey:null, step:0, path:null};
+const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, hover:null, mode:null, curseKey:null, step:0, pickOpen:false, path:null};
 
 /* ---------- header ---------- */
 document.getElementById("branchTitle").textContent = BRANCH.title;
@@ -252,6 +252,8 @@ function apply(animate){
     let vis = edgeVisible(e);
     let inCurse = curse && ["parent","curse","feud","affair","marriage"].includes(e.type) && curse.pairs.some(p => samePair(e,p)) && attested(e);
     if (story && inCurse && !(story.shown.has(e.from) && story.shown.has(e.to))) inCurse = false;   // not told yet
+    const isAlt = !!(story && story.alt.has(e.i));
+    if (isAlt) inCurse = true;
     const inPath = pathEdges.has(e.i);
     if (inPath) vis = true;
     const hot = (sel && (e.from===sel || e.to===sel)) || (inCurse && (!story || story.now.has(e.from) || story.now.has(e.to))) || inPath;
@@ -260,7 +262,7 @@ function apply(animate){
     if (sel || curse || path) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
     if (!vis && !inCurse) op = 0;
     if (vis) { visible.add(e.from); visible.add(e.to); }
-    const g = d3.select(this).classed("thread", inPath);
+    const g = d3.select(this).classed("thread", inPath).classed("alt", isAlt);
     (dur ? g.transition().duration(dur) : g).style("opacity", op);
     g.select(".main").attr("stroke-width", inPath ? 3 : hot ? BASE[e.type]*1.7 : BASE[e.type]);
   });
@@ -433,7 +435,19 @@ function reveal(c, k, told = toldSteps(c)){
     if (now.has(a) && shown.has(b) && family(a, b)) focus.add(b);
     if (now.has(b) && shown.has(a) && family(a, b)) focus.add(a);
   });
-  return {now, shown, focus};
+  // with all sources on, the other parents a current figure is given appear as alternatives
+  const alt = new Set();
+  if (state.src==="all") now.forEach(id => altParents(id).flat().forEach(e => {
+    if (!shown.has(e.from)) { shown.add(e.from); focus.add(e.from); }
+    alt.add(e.i);
+  }));
+  return {now, shown, focus, alt};
+}
+/* Real disagreements the data can show by itself: a child with two fathers, or two mothers, in different sources. */
+function altParents(id){
+  const byGender = {};
+  E.filter(e => e.type==="parent" && e.to===id).forEach(e => (byGender[N[e.from].gender] ||= []).push(e));
+  return Object.values(byGender).filter(g => g.length > 1);
 }
 const nextStep = (c, step, told) => { for (let i = step+1; i <= c.steps.length; i++) if (told[i-1]) return i; return c.steps.length + 1; };
 const prevStep = (c, step, told) => { for (let i = Math.min(step-1, c.steps.length); i >= 1; i--) if (told[i-1]) return i; return 0; };
@@ -446,8 +460,9 @@ function openCurse(key, step = 0){
   const back = prevStep(c, step, told), next = nextStep(c, step, told);
   const dots = `<div class="dots" aria-hidden="true">${c.steps.map((_, i) => `<span class="${!told[i] ? "skip" : i+1===step ? "on" : i+1<step ? "past" : ""}"></span>`).join("")}</div>`;
   const nav = (backLabel, nextLabel) => `<div class="story-nav">${backLabel ? `<button class="act" data-step="${back}">← ${backLabel}</button>` : "<span></span>"}${dots}${nextLabel ? `<button class="go" data-step="${next}">${nextLabel} →</button>` : "<span></span>"}</div>`;
-  const pick = `<div class="story-src" role="group" aria-label="Told by"><span>Told by</span>${[["all", "All sources"], ...Object.entries(SRC)].map(([k, l]) =>
-    `<button class="tab" data-src="${k}" aria-pressed="${src===k}">${l}</button>`).join("")}</div>`;
+  const pick = `<div class="story-src"><button class="story-src-toggle" aria-expanded="${state.pickOpen}">Told by <b>${src==="all" ? "all sources" : by}</b> <span aria-hidden="true">${state.pickOpen ? "▴" : "▾"}</span></button>
+    ${state.pickOpen ? `<div class="story-src-row" role="group" aria-label="Told by">${[["all", "All sources"], ...Object.entries(SRC)].map(([k, l]) =>
+      `<button class="tab" data-src="${k}" aria-pressed="${src===k}">${l}</button>`).join("")}</div>` : ""}</div>`;
   const count = told.filter(Boolean).length;
   let body;
   if (step===0) body = `
@@ -459,7 +474,14 @@ function openCurse(key, step = 0){
     ${count ? nav(null, "Begin") : `<div class="story-nav"><span></span><button class="act" data-step="${n+1}">See the whole curse →</button></div>`}`;
   else if (step<=n) {
     const s = c.steps[step-1];
-    const says = src==="all" ? "" : told[step-1]
+    const alts = s.figures.flatMap(id => altParents(id).map(g => ({id, g})));
+    const vers = s.figures.filter(id => N[id].versions);
+    const differ = src!=="all" || !(alts.length || vers.length) ? "" : `
+      <details class="story-ver"><summary>Versions differ <span>· ${[...new Set([...alts.map(a => a.id), ...vers])].map(id => N[id].name).join(", ")}</span></summary>
+        ${alts.map(({id, g}) => `<p><b>${N[id].name}’s ${N[g[0].from].gender==="f" ? "mother" : "father"}:</b> ${g.map(e => `${N[e.from].name} <span class="srcs">(${e.sources.map(x => SRC[x]).join(", ")})</span>`).join(" or ")}.</p>`).join("")}
+        ${vers.map(id => `<p><b>${N[id].name}.</b> ${N[id].versions}</p>`).join("")}
+      </details>`;
+    const says = src==="all" ? differ : told[step-1]
       ? `<div class="story-says"><h3>In ${by}</h3><ul>${stepLinks(c, step-1).filter(attested).sort((a, b) => ORDER[a.type] - ORDER[b.type])
           .map(e => `<li>${sentence(e)}${e.sources.length===1 ? ` <span class="only">only here</span>` : ""}</li>`).join("")}</ul></div>`
       : `<p class="story-hint">This part is not told in ${by}.</p>`;
@@ -483,7 +505,9 @@ function openCurse(key, step = 0){
     <p class="legend">Highlighted on the tree: the bloodline, the crimes and the curses that carry it forward${src==="all" ? "" : `, as ${by} records them`}.</p>`;
   shell(`<div class="card-top"><span class="greek">Ἀρά</span><button class="close" data-close>Close</button></div>${body}`);
   card.querySelectorAll("[data-step]").forEach(b => b.onclick = () => openCurse(key, +b.dataset.step));
-  card.querySelectorAll(".story-src [data-src]").forEach(b => b.onclick = () => setSource(b.dataset.src));
+  card.querySelectorAll(".story-src [data-src]").forEach(b => b.onclick = () => { state.pickOpen = false; setSource(b.dataset.src); });
+  card.querySelectorAll(".story-ver").forEach(d => d.addEventListener("toggle", () => { if (d.open && !wide()) setFull(true); }));
+  card.querySelectorAll(".story-src-toggle").forEach(b => b.onclick = () => { state.pickOpen = !state.pickOpen; openCurse(key, step); });
   apply(true);
   fitTo(step>=1 && step<=n ? [...reveal(c, step, told).focus] : [...c.nodes], true);
 }
