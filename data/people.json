@@ -314,7 +314,7 @@
       {
         "name": "Sterope",
         "greek": "Στερόπη",
-        "note": "in later writers Oenomaus’s mother, or his wife"
+        "note": "in Apollodorus Oenomaus’s wife; in later writers his mother"
       },
       {
         "name": "Merope",
@@ -323,7 +323,7 @@
       }
     ],
     "members_note": "Maia is drawn on her own.",
-    "versions": "Hesiod calls them simply ‘born of Atlas’; Apollodorus and Ovid name their mother, Pleione. Ovid says only six can be seen: Merope hides because she married a mortal, or Electra, because she could not bear to watch Troy fall."
+    "versions": "Hesiod calls them simply ‘born of Atlas’; Apollodorus and Ovid name their mother, Pleione. Ovid says only six can be seen, because Merope hides, ashamed that she married a mortal. Others say it was Electra who hid her face, so as not to watch Troy fall."
   },
   {
     "id": "dione",
@@ -348,13 +348,13 @@
     "generation": 2,
     "role": "The daughters of Ocean",
     "tagline": "Three thousand sisters, scattered over the earth.",
-    "story": "Daughters of Oceanus and Tethys: nymphs of springs, rivers and the sea. Hesiod names forty-one of them. The greatest, Styx, gave her name to the water by which the gods swear.",
+    "story": "Daughters of Oceanus and Tethys: nymphs of springs, rivers and the sea. Hesiod names forty-one of them. The eldest, Styx, gave her name to the water by which the gods swear.",
     "count": "Three thousand",
     "members": [
       {
         "name": "Styx",
         "greek": "Στύξ",
-        "note": "the greatest of them; the gods swear by her water"
+        "note": "the eldest of them; the gods swear by her water"
       },
       {
         "name": "Metis",
