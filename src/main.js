@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf} from "./data.js";
+import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, ROWB, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -245,11 +245,11 @@ function drawTree(){
   gGrid.selectAll("*").remove(); gEdges.selectAll("*").remove(); gNodes.selectAll("*").remove();
   ROWY.forEach((y,i) => {
     gGrid.append("text").attr("class","gen").attr("x",0).attr("y",y+5).text(GENS[i]);
-    if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWY[i-1]+y)/2+12).attr("y2",(ROWY[i-1]+y)/2+12);
+    if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWB[i-1]+y)/2+12).attr("y2",(ROWB[i-1]+y)/2+12);
   });
   // a divider is a stronger rule between two rows, named on the left (e.g. where the gods end and mortals begin)
   DIVIDERS.forEach(d => {
-    const y = (ROWY[d.before-1] + ROWY[d.before]) / 2 + 12;
+    const y = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12;
     gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
     gGrid.append("text").attr("class","divider-label").attr("x",0).attr("y",y+4).text(d.label);
   });
