@@ -63,3 +63,7 @@
 .read-as{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
 .read-as span{font:500 12px var(--ui);color:var(--muted);margin-right:2px}
 .read-as .tab{padding:3px 10px;font-size:12px}
+
+/* stories not yet checked */
+.draft{font:600 10px var(--ui);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:1px 6px;vertical-align:middle}
+.draft-note{font:12px/1.5 var(--ui);color:var(--muted);margin:12px 0 0}

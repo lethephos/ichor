@@ -1,0 +1,222 @@
+[
+  {
+    "id": "atreus",
+    "kind": "curse",
+    "title": "The curse on the House of Atreus",
+    "lead": "Five generations, each paying for the last.",
+    "pairs": [
+      ["tantalus", "pelops"],
+      ["myrtilus", "pelops"],
+      ["pelops", "atreus"],
+      ["pelops", "thyestes"],
+      ["atreus", "thyestes"],
+      ["thyestes", "aerope"],
+      ["atreus", "agamemnon"],
+      ["thyestes", "aegisthus"],
+      ["aegisthus", "atreus"],
+      ["agamemnon", "iphigenia"],
+      ["clytemnestra", "agamemnon"],
+      ["aegisthus", "agamemnon"],
+      ["agamemnon", "orestes"],
+      ["orestes", "clytemnestra"],
+      ["orestes", "aegisthus"]
+    ],
+    "steps": [
+      {
+        "label": "Generation I",
+        "figures": ["tantalus"],
+        "text": "Tantalus serves his son Pelops to the gods. The gods restore the boy; Tantalus is punished forever."
+      },
+      {
+        "label": "Generation II",
+        "figures": ["pelops", "myrtilus"],
+        "text": "Pelops wins Hippodamia by bribing Myrtilus, then throws him into the sea. Falling, Myrtilus curses Pelops and all his line."
+      },
+      {
+        "label": "Generation III",
+        "figures": ["atreus", "thyestes"],
+        "text": "Thyestes seduces his brother’s wife and steals the golden lamb. Atreus feeds Thyestes his own sons, and Thyestes curses the house of Atreus."
+      },
+      {
+        "label": "Generation IV",
+        "figures": ["agamemnon", "clytemnestra", "aegisthus"],
+        "text": "Agamemnon sacrifices Iphigenia to sail for Troy. On his return, Clytemnestra and Aegisthus kill him."
+      },
+      {
+        "label": "Generation V",
+        "figures": ["orestes"],
+        "text": "Orestes kills his mother and Aegisthus. Hunted by the Furies, he is tried in Athens and acquitted. The chain breaks."
+      }
+    ]
+  },
+  {
+    "id": "labdacus",
+    "kind": "curse",
+    "title": "The curse on the House of Labdacus",
+    "lead": "A crime in Pelops’s house echoes through Thebes.",
+    "pairs": [
+      ["pelops", "laius"],
+      ["pelops", "chrysippus"],
+      ["laius", "chrysippus"],
+      ["labdacus", "laius"],
+      ["laius", "oedipus"],
+      ["oedipus", "laius"],
+      ["oedipus", "jocasta"],
+      ["oedipus", "eteocles"],
+      ["oedipus", "polynices"],
+      ["eteocles", "polynices"],
+      ["oedipus", "antigone"]
+    ],
+    "steps": [
+      {
+        "label": "Generation II",
+        "figures": ["pelops"],
+        "text": "Laius abducts Chrysippus, the son of Pelops, and Pelops curses him. Only later sources tell this origin."
+      },
+      {
+        "label": "Generation III",
+        "figures": ["laius"],
+        "text": "An oracle warns Laius that his son will kill him. He has the infant exposed on a mountain."
+      },
+      {
+        "label": "Generation IV",
+        "figures": ["oedipus", "jocasta"],
+        "text": "Grown and unaware, Oedipus kills Laius at a crossroads and marries the widowed queen, his mother. When the truth comes out, Jocasta dies and Oedipus blinds himself."
+      },
+      {
+        "label": "Generation V",
+        "figures": ["eteocles", "polynices", "antigone"],
+        "text": "Oedipus curses his sons, and they kill each other over Thebes. Antigone buries Polynices against the king’s order and is condemned."
+      }
+    ]
+  },
+  {
+    "id": "hippodamia",
+    "kind": "story",
+    "draft": true,
+    "title": "The race for Hippodamia",
+    "lead": "A king who killed his daughter’s suitors, and the cheat who beat him.",
+    "pairs": [
+      ["ares", "oenomaus"],
+      ["oenomaus", "hippodamia"],
+      ["hermes", "myrtilus"],
+      ["pelops", "oenomaus"],
+      ["pelops", "hippodamia"],
+      ["pelops", "myrtilus"]
+    ],
+    "steps": [
+      {
+        "label": "The king",
+        "figures": ["oenomaus", "hippodamia"],
+        "text": "Oenomaus, king of Pisa and a son of Ares, races his daughter Hippodamia’s suitors in chariots and kills every one who loses."
+      },
+      {
+        "label": "The charioteer",
+        "figures": ["pelops", "myrtilus"],
+        "text": "Pelops comes to win her. Myrtilus, a son of Hermes and the king’s own charioteer, sabotages his master’s chariot so that Pelops can win."
+      },
+      {
+        "label": "The race",
+        "figures": ["pelops", "oenomaus", "hippodamia"],
+        "text": "Pelops wins the race. Oenomaus dies in the wreck, and Hippodamia becomes the wife of Pelops."
+      },
+      {
+        "label": "The fall",
+        "figures": ["myrtilus", "pelops"],
+        "text": "Pelops throws Myrtilus into the sea. Falling, Myrtilus curses Pelops and all his line. The curse on the House of Atreus begins here."
+      }
+    ]
+  },
+  {
+    "id": "leda",
+    "kind": "story",
+    "draft": true,
+    "title": "The children of Leda",
+    "lead": "A swan, a goose, an egg, and four famous children.",
+    "pairs": [
+      ["zeus", "leda"],
+      ["tyndareus", "leda"],
+      ["zeus", "nemesis"],
+      ["zeus", "helen"],
+      ["leda", "helen"],
+      ["nemesis", "helen"],
+      ["tyndareus", "castor"],
+      ["zeus", "castor"],
+      ["leda", "castor"],
+      ["tyndareus", "polydeuces"],
+      ["zeus", "polydeuces"],
+      ["leda", "polydeuces"],
+      ["tyndareus", "clytemnestra"],
+      ["leda", "clytemnestra"],
+      ["agamemnon", "clytemnestra"]
+    ],
+    "steps": [
+      {
+        "label": "The swan",
+        "figures": ["zeus", "leda"],
+        "text": "Leda is the wife of Tyndareus, king of Sparta. Zeus comes to her in the form of a swan."
+      },
+      {
+        "label": "The goose",
+        "figures": ["nemesis"],
+        "text": "The Cypria tells another story. Zeus pursues Nemesis, goddess of retribution, through many shapes, and she becomes a goose to escape him."
+      },
+      {
+        "label": "Helen",
+        "figures": ["helen"],
+        "text": "Helen is born, a daughter of Zeus. In Euripides and Apollodorus she is Leda’s child, hatched from an egg. In the Cypria and Pausanias her mother is Nemesis, and Leda only nurses her."
+      },
+      {
+        "label": "The twins",
+        "figures": ["castor", "polydeuces"],
+        "text": "Leda’s twin sons are Castor and Polydeuces, the Dioscuri. The sources disagree on which of them Zeus fathered. Polydeuces, the immortal twin, gives up half his immortality to share it with his brother."
+      },
+      {
+        "label": "Clytemnestra",
+        "figures": ["clytemnestra"],
+        "text": "Their sister Clytemnestra is a daughter of Tyndareus and Leda. She becomes the wife of Agamemnon."
+      }
+    ]
+  },
+  {
+    "id": "iphigenia",
+    "kind": "story",
+    "draft": true,
+    "title": "Iphigenia at Aulis",
+    "lead": "A deer for a daughter.",
+    "pairs": [
+      ["agamemnon", "artemis"],
+      ["agamemnon", "iphigenia"],
+      ["clytemnestra", "iphigenia"],
+      ["artemis", "iphigenia"],
+      ["clytemnestra", "agamemnon"]
+    ],
+    "steps": [
+      {
+        "label": "The deer",
+        "figures": ["agamemnon", "artemis"],
+        "text": "Agamemnon kills a deer sacred to Artemis and boasts of it."
+      },
+      {
+        "label": "The price",
+        "figures": ["iphigenia"],
+        "text": "The goddess names her price: Agamemnon’s daughter, Iphigenia."
+      },
+      {
+        "label": "The altar",
+        "figures": ["agamemnon", "iphigenia"],
+        "text": "At Aulis, Agamemnon sacrifices Iphigenia so that the Greek fleet can sail for Troy."
+      },
+      {
+        "label": "What the altar saw",
+        "figures": ["artemis", "iphigenia"],
+        "text": "Here the sources part ways. In Aeschylus she dies at the altar. In the Cypria, Artemis puts a deer in her place and makes her immortal. In the Catalogue of Women she becomes Hecate. In Euripides, Artemis carries her off to the land of the Taurians."
+      },
+      {
+        "label": "The mother",
+        "figures": ["clytemnestra", "agamemnon"],
+        "text": "Clytemnestra avenges her daughter. When Agamemnon comes home from Troy, she kills him."
+      }
+    ]
+  }
+]
