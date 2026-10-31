@@ -52,3 +52,4 @@
   .grip:focus-visible::before{background:var(--accent)}
 }
 @media (max-width:899px) and (prefers-reduced-motion: reduce){#card{transition:none}}
+.found .none,.finder-list .none{font:15px var(--display);color:var(--muted)}

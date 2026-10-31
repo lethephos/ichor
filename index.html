@@ -28,7 +28,11 @@
     </select>
     <button class="act" id="threadBtn" aria-pressed="false">Ariadne’s thread</button>
     <button class="act" id="fitBtn">See the whole tree</button>
-    <select class="act" id="jump" aria-label="Find a figure"><option value="">Find a figure</option></select>
+    <div class="finder">
+      <input class="act" id="finder" type="search" placeholder="Find a figure" autocomplete="off" spellcheck="false"
+        role="combobox" aria-label="Find a figure" aria-autocomplete="list" aria-expanded="false" aria-controls="finderList">
+      <ul class="finder-list" id="finderList" role="listbox" aria-label="Figures" hidden></ul>
+    </div>
   </div>
   <div class="row tools" id="tools" role="group" aria-label="Explore">
     <button class="act" data-tool="layers" aria-pressed="false">Layers</button>

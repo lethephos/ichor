@@ -7,3 +7,4 @@
 html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:var(--ui);font-size:14px;line-height:1.5;display:flex;flex-direction:column;overflow:hidden}
 .tab:focus-visible,.toggle:focus-visible,.act:focus-visible,.rel:focus-visible,.close:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}

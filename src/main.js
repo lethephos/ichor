@@ -67,11 +67,51 @@ Object.values(CURSES).forEach(c => {
 curseSel.onchange = () => { if (curseSel.value) openCurse(curseSel.value); else resetMode(); };
 const threadBtn = document.getElementById("threadBtn");
 threadBtn.onclick = () => state.mode==="thread" ? resetMode() : openThread();
-const jump = document.getElementById("jump");
-[...P].sort((a,b) => a.name.localeCompare(b.name)).forEach(p => {
-  const o = document.createElement("option"); o.value = p.id; o.textContent = p.name; jump.appendChild(o);
+/* Find a figure: names (English or Greek, accents ignored) narrow down as you type;
+   names that start with what was typed come first. */
+const PEOPLE = [...P].sort((a,b) => a.name.localeCompare(b.name));
+const fold = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const KEY = Object.fromEntries(P.map(p => [p.id, fold(p.name + " " + p.greek)]));
+function findFigures(query){
+  const q = fold(query.trim());
+  if (!q) return PEOPLE;
+  const starts = p => KEY[p.id].split(" ").some(w => w.startsWith(q));
+  return PEOPLE.filter(p => KEY[p.id].includes(q)).sort((a,b) => starts(b) - starts(a));
+}
+const NONE = `<li class="none">No figure by that name.</li>`;
+
+/* desktop: a search box with suggestions */
+const finder = document.getElementById("finder"), finderList = document.getElementById("finderList");
+let found = [], active = -1;
+function showFinder(){
+  found = findFigures(finder.value); active = found.length && finder.value.trim() ? 0 : -1;
+  finderList.innerHTML = found.length ? found.map((p, i) =>
+    `<li role="option" id="fig-${p.id}" data-id="${p.id}" aria-selected="${i===active}"><span class="n">${p.name}</span><span class="r">${p.role}</span></li>`).join("") : NONE;
+  finderList.hidden = false; finder.setAttribute("aria-expanded", "true"); markActive();
+}
+function markActive(){
+  finderList.querySelectorAll("[role=option]").forEach((li, i) => li.setAttribute("aria-selected", i===active));
+  const li = found[active] && document.getElementById("fig-" + found[active].id);
+  if (li) { li.scrollIntoView({block:"nearest"}); finder.setAttribute("aria-activedescendant", li.id); }
+  else finder.removeAttribute("aria-activedescendant");
+}
+function hideFinder(){ finderList.hidden = true; finder.setAttribute("aria-expanded", "false"); finder.removeAttribute("aria-activedescendant"); }
+function pickFinder(id){ hideFinder(); finder.value = ""; finder.blur(); select(id, true); }
+finder.addEventListener("focus", showFinder);
+finder.addEventListener("input", showFinder);
+finder.addEventListener("blur", hideFinder);
+finder.addEventListener("keydown", ev => {
+  if (ev.key==="ArrowDown" || ev.key==="ArrowUp") {
+    ev.preventDefault();
+    if (finderList.hidden) showFinder();
+    if (found.length) { active = (active + (ev.key==="ArrowDown" ? 1 : -1) + found.length) % found.length; markActive(); }
+  } else if (ev.key==="Enter") {
+    const p = found[active] || found[0];
+    if (p && !finderList.hidden) { ev.preventDefault(); pickFinder(p.id); }
+  } else if (ev.key==="Escape") { hideFinder(); finder.blur(); }
 });
-jump.onchange = () => { if (jump.value) { select(jump.value, true); jump.value = ""; } };
+finderList.addEventListener("mousedown", ev => ev.preventDefault());   // keep focus in the box until the click lands
+finderList.addEventListener("click", ev => { const li = ev.target.closest("[data-id]"); if (li) pickFinder(li.dataset.id); });
 srcRow.addEventListener("scroll", () => srcRow.classList.toggle("at-end", srcRow.scrollLeft + srcRow.clientWidth >= srcRow.scrollWidth - 4));
 
 /* phone toolbar: each button opens its panel, or closes it if already open */
@@ -331,18 +371,24 @@ function openCurses(){
   card.querySelectorAll("[data-curse]").forEach(b => b.onclick = () => openCurse(b.dataset.curse));
   apply(true);
 }
-const fold = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+/* phone: the same search in a panel; the list is rebuilt on every keystroke */
 function openFind(){
   state.mode = "find"; state.sel = null; state.path = null; state.curseKey = null;
   curseSel.value = "";
-  const people = [...P].sort((a,b) => a.name.localeCompare(b.name));
   shell(`${panelTop("Ζήτησις")}
     <h2 class="card-name thread-title">Find a figure</h2>
-    <input class="search" id="findQ" type="search" placeholder="Name, in English or Greek" autocomplete="off" aria-label="Find a figure">
-    <ul class="rels found">${people.map(p => `<li data-q="${fold(p.name + " " + p.greek)}"><button class="rel" data-go="${p.id}">${p.name}</button><span class="srcs">${p.role}</span></li>`).join("")}</ul>`);
-  const q = document.getElementById("findQ");
-  q.oninput = () => { const v = fold(q.value.trim()); card.querySelectorAll(".found li").forEach(li => li.hidden = !!v && !li.dataset.q.includes(v)); };
-  q.onkeydown = ev => { if (ev.key==="Enter") { const li = card.querySelector(".found li:not([hidden]) [data-go]"); if (li) select(li.dataset.go, true); } };
+    <input class="search" id="findQ" type="search" placeholder="Name, in English or Greek" autocomplete="off" spellcheck="false" aria-label="Find a figure">
+    <ul class="rels found" id="findList" aria-live="polite"></ul>`);
+  const q = document.getElementById("findQ"), list = document.getElementById("findList");
+  const show = () => {
+    const hits = findFigures(q.value);
+    list.innerHTML = hits.length ? hits.map(p => `<li><button class="rel" data-go="${p.id}">${p.name}</button><span class="srcs">${p.role}</span></li>`).join("") : NONE;
+  };
+  q.oninput = show;
+  q.onfocus = () => { if (!wide()) setFull(true); };   // keep the list above the phone keyboard
+  q.onkeydown = ev => { if (ev.key==="Enter") { const hit = findFigures(q.value)[0]; if (hit) select(hit.id, true); } };
+  list.onclick = ev => { const b = ev.target.closest("[data-go]"); if (b) select(b.dataset.go, true); };
+  show();
   apply(true);
 }
 
