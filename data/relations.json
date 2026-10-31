@@ -3419,10 +3419,10 @@
   },
   {
     "type": "feud",
-    "from": "zeus",
+    "from": "pegasus",
     "to": "bellerophon",
     "sources": ["T"],
-    "note": "had Pegasus throw Bellerophon when he tried to ride up to Olympus"
+    "note": "threw Bellerophon when he tried to ride up to Olympus"
   },
   {
     "type": "parent",
