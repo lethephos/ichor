@@ -11,38 +11,47 @@
 </head>
 <body>
 <header>
-  <h1 class="wordmark">Ichor</h1>
-  <div class="sub">The family tree of the Greek gods</div>
-  <div class="branch"><span>Now exploring</span> Two cursed houses: Atreus and Labdacus</div>
-  <svg class="meander" aria-hidden="true" preserveAspectRatio="none">
-    <defs><pattern id="mq" width="20" height="10" patternUnits="userSpaceOnUse">
-      <path d="M0 9.5 H17 V0.5 H5 V6 H12 V3.5" fill="none" stroke="currentColor" stroke-width="1"/>
-    </pattern></defs>
-    <rect width="100%" height="10" fill="url(#mq)"/>
-  </svg>
+  <div class="kicker"><span class="brand">Ichor</span> · The family tree of the Greek gods</div>
+  <div class="now">Now exploring</div>
+  <div class="title-line"><h1 class="branch-title" id="branchTitle"></h1><div class="branch-sub" id="branchSub"></div></div>
 </header>
 
 <div class="controls">
-  <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
-  <p class="src-note" id="srcNote" aria-live="polite"></p>
-  <div class="row" id="layerRow" role="group" aria-label="Layers"><span class="row-label">Show</span></div>
-  <div class="row">
-    <span class="row-label">Explore</span>
-    <select class="act" id="curseSel" aria-label="Trace a curse">
-      <option value="">Trace a curse</option>
-    </select>
-    <button class="act" id="threadBtn" aria-pressed="false">Ariadne’s thread</button>
-    <button class="act" id="fitBtn">See the whole tree</button>
-    <select class="act" id="jump" aria-label="Find a figure"><option value="">Find a figure</option></select>
+  <div class="srcline">
+    <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
+    <p class="src-note" id="srcNote" aria-live="polite"></p>
+  </div>
+  <div class="row tools" id="tools" role="group" aria-label="Explore">
+    <button class="act" data-tool="layers" aria-pressed="false">Layers</button>
+    <button class="act" data-tool="curses" aria-pressed="false">Stories</button>
+    <button class="act" data-tool="thread" aria-pressed="false">Thread</button>
+    <button class="act" data-tool="find" aria-pressed="false">Find</button>
   </div>
 </div>
 
 <div id="stage">
   <svg id="graph" role="img" aria-label="Family tree of the houses of Atreus and Labdacus"></svg>
-  <div class="hint">Tap a figure to open its card. Pinch or scroll to zoom.</div>
+  <div class="hint" id="hint">Tap a figure to open its card. Pinch or scroll to zoom.</div>
+  <button class="act fit-float" id="fitFloat">Whole tree</button>
 </div>
 
-<aside id="card" aria-live="polite"></aside>
+<aside id="card"><button class="grip" id="grip" aria-label="Expand card" aria-expanded="false"></button><div id="cardBody" aria-live="polite"></div></aside>
+<div class="dock" id="dock">
+  <div class="row" id="layerRow" role="group" aria-label="Layers"><span class="row-label">Show</span></div>
+  <span class="dock-sep" aria-hidden="true"></span>
+  <div class="row" id="exploreRow">
+    <span class="row-label">Explore</span>
+    <select class="act" id="curseSel" aria-label="Stories">
+      <option value="">Stories</option>
+    </select>
+    <button class="act" id="threadBtn" aria-pressed="false">Ariadne’s thread</button>
+    <div class="finder">
+      <input class="act" id="finder" type="search" placeholder="Find a figure" autocomplete="off" spellcheck="false"
+        role="combobox" aria-label="Find a figure" aria-autocomplete="list" aria-expanded="false" aria-controls="finderList">
+      <ul class="finder-list" id="finderList" role="listbox" aria-label="Figures" hidden></ul>
+    </div>
+  </div>
+</div>
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>

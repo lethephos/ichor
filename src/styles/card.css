@@ -21,10 +21,35 @@
 .srcs{font-size:12px;color:var(--muted)}
 .srcs b{font-weight:600;color:var(--text)}
 .note{font-family:var(--display);font-size:15px;color:var(--muted);flex-basis:100%}
-.ver{font-family:var(--display);font-size:16px;line-height:1.6;border-left:2px solid var(--transform);padding:2px 0 2px 14px}
+.ver{font-family:var(--display);font-size:16px;line-height:1.6;border-left:2px solid var(--accent);padding:2px 0 2px 14px}
 .art li{display:block}
 .art .t{font-family:var(--display);font-size:16px}
 .art a.t{color:var(--text);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
 .art a.t:hover{text-decoration-color:var(--figure)}
 .art .m{font-size:12px;color:var(--muted)}
 .legend{font-size:12px;color:var(--muted);margin-top:22px}
+
+/* panels behind the phone toolbar */
+.opts{list-style:none;margin:14px 0 0;padding:0}
+.opts li{border-top:1px solid var(--rule)}
+.opts li:first-child{border-top:none}
+.opt{display:flex;width:100%;align-items:center;gap:12px;background:none;border:none;padding:12px 0;font:17px var(--display);color:var(--text);text-align:left;cursor:pointer}
+.opt[aria-pressed="false"]{opacity:.4}
+.opt svg{flex:0 0 auto;width:34px;height:12px;overflow:visible}
+.opt small{display:block;font:12px var(--ui);color:var(--muted);margin-top:2px}
+.opt:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.search{width:100%;font:17px var(--display);color:var(--text);background:var(--bg);border:1px solid var(--rule);border-radius:2px;padding:10px 12px;margin-top:14px}
+.search:focus{outline:1.5px solid var(--accent);outline-offset:1px}
+.found{margin-top:10px}
+
+/* phone sheet: half height, pulled up to full height by the grip */
+.grip{display:none}
+@media (max-width:899px){
+  #card{height:50%;max-height:none;padding-top:0;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px));transition:transform .3s ease,height .3s ease}
+  #card.full{height:calc(100% - 12px - env(safe-area-inset-top,0px))}
+  .grip{display:block;position:sticky;top:0;z-index:1;width:calc(100% + 44px);height:30px;margin:0 -22px 2px;border:none;background:var(--bg-2);cursor:grab;touch-action:none}
+  .grip::before{content:"";position:absolute;left:50%;top:11px;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:var(--rule)}
+  .grip:focus-visible::before{background:var(--accent)}
+}
+@media (max-width:899px) and (prefers-reduced-motion: reduce){#card{transition:none}}
+.found .none,.finder-list .none{font:15px var(--display);color:var(--muted)}

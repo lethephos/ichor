@@ -22,17 +22,19 @@ Features in the prototype:
 - **Trace a curse**: the curse on the House of Atreus and on the House of Labdacus, told generation by generation and highlighted on the tree.
 - **Ariadne’s thread**: pick two figures, get the shortest path between them (respects the selected source), narrated step by step.
 
-## Decisions already made (keep them)
+## Decisions made so far (can be revisited)
 
 **Visual direction**
 - Fonts: GFS Didot (display, names, stories, Greek) + Manrope (interface).
-- Light theme = black-figure vase painting (black on clay). Dark theme = red-figure (clay on black glaze). Follows the system setting.
-  - Light: bg `#D9A27B`, panel `#E6BA95`, rule `#B4784F`, text and lines `#1F150E`, muted `#5E3D27`, curse `#7D1C10`, transformation `#FBF3E4`.
-  - Dark: bg `#120D09`, panel `#1D150F`, rule `#3B2B1F`, text `#EBC7A4`, lines `#C9814F`, muted `#9E7B5F`, curse `#B8452D`, transformation `#F1E7D4`.
+- Palette “pale clay and gold ichor” (chosen in task 4, replaces the first black-figure/red-figure palette). Light theme = black ink on pale, unfired clay. Dark theme = clay lines on black glaze. Follows the system setting. Tokens live in `src/styles/tokens.css`.
+  - Gold is ichor, the blood of the gods: transformations, the selected figure, Ariadne’s thread, focus (`--accent`). Red is for curses only.
+  - Light: bg `#E8CFB2`, panel `#F3E3D0`, rule `#C9A07D`, text `#1E140D`, lines `#2A1D14`, muted `#5A3F2C`, curse `#A82A17`, gold `#8A5E00`.
+  - Dark: bg `#14100C`, panel `#1F1812`, rule `#3D3024`, text `#EAD3B8`, lines `#B98C66`, muted `#A68E76`, curse `#E0533C`, gold `#E8B54A`.
+  - All text meets WCAG AA contrast on both bg and panel.
 - Small medallion nodes: gods have a double ring, figures from other cycles a dashed ring, a diamond badge marks a transformation.
-- Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted light with arrow; curse = red with arrow.
-- Thin meander band under the header.
-- Header: **Ichor** / *The family tree of the Greek gods* / small line "Now exploring · Two cursed houses: Atreus and Labdacus" (this line will become a branch switcher).
+- Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted gold with arrow; curse = red with arrow.
+- Header (reworked in task 4; the meander band was dropped): a small caps kicker "Ichor · The family tree of the Greek gods", then "Now exploring", then the branch as the page title, "Two cursed houses", with "Atreus and Labdacus" beside it on desktop and under it on phones. The title will become a branch switcher. Sources are pills, the chosen one filled; on desktop their note sits on the same line.
+- Tools: on desktop the layer toggles, Trace a curse, Ariadne’s thread and the search box float in a dock at the bottom of the tree; on phones four buttons (Layers, Curses, Thread, Find) float at the bottom and open panels in the card sheet. "Whole tree" sits in the top corner of the tree.
 
 **Tone**
 - Taglines read like a family drama ("Served his brother a dinner of his own children."). Stories: short sentences, past tense.

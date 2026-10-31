@@ -3,15 +3,61 @@
 .row::-webkit-scrollbar{display:none}
 .row-label{flex:0 0 auto;color:var(--muted);font-size:12px;width:52px}
 .src-note{font-family:var(--display);font-size:15px;color:var(--muted);margin:0 0 4px 70px;min-height:1.5em}
-.tab{flex:0 0 auto;background:none;border:none;padding:4px 0;font:500 13px var(--ui);color:var(--muted);cursor:pointer;border-bottom:1.5px solid transparent}
-.tab[aria-pressed="true"]{color:var(--text);border-bottom-color:var(--figure)}
+/* sources are pills; the chosen one is filled */
+#srcRow{gap:8px}
+.tab{flex:0 0 auto;background:none;border:1px solid var(--rule);border-radius:999px;padding:5px 12px;font:500 13px var(--ui);color:var(--text);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
 .toggle{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;background:none;border:none;padding:4px 0;font:500 13px var(--ui);color:var(--text);cursor:pointer}
 .toggle[aria-pressed="false"]{opacity:.35}
 .toggle svg{width:26px;height:10px;overflow:visible}
 .act{flex:0 0 auto;background:none;border:1px solid var(--rule);border-radius:2px;padding:5px 10px;font:500 13px var(--ui);color:var(--text);cursor:pointer}
-.act[aria-pressed="true"]{border-color:var(--transform);box-shadow:inset 0 0 0 1px var(--transform)}
+.act[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 select.act{appearance:none;-webkit-appearance:none;padding-right:22px;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 12px) 50%,calc(100% - 8px) 50%;background-size:4px 4px;background-repeat:no-repeat}
 select.act option{background:var(--bg-2);color:var(--text)}
+.tools{display:none}
+
+/* desktop: the sources and their note share one line; layers and explore tools sit in a dock over the bottom of the tree */
+.dock{display:none}
 @media (min-width:900px){
-  .controls{padding:10px 28px 6px}
+  .controls{padding:6px 28px 10px}
+  .srcline{display:flex;align-items:center;gap:22px}
+  .srcline #srcRow{flex:0 0 auto}
+  .srcline .src-note{flex:1;min-width:260px;margin:0;min-height:0;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .dock{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 20px;position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:4;width:max-content;max-width:calc(100% - 40px);padding:8px 16px;background:var(--bg-2);border:1px solid var(--rule);border-radius:14px;box-shadow:0 8px 24px var(--shadow)}
+  .dock .row{padding:0;overflow:visible;flex-wrap:wrap;justify-content:center;row-gap:8px}
+  .dock .row-label{display:none}
+  .dock-sep{width:1px;align-self:stretch;background:var(--rule)}
+  #card.open ~ .dock .dock-sep{display:none}   /* the dock wraps onto two lines here */
+  .dock #curseSel{width:170px}
+  .dock .finder-list{top:auto;bottom:calc(100% + 12px)}
+  /* with the card open, the dock centres on the part of the tree left beside it */
+  #card.open ~ .dock{left:calc(50% - 210px);max-width:calc(100% - 480px)}
 }
+
+/* phones and narrow tablets: sources stay in view, everything else sits behind four buttons */
+@media (max-width:899px){
+  .controls{padding:6px 16px 8px;gap:4px}
+  .row-label{display:none}
+  #srcRow{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  #srcRow.at-end{-webkit-mask-image:none;mask-image:none}
+  .src-note{margin:0;font-size:14px;line-height:1.4;min-height:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  /* the four buttons float at the bottom, above the card, within thumb reach */
+  .tools{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6;gap:4px;padding:6px;background:var(--bg-2);border:1px solid var(--rule);border-radius:14px;box-shadow:0 6px 20px var(--shadow)}
+  .tools .act{flex:1;padding:9px 4px;text-align:center;border:none;border-radius:9px}
+  .tools .act[aria-pressed="true"]{background:var(--text);color:var(--bg);box-shadow:none}
+}
+
+/* desktop search box with suggestions */
+.finder{position:relative;flex:0 0 auto}
+.finder input{width:210px;cursor:text}
+.finder input::placeholder{color:var(--text);opacity:1}
+.finder input:focus{outline:1.5px solid var(--accent);outline-offset:2px}
+.finder input:focus::placeholder{color:var(--muted)}
+.finder-list{position:absolute;top:calc(100% + 6px);left:0;z-index:7;width:300px;max-height:min(360px,60vh);overflow-y:auto;list-style:none;margin:0;padding:4px 0;background:var(--bg-2);border:1px solid var(--rule);border-radius:2px;box-shadow:0 10px 28px var(--shadow);white-space:normal}
+.finder-list[hidden]{display:none}
+.finder-list li{display:flex;flex-wrap:wrap;column-gap:8px;align-items:baseline;padding:7px 14px;cursor:pointer}
+.finder-list li[aria-selected="true"]{background:var(--bg)}
+.finder-list .n{font:17px var(--display);color:var(--text)}
+.finder-list .r{font:12px var(--ui);color:var(--muted)}
+.finder-list .none{cursor:default}
+@media (min-width:900px) and (max-width:1359px){.dock-sep{display:none}}

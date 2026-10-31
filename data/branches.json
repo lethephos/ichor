@@ -1,7 +1,8 @@
 [
   {
     "id": "cursed-houses",
-    "title": "Two cursed houses: Atreus and Labdacus",
+    "title": "Two cursed houses",
+    "subtitle": "Atreus and Labdacus",
     "focus": "pelops",
     "houses": [
       {"label": "House of Labdacus", "founder": "labdacus"},

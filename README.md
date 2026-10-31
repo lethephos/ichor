@@ -16,14 +16,14 @@ npm run preview  # serve the build
 - `data/` — all content, edited as JSON:
   - `people.json` — figures: `id`, `name`, `greek`, `gender` (`m`/`f`), `generation` (the row: 0 = Gods, 1, 2… = Generation I, II…), `kind` (`god` / `nymph` / `mortal` / `other-cycle`), `branch`, `role`, `tagline`, `story`, and optional `versions` (where the sources disagree), `transformation` (`text`, `sources`) and `art` (`title`, `meta`, `where`, `url`).
   - `relations.json` — links: `type` (`parent` / `marriage` / `affair` / `feud` / `transform` / `curse`), `from`, `to`, `sources`, optional `note`. Order matters: it sets drawing order and which path Ariadne’s thread finds first.
-  - `curses.json` — curse lines: `id`, `title`, `lead`, `pairs` (links highlighted on the tree), `steps` (`generation`, `figures`, `text`).
+  - `curses.json` — curse lines: `id`, `title`, `lead`, `pairs` (links highlighted on the tree), `steps` (`generation`, `figures`, `text`). Each curse is also told as a story, step by step. Told by one source, a step is kept only if one of its links (in `pairs`, from its figures to people met so far) is attested in that source, and the step lists what that source records; no extra text is needed.
   - `sources.json` — the “All versions” label and note, and the source groups (`id`, `label`, `full`, `note`).
-  - `branches.json` — branches of the tree: `id`, `title`, `focus` (the figure the phone view opens on), `houses` (`label`, `founder`; the house name is drawn above its founder).
+  - `branches.json` — branches of the tree: `id`, `title` and `subtitle` (the page heading), `focus` (the figure the phone view opens on), `houses` (`label`, `founder`; the house name is drawn above its founder).
 - `src/layout.js` — automatic tier layout. Rows come from `generation`; x is computed: each figure is pulled towards the figures it is linked to (blood and marriage most, affairs and feuds less), and rows are spaced so labels never collide and separate families stand apart. Nothing in the data holds a position, so a new figure only needs a `generation` and its relations. Where a row has ties, the order in `people.json` decides.
 - `src/data.js` — loads the JSON and runs the layout.
 - `src/main.js` — tree, controls, card, curse and thread panels.
 - `src/styles/` — styles. `index.css` imports the rest in order:
-  - `tokens.css` — design tokens: colours for the light (black-figure) and dark (red-figure) themes, fonts, shadow. Change a colour here, nowhere else.
+  - `tokens.css` — design tokens: colours for the light (pale clay) and dark (black glaze) themes, the gold accent, fonts, shadow. Change a colour here, nowhere else.
   - `base.css` — page frame, box sizing, focus rings.
   - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
 - `prototype/ichor-atreidae.html` — the original single-file prototype, kept as the reference.

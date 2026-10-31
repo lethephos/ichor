@@ -6,3 +6,60 @@
 .steps .t{font-family:var(--display);font-size:16px;line-height:1.55}
 .steps .who{margin-top:4px}
 .steps .who .rel{font-size:15px;margin-right:10px}
+
+/* story mode: one step at a time */
+.story-of{font:500 12px var(--ui);color:var(--muted);margin:6px 0 0}
+.story-step{font-family:var(--display);font-size:26px;line-height:1.1;margin:6px 0 0}
+.story-step span{font:500 12px var(--ui);color:var(--muted);vertical-align:middle}
+.story-text{font-family:var(--display);font-size:20px;line-height:1.5;margin:12px 0 0}
+.story-hint{font-family:var(--display);font-size:16px;color:var(--muted);margin:14px 0 0}
+.card-tag + .story-hint{margin-top:10px}
+.story-text + .who{margin-top:10px}
+.story-text + .who .rel{font-size:16px}
+.story-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+.story-nav .go{margin:0}
+.dots{display:flex;gap:6px}
+.dots span{width:6px;height:6px;border-radius:50%;background:var(--rule)}
+.dots span.past{background:var(--muted)}
+.dots span.on{background:var(--accent)}
+.who .rel{margin-right:10px}
+
+/* phones: while a story is told, the header and sources step aside so the tree fills the screen above the text */
+@media (max-width:899px){
+  body.story header,body.story .controls,body.story .hint{display:none}
+}
+
+/* telling a story by one source */
+.story-src .tab{padding:3px 10px;font-size:12px}
+.story-says{margin-top:16px;padding:12px 14px;border-left:2px solid var(--accent);background:var(--bg)}
+.story-says h3{font:500 12px var(--ui);color:var(--muted);margin:0 0 6px}
+.story-says ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.story-says li{font-family:var(--display);font-size:16px;line-height:1.45}
+.dots span.skip{background:none;box-shadow:inset 0 0 0 1px var(--rule)}
+.steps li.untold{opacity:.45}
+.story-says .only{font:500 11px var(--ui);color:var(--accent);white-space:nowrap}
+
+/* Back and Next stay in reach at the bottom of the card, however long the step */
+.story-nav{position:sticky;bottom:-22px;z-index:1;background:var(--bg-2);padding:12px 0;margin-bottom:-12px}
+@media (max-width:899px){
+  /* the phone toolbar steps aside during a story too, so the sheet needs no room for it */
+  body.story #card{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
+  .story-nav{bottom:calc(-22px - env(safe-area-inset-bottom,0px));padding-bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+}
+
+/* Told by, folded into one line */
+.story-src{margin-top:14px}
+.story-src-toggle{background:none;border:none;padding:0;font:500 12px var(--ui);color:var(--muted);cursor:pointer}
+.story-src-toggle b{font-weight:600;color:var(--text)}
+.story-src-toggle:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.story-src-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+
+/* where the versions part ways, inside a step */
+.story-ver{margin-top:16px;border-left:2px solid var(--accent);padding:2px 0 2px 14px}
+.story-ver summary{font:600 13px var(--ui);color:var(--accent);cursor:pointer;list-style-position:outside}
+.story-ver summary span{font-weight:500;color:var(--muted)}
+.story-ver p{font-family:var(--display);font-size:16px;line-height:1.55;margin:10px 0 0}
+.story-ver .srcs{font-family:var(--ui)}
+.read-as{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.read-as span{font:500 12px var(--ui);color:var(--muted);margin-right:2px}
+.read-as .tab{padding:3px 10px;font-size:12px}
