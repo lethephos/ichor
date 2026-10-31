@@ -1714,7 +1714,7 @@
     "from": "heracles",
     "to": "megara",
     "sources": ["T", "L"],
-    "note": "killed Megara and their children in his madness; in Apollodorus only the children"
+    "note": "killed Megara too, in the same madness"
   },
   {
     "type": "marriage",
@@ -2358,5 +2358,129 @@
     "to": "cassandra",
     "sources": ["E", "T", "A"],
     "note": "killed Cassandra with Agamemnon"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "sons-of-megara",
+    "sources": ["T", "A", "L"],
+    "note": "killed his sons by Megara in a fit of madness sent by Hera"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "sons-of-megara",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "megara",
+    "to": "sons-of-megara",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "iolaus",
+    "to": "megara",
+    "sources": ["A", "L"],
+    "note": "after Heracles gave her to him"
+  },
+  {
+    "type": "parent",
+    "from": "iphicles",
+    "to": "iolaus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "heracles",
+    "to": "iole",
+    "sources": ["T", "A", "L"],
+    "note": "sacked Oechalia to take Iole, and sent her home to Deianira"
+  },
+  {
+    "type": "affair",
+    "from": "heracles",
+    "to": "omphale",
+    "sources": ["T", "A", "L"],
+    "note": "was sold to Omphale as a slave for a year, and fathered a son by her"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "hyllus",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deianira",
+    "to": "hyllus",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "hyllus",
+    "to": "iole",
+    "sources": ["T", "A", "L"],
+    "note": "as his dying father commanded"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "macaria",
+    "sources": ["T", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deianira",
+    "to": "macaria",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "telephus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "telephus",
+    "sources": ["E", "A", "L"],
+    "note": "wounded Telephus, and healed him with rust from the same spear"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "tlepolemus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "eurystheus",
+    "to": "hyllus",
+    "sources": ["T", "A"],
+    "note": "hounded Hyllus and the other children of Heracles out of every city in Greece"
+  },
+  {
+    "type": "feud",
+    "from": "hyllus",
+    "to": "eurystheus",
+    "sources": ["A"],
+    "note": "killed Eurystheus, and brought his head to Alcmene"
+  },
+  {
+    "type": "feud",
+    "from": "iolaus",
+    "to": "eurystheus",
+    "sources": ["T"],
+    "note": "was made young again for a day, and brought Eurystheus down"
+  },
+  {
+    "type": "feud",
+    "from": "alcmene",
+    "to": "eurystheus",
+    "sources": ["T", "A"],
+    "note": "took her revenge on Eurystheus"
   }
 ]
