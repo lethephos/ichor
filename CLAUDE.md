@@ -26,7 +26,7 @@ Features in the prototype:
 
 **Visual direction**
 - Fonts: GFS Didot (display, names, stories, Greek) + Manrope (interface).
-- Palette “pale clay and gold ichor” (chosen in task 4, replaces the first black-figure/red-figure palette). Light theme = black ink on pale, unfired clay. Dark theme = clay lines on black glaze. Follows the system setting. Tokens live in `src/styles/tokens.css`.
+- Palette “pale clay and gold ichor” (chosen in task 4, replaces the first black-figure/red-figure palette). Light theme = black ink on pale, unfired clay. Dark theme = clay lines on black glaze. Follows the system setting until the reader picks a theme with the sun/moon button in the top right corner of the header; the pick is saved in localStorage (`ichor-theme`), and a pick that matches the system is not saved, so the page follows the system again. Tokens live in `src/styles/tokens.css`.
   - Gold is ichor, the blood of the gods: transformations, the selected figure, Ariadne’s thread, focus (`--accent`). Red is for curses only.
   - Light: bg `#E8CFB2`, panel `#F3E3D0`, rule `#C9A07D`, text `#1E140D`, lines `#2A1D14`, muted `#5A3F2C`, curse `#A82A17`, gold `#8A5E00`.
   - Dark: bg `#14100C`, panel `#1F1812`, rule `#3D3024`, text `#EAD3B8`, lines `#B98C66`, muted `#A68E76`, curse `#E0533C`, gold `#E8B54A`.

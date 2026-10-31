@@ -1,5 +1,5 @@
 /* The brand is a small line; the branch being explored is the page’s title. */
-header{padding:16px 16px 6px}
+header{padding:16px 16px 6px;position:relative}
 .kicker{font:600 10.5px var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .kicker .brand{color:var(--text)}
 .branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:10px 0 0}
@@ -12,3 +12,16 @@ header{padding:16px 16px 6px}
   .branch-sub{font-size:19px;margin:0}
 }
 .branch-sub:empty{display:none}
+
+/* light / dark switch: a moon in the light theme, a sun in the dark */
+.theme{position:absolute;top:10px;right:12px;width:34px;height:34px;display:grid;place-items:center;
+  background:none;border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer;padding:0}
+.theme:hover{border-color:var(--muted)}
+.theme:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.theme svg{width:17px;height:17px;grid-area:1/1}
+.theme .moon{fill:currentColor}
+.theme .sun{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.theme .sun circle{fill:currentColor;stroke:none}
+.theme .sun,.theme.dark .moon{display:none}
+.theme.dark .sun{display:block}
+@media (min-width:900px){ .theme{top:18px;right:24px} }
