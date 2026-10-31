@@ -15,7 +15,6 @@ const PULL = {parent:1, marriage:1, affair:0.3, feud:0.2, curse:0.2, transform:0
 const INERTIA = 0.5;            // how strongly a figure holds its previous place
 const MIN_GAP = 120;            // minimum distance between neighbours on a row
 const LABEL_PAD = 34;           // extra room between two labels
-const LABEL_GAP_MIN = 12;       // labels enlarged on zoom-out keep at least this much space
 const FAMILY_GAP = 160;         // extra room between two unrelated families on a row
 const CHAR_W = 8.6;             // rough width of one character of a label
 const ROUNDS = 120;
@@ -96,11 +95,5 @@ export function tierLayout(people, relations){
   const pos = Object.fromEntries(people.map(p => [p.id, {x: Math.round(x[p.id] - minX + LEFT), y: rowY[p.generation]}]));
   const width = Math.max(...Object.values(pos).map(p => p.x)) + RIGHT_PAD;
   const height = rowY[rowY.length-1] + BOTTOM_PAD;
-  // how much labels could grow before two neighbours on a row touch (1 = their normal size)
-  let labelRoom = Infinity;
-  rows.forEach(row => row.slice(1).forEach((id, i) => {
-    const a = row[i], need = (labelWidth(name[a]) + labelWidth(name[id])) / 2;
-    labelRoom = Math.min(labelRoom, (pos[id].x - pos[a].x - LABEL_GAP_MIN) / need);
-  }));
-  return {pos, rowY, width, height, labelRoom};
+  return {pos, rowY, width, height};
 }

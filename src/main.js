@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, CURSES, BRANCH, HOUSES, LABEL_ROOM} from "./data.js";
+import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, GENS, W, H, P, N, E, CURSES, BRANCH, HOUSES} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -148,17 +148,7 @@ nodeSel.each(function(d){
 });
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
 
-/* When the tree is zoomed out, names grow back towards a readable size on screen,
-   but only as far as the room between neighbours allows. */
-const MIN_LABEL_PX = 11, MIN_GEN_PX = 10;
-const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => {
-  const k = ev.transform.k;
-  const labelPx = Math.max(17*k, Math.min(MIN_LABEL_PX, 17*k*LABEL_ROOM));
-  root.attr("transform", ev.transform)
-    .style("--lbl-size", `${labelPx/k}px`)
-    .style("--gen-size", `${Math.max(15, MIN_GEN_PX/k)}px`);
-  if (ev.sourceEvent) hideHint();
-});
+const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => { root.attr("transform", ev.transform); if (ev.sourceEvent) hideHint(); });
 svg.call(zoom).on("dblclick.zoom", null);
 const graphEl = document.getElementById("graph");
 const wide = () => window.innerWidth >= 900;
@@ -193,7 +183,7 @@ document.getElementById("fitFloat").onclick = () => fitTo(null, true);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min(w/W, h/H) >= 0.5) { fitTo(null, false); return; }
-  const k = 0.65;
+  const k = 0.55;
   const cy = (ROWY[0] + ROWY[ROWY.length-1]) / 2;
   svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[BRANCH.focus].x*k, viewH()/2 - cy*k).scale(k));
 }

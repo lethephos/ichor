@@ -18,7 +18,6 @@ export const BRANCH = branches[0];
 const layout = tierLayout(people, relations);
 export const ROWY = layout.rowY;
 export const W = layout.width, H = layout.height;
-export const LABEL_ROOM = layout.labelRoom;
 const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 export const GENS = ROWY.map((_, i) => i===0 ? "Gods" : `Generation ${ROMAN[i]}`);
 export const P = people.map(p => ({...p, ...layout.pos[p.id]}));
