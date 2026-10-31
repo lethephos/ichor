@@ -92,8 +92,20 @@
     "kind": "god",
     "branch": "gods",
     "role": "Titan",
-    "tagline": "A Titan remembered for his daughter.",
-    "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto."
+    "tagline": "A Titan remembered for his daughters.",
+    "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto and Asteria."
+  },
+  {
+    "id": "crius",
+    "name": "Crius",
+    "greek": "Κρεῖος",
+    "gender": "m",
+    "generation": 1,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan",
+    "tagline": "The quietest of the Titans, known only through his sons.",
+    "story": "Son of Uranus and Gaia. With Eurybia, a daughter of the Sea, he fathered Astraeus, Pallas and Perses."
   },
   {
     "id": "phoebe",
@@ -105,7 +117,46 @@
     "branch": "gods",
     "role": "Titaness",
     "tagline": "Grandmother of Apollo and Artemis.",
-    "story": "Daughter of Uranus and Gaia, wife of Coeus and mother of Leto."
+    "story": "Daughter of Uranus and Gaia, wife of Coeus and mother of Leto and Asteria."
+  },
+  {
+    "id": "hyperion",
+    "name": "Hyperion",
+    "greek": "Ὑπερίων",
+    "gender": "m",
+    "generation": 1,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan of light",
+    "tagline": "‘The one who goes above’: father of the Sun, the Moon and the Dawn.",
+    "story": "Son of Uranus and Gaia. With his sister Theia he fathered Helios, Selene and Eos.",
+    "versions": "In Homer, Hyperion is often a name of the Sun himself: Helios Hyperion."
+  },
+  {
+    "id": "theia",
+    "name": "Theia",
+    "greek": "Θεία",
+    "gender": "f",
+    "generation": 1,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titaness of sight and shining",
+    "tagline": "Mother of every light in the sky.",
+    "story": "Daughter of Uranus and Gaia, wife of her brother Hyperion. Pindar calls her ‘Theia of many names’, the mother of the Sun, who gives gold its shine.",
+    "versions": "The Homeric Hymn to Helios names Hyperion’s wife Euryphaessa, ‘wide-shining’, not Theia."
+  },
+  {
+    "id": "iapetus",
+    "name": "Iapetus",
+    "greek": "Ἰαπετός",
+    "gender": "m",
+    "generation": 1,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan, father of Prometheus",
+    "tagline": "Every one of his sons crossed Zeus, and paid for it.",
+    "story": "Son of Uranus and Gaia. In Homer he sits with Cronus in Tartarus, far below the earth.",
+    "versions": "Hesiod gives him the Oceanid Clymene as wife; Apollodorus, the Oceanid Asia."
   },
   {
     "gender": "f",
@@ -137,12 +188,139 @@
     "name": "Atlas",
     "greek": "Ἄτλας",
     "gender": "m",
-    "generation": 1,
+    "generation": 2,
     "kind": "god",
     "branch": "gods",
     "role": "Titan who holds up the sky",
     "tagline": "Holds up the sky, forever.",
     "story": "Son of the Titan Iapetus. Zeus condemned him to hold up the sky at the ends of the earth. Father of Maia."
+  },
+  {
+    "id": "prometheus",
+    "name": "Prometheus",
+    "greek": "Προμηθεύς",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan, friend of mortals",
+    "tagline": "Stole fire for mortals, and was chained up for it.",
+    "story": "He tricked Zeus over the share of a sacrifice, then stole fire back for mortals in a fennel stalk. Zeus chained him and sent an eagle to eat his liver, which grew again each night, until Heracles shot the bird.",
+    "versions": "Hesiod: the son of Iapetus and Clymene. Apollodorus: of Iapetus and Asia. In Aeschylus’s Prometheus Bound his mother is Themis, who is also Gaia. Aeschylus chains him to a crag at the edge of the world; Apollodorus, on the Caucasus."
+  },
+  {
+    "id": "epimetheus",
+    "name": "Epimetheus",
+    "greek": "Ἐπιμηθεύς",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan, brother of Prometheus",
+    "tagline": "‘Afterthought’, who took the gift his brother warned him against.",
+    "story": "Prometheus told him never to accept a gift from Zeus. He accepted Pandora, the first woman, and with her came every evil."
+  },
+  {
+    "id": "menoetius",
+    "name": "Menoetius",
+    "greek": "Μενοίτιος",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan",
+    "tagline": "Too proud: Zeus struck him with a thunderbolt.",
+    "story": "Son of Iapetus, brother of Atlas and Prometheus. For his arrogance and overbearing strength, Zeus hurled him down into the dark with a thunderbolt."
+  },
+  {
+    "id": "helios",
+    "name": "Helios",
+    "greek": "Ἥλιος",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "The Sun",
+    "tagline": "Sees everything, and once turned back in horror.",
+    "story": "Son of Hyperion and Theia. He drives his chariot across the sky each day and sees all that happens on earth. When Atreus and Thyestes fought over the throne of Mycenae, he turned his course back towards the dawn.",
+    "versions": "In the Homeric Hymn to Helios his mother is Euryphaessa; in Pindar, Theia. Homer often calls him Hyperion."
+  },
+  {
+    "id": "selene",
+    "name": "Selene",
+    "greek": "Σελήνη",
+    "gender": "f",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "The Moon",
+    "tagline": "Sister of the Sun, who drives the night sky.",
+    "story": "Daughter of Hyperion and Theia. She drives her chariot across the night sky.",
+    "versions": "In the Homeric Hymn to Hermes she is the daughter of Pallas, son of Megamedes."
+  },
+  {
+    "id": "eos",
+    "name": "Eos",
+    "greek": "Ἠώς",
+    "gender": "f",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "The Dawn",
+    "tagline": "Rosy-fingered, and always falling in love with mortals.",
+    "story": "Daughter of Hyperion and Theia. Each morning she rises before her brother the Sun. With Astraeus she bore the winds and the stars."
+  },
+  {
+    "id": "astraeus",
+    "name": "Astraeus",
+    "greek": "Ἀστραῖος",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan of the dusk",
+    "tagline": "Married the Dawn and fathered the winds.",
+    "story": "Son of Crius and Eurybia. With Eos he fathered the winds, Zephyrus, Boreas and Notus, and the stars."
+  },
+  {
+    "id": "pallas",
+    "name": "Pallas",
+    "greek": "Πάλλας",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan",
+    "tagline": "His children stand beside Zeus’s throne.",
+    "story": "Son of Crius and Eurybia. With the Oceanid Styx he fathered Zelus, Nike, Cratos and Bia: Rivalry, Victory, Power and Force, who never leave Zeus’s side."
+  },
+  {
+    "id": "perses",
+    "name": "Perses",
+    "greek": "Πέρσης",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titan",
+    "tagline": "Father of Hecate.",
+    "story": "Son of Crius and Eurybia, ‘outstanding in wisdom’, says Hesiod. He married Asteria, and she bore Hecate."
+  },
+  {
+    "id": "asteria",
+    "name": "Asteria",
+    "greek": "Ἀστερία",
+    "gender": "f",
+    "generation": 2,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Titaness, sister of Leto",
+    "tagline": "Leapt into the sea rather than be caught by Zeus.",
+    "story": "Daughter of Coeus and Phoebe, wife of Perses and mother of Hecate. Pursued by Zeus, she turned into a quail and threw herself into the sea, and became an island: Ortygia, ‘Quail Island’, later Delos, where her sister Leto gave birth.",
+    "transformation": {
+      "text": "Became a quail, then an island",
+      "sources": ["A", "L"]
+    }
   },
   {
     "gender": "f",
@@ -599,6 +777,19 @@
         "url": "https://collections.louvre.fr/ark:/53355/cl010278930"
       }
     ]
+  },
+  {
+    "id": "hecate",
+    "name": "Hecate",
+    "greek": "Ἑκάτη",
+    "gender": "f",
+    "generation": 3,
+    "kind": "god",
+    "branch": "gods",
+    "role": "Goddess of the crossroads",
+    "tagline": "The one goddess Zeus honoured above all.",
+    "story": "Daughter of Perses and Asteria. Hesiod praises her at length: Zeus gave her a share of the earth, the sea and the sky. Later writers made her the goddess of crossroads, of the night and of witchcraft.",
+    "versions": "In the Catalogue of Women, as Pausanias reports, Iphigenia does not die at Aulis: by the will of Artemis she becomes Hecate."
   },
   {
     "gender": "f",
