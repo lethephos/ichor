@@ -164,6 +164,15 @@
         "focus": "echidna",
         "houses": [],
         "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus"]
+      },
+      {
+        "id": "underworld",
+        "label": "Orpheus and the underworld",
+        "title": "The underworld",
+        "note": "Night and her sons Sleep and Death, Hades and Persephone, those who went down and came back, and those who stay below for ever.",
+        "focus": "orpheus",
+        "houses": [],
+        "figures": ["gaia", "nyx", "erebus", "hypnos", "thanatos", "zeus", "hera", "hades", "persephone", "demeter", "leto", "apollo", "artemis", "dionysus", "muses", "tityos", "cerberus", "tantalus", "sisyphus", "ixion", "pirithous", "theseus", "oeagrus", "orpheus", "eurydice", "maenads", "agave", "pentheus", "cretheus", "tyro", "pheres", "pelias", "admetus", "alcestis", "heracles"]
       }
     ]
   }
