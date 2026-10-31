@@ -2356,7 +2356,7 @@
     "type": "feud",
     "from": "clytemnestra",
     "to": "cassandra",
-    "sources": ["E", "T", "A", "L"],
+    "sources": ["E", "T", "A"],
     "note": "killed Cassandra with Agamemnon"
   }
 ]
