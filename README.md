@@ -18,7 +18,7 @@ npm run preview  # serve the build
   - `relations.json` — links: `type` (`parent` / `marriage` / `affair` / `feud` / `transform` / `curse`), `from`, `to`, `sources`, optional `note`. Order matters: it sets drawing order and which path Ariadne’s thread finds first.
   - `curses.json` — curse lines: `id`, `title`, `lead`, `pairs` (links highlighted on the tree), `steps` (`generation`, `figures`, `text`).
   - `sources.json` — the “All versions” label and note, and the source groups (`id`, `label`, `full`, `note`).
-  - `branches.json` — branches of the tree: `id`, `title`, `focus` (the figure the phone view opens on), `houses` (`label`, `founder`; the house name is drawn above its founder).
+  - `branches.json` — branches of the tree: `id`, `title` and `subtitle` (the page heading), `focus` (the figure the phone view opens on), `houses` (`label`, `founder`; the house name is drawn above its founder).
 - `src/layout.js` — automatic tier layout. Rows come from `generation`; x is computed: each figure is pulled towards the figures it is linked to (blood and marriage most, affairs and feuds less), and rows are spaced so labels never collide and separate families stand apart. Nothing in the data holds a position, so a new figure only needs a `generation` and its relations. Where a row has ties, the order in `people.json` decides.
 - `src/data.js` — loads the JSON and runs the layout.
 - `src/main.js` — tree, controls, card, curse and thread panels.

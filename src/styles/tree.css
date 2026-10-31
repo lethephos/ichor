@@ -40,6 +40,6 @@
 .hint.gone{opacity:0}
 .fit-float{display:none}
 @media (max-width:899px){
-  .hint{left:16px;max-width:calc(100% - 150px)}
-  .fit-float{display:block;position:absolute;right:16px;bottom:12px;background:var(--bg-2)}
+  .hint{left:16px;top:10px;bottom:auto;max-width:calc(100% - 150px)}
+  .fit-float{display:block;position:absolute;right:16px;top:10px;background:var(--bg-2)}
 }

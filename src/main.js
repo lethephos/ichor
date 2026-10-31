@@ -20,6 +20,10 @@ const SAMPLE = {
 
 const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, mode:null, curseKey:null, path:null};
 
+/* ---------- header ---------- */
+document.getElementById("branchTitle").textContent = BRANCH.title;
+document.getElementById("branchSub").textContent = BRANCH.subtitle;
+
 /* ---------- controls ---------- */
 const srcRow = document.getElementById("srcRow");
 const srcNote = document.getElementById("srcNote");
@@ -151,12 +155,17 @@ const wide = () => window.innerWidth >= 900;
 /* The part of the tree not covered by the card: beside it on wide screens, above it on phones. */
 const card = document.getElementById("card");
 const viewW = () => graphEl.clientWidth - (wide() && card.classList.contains("open") ? 420 : 0);
-const viewH = () => wide() || !card.classList.contains("open") ? graphEl.clientHeight : Math.max(120, graphEl.clientHeight - card.offsetHeight);
+const toolsEl = document.getElementById("tools");
+const viewH = () => {
+  if (wide()) return graphEl.clientHeight;
+  const covered = Math.max(card.classList.contains("open") ? card.offsetHeight : 0, toolsEl.offsetHeight + 12);
+  return Math.max(120, graphEl.clientHeight - covered);
+};
 function fitTo(ids, animate){
   const pts = ids ? ids.map(id => N[id]) : P;
   const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
   const x0 = ids ? Math.min(...xs) - 80 : -20, x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
-  const w = ids ? viewW() : graphEl.clientWidth - (wide() ? 420 : 0), h = ids ? viewH() : graphEl.clientHeight;
+  const w = ids ? viewW() : graphEl.clientWidth - (wide() ? 420 : 0), h = viewH();
   const k = Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95);
   const t = d3.zoomIdentity.translate((w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
   (animate ? svg.transition().duration(600) : svg).call(zoom.transform, t);
@@ -176,7 +185,7 @@ function initialView(){
   if (Math.min(w/W, h/H) >= 0.5) { fitTo(null, false); return; }
   const k = 0.55;
   const cy = (ROWY[0] + ROWY[ROWY.length-1]) / 2;
-  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[BRANCH.focus].x*k, h/2 - cy*k).scale(k));
+  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[BRANCH.focus].x*k, viewH()/2 - cy*k).scale(k));
 }
 
 /* ---------- visibility ---------- */

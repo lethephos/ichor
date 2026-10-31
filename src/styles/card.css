@@ -45,7 +45,7 @@
 /* phone sheet: half height, pulled up to full height by the grip */
 .grip{display:none}
 @media (max-width:899px){
-  #card{height:50%;max-height:none;padding-top:0;transition:transform .3s ease,height .3s ease}
+  #card{height:50%;max-height:none;padding-top:0;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px));transition:transform .3s ease,height .3s ease}
   #card.full{height:calc(100% - 12px - env(safe-area-inset-top,0px))}
   .grip{display:block;position:sticky;top:0;z-index:1;width:calc(100% + 44px);height:30px;margin:0 -22px 2px;border:none;background:var(--bg-2);cursor:grab;touch-action:none}
   .grip::before{content:"";position:absolute;left:50%;top:11px;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:var(--rule)}
