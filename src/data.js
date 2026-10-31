@@ -1,6 +1,6 @@
 import people from "../data/people.json";
 import relations from "../data/relations.json";
-import curses from "../data/curses.json";
+import stories from "../data/stories.json";
 import sources from "../data/sources.json";
 import branches from "../data/branches.json";
 import {tierLayout} from "./layout.js";
@@ -30,5 +30,5 @@ export const HOUSES = BRANCH.houses.map(h => {
   return {label: h.label, x: f.x, y: f.generation > 0 ? ROWY[f.generation-1] + 60 : f.y - 40};
 });
 
-/* ---------- curse lines ---------- */
-export const CURSES = Object.fromEntries(curses.map(c => [c.id, {...c, nodes: new Set(c.pairs.flat())}]));
+/* ---------- stories (the curses among them) ---------- */
+export const STORIES = Object.fromEntries(stories.map(c => [c.id, {...c, nodes: new Set(c.pairs.flat())}]));
