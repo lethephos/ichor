@@ -4591,7 +4591,7 @@
     "type": "feud",
     "from": "athena",
     "to": "ajax-lesser",
-    "sources": ["A", "L"],
+    "sources": ["A"],
     "note": "wrecked Ajax’s ship on his way home"
   },
   {
