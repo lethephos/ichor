@@ -3931,5 +3931,380 @@
     "to": "phineus",
     "sources": ["A", "L"],
     "note": "turned Phineus to stone with the Gorgon’s head"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "pontus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "nereus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pontus",
+    "to": "nereus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "phorcys",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pontus",
+    "to": "phorcys",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "ceto",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pontus",
+    "to": "ceto",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "phorcys",
+    "to": "ceto",
+    "sources": ["H", "A"],
+    "note": "his sister"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "typhon",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tartarus",
+    "to": "typhon",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "typhon",
+    "sources": ["E"],
+    "note": "alone, in the Homeric Hymn to Apollo"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "typhon",
+    "sources": ["E", "H", "A", "L"],
+    "note": "struck Typhon down with his thunderbolts"
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "echidna",
+    "sources": ["H"],
+    "note": "probably"
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "echidna",
+    "sources": ["H"],
+    "note": "probably"
+  },
+  {
+    "type": "parent",
+    "from": "tartarus",
+    "to": "echidna",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "echidna",
+    "sources": ["A"]
+  },
+  {
+    "type": "marriage",
+    "from": "typhon",
+    "to": "echidna",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "graeae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "graeae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "gorgons",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "gorgons",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "medusa",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "medusa",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "ladon",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "ladon",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "ladon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "ladon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "graeae",
+    "sources": ["A", "L"],
+    "note": "stole the one eye of the Graeae, and gave it back only when they showed him the way"
+  },
+  {
+    "type": "parent",
+    "from": "nereus",
+    "to": "nereids",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "nereids",
+    "sources": ["H", "A"],
+    "note": "Doris"
+  },
+  {
+    "type": "parent",
+    "from": "nereus",
+    "to": "thetis",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "thetis",
+    "sources": ["H", "A"],
+    "note": "Doris"
+  },
+  {
+    "type": "feud",
+    "from": "nereids",
+    "to": "cassiopeia",
+    "sources": ["A"],
+    "note": "took offence at Cassiopeia’s boast, and Poseidon shared their anger"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "chrysaor",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "medusa",
+    "to": "chrysaor",
+    "sources": ["H", "A"],
+    "note": "from her severed neck"
+  },
+  {
+    "type": "parent",
+    "from": "chrysaor",
+    "to": "geryon",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "geryon",
+    "sources": ["H", "A"],
+    "note": "Callirhoe"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "orthus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "orthus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "cerberus",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "cerberus",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "hydra",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "hydra",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "chimera",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "chimera",
+    "sources": ["H", "L"],
+    "note": "or the Hydra, or Ceto: Hesiod is unclear"
+  },
+  {
+    "type": "parent",
+    "from": "orthus",
+    "to": "nemean-lion",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "chimera",
+    "to": "nemean-lion",
+    "sources": ["H"],
+    "note": "or Echidna: Hesiod is unclear"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "nemean-lion",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "orthus",
+    "to": "sphinx",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "chimera",
+    "to": "sphinx",
+    "sources": ["H"],
+    "note": "or Echidna: Hesiod is unclear"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "sphinx",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "sphinx",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "nemean-lion",
+    "sources": ["H", "T", "A", "L"],
+    "note": "choked the Nemean Lion, whose hide no weapon could pierce"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "hydra",
+    "sources": ["H", "T", "A", "L"],
+    "note": "killed the Hydra of Lerna"
+  },
+  {
+    "type": "feud",
+    "from": "iolaus",
+    "to": "hydra",
+    "sources": ["H", "A"],
+    "note": "helped Heracles kill the Hydra, burning the stumps of her necks"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "geryon",
+    "sources": ["H", "T", "A", "L"],
+    "note": "killed Geryon and drove off his red cattle"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "orthus",
+    "sources": ["H", "A"],
+    "note": "killed Orthus, Geryon’s dog"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "cerberus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "dragged Cerberus up from Hades"
+  },
+  {
+    "type": "feud",
+    "from": "oedipus",
+    "to": "sphinx",
+    "sources": ["T", "A", "L"],
+    "note": "answered the Sphinx’s riddle, and she threw herself to her death"
   }
 ]

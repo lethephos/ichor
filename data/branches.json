@@ -155,6 +155,15 @@
         "focus": "io",
         "figures": ["oceanus", "tethys", "inachus", "zeus", "hera", "hermes", "poseidon", "io", "argus", "epaphus", "libya", "belus", "agenor", "cadmus", "europa", "danaus", "aegyptus", "danaids", "sons-of-aegyptus", "hypermnestra", "lynceus", "amymone", "nauplius", "abas", "acrisius", "proetus", "danae", "perseus", "cepheus", "cassiopeia", "phineus", "andromeda"],
         "houses": []
+      },
+      {
+        "id": "monsters",
+        "label": "Monsters and their killers",
+        "title": "The monsters",
+        "note": "The brood of the sea gods Phorcys and Ceto and of Typhon and Echidna, and the heroes who killed them: Perseus, Bellerophon, Heracles and Oedipus.",
+        "focus": "echidna",
+        "houses": [],
+        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus"]
       }
     ]
   }
