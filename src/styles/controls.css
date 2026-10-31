@@ -15,3 +15,15 @@ select.act option{background:var(--bg-2);color:var(--text)}
 @media (min-width:900px){
   .controls{padding:10px 28px 6px}
 }
+.tools{display:none}
+
+/* phones and narrow tablets: sources stay in view, everything else sits behind four buttons */
+@media (max-width:899px){
+  .controls{padding:6px 16px 8px;gap:4px}
+  .row-label,#layerRow,#exploreRow{display:none}
+  #srcRow{gap:16px;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  #srcRow.at-end{-webkit-mask-image:none;mask-image:none}
+  .src-note{margin:0;font-size:14px;line-height:1.4;min-height:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .tools{display:flex;gap:8px;padding-top:6px}
+  .tools .act{flex:1;padding:8px 4px;text-align:center}
+}

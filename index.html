@@ -26,7 +26,7 @@
   <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
   <p class="src-note" id="srcNote" aria-live="polite"></p>
   <div class="row" id="layerRow" role="group" aria-label="Layers"><span class="row-label">Show</span></div>
-  <div class="row">
+  <div class="row" id="exploreRow">
     <span class="row-label">Explore</span>
     <select class="act" id="curseSel" aria-label="Trace a curse">
       <option value="">Trace a curse</option>
@@ -35,14 +35,21 @@
     <button class="act" id="fitBtn">See the whole tree</button>
     <select class="act" id="jump" aria-label="Find a figure"><option value="">Find a figure</option></select>
   </div>
+  <div class="row tools" id="tools" role="group" aria-label="Explore">
+    <button class="act" data-tool="layers" aria-pressed="false">Layers</button>
+    <button class="act" data-tool="curses" aria-pressed="false">Curses</button>
+    <button class="act" data-tool="thread" aria-pressed="false">Thread</button>
+    <button class="act" data-tool="find" aria-pressed="false">Find</button>
+  </div>
 </div>
 
 <div id="stage">
   <svg id="graph" role="img" aria-label="Family tree of the houses of Atreus and Labdacus"></svg>
-  <div class="hint">Tap a figure to open its card. Pinch or scroll to zoom.</div>
+  <div class="hint" id="hint">Tap a figure to open its card. Pinch or scroll to zoom.</div>
+  <button class="act fit-float" id="fitFloat">Whole tree</button>
 </div>
 
-<aside id="card" aria-live="polite"></aside>
+<aside id="card"><button class="grip" id="grip" aria-label="Expand card" aria-expanded="false"></button><div id="cardBody" aria-live="polite"></div></aside>
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>

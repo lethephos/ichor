@@ -44,11 +44,16 @@ function setSource(k){
 srcNote.textContent = SRC_NOTE.all;
 
 const layerRow = document.getElementById("layerRow");
+function toggleLayer(k){
+  state.layers[k] = !state.layers[k];
+  document.querySelectorAll(`[data-layer="${k}"]`).forEach(b => b.setAttribute("aria-pressed", state.layers[k]));
+  apply(true);
+}
 LAYERS.forEach(L => {
   const b = document.createElement("button");
-  b.className = "toggle"; b.setAttribute("aria-pressed","true");
+  b.className = "toggle"; b.dataset.layer = L.k; b.setAttribute("aria-pressed","true");
   b.innerHTML = `<svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}`;
-  b.onclick = () => { state.layers[L.k] = !state.layers[L.k]; b.setAttribute("aria-pressed", state.layers[L.k]); apply(true); };
+  b.onclick = () => toggleLayer(L.k);
   layerRow.appendChild(b);
 });
 const curseSel = document.getElementById("curseSel");
@@ -63,6 +68,19 @@ const jump = document.getElementById("jump");
   const o = document.createElement("option"); o.value = p.id; o.textContent = p.name; jump.appendChild(o);
 });
 jump.onchange = () => { if (jump.value) { select(jump.value, true); jump.value = ""; } };
+srcRow.addEventListener("scroll", () => srcRow.classList.toggle("at-end", srcRow.scrollLeft + srcRow.clientWidth >= srcRow.scrollWidth - 4));
+
+/* phone toolbar: each button opens its panel, or closes it if already open */
+const TOOL_OF = {layers:"layers", curses:"curses", curse:"curses", thread:"thread", find:"find"};
+const OPEN = {layers:() => openLayers(), curses:() => openCurses(), thread:() => openThread(), find:() => openFind()};
+const toolBtns = document.querySelectorAll("[data-tool]");
+toolBtns.forEach(b => b.onclick = () => TOOL_OF[state.mode]===b.dataset.tool ? resetMode() : OPEN[b.dataset.tool]());
+function syncTools(){
+  toolBtns.forEach(b => b.setAttribute("aria-pressed", TOOL_OF[state.mode]===b.dataset.tool));
+  threadBtn.setAttribute("aria-pressed", state.mode==="thread");
+}
+const hint = document.getElementById("hint");
+const hideHint = () => hint.classList.add("gone");
 
 /* ---------- graph ---------- */
 const svg = d3.select("#graph");
@@ -126,15 +144,19 @@ nodeSel.each(function(d){
 });
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
 
-const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => root.attr("transform", ev.transform));
+const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => { root.attr("transform", ev.transform); if (ev.sourceEvent) hideHint(); });
 svg.call(zoom).on("dblclick.zoom", null);
 const graphEl = document.getElementById("graph");
 const wide = () => window.innerWidth >= 900;
+/* The part of the tree not covered by the card: beside it on wide screens, above it on phones. */
+const card = document.getElementById("card");
+const viewW = () => graphEl.clientWidth - (wide() && card.classList.contains("open") ? 420 : 0);
+const viewH = () => wide() || !card.classList.contains("open") ? graphEl.clientHeight : Math.max(120, graphEl.clientHeight - card.offsetHeight);
 function fitTo(ids, animate){
   const pts = ids ? ids.map(id => N[id]) : P;
   const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
   const x0 = ids ? Math.min(...xs) - 80 : -20, x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
-  const w = graphEl.clientWidth - (wide() ? 420 : 0), h = wide() ? graphEl.clientHeight : graphEl.clientHeight * (ids ? 0.42 : 1);
+  const w = ids ? viewW() : graphEl.clientWidth - (wide() ? 420 : 0), h = ids ? viewH() : graphEl.clientHeight;
   const k = Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95);
   const t = d3.zoomIdentity.translate((w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
   (animate ? svg.transition().duration(600) : svg).call(zoom.transform, t);
@@ -144,10 +166,11 @@ function focusOn(id){
   const cur = d3.zoomTransform(graphEl);
   const k = Math.max(cur.k, Math.min(1, w/700));
   const p = N[id];
-  const tx = wide() ? (w-420)/2 : w/2, ty = wide() ? h/2 : h*0.3;
+  const tx = wide() ? (w-420)/2 : w/2, ty = viewH()/2;
   svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx-p.x*k, ty-p.y*k).scale(k));
 }
 document.getElementById("fitBtn").onclick = () => fitTo(null, true);
+document.getElementById("fitFloat").onclick = () => fitTo(null, true);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min(w/W, h/H) >= 0.5) { fitTo(null, false); return; }
@@ -193,10 +216,11 @@ function apply(animate){
   };
   (animate ? nodeSel.transition().duration(380) : nodeSel).style("opacity", nOp);
   nodeSel.selectAll(".badge").style("display", d => state.layers.transform && (state.src==="all" || d.transformation.sources.includes(state.src)) ? null : "none");
+  syncTools();
 }
 
 /* ---------- card ---------- */
-const card = document.getElementById("card");
+const cardBody = document.getElementById("cardBody");
 const srcText = src => `<span class="srcs">${src.map(s => state.src===s ? `<b>${SRC[s]}</b>` : SRC[s]).join(", ")}</span>`;
 function sentence(e){
   const A = N[e.from].name, B = N[e.to].name;
@@ -206,11 +230,28 @@ function sentence(e){
 }
 const relItem = (id, e, withSentence) => `<li><button class="rel" data-go="${id}">${N[id].name}</button>${srcText(e.sources)}${withSentence?`<span class="note">${sentence(e)}</span>`:(e.note?`<span class="note">${e.note}</span>`:"")}</li>`;
 function shell(inner){
-  card.innerHTML = inner;
+  cardBody.innerHTML = inner;
   card.querySelectorAll("[data-close]").forEach(b => b.onclick = resetMode);
   card.querySelectorAll("[data-go]").forEach(b => b.onclick = () => select(b.dataset.go, true));
-  card.classList.add("open"); card.scrollTop = 0;
+  setFull(false); card.classList.add("open"); card.scrollTop = 0;
 }
+
+/* On phones the card is a sheet: half height at first; pull the grip up for full height, down to shrink or close. Tapping the grip toggles. */
+const grip = document.getElementById("grip");
+function setFull(on){
+  card.classList.toggle("full", on);
+  grip.setAttribute("aria-expanded", on); grip.setAttribute("aria-label", on ? "Shrink card" : "Expand card");
+}
+let dragY = null, dragged = false;
+grip.addEventListener("pointerdown", ev => { dragY = ev.clientY; grip.setPointerCapture(ev.pointerId); });
+grip.addEventListener("pointerup", ev => {
+  if (dragY===null) return;
+  const dy = ev.clientY - dragY; dragY = null;
+  if (Math.abs(dy) < 30) return;
+  dragged = true;
+  if (dy < 0) setFull(true); else if (card.classList.contains("full")) setFull(false); else resetMode();
+});
+grip.addEventListener("click", () => { if (dragged) { dragged = false; return; } setFull(!card.classList.contains("full")); });
 function renderNode(id){
   const p = N[id];
   const touches = e => e.from===id || e.to===id;
@@ -244,6 +285,7 @@ function select(id, move){
   if (move) focusOn(id);
 }
 function nodeClick(id){
+  hideHint();
   if (state.mode==="thread") {
     const a = document.getElementById("tFrom"), b = document.getElementById("tTo");
     if (a && b) { if (!a.value || (a.value && b.value)) { a.value = id; b.value = ""; } else { b.value = id; runThread(a.value, b.value); } }
@@ -254,7 +296,44 @@ function nodeClick(id){
 function resetMode(){
   state.mode = null; state.sel = null; state.path = null; state.curseKey = null; state.threadEnds = null;
   curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
-  card.classList.remove("open"); apply(true);
+  card.classList.remove("open"); setFull(false); apply(true);
+}
+
+/* phone panels: layers, curses, find */
+const panelTop = greek => `<div class="card-top"><span class="greek" lang="grc">${greek}</span><button class="close" data-close>Close</button></div>`;
+function openLayers(){
+  state.mode = "layers"; state.sel = null; state.path = null; state.curseKey = null;
+  curseSel.value = "";
+  shell(`${panelTop("Δεσμοί")}
+    <h2 class="card-name thread-title">Layers</h2>
+    <p class="card-tag">Choose which kinds of link to draw.</p>
+    <ul class="opts">${LAYERS.map(L => `<li><button class="opt" data-layer="${L.k}" aria-pressed="${state.layers[L.k]}"><svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}</button></li>`).join("")}</ul>`);
+  card.querySelectorAll("[data-layer]").forEach(b => b.onclick = () => toggleLayer(b.dataset.layer));
+  apply(true);
+}
+function openCurses(){
+  state.mode = "curses"; state.sel = null; state.path = null; state.curseKey = null;
+  curseSel.value = "";
+  shell(`${panelTop("Ἀραί")}
+    <h2 class="card-name thread-title">Trace a curse</h2>
+    <p class="card-tag">Follow a curse down the generations.</p>
+    <ul class="opts">${Object.values(CURSES).map(c => `<li><button class="opt" data-curse="${c.id}"><span>${c.title}<small>${c.lead}</small></span></button></li>`).join("")}</ul>`);
+  card.querySelectorAll("[data-curse]").forEach(b => b.onclick = () => openCurse(b.dataset.curse));
+  apply(true);
+}
+const fold = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+function openFind(){
+  state.mode = "find"; state.sel = null; state.path = null; state.curseKey = null;
+  curseSel.value = "";
+  const people = [...P].sort((a,b) => a.name.localeCompare(b.name));
+  shell(`${panelTop("Ζήτησις")}
+    <h2 class="card-name thread-title">Find a figure</h2>
+    <input class="search" id="findQ" type="search" placeholder="Name, in English or Greek" autocomplete="off" aria-label="Find a figure">
+    <ul class="rels found">${people.map(p => `<li data-q="${fold(p.name + " " + p.greek)}"><button class="rel" data-go="${p.id}">${p.name}</button><span class="srcs">${p.role}</span></li>`).join("")}</ul>`);
+  const q = document.getElementById("findQ");
+  q.oninput = () => { const v = fold(q.value.trim()); card.querySelectorAll(".found li").forEach(li => li.hidden = !!v && !li.dataset.q.includes(v)); };
+  q.onkeydown = ev => { if (ev.key==="Enter") { const li = card.querySelector(".found li:not([hidden]) [data-go]"); if (li) select(li.dataset.go, true); } };
+  apply(true);
 }
 
 /* curses */

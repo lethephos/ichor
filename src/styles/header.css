@@ -8,3 +8,10 @@ header{padding:18px 20px 0}
 @media (min-width:900px){
   header{padding:22px 28px 0}
 }
+@media (max-width:899px){
+  header{padding:12px 16px 0;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px}
+  .wordmark{font-size:32px}
+  .sub{font-size:14px;margin:0}
+  .branch{flex-basis:100%;font-size:12px;margin-top:4px}
+  .meander{flex-basis:100%;margin-top:10px}
+}
