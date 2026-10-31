@@ -3,7 +3,7 @@
     "id": "cursed-houses",
     "title": "From Gaia to Orestes",
     "subtitle": "",
-    "tiers": ["The first gods", "Titans", "Children of the Titans", "Children of Zeus", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V", "Generation VI"],
+    "tiers": ["The first gods", "Titans", "Children of the Titans", "The younger gods", "Generation I", "Generation II", "Generation III", "Generation IV", "Generation V", "Generation VI"],
     "focus": "pelops",
     "houses": [
       {"label": "House of Labdacus", "founder": "labdacus"},
@@ -24,7 +24,7 @@
         "id": "gods",
         "label": "The gods",
         "title": "The gods",
-        "note": "From Gaia and Uranus to the children of Zeus.",
+        "note": "From Gaia and Uranus to the younger gods.",
         "focus": "zeus",
         "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis", "themis", "mnemosyne", "erinyes", "oceanids", "pleiades", "muses", "horae", "moirai", "charites", "crius", "hyperion", "theia", "iapetus", "prometheus", "epimetheus", "menoetius", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "hecate"]
       },
