@@ -18,7 +18,7 @@ const SAMPLE = {
   curse:`<line x1="0" y1="5" x2="22" y2="5" stroke="var(--curse)" stroke-width="1.8"/><path d="M20,1 L26,5 L20,9 z" fill="var(--curse)"/>`
 };
 
-const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, mode:null, curseKey:null, path:null};
+const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sel:null, hover:null, mode:null, curseKey:null, path:null};
 
 /* ---------- header ---------- */
 document.getElementById("branchTitle").textContent = BRANCH.title;
@@ -175,7 +175,10 @@ const nodeSel = gNodes.selectAll("g.node").data(P).join("g")
   .attr("class","node").attr("transform", d => `translate(${d.x},${d.y})`)
   .attr("tabindex",0).attr("role","button").attr("aria-label", d => d.name)
   .on("click", (ev,d) => { ev.stopPropagation(); nodeClick(d.id); })
-  .on("keydown", (ev,d) => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); nodeClick(d.id); } });
+  .on("keydown", (ev,d) => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); nodeClick(d.id); } })
+  // with a mouse, hovering a figure previews its links; touch keeps tap-to-open
+  .on("pointerenter", (ev,d) => { if (ev.pointerType==="mouse") { state.hover = d.id; apply(150); } })
+  .on("pointerleave", (ev,d) => { if (state.hover===d.id) { state.hover = null; apply(150); } });
 nodeSel.each(function(d){
   const g = d3.select(this);
   g.append("circle").attr("class","hit").attr("r",26);
@@ -232,8 +235,11 @@ function initialView(){
 const attested = e => state.src==="all" || e.sources.includes(state.src);
 const edgeVisible = e => state.layers[e.type] && attested(e);
 const samePair = (e, [x,y]) => (e.from===x && e.to===y) || (e.from===y && e.to===x);
+/* animate: false for an instant change, true for the usual fade, or a duration in ms */
 function apply(animate){
-  const sel = state.mode==="node" ? state.sel : null;
+  const dur = animate===true ? 380 : animate || 0;
+  const hover = state.mode!=="curse" && state.mode!=="thread" ? state.hover : null;
+  const sel = hover || (state.mode==="node" ? state.sel : null);
   const curse = state.mode==="curse" ? CURSES[state.curseKey] : null;
   const path = state.mode==="thread" ? state.path : null;
   const pathEdges = new Set(path ? path.edges : []);
@@ -251,12 +257,12 @@ function apply(animate){
     if (!vis && !inCurse) op = 0;
     if (vis) { visible.add(e.from); visible.add(e.to); }
     const g = d3.select(this).classed("thread", inPath);
-    (animate ? g.transition().duration(380) : g).style("opacity", op);
+    (dur ? g.transition().duration(dur) : g).style("opacity", op);
     g.select(".main").attr("stroke-width", inPath ? 3 : hot ? BASE[e.type]*1.7 : BASE[e.type]);
   });
   const neigh = new Set();
   if (sel) { neigh.add(sel); E.forEach(e => { if (edgeVisible(e) && (e.from===sel||e.to===sel)) { neigh.add(e.from); neigh.add(e.to); } }); }
-  nodeSel.classed("sel", d => d.id===sel).classed("ends", d => !!(path && (d.id===path.nodes[0] || d.id===path.nodes[path.nodes.length-1])));
+  nodeSel.classed("sel", d => d.id===sel || (state.mode==="node" && d.id===state.sel)).classed("ends", d => !!(path && (d.id===path.nodes[0] || d.id===path.nodes[path.nodes.length-1])));
   const nOp = d => {
     if (sel) return neigh.has(d.id) ? 1 : 0.2;
     if (curse) return curse.nodes.has(d.id) ? 1 : 0.18;
@@ -264,7 +270,7 @@ function apply(animate){
     if (state.src!=="all") return (visible.has(d.id) || (d.transformation && d.transformation.sources.includes(state.src))) ? 1 : 0.18;
     return 1;
   };
-  (animate ? nodeSel.transition().duration(380) : nodeSel).style("opacity", nOp);
+  (dur ? nodeSel.transition().duration(dur) : nodeSel).style("opacity", nOp);
   nodeSel.selectAll(".badge").style("display", d => state.layers.transform && (state.src==="all" || d.transformation.sources.includes(state.src)) ? null : "none");
   syncTools();
 }
@@ -341,7 +347,7 @@ function nodeClick(id){
     if (a && b) { if (!a.value || (a.value && b.value)) { a.value = id; b.value = ""; } else { b.value = id; runThread(a.value, b.value); } }
     return;
   }
-  select(id);
+  select(id, true);
 }
 function resetMode(){
   state.mode = null; state.sel = null; state.path = null; state.curseKey = null; state.threadEnds = null;
