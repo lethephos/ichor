@@ -2945,7 +2945,7 @@
     "type": "parent",
     "from": "atlas",
     "to": "calypso",
-    "sources": ["E", "A"]
+    "sources": ["E", "A", "L"]
   },
   {
     "type": "affair",
@@ -3052,7 +3052,7 @@
     "type": "parent",
     "from": "aeacus",
     "to": "telamon",
-    "sources": ["T", "A", "L"]
+    "sources": ["A", "L"]
   },
   {
     "type": "parent",
