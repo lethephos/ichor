@@ -1504,6 +1504,126 @@
     ]
   },
   {
+    "id": "underworld",
+    "kind": "story",
+    "title": "Down to Hades",
+    "lead": "Those who went down to the dead and came back, those who did not, and those who are punished there for ever.",
+    "steps": [
+      {
+        "label": "Night’s sons",
+        "figures": ["nyx", "erebus", "hypnos", "thanatos"],
+        "pairs": [
+          ["nyx", "erebus"],
+          ["nyx", "hypnos"],
+          ["nyx", "thanatos"]
+        ],
+        "text": "Night lies with her brother Erebus, the darkness under the earth, and bears him Aether and Day. On her own, without a lover, she bears twin brothers, Sleep and Death. In Hesiod, they live in the dark beyond the edge of the world, and the sun never looks on them. Sleep is gentle with men; Death has a heart of iron and never lets go of anyone he has caught."
+      },
+      {
+        "label": "Persephone",
+        "figures": ["hades", "persephone", "demeter", "zeus"],
+        "pairs": [
+          ["zeus", "persephone"],
+          ["demeter", "persephone"],
+          ["hades", "persephone"]
+        ],
+        "text": "Hades, with Zeus’ consent, carries off Persephone, Demeter’s daughter, as she picks flowers. Demeter searches the earth with torches and lets nothing grow until Zeus gives way. But Hades has given the girl a pomegranate seed to eat, and so, in the Homeric Hymn, she must spend a third of every year below with him, as his queen."
+      },
+      {
+        "label": "The punished",
+        "figures": ["tityos", "leto", "apollo", "artemis", "tantalus", "sisyphus", "ixion"],
+        "pairs": [
+          ["gaia", "tityos"],
+          ["tityos", "leto"],
+          ["apollo", "tityos"],
+          ["artemis", "tityos"],
+          ["zeus", "tantalus"],
+          ["zeus", "sisyphus"],
+          ["zeus", "ixion"]
+        ],
+        "text": "In the Odyssey, Odysseus sees the great sinners below. The giant Tityos, son of Earth, who tried to rape Leto and was shot by her children, lies stretched out while two vultures tear at his liver. Tantalus stands in a pool that drains away whenever he bends to drink. Sisyphus pushes a stone up a hill, and it rolls back down every time. In Pindar, Ixion, who tried to seduce Hera, is bound to a wheel that turns for ever."
+      },
+      {
+        "label": "Alcestis",
+        "figures": ["admetus", "alcestis", "pheres", "pelias", "heracles"],
+        "pairs": [
+          ["pheres", "admetus"],
+          ["pelias", "alcestis"],
+          ["admetus", "alcestis"],
+          ["heracles", "thanatos"]
+        ],
+        "text": "Apollo, who once served King Admetus, wins him a gift from the Fates: when his time comes, he need not die if someone will die in his place. His old father Pheres refuses. His wife Alcestis, Pelias’ daughter, goes willingly. In Euripides, Heracles arrives as a guest on the day of her funeral, waits for Death at her tomb, wrestles him and brings her back."
+      },
+      {
+        "label": "Orpheus",
+        "figures": ["orpheus", "eurydice", "oeagrus", "muses"],
+        "pairs": [
+          ["muses", "orpheus"],
+          ["oeagrus", "orpheus"],
+          ["apollo", "orpheus"],
+          ["orpheus", "eurydice"]
+        ],
+        "text": "Orpheus, son of Oeagrus and the Muse Calliope, sings so that trees and stones follow him. When his wife Eurydice dies of a snake bite, he goes down to bring her back, and his song moves even Hades. He may take her home if he does not look back on the way. Close to the light, he turns, and she goes back into the dark."
+      },
+      {
+        "label": "The chair of forgetfulness",
+        "figures": ["pirithous", "theseus"],
+        "pairs": [
+          ["ixion", "pirithous"],
+          ["pirithous", "persephone"],
+          ["hades", "pirithous"],
+          ["hades", "theseus"]
+        ],
+        "text": "Pirithous, son of Ixion, decides to marry Persephone, and his friend Theseus goes down with him to fetch her. In Apollodorus, Hades welcomes them and sits them on the chair of forgetfulness, and they grow fast to it, held by coils of serpents."
+      },
+      {
+        "label": "Cerberus",
+        "figures": ["cerberus"],
+        "pairs": [
+          ["heracles", "cerberus"]
+        ],
+        "text": "For his last labour, Heracles goes down to fetch Cerberus, the hound of Hades. Hades lets him take the dog if he can master it without weapons, and he chokes it into submission and drags it up to the light. On the way he pulls Theseus free of the chair; when he reaches for Pirithous, the earth shakes, and he lets go."
+      },
+      {
+        "label": "The singing head",
+        "figures": ["maenads"],
+        "pairs": [
+          ["maenads", "orpheus"]
+        ],
+        "text": "Orpheus never loves a woman again. In Ovid, the Maenads of Thrace, raging in the rites of Dionysus, tear him to pieces. His head floats down the river Hebrus, still singing, and out to sea to Lesbos; and his shade, below, walks with Eurydice again."
+      }
+    ],
+    "pairs": [
+      ["nyx", "erebus"],
+      ["nyx", "hypnos"],
+      ["nyx", "thanatos"],
+      ["zeus", "persephone"],
+      ["demeter", "persephone"],
+      ["hades", "persephone"],
+      ["gaia", "tityos"],
+      ["tityos", "leto"],
+      ["apollo", "tityos"],
+      ["artemis", "tityos"],
+      ["zeus", "tantalus"],
+      ["zeus", "sisyphus"],
+      ["zeus", "ixion"],
+      ["pheres", "admetus"],
+      ["pelias", "alcestis"],
+      ["admetus", "alcestis"],
+      ["heracles", "thanatos"],
+      ["muses", "orpheus"],
+      ["oeagrus", "orpheus"],
+      ["apollo", "orpheus"],
+      ["orpheus", "eurydice"],
+      ["ixion", "pirithous"],
+      ["pirithous", "persephone"],
+      ["hades", "pirithous"],
+      ["hades", "theseus"],
+      ["heracles", "cerberus"],
+      ["maenads", "orpheus"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
