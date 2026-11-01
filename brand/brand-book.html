@@ -1,0 +1,332 @@
+<title>Ichor Brand Book</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: a single column like a museum catalogue; the mark is drawn as the tree draws its figures. Tokens are the site's own. */
+:root{
+  --bg:#E8CFB2; --panel:#F3E3D0; --rule:#C9A07D; --ink:#1E140D; --muted:#5A3F2C; --line:#2A1D14;
+  --gold:#8A5E00; --curse:#A82A17;
+  --display:"GFS Didot","Didot","Bodoni 72",Georgia,serif;
+  --ui:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#14100C; --panel:#1F1812; --rule:#3D3024; --ink:#EAD3B8; --muted:#A68E76; --line:#B98C66;
+  --gold:#E8B54A; --curse:#E0533C; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#14100C; --panel:#1F1812; --rule:#3D3024; --ink:#EAD3B8; --muted:#A68E76; --line:#B98C66;
+  --gold:#E8B54A; --curse:#E0533C; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--ui);margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 80px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+h2{font-size:32px;line-height:1.1}
+h3{font-size:21px}
+p{margin:0;max-width:64ch}
+.eyebrow{font:600 11px var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+section{display:grid;gap:22px;padding-block:44px;border-top:1px solid var(--rule)}
+.sechead{display:grid;gap:8px}
+
+/* mark: same classes in every drawing so both themes follow */
+.mk .r{fill:none;stroke:var(--ink);stroke-width:2}
+.mk .d{fill:var(--ink)}
+.mk .g{fill:var(--gold)}
+.mk.inv .r{stroke:var(--bg)} .mk.inv .d{fill:var(--bg)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;padding-block:24px 52px}
+.hero svg.big{width:clamp(110px,22vw,190px);height:auto}
+.hero h1{font-size:clamp(64px,13vw,128px);line-height:.9;letter-spacing:.01em}
+.hero .greek{font:clamp(22px,3.4vw,30px) var(--display);color:var(--muted);margin-top:10px}
+.hero p{margin-top:18px;font-size:16px}
+@media (max-width:640px){ .hero{grid-template-columns:1fr;gap:24px} }
+
+/* anatomy */
+.anatomy{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:36px;align-items:center}
+.anatomy svg{width:100%;height:auto}
+.parts{display:grid;gap:18px;margin:0;padding:0;list-style:none}
+.parts li{display:grid;grid-template-columns:28px 1fr;gap:12px}
+.parts .n{font:20px var(--display);color:var(--gold)}
+.parts b{font-weight:600}
+@media (max-width:700px){ .anatomy{grid-template-columns:1fr} .anatomy svg{max-width:260px} }
+.lbl{font:13px var(--ui);fill:var(--muted)}
+.guide{stroke:var(--muted);stroke-width:.6;stroke-dasharray:2 3;fill:none}
+
+/* tiles */
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.tile{border:1px solid var(--rule);border-radius:3px;padding:28px 24px;display:grid;gap:14px;align-content:start;min-width:0}
+.tile.panel{background:var(--panel)}
+.tile.ink{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tile.ink .muted{color:var(--rule)}
+.tile .cap{font-size:13px}
+.stage{display:grid;place-items:center;min-height:150px}
+
+.lockup{display:inline-flex;align-items:center;gap:16px}
+.lockup svg{width:58px;height:58px}
+.lockup .w{font:56px/.9 var(--display)}
+.lockup .k{font:600 10px var(--ui);letter-spacing:.16em;text-transform:uppercase;margin-top:8px;opacity:.75}
+.stack{display:grid;justify-items:center;gap:6px;text-align:center}
+.stack svg{width:64px;height:64px}
+.stack .w{font:46px/1 var(--display)}
+
+/* concepts */
+.concepts .tile svg{width:96px;height:96px}
+.tag{justify-self:start;font:600 10px var(--ui);letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:20px;border:1px solid var(--rule);color:var(--muted)}
+.tag.on{border-color:var(--gold);color:var(--gold)}
+
+/* colour */
+.swatches{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.sw{border:1px solid var(--rule);border-radius:3px;overflow:hidden;min-width:0}
+.sw .chip{height:74px;display:flex}
+.sw .chip span{flex:1}
+.sw .meta{padding:10px 12px;display:grid;gap:2px;font-size:12px;font-variant-numeric:tabular-nums}
+.sw .meta b{font:16px var(--display)}
+
+/* type */
+.specimen{display:grid;gap:18px}
+.spec{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;align-items:baseline;padding-bottom:18px;border-bottom:1px solid var(--rule)}
+.spec:last-child{border-bottom:0}
+@media (max-width:600px){ .spec{grid-template-columns:1fr;gap:6px} }
+
+/* applications */
+.tab{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--rule);border-radius:10px 10px 0 0;padding:10px 14px;font-size:13px;max-width:280px;min-width:0}
+.tab svg{width:18px;height:18px;flex:none}
+.tab span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.og{width:100%;border:1px solid var(--rule);border-radius:3px;display:block}
+.avatars{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.av{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--rule)}
+.av svg{width:64px;height:64px}
+.av.l{background:#E8CFB2}.av.d{background:#14100C}
+.av.l .r{stroke:#1E140D}.av.l .d{fill:#1E140D}.av.l .g{fill:#8A5E00}
+.av.d .r{stroke:#EAD3B8}.av.d .d{fill:#EAD3B8}.av.d .g{fill:#E8B54A}
+
+/* rules */
+.rules{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));margin:0;padding:0;list-style:none}
+.rules li{display:grid;grid-template-columns:22px 1fr;gap:10px}
+.rules .x{color:var(--curse);font-weight:600}
+.rules .ok{color:var(--gold);font-weight:600}
+.voice{display:grid;gap:12px}
+.quote{font:22px/1.35 var(--display);border-left:2px solid var(--gold);padding-left:16px}
+.quote.no{border-color:var(--curse);color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px}
+code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--panel);padding:1px 5px;border-radius:3px;border:1px solid var(--rule)}
+.files{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.files li{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:16px}
+@media (max-width:600px){ .files li{grid-template-columns:1fr;gap:2px} }
+.files code{overflow-wrap:anywhere}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="m">
+      <circle class="r" cx="32" cy="16" r="11"/>
+      <circle class="d" cx="32" cy="16" r="7"/>
+      <path class="r" d="M32 27v8"/>
+      <path class="g" d="M32 34.5C35 40.5 40.5 44 40.5 50.5a8.5 8.5 0 0 1-17 0C23.5 44 29 40.5 32 34.5Z"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <header class="hero">
+    <svg class="big mk" viewBox="0 0 64 64" role="img" aria-label="Знак Ichor"><use href="#m"/></svg>
+    <div>
+      <div class="eyebrow">Брендбук · ноябрь 2026</div>
+      <h1>Ichor</h1>
+      <div class="greek">ἰχώρ · The family tree of Greek myth</div>
+      <p class="muted">Ихор — золотая кровь богов. Знак показывает, как она стекает по линии родства от бога к смертным. Это и есть то, что делает сайт: ведёт кровь Геи вниз, к Оресту и Антигоне.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Знак</div>
+      <h2>Медальон, линия, капля</h2>
+    </div>
+    <div class="anatomy">
+      <svg class="mk" viewBox="-40 -4 150 70" role="img" aria-label="Устройство знака">
+        <use href="#m"/>
+        <path class="guide" d="M45 16H72M36 31H72M43 50H72"/>
+        <text class="lbl" x="75" y="19">1</text>
+        <text class="lbl" x="75" y="34">2</text>
+        <text class="lbl" x="75" y="53">3</text>
+        <path class="guide" d="M-6 5V61M-10 5H-2M-10 61H-2"/>
+        <text class="lbl" x="-34" y="36">1 : 1,1</text>
+      </svg>
+      <ol class="parts">
+        <li><span class="n">1</span><span><b>Медальон бога.</b> Двойное кольцо, как у богов на самом дереве. Читается как узел генеалогии и как глаз.</span></li>
+        <li><span class="n">2</span><span><b>Линия родства.</b> Тонкая сплошная линия, та же, что обозначает происхождение на дереве. «Ниже значит потомок».</span></li>
+        <li><span class="n">3</span><span><b>Капля ихора.</b> Единственное золото в знаке. Золото на сайте и так значит ихор: выбранная фигура, нить Ариадны, превращения.</span></li>
+      </ol>
+    </div>
+    <p class="muted">Знак собран из уже существующего визуального языка дерева, поэтому не выглядит пришитым: в шапке он стоит рядом с медальонами, которые читатель видит ниже.</p>
+  </section>
+
+  <section class="concepts">
+    <div class="sechead">
+      <div class="eyebrow">Варианты</div>
+      <h2>Что рассматривалось</h2>
+      <p class="muted">Предлагаю вариант A. Два других оставлены здесь для обсуждения.</p>
+    </div>
+    <div class="grid">
+      <div class="tile panel">
+        <span class="tag on">A · выбран</span>
+        <div class="stage"><svg class="mk" viewBox="0 0 64 64" aria-hidden="true"><use href="#m"/></svg></div>
+        <h3>Капля с медальона</h3>
+        <p class="cap muted">Простой силуэт, держится на 16 px. Прямо говорит о названии и о дереве.</p>
+      </div>
+      <div class="tile">
+        <span class="tag">B</span>
+        <div class="stage"><svg class="mk" viewBox="0 0 64 64" aria-hidden="true">
+          <path class="g" d="M32 4C40 18 54 30 54 42a22 22 0 0 1-44 0C10 30 24 18 32 4Z" opacity=".22"/>
+          <path d="M32 4C40 18 54 30 54 42a22 22 0 0 1-44 0C10 30 24 18 32 4Z" fill="none" stroke="var(--gold)" stroke-width="2"/>
+          <path class="r" d="M32 28v8H22v8M32 36h10v8" stroke-width="1.6"/>
+          <circle class="d" cx="32" cy="27" r="4"/><circle class="d" cx="22" cy="47" r="4"/><circle class="d" cx="42" cy="47" r="4"/>
+        </svg></div>
+        <h3>Стемма в капле</h3>
+        <p class="cap muted">Красиво крупно, но три узла внутри сливаются в фавиконе.</p>
+      </div>
+      <div class="tile">
+        <span class="tag">C</span>
+        <div class="stage"><span style="font:58px/1 var(--display);letter-spacing:.06em">ICH<svg class="mk" viewBox="0 0 64 64" style="width:.78em;height:.78em;vertical-align:-.04em" aria-hidden="true"><circle class="r" cx="32" cy="32" r="26" stroke-width="5"/><circle class="g" cx="32" cy="32" r="14"/></svg>R</span></div>
+        <h3>Монограмма с медальоном</h3>
+        <p class="cap muted">Буква O как медальон. Работает только в словесном знаке, отдельной иконки не даёт.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Логотип</div>
+      <h2>Сочетания</h2>
+    </div>
+    <div class="grid">
+      <div class="tile panel">
+        <div class="stage"><div class="lockup"><svg class="mk" viewBox="0 0 64 64" aria-hidden="true"><use href="#m"/></svg><div><div class="w">Ichor</div><div class="k">The family tree of Greek myth</div></div></div></div>
+        <p class="cap muted">Основной, горизонтальный. Для шапок, документов, презентаций.</p>
+      </div>
+      <div class="tile ink">
+        <div class="stage"><div class="stack"><svg class="mk inv" viewBox="0 0 64 64" aria-hidden="true"><use href="#m"/></svg><div class="w">Ichor</div></div></div>
+        <p class="cap muted">Вертикальный, на чёрной глазури. Для квадратных форматов и обложек.</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="tile">
+        <h3>Охранное поле</h3>
+        <p class="cap muted">Вокруг знака свободно не меньше диаметра медальона (кольцо целиком). Слово «Ichor» стоит на расстоянии одного медальона от знака.</p>
+      </div>
+      <div class="tile">
+        <h3>Минимальный размер</h3>
+        <p class="cap muted">Знак — 16 px (фавикон), там кольцо и линия утолщаются до 3 из 64 единиц. Горизонтальный логотип — от 120 px в ширину; меньше — только знак.</p>
+      </div>
+      <div class="tile">
+        <h3>Слово</h3>
+        <p class="cap muted">Wordmark набирается GFS Didot в строчном регистре: «Ichor». Капителями только в мелкой строке-кикере, как в шапке сайта.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Цвет</div>
+      <h2>Бледная глина и золотой ихор</h2>
+      <p class="muted">Палитра сайта не меняется. Каждый цвет дан парой: светлая тема (необожжённая глина) и тёмная (чёрная глазурь).</p>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="chip"><span style="background:#E8CFB2"></span><span style="background:#14100C"></span></div><div class="meta"><b>Глина</b><span class="muted">фон · #E8CFB2 / #14100C</span></div></div>
+      <div class="sw"><div class="chip"><span style="background:#F3E3D0"></span><span style="background:#1F1812"></span></div><div class="meta"><b>Черепок</b><span class="muted">панель · #F3E3D0 / #1F1812</span></div></div>
+      <div class="sw"><div class="chip"><span style="background:#1E140D"></span><span style="background:#EAD3B8"></span></div><div class="meta"><b>Чернила</b><span class="muted">текст, знак · #1E140D / #EAD3B8</span></div></div>
+      <div class="sw"><div class="chip"><span style="background:#8A5E00"></span><span style="background:#E8B54A"></span></div><div class="meta"><b>Ихор</b><span class="muted">капля, акцент · #8A5E00 / #E8B54A</span></div></div>
+      <div class="sw"><div class="chip"><span style="background:#A82A17"></span><span style="background:#E0533C"></span></div><div class="meta"><b>Проклятие</b><span class="muted">только проклятия · #A82A17 / #E0533C</span></div></div>
+    </div>
+    <p class="muted">Золото в знаке появляется один раз, в капле. Красный в логотипе не используется никогда: он занят проклятиями.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Шрифты</div>
+      <h2>Дидо для мифа, Manrope для интерфейса</h2>
+    </div>
+    <div class="specimen">
+      <div class="spec"><span class="eyebrow">GFS Didot · 56</span><span style="font:56px/1 var(--display)">Gods and heroes</span></div>
+      <div class="spec"><span class="eyebrow">GFS Didot · 22</span><span style="font:22px/1.4 var(--display)">Served his brother a dinner of his own children.</span></div>
+      <div class="spec"><span class="eyebrow">GFS Didot · греческий</span><span style="font:26px/1.3 var(--display)">Ἀτρεύς · Κλυταιμνήστρα · Ὀρέστης</span></div>
+      <div class="spec"><span class="eyebrow">Manrope 600 · 11</span><span class="eyebrow" style="color:var(--ink)">Homer &amp; epic · Hesiod · Lyric &amp; tragedy</span></div>
+      <div class="spec"><span class="eyebrow">Manrope 400 · 15</span><span>Tap a figure to open its card. Lower means descended, not later.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Носители</div>
+      <h2>Где живёт знак</h2>
+    </div>
+    <div class="grid">
+      <div class="tile">
+        <h3>Вкладка браузера</h3>
+        <div class="tab"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="var(--bg)" stroke="var(--rule)"/><g class="mk" transform="translate(32 32) scale(.86) translate(-32 -33)"><circle class="r" cx="32" cy="16" r="11" style="stroke-width:3"/><circle class="d" cx="32" cy="16" r="6.5"/><path class="r" d="M32 27v8" style="stroke-width:3"/><path class="g" d="M32 34.5C35 40.5 40.5 44 40.5 50.5a8.5 8.5 0 0 1-17 0C23.5 44 29 40.5 32 34.5Z"/></g></svg><span>Ichor — The family tree of Greek myth</span></div>
+        <p class="cap muted"><code>favicon.svg</code> сам переключается между глиной и глазурью по теме системы.</p>
+      </div>
+      <div class="tile">
+        <h3>Аватар соцсетей</h3>
+        <div class="avatars">
+          <div class="av l"><svg viewBox="0 0 64 64" aria-hidden="true"><g transform="translate(32 32) scale(.78) translate(-32 -33)"><use href="#m"/></g></svg></div>
+          <div class="av d"><svg viewBox="0 0 64 64" aria-hidden="true"><g transform="translate(32 32) scale(.78) translate(-32 -33)"><use href="#m"/></g></svg></div>
+        </div>
+        <p class="cap muted">Знак в круге, без слова. Для Bluesky, Instagram, GitHub.</p>
+      </div>
+    </div>
+    <div class="tile">
+      <h3>Карточка ссылки</h3>
+      <img class="og" src="og.png" alt="Карточка ссылки Ichor: знак, слово Ichor, подпись и фрагмент дома Атрея от Тантала до Ореста, путь выделен золотом" width="1200" height="630">
+      <p class="cap muted">1200 × 630. Справа — настоящий фрагмент дома Атрея, нарисованный как на сайте: золотая нить идёт от Тантала к Оресту. Для другой семьи карточку легко перерисовать тем же скриптом.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Голос</div>
+      <h2>Семейная драма, короткими фразами</h2>
+      <p class="muted">Всё, что видит читатель, — по-английски, с типографскими кавычками и апострофами. Подписи звучат как сплетня о родне, рассказы — короткими предложениями в прошедшем времени. Источник называется всегда.</p>
+    </div>
+    <div class="voice">
+      <p class="quote">Served his brother a dinner of his own children.</p>
+      <p class="quote">In Homer, Agamemnon has three daughters and none of them is Iphigenia.</p>
+      <p class="quote no">Unlock the epic secrets of the gods!</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Правила</div>
+      <h2>Чего не делать со знаком</h2>
+    </div>
+    <ul class="rules">
+      <li><span class="ok">✓</span><span>Чернила и одна золотая капля, на глине или глазури.</span></li>
+      <li><span class="ok">✓</span><span>Одноцветный вариант для печати: всё чернилами, капля тоже.</span></li>
+      <li><span class="x">✕</span><span>Не красить каплю в красный: это цвет проклятий, а не крови богов.</span></li>
+      <li><span class="x">✕</span><span>Не добавлять меандр, колонны, лавровые венки и шлемы.</span></li>
+      <li><span class="x">✕</span><span>Не поворачивать знак: капля всегда падает вниз, ниже значит потомок.</span></li>
+      <li><span class="x">✕</span><span>Не ставить на фото без подложки из глины или глазури.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <div class="eyebrow">Файлы</div>
+      <h2>Что лежит в репозитории</h2>
+    </div>
+    <ul class="files">
+      <li><code>brand/ichor-mark.svg</code><span class="muted">Знак, вектор, исходник.</span></li>
+      <li><code>brand/ichor-lockup-light.png</code>, <code>-dark.png</code><span class="muted">Горизонтальный логотип, 2×.</span></li>
+      <li><code>brand/ichor-avatar-dark.png</code>, <code>og-dark.png</code><span class="muted">Аватар и карточка в тёмной теме.</span></li>
+      <li><code>public/favicon.svg</code><span class="muted">Фавикон, следует теме системы.</span></li>
+      <li><code>public/apple-touch-icon.png</code>, <code>icon-192/512.png</code><span class="muted">Иконки для телефона и манифеста.</span></li>
+      <li><code>public/og.png</code>, <code>site.webmanifest</code><span class="muted">Карточка ссылки и манифест.</span></li>
+    </ul>
+  </section>
+
+</div>

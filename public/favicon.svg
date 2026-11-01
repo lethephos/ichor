@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .t{fill:#E8CFB2}.i{fill:#1E140D}.r{fill:none;stroke:#1E140D}.g{fill:#8A5E00}
+    @media (prefers-color-scheme:dark){.t{fill:#14100C}.i{fill:#EAD3B8}.r{stroke:#EAD3B8}.g{fill:#E8B54A}}
+  </style>
+  <rect class="t" width="64" height="64" rx="14"/>
+  <g transform="translate(32 32) scale(.86) translate(-32 -33)">
+    <circle class="r" cx="32" cy="16" r="11" stroke-width="3"/>
+    <circle class="i" cx="32" cy="16" r="6.5"/>
+    <path class="r" d="M32 27v8" stroke-width="3"/>
+    <path class="g" d="M32 34.5C35 40.5 40.5 44 40.5 50.5a8.5 8.5 0 0 1-17 0C23.5 44 29 40.5 32 34.5Z"/>
+  </g>
+</svg>

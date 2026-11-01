@@ -2,6 +2,11 @@
 header{padding:16px 16px 6px;position:relative}
 .kicker{font:600 10.5px var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .kicker .brand{color:var(--text)}
+/* the mark: a god’s medallion, the line of descent and a drop of ichor */
+.mark{width:17px;height:17px;vertical-align:-4px;margin:-4px 4px -2px -2px}
+.mark .m-ring{fill:none;stroke:currentColor;stroke-width:3.4}
+.mark .m-dot{fill:currentColor}
+.mark .m-drop{fill:var(--accent)}
 .branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:12px 0 0}
 .branch-sub{font-family:var(--display);font-size:16px;color:var(--muted);margin-top:2px}
 @media (min-width:900px){
