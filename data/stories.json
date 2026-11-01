@@ -1978,6 +1978,244 @@
     ]
   },
   {
+    "id": "monsters",
+    "kind": "story",
+    "title": "The brood of Echidna",
+    "lead": "The children of the sea gods, all fangs and coils and heads, and the heroes who killed them one by one.",
+    "steps": [
+      {
+        "label": "The old man of the sea",
+        "figures": ["gaia", "pontus", "nereus", "nereids", "oceanids", "thetis"],
+        "pairs": [
+          ["gaia", "pontus"],
+          ["pontus", "nereus"],
+          ["nereus", "nereids"],
+          ["oceanids", "nereids"],
+          ["nereus", "thetis"]
+        ],
+        "text": "Earth bears Pontus, the barren Sea, on her own, and then lies with him. Their eldest son is Nereus, the old man of the sea, who never lies and never forgets what is right. With the Ocean nymph Doris he has fifty daughters, the Nereids, Thetis among them."
+      },
+      {
+        "label": "Phorcys and Ceto",
+        "figures": ["phorcys", "ceto", "graeae", "gorgons", "medusa"],
+        "pairs": [
+          ["pontus", "phorcys"],
+          ["gaia", "phorcys"],
+          ["pontus", "ceto"],
+          ["gaia", "ceto"],
+          ["phorcys", "ceto"],
+          ["phorcys", "graeae"],
+          ["ceto", "graeae"],
+          ["phorcys", "gorgons"],
+          ["ceto", "gorgons"],
+          ["phorcys", "medusa"],
+          ["ceto", "medusa"]
+        ],
+        "text": "Phorcys marries his sister Ceto, and their children are the monsters of the edges of the world. The Graeae are grey-haired from birth. The Gorgons live beyond Ocean, near Night; two are immortal and ageless, but the third, Medusa, can die."
+      },
+      {
+        "label": "Echidna",
+        "figures": ["echidna", "ladon", "tartarus"],
+        "pairs": [
+          ["phorcys", "echidna"],
+          ["ceto", "echidna"],
+          ["tartarus", "echidna"],
+          ["gaia", "echidna"],
+          ["phorcys", "ladon"],
+          ["ceto", "ladon"]
+        ],
+        "text": "‘She’, Hesiod says, probably meaning Ceto, bears Echidna: half a nymph with lovely cheeks, half a huge speckled serpent, who eats raw flesh in a cave under the earth and never grows old. The last child of Phorcys and Ceto is the serpent who guards the golden apples at the end of the world, named Ladon by later writers."
+      },
+      {
+        "label": "Typhon",
+        "figures": ["typhon", "zeus", "hera"],
+        "pairs": [
+          ["gaia", "typhon"],
+          ["tartarus", "typhon"],
+          ["hera", "typhon"],
+          ["zeus", "typhon"]
+        ],
+        "text": "Earth, with Tartarus, bears Typhon, with a hundred serpent heads and voices of every beast; in the Homeric Hymn to Apollo, Hera bears him on her own, in anger at Zeus. He fights Zeus for the rule of the world, and Zeus blasts him with thunderbolts and throws him down into Tartarus."
+      },
+      {
+        "label": "Their children",
+        "figures": ["orthus", "cerberus", "hydra", "chimera"],
+        "pairs": [
+          ["typhon", "echidna"],
+          ["typhon", "orthus"],
+          ["echidna", "orthus"],
+          ["typhon", "cerberus"],
+          ["echidna", "cerberus"],
+          ["typhon", "hydra"],
+          ["echidna", "hydra"],
+          ["typhon", "chimera"],
+          ["echidna", "chimera"]
+        ],
+        "text": "Typhon and Echidna have children: Orthus, the dog of Geryon; Cerberus, the dog of Hades, with fifty heads in Hesiod, who fawns on those who come in and eats those who try to leave; the Hydra of Lerna; and, if Hesiod’s ‘she’ means Echidna, the Chimera, lion in front, serpent behind, goat in the middle."
+      },
+      {
+        "label": "The next brood",
+        "figures": ["nemean-lion", "sphinx"],
+        "pairs": [
+          ["orthus", "nemean-lion"],
+          ["chimera", "nemean-lion"],
+          ["typhon", "nemean-lion"],
+          ["orthus", "sphinx"],
+          ["chimera", "sphinx"],
+          ["typhon", "sphinx"],
+          ["echidna", "sphinx"]
+        ],
+        "text": "In Hesiod, a ‘she’ again, the Chimera or Echidna, lies with Orthus and bears the Sphinx, the ruin of Thebes, and the Nemean Lion, whom Hera raises and sets in the hills of Nemea. Apollodorus makes them both children of Typhon."
+      },
+      {
+        "label": "More of the brood",
+        "figures": ["colchian-dragon", "scylla"],
+        "pairs": [
+          ["typhon", "colchian-dragon"],
+          ["echidna", "colchian-dragon"],
+          ["typhon", "scylla"],
+          ["echidna", "scylla"],
+          ["phorcys", "scylla"]
+        ],
+        "text": "Later writers give Typhon and Echidna still more children: the dragon that guards the golden fleece in Colchis, and Scylla, whom Apollodorus calls a daughter of Phorcys."
+      },
+      {
+        "label": "Perseus",
+        "figures": ["perseus", "pegasus", "chrysaor", "geryon", "poseidon"],
+        "pairs": [
+          ["perseus", "graeae"],
+          ["perseus", "medusa"],
+          ["gorgons", "perseus"],
+          ["poseidon", "medusa"],
+          ["medusa", "pegasus"],
+          ["poseidon", "pegasus"],
+          ["medusa", "chrysaor"],
+          ["poseidon", "chrysaor"],
+          ["chrysaor", "geryon"],
+          ["oceanids", "geryon"]
+        ],
+        "text": "Perseus is the first of the monster-killers. He steals the one eye of the Graeae until they show him the way, and cuts off Medusa’s head. From her neck spring her children by Poseidon: the winged horse Pegasus and Chrysaor, ‘golden sword’, who becomes the father of Geryon, the giant with three bodies."
+      },
+      {
+        "label": "The sea monster",
+        "figures": ["cetus", "cassiopeia", "cepheus", "andromeda"],
+        "pairs": [
+          ["cassiopeia", "nereids"],
+          ["poseidon", "cassiopeia"],
+          ["poseidon", "cepheus"],
+          ["perseus", "cetus"],
+          ["perseus", "andromeda"]
+        ],
+        "text": "Queen Cassiopeia boasts that she is more beautiful than the Nereids, and Poseidon sends a sea monster against the land of her husband Cepheus. Their daughter Andromeda is chained to a rock for it, until Perseus kills it."
+      },
+      {
+        "label": "Bellerophon",
+        "figures": ["bellerophon"],
+        "pairs": [
+          ["bellerophon", "chimera"],
+          ["pegasus", "bellerophon"]
+        ],
+        "text": "Bellerophon, riding Pegasus, kills the Chimera from the air."
+      },
+      {
+        "label": "Heracles",
+        "figures": ["heracles", "iolaus"],
+        "pairs": [
+          ["heracles", "nemean-lion"],
+          ["heracles", "hydra"],
+          ["iolaus", "hydra"],
+          ["heracles", "orthus"],
+          ["heracles", "geryon"],
+          ["heracles", "ladon"],
+          ["heracles", "cerberus"]
+        ],
+        "text": "Heracles kills more of the family than anyone: he chokes the Nemean Lion; with Iolaus he burns the Hydra’s necks; he kills Orthus and Geryon and drives off the red cattle; in later writers he kills the serpent of the golden apples; and he drags Cerberus up into the light."
+      },
+      {
+        "label": "The riddle",
+        "figures": ["sphinx", "oedipus"],
+        "pairs": [
+          ["oedipus", "sphinx"]
+        ],
+        "text": "The Sphinx sits on a hill outside Thebes and eats those who cannot answer her riddle: what walks on four legs, then on two, then on three? Oedipus answers ‘man’, and she throws herself down to her death."
+      }
+    ],
+    "pairs": [
+      ["gaia", "pontus"],
+      ["pontus", "nereus"],
+      ["nereus", "nereids"],
+      ["oceanids", "nereids"],
+      ["nereus", "thetis"],
+      ["pontus", "phorcys"],
+      ["gaia", "phorcys"],
+      ["pontus", "ceto"],
+      ["gaia", "ceto"],
+      ["phorcys", "ceto"],
+      ["phorcys", "graeae"],
+      ["ceto", "graeae"],
+      ["phorcys", "gorgons"],
+      ["ceto", "gorgons"],
+      ["phorcys", "medusa"],
+      ["ceto", "medusa"],
+      ["phorcys", "echidna"],
+      ["ceto", "echidna"],
+      ["tartarus", "echidna"],
+      ["gaia", "echidna"],
+      ["phorcys", "ladon"],
+      ["ceto", "ladon"],
+      ["gaia", "typhon"],
+      ["tartarus", "typhon"],
+      ["hera", "typhon"],
+      ["zeus", "typhon"],
+      ["typhon", "echidna"],
+      ["typhon", "orthus"],
+      ["echidna", "orthus"],
+      ["typhon", "cerberus"],
+      ["echidna", "cerberus"],
+      ["typhon", "hydra"],
+      ["echidna", "hydra"],
+      ["typhon", "chimera"],
+      ["echidna", "chimera"],
+      ["orthus", "nemean-lion"],
+      ["chimera", "nemean-lion"],
+      ["typhon", "nemean-lion"],
+      ["orthus", "sphinx"],
+      ["chimera", "sphinx"],
+      ["typhon", "sphinx"],
+      ["echidna", "sphinx"],
+      ["typhon", "colchian-dragon"],
+      ["echidna", "colchian-dragon"],
+      ["typhon", "scylla"],
+      ["echidna", "scylla"],
+      ["phorcys", "scylla"],
+      ["perseus", "graeae"],
+      ["perseus", "medusa"],
+      ["gorgons", "perseus"],
+      ["poseidon", "medusa"],
+      ["medusa", "pegasus"],
+      ["poseidon", "pegasus"],
+      ["medusa", "chrysaor"],
+      ["poseidon", "chrysaor"],
+      ["chrysaor", "geryon"],
+      ["oceanids", "geryon"],
+      ["cassiopeia", "nereids"],
+      ["poseidon", "cassiopeia"],
+      ["poseidon", "cepheus"],
+      ["perseus", "cetus"],
+      ["perseus", "andromeda"],
+      ["bellerophon", "chimera"],
+      ["pegasus", "bellerophon"],
+      ["heracles", "nemean-lion"],
+      ["heracles", "hydra"],
+      ["iolaus", "hydra"],
+      ["heracles", "orthus"],
+      ["heracles", "geryon"],
+      ["heracles", "ladon"],
+      ["heracles", "cerberus"],
+      ["oedipus", "sphinx"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
