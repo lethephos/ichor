@@ -1760,6 +1760,224 @@
     ]
   },
   {
+    "id": "loves",
+    "kind": "story",
+    "title": "The loves of Zeus",
+    "lead": "Seven wives in Hesiod, and goddesses, nymphs, princesses and a prince besides: a bull, a swan, a shower of gold.",
+    "steps": [
+      {
+        "label": "Metis",
+        "figures": ["zeus", "metis", "athena"],
+        "pairs": [
+          ["zeus", "metis"],
+          ["metis", "athena"],
+          ["zeus", "athena"]
+        ],
+        "text": "Zeus’ first wife, in Hesiod, is Metis, Cunning, the wisest of gods and men. Earth and Sky warn him that she will bear a son who will be king in his place, so when she is about to give birth, he talks her into his belly and swallows her. Her daughter Athena is born from his head, fully armed."
+      },
+      {
+        "label": "Themis",
+        "figures": ["themis", "horae", "moirai"],
+        "pairs": [
+          ["zeus", "themis"],
+          ["themis", "horae"],
+          ["zeus", "horae"],
+          ["themis", "moirai"],
+          ["zeus", "moirai"]
+        ],
+        "text": "His second wife is Themis, Right Order. She bears the Seasons, Lawfulness, Justice and Peace, who watch over the works of men; and in this passage of Hesiod the Fates too, who give men good and evil."
+      },
+      {
+        "label": "Memory",
+        "figures": ["mnemosyne", "muses", "charites"],
+        "pairs": [
+          ["zeus", "mnemosyne"],
+          ["mnemosyne", "muses"],
+          ["zeus", "muses"],
+          ["zeus", "charites"]
+        ],
+        "text": "The Ocean nymph Eurynome bears him the three Graces. With Mnemosyne, Memory, he lies for nine nights, away from the other gods, and she bears the nine Muses, who make men forget their troubles."
+      },
+      {
+        "label": "Demeter",
+        "figures": ["demeter", "persephone"],
+        "pairs": [
+          ["zeus", "persephone"],
+          ["demeter", "persephone"]
+        ],
+        "text": "With his sister Demeter, he has Persephone, the girl whom Hades will carry off, with Zeus’ consent."
+      },
+      {
+        "label": "Leto",
+        "figures": ["leto", "apollo", "artemis", "asteria"],
+        "pairs": [
+          ["zeus", "leto"],
+          ["leto", "apollo"],
+          ["zeus", "apollo"],
+          ["leto", "artemis"],
+          ["zeus", "artemis"],
+          ["zeus", "asteria"]
+        ],
+        "text": "Leto bears him Apollo and Artemis. In the Homeric Hymn, no land dares to take her in for the birth, for fear of Hera, until the rocky island of Delos agrees. Her sister Asteria runs from Zeus; in Apollodorus, she turns into a quail and throws herself into the sea, and becomes the island that was first called Asteria and later Delos."
+      },
+      {
+        "label": "Hera",
+        "figures": ["hera", "hebe", "ares", "hephaestus"],
+        "pairs": [
+          ["zeus", "hera"],
+          ["zeus", "hebe"],
+          ["hera", "hebe"],
+          ["zeus", "ares"],
+          ["hera", "ares"],
+          ["hera", "hephaestus"],
+          ["zeus", "hephaestus"]
+        ],
+        "text": "Last, Zeus makes Hera his queen. She bears him Hebe, Youth, and Ares, the god of war, whom his father tells in the Iliad that he is the most hateful of all the gods on Olympus. Hesiod says Hera, furious and quarrelling with her husband, bears Hephaestus with no father at all; in Homer, Zeus is his father."
+      },
+      {
+        "label": "In the cave",
+        "figures": ["maia", "hermes", "pleiades", "dardanus"],
+        "pairs": [
+          ["zeus", "maia"],
+          ["maia", "hermes"],
+          ["zeus", "hermes"],
+          ["pleiades", "dardanus"],
+          ["zeus", "dardanus"]
+        ],
+        "text": "Maia, eldest of the Pleiades, lives apart in a shadowy cave. In the Homeric Hymn, Zeus comes to her in the dead of night, while Hera is asleep, and she bears Hermes, a thief from his first day. Her sister Electra bears him Dardanus, the first of the line of Troy."
+      },
+      {
+        "label": "Dione",
+        "figures": ["dione", "aphrodite"],
+        "pairs": [
+          ["zeus", "aphrodite"],
+          ["dione", "aphrodite"]
+        ],
+        "text": "In Homer, Aphrodite is the daughter of Zeus and Dione. When Diomedes wounds her at Troy, she runs crying to her mother’s lap. Hesiod knows another birth: from the foam around the severed parts of Uranus."
+      },
+      {
+        "label": "Semele",
+        "figures": ["semele", "dionysus"],
+        "pairs": [
+          ["zeus", "semele"],
+          ["semele", "dionysus"],
+          ["zeus", "dionysus"],
+          ["hera", "semele"]
+        ],
+        "text": "The Theban princess Semele is loved by Zeus. Hera, in disguise, persuades her to ask him to come to her as he comes to his wife. He has sworn to give her what she asks, and he comes with the thunderbolt; she dies of it. Zeus takes the unborn Dionysus from her and sews him into his thigh until he is born."
+      },
+      {
+        "label": "Gold, and a long night",
+        "figures": ["danae", "perseus", "alcmene", "heracles"],
+        "pairs": [
+          ["zeus", "danae"],
+          ["danae", "perseus"],
+          ["zeus", "perseus"],
+          ["zeus", "alcmene"],
+          ["alcmene", "heracles"],
+          ["zeus", "heracles"],
+          ["hera", "heracles"]
+        ],
+        "text": "He comes to Danaë, locked in her bronze chamber, as a shower of gold, and she bears Perseus. He comes to Alcmene in the shape of her husband, while the real Amphitryon is away at war, and makes the night three times as long; she bears Heracles, whom Hera hates from before his birth."
+      },
+      {
+        "label": "Swan and goose",
+        "figures": ["leda", "nemesis", "helen", "castor", "polydeuces"],
+        "pairs": [
+          ["zeus", "leda"],
+          ["zeus", "nemesis"],
+          ["nemesis", "helen"],
+          ["leda", "helen"],
+          ["zeus", "helen"],
+          ["zeus", "castor"],
+          ["leda", "castor"],
+          ["zeus", "polydeuces"],
+          ["leda", "polydeuces"]
+        ],
+        "text": "In the Cypria, Nemesis runs from him over land and sea, changing her shape to escape; in Apollodorus, she becomes a goose and he a swan, and the egg she lays is given to Leda. In the better-known story, he comes to Leda as a swan. From the egg comes Helen; of Leda’s twin sons, in Pindar, only Polydeuces is his."
+      },
+      {
+        "label": "Boys and kings",
+        "figures": ["ganymede", "pluto", "tantalus", "aeacus"],
+        "pairs": [
+          ["zeus", "ganymede"],
+          ["zeus", "tantalus"],
+          ["pluto", "tantalus"],
+          ["zeus", "aeacus"]
+        ],
+        "text": "Zeus carries off the Trojan prince Ganymede, the most beautiful of mortals, to pour his wine; in Ovid, he comes for him as an eagle. The nymph Pluto, Wealth, bears him Tantalus, who will eat at the gods’ table and betray them. The nymph Aegina bears him Aeacus, so just that in Pindar he settles quarrels among the gods."
+      },
+      {
+        "label": "The list",
+        "figures": ["hera"],
+        "pairs": [
+          ["zeus", "hera"]
+        ],
+        "text": "In the Iliad, Zeus, wanting Hera, tells her that he has never desired anyone as he desires her now: not the wife of Ixion, not Danaë, Europa, Semele or Alcmene, not Demeter or Leto, nor even Hera herself. He names them one by one."
+      }
+    ],
+    "pairs": [
+      ["zeus", "metis"],
+      ["metis", "athena"],
+      ["zeus", "athena"],
+      ["zeus", "themis"],
+      ["themis", "horae"],
+      ["zeus", "horae"],
+      ["themis", "moirai"],
+      ["zeus", "moirai"],
+      ["zeus", "mnemosyne"],
+      ["mnemosyne", "muses"],
+      ["zeus", "muses"],
+      ["zeus", "charites"],
+      ["zeus", "persephone"],
+      ["demeter", "persephone"],
+      ["zeus", "leto"],
+      ["leto", "apollo"],
+      ["zeus", "apollo"],
+      ["leto", "artemis"],
+      ["zeus", "artemis"],
+      ["zeus", "asteria"],
+      ["zeus", "hera"],
+      ["zeus", "hebe"],
+      ["hera", "hebe"],
+      ["zeus", "ares"],
+      ["hera", "ares"],
+      ["hera", "hephaestus"],
+      ["zeus", "hephaestus"],
+      ["zeus", "maia"],
+      ["maia", "hermes"],
+      ["zeus", "hermes"],
+      ["pleiades", "dardanus"],
+      ["zeus", "dardanus"],
+      ["zeus", "aphrodite"],
+      ["dione", "aphrodite"],
+      ["zeus", "semele"],
+      ["semele", "dionysus"],
+      ["zeus", "dionysus"],
+      ["hera", "semele"],
+      ["zeus", "danae"],
+      ["danae", "perseus"],
+      ["zeus", "perseus"],
+      ["zeus", "alcmene"],
+      ["alcmene", "heracles"],
+      ["zeus", "heracles"],
+      ["hera", "heracles"],
+      ["zeus", "leda"],
+      ["zeus", "nemesis"],
+      ["nemesis", "helen"],
+      ["leda", "helen"],
+      ["zeus", "helen"],
+      ["zeus", "castor"],
+      ["leda", "castor"],
+      ["zeus", "polydeuces"],
+      ["leda", "polydeuces"],
+      ["zeus", "ganymede"],
+      ["zeus", "tantalus"],
+      ["pluto", "tantalus"],
+      ["zeus", "aeacus"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
