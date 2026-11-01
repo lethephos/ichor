@@ -4680,5 +4680,75 @@
     "to": "astyanax",
     "sources": ["E", "T"],
     "note": "killed Astyanax, or had the Greeks throw him from the walls"
+  },
+  {
+    "type": "feud",
+    "from": "acrisius",
+    "to": "danae",
+    "sources": ["T", "A", "L"],
+    "note": "shut Danaë away in a bronze chamber, then cast her and her baby into the sea in a chest"
+  },
+  {
+    "type": "feud",
+    "from": "polydectes",
+    "to": "danae",
+    "sources": ["T", "A"],
+    "note": "pressed Danaë to be his, until she fled to the altars"
+  },
+  {
+    "type": "feud",
+    "from": "polydectes",
+    "to": "perseus",
+    "sources": ["A"],
+    "note": "sent Perseus to fetch the Gorgon’s head, hoping he would not come back"
+  },
+  {
+    "type": "transform",
+    "from": "perseus",
+    "to": "polydectes",
+    "sources": ["T", "A", "L"],
+    "note": "turned Polydectes and his guests to stone with the Gorgon’s head"
+  },
+  {
+    "type": "transform",
+    "from": "athena",
+    "to": "medusa",
+    "sources": ["L"],
+    "note": "turned Medusa’s hair into snakes, after Poseidon lay with her in Athena’s temple"
+  },
+  {
+    "type": "feud",
+    "from": "gorgons",
+    "to": "perseus",
+    "sources": ["A"],
+    "note": "chased Perseus after he killed their sister, but could not see him under the cap of Hades"
+  },
+  {
+    "type": "transform",
+    "from": "perseus",
+    "to": "atlas",
+    "sources": ["L"],
+    "note": "turned Atlas into a mountain with the Gorgon’s head"
+  },
+  {
+    "type": "feud",
+    "from": "cassiopeia",
+    "to": "nereids",
+    "sources": ["A", "L"],
+    "note": "boasted that she, or her daughter, was more beautiful than the Nereids"
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "cepheus",
+    "sources": ["A", "L"],
+    "note": "sent a sea monster against the land of Cepheus"
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "cetus",
+    "sources": ["T", "A", "L"],
+    "note": "killed the sea monster and set Andromeda free"
   }
 ]

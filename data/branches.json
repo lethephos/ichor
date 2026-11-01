@@ -81,7 +81,7 @@
         "note": "The house of Perseus, from Danaë’s prison to Heracles on Olympus.",
         "houses": ["House of Perseus"],
         "focus": "heracles",
-        "figures": ["zeus", "hera", "poseidon", "hebe", "pelops", "acrisius", "danae", "perseus", "andromeda", "medusa", "alcaeus", "electryon", "sthenelus", "nicippe", "amphitryon", "alcmene", "eurystheus", "heracles", "iphicles", "menoeceus", "creon", "megara", "deianira"]
+        "figures": ["zeus", "hera", "poseidon", "hebe", "pelops", "acrisius", "danae", "perseus", "andromeda", "medusa", "alcaeus", "electryon", "sthenelus", "nicippe", "amphitryon", "alcmene", "eurystheus", "heracles", "iphicles", "menoeceus", "creon", "megara", "deianira", "polydectes", "cetus", "athena", "atlas", "graeae", "gorgons", "phorcys", "ceto", "pegasus", "chrysaor", "cepheus", "cassiopeia", "phineus", "nereids"]
       },
       {
         "id": "argonauts",
@@ -153,7 +153,7 @@
         "title": "Io and the Danaids",
         "note": "From the river Inachus and his daughter Io, whom Zeus loved, through Egypt and back to Argos with the fifty daughters of Danaus, down to Acrisius, Danaë and Andromeda.",
         "focus": "io",
-        "figures": ["oceanus", "tethys", "inachus", "zeus", "hera", "hermes", "poseidon", "io", "argus", "epaphus", "libya", "belus", "agenor", "cadmus", "europa", "danaus", "aegyptus", "danaids", "sons-of-aegyptus", "hypermnestra", "lynceus", "amymone", "nauplius", "abas", "acrisius", "proetus", "danae", "perseus", "cepheus", "cassiopeia", "phineus", "andromeda"],
+        "figures": ["oceanus", "tethys", "inachus", "zeus", "hera", "hermes", "poseidon", "io", "argus", "epaphus", "libya", "belus", "agenor", "cadmus", "europa", "danaus", "aegyptus", "danaids", "sons-of-aegyptus", "hypermnestra", "lynceus", "amymone", "nauplius", "abas", "acrisius", "proetus", "danae", "perseus", "cepheus", "cassiopeia", "phineus", "andromeda", "polydectes"],
         "houses": []
       },
       {
@@ -163,7 +163,7 @@
         "note": "The brood of the sea gods Phorcys and Ceto and of Typhon and Echidna, and the heroes who killed them: Perseus, Bellerophon, Heracles and Oedipus.",
         "focus": "echidna",
         "houses": [],
-        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus"]
+        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus", "cetus", "andromeda", "cepheus"]
       },
       {
         "id": "underworld",

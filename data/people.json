@@ -4812,5 +4812,31 @@
     "tagline": "Warned the Trojans about the horse.",
     "story": "A Trojan priest who warned against taking the wooden horse into the city. Two serpents came over the sea and killed him and one of his sons, and the Trojans took it as a sign that he had been wrong.",
     "versions": "The Iliou Persis says the serpents killed Laocoon and one son; Apollodorus says both sons, and that Apollo sent them."
+  },
+  {
+    "id": "polydectes",
+    "name": "Polydectes",
+    "greek": "Πολυδέκτης",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Seriphos",
+    "tagline": "Asked for a horse and was given the Gorgon’s head.",
+    "story": "King of the island of Seriphos, where the chest carrying Danaë and her baby washed ashore. He wanted Danaë, and her grown son stood in the way, so he sent Perseus to fetch the head of Medusa. Perseus came back, found his mother hiding at the altars, and turned the king and his guests to stone.",
+    "versions": "Apollodorus: Polydectes pressed Danaë and she fled to the altars with Dictys. Pindar speaks of her slavery and a forced marriage. Hyginus: Polydectes married Danaë and raised Perseus in a temple of Athena."
+  },
+  {
+    "id": "cetus",
+    "name": "The sea monster",
+    "greek": "Κῆτος",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Monster of Ethiopia",
+    "tagline": "Came for a princess and met Perseus.",
+    "story": "A sea monster sent by Poseidon against the land of Cepheus, after Queen Cassiopeia had boasted she was more beautiful than the Nereids. An oracle of Ammon said only Andromeda could buy it off, so she was chained to a rock by the sea. Perseus, flying back with the Gorgon’s head, killed it and married her.",
+    "versions": "Apollodorus: Poseidon sent a flood and the monster. Hyginus: Poseidon demanded that Andromeda be given to the monster."
   }
 ]
