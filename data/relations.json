@@ -4804,5 +4804,12 @@
     "to": "nessus",
     "sources": ["T", "A", "L"],
     "note": "shot Nessus with an arrow dipped in the Hydra’s poison, when the centaur tried to carry off Deianira"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "bandits",
+    "sources": ["T", "A", "L"],
+    "note": "killed the bandits on the road from Troezen to Athens"
   }
 ]

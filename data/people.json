@@ -4888,5 +4888,52 @@
     "role": "Centaur and ferryman",
     "tagline": "Took his revenge from beyond the grave.",
     "story": "A centaur who carried travellers across the river Evenus. When he tried to carry off Deianira, Heracles shot him with an arrow dipped in the Hydra’s poison. Dying, he told her to keep his blood as a charm to win back her husband’s love. The charm was the poison that killed Heracles."
+  },
+  {
+    "id": "bandits",
+    "name": "Bandits of the Isthmus road",
+    "greek": "λῃσταί",
+    "gender": "m",
+    "generation": 6,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Robbers between Troezen and Athens",
+    "tagline": "Each died the way he killed.",
+    "story": "The robbers who held the land road from Troezen to Athens. Young Theseus chose that road instead of the sea and killed them one by one, most of them in the way they had killed their victims.",
+    "count": "Six",
+    "members_label": "on the road",
+    "members": [
+      {
+        "name": "Periphetes",
+        "greek": "Περιφήτης",
+        "note": "killed travellers with an iron club; Theseus took it and carried it ever after"
+      },
+      {
+        "name": "Sinis",
+        "greek": "Σίνις",
+        "note": "the Pine-bender, who tore men apart between two bent pines"
+      },
+      {
+        "name": "The sow of Crommyon",
+        "greek": "Φαιά",
+        "note": "a wild sow called Phaea"
+      },
+      {
+        "name": "Sciron",
+        "greek": "Σκίρων",
+        "note": "made travellers wash his feet, and kicked them off the cliff to a giant turtle"
+      },
+      {
+        "name": "Cercyon",
+        "greek": "Κερκυών",
+        "note": "wrestled passers-by to death"
+      },
+      {
+        "name": "Procrustes",
+        "greek": "Προκρούστης",
+        "note": "stretched or cut his guests to fit his bed; Apollodorus calls him Damastes or Polypemon"
+      }
+    ],
+    "members_note": "Apollodorus lists them in this order. Euripides’ Theseus boasts of Sinis and Sciron; Ovid adds the rest."
   }
 ]

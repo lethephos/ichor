@@ -451,5 +451,74 @@
         "text": "Years later Heracles sacks Oechalia and sends home the princess Iole. Afraid of losing him, Deianira smears a robe with the blood of Nessus and sends it to him. The poison burns into his flesh. He has himself laid on a pyre on Mount Oeta, and Poeas, or his son Philoctetes, lights it. Heracles is taken up to Olympus, reconciled with Hera, and marries her daughter Hebe."
       }
     ]
+  },
+  {
+    "id": "theseus",
+    "kind": "story",
+    "title": "Theseus and the Minotaur",
+    "lead": "A sword under a rock, a ball of thread, and a sail that was never changed.",
+    "pairs": [
+      ["aegeus", "aethra"],
+      ["poseidon", "aethra"],
+      ["aegeus", "theseus"],
+      ["poseidon", "theseus"],
+      ["aethra", "theseus"],
+      ["theseus", "bandits"],
+      ["medea", "theseus"],
+      ["aegeus", "medea"],
+      ["aegeus", "androgeus"],
+      ["minos", "androgeus"],
+      ["minos", "aegeus"],
+      ["poseidon", "pasiphae"],
+      ["minos", "pasiphae"],
+      ["pasiphae", "minotaur"],
+      ["theseus", "minotaur"],
+      ["theseus", "ariadne"],
+      ["minos", "ariadne"],
+      ["dionysus", "ariadne"],
+      ["theseus", "aegeus"]
+    ],
+    "steps": [
+      {
+        "label": "Two fathers",
+        "figures": ["aegeus", "aethra", "poseidon", "theseus"],
+        "text": "Aegeus, king of Athens, has no son. On his way home from Delphi he stops at Troezen, and its king makes him drunk and puts him to bed with his daughter Aethra. The same night Poseidon lies with her. Before he leaves, Aegeus hides his sword and sandals under a great rock: when the boy can lift it, he is to come to Athens."
+      },
+      {
+        "label": "The road",
+        "figures": ["bandits"],
+        "text": "Grown, Theseus lifts the rock and takes the sword and sandals. He goes to Athens by land, though the road is full of robbers, and kills them one by one: Periphetes and his club, Sinis the pine-bender, Sciron who kicked travellers off a cliff, Cercyon the wrestler, and Procrustes with his bed."
+      },
+      {
+        "label": "The cup",
+        "figures": ["medea", "aegeus"],
+        "text": "In Athens, Aegeus has married Medea, who has fled from Corinth. She knows who the stranger is. She persuades Aegeus to send him against the bull of Marathon, and when he comes back alive, to give him poison at a feast. As Theseus draws his sword to cut the meat, Aegeus knows it, and dashes the cup from his hand. Medea flees."
+      },
+      {
+        "label": "The tribute",
+        "figures": ["minos", "androgeus"],
+        "text": "Minos of Crete has lost his son Androgeus in Attica: some say Aegeus sent him against the bull of Marathon, others that he was ambushed on the road. Minos makes war on Athens, and Athens must send seven youths and seven girls to Crete, to be fed to the Minotaur."
+      },
+      {
+        "label": "The Minotaur",
+        "figures": ["pasiphae", "minotaur", "poseidon"],
+        "text": "The Minotaur, with a bull’s head on a man’s body, is the son of Minos’ queen Pasiphae. Minos would not sacrifice the bull Poseidon sent him from the sea, and Poseidon made Pasiphae love it. Daedalus built her a wooden cow, and then the Labyrinth to hide her child."
+      },
+      {
+        "label": "The thread",
+        "figures": ["theseus", "ariadne", "minotaur"],
+        "text": "Theseus sails to Crete among the fourteen. Ariadne, Minos’ daughter, falls in love with him and, on Daedalus’ advice, gives him a ball of thread. He ties it at the door, finds the Minotaur at the heart of the Labyrinth, kills it, in Apollodorus with his fists, and follows the thread out."
+      },
+      {
+        "label": "Naxos",
+        "figures": ["ariadne", "dionysus"],
+        "text": "He sails away with Ariadne and the children, and leaves her on the island of Naxos, called Dia. Dionysus finds her there and makes her his wife. The Odyssey tells it darker: Artemis killed her on Dia, on the word of Dionysus."
+      },
+      {
+        "label": "The black sail",
+        "figures": ["theseus", "aegeus"],
+        "text": "Theseus had promised his father a white sail if he came home alive. He forgets, and the ship comes in under black. Aegeus, watching from the Acropolis, thinks his son is dead and throws himself down. Theseus becomes king of Athens."
+      }
+    ]
   }
 ]
