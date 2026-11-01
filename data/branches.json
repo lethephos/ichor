@@ -47,7 +47,7 @@
         "title": "The Titans",
         "note": "Gaia and Uranus, their twelve children, and the gods the Titans fathered.",
         "focus": "cronus",
-        "figures": ["gaia", "uranus", "erinyes", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "crius", "hyperion", "theia", "iapetus", "themis", "mnemosyne", "hestia", "demeter", "hades", "poseidon", "hera", "zeus", "atlas", "pleiades", "maia", "prometheus", "epimetheus", "menoetius", "oceanids", "metis", "dione", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "leto", "hecate", "muses", "horae", "moirai", "cyclopes", "hundred-handed"]
+        "figures": ["gaia", "uranus", "erinyes", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "crius", "hyperion", "theia", "iapetus", "themis", "mnemosyne", "hestia", "demeter", "hades", "poseidon", "hera", "zeus", "atlas", "pleiades", "maia", "prometheus", "epimetheus", "menoetius", "oceanids", "metis", "dione", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "leto", "hecate", "muses", "horae", "moirai", "cyclopes", "hundred-handed", "pandora", "deucalion-flood", "pyrrha", "hellen"]
       },
       {
         "id": "zeus",
@@ -89,7 +89,7 @@
         "title": "Jason and the Argonauts",
         "note": "The house of Aeolus, the Golden Fleece, and Medea.",
         "focus": "jason",
-        "figures": ["zeus", "poseidon", "helios", "oceanids", "muses", "circe", "cadmus", "harmonia", "aeolus", "salmoneus", "cretheus", "tyro", "athamas", "nephele", "ino", "phrixus", "helle", "pelias", "aeson", "aeetes", "creon-corinth", "jason", "medea", "absyrtus", "glauce", "hypsipyle", "orpheus", "heracles", "castor", "polydeuces", "agenor", "typhon", "echidna", "harpies", "phineus-seer", "hylas", "colchian-dragon", "talos"]
+        "figures": ["zeus", "poseidon", "helios", "oceanids", "muses", "circe", "cadmus", "harmonia", "aeolus", "salmoneus", "cretheus", "tyro", "athamas", "nephele", "ino", "phrixus", "helle", "pelias", "aeson", "aeetes", "creon-corinth", "jason", "medea", "absyrtus", "glauce", "hypsipyle", "orpheus", "heracles", "castor", "polydeuces", "agenor", "typhon", "echidna", "harpies", "phineus-seer", "hylas", "colchian-dragon", "talos", "hellen"]
       },
       {
         "id": "troy",

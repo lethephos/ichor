@@ -201,6 +201,83 @@
     ]
   },
   {
+    "id": "prometheus",
+    "kind": "story",
+    "title": "Prometheus and the fire",
+    "lead": "A Titan steals fire for men. Zeus answers with a woman, a rock and an eagle, and in the end a flood.",
+    "pairs": [
+      ["iapetus", "atlas"],
+      ["iapetus", "prometheus"],
+      ["iapetus", "epimetheus"],
+      ["iapetus", "menoetius"],
+      ["zeus", "menoetius"],
+      ["zeus", "atlas"],
+      ["zeus", "prometheus"],
+      ["epimetheus", "pandora"],
+      ["zeus", "epimetheus"],
+      ["prometheus", "deucalion-flood"],
+      ["epimetheus", "pyrrha"],
+      ["pandora", "pyrrha"],
+      ["deucalion-flood", "pyrrha"],
+      ["deucalion-flood", "hellen"],
+      ["pyrrha", "hellen"]
+    ],
+    "steps": [
+      {
+        "label": "The sons of Iapetus",
+        "figures": ["iapetus", "atlas", "prometheus", "epimetheus", "menoetius"],
+        "pairs": [
+          ["iapetus", "atlas"],
+          ["iapetus", "prometheus"],
+          ["iapetus", "epimetheus"],
+          ["iapetus", "menoetius"],
+          ["zeus", "menoetius"],
+          ["zeus", "atlas"]
+        ],
+        "text": "The Titan Iapetus has four sons: proud Menoetius, Atlas, clever Prometheus, and Epimetheus, who thinks too late. Their mother is the Oceanid Clymene in Hesiod, Asia in Apollodorus. When the Titans fall, Zeus strikes Menoetius down with a thunderbolt, and sets Atlas at the ends of the earth to hold up the sky."
+      },
+      {
+        "label": "The ox at Mecone",
+        "figures": ["prometheus", "zeus"],
+        "pairs": [
+          ["zeus", "prometheus"]
+        ],
+        "text": "At Mecone, gods and men meet to settle how a sacrifice will be shared. Prometheus cuts up an ox. He hides the meat inside the stomach, wraps the bones in shining fat, and lets Zeus choose. Zeus takes the fat and finds the bones beneath, and ever since, men burn bones for the gods and keep the meat. In his anger Zeus hides fire from men."
+      },
+      {
+        "label": "Fire",
+        "figures": ["prometheus"],
+        "pairs": [
+          ["zeus", "prometheus"]
+        ],
+        "text": "Prometheus steals fire from the gods, hides it in a hollow fennel stalk, and carries it down to men. In Aeschylus he also teaches them numbers and letters, medicine, and how to tame horses and sail ships."
+      },
+      {
+        "label": "Pandora",
+        "figures": ["pandora", "epimetheus"],
+        "text": "Zeus answers with a gift. Hephaestus shapes a girl out of earth and water, the goddesses dress her, and Hermes gives her a lying tongue: Pandora, the first woman. Prometheus has told his brother never to take a gift from Zeus, but Epimetheus takes her. She lifts the lid of a great jar, and sorrows and sickness fly out over the world. Only Hope stays inside, under the rim."
+      },
+      {
+        "label": "The rock and the eagle",
+        "figures": ["prometheus"],
+        "pairs": [
+          ["zeus", "prometheus"]
+        ],
+        "text": "Zeus has Prometheus bound to a rock, on the Caucasus in Apollodorus, and every day sends an eagle to eat his liver, which grows back every night. In Aeschylus he will not bow, because he knows a secret that could bring Zeus down. In Hesiod and Apollodorus, Heracles at last shoots the eagle and sets him free, with Zeus’s consent."
+      },
+      {
+        "label": "The flood",
+        "figures": ["deucalion-flood", "pyrrha"],
+        "text": "Zeus decides to drown the race of bronze. Prometheus warns his son Deucalion, who builds a chest and floats in it with his wife Pyrrha, daughter of Epimetheus and Pandora, for nine days and nights, until it comes to rest on Parnassus. Told to throw the bones of their mother behind them, they understand: the stones of the Earth. Deucalion’s stones become men, and Pyrrha’s women."
+      },
+      {
+        "label": "Hellen",
+        "figures": ["hellen"],
+        "text": "Their first son is Hellen, and the Greeks call themselves Hellenes after him. His son Aeolus founds a great house: his sons are Sisyphus, Athamas, Cretheus and Salmoneus, and from them come Jason, Bellerophon and, some say, Odysseus."
+      }
+    ]
+  },
+  {
     "id": "cadmus",
     "kind": "story",
     "title": "The house of Cadmus",
@@ -825,6 +902,1317 @@
         "figures": ["alcmaeon", "diomedes", "thersander"],
         "text": "Ten years later the sons of the Seven march on Thebes again: the Epigoni. An oracle says they will win under Alcmaeon, son of Amphiaraus. Thersander, son of Polynices, gives Eriphyle the robe of Harmonia, and she sends her son as she sent her husband. Diomedes, son of Tydeus, rides with them. They take Thebes, the old seer Tiresias dies on the road, and Thersander becomes king. Alcmaeon comes home and, as his father told him, kills his mother."
       }
+    ]
+  },
+  {
+    "id": "dardanus",
+    "kind": "story",
+    "title": "The house of Dardanus",
+    "lead": "Six generations of Trojan kings, two goddesses in love, two broken promises, and one city burnt.",
+    "steps": [
+      {
+        "label": "Dardanus",
+        "figures": ["dardanus", "pleiades"],
+        "pairs": [
+          ["zeus", "dardanus"],
+          ["pleiades", "dardanus"]
+        ],
+        "text": "Dardanus, son of Zeus and the Pleiad Electra, comes to the foot of Mount Ida, from Samothrace in Apollodorus, and founds Dardania. Homer calls him the son Zeus loved best of all his children by mortal women."
+      },
+      {
+        "label": "Ganymede",
+        "figures": ["erichthonius", "tros", "ilus", "assaracus", "ganymede"],
+        "pairs": [
+          ["dardanus", "erichthonius"],
+          ["erichthonius", "tros"],
+          ["tros", "ilus"],
+          ["tros", "assaracus"],
+          ["tros", "ganymede"],
+          ["zeus", "ganymede"]
+        ],
+        "text": "His son Erichthonius is the richest of men, with three thousand mares in his marshes. Tros has three sons: Ilus, Assaracus and Ganymede, the most beautiful of mortals. Ganymede is carried off to Olympus to pour wine for Zeus, and Zeus gives his father a team of immortal horses to make up for him."
+      },
+      {
+        "label": "The walls of Troy",
+        "figures": ["laomedon", "poseidon", "apollo"],
+        "pairs": [
+          ["ilus", "laomedon"],
+          ["laomedon", "poseidon"],
+          ["laomedon", "apollo"]
+        ],
+        "text": "Ilus’ son Laomedon is king of Troy. Poseidon and Apollo serve him for a year: in Homer, Poseidon builds the walls and Apollo herds the king’s cattle on Ida. When the year is out, Laomedon refuses to pay them and threatens to cut off their ears. In Apollodorus, Apollo sends a plague, and Poseidon a sea monster."
+      },
+      {
+        "label": "Hesione",
+        "figures": ["hesione", "heracles"],
+        "pairs": [
+          ["laomedon", "hesione"],
+          ["heracles", "laomedon"]
+        ],
+        "text": "To be rid of the monster, Laomedon must give it his daughter Hesione. Heracles kills it for the price of Zeus’s horses, and Laomedon cheats him too. Heracles comes back with six ships and sacks Troy. He kills Laomedon and all his sons but the youngest, Podarces, whom Hesione buys back with her veil; from then on he is called Priam, ‘the bought one’."
+      },
+      {
+        "label": "Goddesses in love",
+        "figures": ["tithonus", "eos", "capys", "anchises", "aphrodite"],
+        "pairs": [
+          ["laomedon", "tithonus"],
+          ["eos", "tithonus"],
+          ["assaracus", "capys"],
+          ["capys", "anchises"],
+          ["aphrodite", "anchises"]
+        ],
+        "text": "Two Trojans are loved by goddesses. Eos, the Dawn, carries off Tithonus, Priam’s brother, and asks Zeus to make him immortal, but forgets to ask that he stay young; he withers until only his voice is left. Aphrodite comes to Anchises, a herdsman on Ida, in the shape of a mortal girl."
+      },
+      {
+        "label": "Priam’s children",
+        "figures": ["priam", "hecuba", "hector", "paris", "cassandra", "polyxena", "troilus", "deiphobus"],
+        "pairs": [
+          ["laomedon", "priam"],
+          ["priam", "hecuba"],
+          ["priam", "hector"],
+          ["priam", "paris"],
+          ["priam", "cassandra"],
+          ["priam", "polyxena"],
+          ["priam", "troilus"],
+          ["priam", "deiphobus"],
+          ["hecuba", "hector"],
+          ["hecuba", "paris"],
+          ["hecuba", "cassandra"],
+          ["hecuba", "polyxena"],
+          ["hecuba", "troilus"],
+          ["hecuba", "deiphobus"],
+          ["apollo", "cassandra"]
+        ],
+        "text": "Priam and Hecuba have many children; Homer gives Priam fifty sons. Before Paris is born, Hecuba dreams she gives birth to a burning torch that sets the city on fire, and the baby is left on Mount Ida; he grows up a shepherd. Apollo gives Cassandra the gift of prophecy, and when she will not have him, makes sure no one believes her."
+      },
+      {
+        "label": "Hector",
+        "figures": ["hector", "andromache", "astyanax", "achilles", "helen"],
+        "pairs": [
+          ["paris", "helen"],
+          ["hector", "andromache"],
+          ["hector", "astyanax"],
+          ["andromache", "astyanax"],
+          ["achilles", "hector"],
+          ["achilles", "troilus"]
+        ],
+        "text": "Paris carries off Helen and brings the Greeks to Troy. Achilles ambushes the boy Troilus outside the walls. Hector, Troy’s defender, leaves his wife Andromache and their little son Astyanax for the last time; Achilles kills him and drags his body round the city, until Priam comes alone by night to ransom it."
+      },
+      {
+        "label": "The fall",
+        "figures": ["neoptolemus"],
+        "pairs": [
+          ["achilles", "neoptolemus"],
+          ["neoptolemus", "priam"],
+          ["neoptolemus", "astyanax"],
+          ["neoptolemus", "polyxena"],
+          ["neoptolemus", "andromache"],
+          ["deiphobus", "helen"],
+          ["agamemnon", "cassandra"]
+        ],
+        "text": "On the night Troy falls, Achilles’ son Neoptolemus kills Priam at the altar of Zeus. Astyanax is thrown from the walls, Polyxena is killed on Achilles’ tomb, and Andromache goes to Neoptolemus as his prize. Deiphobus, Helen’s husband since Paris died, is killed, and Cassandra goes to Agamemnon."
+      },
+      {
+        "label": "Aeneas",
+        "figures": ["aeneas"],
+        "pairs": [
+          ["anchises", "aeneas"],
+          ["aphrodite", "aeneas"]
+        ],
+        "text": "One branch of the house survives: Aeneas, son of Anchises and Aphrodite. In Homer, Poseidon snatches him from Achilles, because he and his children’s children are fated to rule the Trojans. In Ovid, he carries his father out of the burning city on his shoulders."
+      }
+    ],
+    "pairs": [
+      ["zeus", "dardanus"],
+      ["pleiades", "dardanus"],
+      ["dardanus", "erichthonius"],
+      ["erichthonius", "tros"],
+      ["tros", "ilus"],
+      ["tros", "assaracus"],
+      ["tros", "ganymede"],
+      ["zeus", "ganymede"],
+      ["ilus", "laomedon"],
+      ["laomedon", "poseidon"],
+      ["laomedon", "apollo"],
+      ["laomedon", "hesione"],
+      ["heracles", "laomedon"],
+      ["laomedon", "tithonus"],
+      ["eos", "tithonus"],
+      ["assaracus", "capys"],
+      ["capys", "anchises"],
+      ["aphrodite", "anchises"],
+      ["laomedon", "priam"],
+      ["priam", "hecuba"],
+      ["priam", "hector"],
+      ["priam", "paris"],
+      ["priam", "cassandra"],
+      ["priam", "polyxena"],
+      ["priam", "troilus"],
+      ["priam", "deiphobus"],
+      ["hecuba", "hector"],
+      ["hecuba", "paris"],
+      ["hecuba", "cassandra"],
+      ["hecuba", "polyxena"],
+      ["hecuba", "troilus"],
+      ["hecuba", "deiphobus"],
+      ["apollo", "cassandra"],
+      ["paris", "helen"],
+      ["hector", "andromache"],
+      ["hector", "astyanax"],
+      ["andromache", "astyanax"],
+      ["achilles", "hector"],
+      ["achilles", "troilus"],
+      ["achilles", "neoptolemus"],
+      ["neoptolemus", "priam"],
+      ["neoptolemus", "astyanax"],
+      ["neoptolemus", "polyxena"],
+      ["neoptolemus", "andromache"],
+      ["deiphobus", "helen"],
+      ["agamemnon", "cassandra"],
+      ["anchises", "aeneas"],
+      ["aphrodite", "aeneas"]
+    ]
+  },
+  {
+    "id": "bellerophon",
+    "kind": "story",
+    "title": "Bellerophon and Pegasus",
+    "lead": "A guest falsely accused, a letter asking for his death, a winged horse, and a fall from the sky.",
+    "steps": [
+      {
+        "label": "A son of Corinth",
+        "figures": ["sisyphus", "glaucus-corinth", "bellerophon"],
+        "pairs": [
+          ["aeolus", "sisyphus"],
+          ["sisyphus", "glaucus-corinth"],
+          ["glaucus-corinth", "bellerophon"],
+          ["poseidon", "bellerophon"]
+        ],
+        "text": "Bellerophon is the grandson of Sisyphus, king of Ephyra, which is Corinth. Homer makes him the son of Glaucus; Hesiod and later writers say his true father is Poseidon. In Apollodorus, he kills his brother by accident and has to leave home; he goes to Tiryns, to King Proetus, to be cleansed."
+      },
+      {
+        "label": "The queen’s lie",
+        "figures": ["proetus", "stheneboea"],
+        "pairs": [
+          ["proetus", "stheneboea"],
+          ["stheneboea", "bellerophon"]
+        ],
+        "text": "Proetus’ wife falls in love with the young man; Homer calls her Anteia, the tragedians Stheneboea. When he will not lie with her, she tells her husband that Bellerophon tried to take her by force, and asks him to kill him."
+      },
+      {
+        "label": "The folded tablet",
+        "figures": ["iobates"],
+        "pairs": [
+          ["proetus", "bellerophon"],
+          ["iobates", "stheneboea"]
+        ],
+        "text": "Proetus will not kill a guest himself. He sends Bellerophon to Lycia, to his wife’s father, with a folded tablet scratched with deadly signs. The king of Lycia, Iobates in Apollodorus, feasts him for nine days and kills nine oxen before he asks to see the tablet."
+      },
+      {
+        "label": "Pegasus",
+        "figures": ["pegasus", "medusa"],
+        "pairs": [
+          ["medusa", "pegasus"],
+          ["poseidon", "pegasus"],
+          ["pegasus", "bellerophon"]
+        ],
+        "text": "Bellerophon needs a horse that can fly: Pegasus, born from Medusa’s neck when Perseus cut off her head. In Pindar, he tries for a long time to catch him at the spring of Peirene, until Athena comes to him in a dream and gives him a golden bridle; he wakes with it in his hand."
+      },
+      {
+        "label": "The Chimera",
+        "figures": ["chimera"],
+        "pairs": [
+          ["bellerophon", "chimera"],
+          ["iobates", "bellerophon"]
+        ],
+        "text": "The king sends him first against the Chimera, lion in front, serpent behind, goat in the middle, breathing fire. Bellerophon kills it from the air. Then he fights the Solymi, the fiercest battle of his life, then the Amazons; and when he comes back, he kills every man of the ambush the king has laid for him."
+      },
+      {
+        "label": "Revenge",
+        "figures": ["stheneboea", "bellerophon"],
+        "pairs": [
+          ["bellerophon", "stheneboea"]
+        ],
+        "text": "In Euripides’ lost Stheneboea, Bellerophon goes back to Tiryns, takes the queen up on Pegasus as if to carry her off, and drops her into the sea near Melos."
+      },
+      {
+        "label": "Half the kingdom",
+        "figures": ["philonoe", "hippolochus", "laodamia"],
+        "pairs": [
+          ["iobates", "philonoe"],
+          ["bellerophon", "philonoe"],
+          ["bellerophon", "hippolochus"],
+          ["philonoe", "hippolochus"],
+          ["bellerophon", "laodamia"],
+          ["philonoe", "laodamia"]
+        ],
+        "text": "Now the king knows he is the son of a god. He gives him his daughter, Philonoe in Apollodorus, and half his kingdom. They have three children: Isander, Hippolochus and Laodamia."
+      },
+      {
+        "label": "The fall",
+        "figures": ["zeus"],
+        "pairs": [
+          ["pegasus", "bellerophon"]
+        ],
+        "text": "In Pindar, Bellerophon tries to ride Pegasus up to the halls of Zeus, and the horse throws him. Homer only says that he became hateful to all the gods and wandered alone on the Aleian plain, eating his heart out and avoiding the paths of men."
+      },
+      {
+        "label": "Before Troy",
+        "figures": ["sarpedon", "glaucus-lycia", "patroclus"],
+        "pairs": [
+          ["zeus", "laodamia"],
+          ["zeus", "sarpedon"],
+          ["laodamia", "sarpedon"],
+          ["artemis", "laodamia"],
+          ["hippolochus", "glaucus-lycia"],
+          ["patroclus", "sarpedon"]
+        ],
+        "text": "Ares kills Isander, and Artemis kills Laodamia in anger. But Laodamia has borne Zeus a son, Sarpedon, and Hippolochus a son, Glaucus, and the cousins lead the Lycians at Troy. Glaucus tells the whole story to Diomedes on the battlefield, and the two trade armour instead of fighting. Patroclus kills Sarpedon, and Zeus lets it happen, raining drops of blood on the earth for his son."
+      }
+    ],
+    "pairs": [
+      ["aeolus", "sisyphus"],
+      ["sisyphus", "glaucus-corinth"],
+      ["glaucus-corinth", "bellerophon"],
+      ["poseidon", "bellerophon"],
+      ["proetus", "stheneboea"],
+      ["stheneboea", "bellerophon"],
+      ["proetus", "bellerophon"],
+      ["iobates", "stheneboea"],
+      ["medusa", "pegasus"],
+      ["poseidon", "pegasus"],
+      ["pegasus", "bellerophon"],
+      ["bellerophon", "chimera"],
+      ["iobates", "bellerophon"],
+      ["iobates", "philonoe"],
+      ["bellerophon", "philonoe"],
+      ["bellerophon", "hippolochus"],
+      ["philonoe", "hippolochus"],
+      ["bellerophon", "laodamia"],
+      ["philonoe", "laodamia"],
+      ["zeus", "laodamia"],
+      ["zeus", "sarpedon"],
+      ["laodamia", "sarpedon"],
+      ["artemis", "laodamia"],
+      ["hippolochus", "glaucus-lycia"],
+      ["patroclus", "sarpedon"]
+    ]
+  },
+  {
+    "id": "minos",
+    "kind": "story",
+    "title": "Minos and Daedalus",
+    "lead": "A bull from the sea, a craftsman who can make anything, a labyrinth, and a king who would not let him go.",
+    "steps": [
+      {
+        "label": "Europa’s sons",
+        "figures": ["europa", "asterion", "minos", "rhadamanthys"],
+        "pairs": [
+          ["zeus", "europa"],
+          ["zeus", "minos"],
+          ["europa", "minos"],
+          ["zeus", "rhadamanthys"],
+          ["europa", "rhadamanthys"],
+          ["asterion", "europa"]
+        ],
+        "text": "Zeus, in the shape of a bull, carries Europa over the sea to Crete. She bears him Minos and Rhadamanthys. In Apollodorus, Asterion, king of Crete, marries her and raises her sons as his own."
+      },
+      {
+        "label": "The bull from the sea",
+        "figures": ["pasiphae", "poseidon"],
+        "pairs": [
+          ["helios", "pasiphae"],
+          ["minos", "pasiphae"],
+          ["poseidon", "pasiphae"]
+        ],
+        "text": "Minos marries Pasiphae, daughter of Helios. When his brothers dispute the throne, he prays to Poseidon to send a bull up out of the sea, and vows to sacrifice it. The bull comes, and it is so beautiful that Minos keeps it and sacrifices another. In anger, Poseidon makes Pasiphae fall in love with the bull."
+      },
+      {
+        "label": "Daedalus",
+        "figures": ["daedalus", "perdix", "athena"],
+        "pairs": [
+          ["daedalus", "perdix"],
+          ["athena", "perdix"]
+        ],
+        "text": "Daedalus, the great craftsman of Athens, has come to Crete as an exile. In Apollodorus, he threw his nephew off the Acropolis, jealous because the boy had invented the saw; in Ovid, the boy is Perdix, and Athena catches him as he falls and turns him into a partridge."
+      },
+      {
+        "label": "The Minotaur",
+        "figures": ["minotaur"],
+        "pairs": [
+          ["pasiphae", "minotaur"]
+        ],
+        "text": "For Pasiphae, Daedalus builds a hollow wooden cow covered in hide. She bears a child with the body of a man and the head of a bull: Asterius, called the Minotaur. Minos has Daedalus build the Labyrinth, a house of winding passages no one can find the way out of, and shuts the Minotaur inside."
+      },
+      {
+        "label": "Androgeus",
+        "figures": ["androgeus", "aegeus"],
+        "pairs": [
+          ["minos", "androgeus"],
+          ["pasiphae", "androgeus"],
+          ["aegeus", "androgeus"],
+          ["minos", "aegeus"]
+        ],
+        "text": "Their son Androgeus wins every contest at the games in Athens. King Aegeus sends him against the bull of Marathon, and the bull kills him. Minos makes war on Athens and lays down his price for peace: seven youths and seven girls, to be sent to the Minotaur."
+      },
+      {
+        "label": "The thread",
+        "figures": ["ariadne", "theseus", "dionysus"],
+        "pairs": [
+          ["minos", "ariadne"],
+          ["pasiphae", "ariadne"],
+          ["theseus", "minotaur"],
+          ["theseus", "ariadne"],
+          ["dionysus", "ariadne"]
+        ],
+        "text": "Theseus comes with the third tribute. Minos’ daughter Ariadne falls in love with him and, on Daedalus’ advice, gives him a thread to tie at the door. He kills the Minotaur, follows the thread back out and sails away with her, but she does not reach Athens: Dionysus takes her on Naxos, or in Homer, Artemis kills her on Dia, on Dionysus’ word."
+      },
+      {
+        "label": "Icarus",
+        "figures": ["icarus"],
+        "pairs": [
+          ["daedalus", "icarus"],
+          ["minos", "daedalus"]
+        ],
+        "text": "Minos keeps Daedalus and his son Icarus prisoner. Daedalus makes wings of feathers and wax for them both, and warns his son to fly neither too high nor too low. Icarus flies up towards the sun, the wax melts, and he falls into the sea that is named after him."
+      },
+      {
+        "label": "The boy in the honey",
+        "figures": ["glaucus-crete", "polyidus"],
+        "pairs": [
+          ["minos", "glaucus-crete"],
+          ["pasiphae", "glaucus-crete"],
+          ["minos", "polyidus"]
+        ],
+        "text": "The little Glaucus, chasing a mouse, falls into a jar of honey and drowns. The seer Polyidus finds him, and Minos shuts him in the tomb with the body until he gives it life. A snake comes near the boy, and Polyidus kills it; a second snake brings a herb that brings the first back to life, and Polyidus lays it on Glaucus."
+      },
+      {
+        "label": "Catreus",
+        "figures": ["catreus", "althaemenes", "aerope", "clymene-crete", "nauplius", "atreus", "palamedes"],
+        "pairs": [
+          ["minos", "catreus"],
+          ["catreus", "aerope"],
+          ["catreus", "clymene-crete"],
+          ["catreus", "althaemenes"],
+          ["althaemenes", "catreus"],
+          ["nauplius", "clymene-crete"],
+          ["atreus", "aerope"],
+          ["nauplius", "palamedes"]
+        ],
+        "text": "An oracle tells Minos’ son Catreus that one of his children will kill him. His son Althaemenes flees to Rhodes. Catreus gives his daughters Aerope and Clymene to Nauplius to sell abroad: Aerope marries into the house of Atreus, and Clymene marries Nauplius and bears Palamedes. Old Catreus sails to Rhodes to give his son the kingdom; the cowherds take him for a pirate, and Althaemenes kills him with a javelin without knowing him."
+      },
+      {
+        "label": "The spiral shell",
+        "figures": ["cocalus"],
+        "pairs": [
+          ["cocalus", "minos"]
+        ],
+        "text": "Minos hunts Daedalus from land to land with a spiral seashell, promising a reward to whoever can pass a thread through it. In Sicily, King Cocalus brings it back threaded: Daedalus has tied the thread to an ant. Minos knows he has found him, but Cocalus’ daughters kill him in his bath. In Homer, he sits in Hades with a golden sceptre, judging the dead."
+      },
+      {
+        "label": "At Troy",
+        "figures": ["deucalion-crete", "idomeneus"],
+        "pairs": [
+          ["minos", "deucalion-crete"],
+          ["pasiphae", "deucalion-crete"],
+          ["deucalion-crete", "idomeneus"]
+        ],
+        "text": "Minos’ grandson Idomeneus, son of Deucalion, leads eighty ships from Crete to Troy. In the Iliad he names his line himself: Zeus fathered Minos, Minos Deucalion, and Deucalion him, lord of the men of wide Crete."
+      }
+    ],
+    "pairs": [
+      ["zeus", "europa"],
+      ["zeus", "minos"],
+      ["europa", "minos"],
+      ["zeus", "rhadamanthys"],
+      ["europa", "rhadamanthys"],
+      ["asterion", "europa"],
+      ["helios", "pasiphae"],
+      ["minos", "pasiphae"],
+      ["poseidon", "pasiphae"],
+      ["daedalus", "perdix"],
+      ["athena", "perdix"],
+      ["pasiphae", "minotaur"],
+      ["minos", "androgeus"],
+      ["pasiphae", "androgeus"],
+      ["aegeus", "androgeus"],
+      ["minos", "aegeus"],
+      ["minos", "ariadne"],
+      ["pasiphae", "ariadne"],
+      ["theseus", "minotaur"],
+      ["theseus", "ariadne"],
+      ["dionysus", "ariadne"],
+      ["daedalus", "icarus"],
+      ["minos", "daedalus"],
+      ["minos", "glaucus-crete"],
+      ["pasiphae", "glaucus-crete"],
+      ["minos", "polyidus"],
+      ["minos", "catreus"],
+      ["catreus", "aerope"],
+      ["catreus", "clymene-crete"],
+      ["catreus", "althaemenes"],
+      ["nauplius", "clymene-crete"],
+      ["atreus", "aerope"],
+      ["nauplius", "palamedes"],
+      ["cocalus", "minos"],
+      ["minos", "deucalion-crete"],
+      ["pasiphae", "deucalion-crete"],
+      ["deucalion-crete", "idomeneus"]
+    ]
+  },
+  {
+    "id": "io",
+    "kind": "story",
+    "title": "Io and the Danaids",
+    "lead": "A girl turned into a cow, chased across the world by a gadfly, and her descendants, who came back to Argos fifty at a time.",
+    "steps": [
+      {
+        "label": "Inachus",
+        "figures": ["oceanus", "tethys", "inachus", "io"],
+        "pairs": [
+          ["oceanus", "inachus"],
+          ["tethys", "inachus"],
+          ["inachus", "io"]
+        ],
+        "text": "Inachus, son of Ocean and Tethys, is the river of Argos and its first king. His daughter Io is a priestess of Hera."
+      },
+      {
+        "label": "The white cow",
+        "figures": ["zeus", "hera"],
+        "pairs": [
+          ["zeus", "io"],
+          ["hera", "io"]
+        ],
+        "text": "Zeus loves Io. When Hera finds out, he turns the girl into a white cow and swears he has never touched her; Hesiod says that this is why a lover’s oath does not anger the gods. Hera asks for the cow as a gift, and gets her."
+      },
+      {
+        "label": "Argus",
+        "figures": ["argus", "hermes"],
+        "pairs": [
+          ["hermes", "argus"]
+        ],
+        "text": "Hera sets Argus, who has eyes all over his body, to guard the cow. Zeus sends Hermes to steal her. In Apollodorus, Hermes kills Argus with a stone; in Ovid, he plays his pipes and tells him stories until every one of the hundred eyes has closed, then cuts off his head. Hera sets the eyes in the peacock’s tail."
+      },
+      {
+        "label": "The gadfly",
+        "figures": ["epaphus"],
+        "pairs": [
+          ["zeus", "epaphus"],
+          ["io", "epaphus"]
+        ],
+        "text": "Hera sends a gadfly to sting the cow, and Io runs across the world. In Aeschylus, she meets Prometheus chained on his rock, and he tells her where she will wander. She swims the strait that is named after her, the Bosporus, the cow’s crossing, and comes at last to Egypt. There Zeus gives her back her shape with a touch of his hand, and she bears a son, Epaphus, ‘the touch’."
+      },
+      {
+        "label": "Libya",
+        "figures": ["libya", "poseidon", "belus", "agenor", "cadmus", "europa"],
+        "pairs": [
+          ["epaphus", "libya"],
+          ["poseidon", "libya"],
+          ["poseidon", "belus"],
+          ["libya", "belus"],
+          ["poseidon", "agenor"],
+          ["libya", "agenor"],
+          ["agenor", "cadmus"],
+          ["agenor", "europa"]
+        ],
+        "text": "Epaphus rules Egypt, and his daughter Libya gives her name to the land beyond it. She bears Poseidon twin sons. Belus stays and rules Egypt; Agenor goes to Phoenicia, and becomes the father of Cadmus and Europa."
+      },
+      {
+        "label": "Fifty and fifty",
+        "figures": ["danaus", "aegyptus", "danaids", "sons-of-aegyptus"],
+        "pairs": [
+          ["belus", "danaus"],
+          ["belus", "aegyptus"],
+          ["aegyptus", "danaus"],
+          ["danaus", "danaids"],
+          ["aegyptus", "sons-of-aegyptus"]
+        ],
+        "text": "Belus’ sons are Danaus and Aegyptus. Danaus has fifty daughters, Aegyptus fifty sons. The brothers quarrel over the kingdom, and Danaus, afraid of his brother’s sons, builds the first ship and flees with his daughters to Argos, the land of Io. In Aeschylus’ Suppliants, they come to the altars as suppliants and the people of Argos vote to protect them."
+      },
+      {
+        "label": "Amymone",
+        "figures": ["amymone", "nauplius"],
+        "pairs": [
+          ["danaus", "amymone"],
+          ["poseidon", "amymone"],
+          ["amymone", "nauplius"]
+        ],
+        "text": "Argos is dry, because Poseidon is angry with it. Danaus sends his daughters to find water. Amymone throws a spear at a deer and hits a sleeping satyr, who tries to rape her. Poseidon appears and drives him off, lies with her himself, and shows her the springs of Lerna. She bears Nauplius."
+      },
+      {
+        "label": "The wedding night",
+        "figures": ["hypermnestra", "lynceus"],
+        "pairs": [
+          ["danaids", "sons-of-aegyptus"],
+          ["danaus", "hypermnestra"],
+          ["aegyptus", "lynceus"],
+          ["lynceus", "hypermnestra"]
+        ],
+        "text": "The sons of Aegyptus follow and ask to marry their cousins. Danaus agrees, and gives each daughter a dagger. On the wedding night they kill their husbands, all but Hypermnestra, who spares Lynceus. The others bury the heads at Lerna. In Pindar, Danaus later finds them new husbands by a footrace; in Ovid, in Hades, they carry water that runs out before it is poured."
+      },
+      {
+        "label": "Twins at war",
+        "figures": ["abas", "acrisius", "proetus", "danae"],
+        "pairs": [
+          ["lynceus", "abas"],
+          ["hypermnestra", "abas"],
+          ["abas", "acrisius"],
+          ["abas", "proetus"],
+          ["acrisius", "proetus"],
+          ["acrisius", "danae"],
+          ["zeus", "danae"]
+        ],
+        "text": "Lynceus rules Argos after Danaus, and his son Abas after him. Abas has twin sons, Acrisius and Proetus, who quarrel even in the womb, and later fight for the kingdom; in Apollodorus, that is when shields are first used. Acrisius keeps Argos. An oracle tells him that his daughter Danaë’s son will kill him, and he shuts her away in a bronze chamber; but Zeus comes to her as a shower of gold."
+      }
+    ],
+    "pairs": [
+      ["oceanus", "inachus"],
+      ["tethys", "inachus"],
+      ["inachus", "io"],
+      ["zeus", "io"],
+      ["hera", "io"],
+      ["hermes", "argus"],
+      ["zeus", "epaphus"],
+      ["io", "epaphus"],
+      ["epaphus", "libya"],
+      ["poseidon", "libya"],
+      ["poseidon", "belus"],
+      ["libya", "belus"],
+      ["poseidon", "agenor"],
+      ["libya", "agenor"],
+      ["agenor", "cadmus"],
+      ["agenor", "europa"],
+      ["belus", "danaus"],
+      ["belus", "aegyptus"],
+      ["aegyptus", "danaus"],
+      ["danaus", "danaids"],
+      ["aegyptus", "sons-of-aegyptus"],
+      ["danaus", "amymone"],
+      ["poseidon", "amymone"],
+      ["amymone", "nauplius"],
+      ["danaids", "sons-of-aegyptus"],
+      ["danaus", "hypermnestra"],
+      ["aegyptus", "lynceus"],
+      ["lynceus", "hypermnestra"],
+      ["lynceus", "abas"],
+      ["hypermnestra", "abas"],
+      ["abas", "acrisius"],
+      ["abas", "proetus"],
+      ["acrisius", "proetus"],
+      ["acrisius", "danae"],
+      ["zeus", "danae"]
+    ]
+  },
+  {
+    "id": "underworld",
+    "kind": "story",
+    "title": "Down to Hades",
+    "lead": "Those who went down to the dead and came back, those who did not, and those who are punished there for ever.",
+    "steps": [
+      {
+        "label": "Night’s sons",
+        "figures": ["nyx", "erebus", "hypnos", "thanatos"],
+        "pairs": [
+          ["nyx", "erebus"],
+          ["nyx", "hypnos"],
+          ["nyx", "thanatos"]
+        ],
+        "text": "Night lies with her brother Erebus, the darkness under the earth, and bears him Aether and Day. On her own, without a lover, she bears twin brothers, Sleep and Death. In Hesiod, they live in the dark beyond the edge of the world, and the sun never looks on them. Sleep is gentle with men; Death has a heart of iron and never lets go of anyone he has caught."
+      },
+      {
+        "label": "Persephone",
+        "figures": ["hades", "persephone", "demeter", "zeus"],
+        "pairs": [
+          ["zeus", "persephone"],
+          ["demeter", "persephone"],
+          ["hades", "persephone"]
+        ],
+        "text": "Hades, with Zeus’ consent, carries off Persephone, Demeter’s daughter, as she picks flowers. Demeter searches the earth with torches and lets nothing grow until Zeus gives way. But Hades has given the girl a pomegranate seed to eat, and so, in the Homeric Hymn, she must spend a third of every year below with him, as his queen."
+      },
+      {
+        "label": "The punished",
+        "figures": ["tityos", "leto", "apollo", "artemis", "tantalus", "sisyphus", "ixion"],
+        "pairs": [
+          ["gaia", "tityos"],
+          ["tityos", "leto"],
+          ["apollo", "tityos"],
+          ["artemis", "tityos"],
+          ["zeus", "tantalus"],
+          ["zeus", "sisyphus"],
+          ["zeus", "ixion"]
+        ],
+        "text": "In the Odyssey, Odysseus sees the great sinners below. The giant Tityos, son of Earth, who tried to rape Leto and was shot by her children, lies stretched out while two vultures tear at his liver. Tantalus stands in a pool that drains away whenever he bends to drink. Sisyphus pushes a stone up a hill, and it rolls back down every time. In Pindar, Ixion, who tried to seduce Hera, is bound to a wheel that turns for ever."
+      },
+      {
+        "label": "Alcestis",
+        "figures": ["admetus", "alcestis", "pheres", "pelias", "heracles"],
+        "pairs": [
+          ["pheres", "admetus"],
+          ["pelias", "alcestis"],
+          ["admetus", "alcestis"],
+          ["heracles", "thanatos"]
+        ],
+        "text": "Apollo, who once served King Admetus, wins him a gift from the Fates: when his time comes, he need not die if someone will die in his place. His old father Pheres refuses. His wife Alcestis, Pelias’ daughter, goes willingly. In Euripides, Heracles arrives as a guest on the day of her funeral, waits for Death at her tomb, wrestles him and brings her back."
+      },
+      {
+        "label": "Orpheus",
+        "figures": ["orpheus", "eurydice", "oeagrus", "muses"],
+        "pairs": [
+          ["muses", "orpheus"],
+          ["oeagrus", "orpheus"],
+          ["apollo", "orpheus"],
+          ["orpheus", "eurydice"]
+        ],
+        "text": "Orpheus, son of Oeagrus and the Muse Calliope, sings so that trees and stones follow him. When his wife Eurydice dies of a snake bite, he goes down to bring her back, and his song moves even Hades. He may take her home if he does not look back on the way. Close to the light, he turns, and she goes back into the dark."
+      },
+      {
+        "label": "The chair of forgetfulness",
+        "figures": ["pirithous", "theseus"],
+        "pairs": [
+          ["ixion", "pirithous"],
+          ["pirithous", "persephone"],
+          ["hades", "pirithous"],
+          ["hades", "theseus"]
+        ],
+        "text": "Pirithous, son of Ixion, decides to marry Persephone, and his friend Theseus goes down with him to fetch her. In Apollodorus, Hades welcomes them and sits them on the chair of forgetfulness, and they grow fast to it, held by coils of serpents."
+      },
+      {
+        "label": "Cerberus",
+        "figures": ["cerberus"],
+        "pairs": [
+          ["heracles", "cerberus"]
+        ],
+        "text": "For his last labour, Heracles goes down to fetch Cerberus, the hound of Hades. Hades lets him take the dog if he can master it without weapons, and he chokes it into submission and drags it up to the light. On the way he pulls Theseus free of the chair; when he reaches for Pirithous, the earth shakes, and he lets go."
+      },
+      {
+        "label": "The singing head",
+        "figures": ["maenads"],
+        "pairs": [
+          ["maenads", "orpheus"]
+        ],
+        "text": "Orpheus never loves a woman again. In Ovid, the Maenads of Thrace, raging in the rites of Dionysus, tear him to pieces. His head floats down the river Hebrus, still singing, and out to sea to Lesbos; and his shade, below, walks with Eurydice again."
+      }
+    ],
+    "pairs": [
+      ["nyx", "erebus"],
+      ["nyx", "hypnos"],
+      ["nyx", "thanatos"],
+      ["zeus", "persephone"],
+      ["demeter", "persephone"],
+      ["hades", "persephone"],
+      ["gaia", "tityos"],
+      ["tityos", "leto"],
+      ["apollo", "tityos"],
+      ["artemis", "tityos"],
+      ["zeus", "tantalus"],
+      ["zeus", "sisyphus"],
+      ["zeus", "ixion"],
+      ["pheres", "admetus"],
+      ["pelias", "alcestis"],
+      ["admetus", "alcestis"],
+      ["heracles", "thanatos"],
+      ["muses", "orpheus"],
+      ["oeagrus", "orpheus"],
+      ["apollo", "orpheus"],
+      ["orpheus", "eurydice"],
+      ["ixion", "pirithous"],
+      ["pirithous", "persephone"],
+      ["hades", "pirithous"],
+      ["hades", "theseus"],
+      ["heracles", "cerberus"],
+      ["maenads", "orpheus"]
+    ]
+  },
+  {
+    "id": "heraclids",
+    "kind": "story",
+    "title": "The children of Heracles",
+    "lead": "Sons he killed, sons he scattered across the world, and the ones his old enemy hunted after his death.",
+    "steps": [
+      {
+        "label": "Megara",
+        "figures": ["heracles", "megara", "creon", "sons-of-megara"],
+        "pairs": [
+          ["creon", "megara"],
+          ["heracles", "megara"],
+          ["heracles", "sons-of-megara"],
+          ["megara", "sons-of-megara"]
+        ],
+        "text": "Heracles saves Thebes from the Minyans, and King Creon gives him his daughter Megara. They have sons: three in Apollodorus and Euripides, eight in Pindar. Hera sends Heracles mad, and he throws the boys into the fire, or in Euripides shoots them, and Megara with them."
+      },
+      {
+        "label": "Iolaus",
+        "figures": ["iphicles", "iolaus", "alcmene", "amphitryon"],
+        "pairs": [
+          ["amphitryon", "iphicles"],
+          ["alcmene", "iphicles"],
+          ["iphicles", "iolaus"],
+          ["iolaus", "megara"]
+        ],
+        "text": "In Apollodorus, Megara lives, and Heracles gives her to his nephew Iolaus, son of his twin brother Iphicles. Iolaus drives his uncle’s chariot and helps him burn the Hydra’s necks; he is the most faithful of all his kin."
+      },
+      {
+        "label": "Omphale",
+        "figures": ["omphale"],
+        "pairs": [
+          ["heracles", "omphale"]
+        ],
+        "text": "For killing a guest, Heracles is sold as a slave to Omphale, queen of Lydia, and serves her for a year; Sophocles says it is Zeus who orders it. In Apollodorus, she bears him a son; later writers dress him in her clothes and her in his lion skin."
+      },
+      {
+        "label": "Telephus",
+        "figures": ["telephus", "achilles"],
+        "pairs": [
+          ["heracles", "telephus"],
+          ["achilles", "telephus"]
+        ],
+        "text": "Heracles’ son Telephus, by the princess Auge, grows up to be king of Mysia. When the Greeks set out for Troy and land in his country by mistake, Achilles wounds him. An oracle says only the one who wounded him can heal him, and Achilles heals him with rust scraped from the same spear; in return, Telephus shows the Greeks the way to Troy."
+      },
+      {
+        "label": "Tlepolemus",
+        "figures": ["tlepolemus"],
+        "pairs": [
+          ["heracles", "tlepolemus"]
+        ],
+        "text": "In the Iliad, Tlepolemus, a son of Heracles, kills his father’s old uncle and has to flee overseas. He settles on Rhodes, leads nine ships from there to Troy, and is killed by Sarpedon."
+      },
+      {
+        "label": "Deianira’s children",
+        "figures": ["deianira", "hyllus", "macaria", "iole", "nessus"],
+        "pairs": [
+          ["heracles", "deianira"],
+          ["heracles", "hyllus"],
+          ["deianira", "hyllus"],
+          ["heracles", "macaria"],
+          ["deianira", "macaria"],
+          ["heracles", "iole"],
+          ["hyllus", "iole"]
+        ],
+        "text": "Heracles’ last wife, Deianira, bears him Hyllus and a daughter, Macaria. When he brings home the captive Iole, Deianira sends him a robe smeared with Nessus’ blood, and it kills him. In Sophocles, dying, he makes Hyllus promise to marry Iole, much against the young man’s will."
+      },
+      {
+        "label": "Hebe",
+        "figures": ["hebe", "zeus", "hera"],
+        "pairs": [
+          ["zeus", "hebe"],
+          ["hera", "hebe"],
+          ["heracles", "hebe"]
+        ],
+        "text": "Heracles’ body burns on the pyre on Mount Oeta, but he goes up to Olympus, and Hera at last makes peace with him. He marries Hebe, her daughter, the goddess of youth. In the Odyssey, Odysseus meets only his shade in Hades; the man himself feasts with the gods."
+      },
+      {
+        "label": "Nowhere to go",
+        "figures": ["eurystheus", "sthenelus"],
+        "pairs": [
+          ["sthenelus", "eurystheus"],
+          ["eurystheus", "hyllus"],
+          ["eurystheus", "heracles"]
+        ],
+        "text": "With Heracles gone, Eurystheus means to finish his line. He demands his children from every city that shelters them, and no one dares to keep them, until they come as suppliants, with old Iolaus and Alcmene, to the altar of Zeus at Marathon, and Athens takes them in. Eurystheus marches against Athens."
+      },
+      {
+        "label": "Macaria",
+        "figures": ["macaria"],
+        "pairs": [
+          ["heracles", "macaria"]
+        ],
+        "text": "The oracles say Athens will win only if a girl of noble birth is sacrificed to Persephone. In Euripides, one of Heracles’ daughters offers herself; Pausanias names her Macaria, and says a spring at Marathon bears her name."
+      },
+      {
+        "label": "Revenge",
+        "figures": ["iolaus", "alcmene"],
+        "pairs": [
+          ["hyllus", "eurystheus"],
+          ["iolaus", "eurystheus"],
+          ["alcmene", "eurystheus"]
+        ],
+        "text": "In Euripides, old Iolaus prays to Hebe and Zeus to be young for one day, and is: he captures Eurystheus in his chariot, and Alcmene demands his death. In Apollodorus, Hyllus kills him as he flees, and brings his head to Alcmene, who gouges out its eyes with weaving pins. The sons of Heracles try again and again to return to the Peloponnese, and their descendants win it at last, in the third generation."
+      }
+    ],
+    "pairs": [
+      ["creon", "megara"],
+      ["heracles", "megara"],
+      ["heracles", "sons-of-megara"],
+      ["megara", "sons-of-megara"],
+      ["amphitryon", "iphicles"],
+      ["alcmene", "iphicles"],
+      ["iphicles", "iolaus"],
+      ["iolaus", "megara"],
+      ["heracles", "omphale"],
+      ["heracles", "telephus"],
+      ["achilles", "telephus"],
+      ["heracles", "tlepolemus"],
+      ["heracles", "deianira"],
+      ["heracles", "hyllus"],
+      ["deianira", "hyllus"],
+      ["heracles", "macaria"],
+      ["deianira", "macaria"],
+      ["heracles", "iole"],
+      ["hyllus", "iole"],
+      ["zeus", "hebe"],
+      ["hera", "hebe"],
+      ["heracles", "hebe"],
+      ["sthenelus", "eurystheus"],
+      ["eurystheus", "hyllus"],
+      ["eurystheus", "heracles"],
+      ["iolaus", "eurystheus"],
+      ["alcmene", "eurystheus"]
+    ]
+  },
+  {
+    "id": "loves",
+    "kind": "story",
+    "title": "The loves of Zeus",
+    "lead": "Seven wives in Hesiod, and goddesses, nymphs, princesses and a prince besides: a bull, a swan, a shower of gold.",
+    "steps": [
+      {
+        "label": "Metis",
+        "figures": ["zeus", "metis", "athena"],
+        "pairs": [
+          ["zeus", "metis"],
+          ["metis", "athena"],
+          ["zeus", "athena"]
+        ],
+        "text": "Zeus’ first wife, in Hesiod, is Metis, Cunning, the wisest of gods and men. Earth and Sky warn him that she will bear a son who will be king in his place, so when she is about to give birth, he talks her into his belly and swallows her. Her daughter Athena is born from his head, fully armed."
+      },
+      {
+        "label": "Themis",
+        "figures": ["themis", "horae", "moirai"],
+        "pairs": [
+          ["zeus", "themis"],
+          ["themis", "horae"],
+          ["zeus", "horae"],
+          ["themis", "moirai"],
+          ["zeus", "moirai"]
+        ],
+        "text": "His second wife is Themis, Right Order. She bears the Seasons, Lawfulness, Justice and Peace, who watch over the works of men; and in this passage of Hesiod the Fates too, who give men good and evil."
+      },
+      {
+        "label": "Memory",
+        "figures": ["mnemosyne", "muses", "charites"],
+        "pairs": [
+          ["zeus", "mnemosyne"],
+          ["mnemosyne", "muses"],
+          ["zeus", "muses"],
+          ["zeus", "charites"]
+        ],
+        "text": "The Ocean nymph Eurynome bears him the three Graces. With Mnemosyne, Memory, he lies for nine nights, away from the other gods, and she bears the nine Muses, who make men forget their troubles."
+      },
+      {
+        "label": "Demeter",
+        "figures": ["demeter", "persephone"],
+        "pairs": [
+          ["zeus", "persephone"],
+          ["demeter", "persephone"]
+        ],
+        "text": "With his sister Demeter, he has Persephone, the girl whom Hades will carry off, with Zeus’ consent."
+      },
+      {
+        "label": "Leto",
+        "figures": ["leto", "apollo", "artemis", "asteria"],
+        "pairs": [
+          ["zeus", "leto"],
+          ["leto", "apollo"],
+          ["zeus", "apollo"],
+          ["leto", "artemis"],
+          ["zeus", "artemis"],
+          ["zeus", "asteria"]
+        ],
+        "text": "Leto bears him Apollo and Artemis. In the Homeric Hymn, no land dares to take her in for the birth, for fear of Hera, until the rocky island of Delos agrees. Her sister Asteria runs from Zeus; in Apollodorus, she turns into a quail and throws herself into the sea, and becomes the island that was first called Asteria and later Delos."
+      },
+      {
+        "label": "Hera",
+        "figures": ["hera", "hebe", "ares", "hephaestus"],
+        "pairs": [
+          ["zeus", "hera"],
+          ["zeus", "hebe"],
+          ["hera", "hebe"],
+          ["zeus", "ares"],
+          ["hera", "ares"],
+          ["hera", "hephaestus"],
+          ["zeus", "hephaestus"]
+        ],
+        "text": "Last, Zeus makes Hera his queen. She bears him Hebe, Youth, and Ares, the god of war, whom his father tells in the Iliad that he is the most hateful of all the gods on Olympus. Hesiod says Hera, furious and quarrelling with her husband, bears Hephaestus with no father at all; in Homer, Zeus is his father."
+      },
+      {
+        "label": "In the cave",
+        "figures": ["maia", "hermes", "pleiades", "dardanus"],
+        "pairs": [
+          ["zeus", "maia"],
+          ["maia", "hermes"],
+          ["zeus", "hermes"],
+          ["pleiades", "dardanus"],
+          ["zeus", "dardanus"]
+        ],
+        "text": "Maia, eldest of the Pleiades, lives apart in a shadowy cave. In the Homeric Hymn, Zeus comes to her in the dead of night, while Hera is asleep, and she bears Hermes, a thief from his first day. Her sister Electra bears him Dardanus, the first of the line of Troy."
+      },
+      {
+        "label": "Dione",
+        "figures": ["dione", "aphrodite"],
+        "pairs": [
+          ["zeus", "aphrodite"],
+          ["dione", "aphrodite"]
+        ],
+        "text": "In Homer, Aphrodite is the daughter of Zeus and Dione. When Diomedes wounds her at Troy, she runs crying to her mother’s lap. Hesiod knows another birth: from the foam around the severed parts of Uranus."
+      },
+      {
+        "label": "Semele",
+        "figures": ["semele", "dionysus"],
+        "pairs": [
+          ["zeus", "semele"],
+          ["semele", "dionysus"],
+          ["zeus", "dionysus"],
+          ["hera", "semele"]
+        ],
+        "text": "The Theban princess Semele is loved by Zeus. Hera, in disguise, persuades her to ask him to come to her as he comes to his wife. He has sworn to give her what she asks, and he comes with the thunderbolt; she dies of it. Zeus takes the unborn Dionysus from her and sews him into his thigh until he is born."
+      },
+      {
+        "label": "Gold, and a long night",
+        "figures": ["danae", "perseus", "alcmene", "heracles"],
+        "pairs": [
+          ["zeus", "danae"],
+          ["danae", "perseus"],
+          ["zeus", "perseus"],
+          ["zeus", "alcmene"],
+          ["alcmene", "heracles"],
+          ["zeus", "heracles"],
+          ["hera", "heracles"]
+        ],
+        "text": "He comes to Danaë, locked in her bronze chamber, as a shower of gold, and she bears Perseus. He comes to Alcmene in the shape of her husband, while the real Amphitryon is away at war, and makes the night three times as long; she bears Heracles, whom Hera hates from before his birth."
+      },
+      {
+        "label": "Swan and goose",
+        "figures": ["leda", "nemesis", "helen", "castor", "polydeuces"],
+        "pairs": [
+          ["zeus", "leda"],
+          ["zeus", "nemesis"],
+          ["nemesis", "helen"],
+          ["leda", "helen"],
+          ["zeus", "helen"],
+          ["zeus", "castor"],
+          ["leda", "castor"],
+          ["zeus", "polydeuces"],
+          ["leda", "polydeuces"]
+        ],
+        "text": "In the Cypria, Nemesis runs from him over land and sea, changing her shape to escape; in Apollodorus, she becomes a goose and he a swan, and the egg she lays is given to Leda. In the better-known story, he comes to Leda as a swan. From the egg comes Helen; of Leda’s twin sons, in Pindar, only Polydeuces is his."
+      },
+      {
+        "label": "Boys and kings",
+        "figures": ["ganymede", "pluto", "tantalus", "aeacus"],
+        "pairs": [
+          ["zeus", "ganymede"],
+          ["zeus", "tantalus"],
+          ["pluto", "tantalus"],
+          ["zeus", "aeacus"]
+        ],
+        "text": "Zeus carries off the Trojan prince Ganymede, the most beautiful of mortals, to pour his wine; in Ovid, he comes for him as an eagle. The nymph Pluto, Wealth, bears him Tantalus, who will eat at the gods’ table and betray them. The nymph Aegina bears him Aeacus, so just that in Pindar he settles quarrels among the gods."
+      },
+      {
+        "label": "The list",
+        "figures": ["hera"],
+        "pairs": [
+          ["zeus", "hera"]
+        ],
+        "text": "In the Iliad, Zeus, wanting Hera, tells her that he has never desired anyone as he desires her now: not the wife of Ixion, not Danaë, Europa, Semele or Alcmene, not Demeter or Leto, nor even Hera herself. He names them one by one."
+      }
+    ],
+    "pairs": [
+      ["zeus", "metis"],
+      ["metis", "athena"],
+      ["zeus", "athena"],
+      ["zeus", "themis"],
+      ["themis", "horae"],
+      ["zeus", "horae"],
+      ["themis", "moirai"],
+      ["zeus", "moirai"],
+      ["zeus", "mnemosyne"],
+      ["mnemosyne", "muses"],
+      ["zeus", "muses"],
+      ["zeus", "charites"],
+      ["zeus", "persephone"],
+      ["demeter", "persephone"],
+      ["zeus", "leto"],
+      ["leto", "apollo"],
+      ["zeus", "apollo"],
+      ["leto", "artemis"],
+      ["zeus", "artemis"],
+      ["zeus", "asteria"],
+      ["zeus", "hera"],
+      ["zeus", "hebe"],
+      ["hera", "hebe"],
+      ["zeus", "ares"],
+      ["hera", "ares"],
+      ["hera", "hephaestus"],
+      ["zeus", "hephaestus"],
+      ["zeus", "maia"],
+      ["maia", "hermes"],
+      ["zeus", "hermes"],
+      ["pleiades", "dardanus"],
+      ["zeus", "dardanus"],
+      ["zeus", "aphrodite"],
+      ["dione", "aphrodite"],
+      ["zeus", "semele"],
+      ["semele", "dionysus"],
+      ["zeus", "dionysus"],
+      ["hera", "semele"],
+      ["zeus", "danae"],
+      ["danae", "perseus"],
+      ["zeus", "perseus"],
+      ["zeus", "alcmene"],
+      ["alcmene", "heracles"],
+      ["zeus", "heracles"],
+      ["hera", "heracles"],
+      ["zeus", "leda"],
+      ["zeus", "nemesis"],
+      ["nemesis", "helen"],
+      ["leda", "helen"],
+      ["zeus", "helen"],
+      ["zeus", "castor"],
+      ["leda", "castor"],
+      ["zeus", "polydeuces"],
+      ["leda", "polydeuces"],
+      ["zeus", "ganymede"],
+      ["zeus", "tantalus"],
+      ["pluto", "tantalus"],
+      ["zeus", "aeacus"]
+    ]
+  },
+  {
+    "id": "monsters",
+    "kind": "story",
+    "title": "The brood of Echidna",
+    "lead": "The children of the sea gods, all fangs and coils and heads, and the heroes who killed them one by one.",
+    "steps": [
+      {
+        "label": "The old man of the sea",
+        "figures": ["gaia", "pontus", "nereus", "nereids", "oceanids", "thetis"],
+        "pairs": [
+          ["gaia", "pontus"],
+          ["pontus", "nereus"],
+          ["nereus", "nereids"],
+          ["oceanids", "nereids"],
+          ["nereus", "thetis"]
+        ],
+        "text": "Earth bears Pontus, the barren Sea, on her own, and then lies with him. Their eldest son is Nereus, the old man of the sea, who never lies and never forgets what is right. With the Ocean nymph Doris he has fifty daughters, the Nereids, Thetis among them."
+      },
+      {
+        "label": "Phorcys and Ceto",
+        "figures": ["phorcys", "ceto", "graeae", "gorgons", "medusa"],
+        "pairs": [
+          ["pontus", "phorcys"],
+          ["gaia", "phorcys"],
+          ["pontus", "ceto"],
+          ["gaia", "ceto"],
+          ["phorcys", "ceto"],
+          ["phorcys", "graeae"],
+          ["ceto", "graeae"],
+          ["phorcys", "gorgons"],
+          ["ceto", "gorgons"],
+          ["phorcys", "medusa"],
+          ["ceto", "medusa"]
+        ],
+        "text": "Phorcys marries his sister Ceto, and their children are the monsters of the edges of the world. The Graeae are grey-haired from birth. The Gorgons live beyond Ocean, near Night; two are immortal and ageless, but the third, Medusa, can die."
+      },
+      {
+        "label": "Echidna",
+        "figures": ["echidna", "ladon", "tartarus"],
+        "pairs": [
+          ["phorcys", "echidna"],
+          ["ceto", "echidna"],
+          ["tartarus", "echidna"],
+          ["gaia", "echidna"],
+          ["phorcys", "ladon"],
+          ["ceto", "ladon"]
+        ],
+        "text": "‘She’, Hesiod says, probably meaning Ceto, bears Echidna: half a nymph with lovely cheeks, half a huge speckled serpent, who eats raw flesh in a cave under the earth and never grows old. The last child of Phorcys and Ceto is the serpent who guards the golden apples at the end of the world, named Ladon by later writers."
+      },
+      {
+        "label": "Typhon",
+        "figures": ["typhon", "zeus", "hera"],
+        "pairs": [
+          ["gaia", "typhon"],
+          ["tartarus", "typhon"],
+          ["hera", "typhon"],
+          ["zeus", "typhon"]
+        ],
+        "text": "Earth, with Tartarus, bears Typhon, with a hundred serpent heads and voices of every beast; in the Homeric Hymn to Apollo, Hera bears him on her own, in anger at Zeus. He fights Zeus for the rule of the world, and Zeus blasts him with thunderbolts and throws him down into Tartarus."
+      },
+      {
+        "label": "Their children",
+        "figures": ["orthus", "cerberus", "hydra", "chimera"],
+        "pairs": [
+          ["typhon", "echidna"],
+          ["typhon", "orthus"],
+          ["echidna", "orthus"],
+          ["typhon", "cerberus"],
+          ["echidna", "cerberus"],
+          ["typhon", "hydra"],
+          ["echidna", "hydra"],
+          ["typhon", "chimera"],
+          ["echidna", "chimera"]
+        ],
+        "text": "Typhon and Echidna have children: Orthus, the dog of Geryon; Cerberus, the dog of Hades, with fifty heads in Hesiod, who fawns on those who come in and eats those who try to leave; the Hydra of Lerna; and, if Hesiod’s ‘she’ means Echidna, the Chimera, lion in front, serpent behind, goat in the middle."
+      },
+      {
+        "label": "The next brood",
+        "figures": ["nemean-lion", "sphinx"],
+        "pairs": [
+          ["orthus", "nemean-lion"],
+          ["chimera", "nemean-lion"],
+          ["typhon", "nemean-lion"],
+          ["orthus", "sphinx"],
+          ["chimera", "sphinx"],
+          ["typhon", "sphinx"],
+          ["echidna", "sphinx"]
+        ],
+        "text": "In Hesiod, a ‘she’ again, the Chimera or Echidna, lies with Orthus and bears the Sphinx, the ruin of Thebes, and the Nemean Lion, whom Hera raises and sets in the hills of Nemea. Apollodorus makes them both children of Typhon."
+      },
+      {
+        "label": "More of the brood",
+        "figures": ["colchian-dragon", "scylla"],
+        "pairs": [
+          ["typhon", "colchian-dragon"],
+          ["echidna", "colchian-dragon"],
+          ["typhon", "scylla"],
+          ["echidna", "scylla"],
+          ["phorcys", "scylla"]
+        ],
+        "text": "Later writers give Typhon and Echidna still more children: the dragon that guards the golden fleece in Colchis, and Scylla, whom Apollodorus calls a daughter of Phorcys."
+      },
+      {
+        "label": "Perseus",
+        "figures": ["perseus", "pegasus", "chrysaor", "geryon", "poseidon"],
+        "pairs": [
+          ["perseus", "graeae"],
+          ["perseus", "medusa"],
+          ["gorgons", "perseus"],
+          ["poseidon", "medusa"],
+          ["medusa", "pegasus"],
+          ["poseidon", "pegasus"],
+          ["medusa", "chrysaor"],
+          ["poseidon", "chrysaor"],
+          ["chrysaor", "geryon"],
+          ["oceanids", "geryon"]
+        ],
+        "text": "Perseus is the first of the monster-killers. He steals the one eye of the Graeae until they show him the way, and cuts off Medusa’s head. From her neck spring her children by Poseidon: the winged horse Pegasus and Chrysaor, ‘golden sword’, who becomes the father of Geryon, the giant with three bodies."
+      },
+      {
+        "label": "The sea monster",
+        "figures": ["cetus", "cassiopeia", "cepheus", "andromeda"],
+        "pairs": [
+          ["cassiopeia", "nereids"],
+          ["poseidon", "cassiopeia"],
+          ["poseidon", "cepheus"],
+          ["perseus", "cetus"],
+          ["perseus", "andromeda"]
+        ],
+        "text": "Queen Cassiopeia boasts that she is more beautiful than the Nereids, and Poseidon sends a sea monster against the land of her husband Cepheus. Their daughter Andromeda is chained to a rock for it, until Perseus kills it."
+      },
+      {
+        "label": "Bellerophon",
+        "figures": ["bellerophon"],
+        "pairs": [
+          ["bellerophon", "chimera"],
+          ["pegasus", "bellerophon"]
+        ],
+        "text": "Bellerophon, riding Pegasus, kills the Chimera from the air."
+      },
+      {
+        "label": "Heracles",
+        "figures": ["heracles", "iolaus"],
+        "pairs": [
+          ["heracles", "nemean-lion"],
+          ["heracles", "hydra"],
+          ["iolaus", "hydra"],
+          ["heracles", "orthus"],
+          ["heracles", "geryon"],
+          ["heracles", "ladon"],
+          ["heracles", "cerberus"]
+        ],
+        "text": "Heracles kills more of the family than anyone: he chokes the Nemean Lion; with Iolaus he burns the Hydra’s necks; he kills Orthus and Geryon and drives off the red cattle; in later writers he kills the serpent of the golden apples; and he drags Cerberus up into the light."
+      },
+      {
+        "label": "The riddle",
+        "figures": ["sphinx", "oedipus"],
+        "pairs": [
+          ["oedipus", "sphinx"]
+        ],
+        "text": "The Sphinx sits on a hill outside Thebes and eats those who cannot answer her riddle: what walks on four legs, then on two, then on three? Oedipus answers ‘man’, and she throws herself down to her death."
+      }
+    ],
+    "pairs": [
+      ["gaia", "pontus"],
+      ["pontus", "nereus"],
+      ["nereus", "nereids"],
+      ["oceanids", "nereids"],
+      ["nereus", "thetis"],
+      ["pontus", "phorcys"],
+      ["gaia", "phorcys"],
+      ["pontus", "ceto"],
+      ["gaia", "ceto"],
+      ["phorcys", "ceto"],
+      ["phorcys", "graeae"],
+      ["ceto", "graeae"],
+      ["phorcys", "gorgons"],
+      ["ceto", "gorgons"],
+      ["phorcys", "medusa"],
+      ["ceto", "medusa"],
+      ["phorcys", "echidna"],
+      ["ceto", "echidna"],
+      ["tartarus", "echidna"],
+      ["gaia", "echidna"],
+      ["phorcys", "ladon"],
+      ["ceto", "ladon"],
+      ["gaia", "typhon"],
+      ["tartarus", "typhon"],
+      ["hera", "typhon"],
+      ["zeus", "typhon"],
+      ["typhon", "echidna"],
+      ["typhon", "orthus"],
+      ["echidna", "orthus"],
+      ["typhon", "cerberus"],
+      ["echidna", "cerberus"],
+      ["typhon", "hydra"],
+      ["echidna", "hydra"],
+      ["typhon", "chimera"],
+      ["echidna", "chimera"],
+      ["orthus", "nemean-lion"],
+      ["chimera", "nemean-lion"],
+      ["typhon", "nemean-lion"],
+      ["orthus", "sphinx"],
+      ["chimera", "sphinx"],
+      ["typhon", "sphinx"],
+      ["echidna", "sphinx"],
+      ["typhon", "colchian-dragon"],
+      ["echidna", "colchian-dragon"],
+      ["typhon", "scylla"],
+      ["echidna", "scylla"],
+      ["phorcys", "scylla"],
+      ["perseus", "graeae"],
+      ["perseus", "medusa"],
+      ["gorgons", "perseus"],
+      ["poseidon", "medusa"],
+      ["medusa", "pegasus"],
+      ["poseidon", "pegasus"],
+      ["medusa", "chrysaor"],
+      ["poseidon", "chrysaor"],
+      ["chrysaor", "geryon"],
+      ["oceanids", "geryon"],
+      ["cassiopeia", "nereids"],
+      ["poseidon", "cassiopeia"],
+      ["poseidon", "cepheus"],
+      ["perseus", "cetus"],
+      ["perseus", "andromeda"],
+      ["bellerophon", "chimera"],
+      ["pegasus", "bellerophon"],
+      ["heracles", "nemean-lion"],
+      ["heracles", "hydra"],
+      ["iolaus", "hydra"],
+      ["heracles", "orthus"],
+      ["heracles", "geryon"],
+      ["heracles", "ladon"],
+      ["heracles", "cerberus"],
+      ["oedipus", "sphinx"]
     ]
   },
   {

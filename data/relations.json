@@ -5061,5 +5061,67 @@
     "to": "polynices",
     "sources": ["T", "A", "L"],
     "note": "forbade anyone to bury Polynices and the Argive dead"
+  },
+  {
+    "type": "marriage",
+    "from": "epimetheus",
+    "to": "pandora",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "epimetheus",
+    "sources": ["H"],
+    "note": "sent him Pandora, a gift that was a punishment"
+  },
+  {
+    "type": "parent",
+    "from": "prometheus",
+    "to": "deucalion-flood",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "epimetheus",
+    "to": "pyrrha",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandora",
+    "to": "pyrrha",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "deucalion-flood",
+    "to": "pyrrha",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deucalion-flood",
+    "to": "hellen",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pyrrha",
+    "to": "hellen",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hellen",
+    "sources": ["A"],
+    "note": "some say, in Apollodorus"
+  },
+  {
+    "type": "parent",
+    "from": "hellen",
+    "to": "aeolus",
+    "sources": ["H", "A"]
   }
 ]
