@@ -617,5 +617,186 @@
         "text": "Driven out of Iolcus, Jason and Medea live ten years in Corinth. Then Jason leaves her to marry Glauce, the king’s daughter. Medea sends the bride a robe and a golden crown. When she puts them on, they burn her, and her father Creon with her. Medea kills her own sons by Jason and escapes in a chariot drawn by winged serpents, the gift of her grandfather the Sun."
       }
     ]
+  },
+  {
+    "id": "troy",
+    "kind": "story",
+    "title": "The Trojan War",
+    "lead": "An apple for the fairest, ten years of war, and a city burned in one night.",
+    "pairs": [
+      ["peleus", "thetis"],
+      ["eris", "thetis"],
+      ["hera", "paris"],
+      ["athena", "paris"],
+      ["priam", "paris"],
+      ["hecuba", "paris"],
+      ["priam", "hecuba"],
+      ["paris", "helen"],
+      ["menelaus", "helen"],
+      ["odysseus", "philoctetes"],
+      ["chryses", "chryseis"],
+      ["agamemnon", "chryseis"],
+      ["apollo", "agamemnon"],
+      ["achilles", "briseis"],
+      ["agamemnon", "achilles"],
+      ["hector", "patroclus"],
+      ["achilles", "hector"],
+      ["hector", "andromache"],
+      ["eetion", "andromache"],
+      ["achilles", "eetion"],
+      ["priam", "hector"],
+      ["achilles", "penthesilea"],
+      ["ares", "penthesilea"],
+      ["nestor", "antilochus"],
+      ["memnon", "antilochus"],
+      ["achilles", "memnon"],
+      ["eos", "memnon"],
+      ["paris", "achilles"],
+      ["odysseus", "ajax"],
+      ["odysseus", "helenus"],
+      ["philoctetes", "paris"],
+      ["deiphobus", "helen"],
+      ["apollo", "laocoon"],
+      ["apollo", "cassandra"],
+      ["neoptolemus", "priam"],
+      ["menelaus", "deiphobus"],
+      ["ajax-lesser", "cassandra"],
+      ["neoptolemus", "astyanax"],
+      ["odysseus", "astyanax"],
+      ["neoptolemus", "polyxena"],
+      ["neoptolemus", "andromache"],
+      ["agamemnon", "cassandra"],
+      ["athena", "ajax-lesser"],
+      ["poseidon", "ajax-lesser"]
+    ],
+    "steps": [
+      {
+        "label": "The apple",
+        "figures": ["peleus", "thetis", "eris"],
+        "text": "All the gods come to the wedding of Peleus and the sea goddess Thetis, except Eris, Strife, who is not asked. She throws a golden apple among the goddesses, for the fairest. Hera, Athena and Aphrodite each claim it, and Zeus sends them to Mount Ida, to be judged by a shepherd."
+      },
+      {
+        "label": "The judgement",
+        "figures": ["paris", "priam", "hecuba", "hera", "athena"],
+        "pairs": [
+          ["priam", "paris"],
+          ["hecuba", "paris"],
+          ["priam", "hecuba"],
+          ["hera", "paris"],
+          ["athena", "paris"]
+        ],
+        "text": "The shepherd is Paris, son of Priam, king of Troy. Before he was born, his mother Hecuba dreamed she gave birth to a firebrand that set the city alight, and the baby was left on Ida to die. Hera offers him a kingdom, Athena victory in war, Aphrodite the most beautiful woman in the world. He gives the apple to Aphrodite, and Hera and Athena hate him and his city from then on."
+      },
+      {
+        "label": "Helen",
+        "figures": ["helen", "menelaus", "paris"],
+        "text": "Paris sails to Sparta, where Menelaus makes him welcome and then leaves for Crete. Paris carries off Menelaus’ wife Helen, with much of his treasure, to Troy. In Stesichorus and Euripides only a phantom of her goes; the real Helen waits out the war in Egypt."
+      },
+      {
+        "label": "The fleet",
+        "figures": ["philoctetes", "odysseus"],
+        "pairs": [
+          ["odysseus", "philoctetes"]
+        ],
+        "text": "Helen’s old suitors have sworn to defend her husband, and the Greeks gather at Aulis under Agamemnon, Menelaus’ brother, who must first sacrifice his daughter. On the way, Philoctetes, who has the bow of Heracles, is bitten by a snake, and his wound stinks so badly that Odysseus puts him ashore on Lemnos."
+      },
+      {
+        "label": "The quarrel",
+        "figures": ["chryses", "chryseis", "agamemnon", "apollo", "achilles", "briseis"],
+        "pairs": [
+          ["chryses", "chryseis"],
+          ["agamemnon", "chryseis"],
+          ["apollo", "agamemnon"],
+          ["achilles", "briseis"],
+          ["agamemnon", "achilles"]
+        ],
+        "text": "In the tenth year, Agamemnon has taken Chryseis as his prize and refuses her father Chryses, a priest of Apollo, who brings a ransom. Apollo sends a plague on the camp. Agamemnon gives the girl back, but takes Achilles’ prize Briseis instead. Achilles withdraws from the fighting, and his mother Thetis begs Zeus to let the Greeks lose without him."
+      },
+      {
+        "label": "Patroclus",
+        "figures": ["patroclus", "hector"],
+        "pairs": [
+          ["hector", "patroclus"]
+        ],
+        "text": "With the Trojans at the ships, Achilles lets his friend Patroclus fight in his armour. Patroclus drives them back to the walls. Apollo strikes the armour from his back, and Hector kills him."
+      },
+      {
+        "label": "Hector",
+        "figures": ["hector", "achilles", "andromache", "eetion", "priam"],
+        "pairs": [
+          ["achilles", "hector"],
+          ["hector", "andromache"],
+          ["eetion", "andromache"],
+          ["achilles", "eetion"],
+          ["priam", "hector"]
+        ],
+        "text": "Hector’s wife Andromache has begged him to stay inside the walls: Achilles has already killed her father Eetion and her seven brothers, and Hector is all she has. Achilles returns to the fight to avenge Patroclus, kills Hector before the gates, and drags his body behind his chariot. At night old Priam comes alone to Achilles’ tent, kisses his hands, and ransoms his son’s body."
+      },
+      {
+        "label": "Penthesilea and Memnon",
+        "figures": ["penthesilea", "memnon", "antilochus", "nestor"],
+        "text": "New allies come to Troy. The Amazon Penthesilea, a daughter of Ares, kills many Greeks before Achilles kills her. He falls in love with her once she is dead, and kills Thersites for jeering at him. Memnon, son of the Dawn, kills Antilochus, who stood in front of his father Nestor. Achilles kills Memnon, and Eos wins him immortality from Zeus."
+      },
+      {
+        "label": "Achilles",
+        "figures": ["achilles", "paris", "ajax", "odysseus"],
+        "pairs": [
+          ["paris", "achilles"],
+          ["odysseus", "ajax"]
+        ],
+        "text": "Achilles drives the Trojans back to the city, and at the Scaean gates Paris shoots him, with Apollo guiding the arrow. In Apollodorus it strikes his ankle. Ajax carries his body from the field. His armour is to go to the best of the Greeks; it is given to Odysseus, and Ajax, maddened, kills himself."
+      },
+      {
+        "label": "The bow",
+        "figures": ["helenus", "philoctetes", "deiphobus"],
+        "pairs": [
+          ["odysseus", "helenus"],
+          ["odysseus", "philoctetes"],
+          ["philoctetes", "paris"],
+          ["deiphobus", "helen"]
+        ],
+        "text": "Odysseus captures the Trojan seer Helenus, who tells him Troy cannot fall without the bow of Heracles; in Apollodorus it is the Greek seer Calchas who says so. Odysseus goes back to Lemnos for Philoctetes, with Diomedes, or in Sophocles with Neoptolemus. Healed of his wound, Philoctetes shoots Paris. Helen is given to Paris’ brother Deiphobus."
+      },
+      {
+        "label": "The horse",
+        "figures": ["laocoon", "cassandra"],
+        "pairs": [
+          ["apollo", "laocoon"],
+          ["apollo", "cassandra"]
+        ],
+        "text": "With Athena’s help, Epeius builds a great wooden horse. The Greeks hide their best men inside it, and sail away. The Trojans drag it into the city. The priest Laocoon warns them, and two serpents come over the sea and kill his sons, or him and one of them. Priam’s daughter Cassandra warns them too, but Apollo has made sure no one will believe her."
+      },
+      {
+        "label": "The sack",
+        "figures": ["neoptolemus", "priam", "menelaus", "deiphobus", "ajax-lesser", "cassandra"],
+        "pairs": [
+          ["neoptolemus", "priam"],
+          ["menelaus", "deiphobus"],
+          ["ajax-lesser", "cassandra"]
+        ],
+        "text": "At night the Greeks climb out and open the gates. Achilles’ son Neoptolemus kills Priam at the altar of Zeus. Menelaus kills Deiphobus and takes Helen back. Ajax the Lesser drags Cassandra away from the image of Athena she is clinging to."
+      },
+      {
+        "label": "The captives",
+        "figures": ["astyanax", "polyxena", "andromache", "cassandra"],
+        "pairs": [
+          ["neoptolemus", "astyanax"],
+          ["odysseus", "astyanax"],
+          ["neoptolemus", "polyxena"],
+          ["neoptolemus", "andromache"],
+          ["agamemnon", "cassandra"]
+        ],
+        "text": "Hector’s little son Astyanax is thrown from the walls, by Odysseus or by Neoptolemus. Priam’s daughter Polyxena is sacrificed on Achilles’ tomb. The women are shared out: Andromache goes to Neoptolemus, Cassandra to Agamemnon."
+      },
+      {
+        "label": "The storm",
+        "figures": ["ajax-lesser", "athena", "poseidon"],
+        "pairs": [
+          ["athena", "ajax-lesser"],
+          ["poseidon", "ajax-lesser"]
+        ],
+        "text": "The Greeks have not punished Ajax, and Athena turns against them. On the way home a storm scatters the fleet. Ajax’s ship is wrecked; he clings to a rock and boasts that he has escaped the sea in spite of the gods, and Poseidon splits the rock and drowns him."
+      }
+    ]
   }
 ]
