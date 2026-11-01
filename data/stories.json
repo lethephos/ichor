@@ -905,6 +905,175 @@
     ]
   },
   {
+    "id": "dardanus",
+    "kind": "story",
+    "title": "The house of Dardanus",
+    "lead": "Six generations of Trojan kings, two goddesses in love, two broken promises, and one city burnt.",
+    "steps": [
+      {
+        "label": "Dardanus",
+        "figures": ["dardanus", "pleiades"],
+        "pairs": [
+          ["zeus", "dardanus"],
+          ["pleiades", "dardanus"]
+        ],
+        "text": "Dardanus, son of Zeus and the Pleiad Electra, comes to the foot of Mount Ida, from Samothrace in Apollodorus, and founds Dardania. Homer calls him the son Zeus loved best of all his children by mortal women."
+      },
+      {
+        "label": "Ganymede",
+        "figures": ["erichthonius", "tros", "ilus", "assaracus", "ganymede"],
+        "pairs": [
+          ["dardanus", "erichthonius"],
+          ["erichthonius", "tros"],
+          ["tros", "ilus"],
+          ["tros", "assaracus"],
+          ["tros", "ganymede"],
+          ["zeus", "ganymede"]
+        ],
+        "text": "His son Erichthonius is the richest of men, with three thousand mares in his marshes. Tros has three sons: Ilus, Assaracus and Ganymede, the most beautiful of mortals. Ganymede is carried off to Olympus to pour wine for Zeus, and Zeus gives his father a team of immortal horses to make up for him."
+      },
+      {
+        "label": "The walls of Troy",
+        "figures": ["laomedon", "poseidon", "apollo"],
+        "pairs": [
+          ["ilus", "laomedon"],
+          ["laomedon", "poseidon"],
+          ["laomedon", "apollo"]
+        ],
+        "text": "Ilus’ son Laomedon is king of Troy. Poseidon and Apollo serve him for a year: in Homer, Poseidon builds the walls and Apollo herds the king’s cattle on Ida. When the year is out, Laomedon refuses to pay them and threatens to cut off their ears. In Apollodorus, Apollo sends a plague, and Poseidon a sea monster."
+      },
+      {
+        "label": "Hesione",
+        "figures": ["hesione", "heracles"],
+        "pairs": [
+          ["laomedon", "hesione"],
+          ["heracles", "laomedon"]
+        ],
+        "text": "To be rid of the monster, Laomedon must give it his daughter Hesione. Heracles kills it for the price of Zeus’s horses, and Laomedon cheats him too. Heracles comes back with six ships and sacks Troy. He kills Laomedon and all his sons but the youngest, Podarces, whom Hesione buys back with her veil; from then on he is called Priam, ‘the bought one’."
+      },
+      {
+        "label": "Goddesses in love",
+        "figures": ["tithonus", "eos", "capys", "anchises", "aphrodite"],
+        "pairs": [
+          ["laomedon", "tithonus"],
+          ["eos", "tithonus"],
+          ["assaracus", "capys"],
+          ["capys", "anchises"],
+          ["aphrodite", "anchises"]
+        ],
+        "text": "Two Trojans are loved by goddesses. Eos, the Dawn, carries off Tithonus, Priam’s brother, and asks Zeus to make him immortal, but forgets to ask that he stay young; he withers until only his voice is left. Aphrodite comes to Anchises, a herdsman on Ida, in the shape of a mortal girl."
+      },
+      {
+        "label": "Priam’s children",
+        "figures": ["priam", "hecuba", "hector", "paris", "cassandra", "polyxena", "troilus", "deiphobus"],
+        "pairs": [
+          ["laomedon", "priam"],
+          ["priam", "hecuba"],
+          ["priam", "hector"],
+          ["priam", "paris"],
+          ["priam", "cassandra"],
+          ["priam", "polyxena"],
+          ["priam", "troilus"],
+          ["priam", "deiphobus"],
+          ["hecuba", "hector"],
+          ["hecuba", "paris"],
+          ["hecuba", "cassandra"],
+          ["hecuba", "polyxena"],
+          ["hecuba", "troilus"],
+          ["hecuba", "deiphobus"],
+          ["apollo", "cassandra"]
+        ],
+        "text": "Priam and Hecuba have many children; Homer gives Priam fifty sons. Before Paris is born, Hecuba dreams she gives birth to a burning torch that sets the city on fire, and the baby is left on Mount Ida; he grows up a shepherd. Apollo gives Cassandra the gift of prophecy, and when she will not have him, makes sure no one believes her."
+      },
+      {
+        "label": "Hector",
+        "figures": ["hector", "andromache", "astyanax", "achilles", "helen"],
+        "pairs": [
+          ["paris", "helen"],
+          ["hector", "andromache"],
+          ["hector", "astyanax"],
+          ["andromache", "astyanax"],
+          ["achilles", "hector"],
+          ["achilles", "troilus"]
+        ],
+        "text": "Paris carries off Helen and brings the Greeks to Troy. Achilles ambushes the boy Troilus outside the walls. Hector, Troy’s defender, leaves his wife Andromache and their little son Astyanax for the last time; Achilles kills him and drags his body round the city, until Priam comes alone by night to ransom it."
+      },
+      {
+        "label": "The fall",
+        "figures": ["neoptolemus"],
+        "pairs": [
+          ["achilles", "neoptolemus"],
+          ["neoptolemus", "priam"],
+          ["neoptolemus", "astyanax"],
+          ["neoptolemus", "polyxena"],
+          ["neoptolemus", "andromache"],
+          ["deiphobus", "helen"],
+          ["agamemnon", "cassandra"]
+        ],
+        "text": "On the night Troy falls, Achilles’ son Neoptolemus kills Priam at the altar of Zeus. Astyanax is thrown from the walls, Polyxena is killed on Achilles’ tomb, and Andromache goes to Neoptolemus as his prize. Deiphobus, Helen’s husband since Paris died, is killed, and Cassandra goes to Agamemnon."
+      },
+      {
+        "label": "Aeneas",
+        "figures": ["aeneas"],
+        "pairs": [
+          ["anchises", "aeneas"],
+          ["aphrodite", "aeneas"]
+        ],
+        "text": "One branch of the house survives: Aeneas, son of Anchises and Aphrodite. In Homer, Poseidon snatches him from Achilles, because he and his children’s children are fated to rule the Trojans. In Ovid, he carries his father out of the burning city on his shoulders."
+      }
+    ],
+    "pairs": [
+      ["zeus", "dardanus"],
+      ["pleiades", "dardanus"],
+      ["dardanus", "erichthonius"],
+      ["erichthonius", "tros"],
+      ["tros", "ilus"],
+      ["tros", "assaracus"],
+      ["tros", "ganymede"],
+      ["zeus", "ganymede"],
+      ["ilus", "laomedon"],
+      ["laomedon", "poseidon"],
+      ["laomedon", "apollo"],
+      ["laomedon", "hesione"],
+      ["heracles", "laomedon"],
+      ["laomedon", "tithonus"],
+      ["eos", "tithonus"],
+      ["assaracus", "capys"],
+      ["capys", "anchises"],
+      ["aphrodite", "anchises"],
+      ["laomedon", "priam"],
+      ["priam", "hecuba"],
+      ["priam", "hector"],
+      ["priam", "paris"],
+      ["priam", "cassandra"],
+      ["priam", "polyxena"],
+      ["priam", "troilus"],
+      ["priam", "deiphobus"],
+      ["hecuba", "hector"],
+      ["hecuba", "paris"],
+      ["hecuba", "cassandra"],
+      ["hecuba", "polyxena"],
+      ["hecuba", "troilus"],
+      ["hecuba", "deiphobus"],
+      ["apollo", "cassandra"],
+      ["paris", "helen"],
+      ["hector", "andromache"],
+      ["hector", "astyanax"],
+      ["andromache", "astyanax"],
+      ["achilles", "hector"],
+      ["achilles", "troilus"],
+      ["achilles", "neoptolemus"],
+      ["neoptolemus", "priam"],
+      ["neoptolemus", "astyanax"],
+      ["neoptolemus", "polyxena"],
+      ["neoptolemus", "andromache"],
+      ["deiphobus", "helen"],
+      ["agamemnon", "cassandra"],
+      ["anchises", "aeneas"],
+      ["aphrodite", "aeneas"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
