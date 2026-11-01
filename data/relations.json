@@ -4885,5 +4885,66 @@
     "to": "aeson",
     "sources": ["L"],
     "note": "made old Aeson young again with her herbs"
+  },
+  {
+    "type": "parent",
+    "from": "muses",
+    "to": "sirens",
+    "sources": ["A", "L"],
+    "note": "Melpomene, by the river Achelous"
+  },
+  {
+    "type": "feud",
+    "from": "sirens",
+    "to": "odysseus",
+    "sources": ["E", "A", "L"],
+    "note": "sang to lure Odysseus to his death; he heard them bound to the mast"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "sirens",
+    "sources": ["A", "L"],
+    "note": "sailed past the Sirens bound to the mast; fated to die if a ship got by, they died"
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "scylla",
+    "sources": ["A"],
+    "note": "in one telling, by Crataeis"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "scylla",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "scylla",
+    "sources": ["L"]
+  },
+  {
+    "type": "transform",
+    "from": "circe",
+    "to": "scylla",
+    "sources": ["L"],
+    "note": "turned Scylla into a monster, jealous of Glaucus’ love for her"
+  },
+  {
+    "type": "feud",
+    "from": "scylla",
+    "to": "companions",
+    "sources": ["E", "A", "L"],
+    "note": "snatched six of Odysseus’ men from the deck and ate them"
+  },
+  {
+    "type": "feud",
+    "from": "helios",
+    "to": "companions",
+    "sources": ["E"],
+    "note": "made Zeus punish the men who ate his cattle"
   }
 ]

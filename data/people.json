@@ -5009,5 +5009,50 @@
     "tagline": "Never slept, until Medea sang to it.",
     "story": "A serpent that never slept, coiled round the oak in the grove of Ares where the Golden Fleece hung. Medea put it to sleep with her drugs, and Jason took the fleece.",
     "versions": "Pindar: Jason kills it. Euripides: Medea kills it. Apollodorus, Ovid and Hyginus: it is lulled to sleep with her drugs. Hyginus makes it a child of Typhon and Echidna."
+  },
+  {
+    "id": "sirens",
+    "name": "Sirens",
+    "greek": "Σειρῆνες",
+    "gender": "f",
+    "generation": 3,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "Singers of the meadow",
+    "tagline": "Sang sailors to their deaths.",
+    "story": "Daughters of the river Achelous and a Muse. They sat in a meadow heaped with the bones of men and sang to every passing ship, and whoever listened sailed to his death. Odysseus stopped his men’s ears with wax and had himself bound to the mast, so he heard their song and lived. It was foretold that they would die if a ship got past them, and so they did.",
+    "versions": "Homer: two, and no parents. Apollodorus and Hyginus: daughters of Achelous and the Muse Melpomene. Homer does not tell their death; Apollodorus and Hyginus do.",
+    "count": "Two, or three",
+    "members": [
+      {
+        "name": "Peisinoe",
+        "greek": "Πεισινόη",
+        "note": "in Apollodorus"
+      },
+      {
+        "name": "Aglaope",
+        "greek": "Ἀγλαόπη",
+        "note": "in Apollodorus"
+      },
+      {
+        "name": "Thelxiepeia",
+        "greek": "Θελξιέπεια",
+        "note": "in Apollodorus"
+      }
+    ],
+    "members_note": "Homer speaks of two Sirens; Apollodorus names three."
+  },
+  {
+    "id": "scylla",
+    "name": "Scylla",
+    "greek": "Σκύλλα",
+    "gender": "f",
+    "generation": 3,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The monster of the strait",
+    "tagline": "Six heads, and a man in each mouth.",
+    "story": "A monster with twelve feet and six long necks, each with a head and three rows of teeth, who lived in a cave above the strait facing Charybdis. As Odysseus’ ship passed, she snatched six of his men from the deck and ate them.",
+    "versions": "Homer: her mother is Crataeis. Apollodorus: daughter of Crataeis and Trienus or Phorcys. Hyginus also makes her a child of Typhon and Echidna. Ovid and Hyginus: once a lovely nymph, whom Circe turned into a monster out of jealousy over the sea god Glaucus."
   }
 ]

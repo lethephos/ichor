@@ -121,7 +121,7 @@
         "title": "The Odyssey",
         "note": "The house of Odysseus, the women who kept him and the enemies he made, on the way to Troy and the long way home.",
         "focus": "odysseus",
-        "figures": ["zeus", "poseidon", "hermes", "helios", "atlas", "circe", "calypso", "aeolus", "sisyphus", "autolycus", "arcesius", "laertes", "anticleia", "icarius", "odysseus", "penelope", "telemachus", "telegonus", "polyphemus", "companions", "suitors", "nausithous", "alcinous", "arete", "nausicaa", "palamedes", "aeacus", "telamon", "hesione", "ajax"]
+        "figures": ["zeus", "poseidon", "hermes", "helios", "atlas", "circe", "calypso", "aeolus", "sisyphus", "autolycus", "arcesius", "laertes", "anticleia", "icarius", "odysseus", "penelope", "telemachus", "telegonus", "polyphemus", "companions", "suitors", "nausithous", "alcinous", "arete", "nausicaa", "palamedes", "aeacus", "telamon", "hesione", "ajax", "sirens", "scylla", "muses", "phorcys"]
       },
       {
         "id": "seven",
@@ -163,7 +163,7 @@
         "note": "The brood of the sea gods Phorcys and Ceto and of Typhon and Echidna, and the heroes who killed them: Perseus, Bellerophon, Heracles and Oedipus.",
         "focus": "echidna",
         "houses": [],
-        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus", "cetus", "andromeda", "cepheus", "nessus", "harpies", "colchian-dragon"]
+        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus", "cetus", "andromeda", "cepheus", "nessus", "harpies", "colchian-dragon", "scylla", "sirens"]
       },
       {
         "id": "underworld",
