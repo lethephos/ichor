@@ -270,5 +270,89 @@
         "text": "Clytemnestra avenges her daughter. When Agamemnon comes home from Troy, she kills him. In Homer, Aegisthus strikes the blow, and the sacrifice is never mentioned."
       }
     ]
+  },
+  {
+    "id": "perseus",
+    "kind": "story",
+    "title": "Perseus and the Gorgon",
+    "lead": "A shower of gold, a chest at sea, a head that turns men to stone.",
+    "pairs": [
+      ["acrisius", "danae"],
+      ["zeus", "danae"],
+      ["zeus", "perseus"],
+      ["danae", "perseus"],
+      ["polydectes", "danae"],
+      ["polydectes", "perseus"],
+      ["perseus", "graeae"],
+      ["phorcys", "graeae"],
+      ["ceto", "graeae"],
+      ["athena", "medusa"],
+      ["poseidon", "medusa"],
+      ["perseus", "medusa"],
+      ["medusa", "pegasus"],
+      ["medusa", "chrysaor"],
+      ["gorgons", "perseus"],
+      ["perseus", "atlas"],
+      ["cassiopeia", "nereids"],
+      ["poseidon", "cepheus"],
+      ["cepheus", "andromeda"],
+      ["cassiopeia", "andromeda"],
+      ["perseus", "cetus"],
+      ["perseus", "andromeda"],
+      ["perseus", "phineus"],
+      ["perseus", "acrisius"]
+    ],
+    "steps": [
+      {
+        "label": "The oracle",
+        "figures": ["acrisius", "danae"],
+        "text": "Acrisius, king of Argos, has only a daughter, Danaë. An oracle tells him that her son will kill him. He shuts her away in a bronze chamber under the earth; in Hyginus, behind a stone wall."
+      },
+      {
+        "label": "The shower of gold",
+        "figures": ["zeus", "danae", "perseus"],
+        "text": "Zeus comes to her as a shower of gold, and she bears Perseus. Apollodorus adds that some named Proetus, Acrisius’ brother, as the father. Acrisius will not believe in Zeus. He shuts mother and child in a wooden chest and casts it into the sea."
+      },
+      {
+        "label": "Seriphos",
+        "figures": ["polydectes"],
+        "text": "The chest washes up on Seriphos, and a fisherman, Dictys, takes them in. His brother Polydectes, the king, wants Danaë, but her son is now a man. Polydectes asks his friends for horses as gifts. Perseus says he would not refuse even the Gorgon’s head, and the king takes him at his word."
+      },
+      {
+        "label": "The Graeae",
+        "figures": ["graeae"],
+        "text": "Led by Hermes and Athena, Perseus comes to the Graeae, three old sisters who share one eye and one tooth. He snatches the eye as it passes between them and gives it back only when they show him the way to the nymphs. The nymphs give him winged sandals, a pouch and the cap of Hades, which makes him unseen; Hermes gives him a sickle."
+      },
+      {
+        "label": "Medusa",
+        "figures": ["medusa", "athena", "gorgons", "pegasus", "chrysaor"],
+        "text": "Of the three Gorgons only Medusa is mortal. Perseus finds them asleep and, looking only at her reflection in a bronze shield, cuts off her head while Athena guides his hand. Pegasus and Chrysaor, her children by Poseidon, spring from her neck. Her sisters wake and give chase, but the cap hides him. Ovid tells why she looked as she did: Poseidon lay with her in Athena’s temple, and Athena turned her hair to snakes."
+      },
+      {
+        "label": "Atlas",
+        "figures": ["atlas"],
+        "text": "Ovid alone tells this. Perseus asks the Titan Atlas for a night’s shelter. Atlas, warned that a son of Zeus would rob his golden apples, drives him off. Perseus holds up the head, and Atlas becomes a mountain, his beard and hair forests, his bones rock."
+      },
+      {
+        "label": "Andromeda",
+        "figures": ["cassiopeia", "nereids", "poseidon", "cepheus", "andromeda", "cetus"],
+        "text": "In Ethiopia, Queen Cassiopeia has boasted that she is more beautiful than the Nereids; in Hyginus she says it of her daughter. Poseidon sends a sea monster. The oracle of Ammon says the land will be saved if Andromeda, the king’s daughter, is given to it, and Cepheus chains her to a rock. Perseus kills the monster and claims her as his wife."
+      },
+      {
+        "label": "The wedding",
+        "figures": ["phineus"],
+        "text": "Andromeda was promised first to Phineus, Cepheus’ brother. He plots against Perseus, or, in Ovid, storms the wedding feast with his men. Perseus holds up the Gorgon’s head, and they turn to stone."
+      },
+      {
+        "label": "The return",
+        "figures": ["polydectes", "danae"],
+        "text": "Back on Seriphos, Perseus finds his mother and Dictys hiding at the altars from Polydectes. He walks into the king’s hall and shows the head: Polydectes and his guests turn to stone. Perseus makes Dictys king, gives the sandals, the pouch and the cap back to Hermes, and gives the head to Athena, who sets it on her shield."
+      },
+      {
+        "label": "The discus",
+        "figures": ["acrisius", "perseus"],
+        "text": "Acrisius, fearing the oracle, flees to Larissa. Perseus follows him there and joins the games. His discus strikes Acrisius and kills him: in Apollodorus it hits his foot, in Hyginus the wind carries it to his head. The oracle comes true."
+      }
+    ]
   }
 ]
