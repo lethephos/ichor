@@ -91,6 +91,116 @@
     ]
   },
   {
+    "id": "zeus-king",
+    "kind": "story",
+    "title": "How Zeus became king",
+    "lead": "Every king of the gods fears his own children. The third swallows the mother before the child is born.",
+    "pairs": [
+      ["gaia", "uranus"],
+      ["gaia", "cyclopes"],
+      ["uranus", "cyclopes"],
+      ["gaia", "hundred-handed"],
+      ["uranus", "hundred-handed"],
+      ["uranus", "cronus"],
+      ["uranus", "erinyes"],
+      ["gaia", "erinyes"],
+      ["uranus", "aphrodite"],
+      ["gaia", "rhea"],
+      ["uranus", "rhea"],
+      ["cronus", "rhea"],
+      ["cronus", "hestia"],
+      ["cronus", "demeter"],
+      ["cronus", "hera"],
+      ["cronus", "hades"],
+      ["cronus", "poseidon"],
+      ["rhea", "hestia"],
+      ["rhea", "demeter"],
+      ["rhea", "hera"],
+      ["rhea", "hades"],
+      ["rhea", "poseidon"],
+      ["rhea", "zeus"],
+      ["cronus", "zeus"],
+      ["metis", "cronus"],
+      ["hundred-handed", "cronus"],
+      ["gaia", "typhon"],
+      ["tartarus", "typhon"],
+      ["hera", "typhon"],
+      ["zeus", "typhon"],
+      ["zeus", "metis"],
+      ["metis", "athena"],
+      ["zeus", "athena"]
+    ],
+    "steps": [
+      {
+        "label": "Sky and Earth",
+        "figures": ["gaia", "uranus", "cyclopes", "hundred-handed"],
+        "text": "Earth, Gaia, bears Sky, Uranus, and takes him as her husband. Their children are the twelve Titans, the three Cyclopes and three sons with a hundred arms each. Uranus hates them. As they are born he hides them away inside the earth; in Apollodorus it is the Cyclopes and the Hundred-Handers he throws into Tartarus. Gaia groans under the weight. She makes a great sickle and asks her sons to punish their father."
+      },
+      {
+        "label": "The sickle",
+        "figures": ["cronus", "erinyes", "aphrodite"],
+        "pairs": [
+          ["uranus", "cronus"],
+          ["uranus", "erinyes"],
+          ["gaia", "erinyes"],
+          ["uranus", "aphrodite"]
+        ],
+        "text": "Only Cronus, the youngest Titan, dares. When Uranus comes at night to lie with Gaia, Cronus, waiting in ambush, cuts off his father’s genitals with the sickle and throws them behind him. From the drops of blood that fall on the earth, Gaia bears the Erinyes. In Hesiod the flesh falls into the sea, a white foam gathers round it, and out of it rises Aphrodite."
+      },
+      {
+        "label": "The swallowed children",
+        "figures": ["rhea", "hestia", "demeter", "hera", "hades", "poseidon"],
+        "text": "Cronus is king now, and marries his sister Rhea. Gaia and Uranus warn him that a son of his will overthrow him. So as each child is born, he swallows it: Hestia, Demeter, Hera, Hades and Poseidon. In Apollodorus he also shuts the Cyclopes and the Hundred-Handers back in Tartarus."
+      },
+      {
+        "label": "The stone",
+        "figures": ["zeus"],
+        "pairs": [
+          ["rhea", "zeus"],
+          ["rhea", "cronus"]
+        ],
+        "text": "When Rhea is about to bear Zeus, she goes to Crete. The baby is hidden in a cave, and Rhea gives Cronus a stone wrapped in swaddling clothes. He swallows it. In Apollodorus, nymphs raise the child on the milk of Amalthea, and the Curetes clash their spears on their shields so that Cronus will not hear him cry."
+      },
+      {
+        "label": "Cronus brings them up",
+        "figures": ["cronus", "metis"],
+        "pairs": [
+          ["metis", "cronus"],
+          ["cronus", "zeus"]
+        ],
+        "text": "Zeus grows up fast. In Hesiod, Gaia tricks Cronus into bringing up everything he has swallowed, the stone first; Zeus sets it up at Delphi. In Apollodorus, Metis, a daughter of Ocean, gives Cronus a drug that makes him vomit. His children come out whole, and side with Zeus against their father."
+      },
+      {
+        "label": "The war with the Titans",
+        "figures": ["hundred-handed", "cyclopes", "zeus"],
+        "pairs": [
+          ["hundred-handed", "cronus"]
+        ],
+        "text": "The gods on Olympus fight the Titans on Mount Othrys for ten years. Gaia tells Zeus he will win with the prisoners under the earth on his side, so he sets the Cyclopes and the Hundred-Handers free. The Cyclopes give him thunder and lightning; in Apollodorus they also give Hades a cap that makes him unseen and Poseidon his trident. The Hundred-Handers throw rocks three hundred at a time. The Titans are beaten and shut away in Tartarus, with the Hundred-Handers to guard them."
+      },
+      {
+        "label": "Three lots",
+        "figures": ["zeus", "poseidon", "hades"],
+        "pairs": [
+          ["rhea", "zeus"],
+          ["rhea", "poseidon"],
+          ["rhea", "hades"]
+        ],
+        "text": "The three brothers draw lots for the world. Zeus gets the sky, Poseidon the sea, and Hades the dark under the earth; in Homer the earth and Olympus they share. In Hesiod, the gods ask Zeus to be their king, and he hands out to each their honours."
+      },
+      {
+        "label": "Typhon",
+        "figures": ["typhon", "tartarus"],
+        "text": "Gaia is not finished. She lies with Tartarus and bears Typhon, a monster with a hundred snake heads. In the Homeric Hymn to Apollo, Hera bears him alone, angry that Zeus has fathered Athena without her. Typhon nearly takes the world. Zeus strikes him with thunderbolts and throws him into Tartarus. In Apollodorus, Typhon first cuts out Zeus’s sinews, and Hermes steals them back; in Pindar and Apollodorus he lies under Mount Etna."
+      },
+      {
+        "label": "Metis",
+        "figures": ["metis", "athena"],
+        "text": "Zeus’s first wife is Metis, wisest of the gods. Gaia and Uranus warn him that after a daughter she will bear a son who will be king of gods and men. So when she is about to give birth, Zeus swallows her; in Apollodorus she changes into many shapes to escape him. Later Athena springs from his head in full armour, and in Pindar Hephaestus splits it open with an axe. No son is born, and Zeus stays king."
+      }
+    ]
+  },
+  {
     "id": "cadmus",
     "kind": "story",
     "title": "The house of Cadmus",
