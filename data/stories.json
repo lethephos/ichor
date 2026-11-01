@@ -201,6 +201,83 @@
     ]
   },
   {
+    "id": "prometheus",
+    "kind": "story",
+    "title": "Prometheus and the fire",
+    "lead": "A Titan steals fire for men. Zeus answers with a woman, a rock and an eagle, and in the end a flood.",
+    "pairs": [
+      ["iapetus", "atlas"],
+      ["iapetus", "prometheus"],
+      ["iapetus", "epimetheus"],
+      ["iapetus", "menoetius"],
+      ["zeus", "menoetius"],
+      ["zeus", "atlas"],
+      ["zeus", "prometheus"],
+      ["epimetheus", "pandora"],
+      ["zeus", "epimetheus"],
+      ["prometheus", "deucalion-flood"],
+      ["epimetheus", "pyrrha"],
+      ["pandora", "pyrrha"],
+      ["deucalion-flood", "pyrrha"],
+      ["deucalion-flood", "hellen"],
+      ["pyrrha", "hellen"]
+    ],
+    "steps": [
+      {
+        "label": "The sons of Iapetus",
+        "figures": ["iapetus", "atlas", "prometheus", "epimetheus", "menoetius"],
+        "pairs": [
+          ["iapetus", "atlas"],
+          ["iapetus", "prometheus"],
+          ["iapetus", "epimetheus"],
+          ["iapetus", "menoetius"],
+          ["zeus", "menoetius"],
+          ["zeus", "atlas"]
+        ],
+        "text": "The Titan Iapetus has four sons: proud Menoetius, Atlas, clever Prometheus, and Epimetheus, who thinks too late. Their mother is the Oceanid Clymene in Hesiod, Asia in Apollodorus. When the Titans fall, Zeus strikes Menoetius down with a thunderbolt, and sets Atlas at the ends of the earth to hold up the sky."
+      },
+      {
+        "label": "The ox at Mecone",
+        "figures": ["prometheus", "zeus"],
+        "pairs": [
+          ["zeus", "prometheus"]
+        ],
+        "text": "At Mecone, gods and men meet to settle how a sacrifice will be shared. Prometheus cuts up an ox. He hides the meat inside the stomach, wraps the bones in shining fat, and lets Zeus choose. Zeus takes the fat and finds the bones beneath, and ever since, men burn bones for the gods and keep the meat. In his anger Zeus hides fire from men."
+      },
+      {
+        "label": "Fire",
+        "figures": ["prometheus"],
+        "pairs": [
+          ["zeus", "prometheus"]
+        ],
+        "text": "Prometheus steals fire from the gods, hides it in a hollow fennel stalk, and carries it down to men. In Aeschylus he also teaches them numbers and letters, medicine, and how to tame horses and sail ships."
+      },
+      {
+        "label": "Pandora",
+        "figures": ["pandora", "epimetheus"],
+        "text": "Zeus answers with a gift. Hephaestus shapes a girl out of earth and water, the goddesses dress her, and Hermes gives her a lying tongue: Pandora, the first woman. Prometheus has told his brother never to take a gift from Zeus, but Epimetheus takes her. She lifts the lid of a great jar, and sorrows and sickness fly out over the world. Only Hope stays inside, under the rim."
+      },
+      {
+        "label": "The rock and the eagle",
+        "figures": ["prometheus"],
+        "pairs": [
+          ["zeus", "prometheus"]
+        ],
+        "text": "Zeus has Prometheus bound to a rock, on the Caucasus in Apollodorus, and every day sends an eagle to eat his liver, which grows back every night. In Aeschylus he will not bow, because he knows a secret that could bring Zeus down. In Hesiod and Apollodorus, Heracles at last shoots the eagle and sets him free, with Zeus’s consent."
+      },
+      {
+        "label": "The flood",
+        "figures": ["deucalion-flood", "pyrrha"],
+        "text": "Zeus decides to drown the race of bronze. Prometheus warns his son Deucalion, who builds a chest and floats in it with his wife Pyrrha, daughter of Epimetheus and Pandora, for nine days and nights, until it comes to rest on Parnassus. Told to throw the bones of their mother behind them, they understand: the stones of the Earth. Deucalion’s stones become men, and Pyrrha’s women."
+      },
+      {
+        "label": "Hellen",
+        "figures": ["hellen"],
+        "text": "Their first son is Hellen, and the Greeks call themselves Hellenes after him. His son Aeolus founds a great house: his sons are Sisyphus, Athamas, Cretheus and Salmoneus, and from them come Jason, Bellerophon and, some say, Odysseus."
+      }
+    ]
+  },
+  {
     "id": "cadmus",
     "kind": "story",
     "title": "The house of Cadmus",

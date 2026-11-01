@@ -5118,5 +5118,56 @@
       }
     ],
     "members_note": "Hesiod and Apollodorus name the same three; Hesiod also calls Briareus Obriareus."
+  },
+  {
+    "id": "pandora",
+    "name": "Pandora",
+    "greek": "Πανδώρα",
+    "gender": "f",
+    "generation": 2,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The first woman",
+    "tagline": "Made by the gods as a gift, and a punishment.",
+    "story": "Zeus had her made to repay men for the stolen fire. Hephaestus shaped her from earth and water, the goddesses dressed her, and Hermes gave her a thief’s mind and a lying tongue. Epimetheus took her in. She lifted the lid of a great jar, and sorrows and sickness flew out over the world; only Hope stayed inside.",
+    "versions": "The jar is Hesiod’s; the box came much later, in the Renaissance. In the Theogony she is not named, only ‘the woman’."
+  },
+  {
+    "id": "deucalion-flood",
+    "name": "Deucalion",
+    "greek": "Δευκαλίων",
+    "gender": "m",
+    "generation": 3,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Survivor of the flood",
+    "tagline": "Floated nine days in a chest while the world drowned.",
+    "story": "Son of Prometheus. When Zeus flooded the earth to wipe out the race of bronze, his father told him to build a chest. He and his wife Pyrrha floated in it for nine days and nights and came to rest on Parnassus. Told to throw the bones of their mother behind them, they threw stones, and the stones became people.",
+    "versions": "Not the Cretan Deucalion, son of Minos. In Hesiod his mother is Pronoea; in other writers, Clymene or Hesione."
+  },
+  {
+    "id": "pyrrha",
+    "name": "Pyrrha",
+    "greek": "Πύρρα",
+    "gender": "f",
+    "generation": 3,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Survivor of the flood",
+    "tagline": "Her stones became women.",
+    "story": "Daughter of Epimetheus and Pandora, and wife of Deucalion. After the flood, the stones she threw over her shoulder became women."
+  },
+  {
+    "id": "hellen",
+    "name": "Hellen",
+    "greek": "Ἕλλην",
+    "gender": "m",
+    "generation": 3,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Father of the Greeks",
+    "tagline": "Gave his name to every Greek.",
+    "story": "Son of Deucalion and Pyrrha. The Greeks called themselves Hellenes after him, and his sons Dorus, Xuthus and Aeolus gave their names to the Dorians, the Ionians and Achaeans, and the Aeolians.",
+    "versions": "In Apollodorus, some say his father was Zeus."
   }
 ]
