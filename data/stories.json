@@ -1074,6 +1074,131 @@
     ]
   },
   {
+    "id": "bellerophon",
+    "kind": "story",
+    "title": "Bellerophon and Pegasus",
+    "lead": "A guest falsely accused, a letter asking for his death, a winged horse, and a fall from the sky.",
+    "steps": [
+      {
+        "label": "A son of Corinth",
+        "figures": ["sisyphus", "glaucus-corinth", "bellerophon"],
+        "pairs": [
+          ["aeolus", "sisyphus"],
+          ["sisyphus", "glaucus-corinth"],
+          ["glaucus-corinth", "bellerophon"],
+          ["poseidon", "bellerophon"]
+        ],
+        "text": "Bellerophon is the grandson of Sisyphus, king of Ephyra, which is Corinth. Homer makes him the son of Glaucus; Hesiod and later writers say his true father is Poseidon. In Apollodorus, he kills his brother by accident and has to leave home; he goes to Tiryns, to King Proetus, to be cleansed."
+      },
+      {
+        "label": "The queen’s lie",
+        "figures": ["proetus", "stheneboea"],
+        "pairs": [
+          ["proetus", "stheneboea"],
+          ["stheneboea", "bellerophon"]
+        ],
+        "text": "Proetus’ wife falls in love with the young man; Homer calls her Anteia, the tragedians Stheneboea. When he will not lie with her, she tells her husband that Bellerophon tried to take her by force, and asks him to kill him."
+      },
+      {
+        "label": "The folded tablet",
+        "figures": ["iobates"],
+        "pairs": [
+          ["proetus", "bellerophon"],
+          ["iobates", "stheneboea"]
+        ],
+        "text": "Proetus will not kill a guest himself. He sends Bellerophon to Lycia, to his wife’s father, with a folded tablet scratched with deadly signs. The king of Lycia, Iobates in Apollodorus, feasts him for nine days and kills nine oxen before he asks to see the tablet."
+      },
+      {
+        "label": "Pegasus",
+        "figures": ["pegasus", "medusa"],
+        "pairs": [
+          ["medusa", "pegasus"],
+          ["poseidon", "pegasus"],
+          ["pegasus", "bellerophon"]
+        ],
+        "text": "Bellerophon needs a horse that can fly: Pegasus, born from Medusa’s neck when Perseus cut off her head. In Pindar, he tries for a long time to catch him at the spring of Peirene, until Athena comes to him in a dream and gives him a golden bridle; he wakes with it in his hand."
+      },
+      {
+        "label": "The Chimera",
+        "figures": ["chimera"],
+        "pairs": [
+          ["bellerophon", "chimera"],
+          ["iobates", "bellerophon"]
+        ],
+        "text": "The king sends him first against the Chimera, lion in front, serpent behind, goat in the middle, breathing fire. Bellerophon kills it from the air. Then he fights the Solymi, the fiercest battle of his life, then the Amazons; and when he comes back, he kills every man of the ambush the king has laid for him."
+      },
+      {
+        "label": "Revenge",
+        "figures": ["stheneboea", "bellerophon"],
+        "pairs": [
+          ["bellerophon", "stheneboea"]
+        ],
+        "text": "In Euripides’ lost Stheneboea, Bellerophon goes back to Tiryns, takes the queen up on Pegasus as if to carry her off, and drops her into the sea near Melos."
+      },
+      {
+        "label": "Half the kingdom",
+        "figures": ["philonoe", "hippolochus", "laodamia"],
+        "pairs": [
+          ["iobates", "philonoe"],
+          ["bellerophon", "philonoe"],
+          ["bellerophon", "hippolochus"],
+          ["philonoe", "hippolochus"],
+          ["bellerophon", "laodamia"],
+          ["philonoe", "laodamia"]
+        ],
+        "text": "Now the king knows he is the son of a god. He gives him his daughter, Philonoe in Apollodorus, and half his kingdom. They have three children: Isander, Hippolochus and Laodamia."
+      },
+      {
+        "label": "The fall",
+        "figures": ["zeus"],
+        "pairs": [
+          ["pegasus", "bellerophon"]
+        ],
+        "text": "In Pindar, Bellerophon tries to ride Pegasus up to the halls of Zeus, and the horse throws him. Homer only says that he became hateful to all the gods and wandered alone on the Aleian plain, eating his heart out and avoiding the paths of men."
+      },
+      {
+        "label": "Before Troy",
+        "figures": ["sarpedon", "glaucus-lycia", "patroclus"],
+        "pairs": [
+          ["zeus", "laodamia"],
+          ["zeus", "sarpedon"],
+          ["laodamia", "sarpedon"],
+          ["artemis", "laodamia"],
+          ["hippolochus", "glaucus-lycia"],
+          ["patroclus", "sarpedon"]
+        ],
+        "text": "Ares kills Isander, and Artemis kills Laodamia in anger. But Laodamia has borne Zeus a son, Sarpedon, and Hippolochus a son, Glaucus, and the cousins lead the Lycians at Troy. Glaucus tells the whole story to Diomedes on the battlefield, and the two trade armour instead of fighting. Patroclus kills Sarpedon, and Zeus lets it happen, raining drops of blood on the earth for his son."
+      }
+    ],
+    "pairs": [
+      ["aeolus", "sisyphus"],
+      ["sisyphus", "glaucus-corinth"],
+      ["glaucus-corinth", "bellerophon"],
+      ["poseidon", "bellerophon"],
+      ["proetus", "stheneboea"],
+      ["stheneboea", "bellerophon"],
+      ["proetus", "bellerophon"],
+      ["iobates", "stheneboea"],
+      ["medusa", "pegasus"],
+      ["poseidon", "pegasus"],
+      ["pegasus", "bellerophon"],
+      ["bellerophon", "chimera"],
+      ["iobates", "bellerophon"],
+      ["iobates", "philonoe"],
+      ["bellerophon", "philonoe"],
+      ["bellerophon", "hippolochus"],
+      ["philonoe", "hippolochus"],
+      ["bellerophon", "laodamia"],
+      ["philonoe", "laodamia"],
+      ["zeus", "laodamia"],
+      ["zeus", "sarpedon"],
+      ["laodamia", "sarpedon"],
+      ["artemis", "laodamia"],
+      ["hippolochus", "glaucus-lycia"],
+      ["patroclus", "sarpedon"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
