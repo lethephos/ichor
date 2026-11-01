@@ -798,5 +798,160 @@
         "text": "The Greeks have not punished Ajax, and Athena turns against them. On the way home a storm scatters the fleet. Ajax’s ship is wrecked; he clings to a rock and boasts that he has escaped the sea in spite of the gods, and Poseidon splits the rock and drowns him."
       }
     ]
+  },
+  {
+    "id": "odyssey",
+    "kind": "story",
+    "title": "The wanderings of Odysseus",
+    "lead": "Ten years at war, ten more getting home, and a hundred and eight men waiting in his hall.",
+    "pairs": [
+      ["odysseus", "penelope"],
+      ["odysseus", "telemachus"],
+      ["penelope", "telemachus"],
+      ["palamedes", "odysseus"],
+      ["odysseus", "polyphemus"],
+      ["polyphemus", "companions"],
+      ["poseidon", "polyphemus"],
+      ["polyphemus", "odysseus"],
+      ["poseidon", "odysseus"],
+      ["circe", "companions"],
+      ["odysseus", "circe"],
+      ["anticleia", "odysseus"],
+      ["odysseus", "ajax"],
+      ["odysseus", "sirens"],
+      ["muses", "sirens"],
+      ["scylla", "companions"],
+      ["circe", "scylla"],
+      ["phorcys", "scylla"],
+      ["helios", "companions"],
+      ["zeus", "companions"],
+      ["calypso", "odysseus"],
+      ["atlas", "calypso"],
+      ["alcinous", "arete"],
+      ["alcinous", "nausicaa"],
+      ["arete", "nausicaa"],
+      ["suitors", "telemachus"],
+      ["odysseus", "suitors"],
+      ["laertes", "odysseus"],
+      ["odysseus", "telegonus"],
+      ["circe", "telegonus"],
+      ["telegonus", "penelope"],
+      ["telemachus", "circe"]
+    ],
+    "steps": [
+      {
+        "label": "The plough",
+        "figures": ["odysseus", "penelope", "telemachus", "palamedes"],
+        "text": "Odysseus, king of Ithaca, does not want to go to Troy. He pretends to be mad, and in Hyginus yokes a horse and an ox to his plough. Palamedes sees through him: he takes the baby Telemachus from Penelope and threatens him with a sword, or lays him in front of the plough. Odysseus gives himself away and sails for Troy. He will not see his wife and son for twenty years."
+      },
+      {
+        "label": "The Cyclops",
+        "figures": ["polyphemus", "companions", "poseidon"],
+        "pairs": [
+          ["odysseus", "polyphemus"],
+          ["polyphemus", "companions"],
+          ["poseidon", "polyphemus"],
+          ["polyphemus", "odysseus"],
+          ["poseidon", "odysseus"]
+        ],
+        "text": "On the way home from Troy, Odysseus and twelve of his men walk into the cave of the Cyclops Polyphemus, a son of Poseidon. He shuts them in and eats them two at a time. Odysseus makes him drunk, tells him his name is Nobody, and drives a burning stake into his one eye; the survivors escape under his rams. Sailing off, Odysseus shouts his real name, and Polyphemus prays to his father: let Odysseus come home late, alone, on a stranger’s ship, to trouble in his house."
+      },
+      {
+        "label": "Circe",
+        "figures": ["circe"],
+        "pairs": [
+          ["circe", "companions"],
+          ["odysseus", "circe"]
+        ],
+        "text": "Aeolus, keeper of the winds, gives Odysseus a bag holding every wind but the one that would take him home; within sight of Ithaca his men open it, and the storm blows them back. The cannibal Laestrygonians sink eleven of his twelve ships. On Aeaea the witch Circe turns half his men into pigs. Hermes gives Odysseus a herb, moly, against her drugs; he makes her turn them back, and stays a year in her bed."
+      },
+      {
+        "label": "The dead",
+        "figures": ["anticleia", "ajax"],
+        "pairs": [
+          ["anticleia", "odysseus"],
+          ["odysseus", "ajax"]
+        ],
+        "text": "Circe sends him to the edge of the world to ask the dead seer Tiresias the way home. Among the shades comes his mother Anticleia, who has died of longing for him; three times he tries to hold her, and three times she slips through his arms. Ajax, who killed himself when the arms of Achilles went to Odysseus, will not speak to him, and walks away."
+      },
+      {
+        "label": "The Sirens",
+        "figures": ["sirens"],
+        "pairs": [
+          ["odysseus", "sirens"],
+          ["muses", "sirens"]
+        ],
+        "text": "Next come the Sirens, whose song draws sailors to their deaths. Odysseus stops his men’s ears with wax and has them bind him to the mast, so that he hears the song and lives. Apollodorus and Hyginus add that the Sirens were fated to die if a ship got past them, and so they die."
+      },
+      {
+        "label": "Scylla",
+        "figures": ["scylla"],
+        "pairs": [
+          ["scylla", "companions"],
+          ["circe", "scylla"],
+          ["phorcys", "scylla"]
+        ],
+        "text": "The strait lies between Charybdis, who swallows the sea three times a day, and Scylla, with six heads on six long necks. Odysseus keeps close to Scylla, and she snatches six of his men from the deck. In Ovid she was once a lovely nymph, whom Circe turned into a monster out of jealousy."
+      },
+      {
+        "label": "The cattle of the Sun",
+        "figures": ["helios", "zeus"],
+        "pairs": [
+          ["helios", "companions"],
+          ["zeus", "companions"]
+        ],
+        "text": "Stuck by contrary winds on the island of the Sun, the starving men kill and eat his cattle, though they have sworn not to. Helios demands justice, and when they put to sea Zeus strikes the ship with a thunderbolt. All are drowned but Odysseus."
+      },
+      {
+        "label": "Calypso",
+        "figures": ["calypso"],
+        "pairs": [
+          ["calypso", "odysseus"],
+          ["atlas", "calypso"]
+        ],
+        "text": "He drifts to the island of the nymph Calypso, daughter of Atlas, who keeps him seven years and offers to make him immortal. He sits on the shore and weeps for home. At last Zeus sends Hermes to tell her to let him go, and she helps him build a raft."
+      },
+      {
+        "label": "The Phaeacians",
+        "figures": ["nausicaa", "alcinous", "arete"],
+        "text": "Poseidon sees the raft and wrecks it, and Odysseus swims two days to the land of the Phaeacians. The princess Nausicaa finds him on the shore and sends him to her parents, Alcinous and Arete. At their feast he weeps at a song about Troy, tells them who he is and all he has suffered, and they carry him home asleep in one of their ships. Poseidon turns the ship to stone as it comes back into harbour."
+      },
+      {
+        "label": "The beggar",
+        "figures": ["suitors", "telemachus"],
+        "pairs": [
+          ["suitors", "telemachus"]
+        ],
+        "text": "Athena disguises him as an old beggar. For years, a hundred and eight suitors have been eating his house bare and pressing Penelope to marry one of them; she has put them off by weaving a shroud by day and unpicking it by night. Telemachus, home from asking after his father, escapes the suitors’ ambush, and Odysseus shows himself to him. In his own hall the suitors mock him, his old dog Argos knows him and dies, and his nurse Eurycleia knows him by the scar from a boar hunt."
+      },
+      {
+        "label": "The bow",
+        "figures": ["suitors"],
+        "pairs": [
+          ["odysseus", "suitors"]
+        ],
+        "text": "Penelope says she will marry the man who can string Odysseus’ bow and shoot through twelve axes. None of the suitors can string it. The beggar strings it and shoots, then turns the bow on them. With Telemachus and two loyal herdsmen he kills them all."
+      },
+      {
+        "label": "The bed",
+        "figures": ["penelope", "laertes"],
+        "pairs": [
+          ["odysseus", "penelope"],
+          ["laertes", "odysseus"]
+        ],
+        "text": "Penelope tests him: she orders their bed moved. He tells her it cannot be moved, since he built it himself round the trunk of a living olive tree, and she knows him. Next day he finds his old father Laertes digging in his orchard, and Athena makes peace between him and the suitors’ families."
+      },
+      {
+        "label": "Telegonus",
+        "figures": ["telegonus"],
+        "pairs": [
+          ["odysseus", "telegonus"],
+          ["circe", "telegonus"],
+          ["telegonus", "penelope"],
+          ["telemachus", "circe"]
+        ],
+        "text": "Years later Telegonus, his son by Circe, comes to Ithaca looking for his father and, not knowing him, kills him with a spear tipped with a stingray’s spine. He takes the body to Circe, with Penelope and Telemachus. Telegonus marries Penelope, and Telemachus marries Circe."
+      }
+    ]
   }
 ]
