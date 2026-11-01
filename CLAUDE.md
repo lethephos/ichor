@@ -74,3 +74,4 @@ Keep it simple: a static site, no backend.
 - Images in cards: only from Wikimedia Commons or museums with open licences, always with credit. Licence notes per artwork are in the verification document.
 - Hesiod fragment numbering: Catalogue of Women fr. 23a (Merkelbach–West); the Most (Loeb) number still needs checking.
 - Next branches: to be decided.
+- A database: none for now (all data is static JSON, the theme pick is in localStorage). Left for the future, for features readers write to: accounts, favourites, comments, suggested corrections.
