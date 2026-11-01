@@ -1361,6 +1361,149 @@
     ]
   },
   {
+    "id": "io",
+    "kind": "story",
+    "title": "Io and the Danaids",
+    "lead": "A girl turned into a cow, chased across the world by a gadfly, and her descendants, who came back to Argos fifty at a time.",
+    "steps": [
+      {
+        "label": "Inachus",
+        "figures": ["oceanus", "tethys", "inachus", "io"],
+        "pairs": [
+          ["oceanus", "inachus"],
+          ["tethys", "inachus"],
+          ["inachus", "io"]
+        ],
+        "text": "Inachus, son of Ocean and Tethys, is the river of Argos and its first king. His daughter Io is a priestess of Hera."
+      },
+      {
+        "label": "The white cow",
+        "figures": ["zeus", "hera"],
+        "pairs": [
+          ["zeus", "io"],
+          ["hera", "io"]
+        ],
+        "text": "Zeus loves Io. When Hera finds out, he turns the girl into a white cow and swears he has never touched her; Hesiod says that this is why a lover’s oath does not anger the gods. Hera asks for the cow as a gift, and gets her."
+      },
+      {
+        "label": "Argus",
+        "figures": ["argus", "hermes"],
+        "pairs": [
+          ["hermes", "argus"]
+        ],
+        "text": "Hera sets Argus, who has eyes all over his body, to guard the cow. Zeus sends Hermes to steal her. In Apollodorus, Hermes kills Argus with a stone; in Ovid, he plays his pipes and tells him stories until every one of the hundred eyes has closed, then cuts off his head. Hera sets the eyes in the peacock’s tail."
+      },
+      {
+        "label": "The gadfly",
+        "figures": ["epaphus"],
+        "pairs": [
+          ["zeus", "epaphus"],
+          ["io", "epaphus"]
+        ],
+        "text": "Hera sends a gadfly to sting the cow, and Io runs across the world. In Aeschylus, she meets Prometheus chained on his rock, and he tells her where she will wander. She swims the strait that is named after her, the Bosporus, the cow’s crossing, and comes at last to Egypt. There Zeus gives her back her shape with a touch of his hand, and she bears a son, Epaphus, ‘the touch’."
+      },
+      {
+        "label": "Libya",
+        "figures": ["libya", "poseidon", "belus", "agenor", "cadmus", "europa"],
+        "pairs": [
+          ["epaphus", "libya"],
+          ["poseidon", "libya"],
+          ["poseidon", "belus"],
+          ["libya", "belus"],
+          ["poseidon", "agenor"],
+          ["libya", "agenor"],
+          ["agenor", "cadmus"],
+          ["agenor", "europa"]
+        ],
+        "text": "Epaphus rules Egypt, and his daughter Libya gives her name to the land beyond it. She bears Poseidon twin sons. Belus stays and rules Egypt; Agenor goes to Phoenicia, and becomes the father of Cadmus and Europa."
+      },
+      {
+        "label": "Fifty and fifty",
+        "figures": ["danaus", "aegyptus", "danaids", "sons-of-aegyptus"],
+        "pairs": [
+          ["belus", "danaus"],
+          ["belus", "aegyptus"],
+          ["aegyptus", "danaus"],
+          ["danaus", "danaids"],
+          ["aegyptus", "sons-of-aegyptus"]
+        ],
+        "text": "Belus’ sons are Danaus and Aegyptus. Danaus has fifty daughters, Aegyptus fifty sons. The brothers quarrel over the kingdom, and Danaus, afraid of his brother’s sons, builds the first ship and flees with his daughters to Argos, the land of Io. In Aeschylus’ Suppliants, they come to the altars as suppliants and the people of Argos vote to protect them."
+      },
+      {
+        "label": "Amymone",
+        "figures": ["amymone", "nauplius"],
+        "pairs": [
+          ["danaus", "amymone"],
+          ["poseidon", "amymone"],
+          ["amymone", "nauplius"]
+        ],
+        "text": "Argos is dry, because Poseidon is angry with it. Danaus sends his daughters to find water. Amymone throws a spear at a deer and hits a sleeping satyr, who tries to rape her. Poseidon appears and drives him off, lies with her himself, and shows her the springs of Lerna. She bears Nauplius."
+      },
+      {
+        "label": "The wedding night",
+        "figures": ["hypermnestra", "lynceus"],
+        "pairs": [
+          ["danaids", "sons-of-aegyptus"],
+          ["danaus", "hypermnestra"],
+          ["aegyptus", "lynceus"],
+          ["lynceus", "hypermnestra"]
+        ],
+        "text": "The sons of Aegyptus follow and ask to marry their cousins. Danaus agrees, and gives each daughter a dagger. On the wedding night they kill their husbands, all but Hypermnestra, who spares Lynceus. The others bury the heads at Lerna. In Pindar, Danaus later finds them new husbands by a footrace; in Ovid, in Hades, they carry water that runs out before it is poured."
+      },
+      {
+        "label": "Twins at war",
+        "figures": ["abas", "acrisius", "proetus", "danae"],
+        "pairs": [
+          ["lynceus", "abas"],
+          ["hypermnestra", "abas"],
+          ["abas", "acrisius"],
+          ["abas", "proetus"],
+          ["acrisius", "proetus"],
+          ["acrisius", "danae"],
+          ["zeus", "danae"]
+        ],
+        "text": "Lynceus rules Argos after Danaus, and his son Abas after him. Abas has twin sons, Acrisius and Proetus, who quarrel even in the womb, and later fight for the kingdom; in Apollodorus, that is when shields are first used. Acrisius keeps Argos. An oracle tells him that his daughter Danaë’s son will kill him, and he shuts her away in a bronze chamber; but Zeus comes to her as a shower of gold."
+      }
+    ],
+    "pairs": [
+      ["oceanus", "inachus"],
+      ["tethys", "inachus"],
+      ["inachus", "io"],
+      ["zeus", "io"],
+      ["hera", "io"],
+      ["hermes", "argus"],
+      ["zeus", "epaphus"],
+      ["io", "epaphus"],
+      ["epaphus", "libya"],
+      ["poseidon", "libya"],
+      ["poseidon", "belus"],
+      ["libya", "belus"],
+      ["poseidon", "agenor"],
+      ["libya", "agenor"],
+      ["agenor", "cadmus"],
+      ["agenor", "europa"],
+      ["belus", "danaus"],
+      ["belus", "aegyptus"],
+      ["aegyptus", "danaus"],
+      ["danaus", "danaids"],
+      ["aegyptus", "sons-of-aegyptus"],
+      ["danaus", "amymone"],
+      ["poseidon", "amymone"],
+      ["amymone", "nauplius"],
+      ["danaids", "sons-of-aegyptus"],
+      ["danaus", "hypermnestra"],
+      ["aegyptus", "lynceus"],
+      ["lynceus", "hypermnestra"],
+      ["lynceus", "abas"],
+      ["hypermnestra", "abas"],
+      ["abas", "acrisius"],
+      ["abas", "proetus"],
+      ["acrisius", "proetus"],
+      ["acrisius", "danae"],
+      ["zeus", "danae"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
