@@ -93,7 +93,6 @@
   {
     "id": "zeus-king",
     "kind": "story",
-    "draft": true,
     "title": "How Zeus became king",
     "lead": "Every king of the gods fears his own children. The third swallows the mother before the child is born.",
     "pairs": [
@@ -160,7 +159,7 @@
           ["rhea", "zeus"],
           ["rhea", "cronus"]
         ],
-        "text": "When Rhea is about to bear Zeus, she goes to Crete. The baby is hidden in a cave, and Rhea gives Cronus a stone wrapped in swaddling clothes. He swallows it. In Apollodorus, nymphs raise the child on the milk of the goat Amalthea, and the Curetes clash their spears on their shields so that Cronus will not hear him cry."
+        "text": "When Rhea is about to bear Zeus, she goes to Crete. The baby is hidden in a cave, and Rhea gives Cronus a stone wrapped in swaddling clothes. He swallows it. In Apollodorus, nymphs raise the child on the milk of Amalthea, and the Curetes clash their spears on their shields so that Cronus will not hear him cry."
       },
       {
         "label": "Cronus brings them up",
