@@ -671,8 +671,8 @@ function reveal(c, k, told = toldSteps(c)){
     if (met.has(a) && !later.has(b) && touched(a, b)) shown.add(b);
     if (met.has(b) && !later.has(a) && touched(a, b)) shown.add(a);
   });
-  // the camera follows the step: its figures, with their parents, children and spouses already met
-  const family = (a, b) => E.some(e => (e.type==="parent" || e.type==="marriage") && samePair(e, [a, b]));
+  // the camera follows the step: its figures, with the people already met whom the story links them to
+  const family = (a, b) => E.some(e => storyEdge(c, e) && samePair(e, [a, b]) && attested(e));
   const focus = new Set(now);
   c.pairs.forEach(([a, b]) => {
     if (now.has(a) && shown.has(b) && family(a, b)) focus.add(b);

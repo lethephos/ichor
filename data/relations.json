@@ -4750,5 +4750,59 @@
     "to": "cetus",
     "sources": ["T", "A", "L"],
     "note": "killed the sea monster and set Andromeda free"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "augeas",
+    "sources": ["T", "A"],
+    "note": "killed Augeas, who had cheated him of his pay for the stables"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "diomedes-thrace",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "diomedes-thrace",
+    "sources": ["T", "A", "L"],
+    "note": "killed Diomedes of Thrace and drove off his man-eating mares"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "hippolyta",
+    "sources": ["L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "hippolyta",
+    "sources": ["A"],
+    "note": "killed Hippolyta, queen of the Amazons, and took her belt"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "atlas",
+    "sources": ["A"],
+    "note": "tricked Atlas into taking the sky back on his shoulders"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "ladon",
+    "sources": ["T", "L"],
+    "note": "killed the serpent that guarded the golden apples"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "nessus",
+    "sources": ["T", "A", "L"],
+    "note": "shot Nessus with an arrow dipped in the Hydra’s poison, when the centaur tried to carry off Deianira"
   }
 ]
