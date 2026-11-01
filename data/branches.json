@@ -113,7 +113,7 @@
         "title": "Theseus and Athens",
         "note": "The kings of Athens, from the earth-born Erichthonius to Theseus, and the Cretan family he married into.",
         "focus": "theseus",
-        "figures": ["gaia", "zeus", "poseidon", "hades", "helios", "ares", "hephaestus", "athena", "dionysus", "persephone", "oceanids", "erichthonius-athens", "pandion", "erechtheus", "procne", "philomela", "tereus", "itys", "cecrops-ii", "pandion-ii", "aegeus", "aethra", "theseus", "medea", "europa", "minos", "pasiphae", "androgeus", "ariadne", "phaedra", "minotaur", "antiope", "hippolytus", "demophon", "pirithous", "helen"]
+        "figures": ["gaia", "zeus", "poseidon", "hades", "helios", "ares", "hephaestus", "athena", "dionysus", "persephone", "oceanids", "erichthonius-athens", "pandion", "erechtheus", "procne", "philomela", "tereus", "itys", "cecrops-ii", "pandion-ii", "aegeus", "aethra", "theseus", "medea", "europa", "minos", "pasiphae", "androgeus", "ariadne", "phaedra", "minotaur", "antiope", "hippolytus", "demophon", "pirithous", "helen", "bandits"]
       },
       {
         "id": "odyssey",
