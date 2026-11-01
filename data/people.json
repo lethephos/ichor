@@ -5054,5 +5054,69 @@
     "tagline": "Six heads, and a man in each mouth.",
     "story": "A monster with twelve feet and six long necks, each with a head and three rows of teeth, who lived in a cave above the strait facing Charybdis. As Odysseus’ ship passed, she snatched six of his men from the deck and ate them.",
     "versions": "Homer: her mother is Crataeis. Apollodorus: daughter of Crataeis and Trienus or Phorcys. Hyginus also makes her a child of Typhon and Echidna. Ovid and Hyginus: once a lovely nymph, whom Circe turned into a monster out of jealousy over the sea god Glaucus."
+  },
+  {
+    "id": "cyclopes",
+    "name": "Cyclopes",
+    "greek": "Κύκλωπες",
+    "gender": "m",
+    "generation": 1,
+    "kind": "group",
+    "branch": "gods",
+    "role": "The one-eyed smiths",
+    "tagline": "Forged the thunderbolt that made Zeus king.",
+    "story": "Three sons of Gaia and Uranus, each with a single round eye in his forehead. Their father shut them away under the earth, and Cronus kept them there. Zeus set them free, and in thanks they gave him thunder and lightning. Apollo later killed them, because a thunderbolt of theirs had struck down his son Asclepius.",
+    "versions": "In Hesiod and Apollodorus they are sons of Gaia and Uranus. The Cyclopes of the Odyssey are another kind: a lawless people of shepherds, and Polyphemus among them is a son of Poseidon.",
+    "count": "Three",
+    "members_label": "brothers",
+    "members": [
+      {
+        "name": "Brontes",
+        "greek": "Βρόντης",
+        "note": "Thunder"
+      },
+      {
+        "name": "Steropes",
+        "greek": "Στερόπης",
+        "note": "Lightning"
+      },
+      {
+        "name": "Arges",
+        "greek": "Ἄργης",
+        "note": "Bright"
+      }
+    ],
+    "members_note": "Hesiod and Apollodorus name the same three."
+  },
+  {
+    "id": "hundred-handed",
+    "name": "Hundred-Handers",
+    "greek": "Ἑκατόγχειρες",
+    "gender": "m",
+    "generation": 1,
+    "kind": "group",
+    "branch": "gods",
+    "role": "Giants with a hundred arms",
+    "tagline": "Their father hid them; they won Zeus his war.",
+    "story": "Three more sons of Gaia and Uranus, each with a hundred arms and fifty heads. Uranus feared them and bound them under the earth. Zeus brought them up to fight the Titans. They threw rocks three hundred at a time, buried the Titans under them, and now stand guard over them in Tartarus.",
+    "versions": "In the Iliad, when Hera, Poseidon and Athena plan to bind Zeus, Thetis brings Briareus up to Olympus, and they back down.",
+    "count": "Three",
+    "members_label": "brothers",
+    "members": [
+      {
+        "name": "Cottus",
+        "greek": "Κόττος"
+      },
+      {
+        "name": "Briareus",
+        "greek": "Βριάρεως",
+        "note": "called Aegaeon by men, in Homer"
+      },
+      {
+        "name": "Gyges",
+        "greek": "Γύγης"
+      }
+    ],
+    "members_note": "Hesiod and Apollodorus name the same three."
   }
 ]

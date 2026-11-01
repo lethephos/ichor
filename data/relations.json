@@ -799,7 +799,7 @@
     "type": "feud",
     "from": "zeus",
     "to": "cronus",
-    "sources": ["E", "H", "A"],
+    "sources": ["E", "H", "A", "L"],
     "note": "overthrew Cronus and freed the brothers and sisters he had swallowed"
   },
   {
@@ -4004,7 +4004,7 @@
     "type": "feud",
     "from": "zeus",
     "to": "typhon",
-    "sources": ["E", "H", "A", "L"],
+    "sources": ["E", "H", "T", "A", "L"],
     "note": "struck Typhon down with his thunderbolts"
   },
   {
@@ -4946,5 +4946,113 @@
     "to": "companions",
     "sources": ["E"],
     "note": "made Zeus punish the men who ate his cattle"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "cyclopes",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "cyclopes",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "hundred-handed",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "hundred-handed",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "uranus",
+    "to": "cyclopes",
+    "sources": ["H", "A"],
+    "note": "bound them under the earth"
+  },
+  {
+    "type": "feud",
+    "from": "uranus",
+    "to": "hundred-handed",
+    "sources": ["H", "A"],
+    "note": "bound them under the earth"
+  },
+  {
+    "type": "feud",
+    "from": "gaia",
+    "to": "uranus",
+    "sources": ["H", "A"],
+    "note": "made a sickle and set her sons against him"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "hestia",
+    "sources": ["H", "A"],
+    "note": "swallowed her at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "demeter",
+    "sources": ["H", "A"],
+    "note": "swallowed her at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "hera",
+    "sources": ["H", "A"],
+    "note": "swallowed her at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "hades",
+    "sources": ["H", "A"],
+    "note": "swallowed him at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "poseidon",
+    "sources": ["H", "A"],
+    "note": "swallowed him at birth"
+  },
+  {
+    "type": "feud",
+    "from": "rhea",
+    "to": "cronus",
+    "sources": ["H", "A", "L"],
+    "note": "gave him a stone wrapped in swaddling clothes to swallow in place of Zeus"
+  },
+  {
+    "type": "feud",
+    "from": "metis",
+    "to": "cronus",
+    "sources": ["A"],
+    "note": "gave him a drug that made him bring up the children he had swallowed"
+  },
+  {
+    "type": "feud",
+    "from": "hundred-handed",
+    "to": "cronus",
+    "sources": ["H", "A"],
+    "note": "beat the Titans in battle and keep guard over them in Tartarus"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "cyclopes",
+    "sources": ["T", "A"],
+    "note": "killed the Cyclopes, whose thunderbolt had struck down his son Asclepius"
   }
 ]
