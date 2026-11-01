@@ -23,12 +23,12 @@ npm run preview  # serve the build
   - `sources.json` — the “All versions” label and note, and the source groups (`id`, `label`, `full`, `note`).
   - `branches.json` — branches of the tree: `id`, `title` and optional `subtitle` (the page heading), `tiers` (the names of the rows, from the top), `focus` (the figure the phone view opens on), `houses` (`label`, `founder`; the house name is drawn above its founder), `families` (views on the one tree, chosen in the title and kept in the URL as `?family=id`: `id`, `label`, `title`, `note`, `focus`, optional `figures` (all figures when left out) and `houses` (the house labels it shows); a family shows the links between its figures, the rows it uses and the stories it holds every figure of), optional `dividers` (`before`, `label`; a stronger rule drawn above row `before` and named on the left, such as “Heroes and mortals” where the gods end).
 - `public/` — favicon (follows the system theme), touch and app icons, `site.webmanifest`, and `og.png`, the card shown when a link is shared.
-- `brand/` — the logo as SVG: the wordmark for light and dark backgrounds and the mark (the Greek iota with its gold breathing).
+- `brand/` — the logo as SVG: the wordmark for light and dark backgrounds and the mark (the i with its gold Greek breathing).
 - `src/layout.js` — automatic tier layout. Rows come from `generation`; x is computed: each figure is pulled towards the figures it is linked to (blood and marriage most, affairs and feuds less), and rows are spaced so labels never collide and separate families stand apart. Nothing in the data holds a position, so a new figure only needs a `generation` and its relations. Where a row has ties, the order in `people.json` decides. A row grows downwards when it needs to: a child whose parent sits on the same row goes on a line below (with its spouse), so lower on a row always means descended.
 - `src/data.js` — loads the JSON and runs the layout.
 - `src/main.js` — tree, controls, card, curse and thread panels.
 - `src/styles/` — styles. `index.css` imports the rest in order:
-  - `tokens.css` — design tokens: colours for the light (bone and wine-dark ink) and dark (black glaze) themes, the gold accent, fonts, shadow. Change a colour here, nowhere else.
+  - `tokens.css` — design tokens: colours for the light (pale clay) and dark (black glaze) themes, the gold accent, fonts, shadow. Change a colour here, nowhere else.
   - `base.css` — page frame, box sizing, focus rings.
   - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
 - `prototype/ichor-atreidae.html` — the original single-file prototype, kept as the reference.
