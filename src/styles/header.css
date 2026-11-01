@@ -57,4 +57,10 @@ header{padding:16px 16px 6px;position:relative}
   .famline .row-label{min-width:44px}
   #srcRow .row-label{min-width:44px;margin-right:2px}
 }
+/* sources: pills on desktop, a pill with a list on phones */
+.src-pick{display:none}
+@media (max-width:899px){
+  .src-pick{display:flex}
+  #srcRow{display:none}
+}
 @media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }

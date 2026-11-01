@@ -36,6 +36,7 @@ familyMenu.innerHTML = FAMILIES.map(f => `<li role="option" aria-selected="${f.i
 const familyItems = [...familyMenu.querySelectorAll("li")];
 function openFamilies(open){
   familyMenu.hidden = !open; familyBtn.setAttribute("aria-expanded", String(open));
+  if (open) { document.getElementById("srcMenu").hidden = true; document.getElementById("srcBtn").setAttribute("aria-expanded", "false"); }
   if (open) (familyItems.find(li => li.getAttribute("aria-selected")==="true") || familyItems[0]).focus();
 }
 /* Switching family redraws the tree in place: the chosen source and layers stay as they are,
@@ -103,9 +104,35 @@ const srcNote = document.getElementById("srcNote");
   b.onclick = () => setSource(k);
   srcRow.appendChild(b);
 });
+/* On phones the sources are one pill, “Source [All versions ▾]”, that opens a list, like the families. */
+const srcBtn = document.getElementById("srcBtn"), srcMenu = document.getElementById("srcMenu"), srcName = document.getElementById("srcName");
+srcMenu.innerHTML = [["all",SRC_ALL_LABEL], ...Object.entries(SRC)].map(([k,label]) => `<li role="option" aria-selected="${k===state.src}" data-src="${k}" tabindex="-1">
+  <span class="fm-label">${label}</span>${k!=="all" ? `<span class="fm-note">${SRC_FULL[k]}</span>` : ""}</li>`).join("");
+const srcItems = [...srcMenu.querySelectorAll("li")];
+function openSources(open){
+  srcMenu.hidden = !open; srcBtn.setAttribute("aria-expanded", String(open));
+  if (open) { openFamilies(false); (srcItems.find(li => li.getAttribute("aria-selected")==="true") || srcItems[0]).focus(); }
+}
+function pickSource(k){ openSources(false); srcBtn.focus(); if (k !== state.src) setSource(k); }
+srcBtn.addEventListener("click", ev => { ev.stopPropagation(); openSources(srcMenu.hidden); });
+srcMenu.addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) pickSource(li.dataset.src); });
+srcMenu.addEventListener("keydown", ev => {
+  const i = srcItems.indexOf(document.activeElement);
+  if (ev.key==="ArrowDown") { ev.preventDefault(); srcItems[Math.min(i+1, srcItems.length-1)].focus(); }
+  else if (ev.key==="ArrowUp") { ev.preventDefault(); srcItems[Math.max(i-1, 0)].focus(); }
+  else if (ev.key==="Enter" || ev.key===" ") { ev.preventDefault(); if (i>=0) pickSource(srcItems[i].dataset.src); }
+  else if (ev.key==="Escape" || ev.key==="Tab") { openSources(false); if (ev.key==="Escape") srcBtn.focus(); }
+});
+document.addEventListener("click", ev => { if (!srcMenu.hidden && !srcMenu.contains(ev.target)) openSources(false); });
+function showSource(){
+  srcName.textContent = state.src==="all" ? SRC_ALL_LABEL : SRC[state.src];
+  srcItems.forEach(li => li.setAttribute("aria-selected", String(li.dataset.src===state.src)));
+}
+showSource();
 function setSource(k){
   state.src = k;
   srcRow.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x.dataset.src===k));
+  showSource();
   srcNote.textContent = SRC_NOTE[k];
   if (state.mode==="thread" && state.threadEnds) runThread(...state.threadEnds, true);
   apply(true);
