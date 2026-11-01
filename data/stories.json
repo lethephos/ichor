@@ -520,5 +520,102 @@
         "text": "Theseus had promised his father a white sail if he came home alive. He forgets, and the ship comes in under black. Aegeus, watching from the Acropolis, thinks his son is dead and throws himself down. Theseus becomes king of Athens."
       }
     ]
+  },
+  {
+    "id": "argonauts",
+    "kind": "story",
+    "title": "Jason and the Golden Fleece",
+    "lead": "A ram of gold, a man with one sandal, and a princess who gave up everything for him.",
+    "pairs": [
+      ["ino", "phrixus"],
+      ["nephele", "phrixus"],
+      ["athamas", "phrixus"],
+      ["nephele", "helle"],
+      ["athamas", "helle"],
+      ["pelias", "aeson"],
+      ["aeson", "jason"],
+      ["pelias", "jason"],
+      ["jason", "hypsipyle"],
+      ["heracles", "hylas"],
+      ["harpies", "phineus-seer"],
+      ["agenor", "phineus-seer"],
+      ["poseidon", "phineus-seer"],
+      ["aeetes", "jason"],
+      ["aeetes", "medea"],
+      ["jason", "medea"],
+      ["jason", "colchian-dragon"],
+      ["medea", "colchian-dragon"],
+      ["aeetes", "absyrtus"],
+      ["medea", "absyrtus"],
+      ["medea", "talos"],
+      ["medea", "pelias"],
+      ["medea", "aeson"],
+      ["jason", "glauce"],
+      ["creon-corinth", "glauce"],
+      ["medea", "glauce"],
+      ["medea", "creon-corinth"]
+    ],
+    "steps": [
+      {
+        "label": "The golden ram",
+        "figures": ["athamas", "nephele", "ino", "phrixus", "helle"],
+        "text": "Athamas, a king in Boeotia, has two children by the cloud Nephele, Phrixus and Helle. Then he marries Ino, daughter of Cadmus. Ino parches the seed corn so that nothing grows, and bribes the messengers from Delphi to say the god wants Phrixus sacrificed. At the altar, Nephele sends a ram with a golden fleece, and it flies off with both children. Helle falls into the sea, which is called the Hellespont after her. Phrixus reaches Colchis, sacrifices the ram to Zeus, and gives its fleece to King Aeetes, who nails it to an oak in the grove of Ares."
+      },
+      {
+        "label": "One sandal",
+        "figures": ["pelias", "aeson", "jason"],
+        "text": "In Iolcus, Pelias has taken the throne from his half-brother Aeson. An oracle has told him to beware a man with one sandal. Aeson’s son Jason, raised by the centaur Chiron, comes down to a sacrifice and loses a sandal crossing a river. Pelias sees him, and sends him to bring back the Golden Fleece. In Pindar, Jason comes to claim the throne, and Pelias says he will give it up for the fleece."
+      },
+      {
+        "label": "The Argo",
+        "figures": ["jason", "hypsipyle", "heracles", "castor", "polydeuces", "orpheus"],
+        "text": "Argus builds a ship of fifty oars, the Argo, with Athena’s help, and the best men of Greece sail in her: Heracles, Castor and Polydeuces, the singer Orpheus, the sons of the North Wind. Their first landfall is Lemnos, where the women have killed all their men. Only Queen Hypsipyle has saved her father. The Argonauts stay with the women, and Jason has sons by the queen."
+      },
+      {
+        "label": "Hylas",
+        "figures": ["heracles", "hylas"],
+        "text": "In Mysia, Heracles’ young lover Hylas goes to fetch water. The nymphs of the spring fall in love with him and draw him down into it. While Heracles searches for him, the Argo sails without him."
+      },
+      {
+        "label": "The Harpies",
+        "figures": ["phineus-seer", "harpies"],
+        "text": "In Thrace lives the blind seer Phineus. Whenever food is set before him, the Harpies swoop down, snatch it, and foul what they leave. The sons of the North Wind chase them off. In return Phineus tells the Argonauts how to pass the Clashing Rocks: let a dove fly through first. The rocks close on its tail feathers, open again, and the Argo rows through with only the tip of her stern torn away."
+      },
+      {
+        "label": "The bulls",
+        "figures": ["aeetes", "medea", "jason"],
+        "pairs": [
+          ["aeetes", "jason"],
+          ["aeetes", "medea"],
+          ["jason", "medea"]
+        ],
+        "text": "In Colchis, Aeetes promises the fleece if Jason can yoke his two bronze-footed, fire-breathing bulls, plough a field, and sow it with a dragon’s teeth. His daughter Medea, a witch and a priestess of Hecate, falls in love with Jason. She makes him swear to marry her and gives him a salve that keeps off fire and iron. He yokes the bulls. Armed men spring up from the teeth. He throws stones among them, and while they fight each other he cuts them down."
+      },
+      {
+        "label": "The fleece",
+        "figures": ["colchian-dragon", "medea", "jason"],
+        "text": "Aeetes will not keep his word, and means to burn the ship. At night Medea leads Jason to the grove where a serpent that never sleeps guards the fleece. She lulls it to sleep with her drugs, and Jason takes the fleece. In Pindar, Jason kills the serpent; in Euripides, Medea does."
+      },
+      {
+        "label": "Absyrtus",
+        "figures": ["absyrtus", "medea", "aeetes"],
+        "text": "Medea flees on the Argo, taking her young brother Absyrtus. When her father’s ship comes close, she kills the boy, cuts him in pieces, and throws them into the sea. Aeetes stops to gather his son’s limbs, and the Argo gets away. Zeus is angry at the murder, and Circe, Medea’s aunt, cleanses them of the blood."
+      },
+      {
+        "label": "The man of bronze",
+        "figures": ["talos", "medea"],
+        "text": "Off Crete, the bronze giant Talos guards the island, throwing rocks at every ship. He has one vein, running from his neck to his ankle, stopped with a nail. Medea drives him mad with her drugs, or tricks him with a promise to make him immortal, and pulls out the nail. His ichor runs out, and he dies."
+      },
+      {
+        "label": "The cauldron",
+        "figures": ["pelias", "aeson", "medea"],
+        "text": "In Iolcus, Pelias has driven Aeson to his death, and Jason gives the fleece to his uncle. Medea cuts up an old ram, boils it with herbs, and a lamb leaps out of the pot. She tells Pelias’ daughters that their father can be made young the same way. They cut him up and boil him, and he does not come out. In Ovid, Aeson is still alive, and Medea makes him young again."
+      },
+      {
+        "label": "Corinth",
+        "figures": ["creon-corinth", "glauce", "jason", "medea"],
+        "text": "Driven out of Iolcus, Jason and Medea live ten years in Corinth. Then Jason leaves her to marry Glauce, the king’s daughter. Medea sends the bride a robe and a golden crown. When she puts them on, they burn her, and her father Creon with her. Medea kills her own sons by Jason and escapes in a chariot drawn by winged serpents, the gift of her grandfather the Sun."
+      }
+    ]
   }
 ]

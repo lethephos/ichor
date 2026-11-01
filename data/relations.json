@@ -4811,5 +4811,79 @@
     "to": "bandits",
     "sources": ["T", "A", "L"],
     "note": "killed the bandits on the road from Troezen to Athens"
+  },
+  {
+    "type": "affair",
+    "from": "heracles",
+    "to": "hylas",
+    "sources": ["A", "L"],
+    "note": "loved Hylas, and lost him in Mysia"
+  },
+  {
+    "type": "parent",
+    "from": "agenor",
+    "to": "phineus-seer",
+    "sources": ["A"],
+    "note": "in one telling; in another, Poseidon"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "phineus-seer",
+    "sources": ["A"]
+  },
+  {
+    "type": "curse",
+    "from": "poseidon",
+    "to": "phineus-seer",
+    "sources": ["A"],
+    "note": "blinded Phineus, in one telling, for showing the sons of Phrixus the way"
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "harpies",
+    "sources": ["H", "A", "L"],
+    "note": "Electra, wife of Thaumas"
+  },
+  {
+    "type": "feud",
+    "from": "harpies",
+    "to": "phineus-seer",
+    "sources": ["H", "A", "L"],
+    "note": "snatched and fouled every meal Phineus sat down to"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "colchian-dragon",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "colchian-dragon",
+    "sources": ["L"]
+  },
+  {
+    "type": "feud",
+    "from": "jason",
+    "to": "colchian-dragon",
+    "sources": ["T"],
+    "note": "killed the serpent that guarded the fleece"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "colchian-dragon",
+    "sources": ["T", "A", "L"],
+    "note": "put the serpent to sleep with her drugs; in Euripides she kills it"
+  },
+  {
+    "type": "transform",
+    "from": "medea",
+    "to": "aeson",
+    "sources": ["L"],
+    "note": "made old Aeson young again with her herbs"
   }
 ]

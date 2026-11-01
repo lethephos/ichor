@@ -364,7 +364,7 @@ function apply(animate){
   edgeSel.each(function(e){
     let vis = edgeVisible(e);
     let inCurse = curse && STORY_TYPES.includes(e.type) && curse.pairs.some(p => samePair(e,p)) && attested(e);
-    if (story && inCurse && !(story.shown.has(e.from) && story.shown.has(e.to))) inCurse = false;   // not told yet
+    if (story && inCurse && (!(story.shown.has(e.from) && story.shown.has(e.to)) || story.ahead.has(e.i))) inCurse = false;   // not told yet
     const isAlt = !!(story && story.alt.has(e.i));
     if (isAlt) inCurse = true;
     const inPath = pathEdges.has(e.i);
@@ -649,11 +649,26 @@ function entries(c){
   c.steps.forEach((s, i) => s.figures.forEach(id => { if (!(id in first)) first[id] = i; }));
   return first;
 }
-function stepLinks(c, i){   // the links that tell step i (0-based): from its figures to anyone met by then
+function reached(c, i){   // the links step i (0-based) reaches: from its figures to anyone met by then
   const figs = new Set(c.steps[i].figures), first = entries(c);
   const notYet = id => id in first && first[id] > i;
   return E.filter(e => storyEdge(c, e) && (figs.has(e.from) || figs.has(e.to))
     && !notYet(figs.has(e.from) ? e.to : e.from));
+}
+/* The links that tell step i: those it reaches first, so that a figure coming back (Medea in Iolcus) does not
+   bring back what earlier steps told; a step that only returns to old links (the black sail) is told by them.
+   A step can name its own pairs when its figures reach further than it tells (Medea meets Jason, not yet Pelias). */
+const STEP_LINKS = new Map();
+function stepLinks(c, i){
+  const key = c.id + "/" + i;
+  if (!STEP_LINKS.has(key)) {
+    const own = c.steps[i].pairs;
+    const before = new Set(c.steps.slice(0, i).flatMap((_, j) => stepLinks(c, j)));
+    const now = own ? E.filter(e => storyEdge(c, e) && own.some(p => samePair(e, p))) : reached(c, i);
+    const fresh = now.filter(e => !before.has(e));
+    STEP_LINKS.set(key, own || !fresh.length ? now : fresh);
+  }
+  return STEP_LINKS.get(key);
 }
 /* Figures this step brings in, and among them those whose parentage the story is about:
    those get their alternative parents and their Where the sources disagree text. */
@@ -684,7 +699,10 @@ function reveal(c, k, told = toldSteps(c)){
     if (!shown.has(e.from)) { shown.add(e.from); focus.add(e.from); }
     alt.add(e.i);
   }));
-  return {now, shown, focus, alt};
+  // links a later step tells, and none so far, wait for it (Medea’s feud with Pelias waits for the cauldron)
+  const sofar = new Set(c.steps.slice(0, k).flatMap((_, i) => stepLinks(c, i)));
+  const ahead = new Set(c.steps.slice(k).flatMap((_, j) => stepLinks(c, k+j)).filter(e => !sofar.has(e)).map(e => e.i));
+  return {now, shown, focus, alt, ahead};
 }
 /* Real disagreements the data can show by itself: a child with two fathers, or two mothers, in different sources. */
 function altParents(id){
@@ -718,7 +736,7 @@ function openCurse(key, step = 0){
     ${draft}
     ${pick}
     <p class="story-hint">${src==="all" ? `Told ${unit} by ${unit}. The tree fills in as the story goes. Choose a source to hear only what it tells.`
-      : count===n ? `Every ${unit} is told in ${by}.` : count ? `${count} of ${n} ${unit}s are told in ${by}; the others are skipped.` : `This story is not told in ${by}.`}</p>
+      : count===n ? `Every ${unit} is told in ${by}.` : count ? `${count} of ${n} ${unit}s ${count===1 ? "is" : "are"} told in ${by}; the others are skipped.` : `This story is not told in ${by}.`}</p>
     ${count ? nav(null, "Begin") : `<div class="story-nav"><span></span><button class="act" data-step="${n+1}">${whole} →</button></div>`}`;
   else if (step<=n) {
     const s = c.steps[step-1];
