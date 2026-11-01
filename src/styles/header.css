@@ -1,11 +1,17 @@
 /* The brand is a small line; the branch being explored is the page’s title. */
 header{padding:16px 16px 6px;position:relative}
 .kicker{font:600 10.5px var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.kicker .brand{color:var(--text)}
-.branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:12px 0 0}
+.kicker{display:flex;align-items:center;flex-wrap:wrap;column-gap:12px;row-gap:4px}
+/* the wordmark: “ichor” in GFS Didot, its first letter the Greek iota of ἰχώρ, the breathing above it in gold */
+.wordmark{height:30px;width:auto;display:block}
+.wm-ink{fill:var(--text)}
+.wm-drop{fill:var(--accent)}
+.kicker .tagline{padding-top:5px}
+.branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:8px 0 0}
 .branch-sub{font-family:var(--display);font-size:16px;color:var(--muted);margin-top:2px}
 @media (min-width:900px){
   header{padding:22px 28px 8px}
+  .wordmark{height:34px}
   .kicker{font-size:11px}
   .title-line{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px}
   .branch-title{font-size:34px}

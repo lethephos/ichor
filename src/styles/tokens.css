@@ -1,10 +1,10 @@
-/* Design tokens. Light = pale clay with black-figure ink, dark = black glaze with clay lines.
+/* Design tokens. Light = bone with wine-dark ink (Homer’s “wine-dark sea”), dark = black glaze with clay lines.
    Gold is ichor, the blood of the gods: it marks transformations, the selected figure,
    Ariadne’s thread and focus. Red is kept for curses alone. */
 :root{
   color-scheme: light;
-  --bg:#E8CFB2; --bg-2:#F3E3D0; --rule:#C9A07D;
-  --text:#1E140D; --muted:#5A3F2C; --line:#2A1D14; --figure:#2A1D14;
+  --bg:#F3ECE0; --bg-2:#FBF7F0; --rule:#D8C9B6;
+  --text:#2A1220; --muted:#6B4E5C; --line:#3A2230; --figure:#3A2230;
   --curse:#A82A17; --accent:#8A5E00; --transform:var(--accent);
   --shadow:rgba(0,0,0,.18);
   --display:"GFS Didot", "Didot", "Bodoni 72", Georgia, serif;
