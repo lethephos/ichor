@@ -24,11 +24,12 @@ const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:
 const SITE_TITLE = document.title;
 function showFamily(){
   document.getElementById("branchTitle").textContent = FAMILY.title;
+  document.getElementById("familyName").textContent = FAMILY.label;
   document.title = FAMILY.id === FAMILIES[0].id ? SITE_TITLE : `${FAMILY.title} · Ichor`;
   familyItems.forEach(li => li.setAttribute("aria-selected", String(li.dataset.family === FAMILY.id)));
 }
 
-/* ---------- family switcher: the title opens a list of families ---------- */
+/* ---------- family switcher: a pill above the sources opens the list of families ---------- */
 const familyBtn = document.getElementById("familyBtn"), familyMenu = document.getElementById("familyMenu");
 familyMenu.innerHTML = FAMILIES.map(f => `<li role="option" aria-selected="${f.id===FAMILY.id}" data-family="${f.id}" tabindex="-1">
   <span class="fm-label">${f.label}</span>${f.note ? `<span class="fm-note">${f.note}</span>` : ""}</li>`).join("");

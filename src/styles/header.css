@@ -2,8 +2,7 @@
 header{padding:16px 16px 6px;position:relative}
 .kicker{font:600 10.5px var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .kicker .brand{color:var(--text)}
-.now{font:500 12px var(--ui);color:var(--muted);margin-top:12px}
-.branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:2px 0 0}
+.branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:12px 0 0}
 .branch-sub{font-family:var(--display);font-size:16px;color:var(--muted);margin-top:2px}
 @media (min-width:900px){
   header{padding:22px 28px 8px}
@@ -27,15 +26,16 @@ header{padding:16px 16px 6px;position:relative}
 .theme.dark .sun{display:block}
 @media (min-width:900px){ .theme{top:18px;right:24px} }
 
-/* family switcher: the title is a button that opens the list of families */
-.family-btn{font:inherit;color:inherit;background:none;border:none;padding:0;margin:0;cursor:pointer;text-align:left;display:inline}
-/* the chevron rides on the title’s last line, however it wraps */
-.family-btn .chev{display:inline-block;width:14px;height:10px;margin-left:10px;vertical-align:.18em;fill:none;stroke:var(--muted);
+/* family switcher: a pill in the controls, above the sources, opens the list of families */
+.famline{display:flex;align-items:center;gap:18px;padding:4px 0}
+.family-pick{position:relative}
+.family-btn{display:inline-flex;align-items:center}
+.family-btn .chev{width:11px;height:8px;margin-left:8px;fill:none;stroke:currentColor;
   stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
 .family-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
-.family-btn:hover .chev{stroke:var(--text)}
-.family-btn:focus-visible{outline:1.5px solid var(--accent);outline-offset:4px}
-.family-menu{position:absolute;z-index:8;left:16px;right:16px;margin:8px 0 0;padding:6px 0;list-style:none;
+.family-btn:hover{border-color:var(--muted)}
+.family-btn:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.family-menu{position:absolute;z-index:8;left:0;top:calc(100% + 8px);width:min(380px,calc(100vw - 32px));max-height:min(520px,70vh);overflow-y:auto;margin:0;padding:6px 0;list-style:none;
   background:var(--bg-2);border:1px solid var(--rule);border-radius:2px;box-shadow:0 10px 28px var(--shadow)}
 .family-menu[hidden]{display:none}
 .family-menu li{padding:9px 16px;cursor:pointer;display:flex;flex-direction:column;gap:1px;outline:none}
@@ -43,5 +43,12 @@ header{padding:16px 16px 6px;position:relative}
 .family-menu li[aria-selected="true"] .fm-label{color:var(--accent)}
 .fm-label{font:19px var(--display);color:var(--text)}
 .fm-note{font:12px var(--ui);color:var(--muted)}
-@media (min-width:900px){ .family-menu{left:28px;right:auto;width:380px} }
+/* on phones the two labels stay, so the reader sees what each pill chooses */
+@media (max-width:899px){
+  .famline{gap:10px;position:relative}
+  .family-pick{position:static}   /* the list opens from the left edge of the row, full width */
+  .famline .row-label,#srcRow .row-label{display:inline;width:auto}
+  .famline .row-label{min-width:44px}
+  #srcRow .row-label{min-width:44px;margin-right:2px}
+}
 @media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }
