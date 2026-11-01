@@ -354,5 +354,102 @@
         "text": "Acrisius, fearing the oracle, flees to Larissa. Perseus follows him there and joins the games. His discus strikes Acrisius and kills him: in Apollodorus it hits his foot, in Hyginus his head. The oracle comes true."
       }
     ]
+  },
+  {
+    "id": "heracles",
+    "kind": "story",
+    "title": "The labours of Heracles",
+    "lead": "Twelve labours, one jealous goddess, and a robe soaked in poison.",
+    "pairs": [
+      ["zeus", "heracles"],
+      ["alcmene", "heracles"],
+      ["amphitryon", "alcmene"],
+      ["hera", "heracles"],
+      ["eurystheus", "heracles"],
+      ["heracles", "megara"],
+      ["heracles", "sons-of-megara"],
+      ["heracles", "nemean-lion"],
+      ["heracles", "hydra"],
+      ["iolaus", "hydra"],
+      ["heracles", "augeas"],
+      ["ares", "diomedes-thrace"],
+      ["heracles", "diomedes-thrace"],
+      ["heracles", "thanatos"],
+      ["ares", "hippolyta"],
+      ["heracles", "hippolyta"],
+      ["heracles", "laomedon"],
+      ["heracles", "geryon"],
+      ["heracles", "orthus"],
+      ["heracles", "ladon"],
+      ["heracles", "atlas"],
+      ["heracles", "cerberus"],
+      ["heracles", "deianira"],
+      ["heracles", "nessus"],
+      ["heracles", "iole"],
+      ["deianira", "heracles"],
+      ["heracles", "hebe"]
+    ],
+    "steps": [
+      {
+        "label": "Two births",
+        "figures": ["zeus", "alcmene", "amphitryon", "heracles", "hera", "eurystheus"],
+        "text": "Zeus comes to Alcmene in the shape of her husband Amphitryon, and she conceives Heracles. On the day he is due, Zeus swears that a child of his blood born that day will rule all around him. Hera holds back Alcmene’s labour and hurries the birth of Eurystheus, a grandson of Perseus, so he is born first and Heracles must serve him. When the baby is eight months old, Hera sends two serpents to his cradle, and he strangles them."
+      },
+      {
+        "label": "The madness",
+        "figures": ["megara", "sons-of-megara"],
+        "text": "Heracles marries Megara, daughter of Creon of Thebes. Hera drives him mad, and he kills their children. The oracle at Delphi sends him to Tiryns to serve Eurystheus and do the labours he sets; then he will be immortal. In Euripides the madness comes after the labours, and Megara dies with her sons."
+      },
+      {
+        "label": "The lion",
+        "figures": ["nemean-lion"],
+        "text": "First Eurystheus asks for the hide of the Nemean Lion, which no weapon can pierce. Heracles drives it into its cave, which has two mouths, blocks one, and chokes the lion with his arms. From then on he wears its skin. Eurystheus is so frightened that he has a bronze jar made to hide in, and gives his orders through a herald."
+      },
+      {
+        "label": "The Hydra",
+        "figures": ["hydra", "iolaus"],
+        "text": "At Lerna lives the Hydra, with nine heads, one of them immortal. For every head Heracles cuts off, two grow back, and Hera sends a crab to bite his foot. His nephew Iolaus burns each neck as it is cut, so nothing grows. Heracles buries the immortal head under a rock and dips his arrows in the venom. Eurystheus will not count this labour: Heracles had help."
+      },
+      {
+        "label": "Hind, boar, stables, birds",
+        "figures": ["augeas"],
+        "text": "He brings back alive the golden-horned hind of Ceryneia, sacred to Artemis, and the boar of Erymanthus. He cleans the stables of Augeas in a day by turning the rivers Alpheus and Peneus through them, but Augeas refuses to pay, and Eurystheus refuses to count it. With bronze rattles from Athena he scares the birds off the lake of Stymphalus and shoots them. Years later he comes back to Elis and kills Augeas."
+      },
+      {
+        "label": "The bull and the mares",
+        "figures": ["diomedes-thrace", "ares", "thanatos"],
+        "text": "From Crete he brings the bull that Minos would not sacrifice. In Thrace he kills King Diomedes, a son of Ares, and drives off his mares, which eat human flesh. In Euripides he stops on the way at the house of Admetus, whose wife Alcestis has just died for him, wrestles Death at her tomb and brings her back."
+      },
+      {
+        "label": "The belt",
+        "figures": ["hippolyta", "laomedon"],
+        "text": "Eurystheus’ daughter wants the belt of Hippolyta, queen of the Amazons. Hippolyta agrees to give it, but Hera, disguised as an Amazon, tells the women their queen is being carried off. In the fighting Heracles kills Hippolyta and takes the belt. Sailing home past Troy, he saves King Laomedon’s daughter Hesione from a sea monster, and Laomedon cheats him of the reward."
+      },
+      {
+        "label": "Geryon",
+        "figures": ["geryon", "orthus"],
+        "text": "He crosses the Ocean in the golden cup of the Sun to the island of Erytheia, far in the west. There he kills the dog Orthus, the herdsman Eurytion and Geryon, who has three bodies, and drives the red cattle back to Greece."
+      },
+      {
+        "label": "The golden apples",
+        "figures": ["ladon", "atlas"],
+        "text": "Next he must bring the golden apples of the Hesperides, guarded by a serpent. In Apollodorus he holds up the sky while Atlas fetches them. Atlas offers to take the apples to Eurystheus himself; Heracles asks him to hold the sky a moment while he puts a pad on his head, and walks away with the apples. In Euripides he kills the serpent and picks them himself."
+      },
+      {
+        "label": "Cerberus",
+        "figures": ["cerberus"],
+        "text": "Last, he must bring Cerberus up from the land of the dead. Hades lets him take the dog if he can master it without weapons. Heracles wrestles it into submission, frees Theseus from the chair of forgetfulness, shows Cerberus to Eurystheus, and takes it back."
+      },
+      {
+        "label": "Nessus",
+        "figures": ["deianira", "nessus"],
+        "text": "Free at last, Heracles wins Deianira, daughter of Oeneus, by wrestling the river Achelous. At the river Evenus the centaur Nessus carries her across and tries to rape her, and Heracles shoots him with an arrow dipped in the Hydra’s poison. Dying, Nessus tells Deianira to keep his blood as a charm to win back her husband’s love."
+      },
+      {
+        "label": "The robe",
+        "figures": ["iole", "hebe"],
+        "text": "Years later Heracles sacks Oechalia and sends home the princess Iole. Afraid of losing him, Deianira smears a robe with the blood of Nessus and sends it to him. The poison burns into his flesh. He has himself laid on a pyre on Mount Oeta, and Poeas, or his son Philoctetes, lights it. Heracles is taken up to Olympus, reconciled with Hera, and marries her daughter Hebe."
+      }
+    ]
   }
 ]

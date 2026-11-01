@@ -81,7 +81,7 @@
         "note": "The house of Perseus, from Danaë’s prison to Heracles on Olympus.",
         "houses": ["House of Perseus"],
         "focus": "heracles",
-        "figures": ["zeus", "hera", "poseidon", "hebe", "pelops", "acrisius", "danae", "perseus", "andromeda", "medusa", "alcaeus", "electryon", "sthenelus", "nicippe", "amphitryon", "alcmene", "eurystheus", "heracles", "iphicles", "menoeceus", "creon", "megara", "deianira", "polydectes", "cetus", "athena", "atlas", "graeae", "gorgons", "phorcys", "ceto", "pegasus", "chrysaor", "cepheus", "cassiopeia", "phineus", "nereids"]
+        "figures": ["zeus", "hera", "poseidon", "hebe", "pelops", "acrisius", "danae", "perseus", "andromeda", "medusa", "alcaeus", "electryon", "sthenelus", "nicippe", "amphitryon", "alcmene", "eurystheus", "heracles", "iphicles", "menoeceus", "creon", "megara", "deianira", "polydectes", "cetus", "athena", "atlas", "graeae", "gorgons", "phorcys", "ceto", "pegasus", "chrysaor", "cepheus", "cassiopeia", "phineus", "nereids", "ares", "iolaus", "sons-of-megara", "nemean-lion", "hydra", "augeas", "diomedes-thrace", "thanatos", "hippolyta", "laomedon", "geryon", "orthus", "ladon", "cerberus", "nessus", "iole"]
       },
       {
         "id": "argonauts",
@@ -105,7 +105,7 @@
         "title": "The children of Heracles",
         "note": "His wives and lovers, his sons and daughters, and their war with Eurystheus.",
         "focus": "hyllus",
-        "figures": ["zeus", "hera", "hebe", "alcmene", "amphitryon", "iphicles", "heracles", "megara", "creon", "deianira", "iole", "omphale", "eurystheus", "sthenelus", "achilles", "sons-of-megara", "hyllus", "macaria", "telephus", "tlepolemus", "iolaus"]
+        "figures": ["zeus", "hera", "hebe", "alcmene", "amphitryon", "iphicles", "heracles", "megara", "creon", "deianira", "iole", "omphale", "eurystheus", "sthenelus", "achilles", "sons-of-megara", "hyllus", "macaria", "telephus", "tlepolemus", "iolaus", "nessus"]
       },
       {
         "id": "athens",
@@ -163,7 +163,7 @@
         "note": "The brood of the sea gods Phorcys and Ceto and of Typhon and Echidna, and the heroes who killed them: Perseus, Bellerophon, Heracles and Oedipus.",
         "focus": "echidna",
         "houses": [],
-        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus", "cetus", "andromeda", "cepheus"]
+        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus", "cetus", "andromeda", "cepheus", "nessus"]
       },
       {
         "id": "underworld",

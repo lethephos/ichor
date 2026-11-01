@@ -4838,5 +4838,55 @@
     "tagline": "Came for a princess and met Perseus.",
     "story": "A sea monster sent by Poseidon against the land of Cepheus, after Queen Cassiopeia had boasted she was more beautiful than the Nereids. An oracle of Ammon said only Andromeda could buy it off, so she was chained to a rock by the sea. Perseus, flying back with the Gorgon’s head, killed it and married her.",
     "versions": "Apollodorus: Poseidon sent a flood and the monster. Hyginus: Poseidon demanded that Andromeda be given to the monster."
+  },
+  {
+    "id": "augeas",
+    "name": "Augeas",
+    "greek": "Αὐγείας",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Elis",
+    "tagline": "Promised a tenth of his herds, then refused to pay.",
+    "story": "King of Elis, whose cattle had left their stables deep in dung. Heracles cleaned them in a single day by turning rivers through them, and Augeas refused him the promised pay. Years later Heracles came back with an army and killed him.",
+    "versions": "Apollodorus: a son of Helios, some say of Poseidon. Eurystheus would not count the labour, because Heracles had worked for pay."
+  },
+  {
+    "id": "diomedes-thrace",
+    "name": "Diomedes of Thrace",
+    "greek": "Διομήδης",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of the Bistones",
+    "tagline": "Fed his mares on human flesh.",
+    "story": "A son of Ares, king of the Bistones in Thrace, who kept four mares that ate human flesh. Heracles killed him and drove the mares to Eurystheus.",
+    "versions": "Not the Diomedes who fought at Troy."
+  },
+  {
+    "id": "hippolyta",
+    "name": "Hippolyta",
+    "greek": "Ἱππολύτη",
+    "gender": "f",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Queen of the Amazons",
+    "tagline": "Was ready to give up her belt, until Hera started a rumour.",
+    "story": "Queen of the Amazons, who wore the belt of Ares as a sign that she ruled them all. Heracles came for it. She promised it to him, but Hera, disguised as an Amazon, told the women he was carrying their queen off. In the fighting Heracles killed her and took the belt."
+  },
+  {
+    "id": "nessus",
+    "name": "Nessus",
+    "greek": "Νέσσος",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Centaur and ferryman",
+    "tagline": "Took his revenge from beyond the grave.",
+    "story": "A centaur who carried travellers across the river Evenus. When he tried to carry off Deianira, Heracles shot him with an arrow dipped in the Hydra’s poison. Dying, he told her to keep his blood as a charm to win back her husband’s love. The charm was the poison that killed Heracles."
   }
 ]
