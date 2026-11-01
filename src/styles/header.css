@@ -6,13 +6,16 @@ header{padding:16px 16px 6px;position:relative}
 .wordmark{height:30px;width:auto;display:block}
 .wm-ink{fill:var(--text)}
 .wm-drop{fill:var(--accent)}
-.kicker .tagline{padding-top:5px}
+/* the subtitle sits under the wordmark, in the display face */
+.kicker{flex-direction:column;align-items:flex-start;row-gap:2px}
+.kicker .tagline{font:400 16px/1.25 var(--display);letter-spacing:0;text-transform:none;color:var(--muted)}
 .branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:8px 0 0}
 .branch-sub{font-family:var(--display);font-size:16px;color:var(--muted);margin-top:2px}
 @media (min-width:900px){
   header{padding:22px 28px 8px}
   .wordmark{height:34px}
   .kicker{font-size:11px}
+  .kicker .tagline{font-size:18px}
   .title-line{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px}
   .branch-title{font-size:34px}
   .branch-sub{font-size:19px;margin:0}
