@@ -1,7 +1,7 @@
 [
   {
     "id": "cursed-houses",
-    "title": "From Gaia to Orestes",
+    "title": "Gods and heroes",
     "subtitle": "",
     "tiers": ["The first gods", "Titans", "Children of the Titans", "The younger gods", "I", "II", "III", "IV", "V", "VI", "VII"],
     "focus": "pelops",
@@ -29,7 +29,7 @@
       {
         "id": "all",
         "label": "Whole tree",
-        "title": "From Gaia to Orestes",
+        "title": "Gods and heroes",
         "note": "Every figure, from the first gods to the last of both houses.",
         "focus": "pelops"
       },

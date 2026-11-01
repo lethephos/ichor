@@ -17,15 +17,20 @@
     <svg class="sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 1.8v2.4M10 15.8v2.4M1.8 10h2.4M15.8 10h2.4M4.2 4.2l1.7 1.7M14.1 14.1l1.7 1.7M4.2 15.8l1.7-1.7M14.1 5.9l1.7-1.7"/></svg>
   </button>
   <div class="kicker"><span class="brand">Ichor</span> · The family tree of Greek myth</div>
-  <div class="now">Now exploring</div>
   <div class="title-line">
-    <h1 class="branch-title"><button class="family-btn" id="familyBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="familyMenu"><span id="branchTitle"></span><svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button></h1>
+    <h1 class="branch-title" id="branchTitle"></h1>
     <div class="branch-sub" id="branchSub"></div>
   </div>
-  <ul class="family-menu" id="familyMenu" role="listbox" aria-label="Family" hidden></ul>
 </header>
 
 <div class="controls">
+  <div class="famline">
+    <span class="row-label" id="familyLbl">Family</span>
+    <div class="family-pick">
+      <button class="tab family-btn" id="familyBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="familyMenu" aria-labelledby="familyLbl familyName"><span id="familyName"></span><svg class="chev" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+      <ul class="family-menu" id="familyMenu" role="listbox" aria-label="Family" hidden></ul>
+    </div>
+  </div>
   <div class="srcline">
     <div class="row" id="srcRow" role="group" aria-label="Source"><span class="row-label">Source</span></div>
     <p class="src-note" id="srcNote" aria-live="polite"></p>
