@@ -1199,6 +1199,168 @@
     ]
   },
   {
+    "id": "minos",
+    "kind": "story",
+    "title": "Minos and Daedalus",
+    "lead": "A bull from the sea, a craftsman who can make anything, a labyrinth, and a king who would not let him go.",
+    "steps": [
+      {
+        "label": "Europa’s sons",
+        "figures": ["europa", "asterion", "minos", "rhadamanthys"],
+        "pairs": [
+          ["zeus", "europa"],
+          ["zeus", "minos"],
+          ["europa", "minos"],
+          ["zeus", "rhadamanthys"],
+          ["europa", "rhadamanthys"],
+          ["asterion", "europa"]
+        ],
+        "text": "Zeus, in the shape of a bull, carries Europa over the sea to Crete. She bears him Minos and Rhadamanthys. In Apollodorus, Asterion, king of Crete, marries her and raises her sons as his own."
+      },
+      {
+        "label": "The bull from the sea",
+        "figures": ["pasiphae", "poseidon"],
+        "pairs": [
+          ["helios", "pasiphae"],
+          ["minos", "pasiphae"],
+          ["poseidon", "pasiphae"]
+        ],
+        "text": "Minos marries Pasiphae, daughter of Helios. When his brothers dispute the throne, he prays to Poseidon to send a bull up out of the sea, and vows to sacrifice it. The bull comes, and it is so beautiful that Minos keeps it and sacrifices another. In anger, Poseidon makes Pasiphae fall in love with the bull."
+      },
+      {
+        "label": "Daedalus",
+        "figures": ["daedalus", "perdix", "athena"],
+        "pairs": [
+          ["daedalus", "perdix"],
+          ["athena", "perdix"]
+        ],
+        "text": "Daedalus, the great craftsman of Athens, has come to Crete as an exile. In Apollodorus, he threw his nephew off the Acropolis, jealous because the boy had invented the saw; in Ovid, the boy is Perdix, and Athena catches him as he falls and turns him into a partridge."
+      },
+      {
+        "label": "The Minotaur",
+        "figures": ["minotaur"],
+        "pairs": [
+          ["pasiphae", "minotaur"]
+        ],
+        "text": "For Pasiphae, Daedalus builds a hollow wooden cow covered in hide. She bears a child with the body of a man and the head of a bull: Asterius, called the Minotaur. Minos has Daedalus build the Labyrinth, a house of winding passages no one can find the way out of, and shuts the Minotaur inside."
+      },
+      {
+        "label": "Androgeus",
+        "figures": ["androgeus", "aegeus"],
+        "pairs": [
+          ["minos", "androgeus"],
+          ["pasiphae", "androgeus"],
+          ["aegeus", "androgeus"],
+          ["minos", "aegeus"]
+        ],
+        "text": "Their son Androgeus wins every contest at the games in Athens. King Aegeus sends him against the bull of Marathon, and the bull kills him. Minos makes war on Athens and lays down his price for peace: seven youths and seven girls, to be sent to the Minotaur."
+      },
+      {
+        "label": "The thread",
+        "figures": ["ariadne", "theseus", "dionysus"],
+        "pairs": [
+          ["minos", "ariadne"],
+          ["pasiphae", "ariadne"],
+          ["theseus", "minotaur"],
+          ["theseus", "ariadne"],
+          ["dionysus", "ariadne"]
+        ],
+        "text": "Theseus comes with the third tribute. Minos’ daughter Ariadne falls in love with him and, on Daedalus’ advice, gives him a thread to tie at the door. He kills the Minotaur, follows the thread back out and sails away with her, but she does not reach Athens: Dionysus takes her on Naxos, or in Homer, Artemis kills her on Dia, on Dionysus’ word."
+      },
+      {
+        "label": "Icarus",
+        "figures": ["icarus"],
+        "pairs": [
+          ["daedalus", "icarus"],
+          ["minos", "daedalus"]
+        ],
+        "text": "Minos keeps Daedalus and his son Icarus prisoner. Daedalus makes wings of feathers and wax for them both, and warns his son to fly neither too high nor too low. Icarus flies up towards the sun, the wax melts, and he falls into the sea that is named after him."
+      },
+      {
+        "label": "The boy in the honey",
+        "figures": ["glaucus-crete", "polyidus"],
+        "pairs": [
+          ["minos", "glaucus-crete"],
+          ["pasiphae", "glaucus-crete"],
+          ["minos", "polyidus"]
+        ],
+        "text": "The little Glaucus, chasing a mouse, falls into a jar of honey and drowns. The seer Polyidus finds him, and Minos shuts him in the tomb with the body until he gives it life. A snake comes near the boy, and Polyidus kills it; a second snake brings a herb that brings the first back to life, and Polyidus lays it on Glaucus."
+      },
+      {
+        "label": "Catreus",
+        "figures": ["catreus", "althaemenes", "aerope", "clymene-crete", "nauplius", "atreus", "palamedes"],
+        "pairs": [
+          ["minos", "catreus"],
+          ["catreus", "aerope"],
+          ["catreus", "clymene-crete"],
+          ["catreus", "althaemenes"],
+          ["althaemenes", "catreus"],
+          ["nauplius", "clymene-crete"],
+          ["atreus", "aerope"],
+          ["nauplius", "palamedes"]
+        ],
+        "text": "An oracle tells Minos’ son Catreus that one of his children will kill him. His son Althaemenes flees to Rhodes. Catreus gives his daughters Aerope and Clymene to Nauplius to sell abroad: Aerope marries into the house of Atreus, and Clymene marries Nauplius and bears Palamedes. Old Catreus sails to Rhodes to give his son the kingdom; the cowherds take him for a pirate, and Althaemenes kills him with a javelin without knowing him."
+      },
+      {
+        "label": "The spiral shell",
+        "figures": ["cocalus"],
+        "pairs": [
+          ["cocalus", "minos"]
+        ],
+        "text": "Minos hunts Daedalus from land to land with a spiral seashell, promising a reward to whoever can pass a thread through it. In Sicily, King Cocalus brings it back threaded: Daedalus has tied the thread to an ant. Minos knows he has found him, but Cocalus’ daughters kill him in his bath. In Homer, he sits in Hades with a golden sceptre, judging the dead."
+      },
+      {
+        "label": "At Troy",
+        "figures": ["deucalion-crete", "idomeneus"],
+        "pairs": [
+          ["minos", "deucalion-crete"],
+          ["pasiphae", "deucalion-crete"],
+          ["deucalion-crete", "idomeneus"]
+        ],
+        "text": "Minos’ grandson Idomeneus, son of Deucalion, leads eighty ships from Crete to Troy. In the Iliad he names his line himself: Zeus fathered Minos, Minos Deucalion, and Deucalion him, lord of the men of wide Crete."
+      }
+    ],
+    "pairs": [
+      ["zeus", "europa"],
+      ["zeus", "minos"],
+      ["europa", "minos"],
+      ["zeus", "rhadamanthys"],
+      ["europa", "rhadamanthys"],
+      ["asterion", "europa"],
+      ["helios", "pasiphae"],
+      ["minos", "pasiphae"],
+      ["poseidon", "pasiphae"],
+      ["daedalus", "perdix"],
+      ["athena", "perdix"],
+      ["pasiphae", "minotaur"],
+      ["minos", "androgeus"],
+      ["pasiphae", "androgeus"],
+      ["aegeus", "androgeus"],
+      ["minos", "aegeus"],
+      ["minos", "ariadne"],
+      ["pasiphae", "ariadne"],
+      ["theseus", "minotaur"],
+      ["theseus", "ariadne"],
+      ["dionysus", "ariadne"],
+      ["daedalus", "icarus"],
+      ["minos", "daedalus"],
+      ["minos", "glaucus-crete"],
+      ["pasiphae", "glaucus-crete"],
+      ["minos", "polyidus"],
+      ["minos", "catreus"],
+      ["catreus", "aerope"],
+      ["catreus", "clymene-crete"],
+      ["catreus", "althaemenes"],
+      ["nauplius", "clymene-crete"],
+      ["atreus", "aerope"],
+      ["nauplius", "palamedes"],
+      ["cocalus", "minos"],
+      ["minos", "deucalion-crete"],
+      ["pasiphae", "deucalion-crete"],
+      ["deucalion-crete", "idomeneus"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
