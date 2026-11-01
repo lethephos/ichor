@@ -89,7 +89,7 @@
         "title": "Jason and the Argonauts",
         "note": "The house of Aeolus, the Golden Fleece, and Medea.",
         "focus": "jason",
-        "figures": ["zeus", "poseidon", "helios", "oceanids", "muses", "circe", "cadmus", "harmonia", "aeolus", "salmoneus", "cretheus", "tyro", "athamas", "nephele", "ino", "phrixus", "helle", "pelias", "aeson", "aeetes", "creon-corinth", "jason", "medea", "absyrtus", "glauce", "hypsipyle", "orpheus", "heracles", "castor", "polydeuces"]
+        "figures": ["zeus", "poseidon", "helios", "oceanids", "muses", "circe", "cadmus", "harmonia", "aeolus", "salmoneus", "cretheus", "tyro", "athamas", "nephele", "ino", "phrixus", "helle", "pelias", "aeson", "aeetes", "creon-corinth", "jason", "medea", "absyrtus", "glauce", "hypsipyle", "orpheus", "heracles", "castor", "polydeuces", "agenor", "typhon", "echidna", "harpies", "phineus-seer", "hylas", "colchian-dragon", "talos"]
       },
       {
         "id": "troy",
@@ -163,7 +163,7 @@
         "note": "The brood of the sea gods Phorcys and Ceto and of Typhon and Echidna, and the heroes who killed them: Perseus, Bellerophon, Heracles and Oedipus.",
         "focus": "echidna",
         "houses": [],
-        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus", "cetus", "andromeda", "cepheus", "nessus"]
+        "figures": ["gaia", "uranus", "tartarus", "pontus", "nereus", "phorcys", "ceto", "typhon", "zeus", "hera", "poseidon", "oceanids", "echidna", "graeae", "gorgons", "nereids", "ladon", "medusa", "perseus", "pegasus", "chrysaor", "thetis", "cassiopeia", "chimera", "orthus", "geryon", "bellerophon", "nemean-lion", "hydra", "cerberus", "heracles", "iolaus", "sphinx", "oedipus", "cetus", "andromeda", "cepheus", "nessus", "harpies", "colchian-dragon"]
       },
       {
         "id": "underworld",

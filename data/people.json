@@ -4935,5 +4935,74 @@
       }
     ],
     "members_note": "Apollodorus lists them in this order. Euripides’ Theseus boasts of Sinis and Sciron; Ovid adds the rest."
+  },
+  {
+    "id": "hylas",
+    "name": "Hylas",
+    "greek": "Ὕλας",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Heracles’ beloved",
+    "tagline": "Went for water, and the nymphs kept him.",
+    "story": "Son of Theiodamas, king of the Dryopes, and the young lover of Heracles, who took him on the Argo. In Mysia he went to fetch water, and the nymphs of the spring, in love with his beauty, drew him down into it. Heracles searched for him so long that the Argo sailed without them."
+  },
+  {
+    "id": "phineus-seer",
+    "name": "Phineus the seer",
+    "greek": "Φινεύς",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Blind king of Thrace",
+    "tagline": "Every meal he sat down to, the Harpies took.",
+    "story": "A blind seer who ruled at Salmydessus in Thrace. The gods sent the Harpies to snatch his food and foul what they left. The sons of Boreas, sailing with the Argo, chased them off, and in return he told the Argonauts how to pass the Clashing Rocks.",
+    "versions": "Why he was blinded: Apollodorus gives three tellings: for telling men the future, for blinding his own sons, or by Poseidon, for showing the sons of Phrixus the way. Not Phineus the brother of Cepheus."
+  },
+  {
+    "id": "harpies",
+    "name": "Harpies",
+    "greek": "Ἅρπυιαι",
+    "gender": "f",
+    "generation": 3,
+    "kind": "group",
+    "branch": "cursed-houses",
+    "role": "The Snatchers",
+    "tagline": "Swift as the winds, and always hungry.",
+    "story": "Daughters of Thaumas and the Oceanid Electra, winged women as swift as the wind. They snatched the food of the blind king Phineus until the sons of Boreas chased them away.",
+    "count": "Two, or three",
+    "members": [
+      {
+        "name": "Aello",
+        "greek": "Ἀελλώ",
+        "note": "in Hesiod and Apollodorus"
+      },
+      {
+        "name": "Ocypete",
+        "greek": "Ὠκυπέτη",
+        "note": "in Hesiod, Apollodorus and Hyginus"
+      },
+      {
+        "name": "Celaeno",
+        "greek": "Κελαινώ",
+        "note": "in Hyginus"
+      }
+    ],
+    "members_note": "Hesiod names two; Hyginus adds Celaeno."
+  },
+  {
+    "id": "colchian-dragon",
+    "name": "The serpent of Colchis",
+    "greek": "Δράκων",
+    "gender": "m",
+    "generation": 7,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Guardian of the fleece",
+    "tagline": "Never slept, until Medea sang to it.",
+    "story": "A serpent that never slept, coiled round the oak in the grove of Ares where the Golden Fleece hung. Medea put it to sleep with her drugs, and Jason took the fleece.",
+    "versions": "Pindar and Hyginus: Jason kills it. Euripides: Medea kills it. Apollodorus and Ovid: she lulls it to sleep. Hyginus makes it a child of Typhon and Echidna."
   }
 ]
