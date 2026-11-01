@@ -729,6 +729,105 @@
     ]
   },
   {
+    "id": "seven",
+    "kind": "story",
+    "title": "The Seven against Thebes",
+    "lead": "Two brothers were to share a throne. Seven champions come to settle it, and their sons come back to finish it.",
+    "pairs": [
+      ["oedipus", "eteocles"],
+      ["oedipus", "polynices"],
+      ["adrastus", "argia"],
+      ["adrastus", "deipyle"],
+      ["polynices", "argia"],
+      ["tydeus", "deipyle"],
+      ["amphiaraus", "eriphyle"],
+      ["zeus", "capaneus"],
+      ["atalanta", "parthenopaeus"],
+      ["athena", "tydeus"],
+      ["eteocles", "polynices"],
+      ["creon", "polynices"],
+      ["creon", "antigone"],
+      ["creon", "haemon"],
+      ["haemon", "antigone"],
+      ["theseus", "creon"],
+      ["capaneus", "evadne"],
+      ["amphiaraus", "alcmaeon"],
+      ["eriphyle", "alcmaeon"],
+      ["tydeus", "diomedes"],
+      ["deipyle", "diomedes"],
+      ["polynices", "thersander"],
+      ["argia", "thersander"]
+    ],
+    "steps": [
+      {
+        "label": "Brothers",
+        "figures": ["oedipus", "eteocles", "polynices"],
+        "pairs": [
+          ["oedipus", "eteocles"],
+          ["oedipus", "polynices"]
+        ],
+        "text": "Oedipus has cursed his sons: they will divide his kingdom with the sword. Eteocles and Polynices agree to rule Thebes in turn, a year each. In Euripides, Eteocles keeps the throne when his year is up and drives his brother out; Apollodorus gives both versions. Polynices leaves for Argos, taking the necklace and the robe of Harmonia."
+      },
+      {
+        "label": "A lion and a boar",
+        "figures": ["adrastus", "tydeus", "argia", "deipyle"],
+        "text": "At night, at the door of King Adrastus, Polynices meets Tydeus, an exile from Calydon, and they fight. An oracle has told Adrastus to yoke his daughters to a boar and a lion. In Apollodorus he sees a lion and a boar on their shields; in Hyginus they wear the skins. He gives Argia to Polynices and Deipyle to Tydeus, and promises to bring both home."
+      },
+      {
+        "label": "The necklace",
+        "figures": ["amphiaraus", "eriphyle"],
+        "text": "The seer Amphiaraus foresees that all who march, except Adrastus, will die, and will not go. But he has sworn to let his wife Eriphyle settle any quarrel he has with Adrastus. Polynices gives her the necklace of Harmonia, and she sends her husband to war. Before he leaves, Amphiaraus tells his sons to kill her when they are grown."
+      },
+      {
+        "label": "Seven gates",
+        "figures": ["capaneus", "parthenopaeus", "atalanta"],
+        "text": "Seven champions march on Thebes, one for each of its gates. Aeschylus names Tydeus, Capaneus, Eteoclus, Hippomedon, Parthenopaeus, Amphiaraus and Polynices; Euripides and Apollodorus put Adrastus in Eteoclus’ place. Parthenopaeus is the son of the huntress Atalanta. Capaneus climbs a ladder against the wall, boasting that not even Zeus can stop him, and Zeus strikes him down with a thunderbolt."
+      },
+      {
+        "label": "Tydeus",
+        "figures": ["tydeus", "athena"],
+        "text": "Tydeus is wounded in the belly by the Theban Melanippus. Athena is on her way with a drug that will make him immortal. But Amphiaraus, who hates Tydeus, cuts off Melanippus’ head and gives it to him. Tydeus splits it open and gulps the brains, and Athena turns away in disgust and lets him die."
+      },
+      {
+        "label": "The earth opens",
+        "figures": ["amphiaraus"],
+        "pairs": [
+          ["eriphyle", "amphiaraus"]
+        ],
+        "text": "The Argives break. Amphiaraus flees along the river Ismenus. Before Periclymenus can spear him in the back, Zeus splits the earth with a thunderbolt, and it swallows Amphiaraus with his chariot and his charioteer. Pindar and Apollodorus tell it; he lives on below the earth, a prophet still."
+      },
+      {
+        "label": "At the seventh gate",
+        "figures": ["eteocles", "polynices"],
+        "pairs": [
+          ["eteocles", "polynices"]
+        ],
+        "text": "Eteocles and Polynices meet in single combat and kill each other, as their father cursed. Of the seven champions, only Adrastus escapes, carried off by his swift horse Arion."
+      },
+      {
+        "label": "Antigone",
+        "figures": ["creon", "antigone", "haemon"],
+        "pairs": [
+          ["creon", "polynices"],
+          ["creon", "antigone"],
+          ["creon", "haemon"],
+          ["haemon", "antigone"]
+        ],
+        "text": "Creon, king again, forbids anyone to bury the Argive dead, and Polynices first among them. Antigone, his sister, buries him anyway. In Sophocles and Apollodorus, Creon shuts her alive in a tomb; she hangs herself there, and Haemon, Creon’s son and her betrothed, kills himself beside her. In Hyginus, Creon hands her to Haemon to be killed, and Haemon kills her and then himself."
+      },
+      {
+        "label": "Theseus",
+        "figures": ["theseus", "evadne"],
+        "text": "The mothers of the dead come with Adrastus to Athens to beg for help. Theseus marches on Thebes, beats Creon, and gives the dead to their families. As Capaneus burns on his pyre, his wife Evadne throws herself onto it and burns with him."
+      },
+      {
+        "label": "The sons",
+        "figures": ["alcmaeon", "diomedes", "thersander"],
+        "text": "Ten years later the sons of the Seven march on Thebes again: the Epigoni. An oracle says they will win under Alcmaeon, son of Amphiaraus. Thersander, son of Polynices, gives Eriphyle the robe of Harmonia, and she sends her son as she sent her husband. Diomedes, son of Tydeus, rides with them. They take Thebes, the old seer Tiresias dies on the road, and Thersander becomes king. Alcmaeon comes home and, as his father told him, kills his mother."
+      }
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",

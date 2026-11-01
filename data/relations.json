@@ -5054,5 +5054,12 @@
     "to": "cyclopes",
     "sources": ["T", "A"],
     "note": "killed the Cyclopes, whose thunderbolt had struck down his son Asclepius"
+  },
+  {
+    "type": "feud",
+    "from": "creon",
+    "to": "polynices",
+    "sources": ["T", "A", "L"],
+    "note": "forbade anyone to bury Polynices and the Argive dead"
   }
 ]
