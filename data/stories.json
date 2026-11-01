@@ -1624,6 +1624,142 @@
     ]
   },
   {
+    "id": "heraclids",
+    "kind": "story",
+    "title": "The children of Heracles",
+    "lead": "Sons he killed, sons he scattered across the world, and the ones his old enemy hunted after his death.",
+    "steps": [
+      {
+        "label": "Megara",
+        "figures": ["heracles", "megara", "creon", "sons-of-megara"],
+        "pairs": [
+          ["creon", "megara"],
+          ["heracles", "megara"],
+          ["heracles", "sons-of-megara"],
+          ["megara", "sons-of-megara"]
+        ],
+        "text": "Heracles saves Thebes from the Minyans, and King Creon gives him his daughter Megara. They have sons: three in Apollodorus and Euripides, eight in Pindar. Hera sends Heracles mad, and he throws the boys into the fire, or in Euripides shoots them, and Megara with them."
+      },
+      {
+        "label": "Iolaus",
+        "figures": ["iphicles", "iolaus", "alcmene", "amphitryon"],
+        "pairs": [
+          ["amphitryon", "iphicles"],
+          ["alcmene", "iphicles"],
+          ["iphicles", "iolaus"],
+          ["iolaus", "megara"]
+        ],
+        "text": "In Apollodorus, Megara lives, and Heracles gives her to his nephew Iolaus, son of his twin brother Iphicles. Iolaus drives his uncle’s chariot and helps him burn the Hydra’s necks; he is the most faithful of all his kin."
+      },
+      {
+        "label": "Omphale",
+        "figures": ["omphale"],
+        "pairs": [
+          ["heracles", "omphale"]
+        ],
+        "text": "For killing a guest, Heracles is sold as a slave to Omphale, queen of Lydia, and serves her for a year; Sophocles says it is Zeus who orders it. In Apollodorus, she bears him a son; later writers dress him in her clothes and her in his lion skin."
+      },
+      {
+        "label": "Telephus",
+        "figures": ["telephus", "achilles"],
+        "pairs": [
+          ["heracles", "telephus"],
+          ["achilles", "telephus"]
+        ],
+        "text": "Heracles’ son Telephus, by the princess Auge, grows up to be king of Mysia. When the Greeks set out for Troy and land in his country by mistake, Achilles wounds him. An oracle says only the one who wounded him can heal him, and Achilles heals him with rust scraped from the same spear; in return, Telephus shows the Greeks the way to Troy."
+      },
+      {
+        "label": "Tlepolemus",
+        "figures": ["tlepolemus"],
+        "pairs": [
+          ["heracles", "tlepolemus"]
+        ],
+        "text": "In the Iliad, Tlepolemus, a son of Heracles, kills his father’s old uncle and has to flee overseas. He settles on Rhodes, leads nine ships from there to Troy, and is killed by Sarpedon."
+      },
+      {
+        "label": "Deianira’s children",
+        "figures": ["deianira", "hyllus", "macaria", "iole", "nessus"],
+        "pairs": [
+          ["heracles", "deianira"],
+          ["heracles", "hyllus"],
+          ["deianira", "hyllus"],
+          ["heracles", "macaria"],
+          ["deianira", "macaria"],
+          ["heracles", "iole"],
+          ["hyllus", "iole"]
+        ],
+        "text": "Heracles’ last wife, Deianira, bears him Hyllus and a daughter, Macaria. When he brings home the captive Iole, Deianira sends him a robe smeared with Nessus’ blood, and it kills him. In Sophocles, dying, he makes Hyllus promise to marry Iole, much against the young man’s will."
+      },
+      {
+        "label": "Hebe",
+        "figures": ["hebe", "zeus", "hera"],
+        "pairs": [
+          ["zeus", "hebe"],
+          ["hera", "hebe"],
+          ["heracles", "hebe"]
+        ],
+        "text": "Heracles’ body burns on the pyre on Mount Oeta, but he goes up to Olympus, and Hera at last makes peace with him. He marries Hebe, her daughter, the goddess of youth. In the Odyssey, Odysseus meets only his shade in Hades; the man himself feasts with the gods."
+      },
+      {
+        "label": "Nowhere to go",
+        "figures": ["eurystheus", "sthenelus"],
+        "pairs": [
+          ["sthenelus", "eurystheus"],
+          ["eurystheus", "hyllus"],
+          ["eurystheus", "heracles"]
+        ],
+        "text": "With Heracles gone, Eurystheus means to finish his line. He demands his children from every city that shelters them, and no one dares to keep them, until they come as suppliants, with old Iolaus and Alcmene, to the altar of Zeus at Marathon, and Athens takes them in. Eurystheus marches against Athens."
+      },
+      {
+        "label": "Macaria",
+        "figures": ["macaria"],
+        "pairs": [
+          ["heracles", "macaria"]
+        ],
+        "text": "The oracles say Athens will win only if a girl of noble birth is sacrificed to Persephone. In Euripides, one of Heracles’ daughters offers herself; Pausanias names her Macaria, and says a spring at Marathon bears her name."
+      },
+      {
+        "label": "Revenge",
+        "figures": ["iolaus", "alcmene"],
+        "pairs": [
+          ["hyllus", "eurystheus"],
+          ["iolaus", "eurystheus"],
+          ["alcmene", "eurystheus"]
+        ],
+        "text": "In Euripides, old Iolaus prays to Hebe and Zeus to be young for one day, and is: he captures Eurystheus in his chariot, and Alcmene demands his death. In Apollodorus, Hyllus kills him as he flees, and brings his head to Alcmene, who gouges out its eyes with weaving pins. The sons of Heracles try again and again to return to the Peloponnese, and their descendants win it at last, in the third generation."
+      }
+    ],
+    "pairs": [
+      ["creon", "megara"],
+      ["heracles", "megara"],
+      ["heracles", "sons-of-megara"],
+      ["megara", "sons-of-megara"],
+      ["amphitryon", "iphicles"],
+      ["alcmene", "iphicles"],
+      ["iphicles", "iolaus"],
+      ["iolaus", "megara"],
+      ["heracles", "omphale"],
+      ["heracles", "telephus"],
+      ["achilles", "telephus"],
+      ["heracles", "tlepolemus"],
+      ["heracles", "deianira"],
+      ["heracles", "hyllus"],
+      ["deianira", "hyllus"],
+      ["heracles", "macaria"],
+      ["deianira", "macaria"],
+      ["heracles", "iole"],
+      ["hyllus", "iole"],
+      ["zeus", "hebe"],
+      ["hera", "hebe"],
+      ["heracles", "hebe"],
+      ["sthenelus", "eurystheus"],
+      ["eurystheus", "hyllus"],
+      ["eurystheus", "heracles"],
+      ["iolaus", "eurystheus"],
+      ["alcmene", "eurystheus"]
+    ]
+  },
+  {
     "id": "troy",
     "kind": "story",
     "title": "The Trojan War",
