@@ -4959,7 +4959,7 @@
     "role": "Blind king of Thrace",
     "tagline": "Every meal he sat down to, the Harpies took.",
     "story": "A blind seer who ruled at Salmydessus in Thrace. The gods sent the Harpies to snatch his food and foul what they left. The sons of Boreas, sailing with the Argo, chased them off, and in return he told the Argonauts how to pass the Clashing Rocks.",
-    "versions": "Why he was blinded: Apollodorus gives three tellings: for telling men the future, for blinding his own sons, or by Poseidon, for showing the sons of Phrixus the way. Not Phineus the brother of Cepheus."
+    "versions": "Apollodorus: a son of Agenor, or of Poseidon; Hesiod makes him a son of Phoenix. Why he was blinded: Apollodorus gives two tellings: by the gods, for telling men the future, or by Poseidon, for showing the sons of Phrixus the way. Not Phineus the brother of Cepheus."
   },
   {
     "id": "harpies",
@@ -4988,9 +4988,14 @@
         "name": "Celaeno",
         "greek": "Κελαινώ",
         "note": "in Hyginus"
+      },
+      {
+        "name": "Podarce",
+        "greek": "Ποδάρκη",
+        "note": "in Hyginus"
       }
     ],
-    "members_note": "Hesiod names two; Hyginus adds Celaeno."
+    "members_note": "Hesiod and Apollodorus name two; Hyginus names Celaeno, Ocypete and Podarce."
   },
   {
     "id": "colchian-dragon",
@@ -5003,6 +5008,6 @@
     "role": "Guardian of the fleece",
     "tagline": "Never slept, until Medea sang to it.",
     "story": "A serpent that never slept, coiled round the oak in the grove of Ares where the Golden Fleece hung. Medea put it to sleep with her drugs, and Jason took the fleece.",
-    "versions": "Pindar and Hyginus: Jason kills it. Euripides: Medea kills it. Apollodorus and Ovid: she lulls it to sleep. Hyginus makes it a child of Typhon and Echidna."
+    "versions": "Pindar: Jason kills it. Euripides: Medea kills it. Apollodorus, Ovid and Hyginus: it is lulled to sleep with her drugs. Hyginus makes it a child of Typhon and Echidna."
   }
 ]
