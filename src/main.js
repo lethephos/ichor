@@ -590,6 +590,14 @@ function storiesOf(id){
     return `<li><button class="opt" data-story="${c.id}" data-at="${i+1}"${home ? ` data-family="${home.id}"` : ""}><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${where}${home ? ` · opens in ${esc(home.label)}` : ""}</small></span></button></li>`;
   }).join("")}</ul></div>`;
 }
+/* A picture from Wikimedia Commons, loaded only when the card opens, with its credit and licence;
+   if it cannot be loaded, the figure hides and the text stays. */
+const COMMONS = "https://commons.wikimedia.org/wiki/";
+function artImage(im, title){
+  const f = encodeURIComponent(im.file.replace(/ /g, "_"));
+  return `<figure class="art-img"><a href="${COMMONS}File:${f}" target="_blank" rel="noopener"><img src="${COMMONS}Special:FilePath/${f}?width=640" alt="${esc(title)}" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></a>
+    <figcaption>${esc(im.credit)} · ${esc(im.licence)}, via <a href="${COMMONS}File:${f}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>`;
+}
 function renderNode(id){
   const p = N[id];
   const touches = e => e.from===id || e.to===id;
@@ -619,7 +627,7 @@ function renderNode(id){
     ${p.immortal ? `<div class="sec"><h3>Made immortal</h3><ul class="rels"><li><span class="rel static"><svg class="imm-mark" viewBox="-6 -6 12 12" aria-hidden="true"><path class="imm" d="${STAR}"/></svg>${p.immortal.text}</span>${srcText(p.immortal.sources)}</li></ul></div>` : ""}
     ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
-    ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(({title:t, meta:m, where:w, url:u}) => `<li>${u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t">${t}</span>`}<br><span class="m">${m}. ${w}</span></li>`).join("")}</ul></div>` : ""}
+    ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(({title:t, meta:m, where:w, url:u, image:im}) => `<li>${im ? artImage(im, t) : ""}${u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t">${t}</span>`}<br><span class="m">${m}. ${w}</span></li>`).join("")}</ul></div>` : ""}
     <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work.</p>`);
 }
 function select(id, move){

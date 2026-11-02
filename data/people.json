@@ -1320,7 +1320,12 @@
         "title": "Oedipus and the Sphinx",
         "meta": "Jean-Auguste-Dominique Ingres, 1808, reworked 1827",
         "where": "Louvre, Paris",
-        "url": "https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_(Ingres)"
+        "url": "https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_(Ingres)",
+        "image": {
+          "file": "IngresOdipusAndSphinx.jpg",
+          "credit": "Jean-Auguste-Dominique Ingres",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "Oedipus and Antigone, or The Plague of Thebes",
@@ -1418,7 +1423,12 @@
         "title": "Clytemnestra",
         "meta": "John Collier, 1882",
         "where": "Guildhall Art Gallery, London",
-        "url": "https://en.wikipedia.org/wiki/Clytemnestra_(Collier)"
+        "url": "https://en.wikipedia.org/wiki/Clytemnestra_(Collier)",
+        "image": {
+          "file": "Collier-Clytemnestra after the murder.jpg",
+          "credit": "John Collier",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "Clytemnestra Hesitates before Killing the Sleeping Agamemnon",
@@ -1476,7 +1486,12 @@
         "title": "The Judgement of Paris",
         "meta": "Peter Paul Rubens, probably 1632–35",
         "where": "National Gallery, London",
-        "url": "https://www.nationalgallery.org.uk/paintings/NG194"
+        "url": "https://www.nationalgallery.org.uk/paintings/NG194",
+        "image": {
+          "file": "Rubens - Judgement of Paris.jpg",
+          "credit": "Peter Paul Rubens",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1709,7 +1724,12 @@
         "title": "Orestes Pursued by the Furies (The Remorse of Orestes)",
         "meta": "William-Adolphe Bouguereau, 1862",
         "where": "Chrysler Museum of Art, Norfolk",
-        "url": "https://chrysler.emuseum.com/objects/27206"
+        "url": "https://chrysler.emuseum.com/objects/27206",
+        "image": {
+          "file": "Orestes Pursued by the Furies by William-Adolphe Bouguereau (1862) - Google Art Project.jpg",
+          "credit": "William-Adolphe Bouguereau",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "Pylades and Orestes Brought as Victims before Iphigenia",
