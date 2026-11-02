@@ -93,7 +93,8 @@
     "branch": "gods",
     "role": "Titan",
     "tagline": "One daughter bore Zeus twin gods; the other leapt into the sea to escape him.",
-    "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto and Asteria."
+    "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto and Asteria.",
+    "versions": "Hesiod gives him no domain: he is known only as a father. ‘Titan of intellect’, often met today, is a modern reading of his name, not an ancient one."
   },
   {
     "id": "crius",
@@ -105,7 +106,8 @@
     "branch": "gods",
     "role": "Titan",
     "tagline": "The quietest of the Titans, known only through his sons.",
-    "story": "Son of Uranus and Gaia. With Eurybia, a daughter of the Sea, he fathered Astraeus, Pallas and Perses."
+    "story": "Son of Uranus and Gaia. With Eurybia, a daughter of the Sea, he fathered Astraeus, Pallas and Perses.",
+    "versions": "Hesiod gives him no domain. ‘Titan of the constellations’, often met today, is a modern guess from his name, which means ‘ram’, not an ancient one."
   },
   {
     "id": "phoebe",
@@ -115,9 +117,9 @@
     "generation": 1,
     "kind": "god",
     "branch": "gods",
-    "role": "Titaness",
+    "role": "Titaness, who held the oracle at Delphi before Apollo",
     "tagline": "Grandmother of Apollo and Artemis.",
-    "story": "Daughter of Uranus and Gaia, wife of Coeus and mother of Leto and Asteria."
+    "story": "Daughter of Uranus and Gaia, wife of Coeus and mother of Leto and Asteria. In Aeschylus she held the oracle at Delphi after Earth and Themis, and gave it to her grandson Phoebus as a birthday gift; his name comes from hers."
   },
   {
     "id": "hyperion",
@@ -292,7 +294,8 @@
     "branch": "gods",
     "role": "Titan",
     "tagline": "His children stand beside Zeus’s throne.",
-    "story": "Son of Crius and Eurybia. With the Oceanid Styx he fathered Zelus, Nike, Cratos and Bia: Rivalry, Victory, Power and Force, who never leave Zeus’s side."
+    "story": "Son of Crius and Eurybia. With the Oceanid Styx he fathered Zelus, Nike, Cratos and Bia: Rivalry, Victory, Power and Force, who never leave Zeus’s side.",
+    "versions": "‘Titan of warcraft’, often met today, rests on his name alone (the Suda derives it from brandishing a spear); no ancient myth makes him a god of war."
   },
   {
     "id": "perses",
@@ -304,7 +307,8 @@
     "branch": "gods",
     "role": "Titan",
     "tagline": "‘Outstanding in wisdom’, and the father of Hecate.",
-    "story": "Son of Crius and Eurybia, ‘outstanding in wisdom’, says Hesiod. He married Asteria, and she bore Hecate."
+    "story": "Son of Crius and Eurybia, ‘outstanding in wisdom’, says Hesiod. He married Asteria, and she bore Hecate.",
+    "versions": "No ancient source gives him a domain. ‘Titan of destruction’, often met today, is a modern guess from his name, not an ancient one."
   },
   {
     "id": "asteria",
@@ -374,7 +378,7 @@
     "generation": 2,
     "kind": "god",
     "branch": "gods",
-    "role": "Goddess of the harvest",
+    "role": "Goddess of grain and the harvest, and of the Mysteries at Eleusis",
     "tagline": "Lost her daughter to the underworld.",
     "story": "Daughter of Cronus and Rhea, mother of Persephone by Zeus. When Hades carried off her daughter, she searched the whole earth. In Hyginus, she ate the shoulder of Pelops at Tantalus’s feast."
   },
@@ -386,7 +390,7 @@
     "generation": 2,
     "kind": "god",
     "branch": "gods",
-    "role": "King of the underworld",
+    "role": "King of the underworld and the dead",
     "tagline": "Stole a bride from the world above.",
     "story": "Son of Cronus and Rhea. With Zeus’s consent he carried off Persephone to rule the dead beside him."
   },
@@ -398,7 +402,7 @@
     "generation": 2,
     "kind": "god",
     "branch": "gods",
-    "role": "God of the sea",
+    "role": "God of the sea, earthquakes and horses",
     "tagline": "Loved Pelops and carried him to Olympus.",
     "story": "Son of Cronus and Rhea, brother of Zeus, lord of the sea. In Pindar he fell in love with the boy Pelops and carried him off to Olympus."
   },
@@ -410,7 +414,7 @@
     "generation": 2,
     "kind": "god",
     "branch": "gods",
-    "role": "Queen of the gods",
+    "role": "Queen of the gods, goddess of marriage",
     "tagline": "Married to Zeus, and at war with his lovers.",
     "story": "Daughter of Cronus and Rhea, sister and wife of Zeus, mother of Ares and Hephaestus. She pursued Zeus’s lovers and their children."
   },
@@ -594,7 +598,7 @@
     "generation": 3,
     "kind": "god",
     "branch": "gods",
-    "role": "Goddess of wisdom and war",
+    "role": "Goddess of wisdom, war and crafts",
     "tagline": "Born fully armed from her father’s head.",
     "story": "Daughter of Zeus. Zeus swallowed her mother Metis, and Athena sprang from his head.",
     "versions": "Homer calls her simply Zeus’s daughter. Hesiod and Apollodorus tell of Metis and the birth from his head."
@@ -619,7 +623,7 @@
     "generation": 3,
     "kind": "god",
     "branch": "gods",
-    "role": "Goddess of love",
+    "role": "Goddess of love and desire",
     "tagline": "Born from the sea, or from Zeus.",
     "story": "Wife of Hephaestus and lover of Ares.",
     "versions": "Hesiod: she rose from the sea foam around the severed flesh of Uranus. Homer and Apollodorus: daughter of Zeus and Dione."
@@ -645,7 +649,7 @@
     "generation": 3,
     "kind": "god",
     "branch": "gods",
-    "role": "God of wine",
+    "role": "God of wine, ecstasy and the theatre",
     "tagline": "Born twice: from his mother, then from his father’s thigh.",
     "story": "Son of Zeus and the Theban princess Semele. When his mother burned, Zeus sewed the unborn child into his thigh until he was ready to be born."
   },
@@ -657,7 +661,7 @@
     "generation": 3,
     "kind": "god",
     "branch": "gods",
-    "role": "Queen of the underworld",
+    "role": "Queen of the underworld, who comes back with the spring",
     "tagline": "Carried off to rule the dead.",
     "story": "Daughter of Zeus and Demeter. Hades seized her as she picked flowers, with Zeus’s leave, and made her queen of the underworld. She spends a third of each year with him and the rest with her mother.",
     "versions": "The Homeric Hymn to Demeter and Hesiod make her Demeter’s daughter. Apollodorus names her mother as Styx, though his story of the abduction has Demeter searching for her."
@@ -690,9 +694,9 @@
     "generation": 3,
     "kind": "god",
     "branch": "cursed-houses",
-    "role": "Messenger of the gods",
-    "tagline": "His son’s murder starts the curse.",
-    "story": "Father of Myrtilus, whose dying curse fell on the house of Pelops. In Apollodorus he carried the advice from Zeus that won Atreus back the throne.",
+    "role": "Messenger of the gods; god of herds, thieves and travellers, and guide of the dead",
+    "tagline": "Stole Apollo’s cattle on the day he was born, and his son cursed the house of Pelops.",
+    "story": "Born in a cave on Mount Cyllene, he stole Apollo’s cattle on the day of his birth and made the first lyre from a tortoise shell. In the Odyssey he led the souls of the dead suitors down to Hades. Father of Myrtilus, whose dying curse fell on the house of Pelops. In Apollodorus he carried the advice from Zeus that won Atreus back the throne.",
     "art": [
       {
         "title": "Hermes and the Infant Dionysus",
@@ -722,7 +726,7 @@
     "generation": 2,
     "kind": "god",
     "branch": "cursed-houses",
-    "role": "King of the gods",
+    "role": "King of the gods, god of the sky, thunder and guests",
     "tagline": "Fathered more of this tree than anyone else.",
     "story": "Father of Tantalus. In some versions, also father of Helen and of one or both of the Dioscuri.",
     "transformation": {
@@ -770,7 +774,7 @@
     "generation": 3,
     "kind": "god",
     "branch": "cursed-houses",
-    "role": "Goddess of the hunt",
+    "role": "Goddess of the hunt, of wild animals and of childbirth",
     "tagline": "She demanded a daughter for a deer.",
     "story": "Agamemnon killed her sacred deer and boasted of it. Her price was Iphigenia.",
     "art": [
@@ -790,7 +794,7 @@
     "generation": 3,
     "kind": "god",
     "branch": "gods",
-    "role": "Goddess of the crossroads",
+    "role": "Goddess of crossroads, night and witchcraft",
     "tagline": "The one goddess Zeus honoured above all.",
     "story": "Daughter of Perses and Asteria. Hesiod praises her at length: Zeus gave her a share of the earth, the sea and the sky. Later writers made her the goddess of crossroads, of the night and of witchcraft.",
     "versions": "In the Catalogue of Women, as Pausanias reports, Iphigenia does not die at Aulis: by the will of Artemis she becomes Hecate."
