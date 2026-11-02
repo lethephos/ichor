@@ -480,7 +480,7 @@
     "from": "aegisthus",
     "to": "atreus",
     "sources": ["A", "L"],
-    "note": "killed Atreus"
+    "note": "killed Atreus and gave the throne back to his father Thyestes"
   },
   {
     "type": "feud",
@@ -536,7 +536,7 @@
     "from": "laius",
     "to": "chrysippus",
     "sources": ["A", "L"],
-    "note": "abducted Chrysippus"
+    "note": "carried off Chrysippus while teaching him to drive a chariot"
   },
   {
     "type": "feud",
@@ -3415,7 +3415,7 @@
     "from": "bellerophon",
     "to": "chimera",
     "sources": ["E", "H", "T", "A", "L"],
-    "note": "killed the Chimera"
+    "note": "killed the Chimera, shooting from the back of Pegasus"
   },
   {
     "type": "feud",
