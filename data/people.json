@@ -80,7 +80,7 @@
     "kind": "god",
     "branch": "gods",
     "role": "Titaness of the sea",
-    "tagline": "Mother of the rivers.",
+    "tagline": "Raised Hera, and mothered every river.",
     "story": "Wife of Oceanus and mother of the rivers and the Oceanids. In Homer, she and Oceanus raised Hera."
   },
   {
@@ -92,7 +92,7 @@
     "kind": "god",
     "branch": "gods",
     "role": "Titan",
-    "tagline": "A Titan remembered for his daughters.",
+    "tagline": "One daughter bore Zeus twin gods; the other leapt into the sea to escape him.",
     "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto and Asteria."
   },
   {
@@ -303,7 +303,7 @@
     "kind": "god",
     "branch": "gods",
     "role": "Titan",
-    "tagline": "Father of Hecate.",
+    "tagline": "‘Outstanding in wisdom’, and the father of Hecate.",
     "story": "Son of Crius and Eurybia, ‘outstanding in wisdom’, says Hesiod. He married Asteria, and she bore Hecate."
   },
   {
@@ -671,7 +671,7 @@
     "kind": "god",
     "branch": "cursed-houses",
     "role": "God of war",
-    "tagline": "The war god, grandfather of a doomed bride.",
+    "tagline": "Father of Harmonia, and of the king who killed his daughter’s suitors.",
     "story": "Father of King Oenomaus in Apollodorus and Pausanias.",
     "art": [
       {
@@ -723,7 +723,7 @@
     "kind": "god",
     "branch": "cursed-houses",
     "role": "King of the gods",
-    "tagline": "Where it all begins.",
+    "tagline": "Fathered more of this tree than anyone else.",
     "story": "Father of Tantalus. In some versions, also father of Helen and of one or both of the Dioscuri.",
     "transformation": {
       "text": "A swan, to seduce Leda",
@@ -1044,7 +1044,7 @@
     "kind": "mortal",
     "branch": "cursed-houses",
     "role": "King of Thebes",
-    "tagline": "Founder of a doomed line.",
+    "tagline": "Gave his name to the house the curse would follow.",
     "story": "Grandson of Cadmus and father of Laius. The Labdacids take their name from him."
   },
   {
@@ -2041,7 +2041,7 @@
     "kind": "mortal",
     "branch": "cursed-houses",
     "role": "Founder of Iolcus",
-    "tagline": "Grandfather of Jason.",
+    "tagline": "Raised the sons Poseidon gave his wife as his own.",
     "story": "A son of Aeolus and founder of Iolcus. He married his niece Tyro and raised her sons by Poseidon with his own."
   },
   {
@@ -2307,7 +2307,7 @@
     "kind": "mortal",
     "branch": "cursed-houses",
     "role": "Son of Tros",
-    "tagline": "Grandfather of Anchises.",
+    "tagline": "The younger brother, whose line outlived Troy.",
     "story": "Son of Tros, and brother of Ilus and Ganymede. His line, through Capys and Anchises, led to Aeneas."
   },
   {
@@ -2349,7 +2349,7 @@
     "kind": "mortal",
     "branch": "cursed-houses",
     "role": "Son of Assaracus",
-    "tagline": "Father of Anchises.",
+    "tagline": "Father of the cowherd Aphrodite loved.",
     "story": "Son of Assaracus, and father of Anchises."
   },
   {
@@ -2812,7 +2812,7 @@
     "kind": "mortal",
     "branch": "cursed-houses",
     "role": "King of Athens",
-    "tagline": "Son of Erechtheus.",
+    "tagline": "The second Cecrops, and no serpent.",
     "story": "Son of Erechtheus, and king of Athens after him.",
     "versions": "Not Cecrops, the first king, half man and half serpent."
   },
@@ -3767,7 +3767,7 @@
     "kind": "mortal",
     "branch": "cursed-houses",
     "role": "Prince of Crete",
-    "tagline": "Son of Minos, father of a king at Troy.",
+    "tagline": "The other Deucalion: no flood, just a son who sailed to Troy.",
     "story": "Son of Minos and Pasiphae, and father of Idomeneus, who led the Cretans to Troy.",
     "versions": "Not Deucalion of the flood."
   },
@@ -4193,7 +4193,7 @@
     "kind": "god",
     "branch": "cursed-houses",
     "role": "The sea",
-    "tagline": "Born of Gaia without love.",
+    "tagline": "The barren sea, born of Gaia without love.",
     "story": "The barren sea, which Gaia bore by herself, without love, before she lay with Uranus. With his mother he fathered the old gods of the sea: Nereus, Phorcys and Ceto."
   },
   {
@@ -4229,7 +4229,7 @@
     "kind": "god",
     "branch": "cursed-houses",
     "role": "Goddess of sea monsters",
-    "tagline": "Mother of monsters.",
+    "tagline": "Her name means ‘sea monster’, and so did her children.",
     "story": "Daughter of Pontus and Gaia, with a name that means ‘sea monster’. With her brother Phorcys she bore the Graeae, the Gorgons and the serpent Ladon, and perhaps Echidna too."
   },
   {
@@ -4465,7 +4465,7 @@
     "kind": "god",
     "branch": "cursed-houses",
     "role": "Darkness",
-    "tagline": "The darkness under the earth.",
+    "tagline": "The darkness on the road to Hades, and the father of Day.",
     "story": "Born of Chaos with his sister Night, the darkness that lies under the earth, on the way to the house of Hades. He lay with Night, and she bore Aether, the bright upper air, and Day."
   },
   {
@@ -4785,7 +4785,7 @@
     "kind": "mortal",
     "branch": "cursed-houses",
     "role": "King of Thebe",
-    "tagline": "Father of Andromache, killed by Achilles.",
+    "tagline": "Killed by Achilles, who burned him in his armour out of respect.",
     "story": "King of Cilician Thebe, father of Andromache. Achilles sacked his city, killed him and his seven sons, but did not strip his body: he burned him in his armour and raised a mound over him."
   },
   {
