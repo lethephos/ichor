@@ -446,6 +446,11 @@ function shell(inner){
     b.onclick = () => select(b.dataset.go, true);
     if (b.tagName!=="BUTTON") b.onkeydown = ev => { if (ev.key==="Enter"||ev.key===" ") { ev.preventDefault(); select(b.dataset.go, true); } };
   });
+  // a story opens where the figure comes in, or at its start if the chosen source skips that step
+  card.querySelectorAll("[data-story]").forEach(b => b.onclick = () => {
+    const c = STORIES[b.dataset.story], at = +b.dataset.at;
+    openCurse(c.id, toldSteps(c)[at-1] ? at : 0);
+  });
   setFull(false); card.classList.add("open"); card.scrollTop = 0;
 }
 
@@ -570,6 +575,13 @@ function fateWheel(id, me, fates, dot){
     ${fates.length > WHEEL_MAX ? `<text class="cf-more" x="${CF_W/2}" y="${H-6}" text-anchor="middle">and ${fates.length - WHEEL_MAX} more</text>` : ""}
   </svg>`;
 }
+/* The stories a figure takes part in (in this family): each opens at the step where they come in. */
+function storiesOf(id){
+  const list = Object.values(STORIES).map(c => [c, c.steps.findIndex(s => s.figures.includes(id))]).filter(([, i]) => i >= 0);
+  if (!list.length) return "";
+  return `<div class="sec"><h3>In the stories</h3><ul class="opts in-stories">${list.map(([c, i]) =>
+    `<li><button class="opt" data-story="${c.id}" data-at="${i+1}"><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${i ? `From step ${i+1}, ${esc(c.steps[i].label)}` : c.lead}</small></span></button></li>`).join("")}</ul></div>`;
+}
 function renderNode(id){
   const p = N[id];
   const touches = e => e.from===id || e.to===id;
@@ -592,6 +604,7 @@ function renderNode(id){
     <p class="card-role">${p.role}</p>
     <p class="card-story">${p.story}</p>
     ${closeFamily(id)}
+    ${storiesOf(id)}
     ${p.members ? `<div class="sec"><h3>${p.count ? `${p.count} ${p.members_label || "sisters"}` : "Who they are"}</h3><ul class="rels members">${p.members.map(m => `<li>${m.id && N[m.id] ? `<button class="rel" data-go="${m.id}">${m.name}</button>` : `<span class="rel static">${m.name}</span>`} <span class="greek-sm" lang="grc">${m.greek}</span>${m.note ? `<span class="note">${m.note}</span>` : ""}</li>`).join("")}</ul>${p.members_note ? `<p class="oly-note">${p.members_note}</p>` : ""}</div>` : ""}
     ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
