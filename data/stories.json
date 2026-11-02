@@ -297,23 +297,35 @@
       ["semele", "dionysus"],
       ["dionysus", "pentheus"],
       ["agave", "pentheus"],
-      ["polydorus", "labdacus"]
+      ["polydorus", "labdacus"],
+      ["cadmus", "ino"],
+      ["harmonia", "ino"]
     ],
     "steps": [
       {
         "label": "The serpent",
         "figures": ["cadmus", "ares"],
-        "text": "Cadmus comes looking for his sister Europa and founds Thebes instead. He kills the serpent of Ares that guards the spring and, on Athena’s advice, sows its teeth. Armed men spring up and kill each other until five are left."
+        "text": "Zeus carries off Europa, and her brother Cadmus goes looking for her. At Delphi he is told to give up the search, follow a cow and found a city where she lies down. There he kills the serpent of Ares that guards the spring and, on Athena’s advice, sows its teeth. Armed men spring up and kill each other until five are left."
+      },
+      {
+        "label": "The price",
+        "figures": ["cadmus", "ares"],
+        "text": "For the serpent’s death Cadmus serves Ares for an eternal year, which is eight years. Then Athena gives him the kingdom, and Zeus gives him Harmonia."
       },
       {
         "label": "The wedding",
         "figures": ["cadmus", "harmonia"],
-        "text": "Cadmus marries Harmonia, daughter of Ares and Aphrodite. The gods come down to the wedding, and the Muses sing."
+        "text": "Cadmus marries Harmonia, daughter of Ares and Aphrodite. The gods come down to the wedding, and the Muses sing. Cadmus gives his bride a robe and a necklace, made by Hephaestus, or in another telling given to Europa by Zeus. Generations later, the necklace will buy a betrayal."
       },
       {
         "label": "The daughters",
         "figures": ["semele", "agave", "polydorus"],
         "text": "Harmonia bears Ino, Semele, Agave, Autonoe and a son, Polydorus. Zeus loves Semele, and she dies of it. Her sisters say she lied about her lover."
+      },
+      {
+        "label": "Ino and Autonoe",
+        "figures": ["ino"],
+        "text": "Ino and her husband Athamas raise Semele’s child, Dionysus. Hera drives them mad, and Ino leaps into the sea with her son Melicertes. She becomes the sea goddess Leucothea, who will one day save Odysseus from drowning. Autonoe’s son Actaeon is torn apart by his own hounds on Cithaeron."
       },
       {
         "label": "The god comes home",
@@ -328,7 +340,7 @@
       {
         "label": "The serpents",
         "figures": ["cadmus", "harmonia", "polydorus", "labdacus"],
-        "text": "Cadmus and Harmonia leave Thebes and are turned into serpents. The throne passes to Polydorus and then to his son Labdacus, whose house the curse will follow."
+        "text": "Cadmus and Harmonia leave Thebes for the Encheleans of Illyria and lead them in war. They are turned into serpents, and Zeus sends them to the Elysian Fields. The throne passes to Polydorus and then to his son Labdacus, whose house the curse will follow."
       }
     ]
   },

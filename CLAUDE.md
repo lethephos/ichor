@@ -39,7 +39,7 @@ The site is live at https://ichor-orpin.vercel.app (Vite + D3, data in `/data`, 
 - Tools: on desktop the layer toggles, Trace a curse, Ariadne’s thread and the search box float in a dock at the bottom of the tree; on phones four buttons (Layers, Curses, Thread, Find) float at the bottom and open panels in the card sheet. "Whole tree" sits in the top corner of the tree.
 
 **Tone**
-- Taglines read like a family drama ("Served his brother a dinner of his own children."). Stories: short sentences, past tense.
+- Taglines read like a family drama ("Served his brother a dinner of his own children."). Short sentences. Stories told step by step are in the present tense; the story on a figure’s card is in the past tense (present only for what is still true).
 - All user-facing text in English, with typographic quotes and apostrophes.
 
 **Sources**
@@ -54,7 +54,7 @@ Keep it simple: a static site, no backend.
 - Data out of the code, in `/data`:
   - `people.json` — id, name, greek, gender, generation, kind (god / nymph / mortal / other-cycle / group), branch, role, tagline, story, versions, transformation, immortal (text and sources), art; a group adds count, members and members_note.
   - `relations.json` — type, from, to, sources, note.
-  - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` still needs checking against the sources; how Zeus became king and the myths of Hippodamia, Leda, Iphigenia, Perseus, Heracles, Theseus, Jason, the Seven against Thebes, the Trojan War, the Odyssey, Prometheus, Dardanus, Bellerophon, Minos, Io, Hades, the children of Heracles, the loves of Zeus and the brood of Echidna have been checked. A step is told by a source when the links it reaches first (from its figures to people already met) are attested there; a step can list its own `pairs` when its figures reach further than it tells (Medea meets Jason in Colchis, not yet Pelias), and those links wait for their step on the tree. The camera frames the step’s figures and the other ends of the links that tell it.
+  - `stories.json` — stories told step by step: the two curses and further myths (`kind`: curse or story). A story marked `draft` still needs checking against the sources; how Zeus became king and the myths of Cadmus, Hippodamia, Leda, Iphigenia, Perseus, Heracles, Theseus, Jason, the Seven against Thebes, the Trojan War, the Odyssey, Prometheus, Dardanus, Bellerophon, Minos, Io, Hades, the children of Heracles, the loves of Zeus and the brood of Echidna have been checked. A step is told by a source when the links it reaches first (from its figures to people already met) are attested there; a step can list its own `pairs` when its figures reach further than it tells (Medea meets Jason in Colchis, not yet Pelias), and those links wait for their step on the tree. The camera frames the step’s figures and the other ends of the links that tell it.
   - `sources.json` — source groups and their labels.
 - Styles as design tokens (CSS variables) in one file; components separate (tree, card, controls, curse panel, thread panel).
 - Layout computed from data (generation tiers), so new branches can be added by editing JSON only.
@@ -74,3 +74,4 @@ Keep it simple: a static site, no backend.
 - Images in cards: only from Wikimedia Commons or museums with open licences, always with credit. Licence notes per artwork are in the verification document.
 - Hesiod fragment numbering: Catalogue of Women fr. 23a (Merkelbach–West); the Most (Loeb) number still needs checking.
 - Next branches: to be decided.
+- A database: none for now (all data is static JSON, the theme pick is in localStorage). Left for the future, for features readers write to: accounts, favourites, comments, suggested corrections.
