@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, ROWB, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf} from "./data.js";
+import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, ROWB, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf, ALL_STORIES, storyHome} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -49,6 +49,9 @@ function switchFamily(id){
 }
 function goFamily(id){
   openFamilies(false); familyBtn.focus();
+  moveToFamily(id);
+}
+function moveToFamily(id){
   if (familyOf(id).id === FAMILY.id) return;
   const url = new URL(location.href);
   if (id === FAMILIES[0].id) url.searchParams.delete("family"); else url.searchParams.set("family", id);
@@ -448,6 +451,7 @@ function shell(inner){
   });
   // a story opens where the figure comes in, or at its start if the chosen source skips that step
   card.querySelectorAll("[data-story]").forEach(b => b.onclick = () => {
+    if (b.dataset.family) moveToFamily(b.dataset.family);
     const c = STORIES[b.dataset.story], at = +b.dataset.at;
     openCurse(c.id, toldSteps(c)[at-1] ? at : 0);
   });
@@ -575,12 +579,16 @@ function fateWheel(id, me, fates, dot){
     ${fates.length > WHEEL_MAX ? `<text class="cf-more" x="${CF_W/2}" y="${H-6}" text-anchor="middle">and ${fates.length - WHEEL_MAX} more</text>` : ""}
   </svg>`;
 }
-/* The stories a figure takes part in (in this family): each opens at the step where they come in. */
+/* The stories a figure takes part in, in any family: each opens at the step where they come in.
+   A story this family cannot hold opens in its own family, which the line under it names. */
 function storiesOf(id){
-  const list = Object.values(STORIES).map(c => [c, c.steps.findIndex(s => s.figures.includes(id))]).filter(([, i]) => i >= 0);
+  const list = ALL_STORIES.map(c => [c, c.steps.findIndex(s => s.figures.includes(id))]).filter(([, i]) => i >= 0);
   if (!list.length) return "";
-  return `<div class="sec"><h3>In the stories</h3><ul class="opts in-stories">${list.map(([c, i]) =>
-    `<li><button class="opt" data-story="${c.id}" data-at="${i+1}"><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${i ? `From step ${i+1}, ${esc(c.steps[i].label)}` : c.lead}</small></span></button></li>`).join("")}</ul></div>`;
+  return `<div class="sec"><h3>In the stories</h3><ul class="opts in-stories">${list.map(([c, i]) => {
+    const home = STORIES[c.id] ? null : storyHome(c);
+    const where = i ? `From step ${i+1}, ${esc(c.steps[i].label)}` : esc(c.lead);
+    return `<li><button class="opt" data-story="${c.id}" data-at="${i+1}"${home ? ` data-family="${home.id}"` : ""}><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${where}${home ? ` · opens in ${esc(home.label)}` : ""}</small></span></button></li>`;
+  }).join("")}</ul></div>`;
 }
 function renderNode(id){
   const p = N[id];

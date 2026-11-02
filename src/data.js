@@ -60,6 +60,14 @@ export function setFamily(id) {
   STORIES = Object.fromEntries(stories.filter(c => c.pairs.flat().every(inFamily)).map(c => [c.id, {...c, nodes: new Set(c.pairs.flat())}]));
 }
 
+/* Every story, whichever family is shown, and the family it opens in when it is not in this one:
+   the smallest family that holds all its figures (the whole tree if none does). */
+export const ALL_STORIES = stories;
+export function storyHome(c) {
+  const fits = FAMILIES.filter(f => !f.figures || c.pairs.flat().every(id => f.figures.includes(id)));
+  return fits.sort((a, b) => (a.figures ? a.figures.length : 1e9) - (b.figures ? b.figures.length : 1e9))[0] || FAMILIES[0];
+}
+
 setFamily(new URLSearchParams(location.search).get("family"));
 
 /* ---------- the Twelve Olympians: a mark on the figure, not a row ---------- */
