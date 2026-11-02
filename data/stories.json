@@ -25,27 +25,30 @@
       {
         "label": "Generation I",
         "figures": ["tantalus"],
-        "text": "Tantalus serves his son Pelops to the gods. The gods restore the boy; Tantalus is punished forever."
+        "text": "Tantalus serves his son Pelops to the gods. The gods restore the boy, and Tantalus is punished forever in Hades. Pindar refuses to believe it: in his telling, Poseidon carried Pelops off for love.",
+        "pairs": [
+          ["tantalus", "pelops"]
+        ]
       },
       {
         "label": "Generation II",
         "figures": ["pelops", "myrtilus"],
-        "text": "Pelops wins Hippodamia by bribing Myrtilus, then throws him into the sea. Falling, Myrtilus curses Pelops and all his line."
+        "text": "Pelops races King Oenomaus for his daughter Hippodamia. The king’s charioteer Myrtilus, promised a reward, swaps the linchpins of his master’s chariot for wax, and the king is killed. Instead of paying him, Pelops throws Myrtilus into the sea. Falling, Myrtilus curses Pelops and all his line."
       },
       {
         "label": "Generation III",
         "figures": ["atreus", "thyestes"],
-        "text": "Thyestes seduces his brother’s wife and steals the golden lamb. Atreus feeds Thyestes his own sons, and Thyestes curses the house of Atreus."
+        "text": "Thyestes seduces his brother’s wife, Aerope, and with her help takes the golden lamb, and with it the throne. Atreus wins the throne back. Then he kills Thyestes’ sons and serves them to their father at a feast. Thyestes curses the house of Atreus."
       },
       {
         "label": "Generation IV",
         "figures": ["agamemnon", "clytemnestra", "aegisthus"],
-        "text": "Agamemnon sacrifices Iphigenia to sail for Troy. On his return, Clytemnestra and Aegisthus kill him."
+        "text": "On an oracle’s word, Thyestes fathers a son on his own daughter: Aegisthus, who grows up to kill Atreus. Atreus’ son Agamemnon sacrifices his daughter Iphigenia to sail for Troy. While he is away, Aegisthus takes his wife Clytemnestra, and on his return they kill him: at a feast in Homer, in his bath in Aeschylus."
       },
       {
         "label": "Generation V",
         "figures": ["orestes"],
-        "text": "Orestes kills his mother and Aegisthus. Hunted by the Furies, he is tried in Athens and acquitted. The chain breaks."
+        "text": "Orestes, grown up in exile, comes home and, with his sister Electra, kills Aegisthus and his own mother. Hunted by the Furies, he is tried before Athena’s court in Athens and acquitted. The chain breaks."
       }
     ]
   },
@@ -53,7 +56,7 @@
     "id": "labdacus",
     "kind": "curse",
     "title": "The curse on the House of Labdacus",
-    "lead": "A crime in Pelops’s house echoes through Thebes.",
+    "lead": "A crime in Pelops’ house echoes through Thebes.",
     "pairs": [
       ["pelops", "laius"],
       ["pelops", "chrysippus"],
@@ -71,22 +74,22 @@
       {
         "label": "Generation II",
         "figures": ["pelops"],
-        "text": "Laius abducts Chrysippus, the son of Pelops, and Pelops curses him. Only later sources tell this origin."
+        "text": "Driven from Thebes as a boy, Laius, son of Labdacus, finds shelter with Pelops. Teaching Pelops’ son Chrysippus to drive a chariot, he falls in love with him and carries him off, and Pelops curses him. Euripides wrote a play about it, now lost; only later writers tell the curse."
       },
       {
         "label": "Generation IV",
         "figures": ["laius"],
-        "text": "An oracle warns Laius that his son will kill him. He has the infant exposed on a mountain."
+        "text": "In Aeschylus, Apollo warns Laius three times to die childless if he would save the city. In Sophocles, the oracle says his son will kill him. When a son is born, Laius has him left on Mount Cithaeron with his ankles pinned."
       },
       {
         "label": "Generation V",
         "figures": ["oedipus", "jocasta"],
-        "text": "Grown and unaware, Oedipus kills Laius at a crossroads and marries the widowed queen, his mother. When the truth comes out, Jocasta dies and Oedipus blinds himself."
+        "text": "Raised in Corinth and unaware, Oedipus kills Laius at a crossroads. He answers the riddle of the Sphinx and wins the throne and the widowed queen, his mother. When the truth comes out, Jocasta hangs herself and Oedipus blinds himself. In Homer, where she is Epicaste, he goes on ruling Thebes."
       },
       {
         "label": "Generation VI",
         "figures": ["eteocles", "polynices", "antigone"],
-        "text": "Oedipus curses his sons, and they kill each other over Thebes. Antigone buries Polynices against the king’s order and is condemned."
+        "text": "Oedipus curses his sons: in the epic Thebaid, for setting before him Cadmus’ silver table and golden cup, which he had forbidden. Polynices brings the Seven from Argos, and the brothers kill each other at the gate. Antigone buries Polynices against Creon’s order and is condemned to die."
       }
     ]
   },
