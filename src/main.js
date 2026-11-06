@@ -353,7 +353,9 @@ const zoom = d3.zoom().scaleExtent([0.2, 3])
   .on("end", () => { if (panned && !wide()) foldHeader(true); panned = false; });
 svg.call(zoom).on("dblclick.zoom", null);
 const graphEl = document.getElementById("graph");
-const wide = () => window.innerWidth >= 900;
+// a media query, not innerWidth: reading the width mid-pan forces a layout of the whole tree
+const WIDE = matchMedia("(min-width: 900px)");
+const wide = () => WIDE.matches;
 /* The part of the tree not covered by the card: beside it on wide screens, above it on phones. */
 const card = document.getElementById("card");
 const viewW = () => graphEl.clientWidth - (wide() && card.classList.contains("open") ? 420 : 0);
