@@ -290,6 +290,13 @@ let edgeSel, nodeSel;
 /* The tree of the chosen family: rows, dividers and houses, then links, then figures. */
 function drawTree(){
   gGrid.selectAll("*").remove(); gEdges.selectAll("*").remove(); gNodes.selectAll("*").remove();
+  if (LOOK === "stars") {
+    // a star chart's graticule: faint meridians across the rows, and graduations on every rule (one dashed line each)
+    const top = ROWY[0] - 70, bot = ROWB[ROWB.length-1] + 70;
+    for (let x = 120; x < W; x += 240) gGrid.append("line").attr("class","meridian").attr("x1",x).attr("x2",x).attr("y1",top).attr("y2",bot);
+    ROWY.forEach((y,i) => { if (i>0) { const yy = (ROWB[i-1]+y)/2+12; gGrid.append("line").attr("class","ticks").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); } });
+    DIVIDERS.forEach(d => { const yy = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12; gGrid.append("line").attr("class","ticks major").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); });
+  }
   ROWY.forEach((y,i) => {
     if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWB[i-1]+y)/2+12).attr("y2",(ROWB[i-1]+y)/2+12);
   });
@@ -817,12 +824,12 @@ function renderNode(id){
     ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
     ${p.immortal ? `<div class="sec"><h3>Made immortal</h3><ul class="rels"><li><span class="rel static"><svg class="imm-mark" viewBox="-6 -6 12 12" aria-hidden="true"><path class="imm" d="${STAR}"/></svg>${p.immortal.text}</span>${srcText(p.immortal.sources)}</li></ul></div>` : ""}
-    ${p.sky ? skySec(p.sky) : ""}
     ${familySec(id, groups.filter(g => FAMILY_LISTS.includes(g[0])))}
     ${fatesSec(id, groups.filter(g => !FAMILY_LISTS.includes(g[0])))}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
     ${storiesOf(id)}
     ${p.modern ? `<div class="sec"><h3>Not in the ancient sources</h3>${p.modern.map(t => `<div class="ver modern">${t}</div>`).join("")}</div>` : ""}
+    ${p.sky ? skySec(p.sky) : ""}
     ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(artItem).join("")}</ul></div>` : ""}
     <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work; the picture icon shows the work itself.</p>`);
   wirePictures(card);
