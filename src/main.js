@@ -778,14 +778,14 @@ function renderNode(id){
     <p class="card-tag">${p.tagline}</p>
     <p class="card-role">${p.role}</p>
     <p class="card-story">${p.story}</p>
-    ${familySec(id, groups.filter(g => FAMILY_LISTS.includes(g[0])))}
-    ${storiesOf(id)}
     ${p.members ? `<div class="sec"><h3>${p.count ? `${p.count} ${p.members_label || "sisters"}` : "Who they are"}</h3><ul class="rels members">${p.members.map(m => `<li>${m.id && N[m.id] ? `<button class="rel" data-go="${m.id}">${m.name}</button>` : `<span class="rel static">${m.name}</span>`} <span class="greek-sm" lang="grc">${m.greek}</span>${m.note ? `<span class="note">${m.note}</span>` : ""}</li>`).join("")}</ul>${p.members_note ? `<p class="oly-note">${p.members_note}</p>` : ""}</div>` : ""}
     ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
     ${p.immortal ? `<div class="sec"><h3>Made immortal</h3><ul class="rels"><li><span class="rel static"><svg class="imm-mark" viewBox="-6 -6 12 12" aria-hidden="true"><path class="imm" d="${STAR}"/></svg>${p.immortal.text}</span>${srcText(p.immortal.sources)}</li></ul></div>` : ""}
+    ${familySec(id, groups.filter(g => FAMILY_LISTS.includes(g[0])))}
     ${fatesSec(id, groups.filter(g => !FAMILY_LISTS.includes(g[0])))}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
+    ${storiesOf(id)}
     ${p.modern ? `<div class="sec"><h3>Not in the ancient sources</h3>${p.modern.map(t => `<div class="ver modern">${t}</div>`).join("")}</div>` : ""}
     ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(artItem).join("")}</ul></div>` : ""}
     <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work; the picture icon shows the work itself.</p>`);
