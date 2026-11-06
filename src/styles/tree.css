@@ -55,8 +55,9 @@
 .rl{position:absolute;left:20px;width:122px;transform:translateY(-50%);font:600 11px/1.35 var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .rl-divider{color:var(--text)}
 @media (max-width:899px){
-  /* phones: no column, each row name is a small tag just under its row's top rule */
+  /* phones: no column; each name is written on its row's top rule and moves with the tree */
   .rl-col{display:none}
-  .rl{left:8px;width:auto;max-width:calc(100% - 16px);transform:translateY(4px);white-space:nowrap;font-size:9px;line-height:1;letter-spacing:.08em;padding:4px 7px;border-radius:999px;background:color-mix(in srgb,var(--bg) 88%,transparent);border:1px solid var(--rule)}
-  .rl-divider{transform:translateY(calc(-100% - 4px));border-color:var(--text)}
+  .rl{width:auto;transform:translateY(5px);white-space:nowrap;font-size:9.5px;line-height:1;letter-spacing:.1em;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 6px var(--bg)}
+  .rl-divider{transform:translateY(calc(-100% - 5px))}
+  .row-labels.off .rl{display:none}
 }
