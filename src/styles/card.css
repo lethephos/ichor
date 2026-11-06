@@ -22,6 +22,8 @@
 .srcs b{font-weight:600;color:var(--text)}
 .note{font-family:var(--display);font-size:15px;color:var(--muted);flex-basis:100%}
 .ver{font-family:var(--display);font-size:16px;line-height:1.6;border-left:2px solid var(--accent);padding:2px 0 2px 14px}
+.ver.modern{border-left:2px dashed var(--muted)}
+.ver.modern + .ver.modern{margin-top:10px}
 .art li{display:block}
 .art .t{font-family:var(--display);font-size:16px}
 .art a.t{color:var(--text);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
