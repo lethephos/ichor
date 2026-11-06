@@ -43,7 +43,7 @@ function openFamilies(open){
    and the address changes so the family can be shared and the back button returns to the last one. */
 function switchFamily(id){
   hideHint(); state.hover = null; resetMode();
-  setFamily(id);
+  setFamily(id); foldHeader(false);
   showFamily(); buildStories(); indexPeople(); drawTree();
   initialView(); apply(false);
 }
@@ -335,7 +335,11 @@ const rowLabels = document.getElementById("rowLabels");
 function placeRowLabels(t){
   rowLabels.querySelectorAll("[data-y]").forEach(el => el.style.top = `${t.y + el.dataset.y * t.k}px`);
 }
-const zoom = d3.zoom().scaleExtent([0.2, 3]).on("zoom", ev => { root.attr("transform", ev.transform); placeRowLabels(ev.transform); if (ev.sourceEvent) hideHint(); });
+let panned = false;
+const zoom = d3.zoom().scaleExtent([0.2, 3])
+  .on("zoom", ev => { root.attr("transform", ev.transform); placeRowLabels(ev.transform); if (ev.sourceEvent) { hideHint(); panned = true; } })
+  // on phones the header folds away once the reader moves the tree, as it does while a card is open
+  .on("end", () => { if (panned && !wide()) foldHeader(true); panned = false; });
 svg.call(zoom).on("dblclick.zoom", null);
 const graphEl = document.getElementById("graph");
 const wide = () => window.innerWidth >= 900;
@@ -368,7 +372,7 @@ function focusOn(id){
   const tx = wide() ? (w-420)/2 : w/2, ty = viewH()/2;
   svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx-p.x*k, ty-p.y*k).scale(k));
 }
-document.getElementById("fitFloat").onclick = () => fitTo(null, true);
+document.getElementById("fitFloat").onclick = () => { foldHeader(false); fitTo(null, true); };
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }
@@ -471,9 +475,18 @@ card.addEventListener("scroll", () => {
    so the tree keeps the room above the card. The tree is held still on screen as the header goes or comes back. */
 function setSheet(on){
   if (document.body.classList.contains("sheet") === on) return;
+  if (on) holdStill(() => document.body.classList.add("sheet")); else document.body.classList.remove("sheet");
+}
+/* The header also folds once the reader moves the tree; “Whole tree” and a new family bring it back. */
+function foldHeader(on){
+  if (document.body.classList.contains("folded") === on) return;
+  holdStill(() => document.body.classList.toggle("folded", on));
+}
+// change the page around the tree without the tree jumping on screen
+function holdStill(change){
   const before = graphEl.getBoundingClientRect().top;
-  document.body.classList.toggle("sheet", on);
-  const dy = on ? before - graphEl.getBoundingClientRect().top : 0;
+  change();
+  const dy = before - graphEl.getBoundingClientRect().top;
   if (dy) { const t = d3.zoomTransform(graphEl); svg.interrupt().call(zoom.transform, d3.zoomIdentity.translate(t.x, t.y + dy).scale(t.k)); }
 }
 
