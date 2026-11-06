@@ -340,9 +340,9 @@ const rowLabels = document.getElementById("rowLabels");
    (a divider's name sits just above its line), so the tree keeps the whole width. */
 function placeRowLabels(t){
   const w = wide();
-  // on phones a name stays on its line: at the line's start, or at the screen's edge once the start is scrolled off;
+  // on phones a name is fixed at the start of its line and moves with the tree, so it shows only when that part is in view;
   // when the tree is zoomed far out the rows are too close for names, so they hide
-  const left = w ? "" : `${Math.max(t.x, 0) + 8}px`, off = !w && (t.k < 0.32 || t.x + W * t.k < 80);
+  const left = w ? "" : `${t.x + 8}px`, off = !w && t.k < 0.32;
   rowLabels.classList.toggle("off", off);
   rowLabels.querySelectorAll("[data-y]").forEach(el => { el.style.top = `${t.y + (w ? el.dataset.y : el.dataset.yt) * t.k}px`; el.style.left = left; });
 }
