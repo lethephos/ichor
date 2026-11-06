@@ -309,8 +309,25 @@ function drawTree(){
     // with a mouse, hovering a figure previews its links; touch keeps tap-to-open
     .on("pointerenter", (ev,d) => { if (ev.pointerType==="mouse") { state.hover = d.id; apply(150); } })
     .on("pointerleave", (ev,d) => { if (state.hover===d.id) { state.hover = null; apply(150); } });
+  // the star-atlas mockup (?look=atlas): figures are stars, brighter the more links they have
+  const ATLAS = document.documentElement.dataset.look === "atlas";
+  const deg = {}; if (ATLAS) E.forEach(e => { deg[e.from] = (deg[e.from]||0) + 1; deg[e.to] = (deg[e.to]||0) + 1; });
+  const starPath = (n, R, r) => d3.range(n*2).map(i => { const a = Math.PI*i/n - Math.PI/2, q = i%2 ? r : R; return `${i?"L":"M"}${(q*Math.cos(a)).toFixed(2)},${(q*Math.sin(a)).toFixed(2)}`; }).join("") + "Z";
   nodeSel.each(function(d){
     const g = d3.select(this);
+    if (ATLAS) {
+      g.append("circle").attr("class","hit").attr("r",26);
+      g.append("circle").attr("class","halo").attr("r",16);
+      const R = 5.5 + Math.min(deg[d.id]||0, 24) / 24 * 5.5;
+      if (d.kind==="group") [[0,-4.5],[-4.5,3],[4.5,3]].forEach(([x,y]) => g.append("path").attr("class","dot star group").attr("d", starPath(5, 4, 1.7)).attr("transform",`translate(${x},${y})`));
+      else g.append("path").attr("class","dot star " + d.kind).attr("d", d.kind==="god" ? starPath(8, R+1.5, R*0.36) : starPath(5, d.kind==="nymph" ? R-1 : R, R*0.42));
+      if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4 L4,0 L0,4 L-4,0 Z").attr("transform",`translate(${R+6},${-R-2})`);
+      if (d.immortal) g.append("path").attr("class","imm").attr("d",STAR).attr("transform",`translate(${-R-6},${-R-2})`).append("title").text("Made immortal in some sources");
+      if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z").attr("transform",`translate(${-R-6},${-R-2})`).append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
+      const caps = d.kind==="god" || d.kind==="group";
+      g.append("text").attr("class","lbl" + (caps?" god":"")).attr("text-anchor","middle").attr("y", R + 18).text(d.name);
+      return;
+    }
     g.append("circle").attr("class","hit").attr("r",26);
     g.append("circle").attr("class","halo").attr("r",16);
     if (d.kind==="god" || d.kind==="group") g.append("circle").attr("class","ring").attr("r",RN+4);
