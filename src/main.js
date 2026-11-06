@@ -601,7 +601,7 @@ function artItem({title:t, meta:m, where:w, url:u, image:im}){
   const page = COMMONS + encodeURIComponent(im.file.replace(/ /g, "_"));
   return `<li class="has-pic">${link}<button class="pic-btn" aria-expanded="false" aria-label="Show picture of ${esc(t)}" title="Show picture">${PIC_ICON}</button><br><span class="m">${m}. ${w}</span>
     <figure class="art-pic" hidden><img data-src="${im.thumb}" alt="${esc(t)}" decoding="async">
-    <figcaption>${esc(im.credit)} · ${esc(im.licence)}, via <a href="${page}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></li>`;
+    <figcaption>${esc(im.credit)} · ${im.licence_url ? `<a href="${im.licence_url}" target="_blank" rel="noopener">${esc(im.licence)}</a>` : esc(im.licence)}, via <a href="${page}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></li>`;
 }
 function wirePictures(root){
   const hover = matchMedia("(hover: hover) and (pointer: fine)").matches;
@@ -614,7 +614,16 @@ function wirePictures(root){
     btn.onclick = () => { fig.classList.remove("float"); show(fig.hidden); };
     if (hover) {
       let timer;
-      const open = () => { clearTimeout(timer); if (fig.hidden) { fig.classList.add("float"); show(true); } };
+      const open = () => {
+        clearTimeout(timer);
+        if (!fig.hidden) return;
+        fig.classList.add("float"); show(true);
+        // below the title, or above it when the card has no room underneath
+        const room = card.getBoundingClientRect().bottom - t.getBoundingClientRect().bottom;
+        const up = room < 360 && t.getBoundingClientRect().top - card.getBoundingClientRect().top > room;
+        fig.style.top = up ? "auto" : t.offsetTop + t.offsetHeight + 4 + "px";
+        fig.style.bottom = up ? li.offsetHeight - t.offsetTop + 4 + "px" : "auto";
+      };
       const close = () => { timer = setTimeout(() => { if (fig.classList.contains("float")) { show(false); fig.classList.remove("float"); } }, 120); };
       [t, fig].forEach(el => { el.addEventListener("mouseenter", open); el.addEventListener("mouseleave", close); });
       t.addEventListener("focus", open); t.addEventListener("blur", close);
