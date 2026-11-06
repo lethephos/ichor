@@ -71,10 +71,38 @@ header{padding:16px 16px 6px;position:relative}
 }
 @media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }
 
-/* phones, while the card is open or once the tree is moved: the header folds away and the two pills share one line, without their labels */
+/* about: an “i” beside the theme switch, on phones only (the desktop header has room for the subtitle) */
+.info{display:none}
+/* Phones: the header is one line, the wordmark with “i” and the theme switch; the subtitle and the hint live in About.
+   Below it, one line holds the Family and Source pills and the whole-tree button (moved there by placeFit).
+   The header folds away while a card is open or once the tree is moved; the line of pills stays. */
 @media (max-width:899px){
+  header{display:flex;align-items:center;min-height:52px;padding:8px 16px}
+  .wordmark{height:26px}
+  .kicker .tagline{display:none}
+  .theme{top:9px}
+  .info{display:grid;place-items:center;position:absolute;top:9px;right:56px;width:34px;height:34px;padding:0;background:none;border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer}
+  .info svg{width:18px;height:18px}
+  .info circle{fill:currentColor}
+  .info path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .info[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+  .info:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
   body:is(.sheet,.folded) header{display:none}
-  body:is(.sheet,.folded) .controls{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:8px 16px;position:relative}
-  body:is(.sheet,.folded) .famline{position:static;padding:0}
-  body:is(.sheet,.folded) .famline .row-label,body:is(.sheet,.folded) .src-note{display:none}
+  body .controls{flex-direction:row;flex-wrap:nowrap;align-items:center;gap:8px;padding:8px 16px;position:relative}
+  body .controls .famline{position:static;padding:0;min-width:0;flex:0 1 auto}
+  body .controls .famline .row-label{display:none}
+  body .controls .family-pick{min-width:0;max-width:100%}
+  body .controls .family-btn{max-width:100%;min-width:0}
+  #familyName,#srcName{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  body .controls .family-menu{left:16px;right:16px;width:auto}
+  body .srcline{display:contents}
+  /* the source note shows for a few seconds after the reader picks a source, then goes */
+  body .controls .src-note{display:none;position:absolute;left:16px;right:16px;top:calc(100% + 8px);z-index:4;padding:10px 14px;background:var(--bg-2);border:1px solid var(--rule);border-radius:10px;box-shadow:0 6px 20px var(--shadow);-webkit-line-clamp:4}
+  body .controls .src-note.show{display:-webkit-box}
+  body .controls .fit-float{position:static;flex:0 0 auto;margin-left:auto;width:36px;height:36px;padding:0;display:grid;place-items:center;border-radius:50%}
+}
+.fit-float svg{display:none;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:899px){
+  body .controls .fit-float svg{display:block}
+  body .controls .fit-float span{display:none}
 }

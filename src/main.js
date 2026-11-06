@@ -137,6 +137,7 @@ function setSource(k){
   srcRow.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x.dataset.src===k));
   showSource();
   srcNote.textContent = SRC_NOTE[k];
+  if (!wide()) { srcNote.classList.add("show"); clearTimeout(noteTimer); noteTimer = setTimeout(() => srcNote.classList.remove("show"), 4500); }
   if (state.mode==="thread" && state.threadEnds) runThread(...state.threadEnds, true);
   apply(true);
   if (state.mode==="node" && state.sel) renderNode(state.sel);
@@ -145,6 +146,8 @@ function setSource(k){
   requestAnimationFrame(() => nodeSel.filter(d => d.versions).classed("pulse", true));
 }
 srcNote.textContent = SRC_NOTE.all;
+let noteTimer;
+srcNote.addEventListener("click", () => srcNote.classList.remove("show"));
 
 const layerRow = document.getElementById("layerRow");
 function toggleLayer(k){
@@ -232,6 +235,7 @@ toolBtns.forEach(b => b.onclick = () => TOOL_OF[state.mode]===b.dataset.tool ? r
 function syncTools(){
   document.body.classList.toggle("story", state.mode==="curse");
   toolBtns.forEach(b => b.setAttribute("aria-pressed", TOOL_OF[state.mode]===b.dataset.tool));
+  document.getElementById("infoBtn").setAttribute("aria-pressed", state.mode==="about");
   threadBtn.setAttribute("aria-pressed", state.mode==="thread");
 }
 const hint = document.getElementById("hint");
@@ -375,7 +379,14 @@ function focusOn(id){
   const tx = wide() ? (w-420)/2 : w/2, ty = viewH()/2;
   svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx-p.x*k, ty-p.y*k).scale(k));
 }
-document.getElementById("fitFloat").onclick = () => { foldHeader(false); fitTo(null, true); };
+const fitBtn = document.getElementById("fitFloat");
+fitBtn.onclick = () => { foldHeader(false); fitTo(null, true); };
+// on phones the whole-tree button joins the line of pills; on wide screens it sits in the corner of the tree
+function placeFit(){
+  const home = wide() ? document.getElementById("stage") : document.querySelector(".controls");
+  if (fitBtn.parentElement !== home) home.appendChild(fitBtn);
+}
+placeFit(); addEventListener("resize", placeFit);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }
@@ -463,6 +474,7 @@ function shell(inner){
     openCurse(c.id, toldSteps(c)[at-1] ? at : 0);
   });
   setFull(false); setSheet(true); card.classList.add("open"); card.scrollTop = 0;
+  srcNote.classList.remove("show");
   // the bar at the top of the card keeps the name in view once the big one scrolls away
   const nm = document.getElementById("sheetName"), big = cardBody.querySelector(".card-name");
   nm.textContent = big ? big.firstChild.textContent.trim() : "";
@@ -763,6 +775,26 @@ function resetMode(){
 
 /* phone panels: layers, curses, find */
 const panelTop = greek => `<div class="card-top"><span class="greek" lang="grc">${greek}</span><button class="close" data-close>Close</button></div>`;
+/* About (phones): what Ichor is, how to read the tree, and the sources, which the desktop header and hint show in place */
+const infoBtn = document.getElementById("infoBtn");
+infoBtn.onclick = () => state.mode==="about" ? resetMode() : openAbout();
+function openAbout(){
+  state.mode = "about"; state.sel = null; state.path = null; state.curseKey = null;
+  curseSel.value = "";
+  shell(`${panelTop("ἰχώρ")}
+    <h2 class="card-name thread-title">About Ichor</h2>
+    <p class="card-tag">The family tree of Greek myth.</p>
+    <p class="card-story">Gods and heroes in one tree: who descends from whom, who married, loved, fought and cursed whom. Every link names the ancient sources that tell it. Pick a source and watch the family rearrange itself.</p>
+    <div class="sec"><h3>How to read it</h3><ul class="rels about">
+      <li><span class="rel static">Tap a figure to open its card. Pinch to zoom, drag to move.</span></li>
+      <li><span class="rel static">Lower means descended, not later. The rows I–VII count steps down each house, so the houses don’t line up in time.</span></li>
+      <li><span class="rel static">Family picks a part of the tree; Source shows only what one group of ancient writers tells.</span></li>
+    </ul></div>
+    <div class="sec"><h3>The lines</h3><ul class="opts">${LAYERS.map(L => `<li><span class="opt static"><svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}</span></li>`).join("")}</ul></div>
+    <div class="sec"><h3>The sources</h3><ul class="rels">${Object.keys(SRC).map(k => `<li><span class="rel static">${SRC[k]}</span><span class="note">${SRC_FULL[k]}</span></li>`).join("")}</ul></div>`);
+  infoBtn.setAttribute("aria-pressed", "true");
+  apply(true);
+}
 function openLayers(){
   state.mode = "layers"; state.sel = null; state.path = null; state.curseKey = null;
   curseSel.value = "";

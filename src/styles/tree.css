@@ -44,7 +44,7 @@
 .hint.gone{opacity:0}
 .fit-float{position:absolute;right:16px;top:10px;background:var(--bg-2)}
 @media (max-width:899px){
-  .hint{left:12px;top:10px;max-width:calc(100% - 180px);z-index:2;padding:6px 10px;border-radius:8px;background:color-mix(in srgb,var(--bg) 92%,transparent)}
+  .hint{display:none}   /* on phones its words are in About */
 }
 /* in a story, the parents different sources give a figure: dashed gold */
 .e.alt .main{stroke:var(--accent)!important;stroke-dasharray:4 4}
