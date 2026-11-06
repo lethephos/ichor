@@ -290,6 +290,13 @@ let edgeSel, nodeSel;
 /* The tree of the chosen family: rows, dividers and houses, then links, then figures. */
 function drawTree(){
   gGrid.selectAll("*").remove(); gEdges.selectAll("*").remove(); gNodes.selectAll("*").remove();
+  if (LOOK === "stars") {
+    // a star chart's graticule: faint meridians across the rows, and graduations on every rule (one dashed line each)
+    const top = ROWY[0] - 70, bot = ROWB[ROWB.length-1] + 70;
+    for (let x = 120; x < W; x += 240) gGrid.append("line").attr("class","meridian").attr("x1",x).attr("x2",x).attr("y1",top).attr("y2",bot);
+    ROWY.forEach((y,i) => { if (i>0) { const yy = (ROWB[i-1]+y)/2+12; gGrid.append("line").attr("class","ticks").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); } });
+    DIVIDERS.forEach(d => { const yy = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12; gGrid.append("line").attr("class","ticks major").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); });
+  }
   ROWY.forEach((y,i) => {
     if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWB[i-1]+y)/2+12).attr("y2",(ROWB[i-1]+y)/2+12);
   });
