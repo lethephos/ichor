@@ -116,5 +116,19 @@
 .cf-me .dot{fill:var(--accent)}
 .cf-note{font-size:12px;color:var(--muted);margin:6px 0 0}
 .cf-l{paint-order:stroke;stroke:var(--bg-2);stroke-width:5px;stroke-linejoin:round}
-.cf-wheel{margin-top:14px;border-top:1px solid var(--rule);padding-top:10px}
+.cf-wheel{margin-top:4px}
+.cf-src{font:500 9.5px var(--ui);fill:var(--muted);paint-order:stroke;stroke:var(--bg-2);stroke-width:4px}
 .opt.static{cursor:default}
+
+/* family tree in the card: the bands of partners stack under the figure */
+.ft-wrap .cf-svg{margin:0}
+.ft-band.more{display:none}
+.cf-l.kid{font-size:13px}
+.ft-all{display:block;margin:6px 0 0 34px;background:none;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:500 12px var(--ui);color:var(--text);cursor:pointer}
+.ft-all:hover{border-color:var(--muted)}
+details.who{margin-top:12px;border-top:1px solid var(--rule);padding-top:8px}
+details.who summary{cursor:pointer;font:600 12px var(--ui);color:var(--muted);list-style:none;padding:6px 0}
+details.who summary::-webkit-details-marker{display:none}
+details.who summary::before{content:"\25B8";display:inline-block;width:14px;transition:transform .2s}
+details.who[open] summary::before{transform:rotate(90deg)}
+.sec h4{font:600 10.5px var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
