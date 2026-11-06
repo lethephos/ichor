@@ -6,7 +6,7 @@
   --curse:#9A2B17; --accent:#8A5E00;
   --display:"IM Fell English", "GFS Didot", Georgia, serif;
   --caps:"IM Fell English SC", "IM Fell English", Georgia, serif;
-  --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .16 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .16 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
   --sky:none;
 }
 @media (prefers-color-scheme: dark){
@@ -25,9 +25,9 @@
 }
 
 /* paper or sky behind everything, still: it never moves with the tree.
-   Laid paper: fine laid lines, wider chain lines, foxing spots, a darker edge. */
+   Old paper: grain, foxing spots, a darker edge (no laid lines: the reader did not like the stripes). */
 :root[data-look="atlas"]{
-  --laid:repeating-linear-gradient(0deg,rgba(80,60,30,.025) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,transparent 0 60px,rgba(80,60,30,.035) 60px 62px,transparent 62px 64px,rgba(80,60,30,.02) 64px 65px,transparent 65px 120px);
+  --laid:none;
   --fox:radial-gradient(circle at 12% 22%,rgba(150,100,40,.13) 0,transparent 5%),radial-gradient(circle at 78% 64%,rgba(150,100,40,.11) 0,transparent 4%),radial-gradient(circle at 63% 12%,rgba(150,100,40,.09) 0,transparent 3%),radial-gradient(circle at 31% 83%,rgba(150,100,40,.12) 0,transparent 6%),radial-gradient(circle at 90% 30%,rgba(150,100,40,.08) 0,transparent 3%);
   --edge:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(120,80,30,.22) 100%);
 }
