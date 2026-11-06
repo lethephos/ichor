@@ -256,10 +256,14 @@ const gNodes = root.append("g");
 
 const RN = 8;
 // the star-atlas mockup (?look=atlas): figures drawn as Hevelius drew stars
-const ATLAS = document.documentElement.dataset.look === "atlas";
+const LOOK = document.documentElement.dataset.look;
+const ATLAS = LOOK === "atlas" || LOOK === "stars";
 const starPath = (n, R, r) => Array.from({length: n*2}, (_, i) => { const a = Math.PI*i/n - Math.PI/2, q = i%2 ? r : R; return `${i?"L":"M"}${(q*Math.cos(a)).toFixed(2)},${(q*Math.sin(a)).toFixed(2)}`; }).join("") + "Z";
 // a bright star is a dark seal with a jagged rim and a pale star inside; a faint one a small six-rayed star
-const hevStar = (R, cls = "") => R >= 7
+const hevStar = (R, cls = "") => LOOK === "stars"
+  // modern: a bright star is a fine ring round a four-pointed sparkle, a faint one the sparkle alone
+  ? (R >= 7 ? `<circle class="star-ring" r="${R}"/><path class="dot star ${cls}" d="${starPath(4, R*0.72, R*0.17)}"/>` : `<path class="dot star ${cls}" d="${starPath(4, R*1.05, R*0.24)}"/>`)
+  : R >= 7
   ? `<path class="dot star ${cls}" d="${starPath(18, R, R*0.84)}"/><path class="star-in" d="${starPath(8, R*0.66, R*0.24)}"/>`
   : `<path class="dot star ${cls}" d="${starPath(6, R, R*0.42)}"/>`;
 const STAR = "M0,-6 L1.6,-1.6 L6,0 L1.6,1.6 L0,6 L-1.6,1.6 L-6,0 L-1.6,-1.6 Z";   // ambrosia: made immortal
@@ -748,7 +752,7 @@ const PIC_ICON = `<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2
 function skySec(k){
   const page = COMMONS + encodeURIComponent(k.image.file.replace(/ /g, "_"));
   return `<div class="sec sky"><h3>In the sky</h3><p class="sky-name">${k.constellation}</p>
-    <figure class="sky-pic"><img src="${k.image.thumb}" alt="${esc(k.constellation)}, engraved by Johannes Hevelius" loading="lazy" decoding="async">
+    <figure class="sky-pic"><img onclick="this.classList.toggle('orig')" title="Tap for the plate as printed" src="${k.image.thumb}" alt="${esc(k.constellation)}, engraved by Johannes Hevelius" loading="lazy" decoding="async">
     <figcaption>${esc(k.image.credit)} · ${esc(k.image.licence)}, via <a href="${page}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
     <p class="sky-text">${k.text}</p><p class="sky-cite">${k.cite}${srcText(k.sources)}</p></div>`;
 }

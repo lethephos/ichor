@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<script>try{const t=localStorage.getItem("ichor-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(e){}if(/[?&]look=atlas\b/.test(location.search))document.documentElement.dataset.look="atlas";if(/[?&]frame=none\b/.test(location.search))document.documentElement.dataset.frame="none";</script>
+<script>try{const t=localStorage.getItem("ichor-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(e){}var lk=(location.search.match(/[?&]look=(atlas|stars)\b/)||[])[1];if(lk)document.documentElement.dataset.look=lk;if(/[?&]frame=none\b/.test(location.search))document.documentElement.dataset.frame="none";</script>
 <title>Ichor — The family tree of Greek myth</title>
 <meta name="description" content="Gods and heroes of Greek myth in one family tree, with every link traced to the ancient sources that tell it.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
