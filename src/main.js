@@ -775,7 +775,7 @@ function resetMode(){
 
 /* phone panels: layers, curses, find */
 const panelTop = greek => `<div class="card-top"><span class="greek" lang="grc">${greek}</span><button class="close" data-close>Close</button></div>`;
-/* About (phones): what Ichor is, how to read the tree, and the sources, which the desktop header and hint show in place */
+/* About: what Ichor is, how to read the tree, the lines and the sources */
 const infoBtn = document.getElementById("infoBtn");
 infoBtn.onclick = () => state.mode==="about" ? resetMode() : openAbout();
 function openAbout(){
@@ -786,7 +786,7 @@ function openAbout(){
     <p class="card-tag">The family tree of Greek myth.</p>
     <p class="card-story">Gods and heroes in one tree: who descends from whom, who married, loved, fought and cursed whom. Every link names the ancient sources that tell it. Pick a source and watch the family rearrange itself.</p>
     <div class="sec"><h3>How to read it</h3><ul class="rels about">
-      <li><span class="rel static">Tap a figure to open its card. Pinch to zoom, drag to move.</span></li>
+      <li><span class="rel static">Tap a figure to open its card. Pinch or scroll to zoom, drag to move.</span></li>
       <li><span class="rel static">Lower means descended, not later. The rows I–VII count steps down each house, so the houses don’t line up in time.</span></li>
       <li><span class="rel static">Family picks a part of the tree; Source shows only what one group of ancient writers tells.</span></li>
     </ul></div>
