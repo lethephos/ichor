@@ -1,0 +1,78 @@
+/* Mockup: the look of a star atlas (Hevelius, Uranographia, 1690). Only with ?look=atlas.
+   Light = an engraved plate on laid paper; dark = the night sky. Gold stays ichor, red stays curses. */
+:root[data-look="atlas"]{
+  --bg:#EDE3CC; --bg-2:#F6EFDE; --rule:#BCAA86;
+  --text:#231A11; --muted:#5A4831; --line:#33271B; --figure:#231A11;
+  --curse:#9A2B17; --accent:#8A5E00;
+  --display:"IM Fell English", "GFS Didot", Georgia, serif;
+  --caps:"IM Fell English SC", "IM Fell English", Georgia, serif;
+  --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .16 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  --sky:none;
+}
+@media (prefers-color-scheme: dark){
+  :root[data-look="atlas"]:not([data-theme="light"]){
+    --bg:#0D1424; --bg-2:#141C30; --rule:#2B3756;
+    --text:#ECE3CC; --muted:#A7A08A; --line:#B9AC86; --figure:#ECE3CC;
+    --curse:#E0614A; --accent:#E8B54A; --paper:none;
+    --sky:radial-gradient(1px 1px at 23px 41px,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 131px 97px,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 77px 173px,#fff9 50%,transparent 51%),radial-gradient(1px 1px at 191px 19px,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 211px 151px,#fff7 50%,transparent 51%);
+  }
+}
+:root[data-look="atlas"][data-theme="dark"]{
+  --bg:#0D1424; --bg-2:#141C30; --rule:#2B3756;
+  --text:#ECE3CC; --muted:#A7A08A; --line:#B9AC86; --figure:#ECE3CC;
+  --curse:#E0614A; --accent:#E8B54A; --paper:none;
+  --sky:radial-gradient(1px 1px at 23px 41px,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 131px 97px,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 77px 173px,#fff9 50%,transparent 51%),radial-gradient(1px 1px at 191px 19px,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 211px 151px,#fff7 50%,transparent 51%);
+}
+
+/* paper or sky behind everything, still: it never moves with the tree.
+   Old paper: grain, foxing spots, a darker edge (no laid lines: the reader did not like the stripes). */
+:root[data-look="atlas"]{
+  --laid:none;
+  --fox:radial-gradient(circle at 12% 22%,rgba(150,100,40,.13) 0,transparent 5%),radial-gradient(circle at 78% 64%,rgba(150,100,40,.11) 0,transparent 4%),radial-gradient(circle at 63% 12%,rgba(150,100,40,.09) 0,transparent 3%),radial-gradient(circle at 31% 83%,rgba(150,100,40,.12) 0,transparent 6%),radial-gradient(circle at 90% 30%,rgba(150,100,40,.08) 0,transparent 3%);
+  --edge:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(120,80,30,.22) 100%);
+}
+:root[data-look="atlas"][data-theme="dark"]{--laid:none;--fox:none;--edge:radial-gradient(ellipse at 50% 40%,transparent 50%,rgba(0,0,0,.35) 100%)}
+@media (prefers-color-scheme: dark){:root[data-look="atlas"]:not([data-theme="light"]){--laid:none;--fox:none;--edge:radial-gradient(ellipse at 50% 40%,transparent 50%,rgba(0,0,0,.35) 100%)}}
+[data-look="atlas"] body{background:var(--edge),var(--fox),var(--sky),var(--paper),var(--laid),var(--bg);background-size:auto,auto,240px 240px,240px 240px,auto,auto}
+[data-look="atlas"] #card,[data-look="atlas"] .dock{background-image:var(--paper),var(--laid)}
+
+/* the plate's border as Hevelius engraved it: two rules with a band of alternate black and white blocks */
+[data-look="atlas"] #stage::after{content:"";position:absolute;inset:6px;pointer-events:none;z-index:1;
+  border:1px solid var(--line);
+  background:
+    repeating-linear-gradient(90deg,var(--line) 0 16px,transparent 16px 32px) top/100% 5px no-repeat,
+    repeating-linear-gradient(90deg,var(--line) 0 16px,transparent 16px 32px) bottom/100% 5px no-repeat,
+    repeating-linear-gradient(0deg,var(--line) 0 16px,transparent 16px 32px) left/5px 100% no-repeat,
+    repeating-linear-gradient(0deg,var(--line) 0 16px,transparent 16px 32px) right/5px 100% no-repeat;
+  opacity:.75}
+[data-look="atlas"] #stage::before{content:"";position:absolute;inset:11px;pointer-events:none;z-index:1;border:1px solid var(--line);opacity:.75}
+[data-look="atlas"][data-frame="none"] #stage::after,[data-look="atlas"][data-frame="none"] #stage::before{display:none}
+
+/* stars: a bright one is a dark seal with a jagged rim and a pale star inside */
+[data-look="atlas"] .dot.star{fill:var(--figure);stroke:none}
+[data-look="atlas"] .star-in{fill:var(--bg)}
+[data-look="atlas"] .dot.star.other-cycle{fill:var(--bg);stroke:var(--figure);stroke-width:1}
+[data-look="atlas"] .node.sel .dot.star,[data-look="atlas"] .node.ends .dot.star{fill:var(--accent)}
+
+/* names engraved: mortals in italic, gods and groups in spaced small capitals */
+[data-look="atlas"] .lbl{font-family:var(--display);font-style:italic;font-size:17px}
+[data-look="atlas"] .lbl.god{font-family:var(--caps);font-style:normal;letter-spacing:.12em;font-size:15px;fill:var(--text)}
+[data-look="atlas"] .house{font-family:var(--caps);letter-spacing:.2em}
+
+/* lines finer, like constellation figures */
+[data-look="atlas"] .edge.main{stroke-width:.9}
+[data-look="atlas"] .genrule{stroke:var(--rule);stroke-dasharray:1 3}
+[data-look="atlas"] .divider{stroke:var(--line);stroke-width:1}
+
+/* row names read like the scale on the plate's margin */
+[data-look="atlas"] .rl{font:400 13px/1.3 var(--caps);letter-spacing:.14em;text-transform:none}
+@media (max-width:899px){[data-look="atlas"] .rl{font-size:12px}}
+
+/* card and header in the engraver's letters */
+[data-look="atlas"] .card-name,[data-look="atlas"] .card-story,[data-look="atlas"] .card-tag{font-family:var(--display)}
+[data-look="atlas"] .card-tag{font-style:italic}
+[data-look="atlas"] .sec h3{font:400 15px var(--caps);letter-spacing:.12em}
+[data-look="atlas"] .tagline{font-family:var(--display);font-style:italic}
+
+/* the row-name column shows the paper through it */
+[data-look="atlas"] .rl-col{background:linear-gradient(to right,color-mix(in srgb,var(--bg) 70%,transparent) 0,color-mix(in srgb,var(--bg) 50%,transparent) 60%,transparent)}

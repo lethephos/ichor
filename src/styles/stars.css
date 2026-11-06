@@ -1,0 +1,52 @@
+/* Mockup: a modern star chart that keeps Hevelius’ idea. Only with ?look=stars.
+   Clean ivory by day, graphite by night; figures as stars, the engravings as fine line drawings.
+   Gold stays ichor, red stays curses. */
+:root[data-look="stars"]{
+  --bg:#F5F2EB; --bg-2:#FCFAF6; --rule:#DDD5C6;
+  --text:#18171B; --muted:#5E574C; --line:#2E2D33; --figure:#18171B;
+  --curse:#AE2F1A; --accent:#8A5E00;
+}
+@media (prefers-color-scheme: dark){
+  :root[data-look="stars"]:not([data-theme="light"]){
+    --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
+    --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
+    --curse:#E8604A; --accent:#E8B54A;
+  }
+}
+:root[data-look="stars"][data-theme="dark"]{
+  --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
+  --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
+  --curse:#E8604A; --accent:#E8B54A;
+}
+[data-look="stars"] body{background:var(--dust,none),var(--glow,none),var(--bg);background-size:240px 240px,auto,auto}
+
+/* stars: a fine ring round a sparkle for the bright, the sparkle alone for the faint */
+[data-look="stars"] .dot.star{fill:var(--figure);stroke:none}
+[data-look="stars"] .star-ring{fill:none;stroke:var(--figure);stroke-width:1}
+[data-look="stars"] .dot.star.other-cycle{fill:none;stroke:var(--figure);stroke-width:.9}
+[data-look="stars"] .node.sel .dot.star,[data-look="stars"] .node.ends .dot.star{fill:var(--accent)}
+[data-look="stars"] .node.sel .star-ring,[data-look="stars"] .node.ends .star-ring{stroke:var(--accent)}
+
+/* names as on a modern chart: gods and groups in spaced capitals, mortals in the display serif */
+[data-look="stars"] .lbl{font-family:var(--display);font-size:16px}
+[data-look="stars"] .lbl.god{font:600 11.5px var(--ui);letter-spacing:.18em;text-transform:uppercase;fill:var(--text)}
+[data-look="stars"] .house{font:500 13px var(--ui);letter-spacing:.32em;text-transform:uppercase}
+
+/* hairlines */
+[data-look="stars"] .edge.main{stroke-width:.8}
+[data-look="stars"] .genrule{stroke:var(--rule)}
+[data-look="stars"] .divider{stroke:var(--line);stroke-width:.8}
+
+/* card */
+[data-look="stars"] .sec h3{font:600 10.5px var(--ui);letter-spacing:.2em;text-transform:uppercase}
+[data-look="stars"] .sky-name{font:600 12px var(--ui);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+
+/* Hevelius’ engraving as a line drawing on the page: ink on ivory, light on the night.
+   A tap shows the plate as it is. */
+[data-look="stars"] .sky-pic img{border:0;border-radius:10px;background:none;cursor:pointer;clip-path:inset(1.2% round 10px);
+  filter:grayscale(1) brightness(1.2) contrast(1.45);mix-blend-mode:multiply;transition:filter .3s}
+@media (prefers-color-scheme: dark){
+  [data-look="stars"]:not([data-theme="light"]) .sky-pic img{filter:grayscale(1) invert(1) contrast(1.3) brightness(.95);mix-blend-mode:screen}
+}
+[data-look="stars"][data-theme="dark"] .sky-pic img{filter:grayscale(1) invert(1) contrast(1.3) brightness(.95);mix-blend-mode:screen}
+[data-look="stars"] .sky-pic img.orig{filter:none;mix-blend-mode:normal}
