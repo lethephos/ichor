@@ -31,9 +31,10 @@ header{padding:16px 16px 6px;position:relative}
 .theme:hover{border-color:var(--muted)}
 .theme:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
 .theme svg{width:17px;height:17px;grid-area:1/1}
-.theme .moon{fill:currentColor}
-.theme .sun{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
-.theme .sun circle{fill:currentColor;stroke:none}
+.theme .moon{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linejoin:round}
+.theme .spark,.info .spark,.fit-float .spark{fill:currentColor;stroke:none}
+.theme .sun{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round}
+.theme .sun .core{fill:currentColor;stroke:none}
 .theme .sun,.theme.dark .moon{display:none}
 .theme.dark .sun{display:block}
 @media (min-width:900px){ .theme{top:18px;right:24px} }
@@ -74,8 +75,7 @@ header{padding:16px 16px 6px;position:relative}
 /* about: an “i” beside the theme switch */
 .info{display:grid;place-items:center;position:absolute;top:10px;right:56px;width:34px;height:34px;padding:0;background:none;border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer}
 .info svg{width:18px;height:18px}
-.info circle{fill:currentColor}
-.info path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.info path{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
 .info:hover{border-color:var(--muted)}
 .info[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
 .info:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
@@ -103,7 +103,7 @@ header{padding:16px 16px 6px;position:relative}
   body .controls .src-note.show{display:-webkit-box}
   body .controls .fit-float{position:static;flex:0 0 auto;margin-left:auto;width:36px;height:36px;padding:0;display:grid;place-items:center;border-radius:50%}
 }
-.fit-float svg{display:none;width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.fit-float svg{display:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width:899px){
   body .controls .fit-float svg{display:block}
   body .controls .fit-float span{display:none}
