@@ -590,6 +590,46 @@ function storiesOf(id){
     return `<li><button class="opt" data-story="${c.id}" data-at="${i+1}"${home ? ` data-family="${home.id}"` : ""}><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${where}${home ? ` · opens in ${esc(home.label)}` : ""}</small></span></button></li>`;
   }).join("")}</ul></div>`;
 }
+/* In art: the titles are links; a picture from Wikimedia Commons shows only on demand, as a preview:
+   on hover or focus where there is a mouse, by a small button on touch screens. It is loaded the first time it opens,
+   with its credit and licence; if it cannot be loaded, the preview and its button go away. */
+const COMMONS = "https://commons.wikimedia.org/wiki/File:";
+const PIC_ICON = `<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor"/><circle cx="5.5" cy="6.5" r="1.3" fill="currentColor"/><path d="M2 12 L6.5 8.5 L9 10.5 L11.5 8 L14 10.5" fill="none" stroke="currentColor"/></svg>`;
+function artItem({title:t, meta:m, where:w, url:u, image:im}){
+  const link = u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t" tabindex="0">${t}</span>`;
+  if (!im) return `<li>${link}<br><span class="m">${m}. ${w}</span></li>`;
+  const page = COMMONS + encodeURIComponent(im.file.replace(/ /g, "_"));
+  return `<li class="has-pic">${link}<button class="pic-btn" aria-expanded="false" aria-label="Show picture of ${esc(t)}" title="Show picture">${PIC_ICON}</button><br><span class="m">${m}. ${w}</span>
+    <figure class="art-pic" hidden><img data-src="${im.thumb}" alt="${esc(t)}" decoding="async">
+    <figcaption>${esc(im.credit)} · ${im.licence_url ? `<a href="${im.licence_url}" target="_blank" rel="noopener">${esc(im.licence)}</a>` : esc(im.licence)}, via <a href="${page}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></li>`;
+}
+function wirePictures(root){
+  const hover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  root.querySelectorAll(".has-pic").forEach(li => {
+    const fig = li.querySelector(".art-pic"), img = fig.querySelector("img"), btn = li.querySelector(".pic-btn"), t = li.querySelector(".t");
+    const show = on => {
+      if (on && !img.src) { img.onerror = () => { fig.remove(); btn.remove(); }; img.src = img.dataset.src; }
+      fig.hidden = !on; btn.setAttribute("aria-expanded", on);
+    };
+    btn.onclick = () => { fig.classList.remove("float"); show(fig.hidden); };
+    if (hover) {
+      let timer;
+      const open = () => {
+        clearTimeout(timer);
+        if (!fig.hidden) return;
+        fig.classList.add("float"); show(true);
+        // below the title, or above it when the card has no room underneath
+        const room = card.getBoundingClientRect().bottom - t.getBoundingClientRect().bottom;
+        const up = room < 360 && t.getBoundingClientRect().top - card.getBoundingClientRect().top > room;
+        fig.style.top = up ? "auto" : t.offsetTop + t.offsetHeight + 4 + "px";
+        fig.style.bottom = up ? li.offsetHeight - t.offsetTop + 4 + "px" : "auto";
+      };
+      const close = () => { timer = setTimeout(() => { if (fig.classList.contains("float")) { show(false); fig.classList.remove("float"); } }, 120); };
+      [t, fig].forEach(el => { el.addEventListener("mouseenter", open); el.addEventListener("mouseleave", close); });
+      t.addEventListener("focus", open); t.addEventListener("blur", close);
+    }
+  });
+}
 function renderNode(id){
   const p = N[id];
   const touches = e => e.from===id || e.to===id;
@@ -619,8 +659,9 @@ function renderNode(id){
     ${p.immortal ? `<div class="sec"><h3>Made immortal</h3><ul class="rels"><li><span class="rel static"><svg class="imm-mark" viewBox="-6 -6 12 12" aria-hidden="true"><path class="imm" d="${STAR}"/></svg>${p.immortal.text}</span>${srcText(p.immortal.sources)}</li></ul></div>` : ""}
     ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
-    ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(({title:t, meta:m, where:w, url:u}) => `<li>${u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t">${t}</span>`}<br><span class="m">${m}. ${w}</span></li>`).join("")}</ul></div>` : ""}
-    <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work.</p>`);
+    ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(artItem).join("")}</ul></div>` : ""}
+    <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work; the picture icon shows the work itself.</p>`);
+  wirePictures(card);
 }
 function select(id, move){
   state.mode = "node"; state.sel = id; state.path = null;

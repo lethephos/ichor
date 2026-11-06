@@ -682,7 +682,14 @@
         "title": "Ludovisi Ares",
         "meta": "Roman copy, 2nd century AD, of a Greek original",
         "where": "Palazzo Altemps, Rome",
-        "url": "https://en.wikipedia.org/wiki/Ludovisi_Ares"
+        "url": "https://en.wikipedia.org/wiki/Ludovisi_Ares",
+        "image": {
+          "file": "Ludovisi Ares - Palazzo Altemps - Rome 2015.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Ludovisi_Ares_-_Palazzo_Altemps_-_Rome_2015.jpg/960px-Ludovisi_Ares_-_Palazzo_Altemps_-_Rome_2015.jpg",
+          "credit": "Photo: José Luiz",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -702,7 +709,14 @@
         "title": "Hermes and the Infant Dionysus",
         "meta": "attributed to Praxiteles; some scholars date it later",
         "where": "Archaeological Museum of Olympia",
-        "url": "https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus"
+        "url": "https://en.wikipedia.org/wiki/Hermes_and_the_Infant_Dionysus",
+        "image": {
+          "file": "Hermes and the infant Dionysus by Praxiteles.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Hermes_and_the_infant_Dionysus_by_Praxiteles.jpg/960px-Hermes_and_the_infant_Dionysus_by_Praxiteles.jpg",
+          "credit": "Photo: Dwaisman",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -738,7 +752,14 @@
         "title": "Artemision Bronze, Zeus or Poseidon",
         "meta": "c. 460 BC",
         "where": "National Archaeological Museum, Athens",
-        "url": "https://en.wikipedia.org/wiki/Artemision_Bronze"
+        "url": "https://en.wikipedia.org/wiki/Artemision_Bronze",
+        "image": {
+          "file": "Bronze Zeus or Poseidon NAMA X 15161 Athens Greece.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Bronze_Zeus_or_Poseidon_NAMA_X_15161_Athens_Greece.jpg/960px-Bronze_Zeus_or_Poseidon_NAMA_X_15161_Athens_Greece.jpg",
+          "credit": "Photo: Jebulon",
+          "licence": "CC0",
+          "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
       }
     ]
   },
@@ -782,7 +803,14 @@
         "title": "Diana of Versailles",
         "meta": "Roman copy of a Greek bronze attributed to Leochares",
         "where": "Louvre, Paris",
-        "url": "https://collections.louvre.fr/ark:/53355/cl010278930"
+        "url": "https://collections.louvre.fr/ark:/53355/cl010278930",
+        "image": {
+          "file": "Diane de Versailles - Musée du Louvre AGER Ma 589.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Diane_de_Versailles_-_Mus%C3%A9e_du_Louvre_AGER_Ma_589.jpg/960px-Diane_de_Versailles_-_Mus%C3%A9e_du_Louvre_AGER_Ma_589.jpg",
+          "credit": "Photo: Shonagon",
+          "licence": "CC0",
+          "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
       }
     ]
   },
@@ -964,7 +992,14 @@
         "title": "East pediment, Temple of Zeus at Olympia",
         "meta": "c. 460 BC",
         "where": "Archaeological Museum of Olympia",
-        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia",
+        "image": {
+          "file": "AMO Temple-Zeus East-Pediment 20230924 125643.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg/960px-AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg",
+          "credit": "Photo: Rigorius",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -985,7 +1020,14 @@
         "title": "Tantalus, from The Four Disgracers",
         "meta": "Hendrick Goltzius after Cornelis van Haarlem, 1588",
         "where": "engraving; this impression at the Metropolitan Museum of Art",
-        "url": "https://www.metmuseum.org/art/collection/search/343579"
+        "url": "https://www.metmuseum.org/art/collection/search/343579",
+        "image": {
+          "file": "Tantalus, from The Four Disgracers MET DP108228.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Tantalus%2C_from_The_Four_Disgracers_MET_DP108228.jpg/960px-Tantalus%2C_from_The_Four_Disgracers_MET_DP108228.jpg",
+          "credit": "Hendrick Goltzius; Metropolitan Museum of Art",
+          "licence": "CC0",
+          "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
       }
     ]
   },
@@ -1093,7 +1135,14 @@
         "title": "East pediment, Temple of Zeus at Olympia",
         "meta": "c. 460 BC; a kneeling figure is often identified as Myrtilus",
         "where": "Archaeological Museum of Olympia",
-        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia",
+        "image": {
+          "file": "AMO Temple-Zeus East-Pediment 20230924 125643.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg/960px-AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg",
+          "credit": "Photo: Rigorius",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -1113,7 +1162,14 @@
         "title": "East pediment, Temple of Zeus at Olympia",
         "meta": "c. 460 BC",
         "where": "Archaeological Museum of Olympia",
-        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia",
+        "image": {
+          "file": "AMO Temple-Zeus East-Pediment 20230924 125643.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg/960px-AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg",
+          "credit": "Photo: Rigorius",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -1134,7 +1190,14 @@
         "title": "East pediment, Temple of Zeus at Olympia",
         "meta": "c. 460 BC",
         "where": "Archaeological Museum of Olympia",
-        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia"
+        "url": "https://en.wikipedia.org/wiki/Eastern_pediment_of_the_Temple_of_Zeus_at_Olympia",
+        "image": {
+          "file": "AMO Temple-Zeus East-Pediment 20230924 125643.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg/960px-AMO_Temple-Zeus_East-Pediment_20230924_125643.jpg",
+          "credit": "Photo: Rigorius",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -1158,13 +1221,26 @@
         "title": "Niobe with Her Younger Daughter",
         "meta": "Roman, first half of the 2nd century AD",
         "where": "Uffizi, Florence",
-        "url": "https://www.uffizi.it/en/artworks/niobe-with-her-younger-daughter"
+        "url": "https://www.uffizi.it/en/artworks/niobe-with-her-younger-daughter",
+        "image": {
+          "file": "Niobe e la figlia minore, II sec. d.C., Galleria degli Uffizi -FG.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Niobe_e_la_figlia_minore%2C_II_sec._d.C.%2C_Galleria_degli_Uffizi_-FG.jpg/960px-Niobe_e_la_figlia_minore%2C_II_sec._d.C.%2C_Galleria_degli_Uffizi_-FG.jpg",
+          "credit": "Photo: Fabrizio Garrisi",
+          "licence": "CC0",
+          "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
       },
       {
         "title": "Apollo and Diana Attacking the Children of Niobe",
         "meta": "Jacques-Louis David, 1772",
         "where": "Dallas Museum of Art",
-        "url": "https://en.wikipedia.org/wiki/Diana_and_Apollo_Killing_Niobe%27s_Children"
+        "url": "https://en.wikipedia.org/wiki/Diana_and_Apollo_Killing_Niobe%27s_Children",
+        "image": {
+          "file": "Apollo and Diana Attacking the Children of Niobe by Jacques-Louis David.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Apollo_and_Diana_Attacking_the_Children_of_Niobe_by_Jacques-Louis_David.jpg/960px-Apollo_and_Diana_Attacking_the_Children_of_Niobe_by_Jacques-Louis_David.jpg",
+          "credit": "Jacques-Louis David; Dallas Museum of Art",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1198,7 +1274,14 @@
         "title": "The Murder of Laius by Oedipus",
         "meta": "Joseph Blanc, 1867",
         "where": "École des Beaux-Arts, Paris",
-        "url": "https://en.wikipedia.org/wiki/Joseph_Blanc"
+        "url": "https://en.wikipedia.org/wiki/Joseph_Blanc",
+        "image": {
+          "file": "Joseph Blanc Le meurtre de Laïus.JPG",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/37/Joseph_Blanc_Le_meurtre_de_La%C3%AFus.JPG",
+          "credit": "Photo: VladoubidoOo",
+          "licence": "CC BY-SA 3.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        }
       }
     ]
   },
@@ -1278,7 +1361,13 @@
         "title": "Leda and the Swan",
         "meta": "Correggio, c. 1532",
         "where": "Gemäldegalerie, Berlin",
-        "url": "https://recherche.smb.museum/detail/862455/leda-mit-dem-schwan"
+        "url": "https://recherche.smb.museum/detail/862455/leda-mit-dem-schwan",
+        "image": {
+          "file": "Correggio - Leda and the Swan - Google Art Project.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Correggio_-_Leda_and_the_Swan_-_Google_Art_Project.jpg/960px-Correggio_-_Leda_and_the_Swan_-_Google_Art_Project.jpg",
+          "credit": "Correggio",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1299,7 +1388,14 @@
         "title": "Theseus and the Minotaur",
         "meta": "Antonio Canova, 1781–82",
         "where": "Victoria and Albert Museum, London",
-        "url": "https://collections.vam.ac.uk/item/O96376/theseus-and-the-minotaur-statue-canova-antonio"
+        "url": "https://collections.vam.ac.uk/item/O96376/theseus-and-the-minotaur-statue-canova-antonio",
+        "image": {
+          "file": "Theseus and the Minotaur by Antonio Canova, Victoria and Albert Museum.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Theseus_and_the_Minotaur_by_Antonio_Canova%2C_Victoria_and_Albert_Museum.jpg/960px-Theseus_and_the_Minotaur_by_Antonio_Canova%2C_Victoria_and_Albert_Museum.jpg",
+          "credit": "Photo: APK",
+          "licence": "CC BY 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by/4.0/"
+        }
       }
     ]
   },
@@ -1320,13 +1416,25 @@
         "title": "Oedipus and the Sphinx",
         "meta": "Jean-Auguste-Dominique Ingres, 1808, reworked 1827",
         "where": "Louvre, Paris",
-        "url": "https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_(Ingres)"
+        "url": "https://en.wikipedia.org/wiki/Oedipus_and_the_Sphinx_(Ingres)",
+        "image": {
+          "file": "IngresOdipusAndSphinx.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/IngresOdipusAndSphinx.jpg/960px-IngresOdipusAndSphinx.jpg",
+          "credit": "Jean-Auguste-Dominique Ingres",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "Oedipus and Antigone, or The Plague of Thebes",
         "meta": "Charles Jalabert, 1842",
         "where": "Musée des Beaux-Arts, Marseille",
-        "url": "https://en.wikipedia.org/wiki/Charles_Jalabert"
+        "url": "https://en.wikipedia.org/wiki/Charles_Jalabert",
+        "image": {
+          "file": "The Plague of Thebes.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/The_Plague_of_Thebes.jpg/960px-The_Plague_of_Thebes.jpg",
+          "credit": "Charles Jalabert",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1360,7 +1468,14 @@
         "title": "The Mask of Agamemnon",
         "meta": "gold funerary mask, c. 1550–1500 BC, centuries older than any Trojan War",
         "where": "National Archaeological Museum, Athens",
-        "url": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon"
+        "url": "https://en.wikipedia.org/wiki/Mask_of_Agamemnon",
+        "image": {
+          "file": "MaskeAgamemnon.JPG",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/MaskeAgamemnon.JPG/960px-MaskeAgamemnon.JPG",
+          "credit": "Photo: DieBuche",
+          "licence": "CC BY-SA 3.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        }
       }
     ]
   },
@@ -1385,7 +1500,14 @@
         "title": "The Pasquino Group, Menelaus Supporting the Body of Patroclus",
         "meta": "Roman copy; some scholars read it as Ajax with Achilles",
         "where": "Loggia dei Lanzi, Florence",
-        "url": "https://en.wikipedia.org/wiki/Pasquino_Group"
+        "url": "https://en.wikipedia.org/wiki/Pasquino_Group",
+        "image": {
+          "file": "Statue Pasquino Group in Loggia dei Lanzi.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Statue_Pasquino_Group_in_Loggia_dei_Lanzi.jpg/960px-Statue_Pasquino_Group_in_Loggia_dei_Lanzi.jpg",
+          "credit": "Photo: Yanko Malinov",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -1418,13 +1540,25 @@
         "title": "Clytemnestra",
         "meta": "John Collier, 1882",
         "where": "Guildhall Art Gallery, London",
-        "url": "https://en.wikipedia.org/wiki/Clytemnestra_(Collier)"
+        "url": "https://en.wikipedia.org/wiki/Clytemnestra_(Collier)",
+        "image": {
+          "file": "Collier-Clytemnestra after the murder.jpg",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Collier-Clytemnestra_after_the_murder.jpg",
+          "credit": "John Collier",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "Clytemnestra Hesitates before Killing the Sleeping Agamemnon",
         "meta": "Pierre-Narcisse Guérin, 1817",
         "where": "Louvre, Paris",
-        "url": "https://mythopedia.com/topics/clytemnestra/"
+        "url": "https://mythopedia.com/topics/clytemnestra/",
+        "image": {
+          "file": "Pierre-Narcisse Guérin - Clytemnestra and Agamemnon - WGA10974.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Pierre-Narcisse_Gu%C3%A9rin_-_Clytemnestra_and_Agamemnon_-_WGA10974.jpg/960px-Pierre-Narcisse_Gu%C3%A9rin_-_Clytemnestra_and_Agamemnon_-_WGA10974.jpg",
+          "credit": "Pierre-Narcisse Guérin",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1449,13 +1583,26 @@
         "title": "Helen of Troy",
         "meta": "Evelyn De Morgan, 1898",
         "where": "De Morgan Collection, shown at Wightwick Manor",
-        "url": "https://en.wikipedia.org/wiki/Helen_of_Troy_(painting)"
+        "url": "https://en.wikipedia.org/wiki/Helen_of_Troy_(painting)",
+        "image": {
+          "file": "Helen of Troy.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Helen_of_Troy.jpg/960px-Helen_of_Troy.jpg",
+          "credit": "Evelyn De Morgan",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "The Abduction of Helen",
         "meta": "Guido Reni, 1628–31",
         "where": "Louvre, Paris",
-        "url": "https://en.wikipedia.org/wiki/The_Abduction_of_Helen_(Reni)"
+        "url": "https://en.wikipedia.org/wiki/The_Abduction_of_Helen_(Reni)",
+        "image": {
+          "file": "The Abduction of Helen by Guido Reni, Department of Paintings, Louvre.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/The_Abduction_of_Helen_by_Guido_Reni%2C_Department_of_Paintings%2C_Louvre.jpg/960px-The_Abduction_of_Helen_by_Guido_Reni%2C_Department_of_Paintings%2C_Louvre.jpg",
+          "credit": "Photo: Anup Sadi",
+          "licence": "CC BY-SA 4.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
       }
     ]
   },
@@ -1476,7 +1623,13 @@
         "title": "The Judgement of Paris",
         "meta": "Peter Paul Rubens, probably 1632–35",
         "where": "National Gallery, London",
-        "url": "https://www.nationalgallery.org.uk/paintings/NG194"
+        "url": "https://www.nationalgallery.org.uk/paintings/NG194",
+        "image": {
+          "file": "Rubens - Judgement of Paris.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Rubens_-_Judgement_of_Paris.jpg/960px-Rubens_-_Judgement_of_Paris.jpg",
+          "credit": "Peter Paul Rubens; National Gallery, London",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1500,7 +1653,14 @@
         "title": "The San Ildefonso Group",
         "meta": "Roman, c. 10 BC; read as Castor and Pollux, or as Orestes and Pylades",
         "where": "Prado, Madrid",
-        "url": "https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62"
+        "url": "https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62",
+        "image": {
+          "file": "Grupo de Orestes y Pílades (Museo del Prado).jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Grupo_de_Orestes_y_P%C3%ADlades_%28Museo_del_Prado%29.jpg/960px-Grupo_de_Orestes_y_P%C3%ADlades_%28Museo_del_Prado%29.jpg",
+          "credit": "Photo: Carole Raddato",
+          "licence": "CC BY-SA 2.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        }
       }
     ]
   },
@@ -1525,7 +1685,13 @@
         "title": "The Rape of the Daughters of Leucippus",
         "meta": "Peter Paul Rubens with Jan Wildens, c. 1618",
         "where": "Alte Pinakothek, Munich",
-        "url": "https://www.sammlung.pinakothek.de/en/artwork/5RGQJo84z3/peter-paul-rubens/raub-der-toechter-des-leukippos"
+        "url": "https://www.sammlung.pinakothek.de/en/artwork/5RGQJo84z3/peter-paul-rubens/raub-der-toechter-des-leukippos",
+        "image": {
+          "file": "Peter Paul Rubens - The Rape of the Daughters of Leucippus.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Peter_Paul_Rubens_-_The_Rape_of_the_Daughters_of_Leucippus.jpg/960px-Peter_Paul_Rubens_-_The_Rape_of_the_Daughters_of_Leucippus.jpg",
+          "credit": "Peter Paul Rubens",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1557,7 +1723,13 @@
         "title": "Antigone in Front of the Dead Polyneikes",
         "meta": "Nikiforos Lytras, 1865",
         "where": "National Gallery, Athens",
-        "url": "https://www.nationalgallery.gr/en/artist/lytras-nikephoros/"
+        "url": "https://www.nationalgallery.gr/en/artist/lytras-nikephoros/",
+        "image": {
+          "file": "Lytras nikiforos antigone polynices.jpeg",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Lytras_nikiforos_antigone_polynices.jpeg",
+          "credit": "Nikiforos Lytras",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1577,13 +1749,25 @@
         "title": "Antigone in Front of the Dead Polyneikes",
         "meta": "Nikiforos Lytras, 1865",
         "where": "National Gallery, Athens",
-        "url": "https://www.nationalgallery.gr/en/artist/lytras-nikephoros/"
+        "url": "https://www.nationalgallery.gr/en/artist/lytras-nikephoros/",
+        "image": {
+          "file": "Lytras nikiforos antigone polynices.jpeg",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Lytras_nikiforos_antigone_polynices.jpeg",
+          "credit": "Nikiforos Lytras",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "Oedipus and Antigone, or The Plague of Thebes",
         "meta": "Charles Jalabert, 1842",
         "where": "Musée des Beaux-Arts, Marseille",
-        "url": "https://en.wikipedia.org/wiki/Charles_Jalabert"
+        "url": "https://en.wikipedia.org/wiki/Charles_Jalabert",
+        "image": {
+          "file": "The Plague of Thebes.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/The_Plague_of_Thebes.jpg/960px-The_Plague_of_Thebes.jpg",
+          "credit": "Charles Jalabert",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1615,13 +1799,26 @@
         "title": "Pylades and Orestes Brought as Victims before Iphigenia",
         "meta": "Benjamin West, 1766",
         "where": "Tate Britain, London",
-        "url": "https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia"
+        "url": "https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia",
+        "image": {
+          "file": "Benjamin West - Pylades and Orestes Brought as Victims before Iphigenia - Google Art Project.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Benjamin_West_-_Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia_-_Google_Art_Project.jpg/960px-Benjamin_West_-_Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia_-_Google_Art_Project.jpg",
+          "credit": "Benjamin West",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "The San Ildefonso Group",
         "meta": "Roman, c. 10 BC; the Prado reads it as Orestes and Pylades",
         "where": "Prado, Madrid",
-        "url": "https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62"
+        "url": "https://www.museodelprado.es/en/the-collection/art-work/orestes-and-pylades-or-the-san-ildefonso-group/a3dbf0c5-cf98-46c7-a02b-f82db6dcab62",
+        "image": {
+          "file": "Grupo de Orestes y Pílades (Museo del Prado).jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Grupo_de_Orestes_y_P%C3%ADlades_%28Museo_del_Prado%29.jpg/960px-Grupo_de_Orestes_y_P%C3%ADlades_%28Museo_del_Prado%29.jpg",
+          "credit": "Photo: Carole Raddato",
+          "licence": "CC BY-SA 2.0",
+          "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/"
+        }
       }
     ]
   },
@@ -1642,7 +1839,13 @@
         "title": "Electra at the Tomb of Agamemnon",
         "meta": "Frederic Leighton, c. 1869",
         "where": "Ferens Art Gallery, Hull",
-        "url": "https://www.rbkc.gov.uk/lordleightonsdrawings/ldcollection/paintingrecord.asp?workid=762"
+        "url": "https://www.rbkc.gov.uk/lordleightonsdrawings/ldcollection/paintingrecord.asp?workid=762",
+        "image": {
+          "file": "1869 Frederic Leighton - Electra at the Tomb of Agamemnon.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/1869_Frederic_Leighton_-_Electra_at_the_Tomb_of_Agamemnon.jpg/960px-1869_Frederic_Leighton_-_Electra_at_the_Tomb_of_Agamemnon.jpg",
+          "credit": "Frederic Leighton",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1683,13 +1886,25 @@
         "title": "The Sacrifice of Iphigenia",
         "meta": "Giovanni Battista Tiepolo, 1757",
         "where": "Villa Valmarana ai Nani, Vicenza",
-        "url": "https://venetoaroundme.regione.veneto.it/en/node/96060"
+        "url": "https://venetoaroundme.regione.veneto.it/en/node/96060",
+        "image": {
+          "file": "Giovanni Battista Tiepolo - The Sacrifice of Iphigenia - Villa Valmarana.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Giovanni_Battista_Tiepolo_-_The_Sacrifice_of_Iphigenia_-_Villa_Valmarana.jpg/960px-Giovanni_Battista_Tiepolo_-_The_Sacrifice_of_Iphigenia_-_Villa_Valmarana.jpg",
+          "credit": "Giovanni Battista Tiepolo",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "The Sacrifice of Iphigenia, wall painting",
         "meta": "1st century AD, from the House of the Tragic Poet, Pompeii",
         "where": "National Archaeological Museum, Naples (inv. 9112)",
-        "url": "https://www.worldhistory.org/image/3853/the-sacrifice-of-iphigenia/"
+        "url": "https://www.worldhistory.org/image/3853/the-sacrifice-of-iphigenia/",
+        "image": {
+          "file": "MANNapoli 9112 Sacrifice Iphigenia painting.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/MANNapoli_9112_Sacrifice_Iphigenia_painting.jpg/960px-MANNapoli_9112_Sacrifice_Iphigenia_painting.jpg",
+          "credit": "National Archaeological Museum, Naples",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1709,13 +1924,25 @@
         "title": "Orestes Pursued by the Furies (The Remorse of Orestes)",
         "meta": "William-Adolphe Bouguereau, 1862",
         "where": "Chrysler Museum of Art, Norfolk",
-        "url": "https://chrysler.emuseum.com/objects/27206"
+        "url": "https://chrysler.emuseum.com/objects/27206",
+        "image": {
+          "file": "Orestes Pursued by the Furies by William-Adolphe Bouguereau (1862) - Google Art Project.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Orestes_Pursued_by_the_Furies_by_William-Adolphe_Bouguereau_%281862%29_-_Google_Art_Project.jpg/960px-Orestes_Pursued_by_the_Furies_by_William-Adolphe_Bouguereau_%281862%29_-_Google_Art_Project.jpg",
+          "credit": "William-Adolphe Bouguereau",
+          "licence": "Public domain"
+        }
       },
       {
         "title": "Pylades and Orestes Brought as Victims before Iphigenia",
         "meta": "Benjamin West, 1766",
         "where": "Tate Britain, London",
-        "url": "https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia"
+        "url": "https://en.wikipedia.org/wiki/Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia",
+        "image": {
+          "file": "Benjamin West - Pylades and Orestes Brought as Victims before Iphigenia - Google Art Project.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Benjamin_West_-_Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia_-_Google_Art_Project.jpg/960px-Benjamin_West_-_Pylades_and_Orestes_Brought_as_Victims_before_Iphigenia_-_Google_Art_Project.jpg",
+          "credit": "Benjamin West",
+          "licence": "Public domain"
+        }
       }
     ]
   },
@@ -1736,7 +1963,13 @@
         "title": "Clytemnestra Hesitates before Killing the Sleeping Agamemnon",
         "meta": "Pierre-Narcisse Guérin, 1817; Aegisthus urges her on",
         "where": "Louvre, Paris",
-        "url": "https://mythopedia.com/topics/clytemnestra/"
+        "url": "https://mythopedia.com/topics/clytemnestra/",
+        "image": {
+          "file": "Pierre-Narcisse Guérin - Clytemnestra and Agamemnon - WGA10974.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Pierre-Narcisse_Gu%C3%A9rin_-_Clytemnestra_and_Agamemnon_-_WGA10974.jpg/960px-Pierre-Narcisse_Gu%C3%A9rin_-_Clytemnestra_and_Agamemnon_-_WGA10974.jpg",
+          "credit": "Pierre-Narcisse Guérin",
+          "licence": "Public domain"
+        }
       }
     ]
   },
