@@ -71,8 +71,15 @@ header{padding:16px 16px 6px;position:relative}
 }
 @media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }
 
-/* about: an “i” beside the theme switch, on phones only (the desktop header has room for the subtitle) */
-.info{display:none}
+/* about: an “i” beside the theme switch */
+.info{display:grid;place-items:center;position:absolute;top:10px;right:56px;width:34px;height:34px;padding:0;background:none;border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer}
+.info svg{width:18px;height:18px}
+.info circle{fill:currentColor}
+.info path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.info:hover{border-color:var(--muted)}
+.info[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+.info:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+@media (min-width:900px){ .info{top:18px;right:68px} }
 /* Phones: the header is one line, the wordmark with “i” and the theme switch; the subtitle and the hint live in About.
    Below it, one line holds the Family and Source pills and the whole-tree button (moved there by placeFit).
    The header folds away while a card is open or once the tree is moved; the line of pills stays. */
@@ -81,12 +88,7 @@ header{padding:16px 16px 6px;position:relative}
   .wordmark{height:26px}
   .kicker .tagline{display:none}
   .theme{top:9px}
-  .info{display:grid;place-items:center;position:absolute;top:9px;right:56px;width:34px;height:34px;padding:0;background:none;border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer}
-  .info svg{width:18px;height:18px}
-  .info circle{fill:currentColor}
-  .info path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-  .info[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
-  .info:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+  .info{top:9px}
   body:is(.sheet,.folded) header{display:none}
   body .controls{flex-direction:row;flex-wrap:nowrap;align-items:center;gap:8px;padding:8px 16px;position:relative}
   body .controls .famline{position:static;padding:0;min-width:0;flex:0 1 auto}

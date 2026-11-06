@@ -3,7 +3,7 @@
     "id": "cursed-houses",
     "title": "Gods and heroes",
     "subtitle": "",
-    "tiers": ["The first gods", "Titans", "Children of the Titans", "The younger gods", "I", "II", "III", "IV", "V", "VI", "VII"],
+    "tiers": ["The first gods", "Titans and their kin", "Zeus and his kin", "The younger gods", "I", "II", "III", "IV", "V", "VI", "VII"],
     "focus": "pelops",
     "houses": [
       {
