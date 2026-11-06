@@ -137,6 +137,7 @@ function setSource(k){
   srcRow.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x.dataset.src===k));
   showSource();
   srcNote.textContent = SRC_NOTE[k];
+  if (!wide()) { srcNote.classList.add("show"); clearTimeout(noteTimer); noteTimer = setTimeout(() => srcNote.classList.remove("show"), 4500); }
   if (state.mode==="thread" && state.threadEnds) runThread(...state.threadEnds, true);
   apply(true);
   if (state.mode==="node" && state.sel) renderNode(state.sel);
@@ -145,6 +146,8 @@ function setSource(k){
   requestAnimationFrame(() => nodeSel.filter(d => d.versions).classed("pulse", true));
 }
 srcNote.textContent = SRC_NOTE.all;
+let noteTimer;
+srcNote.addEventListener("click", () => srcNote.classList.remove("show"));
 
 const layerRow = document.getElementById("layerRow");
 function toggleLayer(k){
@@ -232,6 +235,7 @@ toolBtns.forEach(b => b.onclick = () => TOOL_OF[state.mode]===b.dataset.tool ? r
 function syncTools(){
   document.body.classList.toggle("story", state.mode==="curse");
   toolBtns.forEach(b => b.setAttribute("aria-pressed", TOOL_OF[state.mode]===b.dataset.tool));
+  document.getElementById("infoBtn").setAttribute("aria-pressed", state.mode==="about");
   threadBtn.setAttribute("aria-pressed", state.mode==="thread");
 }
 const hint = document.getElementById("hint");
@@ -279,14 +283,14 @@ function drawTree(){
     if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWB[i-1]+y)/2+12).attr("y2",(ROWB[i-1]+y)/2+12);
   });
   // a divider is a stronger rule between two rows (e.g. where the gods end and mortals begin)
-  const labels = GENS.map((g, i) => ({text: g, y: ROWY[i], cls: "rl"}));
+  const labels = GENS.map((g, i) => ({text: g, y: ROWY[i], yt: i ? (ROWB[i-1] + ROWY[i]) / 2 + 12 : ROWY[0] - 46, cls: "rl"}));
   DIVIDERS.forEach(d => {
     const y = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12;
     gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
-    labels.push({text: d.label, y, cls: "rl rl-divider"});
+    labels.push({text: d.label, y, yt: y, cls: "rl rl-divider"});
   });
   // row names live in a column pinned to the left edge of the screen (see placeRowLabels)
-  rowLabels.innerHTML = `<div class="rl-col"></div>` + labels.map(l => `<div class="${l.cls}" data-y="${l.y}">${l.text}</div>`).join("");
+  rowLabels.innerHTML = `<div class="rl-col"></div>` + labels.map(l => `<div class="${l.cls}" data-y="${l.y}" data-yt="${l.yt}">${l.text}</div>`).join("");
   HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
 
   edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class", e => `e e-${e.type}`);
@@ -332,8 +336,11 @@ svg.on("click", () => { if (state.mode==="node") resetMode(); });
 /* Row names stay readable at any zoom: they sit in a column on the left of the screen,
    at a fixed size, and only follow their row up and down. */
 const rowLabels = document.getElementById("rowLabels");
+/* On phones there is no column: each name is a small tag at the left edge, just under its row's top rule
+   (a divider's name sits just above its line), so the tree keeps the whole width. */
 function placeRowLabels(t){
-  rowLabels.querySelectorAll("[data-y]").forEach(el => el.style.top = `${t.y + el.dataset.y * t.k}px`);
+  const w = wide();
+  rowLabels.querySelectorAll("[data-y]").forEach(el => el.style.top = `${t.y + (w ? el.dataset.y : el.dataset.yt) * t.k}px`);
 }
 let panned = false;
 const zoom = d3.zoom().scaleExtent([0.2, 3])
@@ -372,7 +379,14 @@ function focusOn(id){
   const tx = wide() ? (w-420)/2 : w/2, ty = viewH()/2;
   svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx-p.x*k, ty-p.y*k).scale(k));
 }
-document.getElementById("fitFloat").onclick = () => { foldHeader(false); fitTo(null, true); };
+const fitBtn = document.getElementById("fitFloat");
+fitBtn.onclick = () => { foldHeader(false); fitTo(null, true); };
+// on phones the whole-tree button joins the line of pills; on wide screens it sits in the corner of the tree
+function placeFit(){
+  const home = wide() ? document.getElementById("stage") : document.querySelector(".controls");
+  if (fitBtn.parentElement !== home) home.appendChild(fitBtn);
+}
+placeFit(); addEventListener("resize", placeFit);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }
@@ -460,17 +474,54 @@ function shell(inner){
     openCurse(c.id, toldSteps(c)[at-1] ? at : 0);
   });
   setFull(false); setSheet(true); card.classList.add("open"); card.scrollTop = 0;
+  srcNote.classList.remove("show");
   // the bar at the top of the card keeps the name in view once the big one scrolls away
   const nm = document.getElementById("sheetName"), big = cardBody.querySelector(".card-name");
   nm.textContent = big ? big.firstChild.textContent.trim() : "";
   nm.classList.remove("on");
+  buildNav();
 }
 const sheetName = document.getElementById("sheetName");
 document.getElementById("sheetClose").onclick = () => resetMode();
 card.addEventListener("scroll", () => {
   const big = cardBody.querySelector(".card-name");
   sheetName.classList.toggle("on", !!big && big.getBoundingClientRect().bottom < card.getBoundingClientRect().top + 44);
+  spyNav();
 }, {passive: true});
+card.addEventListener("scrollend", () => { navLock = 0; }, {passive: true});
+/* A long card gets a row of section names under its bar: tap one to jump there; the one being read is marked. */
+const sheetBar = document.getElementById("sheetBar"), sheetNav = document.getElementById("sheetNav");
+const NAV_LABEL = {"Close family":"Family", "In the stories":"Stories", "The Twelve":"Twelve", "Changed shape":"Shape",
+  "Made immortal":"Immortal", "Born to":"Parents", "Feuds & killings":"Feuds", "Transformations":"Changes",
+  "Where the sources disagree":"Versions", "Not in the ancient sources":"Not ancient", "In art":"Art", "Who they are":"Members"};
+let navSecs = [], navLock = 0;
+function buildNav(){
+  navSecs = [...cardBody.querySelectorAll(".sec > h3")].map(h => h.parentElement);
+  if (navSecs.length < 3) { navSecs = []; sheetNav.innerHTML = ""; sheetBar.classList.remove("has-nav"); return; }
+  const label = s => { const h = s.querySelector("h3").textContent; return s.querySelector(".members") ? "Members" : NAV_LABEL[h] || h; };
+  sheetNav.innerHTML = `<button type="button" class="nav-chip on" data-sec="-1">About</button>` +
+    navSecs.map((s, i) => `<button type="button" class="nav-chip" data-sec="${i}">${label(s)}</button>`).join("");
+  sheetBar.classList.add("has-nav"); sheetNav.scrollLeft = 0;
+  sheetNav.querySelectorAll(".nav-chip").forEach(b => b.onclick = () => {
+    const i = +b.dataset.sec, top = i < 0 ? 0 : card.scrollTop + navSecs[i].getBoundingClientRect().top - sheetBar.getBoundingClientRect().bottom - 8;
+    navLock = Date.now() + 1500; markNav(i);
+    card.scrollTo({top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+  });
+}
+function spyNav(){
+  if (!navSecs.length || Date.now() < navLock) return;
+  const line = sheetBar.getBoundingClientRect().bottom + 24;
+  let i = -1; navSecs.forEach((s, k) => { if (s.getBoundingClientRect().top <= line) i = k; });
+  if (card.scrollTop + card.clientHeight >= card.scrollHeight - 2 && i < navSecs.length - 1 && i >= 0) i = Math.max(i, navSecs.findIndex(s => s.getBoundingClientRect().top < card.getBoundingClientRect().bottom - 80));
+  markNav(i);
+}
+function markNav(i){
+  sheetNav.querySelectorAll(".nav-chip").forEach(b => {
+    const on = +b.dataset.sec === i; b.classList.toggle("on", on);
+    if (on) { const l = b.offsetLeft - sheetNav.offsetLeft, r = l + b.offsetWidth;
+      if (l < sheetNav.scrollLeft + 16 || r > sheetNav.scrollLeft + sheetNav.clientWidth - 16) sheetNav.scrollTo({left: l - 22, behavior: "smooth"}); }
+  });
+}
 /* On phones, while the card is open the page header folds away and only the Family and Source pills stay,
    so the tree keeps the room above the card. The tree is held still on screen as the header goes or comes back. */
 function setSheet(on){
@@ -724,6 +775,26 @@ function resetMode(){
 
 /* phone panels: layers, curses, find */
 const panelTop = greek => `<div class="card-top"><span class="greek" lang="grc">${greek}</span><button class="close" data-close>Close</button></div>`;
+/* About (phones): what Ichor is, how to read the tree, and the sources, which the desktop header and hint show in place */
+const infoBtn = document.getElementById("infoBtn");
+infoBtn.onclick = () => state.mode==="about" ? resetMode() : openAbout();
+function openAbout(){
+  state.mode = "about"; state.sel = null; state.path = null; state.curseKey = null;
+  curseSel.value = "";
+  shell(`${panelTop("ἰχώρ")}
+    <h2 class="card-name thread-title">About Ichor</h2>
+    <p class="card-tag">The family tree of Greek myth.</p>
+    <p class="card-story">Gods and heroes in one tree: who descends from whom, who married, loved, fought and cursed whom. Every link names the ancient sources that tell it. Pick a source and watch the family rearrange itself.</p>
+    <div class="sec"><h3>How to read it</h3><ul class="rels about">
+      <li><span class="rel static">Tap a figure to open its card. Pinch to zoom, drag to move.</span></li>
+      <li><span class="rel static">Lower means descended, not later. The rows I–VII count steps down each house, so the houses don’t line up in time.</span></li>
+      <li><span class="rel static">Family picks a part of the tree; Source shows only what one group of ancient writers tells.</span></li>
+    </ul></div>
+    <div class="sec"><h3>The lines</h3><ul class="opts">${LAYERS.map(L => `<li><span class="opt static"><svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}</span></li>`).join("")}</ul></div>
+    <div class="sec"><h3>The sources</h3><ul class="rels">${Object.keys(SRC).map(k => `<li><span class="rel static">${SRC[k]}</span><span class="note">${SRC_FULL[k]}</span></li>`).join("")}</ul></div>`);
+  infoBtn.setAttribute("aria-pressed", "true");
+  apply(true);
+}
 function openLayers(){
   state.mode = "layers"; state.sel = null; state.path = null; state.curseKey = null;
   curseSel.value = "";
