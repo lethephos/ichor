@@ -70,3 +70,11 @@ header{padding:16px 16px 6px;position:relative}
   #srcRow{display:none}
 }
 @media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }
+
+/* phones, while the card is open or once the tree is moved: the header folds away and the two pills share one line, without their labels */
+@media (max-width:899px){
+  body:is(.sheet,.folded) header{display:none}
+  body:is(.sheet,.folded) .controls{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:8px 16px;position:relative}
+  body:is(.sheet,.folded) .famline{position:static;padding:0}
+  body:is(.sheet,.folded) .famline .row-label,body:is(.sheet,.folded) .src-note{display:none}
+}
