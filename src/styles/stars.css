@@ -1,5 +1,5 @@
 /* Mockup: a modern star chart that keeps Hevelius’ idea. Only with ?look=stars.
-   Clean ivory by day, a deep night by night; figures as stars, the engravings as fine line drawings.
+   Clean ivory by day, graphite by night; figures as stars, the engravings as fine line drawings.
    Gold stays ichor, red stays curses. */
 :root[data-look="stars"]{
   --bg:#F5F2EB; --bg-2:#FCFAF6; --rule:#DDD5C6;
@@ -8,19 +8,15 @@
 }
 @media (prefers-color-scheme: dark){
   :root[data-look="stars"]:not([data-theme="light"]){
-    --bg:#0A0F1E; --bg-2:#10172A; --rule:#24304C;
-    --text:#ECE8E0; --muted:#9CA3B6; --line:#AEB5C8; --figure:#F3EFE6;
-    --curse:#F06A52; --accent:#F0C35A;
-    --dust:radial-gradient(1px 1px at 23px 41px,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 131px 97px,#fff5 50%,transparent 51%),radial-gradient(1.4px 1.4px at 77px 173px,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 191px 19px,#fff4 50%,transparent 51%),radial-gradient(1px 1px at 211px 151px,#fff6 50%,transparent 51%);
-    --glow:radial-gradient(ellipse at 50% 30%,#1A2442 0,transparent 70%);
+    --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
+    --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
+    --curse:#E8604A; --accent:#E8B54A;
   }
 }
 :root[data-look="stars"][data-theme="dark"]{
-  --bg:#0A0F1E; --bg-2:#10172A; --rule:#24304C;
-  --text:#ECE8E0; --muted:#9CA3B6; --line:#AEB5C8; --figure:#F3EFE6;
-  --curse:#F06A52; --accent:#F0C35A;
-  --dust:radial-gradient(1px 1px at 23px 41px,#fff7 50%,transparent 51%),radial-gradient(1px 1px at 131px 97px,#fff5 50%,transparent 51%),radial-gradient(1.4px 1.4px at 77px 173px,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 191px 19px,#fff4 50%,transparent 51%),radial-gradient(1px 1px at 211px 151px,#fff6 50%,transparent 51%);
-  --glow:radial-gradient(ellipse at 50% 30%,#1A2442 0,transparent 70%);
+  --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
+  --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
+  --curse:#E8604A; --accent:#E8B54A;
 }
 [data-look="stars"] body{background:var(--dust,none),var(--glow,none),var(--bg);background-size:240px 240px,auto,auto}
 
