@@ -24,23 +24,34 @@
   --sky:radial-gradient(1px 1px at 23px 41px,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 131px 97px,#fff6 50%,transparent 51%),radial-gradient(1.5px 1.5px at 77px 173px,#fff9 50%,transparent 51%),radial-gradient(1px 1px at 191px 19px,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 211px 151px,#fff7 50%,transparent 51%);
 }
 
-/* paper or sky behind everything, still: it never moves with the tree */
-[data-look="atlas"] body{background:var(--sky), var(--paper), var(--bg);background-size:240px 240px, 240px 240px, auto}
-[data-look="atlas"] #card, [data-look="atlas"] .dock{background-image:var(--paper)}
+/* paper or sky behind everything, still: it never moves with the tree.
+   Laid paper: fine laid lines, wider chain lines, foxing spots, a darker edge. */
+:root[data-look="atlas"]{
+  --laid:repeating-linear-gradient(0deg,rgba(80,60,30,.025) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,transparent 0 60px,rgba(80,60,30,.035) 60px 62px,transparent 62px 64px,rgba(80,60,30,.02) 64px 65px,transparent 65px 120px);
+  --fox:radial-gradient(circle at 12% 22%,rgba(150,100,40,.13) 0,transparent 5%),radial-gradient(circle at 78% 64%,rgba(150,100,40,.11) 0,transparent 4%),radial-gradient(circle at 63% 12%,rgba(150,100,40,.09) 0,transparent 3%),radial-gradient(circle at 31% 83%,rgba(150,100,40,.12) 0,transparent 6%),radial-gradient(circle at 90% 30%,rgba(150,100,40,.08) 0,transparent 3%);
+  --edge:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(120,80,30,.22) 100%);
+}
+:root[data-look="atlas"][data-theme="dark"]{--laid:none;--fox:none;--edge:radial-gradient(ellipse at 50% 40%,transparent 50%,rgba(0,0,0,.35) 100%)}
+@media (prefers-color-scheme: dark){:root[data-look="atlas"]:not([data-theme="light"]){--laid:none;--fox:none;--edge:radial-gradient(ellipse at 50% 40%,transparent 50%,rgba(0,0,0,.35) 100%)}}
+[data-look="atlas"] body{background:var(--edge),var(--fox),var(--sky),var(--paper),var(--laid),var(--bg);background-size:auto,auto,240px 240px,240px 240px,auto,auto}
+[data-look="atlas"] #card,[data-look="atlas"] .dock{background-image:var(--paper),var(--laid)}
 
-/* the plate's frame: a double rule with a graduated scale, as round an atlas plate */
-[data-look="atlas"] #stage::after{content:"";position:absolute;inset:8px;pointer-events:none;z-index:1;
-  border:3px double var(--line);
+/* the plate's border as Hevelius engraved it: two rules with a band of alternate black and white blocks */
+[data-look="atlas"] #stage::after{content:"";position:absolute;inset:6px;pointer-events:none;z-index:1;
+  border:1px solid var(--line);
   background:
-    repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 24px) top left/100% 6px no-repeat,
-    repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 24px) bottom left/100% 6px no-repeat,
-    repeating-linear-gradient(0deg,var(--line) 0 1px,transparent 1px 24px) top left/6px 100% no-repeat,
-    repeating-linear-gradient(0deg,var(--line) 0 1px,transparent 1px 24px) top right/6px 100% no-repeat;
-  opacity:.7}
+    repeating-linear-gradient(90deg,var(--line) 0 16px,transparent 16px 32px) top/100% 5px no-repeat,
+    repeating-linear-gradient(90deg,var(--line) 0 16px,transparent 16px 32px) bottom/100% 5px no-repeat,
+    repeating-linear-gradient(0deg,var(--line) 0 16px,transparent 16px 32px) left/5px 100% no-repeat,
+    repeating-linear-gradient(0deg,var(--line) 0 16px,transparent 16px 32px) right/5px 100% no-repeat;
+  opacity:.75}
+[data-look="atlas"] #stage::before{content:"";position:absolute;inset:11px;pointer-events:none;z-index:1;border:1px solid var(--line);opacity:.75}
+[data-look="atlas"][data-frame="none"] #stage::after,[data-look="atlas"][data-frame="none"] #stage::before{display:none}
 
-/* stars */
+/* stars: a bright one is a dark seal with a jagged rim and a pale star inside */
 [data-look="atlas"] .dot.star{fill:var(--figure);stroke:none}
-[data-look="atlas"] .dot.star.other-cycle{fill:none;stroke:var(--figure);stroke-width:1;stroke-dasharray:none}
+[data-look="atlas"] .star-in{fill:var(--bg)}
+[data-look="atlas"] .dot.star.other-cycle{fill:var(--bg);stroke:var(--figure);stroke-width:1}
 [data-look="atlas"] .node.sel .dot.star,[data-look="atlas"] .node.ends .dot.star{fill:var(--accent)}
 
 /* names engraved: mortals in italic, gods and groups in spaced small capitals */
@@ -62,3 +73,6 @@
 [data-look="atlas"] .card-tag{font-style:italic}
 [data-look="atlas"] .sec h3{font:400 15px var(--caps);letter-spacing:.12em}
 [data-look="atlas"] .tagline{font-family:var(--display);font-style:italic}
+
+/* the row-name column shows the paper through it */
+[data-look="atlas"] .rl-col{background:linear-gradient(to right,color-mix(in srgb,var(--bg) 70%,transparent) 0,color-mix(in srgb,var(--bg) 50%,transparent) 60%,transparent)}

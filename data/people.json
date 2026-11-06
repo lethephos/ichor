@@ -507,7 +507,23 @@
       }
     ],
     "members_note": "Maia is drawn on her own.",
-    "versions": "Hesiod calls them simply ‘born of Atlas’; Apollodorus and Ovid name their mother, Pleione. Ovid says only six can be seen, because Merope hides, ashamed that she married a mortal. Others say it was Electra who hid her face, so as not to watch Troy fall."
+    "versions": "Hesiod calls them simply ‘born of Atlas’; Apollodorus and Ovid name their mother, Pleione. Ovid says only six can be seen, because Merope hides, ashamed that she married a mortal. Others say it was Electra who hid her face, so as not to watch Troy fall.",
+    "sky": {
+      "constellation": "Pleiades",
+      "text": "Homer and Hesiod already count the Pleiades, daughters of Atlas, among the stars. Hyginus says Zeus put them in the sky when Orion chased them, and that only six of the seven can be seen.",
+      "cite": "Iliad 18.486; Works and Days 383; Hyginus, Astronomica 2.21",
+      "sources": [
+        "E",
+        "H",
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Prodromus Astronomia - Volume III \"Firmamentum Sobiescianum, sive uranographia\" - Tavola CC - Taurus.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/38/Johannes_Hevelius_-_Prodromus_Astronomia_-_Volume_III_%22Firmamentum_Sobiescianum%2C_sive_uranographia%22_-_Tavola_CC_-_Taurus.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "dione",
@@ -764,7 +780,21 @@
           "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
         }
       }
-    ]
+    ],
+    "sky": {
+      "constellation": "Cygnus",
+      "text": "The Swan. Zeus took a swan’s shape to reach Nemesis, and put the swan, with the eagle that seemed to chase it, among the stars.",
+      "cite": "Hyginus, Astronomica 2.8",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Cygnus.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Johannes_Hevelius_-_Cygnus.jpg/960px-Johannes_Hevelius_-_Cygnus.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "nemesis",
@@ -1667,7 +1697,21 @@
           "licence_url": "https://creativecommons.org/licenses/by-sa/2.0/"
         }
       }
-    ]
+    ],
+    "sky": {
+      "constellation": "Gemini",
+      "text": "The Twins. Many say they are Castor and Polydeuces, the most loving of brothers, whom Zeus made bright stars.",
+      "cite": "Hyginus, Astronomica 2.22",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Prodromus Astronomia - Volume III \"Firmamentum Sobiescianum, sive uranographia\" - Tavola DD - Gemini.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Johannes_Hevelius_-_Prodromus_Astronomia_-_Volume_III_%22Firmamentum_Sobiescianum%2C_sive_uranographia%22_-_Tavola_DD_-_Gemini.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "polydeuces",
@@ -1698,7 +1742,21 @@
           "licence": "Public domain"
         }
       }
-    ]
+    ],
+    "sky": {
+      "constellation": "Gemini",
+      "text": "The Twins. Many say they are Castor and Polydeuces, the most loving of brothers, whom Zeus made bright stars.",
+      "cite": "Hyginus, Astronomica 2.22",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Prodromus Astronomia - Volume III \"Firmamentum Sobiescianum, sive uranographia\" - Tavola DD - Gemini.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Johannes_Hevelius_-_Prodromus_Astronomia_-_Volume_III_%22Firmamentum_Sobiescianum%2C_sive_uranographia%22_-_Tavola_DD_-_Gemini.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "eteocles",
@@ -2038,7 +2096,21 @@
     "role": "Slayer of the Gorgon",
     "tagline": "Brought back a head that turned men to stone.",
     "story": "Son of Zeus and Danaë. Sent to fetch the Gorgon’s head, he cut it off with help from Athena and Hermes, without looking at her. On the way home he freed Andromeda from a sea monster and married her. He killed his grandfather by accident, as the oracle had said.",
-    "versions": "Apollodorus: ashamed to rule Argos after the death, he exchanged it for Tiryns. Ovid: Medusa’s head turns Phineus and his men to stone at the wedding feast."
+    "versions": "Apollodorus: ashamed to rule Argos after the death, he exchanged it for Tiryns. Ovid: Medusa’s head turns Phineus and his men to stone at the wedding feast.",
+    "sky": {
+      "constellation": "Perseus",
+      "text": "Raised to the stars, Hyginus says, for his noble birth and the strange way he was fathered, in a shower of gold.",
+      "cite": "Hyginus, Astronomica 2.12",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Perseus.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Johannes_Hevelius_-_Perseus.jpg/960px-Johannes_Hevelius_-_Perseus.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "andromeda",
@@ -2050,7 +2122,21 @@
     "branch": "cursed-houses",
     "role": "Princess of Ethiopia",
     "tagline": "Chained to a rock for her mother’s boast.",
-    "story": "Her mother Cassiopeia boasted she was lovelier than the Nereids, and Poseidon sent a flood and a sea monster. Andromeda was chained to a rock as its prey. Perseus killed the monster and married her."
+    "story": "Her mother Cassiopeia boasted she was lovelier than the Nereids, and Poseidon sent a flood and a sea monster. Andromeda was chained to a rock as its prey. Perseus killed the monster and married her.",
+    "sky": {
+      "constellation": "Andromeda",
+      "text": "Athena set her among the stars for Perseus’ sake, who freed her from the sea monster.",
+      "cite": "Hyginus, Astronomica 2.11",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Andromeda.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Johannes_Hevelius_-_Andromeda.jpg/960px-Johannes_Hevelius_-_Andromeda.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "medusa",
@@ -2197,6 +2283,20 @@
     "immortal": {
       "text": "Taken up from his pyre to Olympus, married to Hebe; only his shade is seen in Hades",
       "sources": ["E", "H", "T", "A", "L"]
+    },
+    "sky": {
+      "constellation": "Hercules",
+      "text": "The Kneeler. Eratosthenes says it is Heracles, kneeling over the serpent of the Hesperides with the lion skin and the club. Zeus admired the fight and set it among the stars.",
+      "cite": "Hyginus, Astronomica 2.6",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Hercules.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Johannes_Hevelius_-_Hercules.jpg/960px-Johannes_Hevelius_-_Hercules.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
     }
   },
   {
@@ -2487,7 +2587,21 @@
     "role": "Singer of the Argo",
     "tagline": "Out-sang the Sirens.",
     "story": "Son of the Muse Calliope. His lyre moved trees and stones. He sailed with the Argonauts, and when they passed the Sirens he played so loudly that his crewmates heard him instead. When his wife Eurydice died, he went down to Hades and sang until he was allowed to lead her back, but he looked round too soon and lost her. In the end the Maenads tore him apart in Thrace.",
-    "versions": "Apollodorus: son of Calliope and Oeagrus. Pindar seems to make him a son of Apollo. Pausanias denies that his mother was a Muse."
+    "versions": "Apollodorus: son of Calliope and Oeagrus. Pindar seems to make him a son of Apollo. Pausanias denies that his mother was a Muse.",
+    "sky": {
+      "constellation": "Lyra",
+      "text": "The Lyre. After the Maenads tore Orpheus apart, the Muses buried him and set his lyre among the stars, as Apollo and Zeus allowed.",
+      "cite": "Hyginus, Astronomica 2.7",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Lyra.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Johannes_Hevelius_-_Lyra.jpg/960px-Johannes_Hevelius_-_Lyra.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "dardanus",
@@ -2567,6 +2681,20 @@
     "immortal": {
       "text": "Made deathless and ageless, to pour the gods’ wine on Olympus",
       "sources": ["E", "A", "L"]
+    },
+    "sky": {
+      "constellation": "Aquarius",
+      "text": "The Water-bearer. Many say it is Ganymede, pouring water as cup-bearer of the gods; the Eagle that carried him off flies above him.",
+      "cite": "Hyginus, Astronomica 2.29, 2.16",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Prodromus Astronomia - Volume III \"Firmamentum Sobiescianum, sive uranographia\" - Tavola MM - Aquarius.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Johannes_Hevelius_-_Prodromus_Astronomia_-_Volume_III_%22Firmamentum_Sobiescianum%2C_sive_uranographia%22_-_Tavola_MM_-_Aquarius.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
     }
   },
   {
@@ -2958,7 +3086,21 @@
     "role": "King of Athens",
     "tagline": "Born of the earth, and raised by a virgin goddess.",
     "story": "When Hephaestus tried to force Athena, his seed fell on the ground, and Earth bore a child. Athena raised him in secret, and gave him in a chest to the daughters of Cecrops, telling them not to look inside; they looked, saw a serpent coiled round the baby, and leapt from the Acropolis. He grew up to be king of Athens.",
-    "versions": "Homer tells the same birth of Erechtheus: born of the earth, and raised by Athena. Not Erichthonius of Dardania."
+    "versions": "Homer tells the same birth of Erechtheus: born of the earth, and raised by Athena. Not Erichthonius of Dardania.",
+    "sky": {
+      "constellation": "Auriga",
+      "text": "The Charioteer. Eratosthenes says it is Erichthonius, the first man to yoke four horses to a chariot; Zeus admired him for it.",
+      "cite": "Hyginus, Astronomica 2.13",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Prodromus Astronomia - Volume III \"Firmamentum Sobiescianum, sive uranographia\" - Tavola X - Auriga.jpg",
+        "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Johannes_Hevelius_-_Prodromus_Astronomia_-_Volume_III_%22Firmamentum_Sobiescianum%2C_sive_uranographia%22_-_Tavola_X_-_Auriga.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "pandion",
@@ -3161,6 +3303,20 @@
     "immortal": {
       "text": "Made deathless and ageless by Zeus, as Dionysus’s wife",
       "sources": ["H", "L"]
+    },
+    "sky": {
+      "constellation": "Corona Borealis",
+      "text": "The Crown, a wedding gift to Ariadne, which Dionysus set among the stars.",
+      "cite": "Hyginus, Astronomica 2.5; Ovid, Metamorphoses 8.177–182",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Corona (and Hercules).jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Johannes_Hevelius_-_Corona_%28and_Hercules%29.jpg/960px-Johannes_Hevelius_-_Corona_%28and_Hercules%29.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
     }
   },
   {
@@ -3886,6 +4042,20 @@
     "immortal": {
       "text": "Flew up to the gods, and lives in the house of Zeus, carrying his thunder and lightning",
       "sources": ["H", "T"]
+    },
+    "sky": {
+      "constellation": "Pegasus",
+      "text": "The Horse. Aratus and many others call it Pegasus, son of Poseidon and Medusa, who opened the spring Hippocrene with his hoof.",
+      "cite": "Hyginus, Astronomica 2.18",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Pegasus.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Johannes_Hevelius_-_Pegasus.jpg/960px-Johannes_Hevelius_-_Pegasus.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
     }
   },
   {
@@ -4387,7 +4557,21 @@
     "role": "King of Ethiopia",
     "tagline": "Chained his daughter to a rock to save his kingdom.",
     "story": "King of the Ethiopians. When the sea god sent a monster to punish his wife’s boast, the oracle of Ammon said he could be rid of it only by giving his daughter Andromeda to it. His people forced him, and he chained her to a rock by the sea. Perseus killed the monster and married her.",
-    "versions": "Apollodorus: Euripides makes Cepheus and Phineus sons of Belus."
+    "versions": "Apollodorus: Euripides makes Cepheus and Phineus sons of Belus.",
+    "sky": {
+      "constellation": "Cepheus",
+      "text": "Set among the stars so that the whole family would last for ever: Cepheus, his wife, his daughter and her husband.",
+      "cite": "Hyginus, Astronomica 2.9",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Cepheus.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Johannes_Hevelius_-_Cepheus.jpg/960px-Johannes_Hevelius_-_Cepheus.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "cassiopeia",
@@ -4399,7 +4583,21 @@
     "branch": "cursed-houses",
     "role": "Queen of Ethiopia",
     "tagline": "Said she was lovelier than the Nereids.",
-    "story": "Wife of Cepheus, mother of Andromeda. She boasted that she was more beautiful than the Nereids, and they took it to Poseidon, who flooded the land and sent a sea monster."
+    "story": "Wife of Cepheus, mother of Andromeda. She boasted that she was more beautiful than the Nereids, and they took it to Poseidon, who flooded the land and sent a sea monster.",
+    "sky": {
+      "constellation": "Cassiopeia",
+      "text": "Set in the sky on a chair for her boast against the Nereids. For her impiety she is carried head down as the heavens turn.",
+      "cite": "Hyginus, Astronomica 2.10",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Casiopeia.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Johannes_Hevelius_-_Casiopeia.jpg/960px-Johannes_Hevelius_-_Casiopeia.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "phineus",
@@ -4606,7 +4804,21 @@
     "role": "The serpent of the golden apples",
     "tagline": "Never slept, and spoke with a hundred voices.",
     "story": "The great serpent that coils around the tree of the golden apples, at the edge of the world, in the garden of the Hesperides. In Apollodorus he has a hundred heads and speaks with many different voices.",
-    "versions": "Hesiod: a child of Phorcys and Ceto. Apollodorus and Hyginus: a child of Typhon and Echidna."
+    "versions": "Hesiod: a child of Phorcys and Ceto. Apollodorus and Hyginus: a child of Typhon and Echidna.",
+    "sky": {
+      "constellation": "Draco",
+      "text": "The serpent between the two Bears, who guarded the golden apples. Hera put him among the stars after Heracles killed him.",
+      "cite": "Hyginus, Astronomica 2.3",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Draco.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Johannes_Hevelius_-_Draco.jpg/960px-Johannes_Hevelius_-_Draco.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "chrysaor",
@@ -4657,7 +4869,21 @@
     "role": "The lion of Nemea",
     "tagline": "No weapon could pierce its hide.",
     "story": "A lion reared by Hera and set loose on the hills of Nemea, with a hide no weapon could pierce. Heracles’ arrows bounced off it, so he trapped it in its cave and choked it with his arms. He wore its skin ever after. This was his first labour.",
-    "versions": "Hesiod: a child of Orthus, by the Chimera or by Echidna. Apollodorus: a child of Typhon."
+    "versions": "Hesiod: a child of Orthus, by the Chimera or by Echidna. Apollodorus: a child of Typhon.",
+    "sky": {
+      "constellation": "Leo",
+      "text": "Zeus set it among the stars as the king of beasts. Some add that it was Heracles’ first labour, and that he killed it without weapons.",
+      "cite": "Hyginus, Astronomica 2.24",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Leo.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Johannes_Hevelius_-_Leo.jpg/960px-Johannes_Hevelius_-_Leo.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "hydra",
@@ -5079,7 +5305,21 @@
     "role": "Monster of Ethiopia",
     "tagline": "Came for a princess and met Perseus.",
     "story": "A sea monster sent by Poseidon against the land of Cepheus, after Queen Cassiopeia had boasted she was more beautiful than the Nereids. An oracle of Ammon said only Andromeda could buy it off, so she was chained to a rock by the sea. Perseus, flying back with the Gorgon’s head, killed it and married her.",
-    "versions": "Apollodorus: Poseidon sent a flood and the monster. Hyginus: Poseidon demanded that Andromeda be given to the monster."
+    "versions": "Apollodorus: Poseidon sent a flood and the monster. Hyginus: Poseidon demanded that Andromeda be given to the monster.",
+    "sky": {
+      "constellation": "Cetus",
+      "text": "Sent by Poseidon to kill Andromeda. It was set among the stars for its size and for Perseus’ courage in killing it.",
+      "cite": "Hyginus, Astronomica 2.31",
+      "sources": [
+        "L"
+      ],
+      "image": {
+        "file": "Johannes Hevelius - Cetus.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Johannes_Hevelius_-_Cetus.jpg/960px-Johannes_Hevelius_-_Cetus.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   },
   {
     "id": "augeas",

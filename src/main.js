@@ -255,6 +255,13 @@ const gEdges = root.append("g");
 const gNodes = root.append("g");
 
 const RN = 8;
+// the star-atlas mockup (?look=atlas): figures drawn as Hevelius drew stars
+const ATLAS = document.documentElement.dataset.look === "atlas";
+const starPath = (n, R, r) => Array.from({length: n*2}, (_, i) => { const a = Math.PI*i/n - Math.PI/2, q = i%2 ? r : R; return `${i?"L":"M"}${(q*Math.cos(a)).toFixed(2)},${(q*Math.sin(a)).toFixed(2)}`; }).join("") + "Z";
+// a bright star is a dark seal with a jagged rim and a pale star inside; a faint one a small six-rayed star
+const hevStar = (R, cls = "") => R >= 7
+  ? `<path class="dot star ${cls}" d="${starPath(18, R, R*0.84)}"/><path class="star-in" d="${starPath(8, R*0.66, R*0.24)}"/>`
+  : `<path class="dot star ${cls}" d="${starPath(6, R, R*0.42)}"/>`;
 const STAR = "M0,-6 L1.6,-1.6 L6,0 L1.6,1.6 L0,6 L-1.6,1.6 L-6,0 L-1.6,-1.6 Z";   // ambrosia: made immortal
 function norm(x,y){ const l = Math.hypot(x,y)||1; return [x/l, y/l]; }
 function edgePath(e){
@@ -309,18 +316,15 @@ function drawTree(){
     // with a mouse, hovering a figure previews its links; touch keeps tap-to-open
     .on("pointerenter", (ev,d) => { if (ev.pointerType==="mouse") { state.hover = d.id; apply(150); } })
     .on("pointerleave", (ev,d) => { if (state.hover===d.id) { state.hover = null; apply(150); } });
-  // the star-atlas mockup (?look=atlas): figures are stars, brighter the more links they have
-  const ATLAS = document.documentElement.dataset.look === "atlas";
   const deg = {}; if (ATLAS) E.forEach(e => { deg[e.from] = (deg[e.from]||0) + 1; deg[e.to] = (deg[e.to]||0) + 1; });
-  const starPath = (n, R, r) => d3.range(n*2).map(i => { const a = Math.PI*i/n - Math.PI/2, q = i%2 ? r : R; return `${i?"L":"M"}${(q*Math.cos(a)).toFixed(2)},${(q*Math.sin(a)).toFixed(2)}`; }).join("") + "Z";
   nodeSel.each(function(d){
     const g = d3.select(this);
     if (ATLAS) {
       g.append("circle").attr("class","hit").attr("r",26);
       g.append("circle").attr("class","halo").attr("r",16);
-      const R = 5.5 + Math.min(deg[d.id]||0, 24) / 24 * 5.5;
-      if (d.kind==="group") [[0,-4.5],[-4.5,3],[4.5,3]].forEach(([x,y]) => g.append("path").attr("class","dot star group").attr("d", starPath(5, 4, 1.7)).attr("transform",`translate(${x},${y})`));
-      else g.append("path").attr("class","dot star " + d.kind).attr("d", d.kind==="god" ? starPath(8, R+1.5, R*0.36) : starPath(5, d.kind==="nymph" ? R-1 : R, R*0.42));
+      const R = (d.kind==="god" ? 7.5 : 5) + Math.min(deg[d.id]||0, 24) / 24 * 4.5;
+      if (d.kind==="group") [[0,-5],[-5,3.5],[5,3.5]].forEach(([x,y]) => g.append("g").attr("transform",`translate(${x},${y})`).html(hevStar(4, "group")));
+      else g.append("g").html(hevStar(d.kind==="nymph" ? R-1 : R, d.kind));
       if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4 L4,0 L0,4 L-4,0 Z").attr("transform",`translate(${R+6},${-R-2})`);
       if (d.immortal) g.append("path").attr("class","imm").attr("d",STAR).attr("transform",`translate(${-R-6},${-R-2})`).append("title").text("Made immortal in some sources");
       if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z").attr("transform",`translate(${-R-6},${-R-2})`).append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
@@ -514,7 +518,7 @@ card.addEventListener("scroll", () => {
 card.addEventListener("scrollend", () => { navLock = 0; }, {passive: true});
 /* A long card gets a row of section names under its bar: tap one to jump there; the one being read is marked. */
 const sheetBar = document.getElementById("sheetBar"), sheetNav = document.getElementById("sheetNav");
-const NAV_LABEL = {"Close family":"Family", "In the stories":"Stories", "The Twelve":"Twelve", "Changed shape":"Shape",
+const NAV_LABEL = {"In the sky":"Sky", "Close family":"Family", "In the stories":"Stories", "The Twelve":"Twelve", "Changed shape":"Shape",
   "Made immortal":"Immortal", "Born to":"Parents", "Feuds & killings":"Feuds", "Feuds and fates":"Feuds", "Transformations":"Changes",
   "Where the sources disagree":"Versions", "Not in the ancient sources":"Not ancient", "In art":"Art", "Who they are":"Members"};
 let navSecs = [], navLock = 0;
@@ -589,7 +593,7 @@ grip.addEventListener("click", () => { if (dragged) { dragged = false; return; }
 const CF_W = 340, FT_BANDS = 4;
 const SRC_SHORT = {E: "Homer", H: "Hesiod", T: "tragedy", A: "Apollodorus", L: "later"};
 const esc = t => String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
-const dotSvg = (p, x, y, r) => `${p.kind==="god" || p.kind==="group" ? `<circle class="ring" cx="${x}" cy="${y}" r="${r+3}"/>` : ""}<circle class="dot ${p.kind==="group" ? "" : p.kind}" cx="${x}" cy="${y}" r="${r}"/>`;
+const dotSvg = (p, x, y, r) => ATLAS ? `<g transform="translate(${x},${y})">${hevStar(p.kind==="god" ? r+3 : r+1, p.kind)}</g>` : `${p.kind==="god" || p.kind==="group" ? `<circle class="ring" cx="${x}" cy="${y}" r="${r+3}"/>` : ""}<circle class="dot ${p.kind==="group" ? "" : p.kind}" cx="${x}" cy="${y}" r="${r}"/>`;
 const ftLink = (type, d) => type==="marriage"
   ? `<g class="e e-marriage"><path class="edge main" d="${d}" stroke-width="4"/><path class="edge inner" d="${d}"/></g>`
   : `<g class="e e-${type==="affair" ? "affair" : "parent"}"><path class="edge main" d="${d}" stroke-width="1.2"/></g>`;
@@ -740,6 +744,14 @@ function storiesOf(id){
    with its credit and licence; if it cannot be loaded, the preview and its button go away. */
 const COMMONS = "https://commons.wikimedia.org/wiki/File:";
 const PIC_ICON = `<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor"/><circle cx="5.5" cy="6.5" r="1.3" fill="currentColor"/><path d="M2 12 L6.5 8.5 L9 10.5 L11.5 8 L14 10.5" fill="none" stroke="currentColor"/></svg>`;
+// a figure the ancients set among the stars, with Hevelius’ engraving of the constellation
+function skySec(k){
+  const page = COMMONS + encodeURIComponent(k.image.file.replace(/ /g, "_"));
+  return `<div class="sec sky"><h3>In the sky</h3><p class="sky-name">${k.constellation}</p>
+    <figure class="sky-pic"><img src="${k.image.thumb}" alt="${esc(k.constellation)}, engraved by Johannes Hevelius" loading="lazy" decoding="async">
+    <figcaption>${esc(k.image.credit)} · ${esc(k.image.licence)}, via <a href="${page}" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+    <p class="sky-text">${k.text}</p><p class="sky-cite">${k.cite}${srcText(k.sources)}</p></div>`;
+}
 function artItem({title:t, meta:m, where:w, url:u, image:im}){
   const link = u ? `<a class="t" href="${u}" target="_blank" rel="noopener">${t}</a>` : `<span class="t" tabindex="0">${t}</span>`;
   if (!im) return `<li>${link}<br><span class="m">${m}. ${w}</span></li>`;
@@ -801,6 +813,7 @@ function renderNode(id){
     ${OLY[id] ? `<div class="sec"><h3>The Twelve</h3><p class="oly-text"><svg class="oly-mark" viewBox="-6 -5 12 10" aria-hidden="true"><path class="oly ${OLY[id].in}" d="M0,-4 L4.5,3.5 L-4.5,3.5 Z"/></svg>${OLY[id].text}</p><p class="oly-note">${OLY_NOTE}</p></div>` : ""}
     ${p.transformation ? `<div class="sec"><h3>Changed shape</h3><ul class="rels"><li><span class="rel static">${p.transformation.text}</span>${srcText(p.transformation.sources)}</li></ul></div>` : ""}
     ${p.immortal ? `<div class="sec"><h3>Made immortal</h3><ul class="rels"><li><span class="rel static"><svg class="imm-mark" viewBox="-6 -6 12 12" aria-hidden="true"><path class="imm" d="${STAR}"/></svg>${p.immortal.text}</span>${srcText(p.immortal.sources)}</li></ul></div>` : ""}
+    ${p.sky ? skySec(p.sky) : ""}
     ${familySec(id, groups.filter(g => FAMILY_LISTS.includes(g[0])))}
     ${fatesSec(id, groups.filter(g => !FAMILY_LISTS.includes(g[0])))}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
