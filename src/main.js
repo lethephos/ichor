@@ -659,6 +659,7 @@ function renderNode(id){
     ${p.immortal ? `<div class="sec"><h3>Made immortal</h3><ul class="rels"><li><span class="rel static"><svg class="imm-mark" viewBox="-6 -6 12 12" aria-hidden="true"><path class="imm" d="${STAR}"/></svg>${p.immortal.text}</span>${srcText(p.immortal.sources)}</li></ul></div>` : ""}
     ${groups.map(([h, items]) => `<div class="sec"><h3>${h}</h3><ul class="rels">${items.join("")}</ul></div>`).join("")}
     ${p.versions ? `<div class="sec"><h3>Where the sources disagree</h3><div class="ver">${p.versions}</div></div>` : ""}
+    ${p.modern ? `<div class="sec"><h3>Not in the ancient sources</h3>${p.modern.map(t => `<div class="ver modern">${t}</div>`).join("")}</div>` : ""}
     ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(artItem).join("")}</ul></div>` : ""}
     <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work; the picture icon shows the work itself.</p>`);
   wirePictures(card);

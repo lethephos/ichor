@@ -94,7 +94,7 @@
     "role": "Titan",
     "tagline": "One daughter bore Zeus twin gods; the other leapt into the sea to escape him.",
     "story": "Son of Uranus and Gaia. With his sister Phoebe he fathered Leto and Asteria.",
-    "versions": "Hesiod gives him no domain: he is known only as a father. ‘Titan of intellect’, often met today, is a modern reading of his name, not an ancient one."
+    "modern": ["Hesiod gives him no domain: he is known only as a father. ‘Titan of intellect’, often met today, is a modern reading of his name, not an ancient one."]
   },
   {
     "id": "crius",
@@ -107,7 +107,7 @@
     "role": "Titan",
     "tagline": "The quietest of the Titans, known only through his sons.",
     "story": "Son of Uranus and Gaia. With Eurybia, a daughter of the Sea, he fathered Astraeus, Pallas and Perses.",
-    "versions": "Hesiod gives him no domain. ‘Titan of the constellations’, often met today, is a modern guess from his name, which means ‘ram’, not an ancient one."
+    "modern": ["Hesiod gives him no domain. ‘Titan of the constellations’, often met today, is a modern guess from his name, which means ‘ram’, not an ancient one."]
   },
   {
     "id": "phoebe",
@@ -195,7 +195,8 @@
     "branch": "gods",
     "role": "Titan who holds up the sky",
     "tagline": "Holds up the sky, forever.",
-    "story": "Son of the Titan Iapetus. Zeus condemned him to hold up the sky at the ends of the earth. Father of Maia."
+    "story": "Son of the Titan Iapetus. Zeus condemned him to hold up the sky at the ends of the earth. Father of Maia.",
+    "modern": ["He holds up the sky, not the earth. The globe on his shoulders in the Farnese Atlas, a Roman statue, is the sky, carved with its constellations; from the Renaissance on it was taken for the earth."]
   },
   {
     "id": "prometheus",
@@ -295,7 +296,7 @@
     "role": "Titan",
     "tagline": "His children stand beside Zeus’s throne.",
     "story": "Son of Crius and Eurybia. With the Oceanid Styx he fathered Zelus, Nike, Cratos and Bia: Rivalry, Victory, Power and Force, who never leave Zeus’s side.",
-    "versions": "‘Titan of warcraft’, often met today, rests on his name alone (the Suda derives it from brandishing a spear); no ancient myth makes him a god of war."
+    "modern": ["‘Titan of warcraft’, often met today, rests on his name alone (the Suda derives it from brandishing a spear); no ancient myth makes him a god of war."]
   },
   {
     "id": "perses",
@@ -308,7 +309,7 @@
     "role": "Titan",
     "tagline": "‘Outstanding in wisdom’, and the father of Hecate.",
     "story": "Son of Crius and Eurybia, ‘outstanding in wisdom’, says Hesiod. He married Asteria, and she bore Hecate.",
-    "versions": "No ancient source gives him a domain. ‘Titan of destruction’, often met today, is a modern guess from his name, not an ancient one."
+    "modern": ["No ancient source gives him a domain. ‘Titan of destruction’, often met today, is a modern guess from his name, not an ancient one."]
   },
   {
     "id": "asteria",
@@ -368,7 +369,8 @@
     "branch": "gods",
     "role": "Goddess of the hearth",
     "tagline": "The eldest, who stayed by the fire.",
-    "story": "Eldest daughter of Cronus and Rhea: the first to be swallowed and the last to be released. She vowed to remain a virgin."
+    "story": "Eldest daughter of Cronus and Rhea: the first to be swallowed and the last to be released. She vowed to remain a virgin.",
+    "modern": ["That she gave up her seat among the Twelve to Dionysus, to get away from her family’s quarrels, comes from Robert Graves, The Greek Myths (1955). No ancient writer tells it: the ancient lists of the Twelve simply differ, some with her, some with Dionysus."]
   },
   {
     "id": "demeter",
@@ -651,7 +653,8 @@
     "branch": "gods",
     "role": "God of wine, ecstasy and the theatre",
     "tagline": "Born twice: from his mother, then from his father’s thigh.",
-    "story": "Son of Zeus and the Theban princess Semele. When his mother burned, Zeus sewed the unborn child into his thigh until he was ready to be born."
+    "story": "Son of Zeus and the Theban princess Semele. When his mother burned, Zeus sewed the unborn child into his thigh until he was ready to be born.",
+    "modern": ["That Hestia gave up her seat among the Twelve to him comes from Robert Graves, The Greek Myths (1955). No ancient writer tells it: the ancient lists simply differ, some with her, some with him."]
   },
   {
     "id": "persephone",
@@ -825,7 +828,8 @@
     "role": "Goddess of crossroads, night and witchcraft",
     "tagline": "The one goddess Zeus honoured above all.",
     "story": "Daughter of Perses and Asteria. Hesiod praises her at length: Zeus gave her a share of the earth, the sea and the sky. Later writers made her the goddess of crossroads, of the night and of witchcraft.",
-    "versions": "In the Catalogue of Women, as Pausanias reports, Iphigenia does not die at Aulis: by the will of Artemis she becomes Hecate."
+    "versions": "In the Catalogue of Women, as Pausanias reports, Iphigenia does not die at Aulis: by the will of Artemis she becomes Hecate.",
+    "modern": ["Hecate as maiden, mother and crone is modern: the triad comes from Robert Graves, The White Goddess (1948), and was taken up in Wicca. Ancient art gives her three bodies, but no ancient source makes them maiden, mother and crone."]
   },
   {
     "gender": "f",
@@ -1604,7 +1608,8 @@
           "licence_url": "https://creativecommons.org/licenses/by-sa/4.0/"
         }
       }
-    ]
+    ],
+    "modern": ["‘The face that launched a thousand ships’ is not Homer’s. It is Christopher Marlowe’s, in Doctor Faustus, about 1592."]
   },
   {
     "id": "paris",
@@ -5367,7 +5372,8 @@
     "role": "The first woman",
     "tagline": "Made by the gods as a gift, and a punishment.",
     "story": "Zeus had her made to repay men for the stolen fire. Hephaestus shaped her from earth and water, the goddesses dressed her, and Hermes gave her a thief’s mind and a lying tongue. Epimetheus took her in. She lifted the lid of a great jar, and sorrows and sickness flew out over the world; only Hope stayed inside.",
-    "versions": "The jar is Hesiod’s; the box came much later, in the Renaissance. In the Theogony she is not named, only ‘the woman’."
+    "versions": "In the Theogony she is not named, only ‘the woman’.",
+    "modern": ["The box is Erasmus’s. Retelling the story in Latin in his Adages (1508), he turned Hesiod’s jar, the pithos, into a box, the pyxis."]
   },
   {
     "id": "deucalion-flood",
