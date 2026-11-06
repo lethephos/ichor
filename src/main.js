@@ -279,14 +279,14 @@ function drawTree(){
     if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWB[i-1]+y)/2+12).attr("y2",(ROWB[i-1]+y)/2+12);
   });
   // a divider is a stronger rule between two rows (e.g. where the gods end and mortals begin)
-  const labels = GENS.map((g, i) => ({text: g, y: ROWY[i], cls: "rl"}));
+  const labels = GENS.map((g, i) => ({text: g, y: ROWY[i], yt: i ? (ROWB[i-1] + ROWY[i]) / 2 + 12 : ROWY[0] - 46, cls: "rl"}));
   DIVIDERS.forEach(d => {
     const y = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12;
     gGrid.append("line").attr("class","divider").attr("x1",0).attr("x2",W).attr("y1",y).attr("y2",y);
-    labels.push({text: d.label, y, cls: "rl rl-divider"});
+    labels.push({text: d.label, y, yt: y, cls: "rl rl-divider"});
   });
   // row names live in a column pinned to the left edge of the screen (see placeRowLabels)
-  rowLabels.innerHTML = `<div class="rl-col"></div>` + labels.map(l => `<div class="${l.cls}" data-y="${l.y}">${l.text}</div>`).join("");
+  rowLabels.innerHTML = `<div class="rl-col"></div>` + labels.map(l => `<div class="${l.cls}" data-y="${l.y}" data-yt="${l.yt}">${l.text}</div>`).join("");
   HOUSES.forEach(h => gGrid.append("text").attr("class","house").attr("x",h.x).attr("y",h.y).attr("text-anchor","middle").text(h.label));
 
   edgeSel = gEdges.selectAll("g.e").data(E).join("g").attr("class", e => `e e-${e.type}`);
@@ -332,8 +332,11 @@ svg.on("click", () => { if (state.mode==="node") resetMode(); });
 /* Row names stay readable at any zoom: they sit in a column on the left of the screen,
    at a fixed size, and only follow their row up and down. */
 const rowLabels = document.getElementById("rowLabels");
+/* On phones there is no column: each name is a small tag at the left edge, just under its row's top rule
+   (a divider's name sits just above its line), so the tree keeps the whole width. */
 function placeRowLabels(t){
-  rowLabels.querySelectorAll("[data-y]").forEach(el => el.style.top = `${t.y + el.dataset.y * t.k}px`);
+  const w = wide();
+  rowLabels.querySelectorAll("[data-y]").forEach(el => el.style.top = `${t.y + (w ? el.dataset.y : el.dataset.yt) * t.k}px`);
 }
 let panned = false;
 const zoom = d3.zoom().scaleExtent([0.2, 3])
@@ -464,13 +467,49 @@ function shell(inner){
   const nm = document.getElementById("sheetName"), big = cardBody.querySelector(".card-name");
   nm.textContent = big ? big.firstChild.textContent.trim() : "";
   nm.classList.remove("on");
+  buildNav();
 }
 const sheetName = document.getElementById("sheetName");
 document.getElementById("sheetClose").onclick = () => resetMode();
 card.addEventListener("scroll", () => {
   const big = cardBody.querySelector(".card-name");
   sheetName.classList.toggle("on", !!big && big.getBoundingClientRect().bottom < card.getBoundingClientRect().top + 44);
+  spyNav();
 }, {passive: true});
+card.addEventListener("scrollend", () => { navLock = 0; }, {passive: true});
+/* A long card gets a row of section names under its bar: tap one to jump there; the one being read is marked. */
+const sheetBar = document.getElementById("sheetBar"), sheetNav = document.getElementById("sheetNav");
+const NAV_LABEL = {"Close family":"Family", "In the stories":"Stories", "The Twelve":"Twelve", "Changed shape":"Shape",
+  "Made immortal":"Immortal", "Born to":"Parents", "Feuds & killings":"Feuds", "Transformations":"Changes",
+  "Where the sources disagree":"Versions", "Not in the ancient sources":"Not ancient", "In art":"Art", "Who they are":"Members"};
+let navSecs = [], navLock = 0;
+function buildNav(){
+  navSecs = [...cardBody.querySelectorAll(".sec > h3")].map(h => h.parentElement);
+  if (navSecs.length < 3) { navSecs = []; sheetNav.innerHTML = ""; sheetBar.classList.remove("has-nav"); return; }
+  const label = s => { const h = s.querySelector("h3").textContent; return s.querySelector(".members") ? "Members" : NAV_LABEL[h] || h; };
+  sheetNav.innerHTML = `<button type="button" class="nav-chip on" data-sec="-1">About</button>` +
+    navSecs.map((s, i) => `<button type="button" class="nav-chip" data-sec="${i}">${label(s)}</button>`).join("");
+  sheetBar.classList.add("has-nav"); sheetNav.scrollLeft = 0;
+  sheetNav.querySelectorAll(".nav-chip").forEach(b => b.onclick = () => {
+    const i = +b.dataset.sec, top = i < 0 ? 0 : card.scrollTop + navSecs[i].getBoundingClientRect().top - sheetBar.getBoundingClientRect().bottom - 8;
+    navLock = Date.now() + 1500; markNav(i);
+    card.scrollTo({top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+  });
+}
+function spyNav(){
+  if (!navSecs.length || Date.now() < navLock) return;
+  const line = sheetBar.getBoundingClientRect().bottom + 24;
+  let i = -1; navSecs.forEach((s, k) => { if (s.getBoundingClientRect().top <= line) i = k; });
+  if (card.scrollTop + card.clientHeight >= card.scrollHeight - 2 && i < navSecs.length - 1 && i >= 0) i = Math.max(i, navSecs.findIndex(s => s.getBoundingClientRect().top < card.getBoundingClientRect().bottom - 80));
+  markNav(i);
+}
+function markNav(i){
+  sheetNav.querySelectorAll(".nav-chip").forEach(b => {
+    const on = +b.dataset.sec === i; b.classList.toggle("on", on);
+    if (on) { const l = b.offsetLeft - sheetNav.offsetLeft, r = l + b.offsetWidth;
+      if (l < sheetNav.scrollLeft + 16 || r > sheetNav.scrollLeft + sheetNav.clientWidth - 16) sheetNav.scrollTo({left: l - 22, behavior: "smooth"}); }
+  });
+}
 /* On phones, while the card is open the page header folds away and only the Family and Source pills stay,
    so the tree keeps the room above the card. The tree is held still on screen as the header goes or comes back. */
 function setSheet(on){

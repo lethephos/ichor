@@ -44,7 +44,7 @@
 .hint.gone{opacity:0}
 .fit-float{position:absolute;right:16px;top:10px;background:var(--bg-2)}
 @media (max-width:899px){
-  .hint{left:92px;top:10px;max-width:calc(100% - 220px)}
+  .hint{left:12px;top:10px;max-width:calc(100% - 180px);z-index:2;padding:6px 10px;border-radius:8px;background:color-mix(in srgb,var(--bg) 92%,transparent)}
 }
 /* in a story, the parents different sources give a figure: dashed gold */
 .e.alt .main{stroke:var(--accent)!important;stroke-dasharray:4 4}
@@ -55,6 +55,8 @@
 .rl{position:absolute;left:20px;width:122px;transform:translateY(-50%);font:600 11px/1.35 var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .rl-divider{color:var(--text)}
 @media (max-width:899px){
-  .rl-col{width:86px}
-  .rl{left:12px;width:66px;font-size:9px;letter-spacing:.05em}
+  /* phones: no column, each row name is a small tag just under its row's top rule */
+  .rl-col{display:none}
+  .rl{left:8px;width:auto;max-width:calc(100% - 16px);transform:translateY(4px);white-space:nowrap;font-size:9px;line-height:1;letter-spacing:.08em;padding:4px 7px;border-radius:999px;background:color-mix(in srgb,var(--bg) 88%,transparent);border:1px solid var(--rule)}
+  .rl-divider{transform:translateY(calc(-100% - 4px));border-color:var(--text)}
 }

@@ -57,10 +57,19 @@
 .found{margin-top:10px}
 
 /* the bar at the top of the card: the close button and, once the big name scrolls away, the name; it stays in view */
-.sheet-bar{position:sticky;top:-22px;z-index:2;display:flex;align-items:center;gap:10px;height:44px;margin:-22px -22px 0;padding:0 10px 0 22px;background:var(--bg-2)}
+.sheet-bar{position:sticky;top:-22px;z-index:2;margin:-22px -22px 0;background:var(--bg-2)}
+.sheet-top{position:relative;display:flex;align-items:center;gap:10px;height:44px;padding:0 10px 0 22px}
 .sheet-name{flex:1;min-width:0;font:20px/1 var(--display);color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transition:opacity .2s;pointer-events:none}
 .sheet-name.on{opacity:1}
-.sheet-bar:has(.sheet-name.on){border-bottom:1px solid var(--rule)}
+.sheet-bar:is(.has-nav,:has(.sheet-name.on)){border-bottom:1px solid var(--rule)}
+/* the card's own navigator: a row of section names under the bar */
+.sheet-nav{display:none;gap:6px;overflow-x:auto;padding:2px 22px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.sheet-nav::-webkit-scrollbar{display:none}
+.has-nav .sheet-nav{display:flex}
+.nav-chip{flex:0 0 auto;font:600 12px/1 var(--ui);color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 11px;cursor:pointer;white-space:nowrap}
+.nav-chip:hover{color:var(--text)}
+.nav-chip.on{color:var(--bg-2);background:var(--text);border-color:var(--text)}
+.nav-chip:focus-visible{outline:1.5px solid var(--accent);outline-offset:2px}
 .sheet-close{position:relative;z-index:1;flex:0 0 auto;width:40px;height:40px;display:grid;place-items:center;margin-left:auto;background:none;border:none;border-radius:50%;color:var(--muted);cursor:pointer;padding:0}
 .sheet-close svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
 .sheet-close:hover{color:var(--text)}
@@ -70,9 +79,10 @@
 /* phone sheet: half height, pulled up to full height by the grip */
 .grip{display:none}
 @media (max-width:899px){
-  #card{height:50%;max-height:none;padding-top:0;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px));transition:transform .3s ease,height .3s ease}
+  #card{height:62%;max-height:none;padding-top:0;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px));transition:transform .3s ease,height .3s ease}
   #card.full{height:calc(100% - 12px - env(safe-area-inset-top,0px))}
-  .sheet-bar{top:0;margin-top:0;height:48px}
+  .sheet-bar{top:0;margin-top:0}
+  .sheet-top{height:48px}
   .grip{display:block;position:absolute;inset:0;width:100%;height:100%;margin:0;border:none;background:none;cursor:grab;touch-action:none}
   .sheet-name{padding-top:8px}
   #cardBody .card-top{margin-top:0}
