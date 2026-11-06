@@ -455,7 +455,26 @@ function shell(inner){
     const c = STORIES[b.dataset.story], at = +b.dataset.at;
     openCurse(c.id, toldSteps(c)[at-1] ? at : 0);
   });
-  setFull(false); card.classList.add("open"); card.scrollTop = 0;
+  setFull(false); setSheet(true); card.classList.add("open"); card.scrollTop = 0;
+  // the bar at the top of the card keeps the name in view once the big one scrolls away
+  const nm = document.getElementById("sheetName"), big = cardBody.querySelector(".card-name");
+  nm.textContent = big ? big.firstChild.textContent.trim() : "";
+  nm.classList.remove("on");
+}
+const sheetName = document.getElementById("sheetName");
+document.getElementById("sheetClose").onclick = () => resetMode();
+card.addEventListener("scroll", () => {
+  const big = cardBody.querySelector(".card-name");
+  sheetName.classList.toggle("on", !!big && big.getBoundingClientRect().bottom < card.getBoundingClientRect().top + 44);
+}, {passive: true});
+/* On phones, while the card is open the page header folds away and only the Family and Source pills stay,
+   so the tree keeps the room above the card. The tree is held still on screen as the header goes or comes back. */
+function setSheet(on){
+  if (document.body.classList.contains("sheet") === on) return;
+  const before = graphEl.getBoundingClientRect().top;
+  document.body.classList.toggle("sheet", on);
+  const dy = on ? before - graphEl.getBoundingClientRect().top : 0;
+  if (dy) { const t = d3.zoomTransform(graphEl); svg.interrupt().call(zoom.transform, d3.zoomIdentity.translate(t.x, t.y + dy).scale(t.k)); }
 }
 
 /* On phones the card is a sheet: half height at first; pull the grip up for full height, down to shrink or close. Tapping the grip toggles. */
@@ -682,7 +701,12 @@ function nodeClick(id){
 function resetMode(){
   state.mode = null; state.sel = null; state.path = null; state.curseKey = null; state.threadEnds = null;
   curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
-  card.classList.remove("open"); setFull(false); apply(true);
+  // on phones the header comes back as the card goes: keep what was in view centred in the larger space
+  const before = viewH();
+  card.classList.remove("open"); setFull(false); setSheet(false);
+  const dy = (viewH() - before) / 2, t = d3.zoomTransform(graphEl);
+  if (!wide() && dy) svg.interrupt().transition().duration(300).call(zoom.transform, d3.zoomIdentity.translate(t.x, t.y + dy).scale(t.k));
+  apply(true);
 }
 
 /* phone panels: layers, curses, find */
