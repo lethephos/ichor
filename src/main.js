@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, sourceNote, SRC_ALL_LABEL, ROWY, ROWB, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf, ALL_STORIES, storyHome} from "./data.js";
+import {SRC, SRC_FULL, sourceNote, SRC_ALL_LABEL, ROWY, ROWB, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf, ALL_STORIES, storyHome, ALL_PEOPLE, figureHome} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -181,16 +181,28 @@ threadBtn.onclick = () => state.mode==="thread" ? resetMode() : openThread();
 /* Find a figure: names (English or Greek, accents ignored) narrow down as you type;
    names that start with what was typed come first. */
 const fold = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+/* A name typed searches the whole tree: figures of the family shown come first, then the rest, each saying the family
+   it opens in (the smallest that holds it), as a story the family cannot hold does. */
 let PEOPLE, KEY;
+const ALL_KEY = Object.fromEntries(ALL_PEOPLE.map(p => [p.id, fold(p.name + " " + p.greek)]));
+const ALL_SORTED = [...ALL_PEOPLE].sort((a,b) => a.name.localeCompare(b.name));
 function indexPeople(){
   PEOPLE = [...P].sort((a,b) => a.name.localeCompare(b.name));
-  KEY = Object.fromEntries(P.map(p => [p.id, fold(p.name + " " + p.greek)]));
+  KEY = ALL_KEY;
 }
 function findFigures(query){
   const q = fold(query.trim());
   if (!q) return PEOPLE;
-  const starts = p => KEY[p.id].split(" ").some(w => w.startsWith(q));
-  return PEOPLE.filter(p => KEY[p.id].includes(q)).sort((a,b) => starts(b) - starts(a));
+  // the name itself starting with it first, then any word of it, then anywhere
+  const fit = p => KEY[p.id].startsWith(q) ? 0 : KEY[p.id].split(" ").some(w => w.startsWith(q)) ? 1 : 2;
+  const rank = p => (N[p.id] ? 0 : 3) + fit(p);
+  return ALL_SORTED.filter(p => KEY[p.id].includes(q)).sort((a,b) => rank(a) - rank(b));
+}
+const away = p => N[p.id] ? "" : ` · opens in ${figureHome(p.id).label}`;
+// a figure outside the family shown opens in its own family; the back button returns
+function goFigure(id){
+  if (!N[id]) moveToFamily(figureHome(id).id);
+  select(id, true);
 }
 const NONE = `<li class="none">No figure by that name.</li>`;
 
@@ -200,7 +212,7 @@ let found = [], active = -1;
 function showFinder(){
   found = findFigures(finder.value); active = found.length && finder.value.trim() ? 0 : -1;
   finderList.innerHTML = found.length ? found.map((p, i) =>
-    `<li role="option" id="fig-${p.id}" data-id="${p.id}" aria-selected="${i===active}"><span class="n">${p.name}</span><span class="r">${p.role}</span></li>`).join("") : NONE;
+    `<li role="option" id="fig-${p.id}" data-id="${p.id}" aria-selected="${i===active}"><span class="n">${p.name}</span><span class="r">${p.role}${away(p)}</span></li>`).join("") : NONE;
   finderList.hidden = false; finder.setAttribute("aria-expanded", "true"); markActive();
 }
 function markActive(){
@@ -210,7 +222,7 @@ function markActive(){
   else finder.removeAttribute("aria-activedescendant");
 }
 function hideFinder(){ finderList.hidden = true; finder.setAttribute("aria-expanded", "false"); finder.removeAttribute("aria-activedescendant"); }
-function pickFinder(id){ hideFinder(); finder.value = ""; finder.blur(); select(id, true); }
+function pickFinder(id){ hideFinder(); finder.value = ""; finder.blur(); goFigure(id); }
 finder.addEventListener("focus", showFinder);
 finder.addEventListener("input", showFinder);
 finder.addEventListener("blur", hideFinder);
@@ -1133,13 +1145,13 @@ function openFind(){
   const q = document.getElementById("findQ"), list = document.getElementById("findList");
   const show = () => {
     const hits = findFigures(q.value);
-    list.innerHTML = hits.length ? hits.map(p => `<li><button class="rel" data-go="${p.id}">${p.name}</button><span class="srcs">${p.role}</span></li>`).join("") : NONE;
+    list.innerHTML = hits.length ? hits.map(p => `<li><button class="rel" data-go="${p.id}">${p.name}</button><span class="srcs">${p.role}${away(p)}</span></li>`).join("") : NONE;
   };
   q.oninput = show;
   q.onfocus = () => { if (!wide()) setFull(true); };   // keep the list above the phone keyboard
-  q.onkeydown = ev => { if (ev.key==="Enter") { const hit = findFigures(q.value)[0]; if (hit) select(hit.id, true); } };
+  q.onkeydown = ev => { if (ev.key==="Enter") { const hit = findFigures(q.value)[0]; if (hit) goFigure(hit.id); } };
   // the whole line answers a tap, not only the name: on a phone the role beside it is just as easy to hit
-  list.onclick = ev => { const b = ev.target.closest("li")?.querySelector("[data-go]"); if (b) select(b.dataset.go, true); };
+  list.onclick = ev => { const b = ev.target.closest("li")?.querySelector("[data-go]"); if (b) goFigure(b.dataset.go); };
   show();
   apply(true);
 }
