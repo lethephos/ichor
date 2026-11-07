@@ -91,3 +91,6 @@
   /* Guide is a cell of the header, as wide as the theme and whole-tree cells under it, and its divider runs into theirs */
   [data-look="stars"] header .info{top:0;bottom:0;right:0;height:auto;width:93px;padding:0;border:0;border-left:1px solid var(--rule);background:none}
 }
+[data-look="stars"] :is(.read-as,.tour-end){gap:0}
+[data-look="stars"] .read-as .tab + .tab,[data-look="stars"] .tour-end .act + .act{margin-left:-1px}
+[data-look="stars"] :is(.go,.story-nav .act){border-radius:0}

@@ -235,7 +235,7 @@ toolBtns.forEach(b => b.onclick = () => TOOL_OF[state.mode]===b.dataset.tool ? r
 function syncTools(){
   document.body.classList.toggle("story", state.mode==="curse");
   toolBtns.forEach(b => b.setAttribute("aria-pressed", TOOL_OF[state.mode]===b.dataset.tool));
-  document.getElementById("infoBtn").setAttribute("aria-pressed", state.mode==="about");
+  document.getElementById("infoBtn").setAttribute("aria-pressed", state.mode==="about" || state.mode==="tour");
   threadBtn.setAttribute("aria-pressed", state.mode==="thread");
 }
 const hint = document.getElementById("hint");
@@ -452,7 +452,7 @@ function apply(animate){
   const curse = state.mode==="curse" ? STORIES[state.curseKey] : null;
   const story = curse && state.step>=1 && state.step<=curse.steps.length ? reveal(curse, state.step) : null;
   const path = state.mode==="thread" ? state.path : null;
-  const demo = state.mode==="about" && state.demo && !state.demo.missing ? state.demo : null;
+  const demo = (state.mode==="about" || state.mode==="tour") && state.demo && !state.demo.missing ? state.demo : null;
   const pathEdges = new Set(path ? path.edges : []);
   const pathNodes = new Set(path ? path.nodes : []);
   const visible = new Set();
@@ -462,7 +462,7 @@ function apply(animate){
     if (story && inCurse && (!(story.shown.has(e.from) && story.shown.has(e.to)) || story.ahead.has(e.i))) inCurse = false;   // not told yet
     const isAlt = !!(story && story.alt.has(e.i));
     if (isAlt) inCurse = true;
-    const inPath = pathEdges.has(e.i) || !!(demo && demo.edges.has(e.i));
+    const inPath = pathEdges.has(e.i) || !!(demo && demo.edges.has(e.i) && attested(e));
     if (inPath) vis = true;
     const hot = (sel && (e.from===sel || e.to===sel)) || (inCurse && (!story || story.now.has(e.from) || story.now.has(e.to))) || inPath;
     // at rest, feuds and affairs stay faint so the bloodlines read first; they light up when selected
@@ -879,12 +879,12 @@ function resetMode(){
 const panelTop = greek => `<div class="card-top"><span class="greek" lang="grc">${greek}</span><button class="close" data-close>Close</button></div>`;
 /* Guide: what Ichor is, how to read the tree, the lines and the sources */
 const infoBtn = document.getElementById("infoBtn");
-infoBtn.onclick = () => state.mode==="about" ? resetMode() : openAbout();
+infoBtn.onclick = () => state.mode==="about" || state.mode==="tour" ? resetMode() : openAbout();
 /* The Guide is a live legend: each line style, the rule about rows and each source can be tapped to see it on the tree. */
 const DEMO_PAIRS = {parent:["atreus","agamemnon"], marriage:["zeus","hera"], affair:["zeus","leda"], feud:["atreus","thyestes"], transform:["zeus","io"], curse:["myrtilus","pelops"]};
 function demoEdge(type){
-  const pick = E.find(e => e.type===type && samePair(e, DEMO_PAIRS[type]));
-  return pick || E.filter(e => e.type===type).sort((a, b) => b.sources.length - a.sources.length)[0] || null;
+  const pick = E.find(e => e.type===type && samePair(e, DEMO_PAIRS[type]) && attested(e));
+  return pick || E.filter(e => e.type===type && attested(e)).sort((a, b) => b.sources.length - a.sources.length)[0] || null;
 }
 const ROWS_DEMO = {pairs:[["atreus","agamemnon"],["tydeus","diomedes"]], text:"Agamemnon and Diomedes fought side by side at Troy, yet Diomedes sits three rows lower: the rows count steps down each house, not years."};
 function showDemo(key){
@@ -928,6 +928,7 @@ function openAbout(){
   shell(`${panelTop("ἰχώρ")}
     <h2 class="card-name thread-title">Guide to Ichor</h2>
     <p class="card-tag">The family tree of Greek myth.</p>
+    <button class="go tour-go" id="tourGo" type="button">Take the tour →</button>
     <p class="card-story">Gods and heroes in one tree: who descends from whom, who married, loved, fought and cursed whom. Every link names the ancient sources that tell it. Pick a source and watch the family rearrange itself.</p>
     <div class="sec"><h3>How to read it</h3><ul class="rels about">
       <li><span class="rel static">Tap a figure to open its card. Pinch or scroll to zoom, drag to move.</span></li>
@@ -944,9 +945,75 @@ function openAbout(){
     showGuideSources();
   });
   showGuideSources();
+  document.getElementById("tourGo").onclick = () => {   // the tour walks the whole tree
+    if (FAMILY.id !== FAMILIES[0].id) moveToFamily(FAMILIES[0].id);
+    openTour(1);
+  };
   infoBtn.setAttribute("aria-pressed", "true");
   apply(true);
 }
+/* The tour: a minute with Ichor, five steps on the whole tree, each lit up and framed like a step of a story. */
+const TOUR = [
+  {label:"The stars", text:"Each star is a figure: the gods wear a fine ring, mortals are the bare star. Tap one to open its card.",
+   pairs:[["zeus","hera"]], types:["marriage"]},
+  {label:"The lines", text:"Lines say how figures are linked. In the house of Atreus: plain from parent to child, double for his marriage to Aerope, dashes and dots for his feud with Thyestes, red for the curse Thyestes laid on him.",
+   pairs:[["pelops","atreus"],["atreus","agamemnon"],["atreus","aerope"],["atreus","thyestes"]], types:["parent","marriage","feud","curse"]},
+  {label:"Lower means descended", text:"Lower on the tree means descended, not later. " + ROWS_DEMO.text,
+   pairs:ROWS_DEMO.pairs, types:["parent"], rows:true},
+  {label:"The sources", text:"The sources don’t always agree. Agamemnon’s father is Atreus in Homer, Pleisthenes in Hesiod. Pick a source and the tree keeps only what it tells.",
+   pairs:[["atreus","agamemnon"],["pleisthenes","agamemnon"],["aerope","agamemnon"]], types:["parent"], read:["all","E","H"]},
+  {label:"Stories and the thread", text:"Stories tells the great myths step by step. Ariadne’s thread finds how any two figures are linked: Oedipus and Orestes meet in Pelops.",
+   thread:["oedipus","orestes"], end:true}
+];
+let tourTimer;
+function tourDemo(t){
+  if (t.thread) {
+    const path = N[t.thread[0]] && N[t.thread[1]] ? shortestPath(...t.thread) : null;
+    return path ? {key:"tour", edges:new Set(path.edges.map(e => e.i)), nodes:new Set(path.nodes), path} : null;
+  }
+  const edges = E.filter(e => t.types.includes(e.type) && t.pairs.some(pr => samePair(e, pr)));
+  return {key:"tour", edges:new Set(edges.map(e => e.i)), nodes:new Set(t.pairs.flat().filter(id => N[id]))};
+}
+function openTour(step){
+  const n = TOUR.length;
+  state.mode = "tour"; state.tourStep = step; state.sel = null; state.path = null; state.curseKey = null;
+  curseSel.value = "";
+  const t = TOUR[step-1], d = tourDemo(t);
+  state.demo = d;
+  const dots = `<div class="dots" aria-hidden="true">${TOUR.map((_, i) => `<span class="${i+1===step ? "on" : i+1<step ? "past" : ""}"></span>`).join("")}</div>`;
+  const read = t.read ? `<div class="read-as tour-read" role="group" aria-label="Told by">${t.read.map(k => `<button class="tab" data-read="${k}" aria-pressed="${state.src===k}">${k==="all" ? SRC_ALL_LABEL : SRC[k]}</button>`).join("")}</div>` : "";
+  const pathLine = t.thread && d ? `<p class="tour-path">${d.path.nodes.map(id => N[id].name).join(" → ")}</p>` : "";
+  const end = t.end ? `<div class="tour-end"><button class="act" data-tour-open="stories">Open Stories</button><button class="act" data-tour-open="thread">Try the thread</button></div>` : "";
+  shell(`<p class="story-of">A minute with Ichor</p>
+    <p class="story-step">${t.label} <span>· ${step} of ${n}</span></p>
+    <p class="story-text tour-text">${t.text}</p>
+    ${pathLine}${read}${end}
+    <div class="story-nav"><button class="act" data-tour="${step-1}">← ${step>1 ? "Back" : "Guide"}</button>${dots}${step<n ? `<button class="go" data-tour="${step+1}">Next →</button>` : `<button class="go" data-tour="done">Done</button>`}</div>`);
+  card.querySelectorAll("[data-tour]").forEach(b => b.onclick = () => {
+    const v = b.dataset.tour;
+    if (v==="done") resetMode(); else if (v==="0") openAbout(); else openTour(+v);
+  });
+  card.querySelectorAll("[data-read]").forEach(b => b.onclick = () => {
+    setSource(b.dataset.read);
+    srcNote.classList.remove("show"); clearTimeout(noteTimer);
+    card.querySelectorAll("[data-read]").forEach(x => x.setAttribute("aria-pressed", x.dataset.read===state.src));
+  });
+  card.querySelectorAll("[data-tour-open]").forEach(b => b.onclick = () => b.dataset.tourOpen==="stories" ? openCurses() : openThread());
+  infoBtn.setAttribute("aria-pressed", "true");
+  apply(true);
+  clearTimeout(tourTimer);
+  if (!d || !d.nodes.size) return;
+  // the rows step spans the tree: if it doesn’t fit at a readable size, show one house, then glide to the other
+  if (t.rows && fitScale([...d.nodes]) < 0.5) {
+    fitTo(t.pairs[0], true);
+    tourTimer = setTimeout(() => { if (state.mode==="tour" && state.demo===d) fitTo(t.pairs[1], 1400); }, 1900);
+  } else fitTo([...d.nodes], true);
+}
+document.addEventListener("keydown", ev => {
+  if (state.mode!=="tour" || ev.target.closest("input, select, textarea")) return;
+  if (ev.key==="ArrowRight" && state.tourStep < TOUR.length) openTour(state.tourStep + 1);
+  if (ev.key==="ArrowLeft" && state.tourStep > 1) openTour(state.tourStep - 1);
+});
 function openLayers(){
   state.mode = "layers"; state.sel = null; state.path = null; state.curseKey = null;
   curseSel.value = "";

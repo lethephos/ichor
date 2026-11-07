@@ -67,3 +67,8 @@
 /* stories not yet checked */
 .draft{font:600 10px var(--ui);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:1px 6px;vertical-align:middle}
 .draft-note{font:12px/1.5 var(--ui);color:var(--muted);margin:12px 0 0}
+/* the tour */
+.tour-go{margin:6px 0 4px}
+.tour-path{font:15px/1.5 var(--display);color:var(--accent);margin:12px 0 0}
+.tour-end{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+@media (max-width:899px){ .tour-text{font-size:18px;line-height:1.5} }
