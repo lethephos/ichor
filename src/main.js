@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import {SRC, SRC_FULL, SRC_NOTE, SRC_ALL_LABEL, ROWY, ROWB, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf, ALL_STORIES, storyHome} from "./data.js";
+import {SRC, SRC_FULL, sourceNote, SRC_ALL_LABEL, ROWY, ROWB, GENS, W, H, P, N, E, STORIES, BRANCH, HOUSES, OLY, OLY_NOTE, FAMILIES, FAMILY, FOCUS, DIVIDERS, setFamily, familyOf, ALL_STORIES, storyHome} from "./data.js";
 
 const LAYERS = [
   {k:"parent", label:"Bloodlines"},
@@ -45,6 +45,7 @@ function switchFamily(id){
   hideHint(); state.hover = null; resetMode();
   setFamily(id); foldHeader(false);
   showFamily(); buildStories(); indexPeople(); drawTree();
+  srcNote.textContent = sourceNote(state.src);
   initialView(); apply(false);
 }
 function goFamily(id){
@@ -136,7 +137,7 @@ function setSource(k){
   state.src = k;
   srcRow.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-pressed", x.dataset.src===k));
   showSource();
-  srcNote.textContent = SRC_NOTE[k];
+  srcNote.textContent = sourceNote(k);
   if (!wide()) { srcNote.classList.add("show"); clearTimeout(noteTimer); noteTimer = setTimeout(() => srcNote.classList.remove("show"), 4500); }
   if (state.mode==="thread" && state.threadEnds) runThread(...state.threadEnds, true);
   apply(true);
@@ -145,7 +146,7 @@ function setSource(k){
   nodeSel.filter(d => d.versions).classed("pulse", false);
   requestAnimationFrame(() => nodeSel.filter(d => d.versions).classed("pulse", true));
 }
-srcNote.textContent = SRC_NOTE.all;
+srcNote.textContent = sourceNote(state.src);
 let noteTimer;
 srcNote.addEventListener("click", () => srcNote.classList.remove("show"));
 
@@ -829,11 +830,17 @@ function fateWheel(id, me, fates, dot){
 }
 /* The stories a figure takes part in, in any family: each opens at the step where they come in.
    A story this family cannot hold opens in its own family, which the line under it names. */
+/* The family a story should open in, or null to tell it here: its own family when this one cannot hold it, and,
+   on phones, when the whole tree is shown, since there its figures sit too far apart to read on a small screen */
+function storyMove(c){
+  if (!STORIES[c.id] || (!wide() && FAMILY.id === FAMILIES[0].id)) { const home = storyHome(c); return home.id === FAMILY.id ? null : home; }
+  return null;
+}
 function storiesOf(id){
   const list = ALL_STORIES.map(c => [c, c.steps.findIndex(s => s.figures.includes(id))]).filter(([, i]) => i >= 0);
   if (!list.length) return "";
   return `<div class="sec"><h3>In the stories</h3><ul class="opts in-stories">${list.map(([c, i]) => {
-    const home = STORIES[c.id] ? null : storyHome(c);
+    const home = storyMove(c);
     const where = i ? `From step ${i+1}, ${esc(c.steps[i].label)}` : esc(c.lead);
     return `<li><button class="opt" data-story="${c.id}" data-at="${i+1}"${home ? ` data-family="${home.id}"` : ""}><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${where}${home ? ` · opens in ${esc(home.label)}` : ""}</small></span></button></li>`;
   }).join("")}</ul></div>`;
@@ -998,7 +1005,7 @@ function showGuideSources(){
   card.querySelectorAll("[data-guide-src]").forEach(b => {
     const on = state.src===b.dataset.guideSrc;
     b.setAttribute("aria-pressed", on);
-    b.querySelector(".demo-note").textContent = on ? SRC_NOTE[b.dataset.guideSrc] : "";
+    b.querySelector(".demo-note").textContent = on ? sourceNote(b.dataset.guideSrc) : "";
   });
 }
 function openAbout(){
@@ -1110,8 +1117,9 @@ function openCurses(){
   shell(`${panelTop("Ἀραί")}
     <h2 class="card-name thread-title">Stories</h2>
     <p class="card-tag">Myths told one step at a time, as the tree fills in.</p>
-    <ul class="opts">${Object.values(STORIES).map(c => `<li><button class="opt" data-curse="${c.id}"><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${c.lead}</small></span></button></li>`).join("")}</ul>`);
-  card.querySelectorAll("[data-curse]").forEach(b => b.onclick = () => openCurse(b.dataset.curse));
+    <ul class="opts">${Object.values(STORIES).map(c => { const home = storyMove(c);
+      return `<li><button class="opt" data-curse="${c.id}"${home ? ` data-family="${home.id}"` : ""}><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${c.lead}${home ? ` · opens in ${esc(home.label)}` : ""}</small></span></button></li>`; }).join("")}</ul>`);
+  card.querySelectorAll("[data-curse]").forEach(b => b.onclick = () => { if (b.dataset.family) moveToFamily(b.dataset.family); openCurse(b.dataset.curse); });
   apply(true);
 }
 /* phone: the same search in a panel; the list is rebuilt on every keystroke */
