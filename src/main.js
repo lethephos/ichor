@@ -435,9 +435,18 @@ placeFit(); addEventListener("resize", placeFit);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }
-  const k = 0.55;
+  const k = 0.55, f = N[FOCUS], left = inset(), cx = left + (w - left)/2;
+  // a family whose focus is on its first row opens at the top (the whole tree, on the first gods);
+  // otherwise the view is centred on the focus, halfway down the tree
+  if (f.row === 0) {
+    // centred on the focus and the partners beside it (Gaia and Uranus)
+    const pair = [f, ...E.filter(e => e.type==="marriage" && (e.from===f.id || e.to===f.id))
+      .map(e => N[e.from===f.id ? e.to : e.from]).filter(p => p.row === 0)];
+    const x = pair.reduce((s, p) => s + p.x, 0) / pair.length;
+    svg.call(zoom.transform, d3.zoomIdentity.translate(cx - x*k, (wide() ? 110 : 30) - ROWY[0]*k).scale(k)); return;
+  }
   const cy = (ROWY[0] + ROWY[ROWY.length-1]) / 2;
-  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[FOCUS].x*k, viewH()/2 - cy*k).scale(k));
+  svg.call(zoom.transform, d3.zoomIdentity.translate(cx - f.x*k, viewH()/2 - cy*k).scale(k));
 }
 
 /* ---------- visibility ---------- */
@@ -576,12 +585,74 @@ function markNav(i){
    so the tree keeps the room above the card. The tree is held still on screen as the header goes or comes back. */
 function setSheet(on){
   if (document.body.classList.contains("sheet") === on) return;
-  if (on) holdStill(() => document.body.classList.add("sheet")); else document.body.classList.remove("sheet");
+  if (on) foldMotion(() => holdStill(() => document.body.classList.add("sheet")));
+  else foldMotion(() => document.body.classList.remove("sheet"));
 }
 /* The header also folds once the reader moves the tree; “Whole tree” and a new family bring it back. */
 function foldHeader(on){
   if (document.body.classList.contains("folded") === on) return;
-  holdStill(() => document.body.classList.toggle("folded", on));
+  foldMotion(() => holdStill(() => document.body.classList.toggle("folded", on)));
+}
+/* On phones the header does not vanish at once (the tools strip lives outside .controls, so that moving it never drags the fixed strip along): it fades and lifts away while the line of pills slides up
+   into its place, and the gold mark flies from the header to the start of the line (and back when it returns).
+   The tree stays still underneath. */
+const headerEl = document.querySelector("header"), controlsEl = document.querySelector(".controls");
+let foldAnims = [], foldGhost = null;
+function foldMotion(change){
+  foldAnims.forEach(a => a.finish()); foldAnims = []; if (foldGhost) { foldGhost.remove(); foldGhost = null; }
+  const shown = () => headerEl.getClientRects().length > 0;
+  if (wide() || matchMedia("(prefers-reduced-motion: reduce)").matches || !document.documentElement.classList.contains("landed")) return change();
+  const wasShown = shown(), top0 = controlsEl.getBoundingClientRect().top;
+  const famBtn = controlsEl.querySelector(".family-btn"), famX0 = famBtn.getBoundingClientRect().left;
+  const from = (wasShown ? headerEl.querySelector(".wm-sep") : controlsEl.querySelector(".mini-mark")).getBoundingClientRect();
+  if (wasShown) {
+    // the header leaves as a ghost of itself, since the real one is gone from the layout at once
+    const r = headerEl.getBoundingClientRect();
+    foldGhost = headerEl.cloneNode(true);
+    foldGhost.querySelectorAll("[id]").forEach(el => el.removeAttribute("id"));
+    foldGhost.setAttribute("aria-hidden", "true");
+    foldGhost.querySelector(".wm-sep").style.visibility = "hidden";
+    Object.assign(foldGhost.style, {display:getComputedStyle(headerEl).display, position:"fixed", left:r.left+"px", top:r.top+"px", width:r.width+"px", height:r.height+"px", margin:0, zIndex:4, pointerEvents:"none", background:"var(--bg)"});
+    document.body.appendChild(foldGhost);
+  }
+  change();
+  const isShown = shown(), d = top0 - controlsEl.getBoundingClientRect().top;
+  if (wasShown === isShown) { if (foldGhost) { foldGhost.remove(); foldGhost = null; } return; }
+  const ease = "cubic-bezier(.3,0,.15,1)", ms = 380;
+  const mark = isShown ? headerEl.querySelector(".wm-sep") : controlsEl.querySelector(".mini-mark");
+  const to = mark.getBoundingClientRect();
+  const dx = from.left + from.width/2 - to.left - to.width/2, dy = from.top + from.height/2 - to.top - to.height/2 - (isShown ? 0 : d);
+  const markFrom = `translate(${dx}px,${dy}px) scale(${from.height / to.height})`;
+  // hold the starting picture at once, and move only from the next free frame: opening a card is heavy work,
+  // which would otherwise freeze the motion halfway
+  Object.assign(controlsEl.style, {transform: `translateY(${d}px)`, zIndex: 5});
+  // the family name makes room for the mark at the start of the line, or takes its place back
+  const fx = famX0 - famBtn.getBoundingClientRect().left;
+  famBtn.style.transform = `translateX(${fx}px)`;
+  // the flying mark passes over the pills (the header makes no stacking context of its own, so this lifts it above them)
+  Object.assign(mark.style, {transform: markFrom, position: "relative", zIndex: 6});
+  // when the header returns, its words fade in round the mark, which flies back to them
+  const words = isShown ? [...headerEl.querySelectorAll(".info, .kicker > :not(.wm-sep)")] : [];
+  words.forEach(w => w.style.opacity = 0);
+  const g = foldGhost;
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    controlsEl.style.transform = mark.style.transform = famBtn.style.transform = ""; words.forEach(w => w.style.opacity = "");
+    if (fx) foldAnims.push(famBtn.animate([{transform: `translateX(${fx}px)`}, {transform: "none"}], {duration: ms, easing: ease}));
+    // transform and opacity only, so the motion stays smooth while the tree is busy moving its camera
+    const slide = controlsEl.animate([{transform: `translateY(${d}px)`}, {transform: "none"}], {duration: ms, easing: ease});
+    slide.onfinish = slide.oncancel = () => { controlsEl.style.zIndex = ""; };
+    foldAnims.push(slide);
+    const fly = mark.animate([{transform: markFrom}, {transform: "none"}], {duration: ms, easing: ease});
+    fly.onfinish = fly.oncancel = () => { mark.style.position = mark.style.zIndex = ""; };
+    foldAnims.push(fly);
+    if (g) {
+      const a = g.animate([{opacity: 1, transform: "none"}, {opacity: 0, transform: "translateY(-14px)"}], {duration: ms * .7, easing: ease, fill: "forwards"});
+      a.onfinish = () => { g.remove(); if (foldGhost === g) foldGhost = null; };
+      foldAnims.push(a);
+    } else {
+      words.forEach(w => foldAnims.push(w.animate([{opacity: 0, transform: "translateY(-8px)"}, {opacity: 1, transform: "none"}], {duration: ms, delay: 80, easing: ease, fill: "backwards"})));
+    }
+  }));
 }
 // change the page around the tree without the tree jumping on screen
 function holdStill(change){

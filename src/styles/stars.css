@@ -79,7 +79,7 @@
 [data-look="stars"] .tools .act + .act{border-left:1px solid var(--rule)}
 /* on phones the line of pills is one row of a table: no boxes, only hairline dividers between the cells, which run the full height of the row */
 @media (max-width:899px){
-  [data-look="stars"] body .controls{gap:0;padding:0 16px;align-items:stretch}
+  [data-look="stars"] body .controls{gap:0;padding:0 16px;align-items:stretch;background:var(--bg)}
   [data-look="stars"] body .controls .mini-mark{align-self:center;margin-right:12px}
   [data-look="stars"] body .controls :is(.family-btn,.theme,.fit-float){height:46px;border:0;background:none;box-shadow:none}
   [data-look="stars"] body .controls .famline,[data-look="stars"] body .controls .family-pick,[data-look="stars"] body .controls .view-tools{display:flex;align-items:stretch}
