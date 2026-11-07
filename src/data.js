@@ -104,6 +104,16 @@ export function setFamily(id) {
 /* Every story, whichever family is shown, and the family it opens in when it is not in this one:
    the smallest family that holds all its figures (the whole tree if none does). */
 export const ALL_STORIES = stories;
+/* Every figure, whichever family is shown, and the family a figure opens in when it is not in this one:
+   the family that holds most of its links (Medea opens with the Argonauts, not in the house of Minos), the smaller on a tie;
+   the whole tree if no family holds it. */
+export const ALL_PEOPLE = people;
+export function figureHome(id) {
+  const mine = relations.filter(r => r.from === id || r.to === id);
+  const held = f => mine.filter(r => f.figures.includes(r.from) && f.figures.includes(r.to)).length;
+  const fits = FAMILIES.filter(f => f.figures && f.figures.includes(id)).map(f => [f, held(f)]);
+  return fits.sort(([a, x], [b, y]) => (y - x) || (a.figures.length - b.figures.length))[0]?.[0] || FAMILIES[0];
+}
 export function storyHome(c) {
   const fits = FAMILIES.filter(f => !f.figures || c.pairs.flat().every(id => f.figures.includes(id)));
   return fits.sort((a, b) => (a.figures ? a.figures.length : 1e9) - (b.figures ? b.figures.length : 1e9))[0] || FAMILIES[0];
