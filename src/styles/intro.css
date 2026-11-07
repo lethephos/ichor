@@ -1,21 +1,26 @@
-/* Loading. Until the code and the data arrive, the logo's mark draws itself in the middle of the tree:
-   the star opens its rays, then a drop of ichor gathers at the south ray and falls, again and again.
-   It shows only if loading takes more than a moment. Then the tree lights up like a night sky,
-   row by row from the top (lower means descended), and its links are drawn in after the stars. */
-.loader{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:1;
-  opacity:0;animation:ld-show .4s .25s ease-out forwards}
-.loader svg{width:34px;height:auto;overflow:visible}
-.ld-star,.ld-drop{fill:var(--accent);transform-box:fill-box}
-.ld-star{transform-origin:50% 50%;animation:ld-star .9s .25s cubic-bezier(.2,.8,.2,1) both}
-.ld-drop{transform-origin:50% 0;animation:ld-drop 1.4s .7s ease-in infinite both}
-@keyframes ld-show{to{opacity:1}}
-@keyframes ld-star{from{transform:scale(.15) rotate(-45deg);opacity:0}to{transform:none;opacity:1}}
-@keyframes ld-drop{
-  0%{transform:translateY(-3px) scale(.15);opacity:0}
-  35%{transform:none;opacity:1}
-  62%{transform:none;opacity:1}
-  100%{transform:translateY(18px) scaleY(1.15);opacity:0}}
-html.ready .loader{animation:none;opacity:0;transition:opacity .3s}
+/* Opening. The page starts as the logo's mark alone in the middle of the screen: the star opens its rays,
+   then a drop of ichor gathers at the south ray and settles into place. Once the code and the data are in,
+   the mark flies to its place in the header and the rest of the page appears round it; while they are still
+   loading, the drop falls away and gathers again. Then the tree lights up like a night sky, from the top down
+   (lower means descended), its links drawn in after the stars. */
+.splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--bg);pointer-events:none;
+  transition:background-color .6s ease;animation:sp-giveup .5s 10s forwards}
+.splash svg{width:44px;height:auto;overflow:visible;transition:transform .75s cubic-bezier(.55,0,.15,1),opacity .4s}
+.sp-star,.sp-drop{fill:var(--accent);transform-box:fill-box}
+.sp-star{transform-origin:50% 50%;animation:sp-star .9s .15s cubic-bezier(.2,.8,.2,1) both}
+.sp-drop{transform-origin:50% 0;animation:sp-drop 1.6s .8s infinite both}
+@keyframes sp-star{from{transform:scale(.15) rotate(-45deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes sp-drop{
+  0%{transform:translateY(-2px) scale(.1);opacity:0;animation-timing-function:cubic-bezier(.3,0,.2,1)}
+  30%{transform:none;opacity:1}
+  70%{transform:none;opacity:1;animation-timing-function:cubic-bezier(.5,0,.9,.5)}
+  100%{transform:translateY(22px) scaleY(1.2);opacity:0}}
+/* if the code never arrives, the page is not kept behind the mark */
+@keyframes sp-giveup{to{opacity:0;visibility:hidden}}
+html.splash-out .splash{background-color:transparent}
+/* the header's own mark waits until the flying one lands on it */
+html:not(.landed) .kicker .wm-sep{visibility:hidden}
+@media (prefers-reduced-motion: reduce){ .sp-star,.sp-drop{animation:none} .splash{transition-duration:.3s} }
 
 /* what the code fills in waits for it, so nothing shows empty or out of place */
 html:not(.ready) :is(#familyName,#srcName,#srcRow,#srcNote,#viewTools,#hint,#rowLabels,#dock){opacity:0}
