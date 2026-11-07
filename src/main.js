@@ -400,14 +400,19 @@ const viewH = () => {
 };
 // the width of the row-name column, which the tree should not start under
 const inset = () => rowLabels.querySelector(".rl-col")?.offsetWidth || 0;
-function fitTo(ids, animate){
+function fitBox(ids){
   const pts = ids ? ids.map(id => N[id]) : P;
   const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
   const x0 = Math.min(...xs) - 80, x1 = Math.max(...xs) + 80, y0 = Math.min(...ys) - 60, y1 = Math.max(...ys) + 60;
   const left = inset(), w = viewW() - left, h = viewH();
-  const k = Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95);
+  return {x0, x1, y0, y1, left, w, h, k: Math.min(1.1, Math.min(w/(x1-x0), h/(y1-y0)) * 0.95)};
+}
+const fitScale = ids => fitBox(ids).k;
+/* animate: true for the usual glide, or a duration in ms */
+function fitTo(ids, animate){
+  const {x0, x1, y0, y1, left, w, h, k} = fitBox(ids);
   const t = d3.zoomIdentity.translate(left + (w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
-  (animate ? svg.transition().duration(600) : svg).call(zoom.transform, t);
+  (animate ? svg.transition().duration(animate===true ? 600 : animate) : svg).call(zoom.transform, t);
 }
 function focusOn(id){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
@@ -447,6 +452,7 @@ function apply(animate){
   const curse = state.mode==="curse" ? STORIES[state.curseKey] : null;
   const story = curse && state.step>=1 && state.step<=curse.steps.length ? reveal(curse, state.step) : null;
   const path = state.mode==="thread" ? state.path : null;
+  const demo = state.mode==="about" && state.demo && !state.demo.missing ? state.demo : null;
   const pathEdges = new Set(path ? path.edges : []);
   const pathNodes = new Set(path ? path.nodes : []);
   const visible = new Set();
@@ -456,26 +462,27 @@ function apply(animate){
     if (story && inCurse && (!(story.shown.has(e.from) && story.shown.has(e.to)) || story.ahead.has(e.i))) inCurse = false;   // not told yet
     const isAlt = !!(story && story.alt.has(e.i));
     if (isAlt) inCurse = true;
-    const inPath = pathEdges.has(e.i);
+    const inPath = pathEdges.has(e.i) || !!(demo && demo.edges.has(e.i));
     if (inPath) vis = true;
     const hot = (sel && (e.from===sel || e.to===sel)) || (inCurse && (!story || story.now.has(e.from) || story.now.has(e.to))) || inPath;
     // at rest, feuds and affairs stay faint so the bloodlines read first; they light up when selected
     let op = (e.type==="curse"||e.type==="transform") ? 0.9 : (e.type==="feud"||e.type==="affair") ? 0.3 : 0.55;
-    if (sel || curse || path) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
+    if (sel || curse || path || demo) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
     if (!vis && !inCurse) op = 0;
     if (vis) { visible.add(e.from); visible.add(e.to); }
-    const g = d3.select(this).classed("thread", inPath).classed("alt", isAlt);
+    const g = d3.select(this).classed("thread", inPath && !demo).classed("alt", isAlt);
     (dur ? g.transition().duration(dur) : g).style("opacity", op);
-    g.select(".main").attr("stroke-width", inPath ? 3 : hot ? BASE[e.type]*1.7 : BASE[e.type]);
+    g.select(".main").attr("stroke-width", inPath && !demo ? 3 : inPath ? BASE[e.type]*2 : hot ? BASE[e.type]*1.7 : BASE[e.type]);
   });
   const neigh = new Set();
   if (sel) { neigh.add(sel); E.forEach(e => { if (edgeVisible(e) && (e.from===sel||e.to===sel)) { neigh.add(e.from); neigh.add(e.to); } }); }
-  nodeSel.classed("sel", d => d.id===sel || (state.mode==="node" && d.id===state.sel)).classed("ends", d => !!(path && (d.id===path.nodes[0] || d.id===path.nodes[path.nodes.length-1])) || !!(story && story.now.has(d.id)));
+  nodeSel.classed("sel", d => d.id===sel || (state.mode==="node" && d.id===state.sel)).classed("ends", d => !!(demo && demo.nodes.has(d.id)) || !!(path && (d.id===path.nodes[0] || d.id===path.nodes[path.nodes.length-1])) || !!(story && story.now.has(d.id)));
   const nOp = d => {
     if (sel) return neigh.has(d.id) ? 1 : 0.2;
     if (story) return story.now.has(d.id) ? 1 : story.shown.has(d.id) ? 0.8 : 0.08;
     if (curse) return curse.nodes.has(d.id) ? 1 : 0.18;
     if (path) return pathNodes.has(d.id) ? 1 : 0.18;
+    if (demo) return demo.nodes.has(d.id) ? 1 : 0.15;
     if (state.src!=="all") return (visible.has(d.id) || (d.transformation && d.transformation.sources.includes(state.src))) ? 1 : 0.18;
     return 1;
   };
@@ -854,6 +861,7 @@ function nodeClick(id){
   select(id, true);
 }
 function resetMode(){
+  state.demo = null;
   state.mode = null; state.sel = null; state.path = null; state.curseKey = null; state.threadEnds = null;
   curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
   // on phones the header comes back as the card goes: keep what was in view centred in the larger space
@@ -869,20 +877,70 @@ const panelTop = greek => `<div class="card-top"><span class="greek" lang="grc">
 /* Guide: what Ichor is, how to read the tree, the lines and the sources */
 const infoBtn = document.getElementById("infoBtn");
 infoBtn.onclick = () => state.mode==="about" ? resetMode() : openAbout();
+/* The Guide is a live legend: each line style, the rule about rows and each source can be tapped to see it on the tree. */
+const DEMO_PAIRS = {parent:["atreus","agamemnon"], marriage:["zeus","hera"], affair:["zeus","leda"], feud:["atreus","thyestes"], transform:["zeus","io"], curse:["myrtilus","pelops"]};
+function demoEdge(type){
+  const pick = E.find(e => e.type===type && samePair(e, DEMO_PAIRS[type]));
+  return pick || E.filter(e => e.type===type).sort((a, b) => b.sources.length - a.sources.length)[0] || null;
+}
+const ROWS_DEMO = {pairs:[["atreus","agamemnon"],["tydeus","diomedes"]], text:"Agamemnon and Diomedes fought side by side at Troy, yet Diomedes sits three rows lower: the rows count steps down each house, not years."};
+function showDemo(key){
+  if (state.demo && state.demo.key===key) { state.demo = null; }
+  else if (key==="rows") {
+    const edges = E.filter(e => e.type==="parent" && ROWS_DEMO.pairs.some(pr => samePair(e, pr)));
+    const nodes = ROWS_DEMO.pairs.flat().filter(id => N[id]);
+    state.demo = nodes.length===4 ? {key, edges:new Set(edges.map(e => e.i)), nodes:new Set(nodes)} : {key, edges:new Set(), nodes:new Set(), missing:true};
+  } else {
+    const e = demoEdge(key);
+    state.demo = e ? {key, edges:new Set([e.i]), nodes:new Set([e.from, e.to]), e} : {key, edges:new Set(), nodes:new Set(), missing:true};
+  }
+  card.querySelectorAll("[data-demo]").forEach(b => {
+    const on = !!state.demo && state.demo.key===b.dataset.demo;
+    b.setAttribute("aria-pressed", on);
+    const note = b.querySelector(".demo-note");
+    note.innerHTML = !on ? "" : state.demo.missing ? "Not in this family: pick Whole tree to see it." : b.dataset.demo==="rows" ? ROWS_DEMO.text : `${sentence(state.demo.e)} ${srcText(state.demo.e.sources)}`;
+  });
+  apply(true);
+  if (!state.demo || state.demo.missing) return;
+  // the rows example spans the tree: if both pairs don’t fit at a readable size, show one, then glide to the other
+  const d = state.demo;
+  if (key==="rows" && fitScale([...d.nodes]) < 0.5) {
+    fitTo(ROWS_DEMO.pairs[0], true);
+    clearTimeout(demoTimer);
+    demoTimer = setTimeout(() => { if (state.mode==="about" && state.demo===d) fitTo(ROWS_DEMO.pairs[1], 1400); }, 1900);
+  } else fitTo([...d.nodes], true);
+}
+let demoTimer;
+function showGuideSources(){
+  card.querySelectorAll("[data-guide-src]").forEach(b => {
+    const on = state.src===b.dataset.guideSrc;
+    b.setAttribute("aria-pressed", on);
+    b.querySelector(".demo-note").textContent = on ? SRC_NOTE[b.dataset.guideSrc] : "";
+  });
+}
 function openAbout(){
-  state.mode = "about"; state.sel = null; state.path = null; state.curseKey = null;
+  state.mode = "about"; state.sel = null; state.path = null; state.curseKey = null; state.demo = null;
   curseSel.value = "";
+  const item = (attr, label, small = "", svg = "") => `<li><button class="opt demo" ${attr} aria-pressed="false">${svg}<span>${label}${small ? `<small>${small}</small>` : ""}<small class="demo-note" aria-live="polite"></small></span></button></li>`;
   shell(`${panelTop("ἰχώρ")}
     <h2 class="card-name thread-title">Guide to Ichor</h2>
     <p class="card-tag">The family tree of Greek myth.</p>
     <p class="card-story">Gods and heroes in one tree: who descends from whom, who married, loved, fought and cursed whom. Every link names the ancient sources that tell it. Pick a source and watch the family rearrange itself.</p>
     <div class="sec"><h3>How to read it</h3><ul class="rels about">
       <li><span class="rel static">Tap a figure to open its card. Pinch or scroll to zoom, drag to move.</span></li>
-      <li><span class="rel static">Lower means descended, not later. The rows I–VII count steps down each house, so the houses don’t line up in time.</span></li>
       <li><span class="rel static">Family picks a part of the tree; Source shows only what one group of ancient writers tells.</span></li>
-    </ul></div>
-    <div class="sec"><h3>The lines</h3><ul class="opts">${LAYERS.map(L => `<li><span class="opt static"><svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}</span></li>`).join("")}</ul></div>
-    <div class="sec"><h3>The sources</h3><ul class="rels">${Object.keys(SRC).map(k => `<li><span class="rel static">${SRC[k]}</span><span class="note">${SRC_FULL[k]}</span></li>`).join("")}</ul></div>`);
+    </ul><ul class="opts">${item(`data-demo="rows"`, "Lower means descended, not later", "The rows I–VII count steps down each house, so the houses don’t line up in time.")}</ul></div>
+    <div class="sec"><h3>The lines</h3><p class="demo-hint">Tap one to see an example on the tree.</p><ul class="opts">${LAYERS.map(L => item(`data-demo="${L.k}"`, L.label, "", `<svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>`)).join("")}</ul></div>
+    <div class="sec"><h3>The sources</h3><p class="demo-hint">Tap one to show only what it tells; tap again for all versions.</p><ul class="opts">${Object.keys(SRC).map(k => item(`data-guide-src="${k}"`, SRC[k], SRC_FULL[k])).join("")}</ul></div>`);
+  card.querySelectorAll("[data-demo]").forEach(b => b.onclick = () => showDemo(b.dataset.demo));
+  card.querySelectorAll("[data-guide-src]").forEach(b => b.onclick = () => {
+    // a source shows itself across the whole tree, so any example on show steps aside; its note is already in the Guide
+    if (state.demo) showDemo(state.demo.key);
+    setSource(state.src===b.dataset.guideSrc ? "all" : b.dataset.guideSrc);
+    srcNote.classList.remove("show"); clearTimeout(noteTimer);
+    showGuideSources();
+  });
+  showGuideSources();
   infoBtn.setAttribute("aria-pressed", "true");
   apply(true);
 }
