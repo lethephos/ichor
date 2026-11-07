@@ -84,8 +84,9 @@ header{padding:16px 16px 6px;position:relative}
 @media (max-width:899px){
   header{display:flex;align-items:center;min-height:52px;padding:8px 16px}
   .wordmark{height:24.3px}
-  /* the mark stands on the line between the Family and Source cells below it (placeSep sets --sep-gap) */
-  .wm-sep{height:36px;margin:0 10px 0 var(--sep-gap,12px)}
+  /* the mark stands on the line between the Family and Source cells below it: they share the width left of the
+     two 46px tool cells evenly, so that line is at 50vw - 39px; the word ends at 86.2px and the mark is 16.9px wide */
+  .wm-sep{height:36px;margin:0 10px 0 max(10px, calc(50vw - 133.6px))}
   .kicker .tagline{font-size:13.5px}
   .info{top:9px}
   body:is(.sheet,.folded) header{display:none}

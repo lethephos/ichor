@@ -1,0 +1,33 @@
+/* Loading. Until the code and the data arrive, the logo's mark draws itself in the middle of the tree:
+   the star opens its rays, then a drop of ichor gathers at the south ray and falls, again and again.
+   It shows only if loading takes more than a moment. Then the tree lights up like a night sky,
+   row by row from the top (lower means descended), and its links are drawn in after the stars. */
+.loader{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:1;
+  opacity:0;animation:ld-show .4s .25s ease-out forwards}
+.loader svg{width:34px;height:auto;overflow:visible}
+.ld-star,.ld-drop{fill:var(--accent);transform-box:fill-box}
+.ld-star{transform-origin:50% 50%;animation:ld-star .9s .25s cubic-bezier(.2,.8,.2,1) both}
+.ld-drop{transform-origin:50% 0;animation:ld-drop 1.4s .7s ease-in infinite both}
+@keyframes ld-show{to{opacity:1}}
+@keyframes ld-star{from{transform:scale(.15) rotate(-45deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes ld-drop{
+  0%{transform:translateY(-3px) scale(.15);opacity:0}
+  35%{transform:none;opacity:1}
+  62%{transform:none;opacity:1}
+  100%{transform:translateY(18px) scaleY(1.15);opacity:0}}
+html.ready .loader{animation:none;opacity:0;transition:opacity .3s}
+
+/* what the code fills in waits for it, so nothing shows empty or out of place */
+html:not(.ready) :is(#familyName,#srcName,#srcRow,#srcNote,#viewTools,#hint,#rowLabels,#dock){opacity:0}
+:is(#familyName,#srcName,#srcRow,#viewTools,#dock){transition:opacity .3s}
+
+/* the tree lights up: each star twinkles in at its turn (--d), then its links are drawn */
+#graph.intro .node{animation:in-node .5s var(--d) ease-out both}
+#graph.intro .node .dot.star,#graph.intro .node .dot{transform-box:fill-box;transform-origin:50% 50%;animation:in-star .7s var(--d) cubic-bezier(.2,.8,.2,1) both}
+#graph.intro .e{animation:in-node .6s var(--d) ease-out both}
+#graph.intro .e.draw .edge{stroke-dasharray:1 1!important;animation:in-draw .8s var(--d) cubic-bezier(.4,0,.2,1) both}
+#graph.intro > g > g:first-child{animation:in-node .8s ease-out both}
+@keyframes in-node{from{opacity:0}}
+@keyframes in-star{from{transform:scale(.1) rotate(-60deg)}}
+@keyframes in-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+#graph.intro-calm{animation:in-node .4s ease-out both}

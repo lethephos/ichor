@@ -432,16 +432,6 @@ function placeFit(){
   if (viewTools.parentElement !== home) home.appendChild(viewTools);
 }
 placeFit(); addEventListener("resize", placeFit);
-// on phones the logo's mark stands on the divider between the Family and Source cells just below it
-const kicker = document.querySelector(".kicker");
-function placeSep(){
-  const sep = kicker.querySelector(".wm-sep"), word = kicker.querySelector(".wordmark"), src = document.querySelector(".src-pick");
-  if (wide() || !sep || !src || !kicker.offsetParent) { kicker.style.removeProperty("--sep-gap"); return; }
-  const gap = src.getBoundingClientRect().left - sep.getBoundingClientRect().width / 2 - word.getBoundingClientRect().right;
-  kicker.style.setProperty("--sep-gap", Math.max(10, gap) + "px");
-}
-new ResizeObserver(placeSep).observe(document.querySelector("header"));
-addEventListener("resize", placeSep);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }
@@ -1270,3 +1260,25 @@ function runThread(a, b, silent){
 showFamily(); buildStories(); indexPeople(); drawTree();
 initialView();
 apply(false);
+
+/* The tree lights up once the page has loaded: each star twinkles in from the top of the screen down
+   (lower means descended), and its links are drawn in after it. With reduced motion it simply fades in. */
+function intro(){
+  document.documentElement.classList.add("ready");
+  const loader = document.getElementById("loader");
+  setTimeout(() => loader.remove(), 400);
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) { graphEl.classList.add("intro-calm"); return; }
+  const t = d3.zoomTransform(graphEl), h = graphEl.clientHeight;
+  const at = y => Math.round(80 + Math.min(1, Math.max(0, (t.y + y * t.k) / h)) * 900);
+  nodeSel.style("--d", d => at(d.y) + "ms");
+  const SOLID = new Set(["parent", "marriage", "curse"]);
+  edgeSel.classed("draw", e => SOLID.has(e.type))
+    .style("--d", e => at(Math.min(N[e.from].y, N[e.to].y)) + 260 + "ms")
+    .each(function(e){ if (SOLID.has(e.type)) d3.select(this).selectAll(".edge").attr("pathLength", 1); });
+  graphEl.classList.add("intro");
+  setTimeout(() => {
+    graphEl.classList.remove("intro");
+    nodeSel.style("--d", null); edgeSel.classed("draw", false).style("--d", null).selectAll(".edge").attr("pathLength", null);
+  }, 2200);
+}
+intro();
