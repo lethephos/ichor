@@ -866,14 +866,14 @@ function resetMode(){
 
 /* phone panels: layers, curses, find */
 const panelTop = greek => `<div class="card-top"><span class="greek" lang="grc">${greek}</span><button class="close" data-close>Close</button></div>`;
-/* About: what Ichor is, how to read the tree, the lines and the sources */
+/* Guide: what Ichor is, how to read the tree, the lines and the sources */
 const infoBtn = document.getElementById("infoBtn");
 infoBtn.onclick = () => state.mode==="about" ? resetMode() : openAbout();
 function openAbout(){
   state.mode = "about"; state.sel = null; state.path = null; state.curseKey = null;
   curseSel.value = "";
   shell(`${panelTop("ἰχώρ")}
-    <h2 class="card-name thread-title">About Ichor</h2>
+    <h2 class="card-name thread-title">Guide to Ichor</h2>
     <p class="card-tag">The family tree of Greek myth.</p>
     <p class="card-story">Gods and heroes in one tree: who descends from whom, who married, loved, fought and cursed whom. Every link names the ancient sources that tell it. Pick a source and watch the family rearrange itself.</p>
     <div class="sec"><h3>How to read it</h3><ul class="rels about">

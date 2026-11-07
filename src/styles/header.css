@@ -71,13 +71,13 @@ header{padding:16px 16px 6px;position:relative}
 }
 @media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }
 
-/* About: a word in the top right corner of the header */
+/* Guide: a word in the top right corner of the header */
 .info{position:absolute;top:10px;right:12px;height:34px;padding:0 14px;background:none;border:1px solid var(--rule);border-radius:17px;font:500 13px var(--ui);letter-spacing:.02em;color:var(--text);cursor:pointer}
 .info:hover{border-color:var(--muted)}
 .info[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
 .info:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
 @media (min-width:900px){ .info{top:18px;right:24px} }
-/* Phones: the header is one line, the wordmark and About; the subtitle and the hint live in About.
+/* Phones: the header is one line, the wordmark and Guide; the subtitle and the hint live in the Guide.
    Below it, one line holds the Family and Source pills, then the theme switch and the whole-tree button (moved there by placeFit).
    The header folds away while a card is open or once the tree is moved; the line of pills stays. */
 @media (max-width:899px){
