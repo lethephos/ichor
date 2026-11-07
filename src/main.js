@@ -1113,6 +1113,21 @@ document.addEventListener("keydown", ev => {
   if (ev.key==="ArrowRight" && state.tourStep < TOUR.length) openTour(state.tourStep + 1);
   if (ev.key==="ArrowLeft" && state.tourStep > 1) openTour(state.tourStep - 1);
 });
+/* A plain panel (Layers, Stories, Find, the thread) leaves the tree where it is, but on a phone the sheet can then cover every
+   figure, leaving an empty band above it (after a family was framed whole, or the tree was moved). Then the nearest figures
+   glide up into the band, so the reader always sees some of the tree. */
+function keepInView(){
+  if (wide()) return;
+  const t = d3.zoomTransform(graphEl), h = viewH(), w = graphEl.clientWidth;
+  const sx = p => p.x*t.k + t.x, sy = p => p.y*t.k + t.y;
+  const across = P.filter(p => sx(p) > 0 && sx(p) < w);
+  if (!across.length || across.some(p => sy(p) > h * 0.1 && sy(p) < h * 0.75)) return;   // figures only at the edge of the band don’t count
+  // the figure nearest the band: below it, it comes to the band's upper part (its rows follow under it); above, to the lower
+  const gap = p => sy(p) > h * 0.75 ? sy(p) - h * 0.75 : h * 0.1 - sy(p);
+  const near = across.reduce((a, p) => gap(p) < gap(a) ? p : a);
+  const dy = (sy(near) > h * 0.75 ? h * 0.35 : h * 0.65) - sy(near);
+  svg.interrupt().transition().duration(400).call(zoom.transform, d3.zoomIdentity.translate(t.x, t.y + dy).scale(t.k));
+}
 function openLayers(){
   state.mode = "layers"; state.sel = null; state.path = null; state.curseKey = null;
   curseSel.value = "";
@@ -1122,6 +1137,7 @@ function openLayers(){
     <ul class="opts">${LAYERS.map(L => `<li><button class="opt" data-layer="${L.k}" aria-pressed="${state.layers[L.k]}"><svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}</button></li>`).join("")}</ul>`);
   card.querySelectorAll("[data-layer]").forEach(b => b.onclick = () => toggleLayer(b.dataset.layer));
   apply(true);
+  keepInView();
 }
 function openCurses(){
   state.mode = "curses"; state.sel = null; state.path = null; state.curseKey = null;
@@ -1133,6 +1149,7 @@ function openCurses(){
       return `<li><button class="opt" data-curse="${c.id}"${home ? ` data-family="${home.id}"` : ""}><span>${c.title}${c.draft ? ` <em class="draft">draft</em>` : ""}<small>${c.lead}${home ? ` · opens in ${esc(home.label)}` : ""}</small></span></button></li>`; }).join("")}</ul>`);
   card.querySelectorAll("[data-curse]").forEach(b => b.onclick = () => { if (b.dataset.family) moveToFamily(b.dataset.family); openCurse(b.dataset.curse); });
   apply(true);
+  keepInView();
 }
 /* phone: the same search in a panel; the list is rebuilt on every keystroke */
 function openFind(){
@@ -1154,6 +1171,7 @@ function openFind(){
   list.onclick = ev => { const b = ev.target.closest("li")?.querySelector("[data-go]"); if (b) goFigure(b.dataset.go); };
   show();
   apply(true);
+  keepInView();
 }
 
 /* Stories: a myth told one step at a time (a curse, one generation at a time). Step 0 introduces it, steps 1…n tell it and
@@ -1349,6 +1367,7 @@ function openThread(){
     if (a && b) runThread(a, b);
   };
   apply(true);
+  keepInView();
 }
 function shortestPath(a, b){
   const adj = {};
