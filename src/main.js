@@ -409,8 +409,13 @@ function fitBox(ids){
 }
 const fitScale = ids => fitBox(ids).k;
 /* animate: true for the usual glide, or a duration in ms */
-function fitTo(ids, animate){
-  const {x0, x1, y0, y1, left, w, h, k} = fitBox(ids);
+/* core: on phones, when ids would only fit too small to read, the camera frames just these (a story step's own figures,
+   without the people at the other end of its links), so they come out as large as they can while all staying in view */
+const MIN_PHONE_K = 0.4;
+function fitTo(ids, animate, core){
+  let box = fitBox(ids);
+  if (core && !wide() && box.k < MIN_PHONE_K) box = fitBox(core);
+  const {x0, x1, y0, y1, left, w, h, k} = box;
   const t = d3.zoomIdentity.translate(left + (w-(x1-x0)*k)/2 - x0*k, (h-(y1-y0)*k)/2 - y0*k).scale(k);
   (animate ? svg.transition().duration(animate===true ? 600 : animate) : svg).call(zoom.transform, t);
 }
@@ -935,13 +940,17 @@ function nodeClick(id){
   select(id, true);
 }
 function resetMode(){
+  // what the camera had framed above the card: a figure, a story step, the thread or a Guide example
+  const framed = state.mode==="node" || state.mode==="tour" || !!state.path || !!state.curseKey || !!(state.demo && !state.demo.missing);
   state.demo = null;
   state.mode = null; state.sel = null; state.path = null; state.curseKey = null; state.threadEnds = null;
   curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
-  // on phones the header comes back as the card goes: keep what was in view centred in the larger space
-  const before = viewH();
-  card.classList.remove("open"); setFull(false); setSheet(false);
-  const dy = (viewH() - before) / 2, t = d3.zoomTransform(graphEl);
+  // on phones the header comes back as the card goes: the tree stays where it is on screen, and what was
+  // framed above the card glides to the centre of the larger space; a plain panel (layers, find…) leaves it be
+  const mid = () => graphEl.getBoundingClientRect().top + viewH() / 2;
+  const before = mid();
+  holdStill(() => { card.classList.remove("open"); setFull(false); setSheet(false); });
+  const dy = framed ? mid() - before : 0, t = d3.zoomTransform(graphEl);
   if (!wide() && dy) svg.interrupt().transition().duration(300).call(zoom.transform, d3.zoomIdentity.translate(t.x, t.y + dy).scale(t.k));
   apply(true);
 }
@@ -1121,7 +1130,8 @@ function openFind(){
   q.oninput = show;
   q.onfocus = () => { if (!wide()) setFull(true); };   // keep the list above the phone keyboard
   q.onkeydown = ev => { if (ev.key==="Enter") { const hit = findFigures(q.value)[0]; if (hit) select(hit.id, true); } };
-  list.onclick = ev => { const b = ev.target.closest("[data-go]"); if (b) select(b.dataset.go, true); };
+  // the whole line answers a tap, not only the name: on a phone the role beside it is just as easy to hit
+  list.onclick = ev => { const b = ev.target.closest("li")?.querySelector("[data-go]"); if (b) select(b.dataset.go, true); };
   show();
   apply(true);
 }
@@ -1266,7 +1276,8 @@ function openCurse(key, step = 0){
   card.querySelectorAll(".story-ver").forEach(d => d.addEventListener("toggle", () => { if (d.open && !wide()) setFull(true); }));
   card.querySelectorAll(".story-src-toggle").forEach(b => b.onclick = () => { state.pickOpen = !state.pickOpen; openCurse(key, step); });
   apply(true);
-  fitTo(step>=1 && step<=n ? [...reveal(c, step, told).focus] : [...c.nodes], true);
+  if (step>=1 && step<=n) { const r = reveal(c, step, told); fitTo([...r.focus], true, [...r.now]); }
+  else fitTo([...c.nodes], true);
 }
 document.addEventListener("keydown", ev => {
   if (state.mode!=="curse" || ev.target.closest("input, select, textarea")) return;

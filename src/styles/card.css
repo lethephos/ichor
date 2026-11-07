@@ -55,6 +55,7 @@
 .search{width:100%;font:17px var(--display);color:var(--text);background:var(--bg);border:1px solid var(--rule);border-radius:2px;padding:10px 12px;margin-top:14px}
 .search:focus{outline:1.5px solid var(--accent);outline-offset:1px}
 .found{margin-top:10px}
+.found li{cursor:pointer;padding:3px 0}
 
 /* the bar at the top of the card: the close button and, once the big name scrolls away, the name; it stays in view */
 .sheet-bar{position:sticky;top:-22px;z-index:2;margin:-22px -22px 0;background:var(--bg-2)}
