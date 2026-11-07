@@ -58,3 +58,22 @@
 }
 [data-look="stars"][data-theme="dark"] .sky-pic img{filter:grayscale(1) invert(1) contrast(1.3) brightness(.95);mix-blend-mode:screen}
 [data-look="stars"] .sky-pic img.orig{filter:none;mix-blend-mode:normal}
+
+/* Buttons as the cells of a table: square corners, and buttons that belong together share their rules */
+[data-look="stars"] :is(.tab,.act,.info,.theme,.fit-float,.nav-chip,.ft-all,.draft,.dock,.tools,.tools .act,.family-menu,.src-note,.sheet-close){border-radius:0}
+[data-look="stars"] #srcRow{gap:0}
+[data-look="stars"] #srcRow .tab + .tab{margin-left:-1px}
+[data-look="stars"] #srcRow .tab[aria-pressed="true"],[data-look="stars"] #srcRow .tab.on{position:relative;z-index:1}
+[data-look="stars"] .view-tools{gap:0}
+[data-look="stars"] .view-tools .fit-float{margin-left:-1px}
+[data-look="stars"] .sheet-nav{gap:0}
+[data-look="stars"] .nav-chip + .nav-chip{margin-left:-1px}
+[data-look="stars"] .tools{gap:0;padding:0}
+[data-look="stars"] .tools .act + .act{border-left:1px solid var(--rule)}
+@media (max-width:899px){
+  [data-look="stars"] body .controls{gap:0}
+  [data-look="stars"] body .controls .famline + .famline,[data-look="stars"] body .controls .srcline .famline{margin-left:-1px}
+  [data-look="stars"] body .controls .mini-mark{margin-right:10px}
+  [data-look="stars"] body .controls :is(.family-btn,.theme,.fit-float){height:36px}
+  [data-look="stars"] body .controls .theme{width:36px}
+}
