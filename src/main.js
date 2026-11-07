@@ -419,10 +419,12 @@ function focusOn(id){
 }
 const fitBtn = document.getElementById("fitFloat");
 fitBtn.onclick = () => { foldHeader(false); fitTo(null, true); };
-// on phones the whole-tree button joins the line of pills; on wide screens it sits in the corner of the tree
+// the theme switch and the whole-tree button travel together: on phones they join the line of pills,
+// on wide screens they sit in the corner of the tree
+const viewTools = document.getElementById("viewTools");
 function placeFit(){
   const home = wide() ? document.getElementById("stage") : document.querySelector(".controls");
-  if (fitBtn.parentElement !== home) home.appendChild(fitBtn);
+  if (viewTools.parentElement !== home) home.appendChild(viewTools);
 }
 placeFit(); addEventListener("resize", placeFit);
 function initialView(){

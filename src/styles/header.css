@@ -26,8 +26,8 @@ header{padding:16px 16px 6px;position:relative}
 .title-line{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 
 /* light / dark switch: a moon in the light theme, a sun in the dark */
-.theme{position:absolute;top:10px;right:12px;width:34px;height:34px;display:grid;place-items:center;
-  background:none;border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer;padding:0}
+.theme{flex:0 0 auto;width:34px;height:34px;display:grid;place-items:center;
+  background:var(--bg-2);border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer;padding:0}
 .theme:hover{border-color:var(--muted)}
 .theme:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
 .theme svg{width:17px;height:17px;grid-area:1/1}
@@ -37,7 +37,6 @@ header{padding:16px 16px 6px;position:relative}
 .theme .sun .core{fill:currentColor;stroke:none}
 .theme .sun,.theme.dark .moon{display:none}
 .theme.dark .sun{display:block}
-@media (min-width:900px){ .theme{top:18px;right:24px} }
 
 /* family switcher: a pill in the controls, above the sources, opens the list of families */
 .famline{display:flex;align-items:center;gap:18px;padding:4px 0}
@@ -72,22 +71,19 @@ header{padding:16px 16px 6px;position:relative}
 }
 @media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }
 
-/* about: an “i” beside the theme switch */
-.info{display:grid;place-items:center;position:absolute;top:10px;right:56px;width:34px;height:34px;padding:0;background:none;border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer}
-.info svg{width:18px;height:18px}
-.info path{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+/* About: a word in the top right corner of the header */
+.info{position:absolute;top:10px;right:12px;height:34px;padding:0 14px;background:none;border:1px solid var(--rule);border-radius:17px;font:500 13px var(--ui);letter-spacing:.02em;color:var(--text);cursor:pointer}
 .info:hover{border-color:var(--muted)}
 .info[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
 .info:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
-@media (min-width:900px){ .info{top:18px;right:68px} }
-/* Phones: the header is one line, the wordmark with “i” and the theme switch; the subtitle and the hint live in About.
-   Below it, one line holds the Family and Source pills and the whole-tree button (moved there by placeFit).
+@media (min-width:900px){ .info{top:18px;right:24px} }
+/* Phones: the header is one line, the wordmark and About; the subtitle and the hint live in About.
+   Below it, one line holds the Family and Source pills, then the theme switch and the whole-tree button (moved there by placeFit).
    The header folds away while a card is open or once the tree is moved; the line of pills stays. */
 @media (max-width:899px){
   header{display:flex;align-items:center;min-height:52px;padding:8px 16px}
   .wordmark{height:28px}
   .kicker .tagline{display:none}
-  .theme{top:9px}
   .info{top:9px}
   body:is(.sheet,.folded) header{display:none}
   /* when the header folds, the star and its drop stay at the start of the line of pills */
@@ -103,7 +99,9 @@ header{padding:16px 16px 6px;position:relative}
   /* the source note shows for a few seconds after the reader picks a source, then goes */
   body .controls .src-note{display:none;position:absolute;left:16px;right:16px;top:calc(100% + 8px);z-index:4;padding:10px 14px;background:var(--bg-2);border:1px solid var(--rule);border-radius:10px;box-shadow:0 6px 20px var(--shadow);-webkit-line-clamp:4}
   body .controls .src-note.show{display:-webkit-box}
-  body .controls .fit-float{position:static;flex:0 0 auto;margin-left:auto;width:36px;height:36px;padding:0;display:grid;place-items:center;border-radius:50%}
+  body .controls .view-tools{position:static;margin-left:auto}
+  body .controls .theme{width:36px;height:36px}
+  body .controls .fit-float{flex:0 0 auto;width:36px;height:36px;padding:0;display:grid;place-items:center;border-radius:50%}
 }
 .mini-mark{display:none;flex:0 0 auto;width:13px;height:28px;margin-right:2px;fill:var(--accent)}
 .fit-float svg{display:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}

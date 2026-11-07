@@ -42,7 +42,15 @@
 @media (prefers-reduced-motion: reduce){.node{transition:none}.node.pulse .halo{animation:none}}
 .hint{transition:opacity .5s}
 .hint.gone{opacity:0}
-.fit-float{position:absolute;right:16px;top:10px;background:var(--bg-2)}
+/* the theme switch and the whole-tree button, together in the corner of the tree */
+.view-tools{position:absolute;right:16px;top:10px;display:flex;align-items:center;gap:8px}
+.fit-float{background:var(--bg-2)}
+@media (min-width:900px){
+  .view-tools .fit-float{height:32px}
+  .view-tools .theme{width:32px;height:32px;border-radius:2px}
+  /* the card covers the right of the tree, so the two buttons move to its left edge */
+  body:has(#card.open) .view-tools{right:440px}
+}
 @media (max-width:899px){
   .hint{display:none}   /* on phones its words are in About */
 }
