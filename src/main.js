@@ -432,6 +432,16 @@ function placeFit(){
   if (viewTools.parentElement !== home) home.appendChild(viewTools);
 }
 placeFit(); addEventListener("resize", placeFit);
+// on phones the logo's mark stands on the divider between the Family and Source cells just below it
+const kicker = document.querySelector(".kicker");
+function placeSep(){
+  const sep = kicker.querySelector(".wm-sep"), word = kicker.querySelector(".wordmark"), src = document.querySelector(".src-pick");
+  if (wide() || !sep || !src || !kicker.offsetParent) { kicker.style.removeProperty("--sep-gap"); return; }
+  const gap = src.getBoundingClientRect().left - sep.getBoundingClientRect().width / 2 - word.getBoundingClientRect().right;
+  kicker.style.setProperty("--sep-gap", Math.max(10, gap) + "px");
+}
+new ResizeObserver(placeSep).observe(document.querySelector("header"));
+addEventListener("resize", placeSep);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }

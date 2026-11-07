@@ -87,6 +87,8 @@
   [data-look="stars"] body .controls > .famline:first-of-type .family-btn{padding-left:0}
   [data-look="stars"] body:is(.sheet,.folded) .controls > .famline:first-of-type .family-btn{padding-left:12px;border-left:1px solid var(--rule)}
   [data-look="stars"] body .controls .src-pick{border-left:1px solid var(--rule)}
+  /* the Family and Source cells share the line evenly, so the divider between them stays put under the logo’s mark */
+  [data-look="stars"] body .controls > .famline:first-of-type,[data-look="stars"] body .controls .src-pick{flex:1 1 0;min-width:0}
   [data-look="stars"] body .controls .view-tools{gap:0;border-left:1px solid var(--rule)}
   [data-look="stars"] body .controls :is(.theme,.fit-float){width:46px;margin:0}
   [data-look="stars"] body .controls .fit-float{border-left:1px solid var(--rule);margin-right:-16px}
