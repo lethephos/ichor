@@ -88,4 +88,6 @@
   /* the tools are the last row of the same table: a strip along the bottom edge, ruled on top, with dividers */
   [data-look="stars"] .tools{left:0;right:0;bottom:0;border:0;border-top:1px solid var(--rule);box-shadow:none;padding-bottom:env(safe-area-inset-bottom,0px)}
   [data-look="stars"] .tools .act{padding:14px 4px}
+  /* Guide is a cell of the header, as wide as the theme and whole-tree cells under it, and its divider runs into theirs */
+  [data-look="stars"] header .info{top:0;bottom:0;right:0;height:auto;width:93px;padding:0;border:0;border-left:1px solid var(--rule);background:none}
 }
