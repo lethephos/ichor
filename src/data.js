@@ -12,12 +12,14 @@ export const SRC_FULL = Object.fromEntries(sources.groups.map(s => [s.id, s.full
 export const SRC_ALL_LABEL = sources.all.label;
 const SRC_GROUP = Object.fromEntries(sources.groups.map(s => [s.id, s]));
 
-/* The note under the sources speaks of the family shown. A written note stays wherever all the figures it names are in it;
+/* The note under the sources speaks of the family shown. A family may carry its own written note for each source
+   (`notes` in branches.json); otherwise the source’s written note stays wherever all the figures it names are in it;
    otherwise the note is drawn from the links themselves, so it says nothing the data does not: where a figure has rival
    fathers or mothers and this source names one of them, it says which; failing that, how many of the family’s links it tells. */
 export function sourceNote(k){
   if (k === "all") return sources.all.note;
   const g = SRC_GROUP[k];
+  if (FAMILY.notes?.[k]) return FAMILY.notes[k];
   if (g.note_figures.every(id => N[id])) return g.note;
   const deg = {};
   E.forEach(e => { deg[e.from] = (deg[e.from] || 0) + 1; deg[e.to] = (deg[e.to] || 0) + 1; });
