@@ -90,6 +90,8 @@ header{padding:16px 16px 6px;position:relative}
   .theme{top:9px}
   .info{top:9px}
   body:is(.sheet,.folded) header{display:none}
+  /* when the header folds, the star and its drop stay at the start of the line of pills */
+  body:is(.sheet,.folded) .controls .mini-mark{display:block}
   body .controls{flex-direction:row;flex-wrap:nowrap;align-items:center;gap:8px;padding:8px 16px;position:relative}
   body .controls .famline{position:static;padding:0;min-width:0;flex:0 1 auto}
   body .controls .famline .row-label{display:none}
@@ -103,6 +105,7 @@ header{padding:16px 16px 6px;position:relative}
   body .controls .src-note.show{display:-webkit-box}
   body .controls .fit-float{position:static;flex:0 0 auto;margin-left:auto;width:36px;height:36px;padding:0;display:grid;place-items:center;border-radius:50%}
 }
+.mini-mark{display:none;flex:0 0 auto;width:13px;height:28px;margin-right:2px;fill:var(--accent)}
 .fit-float svg{display:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width:899px){
   body .controls .fit-float svg{display:block}
