@@ -34,6 +34,13 @@
 
 /* hairlines */
 [data-look="stars"] .edge.main{stroke-width:.8}
+/* a marriage is two hairlines: a wider line with a band of the background down its middle */
+[data-look="stars"] .e-marriage .edge.main{stroke-width:2.8}
+[data-look="stars"] .e-marriage .edge.inner{stroke-width:1.2}
+/* the lines of a selected figure, a story step, the thread or a Guide example come forward a little */
+[data-look="stars"] .e.hot .edge.main{stroke-width:1.3}
+[data-look="stars"] .e-marriage.hot .edge.main{stroke-width:3.6}
+[data-look="stars"] .e-marriage.hot .edge.inner{stroke-width:1.2}
 /* the rows drawn as a star chart's graticule: dotted parallels with graduations, faint meridians,
    and the divider between gods and mortals ruled and graduated like the ecliptic */
 [data-look="stars"] .genrule{stroke:var(--rule);stroke-width:1;stroke-dasharray:1 3}
@@ -94,3 +101,5 @@
 [data-look="stars"] :is(.read-as,.tour-end){gap:0}
 [data-look="stars"] .read-as .tab + .tab,[data-look="stars"] .tour-end .act + .act{margin-left:-1px}
 [data-look="stars"] :is(.go,.story-nav .act){border-radius:0}
+/* Ariadne’s thread is one gold line, whatever links it follows */
+[data-look="stars"] .e.thread .edge.main{stroke-width:1.6}

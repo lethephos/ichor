@@ -470,7 +470,7 @@ function apply(animate){
     if (sel || curse || path || demo) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
     if (!vis && !inCurse) op = 0;
     if (vis) { visible.add(e.from); visible.add(e.to); }
-    const g = d3.select(this).classed("thread", inPath && !demo).classed("alt", isAlt);
+    const g = d3.select(this).classed("thread", inPath && !demo).classed("alt", isAlt).classed("hot", !!(hot && (sel || curse || path || demo)));
     (dur ? g.transition().duration(dur) : g).style("opacity", op);
     g.select(".main").attr("stroke-width", inPath && !demo ? 3 : inPath ? BASE[e.type]*2 : hot ? BASE[e.type]*1.7 : BASE[e.type]);
   });
