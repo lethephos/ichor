@@ -1268,7 +1268,9 @@ function intro(){
   html.classList.add("ready");
   const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const sp = document.getElementById("splash");
-  if (!sp) { html.classList.add("landed"); return lightUp(calm); }
+  const seen = html.classList.contains("seen");
+  try { sessionStorage.setItem("ichor-opened", "1"); } catch(e) {}
+  if (!sp || seen) { if (sp) sp.remove(); html.classList.add("landed"); return lightUp(calm || seen); }
   // wait for the drop to rest in its place (30–70% of each 1.6s cycle, which starts 0.8s in), then land
   const drop = sp.querySelector(".sp-drop").getAnimations()[0];
   let wait = 0;

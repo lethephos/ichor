@@ -18,6 +18,8 @@
 /* if the code never arrives, the page is not kept behind the mark */
 @keyframes sp-giveup{to{opacity:0;visibility:hidden}}
 html.splash-out .splash{background-color:transparent}
+/* the opening plays once a session: after that the page opens at once */
+html.seen .splash{display:none}
 /* the header's own mark waits until the flying one lands on it */
 html:not(.landed) .kicker .wm-sep{visibility:hidden}
 @media (prefers-reduced-motion: reduce){ .sp-star,.sp-drop{animation:none} .splash{transition-duration:.3s} }
