@@ -142,3 +142,12 @@ details.who[open] summary::before{transform:rotate(90deg)}
 .sky-text{font:16px/1.5 var(--display);margin:0 0 6px}
 .sky-cite{font-size:12.5px;color:var(--muted);margin:0}
 .sky-cite .srcs::before{content:" · "}
+/* the Guide as a live legend: each item shows an example on the tree */
+.opt.demo[aria-pressed="false"]{opacity:1}
+.opt.demo[aria-pressed="true"]{color:var(--accent)}
+.opt.demo > span{flex:1;min-width:0}
+.opt.demo .demo-note{font:15px/1.45 var(--display);color:var(--text);margin-top:6px}
+.opt.demo .demo-note:empty{display:none}
+.opt.demo .demo-note .srcs{display:block;font:12px var(--ui);color:var(--muted);margin-top:3px}
+.demo-hint{font:13px var(--ui);color:var(--muted);margin:6px 0 0}
+.sec .rels.about + .opts{margin-top:4px}
