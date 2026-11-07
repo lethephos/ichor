@@ -381,7 +381,7 @@ function placeRowLabels(t){
 }
 let panned = false;
 const zoom = d3.zoom().scaleExtent([0.2, 3])
-  .on("zoom", ev => { root.attr("transform", ev.transform); placeRowLabels(ev.transform); if (ev.sourceEvent) { hideHint(); panned = true; } })
+  .on("zoom", ev => { root.attr("transform", ev.transform); placeRowLabels(ev.transform); if (ev.sourceEvent) { hideHint(); panned = true; clearTimeout(storyTimer); } })
   // on phones the header folds away once the reader moves the tree, as it does while a card is open
   .on("end", () => { if (panned && !wide()) foldHeader(true); panned = false; });
 svg.call(zoom).on("dblclick.zoom", null);
@@ -1284,8 +1284,31 @@ function openCurse(key, step = 0){
   card.querySelectorAll(".story-ver").forEach(d => d.addEventListener("toggle", () => { if (d.open && !wide()) setFull(true); }));
   card.querySelectorAll(".story-src-toggle").forEach(b => b.onclick = () => { state.pickOpen = !state.pickOpen; openCurse(key, step); });
   apply(true);
-  if (step>=1 && step<=n) { const r = reveal(c, step, told); fitTo([...r.focus], true, [...r.now]); }
+  clearTimeout(storyTimer);
+  if (step>=1 && step<=n) {
+    const r = reveal(c, step, told), core = [...r.now].filter(id => N[id]);
+    const parts = !wide() && fitScale([...r.focus]) < MIN_PHONE_K && fitScale(core) < STORY_GLIDE_K ? clusters(core) : null;
+    if (parts && parts.length > 1) glideThrough(parts, () => state.mode==="curse" && state.curseKey===key && state.step===step);
+    else fitTo([...r.focus], true, core);
+  }
   else fitTo([...c.nodes], true);
+}
+/* On phones a step whose own figures sit far apart on a long row (the fall of Troy) would come out too small to read:
+   the camera shows them a group at a time, in the order the step names them, gliding from one group to the next. */
+const STORY_GLIDE_K = 0.3;
+let storyTimer;
+function clusters(ids){
+  const byX = [...ids].sort((a, b) => N[a].x - N[b].x), groups = [];
+  byX.forEach(id => {
+    const g = groups[groups.length-1];
+    if (g && fitScale([...g, id]) >= MIN_PHONE_K) g.push(id); else groups.push([id]);
+  });
+  const first = g => Math.min(...g.map(id => ids.indexOf(id)));
+  return groups.sort((a, b) => first(a) - first(b));
+}
+function glideThrough(parts, still, i = 0){
+  fitTo(parts[i], i ? 1400 : true);
+  if (i + 1 < parts.length) storyTimer = setTimeout(() => { if (still()) glideThrough(parts, still, i + 1); }, i ? 2600 : 2000);
 }
 document.addEventListener("keydown", ev => {
   if (state.mode!=="curse" || ev.target.closest("input, select, textarea")) return;
