@@ -26,7 +26,7 @@
 
 /* phones: while a story is told, the header and sources step aside so the tree fills the screen above the text */
 @media (max-width:899px){
-  body.story header,body.story .controls,body.story .hint{display:none}
+  body.story header,body.story .controls,body.story .tools,body.story .hint{display:none}
 }
 
 /* telling a story by one source */
