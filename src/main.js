@@ -557,9 +557,12 @@ function buildNav(){
 }
 function spyNav(){
   if (!navSecs.length || Date.now() < navLock) return;
-  const line = sheetBar.getBoundingClientRect().bottom + 24;
+  // a section is being read once its heading passes a line a third of the way down the visible card
+  const top = sheetBar.getBoundingClientRect().bottom, bottom = Math.min(card.getBoundingClientRect().bottom, innerHeight);
+  const line = top + Math.min(160, Math.max(24, (bottom - top) / 3));
   let i = -1; navSecs.forEach((s, k) => { if (s.getBoundingClientRect().top <= line) i = k; });
-  if (card.scrollTop + card.clientHeight >= card.scrollHeight - 2 && i < navSecs.length - 1 && i >= 0) i = Math.max(i, navSecs.findIndex(s => s.getBoundingClientRect().top < card.getBoundingClientRect().bottom - 80));
+  // at the very end of the card the last sections can’t scroll up to the line: mark the last one in view
+  if (card.scrollTop + card.clientHeight >= card.scrollHeight - 2 && i >= 0) navSecs.forEach((s, k) => { if (s.getBoundingClientRect().top < bottom - 80) i = Math.max(i, k); });
   markNav(i);
 }
 function markNav(i){
