@@ -435,9 +435,18 @@ placeFit(); addEventListener("resize", placeFit);
 function initialView(){
   const w = graphEl.clientWidth, h = graphEl.clientHeight;
   if (Math.min((w - inset())/W, h/H) >= 0.5) { fitTo(null, false); return; }
-  const k = 0.55;
+  const k = 0.55, f = N[FOCUS], left = inset(), cx = left + (w - left)/2;
+  // a family whose focus is on its first row opens at the top (the whole tree, on the first gods);
+  // otherwise the view is centred on the focus, halfway down the tree
+  if (f.row === 0) {
+    // centred on the focus and the partners beside it (Gaia and Uranus)
+    const pair = [f, ...E.filter(e => e.type==="marriage" && (e.from===f.id || e.to===f.id))
+      .map(e => N[e.from===f.id ? e.to : e.from]).filter(p => p.row === 0)];
+    const x = pair.reduce((s, p) => s + p.x, 0) / pair.length;
+    svg.call(zoom.transform, d3.zoomIdentity.translate(cx - x*k, (wide() ? 110 : 30) - ROWY[0]*k).scale(k)); return;
+  }
   const cy = (ROWY[0] + ROWY[ROWY.length-1]) / 2;
-  svg.call(zoom.transform, d3.zoomIdentity.translate(w/2 - N[FOCUS].x*k, viewH()/2 - cy*k).scale(k));
+  svg.call(zoom.transform, d3.zoomIdentity.translate(cx - f.x*k, viewH()/2 - cy*k).scale(k));
 }
 
 /* ---------- visibility ---------- */
