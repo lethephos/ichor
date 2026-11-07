@@ -9,8 +9,47 @@ import {tierLayout} from "./layout.js";
 /* ---------- sources ---------- */
 export const SRC = Object.fromEntries(sources.groups.map(s => [s.id, s.label]));
 export const SRC_FULL = Object.fromEntries(sources.groups.map(s => [s.id, s.full]));
-export const SRC_NOTE = {all: sources.all.note, ...Object.fromEntries(sources.groups.map(s => [s.id, s.note]))};
 export const SRC_ALL_LABEL = sources.all.label;
+const SRC_GROUP = Object.fromEntries(sources.groups.map(s => [s.id, s]));
+
+/* The note under the sources speaks of the family shown. A written note stays wherever all the figures it names are in it;
+   otherwise the note is drawn from the links themselves, so it says nothing the data does not: where a figure has rival
+   fathers or mothers and this source names one of them, it says which; failing that, how many of the family’s links it tells. */
+export function sourceNote(k){
+  if (k === "all") return sources.all.note;
+  const g = SRC_GROUP[k];
+  if (g.note_figures.every(id => N[id])) return g.note;
+  const deg = {};
+  E.forEach(e => { deg[e.from] = (deg[e.from] || 0) + 1; deg[e.to] = (deg[e.to] || 0) + 1; });
+  const facts = [];
+  const byChild = {};
+  E.filter(e => e.type === "parent").forEach(e => (byChild[e.to] ||= []).push(e));
+  Object.entries(byChild).forEach(([c, es]) => {
+    if (N[c].kind === "group") return;
+    for (const sex of ["m", "f"]) {
+      const rivals = es.filter(e => N[e.from].gender === sex && N[e.from].kind !== "group");
+      if (new Set(rivals.map(e => e.from)).size < 2) continue;
+      const told = rivals.filter(e => e.sources.includes(k));
+      if (told.length === 1) facts.push({child: c, parent: told[0].from, sex, w: deg[c] + deg[told[0].from]});
+    }
+  });
+  facts.sort((a, b) => b.w - a.w);
+  const name = id => N[id].name.replace(/^The /, "the ");
+  const poss = id => name(id) + (name(id).endsWith("s") ? "’" : "’s");
+  const role = sex => sex === "m" ? "father" : "mother";
+  const [a, b] = facts;
+  if (!a) {
+    const told = E.filter(e => e.sources.includes(k)).length;
+    if (!told) return `${g.tells} none of the links in this family.`;
+    return told === E.length ? `${g.tells} all ${told} links in this family.` : `${g.tells} ${told} of the ${E.length} links in this family; the rest fade.`;
+  }
+  let said;
+  if (!b) said = `${name(a.parent)} is ${poss(a.child)} ${role(a.sex)}`;
+  else if (a.parent === b.parent) said = `${name(a.parent)} is the ${role(a.sex)} of ${name(a.child)} and ${name(b.child)}`;
+  else if (a.child === b.child) said = `${name(a.child)} is the ${N[a.child].gender === "f" ? "daughter" : "son"} of ${name(a.sex === "m" ? a.parent : b.parent)} and ${name(a.sex === "m" ? b.parent : a.parent)}`;
+  else said = `${name(a.parent)} is ${poss(a.child)} ${role(a.sex)}, and ${name(b.parent)} is ${poss(b.child)} ${role(b.sex)}`;
+  return `${g.in}, ${said}.`;
+}
 
 /* ---------- branch and family ---------- */
 export const BRANCH = branches[0];
