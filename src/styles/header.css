@@ -6,16 +6,17 @@ header{padding:16px 16px 6px;position:relative}
 .wordmark{height:27.7px;width:auto;display:block}
 .wm-ink{fill:var(--text)}
 .wm-mark{fill:var(--accent)}
-/* the subtitle sits under the wordmark, in the display face */
-.kicker{flex-direction:column;align-items:flex-start;row-gap:8px}
-.kicker .tagline{font:400 16px/1.25 var(--display);letter-spacing:0;text-transform:none;color:var(--muted)}
+/* the lockup: “Ichor”, then the star and its drop standing between the word and the subtitle, which runs in two lines */
+.kicker{flex-wrap:nowrap;column-gap:0}
+.wm-sep{display:block;flex:0 0 auto;height:40px;width:auto;margin:0 12px 0 14px}
+.kicker .tagline{max-width:8em;font:400 16px/1.2 var(--display);letter-spacing:0;text-transform:none;color:var(--muted)}
 .branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:8px 0 0}
 .branch-sub{font-family:var(--display);font-size:16px;color:var(--muted);margin-top:2px}
 @media (min-width:900px){
   header{padding:22px 28px 8px}
   .wordmark{height:32px}
   .kicker{font-size:11px}
-  .kicker{row-gap:10px}
+  .wm-sep{height:46px;margin:0 14px 0 16px}
   .kicker .tagline{font-size:18px}
   .title-line{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px}
   .branch-title{font-size:34px}
@@ -83,7 +84,9 @@ header{padding:16px 16px 6px;position:relative}
 @media (max-width:899px){
   header{display:flex;align-items:center;min-height:52px;padding:8px 16px}
   .wordmark{height:24.3px}
-  .kicker .tagline{display:none}
+  /* the mark stands on the line between the Family and Source cells below it (placeSep sets --sep-gap) */
+  .wm-sep{height:36px;margin:0 10px 0 var(--sep-gap,12px)}
+  .kicker .tagline{font-size:13.5px}
   .info{top:9px}
   body:is(.sheet,.folded) header{display:none}
   /* when the header folds, the star and its drop stay at the start of the line of pills */
@@ -109,3 +112,5 @@ header{padding:16px 16px 6px;position:relative}
   body .controls .fit-float svg{display:block}
   body .controls .fit-float span{display:none}
 }
+/* the narrowest phones have no room for the subtitle beside the mark: it stays in the Guide */
+@media (max-width:359px){ .kicker .tagline{display:none} }
