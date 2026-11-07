@@ -58,3 +58,36 @@
 }
 [data-look="stars"][data-theme="dark"] .sky-pic img{filter:grayscale(1) invert(1) contrast(1.3) brightness(.95);mix-blend-mode:screen}
 [data-look="stars"] .sky-pic img.orig{filter:none;mix-blend-mode:normal}
+
+/* Buttons as the cells of a table: square corners, and buttons that belong together share their rules */
+[data-look="stars"] :is(.tab,.act,.info,.theme,.fit-float,.nav-chip,.ft-all,.draft,.dock,.tools,.tools .act,.family-menu,.src-note,.sheet-close){border-radius:0}
+[data-look="stars"] #srcRow{gap:0}
+[data-look="stars"] #srcRow .tab + .tab{margin-left:-1px}
+[data-look="stars"] #srcRow .tab[aria-pressed="true"],[data-look="stars"] #srcRow .tab.on{position:relative;z-index:1}
+[data-look="stars"] .view-tools{gap:0}
+[data-look="stars"] .view-tools .fit-float{margin-left:-1px}
+[data-look="stars"] .sheet-nav{gap:0}
+[data-look="stars"] .nav-chip + .nav-chip{margin-left:-1px}
+[data-look="stars"] .tools{gap:0;padding:0}
+[data-look="stars"] .tools .act + .act{border-left:1px solid var(--rule)}
+/* on phones the line of pills is one row of a table: no boxes, only hairline dividers between the cells, which run the full height of the row */
+@media (max-width:899px){
+  [data-look="stars"] body .controls{gap:0;padding:0 16px;align-items:stretch}
+  [data-look="stars"] body .controls .mini-mark{align-self:center;margin-right:12px}
+  [data-look="stars"] body .controls :is(.family-btn,.theme,.fit-float){height:46px;border:0;background:none;box-shadow:none}
+  [data-look="stars"] body .controls .famline,[data-look="stars"] body .controls .family-pick,[data-look="stars"] body .controls .view-tools{display:flex;align-items:stretch}
+  [data-look="stars"] body .controls .family-btn{padding:0 14px}
+  [data-look="stars"] body .controls > .famline:first-of-type .family-btn{padding-left:0}
+  [data-look="stars"] body:is(.sheet,.folded) .controls > .famline:first-of-type .family-btn{padding-left:12px;border-left:1px solid var(--rule)}
+  [data-look="stars"] body .controls .src-pick{border-left:1px solid var(--rule)}
+  [data-look="stars"] body .controls .view-tools{gap:0;border-left:1px solid var(--rule)}
+  [data-look="stars"] body .controls :is(.theme,.fit-float){width:46px;margin:0}
+  [data-look="stars"] body .controls .fit-float{border-left:1px solid var(--rule);margin-right:-16px}
+  [data-look="stars"] body .controls .family-btn[aria-expanded="true"]{color:var(--accent)}
+  [data-look="stars"] body:not(.sheet,.folded) .controls{border-top:1px solid var(--rule)}
+  /* the tools are the last row of the same table: a strip along the bottom edge, ruled on top, with dividers */
+  [data-look="stars"] .tools{left:0;right:0;bottom:0;border:0;border-top:1px solid var(--rule);box-shadow:none;padding-bottom:env(safe-area-inset-bottom,0px)}
+  [data-look="stars"] .tools .act{padding:14px 4px}
+  /* Guide is a cell of the header, as wide as the theme and whole-tree cells under it, and its divider runs into theirs */
+  [data-look="stars"] header .info{top:0;bottom:0;right:0;height:auto;width:93px;padding:0;border:0;border-left:1px solid var(--rule);background:none}
+}
