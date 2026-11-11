@@ -1,6 +1,6 @@
 # Ichor
 
-*The family tree of Greek myth.* An interactive family tree of Greek mythology with a versions layer: every link records which ancient sources tell it. See `CLAUDE.md` for the project brief.
+*The family tree of Greek myth.* An interactive family tree of Greek mythology with a versions layer: every link records which ancient sources tell it. See `CLAUDE.md` for the project brief and `docs/` for the detail: the tree, the features, the design decisions.
 
 **Live site: [ichor-orpin.vercel.app](https://ichor-orpin.vercel.app)**
 
