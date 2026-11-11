@@ -9,6 +9,7 @@
 ```sh
 npm install
 npm run dev      # local dev server
+npm run check    # check the data (also runs before every build)
 npm run build    # static site in dist/
 npm run preview  # serve the build
 ```
@@ -34,6 +35,9 @@ npm run preview  # serve the build
   - `intro.css` — the opening: the mark draws itself, flies to the header, and the tree lights up.
   - `base.css` — page frame, box sizing, focus rings.
   - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
+- `scripts/check-data.mjs` — checks the JSON before every build: known figures and sources on every link, no link listed twice, story pairs that exist as relations. A problem stops the build and says where it is.
 - `prototype/ichor-atreidae.html` — the original single-file prototype, kept as the reference.
+
+The address names what is open, so it can be sent as a link: `?family=thebes`, `?figure=medea`, `?story=argonauts&step=3`, `?source=H`.
 
 Source group ids: `E` Homer & epic, `H` Hesiod, `T` Lyric & tragedy, `A` Apollodorus, `L` Later writers.

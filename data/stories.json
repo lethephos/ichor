@@ -1701,7 +1701,8 @@
           ["heracles", "macaria"],
           ["deianira", "macaria"],
           ["heracles", "iole"],
-          ["hyllus", "iole"]
+          ["hyllus", "iole"],
+          ["heracles", "nessus"]
         ],
         "text": "Heracles’ last wife, Deianira, bears him Hyllus and a daughter, Macaria. When he brings home the captive Iole, Deianira sends him a robe smeared with Nessus’ blood, and it kills him. In Sophocles, dying, he makes Hyllus promise to marry Iole, much against the young man’s will."
       },
@@ -1764,6 +1765,7 @@
       ["deianira", "macaria"],
       ["heracles", "iole"],
       ["hyllus", "iole"],
+      ["heracles", "nessus"],
       ["zeus", "hebe"],
       ["hera", "hebe"],
       ["heracles", "hebe"],
