@@ -1,6 +1,6 @@
-import people from "../data/people.json";
+import {people, stories} from "virtual:ichor-core";
+import textsUrl from "virtual:ichor-texts-url";
 import relations from "../data/relations.json";
-import stories from "../data/stories.json";
 import sources from "../data/sources.json";
 import branches from "../data/branches.json";
 import olympians from "../data/olympians.json";
@@ -120,6 +120,23 @@ export function storyHome(c) {
 }
 
 setFamily(new URLSearchParams(location.search).get("family"));
+
+/* ---------- the long texts ---------- */
+/* The tree draws itself from names, rows and links; the texts a card shows (a figure’s story, tagline, versions,
+   art, sky and members, and the text of each story step) come in a second file, asked for as soon as this one runs
+   (vite.config.js splits them). Anything that shows those texts goes through `whenTexts`, so a tap that comes
+   before they do opens its card the moment they arrive. A failed load is tried again at the next such tap. */
+let textsIn = false, loading = null;
+function loadTexts() {
+  return loading ||= fetch(textsUrl).then(r => r.ok ? r.json() : Promise.reject()).then(t => {
+    const fill = p => Object.assign(p, t.people[p.id]);
+    people.forEach(fill); P.forEach(fill);
+    stories.forEach(s => s.steps.forEach((step, i) => { step.text = t.stories[s.id][i]; }));
+    textsIn = true;
+  }, () => { loading = null; });
+}
+export function whenTexts(fn) { if (textsIn) fn(); else loadTexts().then(() => { if (textsIn) fn(); }); }
+loadTexts();
 
 /* ---------- the Twelve Olympians: a mark on the figure, not a row ---------- */
 // "all": in every list we follow; "some": the twelfth seat, which changes between lists

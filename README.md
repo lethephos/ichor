@@ -49,6 +49,7 @@ npm run preview  # serve the build
   - `intro.css` — the opening: the mark draws itself, flies to the header, and the tree lights up.
   - `base.css` — page frame, box sizing, focus rings.
   - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
+- `vite.config.js` — splits the data at build time: the page’s code carries what the tree needs to draw itself, and the long texts only a card shows (stories, taglines, versions, art, sky, members, story steps) go into a second file, `texts.json`, fetched once the tree is up. The JSON in `data/` stays whole; to move a field from one part to the other, edit `TEXT_FIELDS` there.
 - `scripts/check-data.mjs` — checks the JSON before every build: known figures and sources on every link, no link listed twice, story pairs that exist as relations. A problem stops the build and says where it is.
 - `prototype/ichor-atreidae.html` — the original single-file prototype, kept as the reference.
 

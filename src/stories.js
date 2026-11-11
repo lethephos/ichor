@@ -1,5 +1,5 @@
 /* Stories told step by step, by all sources or as one source tells them. */
-import {STORIES, FAMILY, FAMILIES, storyHome, E, N, SRC} from "./data.js";
+import {STORIES, FAMILY, FAMILIES, storyHome, E, N, SRC, whenTexts} from "./data.js";
 import "./figure.js";
 import {wide, state, esc, samePair, attested} from "./state.js";
 import {apply} from "./tree.js";
@@ -103,6 +103,9 @@ const prevStep = (c, step, told) => { for (let i = Math.min(step-1, c.steps.leng
 const whoLinks = ids => `<div class="who">${ids.map(id => `<button class="rel" data-go="${id}">${N[id].name}</button>`).join("")}</div>`;
 const ORDER = {curse:0, feud:1, affair:2, marriage:3, parent:4};
 export function openCurse(key, step = 0){
+  whenTexts(() => { if (STORIES[key]) tellStory(key, step); });   // a step shows its text, which may still be on its way
+}
+function tellStory(key, step){
   const c = STORIES[key], n = c.steps.length, told = toldSteps(c), src = state.src, by = SRC[src];
   state.mode = "curse"; state.curseKey = key; state.step = step; state.sel = null; state.path = null;
   curseSel.value = key;
