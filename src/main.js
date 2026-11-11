@@ -1,7 +1,7 @@
 /* The page: the family switcher, the address, opening and closing a figure, and the start.
    The parts call each other freely, but they are set up in a fixed order, each file importing the one
    before it first: state, theme, tree, camera, sheet, controls, find, figure, stories, guide, thread, intro, main. */
-import {FAMILY, FAMILIES, setFamily, sourceNote, familyOf, STORIES, N, ALL_STORIES, SRC, figureHome, BRANCH} from "./data.js";
+import {whenTexts, FAMILY, FAMILIES, setFamily, sourceNote, familyOf, STORIES, N, ALL_STORIES, SRC, figureHome, BRANCH} from "./data.js";
 import {intro} from "./intro.js";
 import {state} from "./state.js";
 import {drawTree, apply} from "./tree.js";
@@ -108,11 +108,15 @@ familyMenu.addEventListener("keydown", ev => {
 });
 document.addEventListener("click", ev => { if (!familyMenu.hidden && !familyMenu.contains(ev.target)) openFamilies(false); });
 document.getElementById("branchSub").textContent = BRANCH.subtitle || "";
+/* A card shows the long texts, so it opens once they are in (at once, but for a tap in the first moments). */
 export function select(id, move){
-  state.mode = "node"; state.sel = id; state.path = null;
-  curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
-  renderNode(id); apply(true);
-  if (move) focusOn(id);
+  whenTexts(() => {
+    if (!N[id]) return;
+    state.mode = "node"; state.sel = id; state.path = null;
+    curseSel.value = ""; threadBtn.setAttribute("aria-pressed","false");
+    renderNode(id); apply(true);
+    if (move) focusOn(id);
+  });
 }
 export function nodeClick(id){
   hideHint();
