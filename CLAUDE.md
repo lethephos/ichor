@@ -24,6 +24,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - Groups: E = Homer, Homeric Hymns, Cypria; H = Hesiod (Theogony, Catalogue of Women); T = Pindar, Stesichorus, Aeschylus, Sophocles, Euripides; A = Apollodorus, Library; L = Pausanias, Hyginus, Ovid.
 - Every relation must list its sources. Never add a link or a version without a source.
 - A note names an author only where the link is known from them.
+- A passage (`cite` on a relation, per source group) is written only after it has been found in the text itself, never from memory. A group with no checked passage is left out; the card then shows the group alone.
 - An idea with a modern origin (Hestia giving her seat to Dionysus, Pandora’s box) appears only as a “Not in the ancient sources” note naming where it comes from, never as a link or a version.
 
 **Tone**
@@ -74,4 +75,4 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - Hesiod fragment numbering: Catalogue of Women fr. 23a (Merkelbach–West); the Most (Loeb) number still needs checking.
 - Next branches: to be decided.
 - A database: none for now (all data is static JSON, the theme pick is in localStorage). Left for the future, for features readers write to: accounts, favourites, comments, suggested corrections.
-- Exact citations: a link names only its source group (“Hesiod”), not the passage (“Theogony 453–458”). To be added family by family.
+- Exact citations, family by family. Done: the House of Atreus for Homer & epic, Apollodorus and Later writers (147 passages on 78 of its 84 links). To do there: Hesiod and Lyric & tragedy; then the other families. Three sources the data lists could not be found where expected and need a decision: Apollodorus for Ares as father of Oenomaus (the Epitome only says Ares gave him arms and horses), and Apollodorus missing from Iphigenia’s and Chrysothemis’ parents though Epitome 2.16 names both daughters.

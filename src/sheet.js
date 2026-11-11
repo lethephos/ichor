@@ -14,7 +14,12 @@ export const card = document.getElementById("card");
 
 /* ---------- card ---------- */
 const cardBody = document.getElementById("cardBody");
-export const srcText = src => `<span class="srcs">${src.map(s => state.src===s ? `<b>${SRC[s]}</b>` : SRC[s]).join(", ")}</span>`;
+/* The sources of a link, and under them the passages where it is told, for those checked so far (`cite` in relations.json);
+   with one source chosen, only its passage. */
+export const srcText = (src, cite) => {
+  const where = cite ? src.filter(s => cite[s] && (state.src==="all" || state.src===s)).map(s => cite[s]) : [];
+  return `<span class="srcs">${src.map(s => state.src===s ? `<b>${SRC[s]}</b>` : SRC[s]).join(", ")}</span>${where.length ? `<span class="cites">${where.join(" · ")}</span>` : ""}`;
+};
 export function sentence(e){
   const A = named(e.from, true), B = named(e.to);
   // a parent from a group names the sister: “Perse, one of the Oceanids, is the mother of Circe.”
@@ -24,7 +29,7 @@ export function sentence(e){
   return `${A} ${e.note}.`;
 }
 export const draftTag = x => x.draft ? ` <em class="draft" title="Not yet checked">draft</em>` : "";
-export const relItem = (id, e, withSentence) => `<li><button class="rel" data-go="${id}">${N[id].name}</button>${srcText(e.sources)}${draftTag(e)}${withSentence?`<span class="note">${sentence(e)}</span>`:(e.note?`<span class="note">${e.note}</span>`:"")}</li>`;
+export const relItem = (id, e, withSentence) => `<li><button class="rel" data-go="${id}">${N[id].name}</button>${srcText(e.sources, e.cite)}${draftTag(e)}${withSentence?`<span class="note">${sentence(e)}</span>`:(e.note?`<span class="note">${e.note}</span>`:"")}</li>`;
 export function shell(inner){
   cardBody.innerHTML = inner;
   card.querySelectorAll("[data-close]").forEach(b => b.onclick = resetMode);

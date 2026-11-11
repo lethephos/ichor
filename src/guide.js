@@ -33,7 +33,7 @@ function showDemo(key){
     const on = !!state.demo && state.demo.key===b.dataset.demo;
     b.setAttribute("aria-pressed", on);
     const note = b.querySelector(".demo-note");
-    note.innerHTML = !on ? "" : state.demo.missing ? "Not in this family: pick Whole tree to see it." : b.dataset.demo==="rows" ? ROWS_DEMO.text : `${sentence(state.demo.e)} ${srcText(state.demo.e.sources)}`;
+    note.innerHTML = !on ? "" : state.demo.missing ? "Not in this family: pick Whole tree to see it." : b.dataset.demo==="rows" ? ROWS_DEMO.text : `${sentence(state.demo.e)} ${srcText(state.demo.e.sources, state.demo.e.cite)}`;
   });
   apply(true);
   if (!state.demo || state.demo.missing) return;
