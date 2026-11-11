@@ -27,7 +27,21 @@ npm run preview  # serve the build
 - `brand/` — the logo as SVG: the mark (a four-rayed star whose south ray runs into a drop of gold) and the wordmark, the mark beside “Ichor”, for light and dark backgrounds.
 - `src/layout.js` — automatic tier layout. Rows come from `generation`; x is computed: each figure is pulled towards the figures it is linked to (blood and marriage most, affairs and feuds less), and rows are spaced so labels never collide and separate families stand apart. Nothing in the data holds a position, so a new figure only needs a `generation` and its relations. Where a row has ties, the order in `people.json` decides. A row grows downwards when it needs to: a child whose parent sits on the same row goes on a line below (with its spouse), so lower on a row always means descended.
 - `src/data.js` — loads the JSON and runs the layout.
-- `src/main.js` — tree, controls, card, curse and thread panels.
+- `src/main.js` — the page: the family switcher, the address, opening a figure, and the start. The rest of the interface is one file per part:
+  - `state.js` — what the reader has chosen (source, layers, the open figure, story or thread) and small shared helpers.
+  - `theme.js` — light and dark.
+  - `tree.js` — the tree drawn with D3, row names, pan and zoom, and `apply`, which shows it as the present choices tell it.
+  - `camera.js` — fitting figures into the free part of the screen, the opening view, the glides of a story step.
+  - `sheet.js` — the card as a container: its bar and navigator, the phone sheet, the folding header, closing what is open.
+  - `controls.js` — source pills, layer toggles, the Stories list, the phone tools strip.
+  - `find.js` — the search box and the Find panel.
+  - `figure.js` — a figure’s card.
+  - `stories.js` — stories told step by step.
+  - `guide.js` — the Guide and the tour.
+  - `thread.js` — Ariadne’s thread.
+  - `intro.js` — the opening.
+
+  These files call each other freely, but they are set up in that order: each imports the one before it first. Keep that first import when editing, or a file may run before the one it leans on.
 - `src/styles/` — styles. `index.css` imports the rest in order:
   - `tokens.css` — design tokens: colours, the gold accent, fonts, shadow. Its base palette is the earlier pale clay and black glaze, shown with `?look=clay`.
   - `stars.css` — the default look, a modern star chart after Hevelius: ivory by day, graphite by night, over the tokens. Change a colour here or in `tokens.css`, nowhere else.
