@@ -2826,7 +2826,7 @@
     "from": "hades",
     "to": "theseus",
     "sources": ["A", "L"],
-    "note": "bound Theseus and Pirithous to a chair of forgetfulness"
+    "note": "bound Theseus and Pirithous to a chair of forgetfulness, until Heracles pulled Theseus free"
   },
   {
     "type": "parent",
@@ -4379,13 +4379,6 @@
     "to": "pirithous",
     "sources": ["A"],
     "note": "held Pirithous fast on the chair of forgetfulness"
-  },
-  {
-    "type": "feud",
-    "from": "hades",
-    "to": "theseus",
-    "sources": ["A"],
-    "note": "held Theseus fast on the chair of forgetfulness, until Heracles pulled him free"
   },
   {
     "type": "parent",

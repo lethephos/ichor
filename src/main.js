@@ -22,10 +22,11 @@ const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:
 
 /* ---------- header ---------- */
 const SITE_TITLE = document.title;
+// what the address asked for when the page opened, read before anything rewrites it
+const START = new URLSearchParams(location.search);
 function showFamily(){
   document.getElementById("branchTitle").textContent = FAMILY.title;
   document.getElementById("familyName").textContent = FAMILY.label;
-  document.title = FAMILY.id === FAMILIES[0].id ? SITE_TITLE : `${FAMILY.title} · Ichor`;
   familyItems.forEach(li => li.setAttribute("aria-selected", String(li.dataset.family === FAMILY.id)));
 }
 
@@ -60,9 +61,49 @@ function moveToFamily(id){
   switchFamily(id);
 }
 addEventListener("popstate", () => {
-  const id = new URLSearchParams(location.search).get("family");
+  const q = new URLSearchParams(location.search), id = q.get("family");
   if (familyOf(id).id !== FAMILY.id) switchFamily(id);
+  else if (state.mode==="node" || state.mode==="curse") resetMode();
+  openFromUrl(q);
 });
+/* The address names what is open, so a figure, a story step or a reading by one source can be sent as a link:
+   ?figure=medea, ?story=argonauts&step=3, ?source=H, beside the family. Only a change of family adds a step
+   to the browser’s history; the rest rewrites the address in place, so the back button still returns to the
+   last family, now with the card that was open there. */
+function syncUrl(){
+  const url = new URL(location.href), q = url.searchParams;
+  const set = (k, v) => v ? q.set(k, v) : q.delete(k);
+  const story = state.mode==="curse" ? STORIES[state.curseKey] : null, fig = state.mode==="node" ? N[state.sel] : null;
+  set("figure", fig && fig.id);
+  set("story", story && story.id);
+  set("step", story && state.step ? String(state.step) : null);
+  set("source", state.src==="all" ? null : state.src);
+  if (url.href !== location.href) history.replaceState(history.state, "", url);
+  const title = fig ? `${fig.name} · Ichor` : story ? `${story.title} · Ichor` : FAMILY.id === FAMILIES[0].id ? SITE_TITLE : `${FAMILY.title} · Ichor`;
+  if (document.title !== title) document.title = title;
+}
+/* Opening what an address names. A figure or a story the family in the address cannot hold opens in its own
+   family (as from Find and the Stories list), without a new step in the history. */
+function openFromUrl(q){
+  const land = home => {
+    if (home.id === FAMILY.id) return;
+    const url = new URL(location.href);
+    if (home.id === FAMILIES[0].id) url.searchParams.delete("family"); else url.searchParams.set("family", home.id);
+    history.replaceState(history.state, "", url);
+    switchFamily(home.id);
+  };
+  const src = q.get("source"), fig = q.get("figure"), story = ALL_STORIES.find(c => c.id === q.get("story"));
+  if (src && SRC[src] && src !== state.src) setSource(src);
+  if (story) {
+    const home = storyMove(story);
+    if (home) land(home);
+    const step = Math.round(+q.get("step")) || 0;
+    openCurse(story.id, Math.min(Math.max(step, 0), story.steps.length + 1));
+  } else if (fig && ALL_KEY[fig]) {
+    if (!N[fig]) land(figureHome(fig));
+    select(fig, true);
+  }
+}
 familyBtn.addEventListener("click", ev => { ev.stopPropagation(); openFamilies(familyMenu.hidden); });
 familyMenu.addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) goFamily(li.dataset.family); });
 familyMenu.addEventListener("keydown", ev => {
@@ -517,6 +558,7 @@ function apply(animate){
   nodeSel.selectAll(".imm").style("display", d => state.src==="all" || d.immortal.sources.includes(state.src) ? null : "none");
   nodeSel.selectAll(".badge").style("display", d => state.layers.transform && (state.src==="all" || d.transformation.sources.includes(state.src)) ? null : "none");
   syncTools();
+  syncUrl();
 }
 
 /* ---------- card ---------- */
@@ -1404,6 +1446,7 @@ function runThread(a, b, silent){
 showFamily(); buildStories(); indexPeople(); drawTree();
 initialView();
 apply(false);
+openFromUrl(START);
 
 /* The tree lights up once the page has loaded: each star twinkles in from the top of the screen down
    (lower means descended), and its links are drawn in after it. With reduced motion it simply fades in. */
