@@ -56,7 +56,7 @@ export function runThread(a, b, silent){
   state.path = {nodes:res.nodes, edges:res.edges.map(e => e.i)};
   if (out) out.innerHTML = `
     <div class="sec"><h3>${res.edges.length} ${res.edges.length===1?"link":"links"} apart${state.src==="all"?"":`, in ${SRC[state.src]}`}</h3>
-    <ol class="thread-steps">${res.edges.map(e => `<li>${sentence(e)} ${srcText(e.sources)}</li>`).join("")}</ol></div>`;
+    <ol class="thread-steps">${res.edges.map(e => `<li>${sentence(e)} ${srcText(e.sources, e.cite)}</li>`).join("")}</ol></div>`;
   apply(true);
   if (!silent) fitTo(res.nodes, true);
 }

@@ -46,6 +46,8 @@ relations.forEach((r, i) => {
   [r.from, r.to].forEach(id => { if (!known(id)) fail(at, `“${id}” is not a figure`); });
   if (r.from === r.to) fail(at, "links a figure to itself");
   checkSources(at, r.sources);
+  // a passage is given per source group, and only for a group the link lists
+  Object.entries(r.cite || {}).forEach(([k, v]) => { if (!r.sources.includes(k)) fail(at, `a passage for “${k}”, which is not among its sources`); if (!v || typeof v !== "string") fail(at, `an empty passage for “${k}”`); });
   // a marriage or an affair has no direction; the rest run from one figure to the other
   const pair = r.type === "marriage" || r.type === "affair" ? [r.from, r.to].sort() : [r.from, r.to];
   const key = [r.type, ...pair].join("|");

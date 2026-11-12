@@ -3,73 +3,85 @@
     "type": "parent",
     "from": "zeus",
     "to": "tantalus",
-    "sources": ["T", "L"]
+    "sources": ["T", "L"],
+    "cite": {"L": "Hyginus, Fabulae 82"}
   },
   {
     "type": "parent",
     "from": "pluto",
     "to": "tantalus",
-    "sources": ["L"]
+    "sources": ["L"],
+    "cite": {"L": "Hyginus, Fabulae 82"}
   },
   {
     "type": "parent",
     "from": "tantalus",
     "to": "pelops",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.3", "L": "Hyginus, Fabulae 82–83"}
   },
   {
     "type": "parent",
     "from": "tantalus",
     "to": "niobe",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 9"}
   },
   {
     "type": "parent",
     "from": "ares",
     "to": "oenomaus",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"L": "Hyginus, Fabulae 84"}
   },
   {
     "type": "parent",
     "from": "oenomaus",
     "to": "hippodamia",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.4", "L": "Hyginus, Fabulae 84"}
   },
   {
     "type": "parent",
     "from": "hermes",
     "to": "myrtilus",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.6", "L": "Hyginus, Fabulae 224"}
   },
   {
     "type": "parent",
     "from": "pelops",
     "to": "atreus",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.10", "L": "Hyginus, Fabulae 88"}
   },
   {
     "type": "parent",
     "from": "hippodamia",
     "to": "atreus",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"L": "Hyginus, Fabulae 88"}
   },
   {
     "type": "parent",
     "from": "pelops",
     "to": "thyestes",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.10", "L": "Hyginus, Fabulae 86"}
   },
   {
     "type": "parent",
     "from": "hippodamia",
     "to": "thyestes",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"L": "Hyginus, Fabulae 86"}
   },
   {
     "type": "parent",
     "from": "pelops",
     "to": "chrysippus",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 85"}
   },
   {
     "type": "parent",
@@ -81,127 +93,148 @@
     "type": "parent",
     "from": "atreus",
     "to": "agamemnon",
-    "sources": ["E", "T", "A", "L"]
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Iliad 1.24", "A": "Apollodorus, Epitome 3.12", "L": "Hyginus, Fabulae 97"}
   },
   {
     "type": "parent",
     "from": "atreus",
     "to": "menelaus",
-    "sources": ["E", "T", "A", "L"]
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Iliad 4.98", "A": "Apollodorus, Epitome 3.12", "L": "Hyginus, Fabulae 97"}
   },
   {
     "type": "parent",
     "from": "pleisthenes",
     "to": "agamemnon",
-    "sources": ["H", "T", "A"]
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.2.2"}
   },
   {
     "type": "parent",
     "from": "pleisthenes",
     "to": "menelaus",
-    "sources": ["H", "T", "A"]
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.2.2"}
   },
   {
     "type": "parent",
     "from": "aerope",
     "to": "agamemnon",
-    "sources": ["H", "T", "A", "L"]
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 3.12", "L": "Hyginus, Fabulae 97"}
   },
   {
     "type": "parent",
     "from": "aerope",
     "to": "menelaus",
-    "sources": ["H", "T", "A", "L"]
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 3.12"}
   },
   {
     "type": "parent",
     "from": "thyestes",
     "to": "pelopia",
-    "sources": ["L"]
+    "sources": ["L"],
+    "cite": {"L": "Hyginus, Fabulae 88"}
   },
   {
     "type": "parent",
     "from": "thyestes",
     "to": "aegisthus",
-    "sources": ["E", "T", "A", "L"]
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Odyssey 4.517–518", "A": "Apollodorus, Epitome 2.14", "L": "Hyginus, Fabulae 87–88"}
   },
   {
     "type": "parent",
     "from": "pelopia",
     "to": "aegisthus",
-    "sources": ["L"]
+    "sources": ["L"],
+    "cite": {"L": "Hyginus, Fabulae 87–88"}
   },
   {
     "type": "parent",
     "from": "tyndareus",
     "to": "clytemnestra",
-    "sources": ["E", "H", "T", "A"]
+    "sources": ["E", "H", "T", "A"],
+    "cite": {"E": "Odyssey 24.199", "A": "Apollodorus 3.10.7"}
   },
   {
     "type": "parent",
     "from": "leda",
     "to": "clytemnestra",
-    "sources": ["H", "T", "A"]
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.10.6–7"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "helen",
-    "sources": ["E", "T", "A"]
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Iliad 3.418", "A": "Apollodorus 3.10.7"}
   },
   {
     "type": "parent",
     "from": "leda",
     "to": "helen",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus 3.10.7"}
   },
   {
     "type": "parent",
     "from": "nemesis",
     "to": "helen",
-    "sources": ["E", "A", "L"]
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Cypria (in Athenaeus 8.334b)", "A": "Apollodorus 3.10.7", "L": "Hyginus, Astronomica 2.8"}
   },
   {
     "type": "parent",
     "from": "tyndareus",
     "to": "castor",
-    "sources": ["E", "A", "L"]
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.298–300", "A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 77"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "castor",
-    "sources": ["E", "H", "A", "L"]
+    "sources": ["E", "H", "A", "L"],
+    "cite": {"E": "Homeric Hymn 33.1–3", "A": "Apollodorus 1.8.2", "L": "Hyginus, Fabulae 14"}
   },
   {
     "type": "parent",
     "from": "leda",
     "to": "castor",
-    "sources": ["E", "A"]
+    "sources": ["E", "A"],
+    "cite": {"E": "Odyssey 11.298–300", "A": "Apollodorus 3.10.7"}
   },
   {
     "type": "parent",
     "from": "tyndareus",
     "to": "polydeuces",
-    "sources": ["E"]
+    "sources": ["E"],
+    "cite": {"E": "Odyssey 11.298–300"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "polydeuces",
-    "sources": ["E", "H", "T", "A", "L"]
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Homeric Hymn 33.1–3", "A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 77"}
   },
   {
     "type": "parent",
     "from": "leda",
     "to": "polydeuces",
-    "sources": ["E", "A"]
+    "sources": ["E", "A"],
+    "cite": {"E": "Odyssey 11.298–300", "A": "Apollodorus 3.10.7"}
   },
   {
     "type": "parent",
     "from": "agamemnon",
     "to": "iphigenia",
-    "sources": ["E", "H", "T", "L"]
+    "sources": ["E", "H", "T", "L"],
+    "cite": {"E": "Cypria (Proclus’ summary)", "L": "Hyginus, Fabulae 98"}
   },
   {
     "type": "parent",
@@ -214,32 +247,37 @@
     "from": "theseus",
     "to": "iphigenia",
     "sources": ["T", "L"],
-    "note": "Stesichorus’s version"
+    "note": "Stesichorus’s version",
+    "cite": {"L": "Pausanias 2.22.6–7"}
   },
   {
     "type": "parent",
     "from": "helen",
     "to": "iphigenia",
     "sources": ["T", "L"],
-    "note": "Stesichorus’s version"
+    "note": "Stesichorus’s version",
+    "cite": {"L": "Pausanias 2.22.6–7"}
   },
   {
     "type": "parent",
     "from": "agamemnon",
     "to": "electra",
-    "sources": ["H", "T", "A", "L"]
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 122"}
   },
   {
     "type": "parent",
     "from": "clytemnestra",
     "to": "electra",
-    "sources": ["H", "T", "A", "L"]
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 122"}
   },
   {
     "type": "parent",
     "from": "agamemnon",
     "to": "chrysothemis",
-    "sources": ["E", "T"]
+    "sources": ["E", "T"],
+    "cite": {"E": "Iliad 9.145"}
   },
   {
     "type": "parent",
@@ -251,25 +289,29 @@
     "type": "parent",
     "from": "agamemnon",
     "to": "orestes",
-    "sources": ["E", "H", "T", "A", "L"]
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Iliad 9.142–143", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 119"}
   },
   {
     "type": "parent",
     "from": "clytemnestra",
     "to": "orestes",
-    "sources": ["E", "H", "T", "A", "L"]
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Odyssey 3.309–310", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 119"}
   },
   {
     "type": "parent",
     "from": "menelaus",
     "to": "hermione",
-    "sources": ["E", "T", "A"]
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Odyssey 4.12–14", "A": "Apollodorus 3.11.1"}
   },
   {
     "type": "parent",
     "from": "helen",
     "to": "hermione",
-    "sources": ["E", "T", "A"]
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Odyssey 4.12–14", "A": "Apollodorus 3.11.1"}
   },
   {
     "type": "parent",
@@ -347,43 +389,50 @@
     "type": "marriage",
     "from": "atreus",
     "to": "aerope",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 2.10"}
   },
   {
     "type": "marriage",
     "from": "pleisthenes",
     "to": "aerope",
-    "sources": ["H", "T", "A"]
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.2.2"}
   },
   {
     "type": "marriage",
     "from": "agamemnon",
     "to": "clytemnestra",
-    "sources": ["E", "H", "T", "A", "L"]
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Iliad 1.113–114", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 117"}
   },
   {
     "type": "marriage",
     "from": "menelaus",
     "to": "helen",
-    "sources": ["E", "T", "A", "L"]
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"A": "Apollodorus 3.10.9", "L": "Hyginus, Fabulae 78"}
   },
   {
     "type": "marriage",
     "from": "tyndareus",
     "to": "leda",
-    "sources": ["E", "A", "L"]
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.298", "A": "Apollodorus 3.10.5", "L": "Hyginus, Fabulae 78"}
   },
   {
     "type": "marriage",
     "from": "orestes",
     "to": "hermione",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 6.28"}
   },
   {
     "type": "marriage",
     "from": "pylades",
     "to": "electra",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 6.28"}
   },
   {
     "type": "marriage",
@@ -403,133 +452,152 @@
     "from": "thyestes",
     "to": "aerope",
     "sources": ["T", "A", "L"],
-    "note": "seduced Aerope, his brother’s wife"
+    "note": "seduced Aerope, his brother’s wife",
+    "cite": {"A": "Apollodorus, Epitome 2.10–11", "L": "Hyginus, Fabulae 86"}
   },
   {
     "type": "affair",
     "from": "aegisthus",
     "to": "clytemnestra",
     "sources": ["E", "T"],
-    "note": "became the lover of Clytemnestra while Agamemnon was at Troy"
+    "note": "became the lover of Clytemnestra while Agamemnon was at Troy",
+    "cite": {"E": "Odyssey 3.263–272"}
   },
   {
     "type": "affair",
     "from": "zeus",
     "to": "leda",
     "sources": ["T", "A", "L"],
-    "note": "came to Leda in the form of a swan"
+    "note": "came to Leda in the form of a swan",
+    "cite": {"A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 77"}
   },
   {
     "type": "affair",
     "from": "zeus",
     "to": "nemesis",
     "sources": ["E", "A", "L"],
-    "note": "pursued Nemesis through many shapes"
+    "note": "pursued Nemesis through many shapes",
+    "cite": {"E": "Cypria (in Athenaeus 8.334b)", "A": "Apollodorus 3.10.7", "L": "Hyginus, Astronomica 2.8"}
   },
   {
     "type": "affair",
     "from": "paris",
     "to": "helen",
     "sources": ["E", "T", "A"],
-    "note": "carried Helen off to Troy"
+    "note": "carried Helen off to Troy",
+    "cite": {"E": "Iliad 3.443–445", "A": "Apollodorus, Epitome 3.3"}
   },
   {
     "type": "affair",
     "from": "theseus",
     "to": "helen",
     "sources": ["T", "A", "L"],
-    "note": "abducted Helen when she was a girl"
+    "note": "abducted Helen when she was a girl",
+    "cite": {"A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 79"}
   },
   {
     "type": "feud",
     "from": "zeus",
     "to": "tantalus",
     "sources": ["E", "T", "A", "L"],
-    "note": "punished Tantalus forever in the underworld"
+    "note": "punished Tantalus forever in the underworld",
+    "cite": {"E": "Odyssey 11.582–592", "A": "Apollodorus, Epitome 2.1", "L": "Hyginus, Fabulae 82"}
   },
   {
     "type": "feud",
     "from": "pelops",
     "to": "oenomaus",
     "sources": ["T", "A", "L"],
-    "note": "beat Oenomaus in the chariot race; the king died in the wreck"
+    "note": "beat Oenomaus in the chariot race; the king died in the wreck",
+    "cite": {"A": "Apollodorus, Epitome 2.7", "L": "Hyginus, Fabulae 84"}
   },
   {
     "type": "feud",
     "from": "pelops",
     "to": "myrtilus",
     "sources": ["T", "A", "L"],
-    "note": "threw Myrtilus into the sea"
+    "note": "threw Myrtilus into the sea",
+    "cite": {"A": "Apollodorus, Epitome 2.8", "L": "Hyginus, Fabulae 84"}
   },
   {
     "type": "feud",
     "from": "artemis",
     "to": "niobe",
     "sources": ["E", "A", "L"],
-    "note": "killed the children of Niobe, with Apollo"
+    "note": "killed the children of Niobe, with Apollo",
+    "cite": {"E": "Iliad 24.602–609", "A": "Apollodorus 3.5.6"}
   },
   {
     "type": "feud",
     "from": "atreus",
     "to": "thyestes",
     "sources": ["T", "A", "L"],
-    "note": "served Thyestes his own sons at a feast"
+    "note": "served Thyestes his own sons at a feast",
+    "cite": {"A": "Apollodorus, Epitome 2.13", "L": "Hyginus, Fabulae 88"}
   },
   {
     "type": "feud",
     "from": "aegisthus",
     "to": "atreus",
     "sources": ["A", "L"],
-    "note": "killed Atreus and gave the throne back to his father Thyestes"
+    "note": "killed Atreus and gave the throne back to his father Thyestes",
+    "cite": {"A": "Apollodorus, Epitome 2.14", "L": "Hyginus, Fabulae 88"}
   },
   {
     "type": "feud",
     "from": "agamemnon",
     "to": "artemis",
     "sources": ["E", "T", "A", "L"],
-    "note": "killed a deer sacred to Artemis and boasted of it"
+    "note": "killed a deer sacred to Artemis and boasted of it",
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 3.21", "L": "Hyginus, Fabulae 98"}
   },
   {
     "type": "feud",
     "from": "agamemnon",
     "to": "iphigenia",
     "sources": ["E", "T", "A", "L"],
-    "note": "sacrificed Iphigenia at Aulis"
+    "note": "sacrificed Iphigenia at Aulis",
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 3.22", "L": "Hyginus, Fabulae 98"}
   },
   {
     "type": "feud",
     "from": "clytemnestra",
     "to": "agamemnon",
     "sources": ["E", "T", "A", "L"],
-    "note": "killed Agamemnon on his return from Troy"
+    "note": "killed Agamemnon on his return from Troy",
+    "cite": {"E": "Odyssey 3.234–235; 24.96–97", "A": "Apollodorus, Epitome 6.23", "L": "Hyginus, Fabulae 117"}
   },
   {
     "type": "feud",
     "from": "aegisthus",
     "to": "agamemnon",
     "sources": ["E", "A"],
-    "note": "killed Agamemnon at a feast"
+    "note": "killed Agamemnon at a feast",
+    "cite": {"E": "Odyssey 1.35–36; 24.96–97", "A": "Apollodorus, Epitome 6.23"}
   },
   {
     "type": "feud",
     "from": "orestes",
     "to": "clytemnestra",
     "sources": ["E", "H", "T", "A", "L"],
-    "note": "killed Clytemnestra, his own mother"
+    "note": "killed Clytemnestra, his own mother",
+    "cite": {"E": "Odyssey 3.309–310", "A": "Apollodorus, Epitome 6.25", "L": "Hyginus, Fabulae 119"}
   },
   {
     "type": "feud",
     "from": "orestes",
     "to": "aegisthus",
     "sources": ["E", "T", "A", "L"],
-    "note": "killed Aegisthus to avenge his father"
+    "note": "killed Aegisthus to avenge his father",
+    "cite": {"E": "Odyssey 1.298–300; 3.306–308", "A": "Apollodorus, Epitome 6.25", "L": "Hyginus, Fabulae 119"}
   },
   {
     "type": "feud",
     "from": "menelaus",
     "to": "paris",
     "sources": ["E"],
-    "note": "fought Paris in single combat"
+    "note": "fought Paris in single combat",
+    "cite": {"E": "Iliad 3.340–382"}
   },
   {
     "type": "feud",
@@ -557,14 +625,16 @@
     "from": "artemis",
     "to": "iphigenia",
     "sources": ["E", "H", "T", "A"],
-    "note": "replaced Iphigenia with a deer, or made her immortal"
+    "note": "replaced Iphigenia with a deer, or made her immortal",
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 3.22"}
   },
   {
     "type": "curse",
     "from": "myrtilus",
     "to": "pelops",
     "sources": ["T", "A"],
-    "note": "cursed Pelops and all his line as he fell into the sea"
+    "note": "cursed Pelops and all his line as he fell into the sea",
+    "cite": {"A": "Apollodorus, Epitome 2.8"}
   },
   {
     "type": "curse",
@@ -892,7 +962,8 @@
     "type": "parent",
     "from": "zeus",
     "to": "ares",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"A": "Apollodorus 1.3.1"}
   },
   {
     "type": "parent",
@@ -935,7 +1006,8 @@
     "type": "parent",
     "from": "zeus",
     "to": "artemis",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"A": "Apollodorus 1.4.1"}
   },
   {
     "type": "parent",
@@ -954,7 +1026,8 @@
     "type": "parent",
     "from": "zeus",
     "to": "hermes",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"E": "Homeric Hymn to Hermes 1–4; Odyssey 8.335", "A": "Apollodorus 3.10.2"}
   },
   {
     "type": "parent",
@@ -1280,7 +1353,8 @@
     "from": "erinyes",
     "to": "orestes",
     "sources": ["T", "A", "L"],
-    "note": "hunted Orestes across Greece for killing his mother"
+    "note": "hunted Orestes across Greece for killing his mother",
+    "cite": {"A": "Apollodorus, Epitome 6.25", "L": "Hyginus, Fabulae 119–120"}
   },
   {
     "type": "parent",
@@ -2336,28 +2410,32 @@
     "type": "marriage",
     "from": "neoptolemus",
     "to": "hermione",
-    "sources": ["E", "T", "A"]
+    "sources": ["E", "T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 6.14"}
   },
   {
     "type": "feud",
     "from": "orestes",
     "to": "neoptolemus",
     "sources": ["T", "A"],
-    "note": "had Neoptolemus killed at Delphi, or killed him himself"
+    "note": "had Neoptolemus killed at Delphi, or killed him himself",
+    "cite": {"A": "Apollodorus, Epitome 6.14"}
   },
   {
     "type": "affair",
     "from": "agamemnon",
     "to": "cassandra",
     "sources": ["E", "T", "A"],
-    "note": "took Cassandra home from Troy as his prize"
+    "note": "took Cassandra home from Troy as his prize",
+    "cite": {"E": "Odyssey 11.421–423", "A": "Apollodorus, Epitome 5.23; 6.23"}
   },
   {
     "type": "feud",
     "from": "clytemnestra",
     "to": "cassandra",
     "sources": ["E", "T", "A"],
-    "note": "killed Cassandra with Agamemnon"
+    "note": "killed Cassandra with Agamemnon",
+    "cite": {"E": "Odyssey 11.421–423", "A": "Apollodorus, Epitome 6.23"}
   },
   {
     "type": "feud",
