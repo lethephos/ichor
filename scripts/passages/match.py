@@ -153,6 +153,38 @@ if os.environ.get('LOOSE'):
     KIN = re.compile(r'^(sons?|daughters?|child|children|offspring|begat|begot|begotten|bare|bore|born|father|mother|fathered|birth|parents?)$')
     WED = re.compile(r'^(married|marri|marry|wife|wed|wedded|husband|bride|spouse|marriage|consort|wedlock)$')
     LOVE = re.compile(r'^(loved?|lay|lain|bed|bedded|intercurse|ravish\w*|seduc\w*|embrac\w*|union|desire|passion|raped?|abduct\w*|enamured|carri\w*)$')
+    if os.environ.get('WIDE'):
+        # WIDE=1: the last net. The second figure named with a word of kinship or of the deed, and the first anywhere in
+        # the same section or the one before it (where the text goes on with "he" or "she"). Read every find.
+        out = []
+        for ri, r in enumerate(relations):
+            a, b = r['from'], r['to']; note_stems = stems(r.get('note'), names(a) | names(b))
+            rx = {'parent': KIN, 'marriage': WED, 'affair': LOVE}.get(r['type'])
+            for g in r['sources']:
+                if g in r.get('cite', {}): continue
+                best = None
+                for wi, w in enumerate(WORKS[g]):
+                    L = secs(w)
+                    for si, (lab, raw, toks, caps, capset) in enumerate(L):
+                        ib = pos(b, toks, caps)
+                        if not ib: continue
+                        ia = pos(a, toks, caps)
+                        prev = L[si - 1] if si else None
+                        before = bool(prev and names(a) & prev[4] and pos(a, prev[2], prev[3]))
+                        if not ia and not before: continue
+                        for y in ib:
+                            near = toks[max(0, y - 12):y + 13]
+                            k = sum(1 for x in near if rx.match(x)) if rx else len({st for st in note_stems if any(x.startswith(st) for x in toks)})
+                            if not k: continue
+                            d = min((abs(x - y) for x in ia), default=300)
+                            score = (2 if ia else 0) + min(k, 3) - min(d, 300) / 150 - wi * 0.3
+                            if not best or score > best[0]:
+                                where = '' if ia and d <= 26 else (' [… ' + ' '.join(raw[max(0, ia[0] - 5):ia[0] + 6]) + ' …]' if ia else ' [first figure named in the section before]')
+                                best = (score, lab, ' '.join(raw[max(0, y - 14):y + 16]) + where)
+                if best: out.append({'i': ri, 'type': r['type'], 'from': a, 'to': b, 'g': g, 'cite': best[1], 'score': round(best[0], 2), 'how': 'wide', 'note': r.get('note', ''), 'text': best[2]})
+        json.dump(out, open(os.environ.get('OUT', 'candidates.json'), 'w'), ensure_ascii=False, indent=0)
+        print(len(out), 'wide candidates')
+        sys.exit()
     out = []
     for ri, r in enumerate(relations):
         a, b = r['from'], r['to']; note_stems = stems(r.get('note'), names(a) | names(b))
