@@ -130,7 +130,7 @@
     "from": "aerope",
     "to": "menelaus",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"T": "Euripides, Orestes 1–21", "A": "Apollodorus, Epitome 3.12"}
+    "cite": {"T": "Euripides, Orestes 1–21", "A": "Apollodorus, Epitome 3.12", "L": "Hyginus, Fabulae 97"}
   },
   {
     "type": "parent",
@@ -242,7 +242,7 @@
     "from": "clytemnestra",
     "to": "iphigenia",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"T": "Euripides, Orestes 22–45", "A": "Apollodorus, Epitome 2.16"}
+    "cite": {"T": "Euripides, Orestes 22–45", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 98"}
   },
   {
     "type": "parent",
@@ -321,7 +321,7 @@
     "from": "labdacus",
     "to": "laius",
     "sources": ["T", "A", "L"],
-    "cite": {"T": "Sophocles, Oedipus Rex 220–239", "L": "Hyginus, Fabulae 76"}
+    "cite": {"T": "Sophocles, Oedipus Rex 220–239", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 76"}
   },
   {
     "type": "parent",
@@ -342,14 +342,14 @@
     "from": "oedipus",
     "to": "eteocles",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus 3.5.8", "L": "Hyginus, Fabulae 76"}
+    "cite": {"T": "Sophocles, Antigone 162–222", "A": "Apollodorus 3.5.8", "L": "Hyginus, Fabulae 76"}
   },
   {
     "type": "parent",
     "from": "oedipus",
     "to": "polynices",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus 3.6.3", "L": "Hyginus, Fabulae 68"}
+    "cite": {"T": "Sophocles, Antigone 162–222", "A": "Apollodorus 3.6.3", "L": "Hyginus, Fabulae 68"}
   },
   {
     "type": "parent",
@@ -363,25 +363,28 @@
     "from": "oedipus",
     "to": "ismene",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus 3.5.8", "L": "Hyginus, Fabulae 67"}
+    "cite": {"T": "Sophocles, Oedipus in Colonos 325–329", "A": "Apollodorus 3.5.8", "L": "Hyginus, Fabulae 67"}
   },
   {
     "type": "parent",
     "from": "jocasta",
     "to": "eteocles",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"T": "Euripides, Phoenician Women 427–445"}
   },
   {
     "type": "parent",
     "from": "jocasta",
     "to": "polynices",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"T": "Euripides, Phoenician Women 280–300"}
   },
   {
     "type": "parent",
     "from": "jocasta",
     "to": "antigone",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"T": "Euripides, Phoenician Women 1264–1271"}
   },
   {
     "type": "parent",
@@ -450,7 +453,7 @@
     "from": "laius",
     "to": "jocasta",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Pausanias 9.5.10"}
+    "cite": {"T": "Euripides, Phoenician Women 1–20", "A": "Apollodorus 3.5.7", "L": "Pausanias 9.5.10"}
   },
   {
     "type": "marriage",
@@ -458,7 +461,7 @@
     "to": "jocasta",
     "sources": ["E", "T", "A", "L"],
     "note": "without knowing she was his mother",
-    "cite": {"L": "Hyginus, Fabulae 67"}
+    "cite": {"T": "Sophocles, Oedipus Rex 940–959", "L": "Hyginus, Fabulae 67"}
   },
   {
     "type": "affair",
@@ -618,7 +621,7 @@
     "to": "chrysippus",
     "sources": ["A", "L"],
     "note": "carried off Chrysippus while teaching him to drive a chariot",
-    "cite": {"L": "Hyginus, Fabulae 85"}
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 85"}
   },
   {
     "type": "feud",
@@ -626,7 +629,7 @@
     "to": "laius",
     "sources": ["E", "T", "A", "L"],
     "note": "killed Laius at a crossroads, not knowing he was his father",
-    "cite": {"A": "Apollodorus 3.5.7"}
+    "cite": {"T": "Aeschylus, Seven Against Thebes 720–784", "A": "Apollodorus 3.5.7", "L": "Hyginus, Fabulae 67"}
   },
   {
     "type": "feud",
@@ -699,13 +702,15 @@
     "type": "parent",
     "from": "uranus",
     "to": "cronus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 134–138"}
   },
   {
     "type": "parent",
     "from": "gaia",
     "to": "cronus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -718,7 +723,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "rhea",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -731,7 +737,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "oceanus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -743,7 +750,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "tethys",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -756,7 +764,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "coeus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -769,7 +778,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "phoebe",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -781,7 +791,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "dione",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -823,14 +834,14 @@
     "from": "cronus",
     "to": "hestia",
     "sources": ["E", "H", "A"],
-    "cite": {"H": "Theogony 453–491"}
+    "cite": {"E": "Homeric Hymn to Aphrodite 7–32", "H": "Theogony 453–491"}
   },
   {
     "type": "parent",
     "from": "rhea",
     "to": "hestia",
     "sources": ["H", "A"],
-    "cite": {"H": "Theogony 453–491"}
+    "cite": {"H": "Theogony 453–491", "A": "Apollodorus 1.1.5"}
   },
   {
     "type": "parent",
@@ -844,7 +855,7 @@
     "from": "rhea",
     "to": "demeter",
     "sources": ["H", "A"],
-    "cite": {"H": "Theogony 453–491"}
+    "cite": {"H": "Theogony 453–491", "A": "Apollodorus 1.1.5"}
   },
   {
     "type": "parent",
@@ -858,7 +869,7 @@
     "from": "rhea",
     "to": "hades",
     "sources": ["E", "H", "A"],
-    "cite": {"H": "Theogony 453–491"}
+    "cite": {"E": "Iliad 15.185–189", "H": "Theogony 453–491"}
   },
   {
     "type": "parent",
@@ -870,21 +881,22 @@
     "type": "parent",
     "from": "rhea",
     "to": "poseidon",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"A": "Apollodorus 1.1.5"}
   },
   {
     "type": "parent",
     "from": "cronus",
     "to": "hera",
     "sources": ["E", "H", "A"],
-    "cite": {"H": "Theogony 453–491"}
+    "cite": {"E": "Iliad 14.190–194", "H": "Theogony 453–491"}
   },
   {
     "type": "parent",
     "from": "rhea",
     "to": "hera",
     "sources": ["E", "H", "A"],
-    "cite": {"E": "Homeric Hymn to Hera", "H": "Theogony 453–491"}
+    "cite": {"E": "Homeric Hymn to Hera", "H": "Theogony 453–491", "A": "Apollodorus 1.1.5"}
   },
   {
     "type": "parent",
@@ -897,7 +909,8 @@
     "type": "parent",
     "from": "rhea",
     "to": "zeus",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"E": "Iliad 15.185–189", "H": "Theogony 453–491"}
   },
   {
     "type": "feud",
@@ -918,14 +931,14 @@
     "from": "oceanus",
     "to": "metis",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.1"}
+    "cite": {"H": "Theogony 930–937", "A": "Apollodorus 1.2.1"}
   },
   {
     "type": "parent",
     "from": "tethys",
     "to": "metis",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.2"}
+    "cite": {"H": "Theogony 930–937", "A": "Apollodorus 1.2.2"}
   },
   {
     "type": "parent",
@@ -964,7 +977,7 @@
     "from": "atlas",
     "to": "maia",
     "sources": ["H", "A"],
-    "cite": {"H": "Theogony 938–939"}
+    "cite": {"H": "Theogony 938–939", "A": "Apollodorus 3.10.1"}
   },
   {
     "type": "marriage",
@@ -1000,7 +1013,8 @@
     "type": "parent",
     "from": "metis",
     "to": "athena",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 930–937"}
   },
   {
     "type": "parent",
@@ -1027,7 +1041,7 @@
     "from": "hera",
     "to": "hephaestus",
     "sources": ["E", "H", "A"],
-    "cite": {"H": "Theogony 924–929", "A": "Apollodorus 1.3.5"}
+    "cite": {"E": "Iliad 21.375–379", "H": "Theogony 924–929", "A": "Apollodorus 1.3.5"}
   },
   {
     "type": "affair",
@@ -1056,7 +1070,7 @@
     "from": "zeus",
     "to": "artemis",
     "sources": ["E", "H", "A"],
-    "cite": {"H": "Theogony 918–920", "A": "Apollodorus 1.4.1"}
+    "cite": {"E": "Odyssey 6.150–154", "H": "Theogony 918–920", "A": "Apollodorus 1.4.1"}
   },
   {
     "type": "parent",
@@ -1100,14 +1114,14 @@
     "from": "zeus",
     "to": "dionysus",
     "sources": ["E", "H", "T", "A", "L"],
-    "cite": {"E": "Homeric Hymn to Dionysus 32–57", "A": "Apollodorus 3.4.3", "L": "Hyginus, Fabulae 224"}
+    "cite": {"E": "Homeric Hymn to Dionysus 32–57", "T": "Sophocles, Antigone 1098–1152", "A": "Apollodorus 3.4.3", "L": "Hyginus, Fabulae 224"}
   },
   {
     "type": "parent",
     "from": "semele",
     "to": "dionysus",
     "sources": ["E", "H", "T", "A", "L"],
-    "cite": {"E": "Iliad 14.325–329", "T": "Euripides, Bacchae 358–433", "L": "Hyginus, Fabulae 224"}
+    "cite": {"E": "Iliad 14.325–329", "H": "Theogony 940–942", "T": "Euripides, Bacchae 358–433", "A": "Apollodorus 3.4.3", "L": "Hyginus, Fabulae 224"}
   },
   {
     "type": "feud",
@@ -1121,14 +1135,15 @@
     "type": "parent",
     "from": "zeus",
     "to": "persephone",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"E": "Odyssey 11.215–219", "H": "Theogony 912–914"}
   },
   {
     "type": "parent",
     "from": "demeter",
     "to": "persephone",
     "sources": ["E", "H"],
-    "cite": {"H": "Theogony 912–914"}
+    "cite": {"E": "Homeric Hymn to Demeter 490–499", "H": "Theogony 912–914"}
   },
   {
     "type": "affair",
@@ -1157,7 +1172,7 @@
     "from": "dione",
     "to": "aphrodite",
     "sources": ["E", "A"],
-    "cite": {"A": "Apollodorus 1.3.1"}
+    "cite": {"E": "Iliad 5.370–374", "A": "Apollodorus 1.3.1"}
   },
   {
     "type": "marriage",
@@ -1187,7 +1202,7 @@
     "to": "niobe",
     "sources": ["E", "A", "L"],
     "note": "killed the children of Niobe, with Artemis",
-    "cite": {"E": "Iliad 24.605–609", "L": "Pausanias 1.21.3"}
+    "cite": {"E": "Iliad 24.605–609", "A": "Apollodorus 3.5.6", "L": "Pausanias 1.21.3"}
   },
   {
     "type": "feud",
@@ -1210,7 +1225,7 @@
     "from": "cadmus",
     "to": "harmonia",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"H": "Theogony 933–937", "T": "Pindar, Pythian 3.75–99", "L": "Hyginus, Fabulae 6"}
+    "cite": {"H": "Theogony 933–937", "T": "Pindar, Pythian 3.75–99", "A": "Apollodorus 3.4.2", "L": "Hyginus, Fabulae 6"}
   },
   {
     "type": "parent",
@@ -1231,13 +1246,14 @@
     "from": "cadmus",
     "to": "polydorus",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"A": "Apollodorus 3.4.2", "L": "Hyginus, Fabulae 76"}
+    "cite": {"H": "Theogony 975–978", "T": "Euripides, Phoenician Women 1–20", "A": "Apollodorus 3.4.2", "L": "Hyginus, Fabulae 76"}
   },
   {
     "type": "parent",
     "from": "harmonia",
     "to": "polydorus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 975–978"}
   },
   {
     "type": "parent",
@@ -1250,27 +1266,29 @@
     "type": "parent",
     "from": "harmonia",
     "to": "semele",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 975–978"}
   },
   {
     "type": "parent",
     "from": "cadmus",
     "to": "agave",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"T": "Euripides, Bacchae 970–1036", "A": "Apollodorus 3.4.2", "L": "Hyginus, Fabulae 239"}
+    "cite": {"H": "Theogony 975–978", "T": "Euripides, Bacchae 970–1036", "A": "Apollodorus 3.4.2", "L": "Hyginus, Fabulae 239"}
   },
   {
     "type": "parent",
     "from": "harmonia",
     "to": "agave",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 975–978"}
   },
   {
     "type": "parent",
     "from": "polydorus",
     "to": "labdacus",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 76"}
+    "cite": {"T": "Euripides, Phoenician Women 1–20", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 76"}
   },
   {
     "type": "parent",
@@ -1284,7 +1302,8 @@
     "from": "cadmus",
     "to": "ares",
     "sources": ["T", "A", "L"],
-    "note": "killed the serpent of Ares that guarded the spring of Thebes"
+    "note": "killed the serpent of Ares that guarded the spring of Thebes",
+    "cite": {"A": "Apollodorus 3.4.1", "L": "Hyginus, Fabulae 6"}
   },
   {
     "type": "feud",
@@ -1300,19 +1319,21 @@
     "to": "pentheus",
     "sources": ["T", "A", "L"],
     "note": "tore her son apart in a Bacchic frenzy, taking him for a wild beast",
-    "cite": {"T": "Euripides, Bacchae 1153–1193"}
+    "cite": {"T": "Euripides, Bacchae 1153–1193", "A": "Apollodorus 3.5.2", "L": "Hyginus, Fabulae 184"}
   },
   {
     "type": "parent",
     "from": "gaia",
     "to": "themis",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
     "from": "gaia",
     "to": "mnemosyne",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -1332,14 +1353,16 @@
     "type": "marriage",
     "from": "zeus",
     "to": "themis",
-    "sources": ["H"]
+    "sources": ["H"],
+    "cite": {"H": "Theogony 901–906"}
   },
   {
     "type": "affair",
     "from": "zeus",
     "to": "mnemosyne",
     "sources": ["H", "A"],
-    "note": "lay with Mnemosyne for nine nights"
+    "note": "lay with Mnemosyne for nine nights",
+    "cite": {"H": "Theogony 53–74"}
   },
   {
     "type": "parent",
@@ -1353,19 +1376,21 @@
     "from": "mnemosyne",
     "to": "muses",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.3.1"}
+    "cite": {"H": "Theogony 915–917", "A": "Apollodorus 1.3.1"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "horae",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 901–906", "A": "Apollodorus 1.3.1"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "moirai",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.3.1"}
   },
   {
     "type": "parent",
@@ -1378,13 +1403,15 @@
     "type": "parent",
     "from": "themis",
     "to": "moirai",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 901–906", "A": "Apollodorus 1.3.1"}
   },
   {
     "type": "parent",
     "from": "nyx",
     "to": "moirai",
-    "sources": ["H", "L"]
+    "sources": ["H", "L"],
+    "cite": {"H": "Theogony 211–225"}
   },
   {
     "type": "parent",
@@ -1411,7 +1438,7 @@
     "from": "atlas",
     "to": "pleiades",
     "sources": ["H", "A", "L"],
-    "cite": {"H": "Works and Days 383–404", "L": "Ovid, Metamorphoses 6.165–183"}
+    "cite": {"H": "Works and Days 383–404", "A": "Apollodorus 3.10.1", "L": "Ovid, Metamorphoses 6.165–183"}
   },
   {
     "type": "parent",
@@ -1445,7 +1472,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "crius",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -1458,7 +1486,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "hyperion",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -1471,7 +1500,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "theia",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -1484,7 +1514,8 @@
     "type": "parent",
     "from": "gaia",
     "to": "iapetus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.3"}
   },
   {
     "type": "parent",
@@ -1511,7 +1542,7 @@
     "from": "theia",
     "to": "helios",
     "sources": ["H", "T", "A"],
-    "cite": {"H": "Theogony 371–374", "A": "Apollodorus 1.2.2"}
+    "cite": {"H": "Theogony 371–374", "T": "Pindar, Isthmian 5.1–24", "A": "Apollodorus 1.2.2"}
   },
   {
     "type": "parent",
@@ -1546,28 +1577,28 @@
     "from": "iapetus",
     "to": "atlas",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.3"}
+    "cite": {"H": "Theogony 507–544", "A": "Apollodorus 1.2.3"}
   },
   {
     "type": "parent",
     "from": "iapetus",
     "to": "prometheus",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.3"}
+    "cite": {"H": "Theogony 613–616", "A": "Apollodorus 1.2.3"}
   },
   {
     "type": "parent",
     "from": "iapetus",
     "to": "epimetheus",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.3"}
+    "cite": {"H": "Theogony 507–544", "A": "Apollodorus 1.2.3"}
   },
   {
     "type": "parent",
     "from": "iapetus",
     "to": "menoetius",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.3"}
+    "cite": {"H": "Theogony 507–544", "A": "Apollodorus 1.2.3"}
   },
   {
     "type": "parent",
@@ -1581,35 +1612,35 @@
     "from": "crius",
     "to": "astraeus",
     "sources": ["H", "A"],
-    "cite": {"H": "Theogony 375–377"}
+    "cite": {"H": "Theogony 375–377", "A": "Apollodorus 1.2.2"}
   },
   {
     "type": "parent",
     "from": "crius",
     "to": "pallas",
     "sources": ["H", "A"],
-    "cite": {"H": "Theogony 375–377"}
+    "cite": {"H": "Theogony 375–377", "A": "Apollodorus 1.2.2"}
   },
   {
     "type": "parent",
     "from": "crius",
     "to": "perses",
     "sources": ["H", "A"],
-    "cite": {"H": "Theogony 375–377"}
+    "cite": {"H": "Theogony 375–377", "A": "Apollodorus 1.2.2"}
   },
   {
     "type": "parent",
     "from": "coeus",
     "to": "asteria",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.2"}
+    "cite": {"H": "Theogony 404–409", "A": "Apollodorus 1.2.2"}
   },
   {
     "type": "parent",
     "from": "phoebe",
     "to": "asteria",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.2"}
+    "cite": {"H": "Theogony 404–409", "A": "Apollodorus 1.2.2"}
   },
   {
     "type": "marriage",
@@ -1642,7 +1673,8 @@
     "from": "zeus",
     "to": "prometheus",
     "sources": ["H", "T", "A"],
-    "note": "chained Prometheus and sent an eagle to eat his liver"
+    "note": "chained Prometheus and sent an eagle to eat his liver",
+    "cite": {"H": "Theogony 507–544"}
   },
   {
     "type": "feud",
@@ -1650,14 +1682,15 @@
     "to": "menoetius",
     "sources": ["H", "A"],
     "note": "struck Menoetius down with a thunderbolt",
-    "cite": {"H": "Theogony 507–544"}
+    "cite": {"H": "Theogony 507–544", "A": "Apollodorus 1.2.3"}
   },
   {
     "type": "feud",
     "from": "zeus",
     "to": "atlas",
     "sources": ["H"],
-    "note": "set Atlas to hold up the sky at the ends of the earth"
+    "note": "set Atlas to hold up the sky at the ends of the earth",
+    "cite": {"H": "Theogony 507–544"}
   },
   {
     "type": "affair",
@@ -1701,28 +1734,29 @@
     "to": "danae",
     "sources": ["E", "T", "A", "L"],
     "note": "came to Danaë as a shower of gold",
-    "cite": {"L": "Hyginus, Fabulae 63"}
+    "cite": {"A": "Apollodorus 2.4.1", "L": "Hyginus, Fabulae 63"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "perseus",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 275"}
+    "cite": {"A": "Apollodorus 2.4.1", "L": "Hyginus, Fabulae 275"}
   },
   {
     "type": "parent",
     "from": "danae",
     "to": "perseus",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"T": "Pindar, Pythian 12.1–24", "L": "Hyginus, Fabulae 224"}
+    "cite": {"T": "Pindar, Pythian 12.1–24", "A": "Apollodorus 2.4.1", "L": "Hyginus, Fabulae 224"}
   },
   {
     "type": "feud",
     "from": "perseus",
     "to": "acrisius",
     "sources": ["A", "L"],
-    "note": "killed Acrisius by accident with a discus, as the oracle foretold"
+    "note": "killed Acrisius by accident with a discus, as the oracle foretold",
+    "cite": {"A": "Apollodorus 2.4.4"}
   },
   {
     "type": "feud",
@@ -1730,7 +1764,7 @@
     "to": "medusa",
     "sources": ["H", "T", "A", "L"],
     "note": "cut off Medusa’s head",
-    "cite": {"T": "Pindar, Pythian 12.1–24", "A": "Apollodorus 2.4.3"}
+    "cite": {"H": "Theogony 270–294", "T": "Pindar, Pythian 12.1–24", "A": "Apollodorus 2.4.3"}
   },
   {
     "type": "affair",
@@ -1743,7 +1777,8 @@
     "type": "marriage",
     "from": "perseus",
     "to": "andromeda",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 2.4.3"}
   },
   {
     "type": "parent",
@@ -1756,7 +1791,8 @@
     "type": "parent",
     "from": "andromeda",
     "to": "alcaeus",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.4.5"}
   },
   {
     "type": "parent",
@@ -1768,20 +1804,22 @@
     "type": "parent",
     "from": "andromeda",
     "to": "electryon",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.4.5"}
   },
   {
     "type": "parent",
     "from": "perseus",
     "to": "sthenelus",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 19.115–119"}
+    "cite": {"E": "Iliad 19.115–119", "A": "Apollodorus 2.4.5"}
   },
   {
     "type": "parent",
     "from": "andromeda",
     "to": "sthenelus",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.4.5"}
   },
   {
     "type": "parent",
@@ -1807,7 +1845,8 @@
     "type": "parent",
     "from": "nicippe",
     "to": "eurystheus",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.4.5"}
   },
   {
     "type": "parent",
@@ -1821,14 +1860,15 @@
     "from": "electryon",
     "to": "alcmene",
     "sources": ["H", "A"],
-    "cite": {"H": "Shield of Heracles 1–26"}
+    "cite": {"H": "Shield of Heracles 1–26", "A": "Apollodorus 2.4.5"}
   },
   {
     "type": "feud",
     "from": "amphitryon",
     "to": "electryon",
     "sources": ["H", "A"],
-    "note": "killed Electryon over cattle: in anger in Hesiod, by accident in Apollodorus"
+    "note": "killed Electryon over cattle: in anger in Hesiod, by accident in Apollodorus",
+    "cite": {"A": "Apollodorus 2.4.6"}
   },
   {
     "type": "marriage",
@@ -1864,7 +1904,7 @@
     "from": "amphitryon",
     "to": "iphicles",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.8.2"}
+    "cite": {"H": "Shield of Heracles 27–56", "A": "Apollodorus 1.8.2"}
   },
   {
     "type": "parent",
@@ -1878,7 +1918,8 @@
     "from": "hera",
     "to": "heracles",
     "sources": ["E", "H", "T", "A", "L"],
-    "note": "hated Heracles from before his birth, and sent him mad"
+    "note": "hated Heracles from before his birth, and sent him mad",
+    "cite": {"T": "Pindar, Nemean 1.25–49"}
   },
   {
     "type": "feud",
@@ -1886,14 +1927,14 @@
     "to": "heracles",
     "sources": ["E", "T", "A", "L"],
     "note": "set Heracles his labours",
-    "cite": {"A": "Apollodorus 2.5.11"}
+    "cite": {"A": "Apollodorus 2.5.11", "L": "Pausanias 8.18.3"}
   },
   {
     "type": "parent",
     "from": "menoeceus",
     "to": "jocasta",
     "sources": ["T", "A"],
-    "cite": {"T": "Euripides, Phoenician Women 280–300"}
+    "cite": {"T": "Euripides, Phoenician Women 280–300", "A": "Apollodorus 3.5.7"}
   },
   {
     "type": "parent",
@@ -1907,7 +1948,7 @@
     "from": "creon",
     "to": "megara",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"T": "Euripides, Heracles 138–169", "A": "Apollodorus 2.8.1", "L": "Hyginus, Fabulae 241"}
+    "cite": {"E": "Odyssey 11.265–269", "T": "Euripides, Heracles 138–169", "A": "Apollodorus 2.8.1", "L": "Hyginus, Fabulae 241"}
   },
   {
     "type": "marriage",
@@ -1929,7 +1970,7 @@
     "from": "heracles",
     "to": "deianira",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"T": "Sophocles, Trachinian Women 393–417", "A": "Apollodorus 2.7.5"}
+    "cite": {"T": "Sophocles, Trachinian Women 393–417", "A": "Apollodorus 2.7.5", "L": "Ovid, Metamorphoses 9.134–140"}
   },
   {
     "type": "feud",
@@ -1943,7 +1984,8 @@
     "from": "heracles",
     "to": "hebe",
     "sources": ["E", "H", "T", "A"],
-    "note": "after he was made a god"
+    "note": "after he was made a god",
+    "cite": {"E": "Odyssey 11.600–604", "T": "Pindar, Nemean 10.1–24", "A": "Apollodorus 2.7.7"}
   },
   {
     "type": "feud",
@@ -1958,7 +2000,7 @@
     "from": "helios",
     "to": "circe",
     "sources": ["E", "H", "A", "L"],
-    "cite": {"H": "Theogony 1011–1016", "A": "Apollodorus, Epitome 7.14", "L": "Hyginus, Fabulae 199"}
+    "cite": {"E": "Odyssey 10.135–139", "H": "Theogony 1011–1016", "A": "Apollodorus, Epitome 7.14", "L": "Hyginus, Fabulae 199"}
   },
   {
     "type": "parent",
@@ -1972,7 +2014,7 @@
     "from": "helios",
     "to": "aeetes",
     "sources": ["E", "H", "T", "A"],
-    "cite": {"H": "Theogony 956–962", "A": "Apollodorus 1.9.1"}
+    "cite": {"E": "Odyssey 10.135–139", "H": "Theogony 956–962", "A": "Apollodorus 1.9.1"}
   },
   {
     "type": "parent",
@@ -1985,19 +2027,22 @@
     "type": "parent",
     "from": "aeolus",
     "to": "salmoneus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Catalogue of Women fr. 4 (Evelyn-White)", "A": "Apollodorus 1.7.3"}
   },
   {
     "type": "parent",
     "from": "aeolus",
     "to": "cretheus",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"H": "Catalogue of Women fr. 4 (Evelyn-White)", "A": "Apollodorus 1.7.3"}
   },
   {
     "type": "parent",
     "from": "aeolus",
     "to": "athamas",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Catalogue of Women fr. 4 (Evelyn-White)", "A": "Apollodorus 1.9.1"}
   },
   {
     "type": "feud",
@@ -2011,7 +2056,7 @@
     "from": "salmoneus",
     "to": "tyro",
     "sources": ["E", "H", "A"],
-    "cite": {"H": "Catalogue of Women fr. 13 (Evelyn-White)"}
+    "cite": {"E": "Odyssey 11.235–239", "H": "Catalogue of Women fr. 13 (Evelyn-White)"}
   },
   {
     "type": "affair",
@@ -2025,32 +2070,35 @@
     "from": "cretheus",
     "to": "tyro",
     "sources": ["E", "H", "A"],
-    "cite": {"H": "Catalogue of Women fr. 13 (Evelyn-White)"}
+    "cite": {"E": "Odyssey 11.235–239", "H": "Catalogue of Women fr. 13 (Evelyn-White)"}
   },
   {
     "type": "parent",
     "from": "poseidon",
     "to": "pelias",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"E": "Odyssey 11.250–254", "H": "Catalogue of Women fr. 13 (Evelyn-White)"}
   },
   {
     "type": "parent",
     "from": "tyro",
     "to": "pelias",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"H": "Catalogue of Women fr. 13 (Evelyn-White)"}
   },
   {
     "type": "parent",
     "from": "cretheus",
     "to": "aeson",
     "sources": ["E", "H", "A"],
-    "cite": {"A": "Apollodorus 1.9.16"}
+    "cite": {"E": "Odyssey 11.255–259", "H": "Catalogue of Women fr. 13 (Evelyn-White)", "A": "Apollodorus 1.9.16"}
   },
   {
     "type": "parent",
     "from": "tyro",
     "to": "aeson",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"H": "Catalogue of Women fr. 13 (Evelyn-White)"}
   },
   {
     "type": "feud",
@@ -2064,20 +2112,21 @@
     "from": "cadmus",
     "to": "ino",
     "sources": ["E", "H", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 224"}
+    "cite": {"H": "Theogony 975–978", "L": "Hyginus, Fabulae 224"}
   },
   {
     "type": "parent",
     "from": "harmonia",
     "to": "ino",
     "sources": ["H", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 2"}
+    "cite": {"H": "Theogony 975–978", "L": "Hyginus, Fabulae 2"}
   },
   {
     "type": "marriage",
     "from": "athamas",
     "to": "nephele",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 1.9.1"}
   },
   {
     "type": "marriage",
@@ -2097,7 +2146,8 @@
     "type": "parent",
     "from": "nephele",
     "to": "phrixus",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 1.9.1"}
   },
   {
     "type": "parent",
@@ -2110,7 +2160,8 @@
     "type": "parent",
     "from": "nephele",
     "to": "helle",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 1.9.1"}
   },
   {
     "type": "feud",
@@ -2125,7 +2176,7 @@
     "from": "aeson",
     "to": "jason",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"H": "Theogony 993–999", "A": "Apollodorus 1.8.2", "L": "Hyginus, Fabulae 173"}
+    "cite": {"H": "Theogony 993–999", "T": "Pindar, Pythian 4.75–124", "A": "Apollodorus 1.8.2", "L": "Hyginus, Fabulae 173"}
   },
   {
     "type": "feud",
@@ -2133,21 +2184,22 @@
     "to": "jason",
     "sources": ["H", "T", "A", "L"],
     "note": "sent Jason for the Golden Fleece",
-    "cite": {"A": "Apollodorus 1.9.23"}
+    "cite": {"A": "Apollodorus 1.9.23", "L": "Hyginus, Fabulae 12"}
   },
   {
     "type": "feud",
     "from": "aeetes",
     "to": "jason",
     "sources": ["T", "A", "L"],
-    "note": "set Jason the fire-breathing bulls and the dragon’s teeth"
+    "note": "set Jason the fire-breathing bulls and the dragon’s teeth",
+    "cite": {"A": "Apollodorus 1.9.23", "L": "Hyginus, Fabulae 22"}
   },
   {
     "type": "parent",
     "from": "aeetes",
     "to": "medea",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"H": "Theogony 993–999", "T": "Pindar, Pythian 4.1–24", "L": "Hyginus, Fabulae 239"}
+    "cite": {"H": "Theogony 993–999", "T": "Pindar, Pythian 4.1–24", "A": "Apollodorus 1.9.23", "L": "Hyginus, Fabulae 239"}
   },
   {
     "type": "parent",
@@ -2167,7 +2219,7 @@
     "from": "jason",
     "to": "medea",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"A": "Apollodorus 1.9.28"}
+    "cite": {"T": "Euripides, Medea 590–599", "A": "Apollodorus 1.9.28"}
   },
   {
     "type": "feud",
@@ -2182,27 +2234,29 @@
     "to": "pelias",
     "sources": ["T", "A", "L"],
     "note": "tricked Pelias’s daughters into killing him",
-    "cite": {"L": "Hyginus, Fabulae 24"}
+    "cite": {"A": "Apollodorus 1.9.27", "L": "Hyginus, Fabulae 24"}
   },
   {
     "type": "parent",
     "from": "creon-corinth",
     "to": "glauce",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus 1.9.28", "L": "Hyginus, Fabulae 25"}
   },
   {
     "type": "marriage",
     "from": "jason",
     "to": "glauce",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus 1.9.28"}
+    "cite": {"A": "Apollodorus 1.9.28", "L": "Hyginus, Fabulae 25"}
   },
   {
     "type": "feud",
     "from": "medea",
     "to": "glauce",
     "sources": ["T", "A", "L"],
-    "note": "burned Glauce to death with a poisoned robe and crown"
+    "note": "burned Glauce to death with a poisoned robe and crown",
+    "cite": {"A": "Apollodorus 1.9.28", "L": "Hyginus, Fabulae 25"}
   },
   {
     "type": "feud",
@@ -2210,7 +2264,7 @@
     "to": "creon-corinth",
     "sources": ["T", "A", "L"],
     "note": "burned Creon with his daughter",
-    "cite": {"A": "Apollodorus 1.9.28"}
+    "cite": {"T": "Euripides, Medea 1120–1129", "A": "Apollodorus 1.9.28", "L": "Hyginus, Fabulae 25"}
   },
   {
     "type": "affair",
@@ -2232,7 +2286,7 @@
     "from": "zeus",
     "to": "dardanus",
     "sources": ["E", "H", "A", "L"],
-    "cite": {"E": "Iliad 20.215–219", "L": "Hyginus, Fabulae 275"}
+    "cite": {"E": "Iliad 20.215–219", "A": "Apollodorus 3.12.1", "L": "Hyginus, Fabulae 275"}
   },
   {
     "type": "parent",
@@ -2253,28 +2307,28 @@
     "from": "erichthonius",
     "to": "tros",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 20.230–234"}
+    "cite": {"E": "Iliad 20.230–234", "A": "Apollodorus 3.12.2"}
   },
   {
     "type": "parent",
     "from": "tros",
     "to": "ilus",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 20.230–234"}
+    "cite": {"E": "Iliad 20.230–234", "A": "Apollodorus 3.12.2"}
   },
   {
     "type": "parent",
     "from": "tros",
     "to": "assaracus",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 20.230–234"}
+    "cite": {"E": "Iliad 20.230–234", "A": "Apollodorus 3.12.2"}
   },
   {
     "type": "parent",
     "from": "tros",
     "to": "ganymede",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 20.230–234"}
+    "cite": {"E": "Iliad 20.230–234", "A": "Apollodorus 3.12.2"}
   },
   {
     "type": "affair",
@@ -2282,27 +2336,28 @@
     "to": "ganymede",
     "sources": ["E", "T", "A", "L"],
     "note": "carried Ganymede off to Olympus to pour his wine",
-    "cite": {"E": "Homeric Hymn to Aphrodite 202–217", "A": "Apollodorus 2.5.9", "L": "Hyginus, Fabulae 271"}
+    "cite": {"E": "Homeric Hymn to Aphrodite 202–217", "T": "Euripides, Cyclops 585–628", "A": "Apollodorus 2.5.9", "L": "Hyginus, Fabulae 271"}
   },
   {
     "type": "parent",
     "from": "ilus",
     "to": "laomedon",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 20.235–239"}
+    "cite": {"E": "Iliad 20.235–239", "A": "Apollodorus 3.12.3"}
   },
   {
     "type": "parent",
     "from": "assaracus",
     "to": "capys",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 20.235–239"}
+    "cite": {"E": "Iliad 20.235–239", "A": "Apollodorus 3.12.2"}
   },
   {
     "type": "parent",
     "from": "capys",
     "to": "anchises",
-    "sources": ["E", "A"]
+    "sources": ["E", "A"],
+    "cite": {"E": "Iliad 20.235–239", "A": "Apollodorus 3.12.2"}
   },
   {
     "type": "parent",
@@ -2316,7 +2371,7 @@
     "from": "laomedon",
     "to": "tithonus",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 20.235–239"}
+    "cite": {"E": "Iliad 20.235–239", "A": "Apollodorus 3.12.3"}
   },
   {
     "type": "parent",
@@ -2330,14 +2385,16 @@
     "from": "laomedon",
     "to": "poseidon",
     "sources": ["E", "A", "L"],
-    "note": "refused Poseidon his wages for the walls of Troy"
+    "note": "refused Poseidon his wages for the walls of Troy",
+    "cite": {"A": "Apollodorus 2.5.9", "L": "Hyginus, Fabulae 89"}
   },
   {
     "type": "feud",
     "from": "laomedon",
     "to": "apollo",
     "sources": ["E", "A", "L"],
-    "note": "refused Apollo his wages for a year’s labour"
+    "note": "refused Apollo his wages for a year’s labour",
+    "cite": {"A": "Apollodorus 2.5.9", "L": "Hyginus, Fabulae 89"}
   },
   {
     "type": "feud",
@@ -2359,7 +2416,7 @@
     "to": "anchises",
     "sources": ["E", "H", "A", "L"],
     "note": "came to Anchises on Mount Ida in the shape of a mortal girl",
-    "cite": {"H": "Theogony 1008–1010", "A": "Apollodorus 3.12.2", "L": "Hyginus, Fabulae 94"}
+    "cite": {"E": "Homeric Hymn to Aphrodite 53–74", "H": "Theogony 1008–1010", "A": "Apollodorus 3.12.2", "L": "Hyginus, Fabulae 94"}
   },
   {
     "type": "parent",
@@ -2387,14 +2444,14 @@
     "from": "priam",
     "to": "hector",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"E": "Iliad 14.375–379", "L": "Pausanias 9.18.5"}
+    "cite": {"E": "Iliad 14.375–379", "A": "Apollodorus 3.12.5", "L": "Pausanias 9.18.5"}
   },
   {
     "type": "parent",
     "from": "hecuba",
     "to": "hector",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"L": "Ovid, Metamorphoses 11.749–763"}
+    "cite": {"T": "Euripides, Trojan Women 608–623", "A": "Apollodorus 3.12.5", "L": "Ovid, Metamorphoses 11.749–763"}
   },
   {
     "type": "parent",
@@ -2408,21 +2465,21 @@
     "from": "hecuba",
     "to": "paris",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 91"}
+    "cite": {"A": "Apollodorus 3.12.5", "L": "Hyginus, Fabulae 91"}
   },
   {
     "type": "parent",
     "from": "priam",
     "to": "cassandra",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 128"}
+    "cite": {"E": "Iliad 13.365–369", "T": "Pindar, Pythian 11.1–24", "L": "Hyginus, Fabulae 128"}
   },
   {
     "type": "parent",
     "from": "hecuba",
     "to": "cassandra",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus 3.12.5", "L": "Hyginus, Fabulae 93"}
+    "cite": {"T": "Euripides, Trojan Women 244–258", "A": "Apollodorus 3.12.5", "L": "Hyginus, Fabulae 93"}
   },
   {
     "type": "parent",
@@ -2436,13 +2493,14 @@
     "from": "hecuba",
     "to": "polyxena",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus 3.12.5"}
+    "cite": {"T": "Euripides, Trojan Women 259–273", "A": "Apollodorus 3.12.5"}
   },
   {
     "type": "parent",
     "from": "priam",
     "to": "troilus",
-    "sources": ["E", "A"]
+    "sources": ["E", "A"],
+    "cite": {"A": "Apollodorus 3.12.5"}
   },
   {
     "type": "parent",
@@ -2456,7 +2514,7 @@
     "from": "priam",
     "to": "deiphobus",
     "sources": ["E", "A"],
-    "cite": {"E": "Iliad 13.155–159"}
+    "cite": {"E": "Iliad 13.155–159", "A": "Apollodorus 3.12.5"}
   },
   {
     "type": "parent",
@@ -2471,7 +2529,7 @@
     "to": "cassandra",
     "sources": ["T", "A", "L"],
     "note": "made sure no one would ever believe Cassandra’s prophecies",
-    "cite": {"A": "Apollodorus 3.12.5"}
+    "cite": {"A": "Apollodorus 3.12.5", "L": "Hyginus, Fabulae 93"}
   },
   {
     "type": "marriage",
@@ -2484,7 +2542,8 @@
     "type": "parent",
     "from": "hector",
     "to": "astyanax",
-    "sources": ["E", "T", "A"]
+    "sources": ["E", "T", "A"],
+    "cite": {"T": "Euripides, Andromache 1–15"}
   },
   {
     "type": "parent",
@@ -2505,7 +2564,8 @@
     "from": "menelaus",
     "to": "deiphobus",
     "sources": ["A"],
-    "note": "killed Deiphobus on the night Troy fell"
+    "note": "killed Deiphobus on the night Troy fell",
+    "cite": {"A": "Apollodorus, Epitome 5.22"}
   },
   {
     "type": "parent",
@@ -2526,21 +2586,21 @@
     "from": "peleus",
     "to": "thetis",
     "sources": ["E", "H", "T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 54"}
+    "cite": {"T": "Euripides, Andromache 1231–1262", "A": "Apollodorus 3.13.5", "L": "Hyginus, Fabulae 54"}
   },
   {
     "type": "parent",
     "from": "peleus",
     "to": "achilles",
     "sources": ["E", "H", "T", "A", "L"],
-    "cite": {"E": "Iliad 16.265–269", "T": "Sophocles, Philoctetes 320–359", "A": "Apollodorus, Epitome 3.14", "L": "Hyginus, Fabulae 270"}
+    "cite": {"E": "Iliad 16.265–269", "H": "Catalogue of Women fr. 68 (Evelyn-White)", "T": "Sophocles, Philoctetes 320–359", "A": "Apollodorus, Epitome 3.14", "L": "Hyginus, Fabulae 270"}
   },
   {
     "type": "parent",
     "from": "thetis",
     "to": "achilles",
     "sources": ["E", "H", "T", "A", "L"],
-    "cite": {"E": "Iliad 16.860–864", "T": "Euripides, Electra 432–451", "A": "Apollodorus, Epitome 3.14", "L": "Hyginus, Fabulae 270"}
+    "cite": {"E": "Iliad 16.860–864", "H": "Theogony 1000–1007", "T": "Euripides, Electra 432–451", "A": "Apollodorus, Epitome 3.14", "L": "Hyginus, Fabulae 270"}
   },
   {
     "type": "feud",
@@ -2562,7 +2622,7 @@
     "to": "hector",
     "sources": ["E", "T", "A", "L"],
     "note": "killed Hector, and dragged his body behind his chariot",
-    "cite": {"A": "Apollodorus, Epitome 4.7"}
+    "cite": {"E": "Iliad 24.20–24", "A": "Apollodorus, Epitome 4.7", "L": "Hyginus, Fabulae 112"}
   },
   {
     "type": "feud",
@@ -2570,14 +2630,14 @@
     "to": "achilles",
     "sources": ["E", "T", "A", "L"],
     "note": "shot Achilles with an arrow, guided by Apollo",
-    "cite": {"A": "Apollodorus, Epitome 5.3", "L": "Hyginus, Fabulae 107"}
+    "cite": {"T": "Euripides, Hecuba 379–390", "A": "Apollodorus, Epitome 5.3", "L": "Hyginus, Fabulae 107"}
   },
   {
     "type": "parent",
     "from": "achilles",
     "to": "neoptolemus",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"T": "Sophocles, Philoctetes 1–19", "L": "Hyginus, Fabulae 97"}
+    "cite": {"T": "Sophocles, Philoctetes 1–19", "A": "Apollodorus 3.13.8", "L": "Hyginus, Fabulae 97"}
   },
   {
     "type": "feud",
@@ -2656,7 +2716,8 @@
     "from": "iolaus",
     "to": "megara",
     "sources": ["A", "L"],
-    "note": "after Heracles gave her to him"
+    "note": "after Heracles gave her to him",
+    "cite": {"A": "Apollodorus 2.6.1"}
   },
   {
     "type": "parent",
@@ -2685,14 +2746,14 @@
     "from": "heracles",
     "to": "hyllus",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"H": "Catalogue of Women fr. 98 (Evelyn-White)", "L": "Hyginus, Fabulae 244"}
+    "cite": {"H": "Catalogue of Women fr. 98 (Evelyn-White)", "T": "Sophocles, Trachinian Women 962–1012", "A": "Apollodorus 2.7.7", "L": "Hyginus, Fabulae 244"}
   },
   {
     "type": "parent",
     "from": "deianira",
     "to": "hyllus",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"H": "Catalogue of Women fr. 98 (Evelyn-White)"}
+    "cite": {"H": "Catalogue of Women fr. 98 (Evelyn-White)", "T": "Sophocles, Trachinian Women 61–93", "A": "Apollodorus 2.8.1"}
   },
   {
     "type": "marriage",
@@ -2729,7 +2790,7 @@
     "to": "telephus",
     "sources": ["E", "A", "L"],
     "note": "wounded Telephus, and healed him with rust from the same spear",
-    "cite": {"L": "Hyginus, Fabulae 101"}
+    "cite": {"A": "Apollodorus, Epitome 3.17", "L": "Hyginus, Fabulae 101"}
   },
   {
     "type": "parent",
@@ -2750,7 +2811,8 @@
     "from": "hyllus",
     "to": "eurystheus",
     "sources": ["A"],
-    "note": "killed Eurystheus, and brought his head to Alcmene"
+    "note": "killed Eurystheus, and brought his head to Alcmene",
+    "cite": {"A": "Apollodorus 2.8.1"}
   },
   {
     "type": "feud",
@@ -2791,7 +2853,7 @@
     "from": "erichthonius-athens",
     "to": "pandion",
     "sources": ["A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 48"}
+    "cite": {"A": "Apollodorus 3.14.6", "L": "Hyginus, Fabulae 48"}
   },
   {
     "type": "parent",
@@ -2832,13 +2894,15 @@
     "type": "parent",
     "from": "tereus",
     "to": "itys",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus 3.14.8", "L": "Hyginus, Fabulae 239"}
   },
   {
     "type": "parent",
     "from": "procne",
     "to": "itys",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus 3.14.8", "L": "Ovid, Metamorphoses 6.619–635"}
   },
   {
     "type": "feud",
@@ -2846,7 +2910,7 @@
     "to": "itys",
     "sources": ["T", "A", "L"],
     "note": "killed her son Itys, and served him to Tereus",
-    "cite": {"A": "Apollodorus 3.14.8"}
+    "cite": {"A": "Apollodorus 3.14.8", "L": "Ovid, Metamorphoses 6.647–666"}
   },
   {
     "type": "parent",
@@ -2867,7 +2931,7 @@
     "from": "cecrops-ii",
     "to": "pandion-ii",
     "sources": ["A", "L"],
-    "cite": {"L": "Pausanias 1.5.3"}
+    "cite": {"A": "Apollodorus 3.15.5", "L": "Pausanias 1.5.3"}
   },
   {
     "type": "parent",
@@ -2888,7 +2952,8 @@
     "from": "poseidon",
     "to": "aethra",
     "sources": ["A", "L"],
-    "note": "lay with Aethra the same night as Aegeus"
+    "note": "lay with Aethra the same night as Aegeus",
+    "cite": {"L": "Pausanias 2.33.1"}
   },
   {
     "type": "parent",
@@ -2902,14 +2967,14 @@
     "from": "poseidon",
     "to": "theseus",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 38"}
+    "cite": {"T": "Euripides, Hippolytus 1165–1169", "L": "Hyginus, Fabulae 38"}
   },
   {
     "type": "parent",
     "from": "aethra",
     "to": "theseus",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus, Epitome 5.22", "L": "Hyginus, Fabulae 37"}
+    "cite": {"T": "Euripides, Heracleidae 193–217", "A": "Apollodorus, Epitome 5.22", "L": "Hyginus, Fabulae 37"}
   },
   {
     "type": "marriage",
@@ -2925,7 +2990,7 @@
     "to": "theseus",
     "sources": ["A", "L"],
     "note": "tried to poison Theseus at his father’s table",
-    "cite": {"A": "Apollodorus, Epitome 1.6"}
+    "cite": {"A": "Apollodorus, Epitome 1.6", "L": "Ovid, Metamorphoses 7.404–424"}
   },
   {
     "type": "feud",
@@ -2940,21 +3005,22 @@
     "from": "zeus",
     "to": "minos",
     "sources": ["E", "H", "A", "L"],
-    "cite": {"E": "Odyssey 11.565–569", "A": "Apollodorus 3.1.1", "L": "Hyginus, Fabulae 41"}
+    "cite": {"E": "Odyssey 11.565–569", "H": "Catalogue of Women fr. 19 (Evelyn-White)", "A": "Apollodorus 3.1.1", "L": "Hyginus, Fabulae 41"}
   },
   {
     "type": "parent",
     "from": "europa",
     "to": "minos",
     "sources": ["E", "H", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 41"}
+    "cite": {"H": "Catalogue of Women fr. 19 (Evelyn-White)", "A": "Apollodorus 3.1.1", "L": "Hyginus, Fabulae 41"}
   },
   {
     "type": "affair",
     "from": "zeus",
     "to": "europa",
     "sources": ["E", "H", "A", "L"],
-    "note": "carried Europa over the sea to Crete in the shape of a bull"
+    "note": "carried Europa over the sea to Crete in the shape of a bull",
+    "cite": {"A": "Apollodorus 3.1.1", "L": "Hyginus, Fabulae 178"}
   },
   {
     "type": "parent",
@@ -2990,7 +3056,8 @@
     "from": "pasiphae",
     "to": "minotaur",
     "sources": ["T", "A", "L"],
-    "note": "by the bull from the sea"
+    "note": "by the bull from the sea",
+    "cite": {"A": "Apollodorus 3.1.4"}
   },
   {
     "type": "parent",
@@ -3003,7 +3070,8 @@
     "type": "parent",
     "from": "pasiphae",
     "to": "androgeus",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.1.2"}
   },
   {
     "type": "parent",
@@ -3017,7 +3085,7 @@
     "from": "pasiphae",
     "to": "ariadne",
     "sources": ["A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 224"}
+    "cite": {"A": "Apollodorus 3.1.2", "L": "Hyginus, Fabulae 224"}
   },
   {
     "type": "parent",
@@ -3030,14 +3098,16 @@
     "type": "parent",
     "from": "pasiphae",
     "to": "phaedra",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus 3.1.2"}
   },
   {
     "type": "feud",
     "from": "aegeus",
     "to": "androgeus",
     "sources": ["A"],
-    "note": "sent Androgeus against the bull of Marathon, which killed him"
+    "note": "sent Androgeus against the bull of Marathon, which killed him",
+    "cite": {"A": "Apollodorus 3.15.7"}
   },
   {
     "type": "feud",
@@ -3045,7 +3115,7 @@
     "to": "aegeus",
     "sources": ["A", "L"],
     "note": "made war on Athens for his son’s death, and demanded its children for the Minotaur",
-    "cite": {"L": "Ovid, Metamorphoses 7.453–468"}
+    "cite": {"A": "Apollodorus 3.15.7", "L": "Ovid, Metamorphoses 7.453–468"}
   },
   {
     "type": "feud",
@@ -3053,7 +3123,7 @@
     "to": "minotaur",
     "sources": ["A", "L"],
     "note": "killed the Minotaur in the Labyrinth",
-    "cite": {"L": "Hyginus, Fabulae 40"}
+    "cite": {"A": "Apollodorus, Epitome 1.9", "L": "Hyginus, Fabulae 40"}
   },
   {
     "type": "affair",
@@ -3061,14 +3131,14 @@
     "to": "ariadne",
     "sources": ["E", "H", "A", "L"],
     "note": "carried Ariadne off from Crete, and did not keep her",
-    "cite": {"H": "Catalogue of Women fr. 76 (Evelyn-White)", "L": "Hyginus, Fabulae 42"}
+    "cite": {"H": "Catalogue of Women fr. 76 (Evelyn-White)", "A": "Apollodorus, Epitome 1.8", "L": "Hyginus, Fabulae 42"}
   },
   {
     "type": "marriage",
     "from": "dionysus",
     "to": "ariadne",
     "sources": ["H", "A", "L"],
-    "cite": {"L": "Hyginus, Astronomica 2.5"}
+    "cite": {"H": "Theogony 947–949", "L": "Hyginus, Astronomica 2.5"}
   },
   {
     "type": "marriage",
@@ -3090,14 +3160,14 @@
     "from": "theseus",
     "to": "hippolytus",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 251"}
+    "cite": {"T": "Euripides, Hippolytus 1455–1459", "A": "Apollodorus, Epitome 1.18", "L": "Hyginus, Fabulae 251"}
   },
   {
     "type": "parent",
     "from": "antiope",
     "to": "hippolytus",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 250"}
+    "cite": {"A": "Apollodorus, Epitome 1.16", "L": "Hyginus, Fabulae 250"}
   },
   {
     "type": "feud",
@@ -3113,7 +3183,7 @@
     "to": "hippolytus",
     "sources": ["T", "A", "L"],
     "note": "cursed his son Hippolytus, and Poseidon’s bull killed him",
-    "cite": {"A": "Apollodorus, Epitome 1.19", "L": "Pausanias 2.27.4"}
+    "cite": {"T": "Euripides, Hippolytus 1410–1414", "A": "Apollodorus, Epitome 1.19", "L": "Pausanias 2.27.4"}
   },
   {
     "type": "parent",
@@ -3126,7 +3196,8 @@
     "type": "parent",
     "from": "phaedra",
     "to": "demophon",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus, Epitome 1.18"}
   },
   {
     "type": "parent",
@@ -3155,7 +3226,7 @@
     "from": "aeolus",
     "to": "sisyphus",
     "sources": ["E", "H", "A", "L"],
-    "cite": {"E": "Iliad 6.150–154", "A": "Apollodorus 1.9.3", "L": "Hyginus, Fabulae 239"}
+    "cite": {"E": "Iliad 6.150–154", "H": "Catalogue of Women fr. 4 (Evelyn-White)", "A": "Apollodorus 1.9.3", "L": "Hyginus, Fabulae 239"}
   },
   {
     "type": "parent",
@@ -3177,7 +3248,8 @@
     "from": "sisyphus",
     "to": "anticleia",
     "sources": ["T", "L"],
-    "note": "lay with Anticleia while he was getting his cattle back from her father"
+    "note": "lay with Anticleia while he was getting his cattle back from her father",
+    "cite": {"L": "Hyginus, Fabulae 201"}
   },
   {
     "type": "parent",
@@ -3191,7 +3263,8 @@
     "from": "zeus",
     "to": "arcesius",
     "sources": ["L"],
-    "note": "Ovid’s version"
+    "note": "Ovid’s version",
+    "cite": {"L": "Ovid, Metamorphoses 13.140–161"}
   },
   {
     "type": "parent",
@@ -3204,7 +3277,8 @@
     "type": "marriage",
     "from": "laertes",
     "to": "anticleia",
-    "sources": ["E", "A", "L"]
+    "sources": ["E", "A", "L"],
+    "cite": {"L": "Hyginus, Fabulae 201"}
   },
   {
     "type": "parent",
@@ -3226,14 +3300,14 @@
     "to": "odysseus",
     "sources": ["T", "L"],
     "note": "as his enemies told it",
-    "cite": {"T": "Sophocles, Philoctetes 400–419"}
+    "cite": {"T": "Sophocles, Philoctetes 400–419", "L": "Hyginus, Fabulae 201"}
   },
   {
     "type": "parent",
     "from": "icarius",
     "to": "penelope",
     "sources": ["E", "A", "L"],
-    "cite": {"A": "Apollodorus 3.10.6", "L": "Hyginus, Fabulae 256"}
+    "cite": {"E": "Odyssey 16.435–439", "A": "Apollodorus 3.10.6", "L": "Hyginus, Fabulae 256"}
   },
   {
     "type": "marriage",
@@ -3247,13 +3321,14 @@
     "from": "odysseus",
     "to": "telemachus",
     "sources": ["E", "A", "L"],
-    "cite": {"E": "Odyssey 3.395–399"}
+    "cite": {"E": "Odyssey 3.395–399", "L": "Hyginus, Fabulae 125"}
   },
   {
     "type": "parent",
     "from": "penelope",
     "to": "telemachus",
-    "sources": ["E", "A", "L"]
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 17.550–554"}
   },
   {
     "type": "affair",
@@ -3275,7 +3350,7 @@
     "from": "circe",
     "to": "telegonus",
     "sources": ["H", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 127"}
+    "cite": {"H": "Theogony 1011–1016", "L": "Hyginus, Fabulae 127"}
   },
   {
     "type": "parent",
@@ -3298,14 +3373,15 @@
     "to": "polyphemus",
     "sources": ["E", "T", "A", "L"],
     "note": "by the sea-nymph Thoosa",
-    "cite": {"A": "Apollodorus, Epitome 7.4", "L": "Hyginus, Fabulae 125"}
+    "cite": {"E": "Odyssey 1.70–74", "A": "Apollodorus, Epitome 7.4", "L": "Hyginus, Fabulae 125"}
   },
   {
     "type": "feud",
     "from": "odysseus",
     "to": "polyphemus",
     "sources": ["E", "T", "A", "L"],
-    "note": "blinded Polyphemus with a burning stake, and got away under his sheep"
+    "note": "blinded Polyphemus with a burning stake, and got away under his sheep",
+    "cite": {"A": "Apollodorus, Epitome 7.7", "L": "Hyginus, Fabulae 125"}
   },
   {
     "type": "feud",
@@ -3326,7 +3402,8 @@
     "from": "poseidon",
     "to": "odysseus",
     "sources": ["E", "A"],
-    "note": "kept Odysseus wandering for years, for his son’s eye"
+    "note": "kept Odysseus wandering for years, for his son’s eye",
+    "cite": {"A": "Apollodorus, Epitome 7.24"}
   },
   {
     "type": "transform",
@@ -3382,7 +3459,8 @@
     "from": "palamedes",
     "to": "odysseus",
     "sources": ["E", "A", "L"],
-    "note": "exposed Odysseus’ feigned madness by threatening his baby son"
+    "note": "exposed Odysseus’ feigned madness by threatening his baby son",
+    "cite": {"A": "Apollodorus, Epitome 3.7", "L": "Ovid, Metamorphoses 13.43–62"}
   },
   {
     "type": "feud",
@@ -3420,7 +3498,7 @@
     "to": "ajax",
     "sources": ["E", "T", "A", "L"],
     "note": "won the arms of Achilles from Ajax, who killed himself",
-    "cite": {"T": "Sophocles, Philoctetes 1360–1379"}
+    "cite": {"T": "Sophocles, Philoctetes 1360–1379", "L": "Hyginus, Fabulae 107"}
   },
   {
     "type": "feud",
@@ -3450,7 +3528,7 @@
     "to": "penelope",
     "sources": ["A", "L"],
     "note": "after Odysseus’ death",
-    "cite": {"L": "Hyginus, Fabulae 127"}
+    "cite": {"A": "Apollodorus, Epitome 7.37", "L": "Hyginus, Fabulae 127"}
   },
   {
     "type": "marriage",
@@ -3465,14 +3543,14 @@
     "from": "oeneus",
     "to": "deianira",
     "sources": ["H", "T", "A", "L"],
-    "cite": {"T": "Sophocles, Trachinian Women 627–668", "A": "Apollodorus 2.7.5", "L": "Hyginus, Fabulae 243"}
+    "cite": {"H": "Catalogue of Women fr. 98 (Evelyn-White)", "T": "Sophocles, Trachinian Women 627–668", "A": "Apollodorus 2.7.5", "L": "Hyginus, Fabulae 243"}
   },
   {
     "type": "parent",
     "from": "althaea",
     "to": "deianira",
     "sources": ["H", "A", "L"],
-    "cite": {"A": "Apollodorus 1.8.1"}
+    "cite": {"H": "Catalogue of Women fr. 98 (Evelyn-White)", "A": "Apollodorus 1.8.1"}
   },
   {
     "type": "parent",
@@ -3536,20 +3614,21 @@
     "from": "adrastus",
     "to": "argia",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 71"}
+    "cite": {"A": "Apollodorus 1.9.13", "L": "Hyginus, Fabulae 71"}
   },
   {
     "type": "parent",
     "from": "adrastus",
     "to": "deipyle",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus 1.9.13"}
   },
   {
     "type": "marriage",
     "from": "polynices",
     "to": "argia",
     "sources": ["T", "A", "L"],
-    "cite": {"A": "Apollodorus 3.6.1"}
+    "cite": {"A": "Apollodorus 3.6.1", "L": "Hyginus, Fabulae 70"}
   },
   {
     "type": "marriage",
@@ -3569,7 +3648,8 @@
     "type": "parent",
     "from": "argia",
     "to": "thersander",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"L": "Hyginus, Fabulae 69"}
   },
   {
     "type": "parent",
@@ -3604,7 +3684,7 @@
     "from": "eriphyle",
     "to": "alcmaeon",
     "sources": ["A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 71"}
+    "cite": {"A": "Apollodorus 3.7.5", "L": "Hyginus, Fabulae 71"}
   },
   {
     "type": "feud",
@@ -3612,7 +3692,7 @@
     "to": "amphiaraus",
     "sources": ["E", "T", "A", "L"],
     "note": "took a necklace to send her husband to his death",
-    "cite": {"A": "Apollodorus 3.6.2"}
+    "cite": {"A": "Apollodorus 3.6.2", "L": "Pausanias 5.17.7"}
   },
   {
     "type": "feud",
@@ -3642,7 +3722,8 @@
     "from": "athena",
     "to": "tydeus",
     "sources": ["A"],
-    "note": "turned away the immortality she had brought Tydeus, when she saw him eat his enemy’s brains"
+    "note": "turned away the immortality she had brought Tydeus, when she saw him eat his enemy’s brains",
+    "cite": {"A": "Apollodorus 3.6.8"}
   },
   {
     "type": "feud",
@@ -3673,20 +3754,22 @@
     "to": "tiresias",
     "sources": ["A", "L"],
     "note": "blinded Tiresias for saying women take more pleasure in love",
-    "cite": {"A": "Apollodorus 3.6.7"}
+    "cite": {"A": "Apollodorus 3.6.7", "L": "Hyginus, Fabulae 75"}
   },
   {
     "type": "feud",
     "from": "athena",
     "to": "tiresias",
     "sources": ["A"],
-    "note": "blinded Tiresias when he saw her bathing"
+    "note": "blinded Tiresias when he saw her bathing",
+    "cite": {"A": "Apollodorus 3.6.7"}
   },
   {
     "type": "parent",
     "from": "creon",
     "to": "haemon",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"T": "Sophocles, Antigone 572–630", "A": "Apollodorus 3.5.8", "L": "Hyginus, Fabulae 72"}
   },
   {
     "type": "marriage",
@@ -3701,14 +3784,15 @@
     "from": "theseus",
     "to": "creon",
     "sources": ["T", "A", "L"],
-    "note": "made war on Creon to bury the Argive dead"
+    "note": "made war on Creon to bury the Argive dead",
+    "cite": {"A": "Apollodorus 3.7.1", "L": "Pausanias 1.39.2"}
   },
   {
     "type": "parent",
     "from": "sisyphus",
     "to": "glaucus-corinth",
     "sources": ["E", "A"],
-    "cite": {"A": "Apollodorus 2.3.1"}
+    "cite": {"E": "Iliad 6.150–154", "A": "Apollodorus 2.3.1"}
   },
   {
     "type": "parent",
@@ -3722,19 +3806,21 @@
     "from": "poseidon",
     "to": "bellerophon",
     "sources": ["H", "L"],
-    "cite": {"H": "Catalogue of Women fr. 7 (Evelyn-White)"}
+    "cite": {"H": "Catalogue of Women fr. 7 (Evelyn-White)", "L": "Hyginus, Fabulae 157"}
   },
   {
     "type": "parent",
     "from": "iobates",
     "to": "stheneboea",
-    "sources": ["E", "T", "A"]
+    "sources": ["E", "T", "A"],
+    "cite": {"A": "Apollodorus 2.2.1"}
   },
   {
     "type": "parent",
     "from": "iobates",
     "to": "philonoe",
-    "sources": ["E", "A"]
+    "sources": ["E", "A"],
+    "cite": {"A": "Apollodorus 2.3.2"}
   },
   {
     "type": "marriage",
@@ -3748,7 +3834,8 @@
     "from": "stheneboea",
     "to": "bellerophon",
     "sources": ["E", "T", "A", "L"],
-    "note": "accused Bellerophon of trying to seduce her, when he had refused her"
+    "note": "accused Bellerophon of trying to seduce her, when he had refused her",
+    "cite": {"L": "Hyginus, Fabulae 57"}
   },
   {
     "type": "feud",
@@ -3763,7 +3850,8 @@
     "from": "iobates",
     "to": "bellerophon",
     "sources": ["E", "A", "L"],
-    "note": "sent Bellerophon against the Chimera, the Solymi and the Amazons, hoping he would die"
+    "note": "sent Bellerophon against the Chimera, the Solymi and the Amazons, hoping he would die",
+    "cite": {"A": "Apollodorus 2.3.1"}
   },
   {
     "type": "feud",
@@ -3799,7 +3887,7 @@
     "to": "chimera",
     "sources": ["E", "H", "T", "A", "L"],
     "note": "killed the Chimera, shooting from the back of Pegasus",
-    "cite": {"A": "Apollodorus 2.3.2"}
+    "cite": {"H": "Catalogue of Women fr. 7 (Evelyn-White)", "A": "Apollodorus 2.3.2"}
   },
   {
     "type": "feud",
@@ -3813,7 +3901,8 @@
     "type": "parent",
     "from": "bellerophon",
     "to": "hippolochus",
-    "sources": ["E", "A"]
+    "sources": ["E", "A"],
+    "cite": {"E": "Iliad 6.195–199"}
   },
   {
     "type": "parent",
@@ -3826,7 +3915,7 @@
     "from": "bellerophon",
     "to": "laodamia",
     "sources": ["E", "A"],
-    "cite": {"A": "Apollodorus 3.1.1"}
+    "cite": {"E": "Iliad 6.195–199", "A": "Apollodorus 3.1.1"}
   },
   {
     "type": "parent",
@@ -3901,7 +3990,8 @@
     "type": "parent",
     "from": "europa",
     "to": "rhadamanthys",
-    "sources": ["E", "H", "A", "L"]
+    "sources": ["E", "H", "A", "L"],
+    "cite": {"H": "Catalogue of Women fr. 19 (Evelyn-White)", "A": "Apollodorus 3.1.1"}
   },
   {
     "type": "marriage",
@@ -3922,20 +4012,22 @@
     "type": "parent",
     "from": "pasiphae",
     "to": "catreus",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.1.2"}
   },
   {
     "type": "parent",
     "from": "minos",
     "to": "deucalion-crete",
     "sources": ["E", "A"],
-    "cite": {"A": "Apollodorus, Epitome 1.17"}
+    "cite": {"E": "Iliad 13.450–454", "A": "Apollodorus, Epitome 1.17"}
   },
   {
     "type": "parent",
     "from": "pasiphae",
     "to": "deucalion-crete",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.1.2"}
   },
   {
     "type": "parent",
@@ -3962,7 +4054,8 @@
     "type": "parent",
     "from": "catreus",
     "to": "althaemenes",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.2.1"}
   },
   {
     "type": "feud",
@@ -4019,7 +4112,8 @@
     "type": "parent",
     "from": "pasiphae",
     "to": "glaucus-crete",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.1.2"}
   },
   {
     "type": "feud",
@@ -4033,7 +4127,8 @@
     "type": "parent",
     "from": "daedalus",
     "to": "icarus",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 1.12", "L": "Hyginus, Fabulae 40"}
   },
   {
     "type": "feud",
@@ -4041,7 +4136,7 @@
     "to": "perdix",
     "sources": ["A", "L"],
     "note": "threw his nephew Perdix off the Acropolis, jealous of his inventions",
-    "cite": {"L": "Hyginus, Fabulae 39"}
+    "cite": {"A": "Apollodorus 3.15.8", "L": "Hyginus, Fabulae 39"}
   },
   {
     "type": "transform",
@@ -4077,7 +4172,8 @@
     "type": "parent",
     "from": "oceanus",
     "to": "inachus",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.1.1"}
   },
   {
     "type": "parent",
@@ -4114,7 +4210,8 @@
     "from": "hera",
     "to": "io",
     "sources": ["T", "A", "L"],
-    "note": "set hundred-eyed Argus to guard Io, then sent a gadfly to drive her across the world"
+    "note": "set hundred-eyed Argus to guard Io, then sent a gadfly to drive her across the world",
+    "cite": {"L": "Hyginus, Fabulae 145"}
   },
   {
     "type": "feud",
@@ -4122,27 +4219,28 @@
     "to": "argus",
     "sources": ["T", "A", "L"],
     "note": "killed Argus, at Zeus’ bidding, to free Io",
-    "cite": {"A": "Apollodorus 2.1.3"}
+    "cite": {"A": "Apollodorus 2.1.3", "L": "Hyginus, Fabulae 145"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "epaphus",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 149"}
+    "cite": {"T": "Aeschylus, Suppliant Maidens 40–62", "L": "Hyginus, Fabulae 149"}
   },
   {
     "type": "parent",
     "from": "io",
     "to": "epaphus",
     "sources": ["T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 149"}
+    "cite": {"A": "Apollodorus 2.1.3", "L": "Hyginus, Fabulae 149"}
   },
   {
     "type": "parent",
     "from": "epaphus",
     "to": "libya",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"T": "Aeschylus, Suppliant Maidens 310–319", "A": "Apollodorus 2.1.4"}
   },
   {
     "type": "affair",
@@ -4162,7 +4260,8 @@
     "type": "parent",
     "from": "libya",
     "to": "belus",
-    "sources": ["T", "A"]
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus 3.1.1"}
   },
   {
     "type": "parent",
@@ -4175,7 +4274,8 @@
     "type": "parent",
     "from": "libya",
     "to": "agenor",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.1.4"}
   },
   {
     "type": "parent",
@@ -4243,7 +4343,7 @@
     "from": "danaus",
     "to": "amymone",
     "sources": ["A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 14"}
+    "cite": {"A": "Apollodorus 2.1.5", "L": "Hyginus, Fabulae 14"}
   },
   {
     "type": "parent",
@@ -4285,7 +4385,8 @@
     "from": "poseidon",
     "to": "amymone",
     "sources": ["A", "L"],
-    "note": "saved Amymone from a satyr, lay with her, and showed her the springs of Lerna"
+    "note": "saved Amymone from a satyr, lay with her, and showed her the springs of Lerna",
+    "cite": {"L": "Hyginus, Fabulae 169"}
   },
   {
     "type": "parent",
@@ -4305,7 +4406,8 @@
     "type": "parent",
     "from": "hypermnestra",
     "to": "abas",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.2.1"}
   },
   {
     "type": "parent",
@@ -4340,27 +4442,31 @@
     "type": "parent",
     "from": "cepheus",
     "to": "andromeda",
-    "sources": ["T", "A", "L"]
+    "sources": ["T", "A", "L"],
+    "cite": {"L": "Pausanias 4.35.9"}
   },
   {
     "type": "parent",
     "from": "cassiopeia",
     "to": "andromeda",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 2.4.3", "L": "Hyginus, Fabulae 64"}
   },
   {
     "type": "feud",
     "from": "poseidon",
     "to": "cassiopeia",
     "sources": ["A", "L"],
-    "note": "sent a flood and a sea monster, when she boasted she was lovelier than the Nereids"
+    "note": "sent a flood and a sea monster, when she boasted she was lovelier than the Nereids",
+    "cite": {"A": "Apollodorus 2.4.3", "L": "Hyginus, Fabulae 64"}
   },
   {
     "type": "transform",
     "from": "perseus",
     "to": "phineus",
     "sources": ["A", "L"],
-    "note": "turned Phineus to stone with the Gorgon’s head"
+    "note": "turned Phineus to stone with the Gorgon’s head",
+    "cite": {"A": "Apollodorus 2.4.3"}
   },
   {
     "type": "parent",
@@ -4440,7 +4546,7 @@
     "to": "typhon",
     "sources": ["E", "H", "T", "A", "L"],
     "note": "struck Typhon down with his thunderbolts",
-    "cite": {"A": "Apollodorus 1.6.3"}
+    "cite": {"A": "Apollodorus 1.6.3", "L": "Hyginus, Fabulae 152"}
   },
   {
     "type": "parent",
@@ -4480,7 +4586,8 @@
     "type": "parent",
     "from": "phorcys",
     "to": "graeae",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 270–294"}
   },
   {
     "type": "parent",
@@ -4493,14 +4600,15 @@
     "type": "parent",
     "from": "phorcys",
     "to": "gorgons",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 270–294"}
   },
   {
     "type": "parent",
     "from": "ceto",
     "to": "gorgons",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.2.6"}
+    "cite": {"H": "Theogony 270–294", "A": "Apollodorus 1.2.6"}
   },
   {
     "type": "parent",
@@ -4543,7 +4651,8 @@
     "from": "perseus",
     "to": "graeae",
     "sources": ["A", "L"],
-    "note": "stole the one eye of the Graeae, and gave it back only when they showed him the way"
+    "note": "stole the one eye of the Graeae, and gave it back only when they showed him the way",
+    "cite": {"A": "Apollodorus 2.4.2"}
   },
   {
     "type": "parent",
@@ -4564,7 +4673,7 @@
     "from": "nereus",
     "to": "thetis",
     "sources": ["E", "H", "A"],
-    "cite": {"E": "Homeric Hymn to Apollo 311–330", "A": "Apollodorus 3.13.5"}
+    "cite": {"E": "Homeric Hymn to Apollo 311–330", "H": "Theogony 240–264", "A": "Apollodorus 3.13.5"}
   },
   {
     "type": "parent",
@@ -4585,14 +4694,16 @@
     "type": "parent",
     "from": "poseidon",
     "to": "chrysaor",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 2.4.2"}
   },
   {
     "type": "parent",
     "from": "medusa",
     "to": "chrysaor",
     "sources": ["H", "A"],
-    "note": "from her severed neck"
+    "note": "from her severed neck",
+    "cite": {"A": "Apollodorus 2.4.2"}
   },
   {
     "type": "parent",
@@ -4612,13 +4723,15 @@
     "type": "parent",
     "from": "typhon",
     "to": "orthus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 2.5.10"}
   },
   {
     "type": "parent",
     "from": "echidna",
     "to": "orthus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 2.5.10"}
   },
   {
     "type": "parent",
@@ -4678,7 +4791,8 @@
     "type": "parent",
     "from": "typhon",
     "to": "nemean-lion",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 2.5.1"}
   },
   {
     "type": "parent",
@@ -4698,13 +4812,14 @@
     "from": "typhon",
     "to": "sphinx",
     "sources": ["A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 67"}
+    "cite": {"A": "Apollodorus 3.5.8", "L": "Hyginus, Fabulae 67"}
   },
   {
     "type": "parent",
     "from": "echidna",
     "to": "sphinx",
-    "sources": ["A", "L"]
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.8"}
   },
   {
     "type": "feud",
@@ -4726,7 +4841,8 @@
     "from": "iolaus",
     "to": "hydra",
     "sources": ["H", "A"],
-    "note": "helped Heracles kill the Hydra, burning the stumps of her necks"
+    "note": "helped Heracles kill the Hydra, burning the stumps of her necks",
+    "cite": {"H": "Theogony 306–332"}
   },
   {
     "type": "feud",
@@ -4734,14 +4850,15 @@
     "to": "geryon",
     "sources": ["H", "T", "A", "L"],
     "note": "killed Geryon and drove off his red cattle",
-    "cite": {"L": "Hyginus, Astronomica 2.6"}
+    "cite": {"A": "Apollodorus 2.5.10", "L": "Hyginus, Astronomica 2.6"}
   },
   {
     "type": "feud",
     "from": "heracles",
     "to": "orthus",
     "sources": ["H", "A"],
-    "note": "killed Orthus, Geryon’s dog"
+    "note": "killed Orthus, Geryon’s dog",
+    "cite": {"H": "Theogony 270–294"}
   },
   {
     "type": "feud",
@@ -4792,7 +4909,8 @@
     "from": "tityos",
     "to": "leto",
     "sources": ["E", "T", "A", "L"],
-    "note": "tried to rape Leto"
+    "note": "tried to rape Leto",
+    "cite": {"L": "Hyginus, Fabulae 55"}
   },
   {
     "type": "feud",
@@ -4836,7 +4954,8 @@
     "from": "hades",
     "to": "pirithous",
     "sources": ["A"],
-    "note": "held Pirithous fast on the chair of forgetfulness"
+    "note": "held Pirithous fast on the chair of forgetfulness",
+    "cite": {"A": "Apollodorus, Epitome 1.24"}
   },
   {
     "type": "parent",
@@ -4850,14 +4969,15 @@
     "from": "apollo",
     "to": "orpheus",
     "sources": ["A"],
-    "note": "in name only, Apollodorus says"
+    "note": "in name only, Apollodorus says",
+    "cite": {"A": "Apollodorus 1.3.2"}
   },
   {
     "type": "marriage",
     "from": "orpheus",
     "to": "eurydice",
     "sources": ["A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 251"}
+    "cite": {"A": "Apollodorus 1.3.2", "L": "Hyginus, Fabulae 251"}
   },
   {
     "type": "feud",
@@ -4879,7 +4999,7 @@
     "from": "cretheus",
     "to": "pheres",
     "sources": ["E", "A"],
-    "cite": {"A": "Apollodorus 1.9.14"}
+    "cite": {"E": "Odyssey 11.255–259", "A": "Apollodorus 1.9.14"}
   },
   {
     "type": "parent",
@@ -4892,7 +5012,7 @@
     "from": "pheres",
     "to": "admetus",
     "sources": ["E", "T", "A"],
-    "cite": {"A": "Apollodorus 1.9.16"}
+    "cite": {"T": "Euripides, Alcestis 673–711", "A": "Apollodorus 1.9.16"}
   },
   {
     "type": "parent",
@@ -4906,20 +5026,22 @@
     "from": "admetus",
     "to": "alcestis",
     "sources": ["E", "T", "A", "L"],
-    "cite": {"L": "Hyginus, Fabulae 256"}
+    "cite": {"T": "Euripides, Alcestis 1116–1142", "L": "Hyginus, Fabulae 256"}
   },
   {
     "type": "feud",
     "from": "heracles",
     "to": "thanatos",
     "sources": ["T", "A"],
-    "note": "wrestled Death at the tomb of Alcestis and brought her back"
+    "note": "wrestled Death at the tomb of Alcestis and brought her back",
+    "cite": {"T": "Euripides, Alcestis 1116–1142"}
   },
   {
     "type": "parent",
     "from": "nyx",
     "to": "eris",
-    "sources": ["H"]
+    "sources": ["H"],
+    "cite": {"H": "Works and Days 11–24"}
   },
   {
     "type": "feud",
@@ -4934,26 +5056,30 @@
     "from": "hera",
     "to": "paris",
     "sources": ["E", "A", "L"],
-    "note": "hated Paris and Troy for judging Aphrodite the fairest"
+    "note": "hated Paris and Troy for judging Aphrodite the fairest",
+    "cite": {"L": "Hyginus, Fabulae 92"}
   },
   {
     "type": "feud",
     "from": "athena",
     "to": "paris",
     "sources": ["E", "A", "L"],
-    "note": "hated Paris and Troy for judging Aphrodite the fairest"
+    "note": "hated Paris and Troy for judging Aphrodite the fairest",
+    "cite": {"L": "Hyginus, Fabulae 92"}
   },
   {
     "type": "parent",
     "from": "poseidon",
     "to": "neleus",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"E": "Odyssey 11.250–254", "H": "Catalogue of Women fr. 13 (Evelyn-White)"}
   },
   {
     "type": "parent",
     "from": "tyro",
     "to": "neleus",
-    "sources": ["E", "H", "A"]
+    "sources": ["E", "H", "A"],
+    "cite": {"H": "Catalogue of Women fr. 13 (Evelyn-White)"}
   },
   {
     "type": "parent",
@@ -4968,7 +5094,7 @@
     "to": "neleus",
     "sources": ["E", "H", "A"],
     "note": "killed Neleus and all his sons but Nestor",
-    "cite": {"H": "Catalogue of Women fr. 11 (Evelyn-White)", "A": "Apollodorus 1.9.9"}
+    "cite": {"E": "Iliad 11.690–694", "H": "Catalogue of Women fr. 11 (Evelyn-White)", "A": "Apollodorus 1.9.9"}
   },
   {
     "type": "parent",
@@ -4982,28 +5108,30 @@
     "from": "eos",
     "to": "memnon",
     "sources": ["E", "H", "A", "L"],
-    "cite": {"H": "Theogony 984–992", "A": "Apollodorus, Epitome 5.3"}
+    "cite": {"H": "Theogony 984–992", "A": "Apollodorus, Epitome 5.3", "L": "Ovid, Metamorphoses 13.576–599"}
   },
   {
     "type": "parent",
     "from": "tithonus",
     "to": "memnon",
     "sources": ["E", "H", "A"],
-    "cite": {"A": "Apollodorus, Epitome 5.3"}
+    "cite": {"H": "Theogony 984–992", "A": "Apollodorus, Epitome 5.3"}
   },
   {
     "type": "feud",
     "from": "memnon",
     "to": "antilochus",
     "sources": ["E", "T", "A"],
-    "note": "killed Antilochus, who stood in front of his father"
+    "note": "killed Antilochus, who stood in front of his father",
+    "cite": {"T": "Pindar, Pythian 6.25–49"}
   },
   {
     "type": "feud",
     "from": "achilles",
     "to": "memnon",
     "sources": ["E", "T", "A", "L"],
-    "note": "killed Memnon to avenge Antilochus"
+    "note": "killed Memnon to avenge Antilochus",
+    "cite": {"A": "Apollodorus, Epitome 5.3", "L": "Hyginus, Fabulae 112"}
   },
   {
     "type": "parent",
@@ -5017,7 +5145,8 @@
     "from": "achilles",
     "to": "penthesilea",
     "sources": ["E", "A"],
-    "note": "killed Penthesilea, and loved her as she died"
+    "note": "killed Penthesilea, and loved her as she died",
+    "cite": {"A": "Apollodorus, Epitome 5.1"}
   },
   {
     "type": "parent",
@@ -5038,7 +5167,8 @@
     "from": "philoctetes",
     "to": "paris",
     "sources": ["E", "T", "A"],
-    "note": "shot Paris with the bow of Heracles"
+    "note": "shot Paris with the bow of Heracles",
+    "cite": {"A": "Apollodorus 3.12.6"}
   },
   {
     "type": "parent",
@@ -5116,7 +5246,7 @@
     "from": "priam",
     "to": "helenus",
     "sources": ["E", "A", "L"],
-    "cite": {"E": "Iliad 7.40–44", "L": "Hyginus, Fabulae 128"}
+    "cite": {"E": "Iliad 7.40–44", "A": "Apollodorus 3.12.5", "L": "Hyginus, Fabulae 128"}
   },
   {
     "type": "parent",
@@ -5131,14 +5261,15 @@
     "to": "helenus",
     "sources": ["E", "T", "A"],
     "note": "captured Helenus and made him tell how Troy could be taken",
-    "cite": {"A": "Apollodorus, Epitome 5.9"}
+    "cite": {"T": "Sophocles, Philoctetes 600–619", "A": "Apollodorus, Epitome 5.9"}
   },
   {
     "type": "feud",
     "from": "apollo",
     "to": "laocoon",
     "sources": ["E", "A"],
-    "note": "sent two serpents over the sea to kill Laocoon"
+    "note": "sent two serpents over the sea to kill Laocoon",
+    "cite": {"A": "Apollodorus, Epitome 5.18"}
   },
   {
     "type": "feud",
@@ -5183,7 +5314,7 @@
     "to": "polydectes",
     "sources": ["T", "A", "L"],
     "note": "turned Polydectes and his guests to stone with the Gorgon’s head",
-    "cite": {"A": "Apollodorus 2.4.2", "L": "Hyginus, Fabulae 64"}
+    "cite": {"T": "Pindar, Pythian 12.1–24", "A": "Apollodorus 2.4.2", "L": "Hyginus, Fabulae 64"}
   },
   {
     "type": "transform",
@@ -5220,7 +5351,8 @@
     "from": "poseidon",
     "to": "cepheus",
     "sources": ["A", "L"],
-    "note": "sent a sea monster against the land of Cepheus"
+    "note": "sent a sea monster against the land of Cepheus",
+    "cite": {"A": "Apollodorus 2.4.3", "L": "Hyginus, Fabulae 64"}
   },
   {
     "type": "feud",
@@ -5249,7 +5381,7 @@
     "to": "diomedes-thrace",
     "sources": ["T", "A", "L"],
     "note": "killed Diomedes of Thrace and drove off his man-eating mares",
-    "cite": {"T": "Euripides, Alcestis 420–486", "L": "Pausanias 3.18.12"}
+    "cite": {"T": "Euripides, Alcestis 420–486", "A": "Apollodorus 2.5.8", "L": "Pausanias 3.18.12"}
   },
   {
     "type": "parent",
@@ -5308,20 +5440,23 @@
     "from": "agenor",
     "to": "phineus-seer",
     "sources": ["A"],
-    "note": "in one telling; in another, Poseidon"
+    "note": "in one telling; in another, Poseidon",
+    "cite": {"A": "Apollodorus 1.9.21"}
   },
   {
     "type": "parent",
     "from": "poseidon",
     "to": "phineus-seer",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 1.9.21"}
   },
   {
     "type": "curse",
     "from": "poseidon",
     "to": "phineus-seer",
     "sources": ["A"],
-    "note": "blinded Phineus, in one telling, for showing the sons of Phrixus the way"
+    "note": "blinded Phineus, in one telling, for showing the sons of Phrixus the way",
+    "cite": {"A": "Apollodorus 1.9.21"}
   },
   {
     "type": "parent",
@@ -5335,7 +5470,8 @@
     "from": "harpies",
     "to": "phineus-seer",
     "sources": ["H", "A", "L"],
-    "note": "snatched and fouled every meal Phineus sat down to"
+    "note": "snatched and fouled every meal Phineus sat down to",
+    "cite": {"A": "Apollodorus 1.9.21", "L": "Ovid, Metamorphoses 7.1–7"}
   },
   {
     "type": "parent",
@@ -5383,14 +5519,16 @@
     "from": "sirens",
     "to": "odysseus",
     "sources": ["E", "A", "L"],
-    "note": "sang to lure Odysseus to his death; he heard them bound to the mast"
+    "note": "sang to lure Odysseus to his death; he heard them bound to the mast",
+    "cite": {"E": "Odyssey 12.180–184", "A": "Apollodorus, Epitome 7.19", "L": "Hyginus, Fabulae 125"}
   },
   {
     "type": "feud",
     "from": "odysseus",
     "to": "sirens",
     "sources": ["A", "L"],
-    "note": "sailed past the Sirens bound to the mast; fated to die if a ship got by, they died"
+    "note": "sailed past the Sirens bound to the mast; fated to die if a ship got by, they died",
+    "cite": {"A": "Apollodorus, Epitome 7.19", "L": "Hyginus, Fabulae 125"}
   },
   {
     "type": "parent",
@@ -5445,27 +5583,30 @@
     "type": "parent",
     "from": "uranus",
     "to": "cyclopes",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"A": "Apollodorus 1.1.2"}
   },
   {
     "type": "parent",
     "from": "gaia",
     "to": "hundred-handed",
     "sources": ["H", "A"],
-    "cite": {"A": "Apollodorus 1.1.1"}
+    "cite": {"H": "Theogony 147–162", "A": "Apollodorus 1.1.1"}
   },
   {
     "type": "parent",
     "from": "uranus",
     "to": "hundred-handed",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 147–162"}
   },
   {
     "type": "feud",
     "from": "uranus",
     "to": "cyclopes",
     "sources": ["H", "A"],
-    "note": "bound them under the earth"
+    "note": "bound them under the earth",
+    "cite": {"A": "Apollodorus 1.1.2"}
   },
   {
     "type": "feud",
@@ -5509,7 +5650,8 @@
     "from": "cronus",
     "to": "hades",
     "sources": ["H", "A"],
-    "note": "swallowed him at birth"
+    "note": "swallowed him at birth",
+    "cite": {"H": "Theogony 453–491"}
   },
   {
     "type": "feud",
@@ -5524,7 +5666,7 @@
     "to": "cronus",
     "sources": ["H", "A", "L"],
     "note": "gave him a stone wrapped in swaddling clothes to swallow in place of Zeus",
-    "cite": {"A": "Apollodorus 1.1.7", "L": "Pausanias 9.2.7"}
+    "cite": {"H": "Theogony 453–491", "A": "Apollodorus 1.1.7", "L": "Pausanias 9.2.7"}
   },
   {
     "type": "feud",
@@ -5547,7 +5689,7 @@
     "to": "cyclopes",
     "sources": ["T", "A"],
     "note": "killed the Cyclopes, whose thunderbolt had struck down his son Asclepius",
-    "cite": {"A": "Apollodorus 3.10.4"}
+    "cite": {"T": "Euripides, Alcestis 1–44", "A": "Apollodorus 3.10.4"}
   },
   {
     "type": "feud",
@@ -5555,13 +5697,14 @@
     "to": "polynices",
     "sources": ["T", "A", "L"],
     "note": "forbade anyone to bury Polynices and the Argive dead",
-    "cite": {"A": "Apollodorus 3.7.1", "L": "Hyginus, Fabulae 72"}
+    "cite": {"T": "Sophocles, Antigone 1–44", "A": "Apollodorus 3.7.1", "L": "Hyginus, Fabulae 72"}
   },
   {
     "type": "marriage",
     "from": "epimetheus",
     "to": "pandora",
-    "sources": ["H", "A", "L"]
+    "sources": ["H", "A", "L"],
+    "cite": {"A": "Apollodorus 1.7.2", "L": "Hyginus, Fabulae 142"}
   },
   {
     "type": "feud",
@@ -5590,7 +5733,7 @@
     "from": "pandora",
     "to": "pyrrha",
     "sources": ["A", "L"],
-    "cite": {"A": "Apollodorus 1.7.2"}
+    "cite": {"A": "Apollodorus 1.7.2", "L": "Hyginus, Fabulae 142"}
   },
   {
     "type": "marriage",
@@ -5609,19 +5752,22 @@
     "type": "parent",
     "from": "pyrrha",
     "to": "hellen",
-    "sources": ["A"]
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 1.7.2"}
   },
   {
     "type": "parent",
     "from": "zeus",
     "to": "hellen",
     "sources": ["A"],
-    "note": "some say, in Apollodorus"
+    "note": "some say, in Apollodorus",
+    "cite": {"A": "Apollodorus 1.7.2"}
   },
   {
     "type": "parent",
     "from": "hellen",
     "to": "aeolus",
-    "sources": ["H", "A"]
+    "sources": ["H", "A"],
+    "cite": {"H": "Catalogue of Women fr. 4 (Evelyn-White)"}
   }
 ]

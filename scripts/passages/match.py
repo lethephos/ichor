@@ -133,6 +133,53 @@ def strict(typ, toks, ia, ib, note_stems, joined):
                 if hi - lo <= 25 and n >= 1: return f'deed{n}'
     return None
 
+if os.environ.get('LOOSE'):
+
+    # LOOSE=1: a wider net for what the strict patterns miss. Both figures in one section, close to each other, with a word
+    # of kinship (or of the deed) near them. Every find of this kind must be read before it is kept.
+    SECS = {}
+    def secs(w):
+        if w not in SECS:
+            out = []; ss = sections(w)
+            for i, (sec, body) in enumerate(ss):
+                body = re.sub(r'Event Date:.*$', '', body)
+                lab = label(w, sec, ss[i + 1][0] if i + 1 < len(ss) else None)
+                if not lab: continue
+                raw = re.findall(r"[A-Za-zÀ-ž’']+", body)
+                toks = [norm(x) for x in raw]; caps = [x[0].isupper() for x in raw]
+                out.append((lab, raw, toks, caps, {x for k, x in enumerate(toks) if caps[k]}))
+            SECS[w] = out
+        return SECS[w]
+    KIN = re.compile(r'^(sons?|daughters?|child|children|offspring|begat|begot|begotten|bare|bore|born|father|mother|fathered|birth|parents?)$')
+    WED = re.compile(r'^(married|marri|marry|wife|wed|wedded|husband|bride|spouse|marriage|consort|wedlock)$')
+    LOVE = re.compile(r'^(loved?|lay|lain|bed|bedded|intercurse|ravish\w*|seduc\w*|embrac\w*|union|desire|passion|raped?|abduct\w*|enamured|carri\w*)$')
+    out = []
+    for ri, r in enumerate(relations):
+        a, b = r['from'], r['to']; note_stems = stems(r.get('note'), names(a) | names(b))
+        for g in r['sources']:
+            if g in r.get('cite', {}): continue
+            best = None
+            for wi, w in enumerate(WORKS[g]):
+                for lab, raw, toks, caps, capset in secs(w):
+                    if not (names(a) & capset and names(b) & capset): continue
+                    ia, ib = pos(a, toks, caps), pos(b, toks, caps)
+                    if not ia or not ib: continue
+                    d, x, y = min((abs(x - y), x, y) for x in ia for y in ib)
+                    if d > 45: continue
+                    lo, hi = max(0, min(x, y) - 10), max(x, y) + 12
+                    near = toks[lo:hi]
+                    if r['type'] == 'parent': k = sum(1 for t in near if KIN.match(t))
+                    elif r['type'] == 'marriage': k = sum(1 for t in near if WED.match(t))
+                    elif r['type'] == 'affair': k = sum(1 for t in near if LOVE.match(t))
+                    else: k = len({st for st in note_stems if any(t.startswith(st) for t in toks[max(0, lo - 25):hi + 25])})
+                    if not k: continue
+                    score = min(k, 3) - d / 12 - wi * 0.3
+                    if not best or score > best[0]: best = (score, lab, ' '.join(raw[lo:hi]))
+            if best: out.append({'i': ri, 'type': r['type'], 'from': a, 'to': b, 'g': g, 'cite': best[1], 'score': round(best[0], 2), 'how': 'loose', 'note': r.get('note', ''), 'text': best[2]})
+    json.dump(out, open(os.environ.get('OUT', 'candidates.json'), 'w'), ensure_ascii=False, indent=0)
+    print(len(out), 'loose candidates')
+    sys.exit()
+
 out = []; stats = collections.Counter()
 for ri, r in enumerate(relations):
     a, b = r['from'], r['to']; na, nb = names(a) | set(), names(b)
