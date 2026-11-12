@@ -24,17 +24,11 @@ const gEdges = root.append("g");
 const gNodes = root.append("g");
 
 const RN = 8;
-// the star-atlas mockup (?look=atlas): figures drawn as Hevelius drew stars
-const LOOK = document.documentElement.dataset.look;
-export const ATLAS = LOOK === "atlas" || LOOK === "stars";
 const starPath = (n, R, r) => Array.from({length: n*2}, (_, i) => { const a = Math.PI*i/n - Math.PI/2, q = i%2 ? r : R; return `${i?"L":"M"}${(q*Math.cos(a)).toFixed(2)},${(q*Math.sin(a)).toFixed(2)}`; }).join("") + "Z";
-// a bright star is a dark seal with a jagged rim and a pale star inside; a faint one a small six-rayed star
-export const hevStar = (R, cls = "") => LOOK === "stars"
-  // modern: a bright star is a fine ring round a four-pointed sparkle, a faint one the sparkle alone
-  ? (R >= 7 ? `<circle class="star-ring" r="${R}"/><path class="dot star ${cls}" d="${starPath(4, R*0.72, R*0.17)}"/>` : `<path class="dot star ${cls}" d="${starPath(4, R*1.05, R*0.24)}"/>`)
-  : R >= 7
-  ? `<path class="dot star ${cls}" d="${starPath(18, R, R*0.84)}"/><path class="star-in" d="${starPath(8, R*0.66, R*0.24)}"/>`
-  : `<path class="dot star ${cls}" d="${starPath(6, R, R*0.42)}"/>`;
+// a bright star is a fine ring round a four-pointed sparkle, a faint one the sparkle alone
+export const hevStar = (R, cls = "") => R >= 7
+  ? `<circle class="star-ring" r="${R}"/><path class="dot star ${cls}" d="${starPath(4, R*0.72, R*0.17)}"/>`
+  : `<path class="dot star ${cls}" d="${starPath(4, R*1.05, R*0.24)}"/>`;
 export const STAR = "M0,-6 L1.6,-1.6 L6,0 L1.6,1.6 L0,6 L-1.6,1.6 L-6,0 L-1.6,-1.6 Z";   // ambrosia: made immortal
 function norm(x,y){ const l = Math.hypot(x,y)||1; return [x/l, y/l]; }
 function edgePath(e){
@@ -59,13 +53,11 @@ export let edgeSel, nodeSel;
 /* The tree of the chosen family: rows, dividers and houses, then links, then figures. */
 export function drawTree(){
   gGrid.selectAll("*").remove(); gEdges.selectAll("*").remove(); gNodes.selectAll("*").remove();
-  if (LOOK === "stars") {
-    // a star chart's graticule: faint meridians across the rows, and graduations on every rule (one dashed line each)
-    const top = ROWY[0] - 70, bot = ROWB[ROWB.length-1] + 70;
-    for (let x = 120; x < W; x += 240) gGrid.append("line").attr("class","meridian").attr("x1",x).attr("x2",x).attr("y1",top).attr("y2",bot);
-    ROWY.forEach((y,i) => { if (i>0) { const yy = (ROWB[i-1]+y)/2+12; gGrid.append("line").attr("class","ticks").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); } });
-    DIVIDERS.forEach(d => { const yy = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12; gGrid.append("line").attr("class","ticks major").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); });
-  }
+  // a star chart's graticule: faint meridians across the rows, and graduations on every rule (one dashed line each)
+  const top = ROWY[0] - 70, bot = ROWB[ROWB.length-1] + 70;
+  for (let x = 120; x < W; x += 240) gGrid.append("line").attr("class","meridian").attr("x1",x).attr("x2",x).attr("y1",top).attr("y2",bot);
+  ROWY.forEach((y,i) => { if (i>0) { const yy = (ROWB[i-1]+y)/2+12; gGrid.append("line").attr("class","ticks").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); } });
+  DIVIDERS.forEach(d => { const yy = (ROWB[d.before-1] + ROWY[d.before]) / 2 + 12; gGrid.append("line").attr("class","ticks major").attr("x1",0).attr("x2",W).attr("y1",yy).attr("y2",yy); });
   ROWY.forEach((y,i) => {
     if (i>0) gGrid.append("line").attr("class","genrule").attr("x1",0).attr("x2",W).attr("y1",(ROWB[i-1]+y)/2+12).attr("y2",(ROWB[i-1]+y)/2+12);
   });
@@ -96,40 +88,19 @@ export function drawTree(){
     // with a mouse, hovering a figure previews its links; touch keeps tap-to-open
     .on("pointerenter", (ev,d) => { if (ev.pointerType==="mouse") { state.hover = d.id; apply(150); } })
     .on("pointerleave", (ev,d) => { if (state.hover===d.id) { state.hover = null; apply(150); } });
-  const deg = {}; if (ATLAS) E.forEach(e => { deg[e.from] = (deg[e.from]||0) + 1; deg[e.to] = (deg[e.to]||0) + 1; });
+  const deg = {}; E.forEach(e => { deg[e.from] = (deg[e.from]||0) + 1; deg[e.to] = (deg[e.to]||0) + 1; });
   nodeSel.each(function(d){
     const g = d3.select(this);
-    if (ATLAS) {
-      g.append("circle").attr("class","hit").attr("r",26);
-      g.append("circle").attr("class","halo").attr("r",16);
-      const R = (d.kind==="god" ? 7.5 : 5) + Math.min(deg[d.id]||0, 24) / 24 * 4.5;
-      if (d.kind==="group") [[0,-5],[-5,3.5],[5,3.5]].forEach(([x,y]) => g.append("g").attr("transform",`translate(${x},${y})`).html(hevStar(4, "group")));
-      else g.append("g").html(hevStar(d.kind==="nymph" ? R-1 : R, d.kind));
-      if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4 L4,0 L0,4 L-4,0 Z").attr("transform",`translate(${R+6},${-R-2})`);
-      if (d.immortal) g.append("path").attr("class","imm").attr("d",STAR).attr("transform",`translate(${-R-6},${-R-2})`).append("title").text("Made immortal in some sources");
-      if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z").attr("transform",`translate(${-R-6},${-R-2})`).append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
-      const caps = d.kind==="god" || d.kind==="group";
-      g.append("text").attr("class","lbl" + (caps?" god":"")).attr("text-anchor","middle").attr("y", R + 18).text(d.name);
-      return;
-    }
     g.append("circle").attr("class","hit").attr("r",26);
     g.append("circle").attr("class","halo").attr("r",16);
-    if (d.kind==="god" || d.kind==="group") g.append("circle").attr("class","ring").attr("r",RN+4);
-    // a group (the Muses, the Fates…) is one medallion holding three small ones
-    if (d.kind==="group") [[0,-3.6],[-3.6,2.6],[3.6,2.6]].forEach(([x,y]) => g.append("circle").attr("class","dot group").attr("cx",x).attr("cy",y).attr("r",3.4));
-    else g.append("circle").attr("class","dot " + d.kind).attr("r", d.kind==="nymph" ? RN-2 : RN);
-    if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4.5 L4.5,0 L0,4.5 L-4.5,0 Z")
-        .attr("transform",`translate(${RN+7},${-RN-3})`);
-    // made immortal: a small gold star at the upper left (only mortals have one, so it never meets the peak)
-    if (d.immortal) g.append("path").attr("class","imm").attr("d",STAR)
-        .attr("transform",`translate(${-RN-7},${-RN-3})`)
-        .append("title").text("Made immortal in some sources");
-    // Olympus: a small peak at the upper left; hollow where only some lists count the god
-    if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z")
-        .attr("transform",`translate(${-RN-7},${-RN-3})`)
-        .append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
-    const ringed = d.kind==="god" || d.kind==="group";
-    g.append("text").attr("class","lbl" + (ringed?" god":"")).attr("text-anchor","middle").attr("y", ringed ? 34 : 30).text(d.name);
+    const R = (d.kind==="god" ? 7.5 : 5) + Math.min(deg[d.id]||0, 24) / 24 * 4.5;
+    if (d.kind==="group") [[0,-5],[-5,3.5],[5,3.5]].forEach(([x,y]) => g.append("g").attr("transform",`translate(${x},${y})`).html(hevStar(4, "group")));
+    else g.append("g").html(hevStar(d.kind==="nymph" ? R-1 : R, d.kind));
+    if (d.transformation) g.append("path").attr("class","badge").attr("d","M0,-4 L4,0 L0,4 L-4,0 Z").attr("transform",`translate(${R+6},${-R-2})`);
+    if (d.immortal) g.append("path").attr("class","imm").attr("d",STAR).attr("transform",`translate(${-R-6},${-R-2})`).append("title").text("Made immortal in some sources");
+    if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z").attr("transform",`translate(${-R-6},${-R-2})`).append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
+    const caps = d.kind==="god" || d.kind==="group";
+    g.append("text").attr("class","lbl" + (caps?" god":"")).attr("text-anchor","middle").attr("y", R + 18).text(d.name);
   });
 }
 svg.on("click", () => { if (state.mode==="node") resetMode(); });

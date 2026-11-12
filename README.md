@@ -44,15 +44,13 @@ npm run preview  # serve the build
   These files call each other freely, but they are set up in that order: each imports the one before it first. Keep that first import when editing, or a file may run before the one it leans on.
 - `docs/` — the detail behind the brief: `tree.md` (who sits where), `features.md` (how each part behaves), `design.md` (the look).
 - `src/styles/` — styles. `index.css` imports the rest in order:
-  - `tokens.css` — design tokens: colours, the gold accent, fonts, shadow. Its base palette, pale clay and black glaze, shows with `?look=clay`.
-  - `stars.css` — the default look, a modern star chart after Hevelius: ivory by day, graphite by night, over the tokens. Change a colour here or in `tokens.css`, nowhere else.
-  - `atlas.css` — a mockup of the antique star atlas, only with `?look=atlas`.
+  - `tokens.css` — design tokens: the colours of the light (ivory) and dark (graphite) themes, the gold accent, fonts, shadow. Change a colour here, nowhere else.
+  - `stars.css` — the star-chart look: figures as stars, hairline links, the graticule, square buttons.
   - `intro.css` — the opening: the mark draws itself, flies to the header, and the tree lights up.
   - `base.css` — page frame, box sizing, focus rings.
   - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
 - `vite.config.js` — splits the data at build time: the page’s code carries what the tree needs to draw itself, and the long texts only a card shows (stories, taglines, versions, art, sky, members, story steps) go into a second file, `texts.json`, fetched once the tree is up. The JSON in `data/` stays whole; to move a field from one part to the other, edit `TEXT_FIELDS` there.
 - `scripts/check-data.mjs` — checks the JSON before every build: known figures and sources on every link, no link listed twice, story pairs that exist as relations. A problem stops the build and says where it is.
-- `prototype/ichor-atreidae.html` — the original single-file prototype, kept as the reference.
 
 The address names what is open, so it can be sent as a link: `?family=thebes`, `?figure=medea`, `?story=argonauts&step=3`, `?source=H`.
 

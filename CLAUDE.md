@@ -39,7 +39,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 **Look**
 - A modern star chart after Hevelius: clean ivory by day, graphite by night. Fonts: GFS Didot (display, names, stories, Greek) and Manrope (interface).
 - Gold is ichor, the blood of the gods: transformations, the selected figure, Ariadne’s thread, focus. Red is for curses only. The logo is gold only.
-- Colours are tokens in `src/styles/tokens.css` and `src/styles/stars.css`; change a colour there, nowhere else.
+- Colours are tokens in `src/styles/tokens.css`; change a colour there, nowhere else.
 - Buttons are square, like the cells of a table.
 - Edge styles: descent = thin solid; marriage = double line; affair = dashed; feud = dash-dot; transformation = dotted gold with arrow; curse = red with arrow.
 

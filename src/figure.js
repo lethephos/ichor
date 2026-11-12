@@ -2,7 +2,7 @@
 import {E, N, SRC, H, ALL_STORIES, OLY, OLY_NOTE} from "./data.js";
 import "./find.js";
 import {attested, esc, state} from "./state.js";
-import {ATLAS, hevStar, svg, root, STAR} from "./tree.js";
+import {hevStar, svg, root, STAR} from "./tree.js";
 import {srcText, card, relItem, shell, draftTag} from "./sheet.js";
 import {storyMove} from "./stories.js";
 
@@ -13,7 +13,7 @@ import {storyMove} from "./stories.js";
    (Zeus) grows downwards like the card. Versions show as extra parents. */
 const CF_W = 340, FT_BANDS = 4;
 const SRC_SHORT = {E: "Homer", H: "Hesiod", T: "tragedy", A: "Apollodorus", L: "later"};
-const dotSvg = (p, x, y, r) => ATLAS ? `<g transform="translate(${x},${y})">${hevStar(p.kind==="god" ? r+3 : r+1, p.kind)}</g>` : `${p.kind==="god" || p.kind==="group" ? `<circle class="ring" cx="${x}" cy="${y}" r="${r+3}"/>` : ""}<circle class="dot ${p.kind==="group" ? "" : p.kind}" cx="${x}" cy="${y}" r="${r}"/>`;
+const dotSvg = (p, x, y, r) => `<g transform="translate(${x},${y})">${hevStar(p.kind==="god" ? r+3 : r+1, p.kind)}</g>`;
 const ftLink = (type, d) => type==="marriage"
   ? `<g class="e e-marriage"><path class="edge main" d="${d}" stroke-width="4"/><path class="edge inner" d="${d}"/></g>`
   : `<g class="e e-${type==="affair" ? "affair" : "parent"}"><path class="edge main" d="${d}" stroke-width="1.2"/></g>`;

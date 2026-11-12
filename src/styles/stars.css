@@ -1,23 +1,6 @@
-/* The default look: a modern star chart that keeps Hevelius’ idea (?look=clay shows the base palette of tokens.css).
+/* The look: a modern star chart that keeps Hevelius’ idea. Colours are in tokens.css.
    Clean ivory by day, graphite by night; figures as stars, the engravings as fine line drawings.
    Gold stays ichor, red stays curses. */
-:root[data-look="stars"]{
-  --bg:#F5F2EB; --bg-2:#FCFAF6; --rule:#DDD5C6;
-  --text:#18171B; --muted:#5E574C; --line:#2E2D33; --figure:#18171B;
-  --curse:#AE2F1A; --accent:#8A5E00;
-}
-@media (prefers-color-scheme: dark){
-  :root[data-look="stars"]:not([data-theme="light"]){
-    --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
-    --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
-    --curse:#E8604A; --accent:#E8B54A;
-  }
-}
-:root[data-look="stars"][data-theme="dark"]{
-  --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
-  --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
-  --curse:#E8604A; --accent:#E8B54A;
-}
 [data-look="stars"] body{background:var(--dust,none),var(--glow,none),var(--bg);background-size:240px 240px,auto,auto}
 
 /* stars: a fine ring round a sparkle for the bright, the sparkle alone for the faint */

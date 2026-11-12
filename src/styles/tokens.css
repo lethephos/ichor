@@ -1,11 +1,11 @@
-/* Design tokens. Light = pale clay with black-figure ink, dark = black glaze with clay lines.
+/* Design tokens. Light = clean ivory, dark = graphite.
    Gold is ichor, the blood of the gods: it marks transformations, the selected figure,
    Ariadne’s thread and focus. Red is kept for curses alone. */
 :root{
   color-scheme: light;
-  --bg:#E8CFB2; --bg-2:#F3E3D0; --rule:#C9A07D;
-  --text:#1E140D; --muted:#5A3F2C; --line:#2A1D14; --figure:#2A1D14;
-  --curse:#A82A17; --accent:#8A5E00; --transform:var(--accent);
+  --bg:#F5F2EB; --bg-2:#FCFAF6; --rule:#DDD5C6;
+  --text:#18171B; --muted:#5E574C; --line:#2E2D33; --figure:#18171B;
+  --curse:#AE2F1A; --accent:#8A5E00; --transform:var(--accent);
   --shadow:rgba(0,0,0,.18);
   --display:"GFS Didot", "Didot", "Bodoni 72", Georgia, serif;
   --ui:"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -13,14 +13,14 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme: dark;
-    --bg:#14100C; --bg-2:#1F1812; --rule:#3D3024;
-    --text:#EAD3B8; --muted:#A68E76; --line:#B98C66; --figure:#B98C66;
-    --curse:#E0533C; --accent:#E8B54A;
+    --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
+    --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
+    --curse:#E8604A; --accent:#E8B54A;
   }
 }
 :root[data-theme="dark"]{
   color-scheme: dark;
-  --bg:#14100C; --bg-2:#1F1812; --rule:#3D3024;
-  --text:#EAD3B8; --muted:#A68E76; --line:#B98C66; --figure:#B98C66;
-  --curse:#E0533C; --accent:#E8B54A;
+  --bg:#161719; --bg-2:#1F2023; --rule:#35373C;
+  --text:#ECEAE6; --muted:#A3A19C; --line:#B4B2AD; --figure:#F2F0EC;
+  --curse:#E8604A; --accent:#E8B54A;
 }

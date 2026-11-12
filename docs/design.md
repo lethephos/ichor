@@ -4,13 +4,12 @@ The look, the logo and the layout of the page as they are now. Each point was se
 
 ## Look
 
-- A modern star chart after Hevelius’ Uranographia (1690), without antique dress: clean ivory by day, graphite by night, no frame and no paper. Styles in `src/styles/stars.css`, over the tokens in `src/styles/tokens.css`.
+- A modern star chart after Hevelius’ Uranographia (1690), without antique dress: clean ivory by day, graphite by night, no frame and no paper. Colours are tokens in `src/styles/tokens.css`; the rest of the look is in `src/styles/stars.css`.
 - Fonts: GFS Didot (display, names, stories, Greek) and Manrope (interface). Mortals are set in GFS Didot; gods, groups and section heads in spaced Manrope capitals.
 - Gold is ichor, the blood of the gods: transformations, the selected figure, Ariadne’s thread, focus (`--accent`). Red is for curses only.
   - Light: bg `#F5F2EB`, panel `#FCFAF6`, rule `#DDD5C6`, text `#18171B`, lines `#2E2D33`, muted `#5E574C`, curse `#AE2F1A`, gold `#8A5E00`.
   - Dark: bg `#161719`, panel `#1F2023`, rule `#35373C`, text `#ECEAE6`, lines `#B4B2AD`, muted `#A3A19C`, curse `#E8604A`, gold `#E8B54A`.
 - The theme follows the system setting until the reader picks one with the sun/moon button. The pick is saved in localStorage (`ichor-theme`); a pick that matches the system is not saved, so the page follows the system again.
-- Two other looks are kept in the code behind a switch in the address: `?look=atlas` (an antique star atlas, `src/styles/atlas.css`; `&frame=none` hides its border) and `?look=clay` (the base palette of `tokens.css`).
 
 ## Figures and links
 
