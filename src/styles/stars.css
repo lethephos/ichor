@@ -1,4 +1,4 @@
-/* The default look: a modern star chart that keeps Hevelius’ idea (?look=clay shows the earlier palette).
+/* The default look: a modern star chart that keeps Hevelius’ idea (?look=clay shows the base palette of tokens.css).
    Clean ivory by day, graphite by night; figures as stars, the engravings as fine line drawings.
    Gold stays ichor, red stays curses. */
 :root[data-look="stars"]{

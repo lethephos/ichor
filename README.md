@@ -42,8 +42,9 @@ npm run preview  # serve the build
   - `intro.js` — the opening.
 
   These files call each other freely, but they are set up in that order: each imports the one before it first. Keep that first import when editing, or a file may run before the one it leans on.
+- `docs/` — the detail behind the brief: `tree.md` (who sits where), `features.md` (how each part behaves), `design.md` (the look).
 - `src/styles/` — styles. `index.css` imports the rest in order:
-  - `tokens.css` — design tokens: colours, the gold accent, fonts, shadow. Its base palette is the earlier pale clay and black glaze, shown with `?look=clay`.
+  - `tokens.css` — design tokens: colours, the gold accent, fonts, shadow. Its base palette, pale clay and black glaze, shows with `?look=clay`.
   - `stars.css` — the default look, a modern star chart after Hevelius: ivory by day, graphite by night, over the tokens. Change a colour here or in `tokens.css`, nowhere else.
   - `atlas.css` — a mockup of the antique star atlas, only with `?look=atlas`.
   - `intro.css` — the opening: the mark draws itself, flies to the header, and the tree lights up.

@@ -31,7 +31,7 @@
     "type": "parent",
     "from": "ares",
     "to": "oenomaus",
-    "sources": ["A", "L"],
+    "sources": ["L"],
     "cite": {"L": "Hyginus, Fabulae 84"}
   },
   {
@@ -233,14 +233,15 @@
     "type": "parent",
     "from": "agamemnon",
     "to": "iphigenia",
-    "sources": ["E", "H", "T", "L"],
-    "cite": {"E": "Cypria (Proclus’ summary)", "L": "Hyginus, Fabulae 98"}
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 98"}
   },
   {
     "type": "parent",
     "from": "clytemnestra",
     "to": "iphigenia",
-    "sources": ["H", "T", "L"]
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.16"}
   },
   {
     "type": "parent",
@@ -276,14 +277,15 @@
     "type": "parent",
     "from": "agamemnon",
     "to": "chrysothemis",
-    "sources": ["E", "T"],
-    "cite": {"E": "Iliad 9.145"}
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Iliad 9.145", "A": "Apollodorus, Epitome 2.16"}
   },
   {
     "type": "parent",
     "from": "clytemnestra",
     "to": "chrysothemis",
-    "sources": ["T"]
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 2.16"}
   },
   {
     "type": "parent",
