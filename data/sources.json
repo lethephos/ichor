@@ -1,0 +1,84 @@
+{
+  "all": {
+    "label": "All versions",
+    "note": "Every version at once. Pick a source and watch the family rearrange itself."
+  },
+  "groups": [
+    {
+      "id": "E",
+      "label": "Homer & epic",
+      "full": "Homer, the Homeric Hymns, the Cypria",
+      "note": "In Homer, Atreus fathers Agamemnon, Tyndareus fathers both twins, and Iphigenia does not exist.",
+      "in": "In Homer",
+      "tells": "Homer tells",
+      "note_figures": [
+        "atreus",
+        "agamemnon",
+        "tyndareus",
+        "castor",
+        "polydeuces",
+        "iphigenia"
+      ]
+    },
+    {
+      "id": "H",
+      "label": "Hesiod",
+      "full": "Theogony, Catalogue of Women",
+      "note": "In Hesiod, Pleisthenes fathers Agamemnon, Zeus fathers both twins, and Iphigenia becomes Hecate.",
+      "in": "In Hesiod",
+      "tells": "Hesiod tells",
+      "note_figures": [
+        "pleisthenes",
+        "agamemnon",
+        "zeus",
+        "castor",
+        "polydeuces",
+        "iphigenia",
+        "hecate"
+      ]
+    },
+    {
+      "id": "T",
+      "label": "Lyric & tragedy",
+      "full": "Pindar, Stesichorus, Aeschylus, Sophocles, Euripides",
+      "note": "In tragedy, Clytemnestra strikes the blow herself, and Oedipus blinds himself.",
+      "in": "In lyric and tragedy",
+      "tells": "Lyric and tragedy tell",
+      "note_figures": [
+        "clytemnestra",
+        "agamemnon",
+        "oedipus"
+      ]
+    },
+    {
+      "id": "A",
+      "label": "Apollodorus",
+      "full": "The Library",
+      "note": "Apollodorus records rival versions side by side: two fathers for Agamemnon, two mothers for Helen.",
+      "in": "In Apollodorus",
+      "tells": "Apollodorus tells",
+      "note_figures": [
+        "agamemnon",
+        "atreus",
+        "pleisthenes",
+        "helen",
+        "leda",
+        "nemesis"
+      ]
+    },
+    {
+      "id": "L",
+      "label": "Later writers",
+      "full": "Pausanias, Hyginus, Ovid",
+      "note": "In later writers, Nemesis is Helen’s mother and Pelops’s curse falls on Thebes.",
+      "in": "In later writers",
+      "tells": "Later writers tell",
+      "note_figures": [
+        "nemesis",
+        "helen",
+        "pelops",
+        "laius"
+      ]
+    }
+  ]
+}

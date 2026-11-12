@@ -1,0 +1,155 @@
+#card{position:fixed;left:0;right:0;bottom:0;max-height:66%;overflow-y:auto;background:var(--bg-2);border-top:1px solid var(--rule);padding:22px 22px calc(22px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .3s ease;z-index:5;box-shadow:0 -12px 30px var(--shadow)}
+#card.open{transform:none}
+@media (min-width:900px){
+  #card{left:auto;top:calc(env(safe-area-inset-top,0px) + 20px);bottom:20px;right:20px;width:400px;max-height:none;border:1px solid var(--rule);transform:translateX(125%)}
+}
+@media (prefers-reduced-motion: reduce){#card{transition:none}}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.greek{font-family:var(--display);font-size:20px;color:var(--muted)}
+.close{flex:0 0 auto;background:none;border:none;color:var(--muted);font:500 13px var(--ui);cursor:pointer;padding:2px 0}
+.card-name{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;margin:4px 0 0}
+.card-tag{font-family:var(--display);font-size:21px;line-height:1.35;margin:10px 0 0}
+.card-role{color:var(--muted);margin:6px 0 0}
+.card-story{font-family:var(--display);font-size:17px;line-height:1.6;margin:14px 0 0}
+.sec{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.sec h3{font:500 12px var(--ui);color:var(--muted);margin:0 0 8px}
+.rels{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.rels li{display:flex;flex-wrap:wrap;column-gap:10px;align-items:baseline}
+.rel{background:none;border:none;padding:0;font:17px var(--display);color:var(--text);cursor:pointer;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.rel:hover{text-decoration-color:var(--figure)}
+.rel.static{text-decoration:none;cursor:default}
+.srcs{font-size:12px;color:var(--muted)}
+.srcs b{font-weight:600;color:var(--text)}
+.cites{display:block;font:11.5px/1.45 var(--ui);color:var(--muted);margin-top:2px}
+.note{font-family:var(--display);font-size:15px;color:var(--muted);flex-basis:100%}
+.ver{font-family:var(--display);font-size:16px;line-height:1.6;border-left:2px solid var(--accent);padding:2px 0 2px 14px}
+.ver.modern{border-left:2px dashed var(--muted)}
+.ver.modern + .ver.modern{margin-top:10px}
+.art li{display:block}
+.art .t{font-family:var(--display);font-size:16px}
+.art a.t{color:var(--text);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px}
+.art a.t:hover{text-decoration-color:var(--figure)}
+.art .m{font-size:12px;color:var(--muted)}
+.has-pic{position:relative}
+.pic-btn{display:inline-flex;vertical-align:-2px;margin-left:8px;padding:2px;width:22px;height:20px;background:none;border:none;color:var(--muted);cursor:pointer}
+.pic-btn svg{width:16px;height:16px}
+.pic-btn[aria-expanded="true"]{color:var(--accent)}
+.pic-btn:focus-visible{outline:1.5px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.pic-btn{display:none}}
+.art-pic{margin:8px 0 4px}
+.art-pic img{display:block;width:auto;max-width:100%;max-height:300px;border:1px solid var(--rule)}
+.art-pic img:not([src]){width:100%;height:180px;background:var(--bg)}
+.art-pic figcaption{margin-top:6px;font:11px/1.4 var(--ui);color:var(--muted)}
+.art-pic figcaption a{color:var(--muted);text-underline-offset:3px}
+.art-pic.float{position:absolute;z-index:5;left:0;width:min(300px,100%);margin:0;padding:8px;background:var(--panel);border:1px solid var(--rule);box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.legend{font-size:12px;color:var(--muted);margin-top:22px}
+
+/* panels behind the phone toolbar */
+.opts{list-style:none;margin:14px 0 0;padding:0}
+.opts li{border-top:1px solid var(--rule)}
+.opts li:first-child{border-top:none}
+.opt{display:flex;width:100%;align-items:center;gap:12px;background:none;border:none;padding:12px 0;font:17px var(--display);color:var(--text);text-align:left;cursor:pointer}
+.opt[aria-pressed="false"]{opacity:.4}
+.opt svg{flex:0 0 auto;width:34px;height:12px;overflow:visible}
+.opt small{display:block;font:12px var(--ui);color:var(--muted);margin-top:2px}
+.opt:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.search{width:100%;font:17px var(--display);color:var(--text);background:var(--bg);border:1px solid var(--rule);border-radius:2px;padding:10px 12px;margin-top:14px}
+.search:focus{outline:1.5px solid var(--accent);outline-offset:1px}
+.found{margin-top:10px}
+.found li{cursor:pointer;padding:3px 0}
+
+/* the bar at the top of the card: the close button and, once the big name scrolls away, the name; it stays in view */
+.sheet-bar{position:sticky;top:-22px;z-index:2;margin:-22px -22px 0;background:var(--bg-2)}
+.sheet-top{position:relative;display:flex;align-items:center;gap:10px;height:44px;padding:0 10px 0 22px}
+.sheet-name{flex:1;min-width:0;font:20px/1 var(--display);color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transition:opacity .2s;pointer-events:none}
+.sheet-name.on{opacity:1}
+.sheet-bar:is(.has-nav,:has(.sheet-name.on)){border-bottom:1px solid var(--rule)}
+/* the card's own navigator: a row of section names under the bar */
+.sheet-nav{display:none;gap:6px;overflow-x:auto;padding:2px 22px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.sheet-nav::-webkit-scrollbar{display:none}
+.has-nav .sheet-nav{display:flex}
+.nav-chip{flex:0 0 auto;font:600 12px/1 var(--ui);color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 11px;cursor:pointer;white-space:nowrap}
+.nav-chip:hover{color:var(--text)}
+.nav-chip.on{color:var(--bg-2);background:var(--text);border-color:var(--text)}
+.nav-chip:focus-visible{outline:1.5px solid var(--accent);outline-offset:2px}
+.sheet-close{position:relative;z-index:1;flex:0 0 auto;width:40px;height:40px;display:grid;place-items:center;margin-left:auto;background:none;border:none;border-radius:50%;color:var(--muted);cursor:pointer;padding:0}
+.sheet-close svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.sheet-close:hover{color:var(--text)}
+.sheet-close:focus-visible{outline:1.5px solid var(--accent);outline-offset:-4px}
+#cardBody .card-top .close{display:none}   /* the bar’s close button replaces it */
+#cardBody .card-top{margin-top:-6px}
+/* phone sheet: half height, pulled up to full height by the grip */
+.grip{display:none}
+@media (max-width:899px){
+  #card{height:62%;max-height:none;padding-top:0;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px));transition:transform .3s ease,height .3s ease}
+  #card.full{height:calc(100% - 12px - env(safe-area-inset-top,0px))}
+  .sheet-bar{top:0;margin-top:0}
+  .sheet-top{height:48px}
+  .grip{display:block;position:absolute;inset:0;width:100%;height:100%;margin:0;border:none;background:none;cursor:grab;touch-action:none}
+  .sheet-name{padding-top:8px}
+  #cardBody .card-top{margin-top:0}
+  .grip::before{content:"";position:absolute;left:50%;top:8px;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:var(--rule)}
+  .grip:focus-visible::before{background:var(--accent)}
+}
+@media (max-width:899px) and (prefers-reduced-motion: reduce){#card{transition:none}}
+.found .none,.finder-list .none{font:15px var(--display);color:var(--muted)}
+.card-name .draft{font-size:10px;margin-left:10px;position:relative;top:-6px}
+
+/* the Twelve Olympians */
+.oly-text{margin:0}
+.oly-mark{width:12px;height:10px;margin-right:7px;vertical-align:-1px;overflow:visible}
+.oly-mark .oly.some{fill:var(--bg-2)}
+.oly-note{font-size:12px;color:var(--muted);margin:6px 0 0}
+/* a group’s members, each with the Greek name */
+.greek-sm{font-family:var(--display);font-size:15px;color:var(--muted)}
+/* made immortal */
+.imm-mark{width:11px;height:11px;margin-right:7px;vertical-align:-1px;overflow:visible}
+/* close family: a small map of the figure's nearest links */
+.cf-svg{width:100%;height:auto;display:block;overflow:visible}
+.cf-h{font:600 9px var(--ui);letter-spacing:.1em;text-transform:uppercase;fill:var(--muted)}
+.cf-l{font:14px var(--display);fill:var(--text)}
+.cf-l.me{font-size:16px}
+.cf-more{font:12px var(--ui);fill:var(--muted)}
+.cf .e-marriage .inner{stroke:var(--bg-2)}
+.cf-n{cursor:pointer}
+.cf-n .hit{fill:transparent}
+.cf-n:hover .cf-l,.cf-n:focus-visible .cf-l{text-decoration:underline}
+.cf-n:focus{outline:none}
+.cf-me .dot{fill:var(--accent)}
+.cf-note{font-size:12px;color:var(--muted);margin:6px 0 0}
+.cf-l{paint-order:stroke;stroke:var(--bg-2);stroke-width:5px;stroke-linejoin:round}
+.cf-wheel{margin-top:4px}
+.cf-src{font:500 9.5px var(--ui);fill:var(--muted);paint-order:stroke;stroke:var(--bg-2);stroke-width:4px}
+.opt.static{cursor:default}
+
+/* family tree in the card: the bands of partners stack under the figure */
+.ft-wrap .cf-svg{margin:0}
+.ft-band.more{display:none}
+.cf-l.kid{font-size:13px}
+.ft-all{display:block;margin:6px 0 0 34px;background:none;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;font:500 12px var(--ui);color:var(--text);cursor:pointer}
+.ft-all:hover{border-color:var(--muted)}
+details.who{margin-top:12px;border-top:1px solid var(--rule);padding-top:8px}
+details.who summary{cursor:pointer;font:600 12px var(--ui);color:var(--muted);list-style:none;padding:6px 0}
+details.who summary::-webkit-details-marker{display:none}
+details.who summary::before{content:"\25B8";display:inline-block;width:14px;transition:transform .2s}
+details.who[open] summary::before{transform:rotate(90deg)}
+.sec h4{font:600 10.5px var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
+
+/* In the sky: the constellation, with Hevelius’ engraving */
+.sky-name{font:20px var(--display);margin:0 0 8px}
+.sky-pic{margin:0 0 10px}
+.sky-pic img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:var(--bg)}
+.sky-pic figcaption{font-size:11.5px;color:var(--muted);margin-top:4px}
+.sky-pic figcaption a{color:inherit}
+.sky-text{font:16px/1.5 var(--display);margin:0 0 6px}
+.sky-cite{font-size:12.5px;color:var(--muted);margin:0}
+.sky-cite .srcs::before{content:" · "}
+/* the Guide as a live legend: each item shows an example on the tree */
+.opt.demo[aria-pressed="false"]{opacity:1}
+.opt.demo[aria-pressed="true"]{color:var(--accent)}
+.opt.demo > span{flex:1;min-width:0}
+.opt.demo .demo-note{font:15px/1.45 var(--display);color:var(--text);margin-top:6px}
+.opt.demo .demo-note:empty{display:none}
+.opt.demo .demo-note .srcs{display:block;font:12px var(--ui);color:var(--muted);margin-top:3px}
+.demo-hint{font:13px var(--ui);color:var(--muted);margin:6px 0 0}
+.sec .rels.about + .opts{margin-top:4px}

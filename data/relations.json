@@ -1,0 +1,5200 @@
+[
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "tantalus",
+    "sources": ["T", "L"],
+    "cite": {"L": "Hyginus, Fabulae 82"}
+  },
+  {
+    "type": "parent",
+    "from": "pluto",
+    "to": "tantalus",
+    "sources": ["L"],
+    "cite": {"L": "Hyginus, Fabulae 82"}
+  },
+  {
+    "type": "parent",
+    "from": "tantalus",
+    "to": "pelops",
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.3", "L": "Hyginus, Fabulae 82–83"}
+  },
+  {
+    "type": "parent",
+    "from": "tantalus",
+    "to": "niobe",
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 9"}
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "oenomaus",
+    "sources": ["L"],
+    "cite": {"L": "Hyginus, Fabulae 84"}
+  },
+  {
+    "type": "parent",
+    "from": "oenomaus",
+    "to": "hippodamia",
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.4", "L": "Hyginus, Fabulae 84"}
+  },
+  {
+    "type": "parent",
+    "from": "hermes",
+    "to": "myrtilus",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.6", "L": "Hyginus, Fabulae 224"}
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "atreus",
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.10", "L": "Hyginus, Fabulae 88"}
+  },
+  {
+    "type": "parent",
+    "from": "hippodamia",
+    "to": "atreus",
+    "sources": ["T", "A", "L"],
+    "cite": {"L": "Hyginus, Fabulae 88"}
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "thyestes",
+    "sources": ["T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.10", "L": "Hyginus, Fabulae 86"}
+  },
+  {
+    "type": "parent",
+    "from": "hippodamia",
+    "to": "thyestes",
+    "sources": ["T", "A", "L"],
+    "cite": {"L": "Hyginus, Fabulae 86"}
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "chrysippus",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 85"}
+  },
+  {
+    "type": "parent",
+    "from": "atreus",
+    "to": "pleisthenes",
+    "sources": ["H", "T"]
+  },
+  {
+    "type": "parent",
+    "from": "atreus",
+    "to": "agamemnon",
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Iliad 1.24", "A": "Apollodorus, Epitome 3.12", "L": "Hyginus, Fabulae 97"}
+  },
+  {
+    "type": "parent",
+    "from": "atreus",
+    "to": "menelaus",
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Iliad 4.98", "A": "Apollodorus, Epitome 3.12", "L": "Hyginus, Fabulae 97"}
+  },
+  {
+    "type": "parent",
+    "from": "pleisthenes",
+    "to": "agamemnon",
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.2.2"}
+  },
+  {
+    "type": "parent",
+    "from": "pleisthenes",
+    "to": "menelaus",
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.2.2"}
+  },
+  {
+    "type": "parent",
+    "from": "aerope",
+    "to": "agamemnon",
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 3.12", "L": "Hyginus, Fabulae 97"}
+  },
+  {
+    "type": "parent",
+    "from": "aerope",
+    "to": "menelaus",
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 3.12"}
+  },
+  {
+    "type": "parent",
+    "from": "thyestes",
+    "to": "pelopia",
+    "sources": ["L"],
+    "cite": {"L": "Hyginus, Fabulae 88"}
+  },
+  {
+    "type": "parent",
+    "from": "thyestes",
+    "to": "aegisthus",
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Odyssey 4.517–518", "A": "Apollodorus, Epitome 2.14", "L": "Hyginus, Fabulae 87–88"}
+  },
+  {
+    "type": "parent",
+    "from": "pelopia",
+    "to": "aegisthus",
+    "sources": ["L"],
+    "cite": {"L": "Hyginus, Fabulae 87–88"}
+  },
+  {
+    "type": "parent",
+    "from": "tyndareus",
+    "to": "clytemnestra",
+    "sources": ["E", "H", "T", "A"],
+    "cite": {"E": "Odyssey 24.199", "A": "Apollodorus 3.10.7"}
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "clytemnestra",
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.10.6–7"}
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "helen",
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Iliad 3.418", "A": "Apollodorus 3.10.7"}
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "helen",
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus 3.10.7"}
+  },
+  {
+    "type": "parent",
+    "from": "nemesis",
+    "to": "helen",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Cypria (in Athenaeus 8.334b)", "A": "Apollodorus 3.10.7", "L": "Hyginus, Astronomica 2.8"}
+  },
+  {
+    "type": "parent",
+    "from": "tyndareus",
+    "to": "castor",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.298–300", "A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 77"}
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "castor",
+    "sources": ["E", "H", "A", "L"],
+    "cite": {"E": "Homeric Hymn 33.1–3", "A": "Apollodorus 1.8.2", "L": "Hyginus, Fabulae 14"}
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "castor",
+    "sources": ["E", "A"],
+    "cite": {"E": "Odyssey 11.298–300", "A": "Apollodorus 3.10.7"}
+  },
+  {
+    "type": "parent",
+    "from": "tyndareus",
+    "to": "polydeuces",
+    "sources": ["E"],
+    "cite": {"E": "Odyssey 11.298–300"}
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "polydeuces",
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Homeric Hymn 33.1–3", "A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 77"}
+  },
+  {
+    "type": "parent",
+    "from": "leda",
+    "to": "polydeuces",
+    "sources": ["E", "A"],
+    "cite": {"E": "Odyssey 11.298–300", "A": "Apollodorus 3.10.7"}
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "iphigenia",
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 98"}
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "iphigenia",
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.16"}
+  },
+  {
+    "type": "parent",
+    "from": "theseus",
+    "to": "iphigenia",
+    "sources": ["T", "L"],
+    "note": "Stesichorus’s version",
+    "cite": {"L": "Pausanias 2.22.6–7"}
+  },
+  {
+    "type": "parent",
+    "from": "helen",
+    "to": "iphigenia",
+    "sources": ["T", "L"],
+    "note": "Stesichorus’s version",
+    "cite": {"L": "Pausanias 2.22.6–7"}
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "electra",
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 122"}
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "electra",
+    "sources": ["H", "T", "A", "L"],
+    "cite": {"A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 122"}
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "chrysothemis",
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Iliad 9.145", "A": "Apollodorus, Epitome 2.16"}
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "chrysothemis",
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 2.16"}
+  },
+  {
+    "type": "parent",
+    "from": "agamemnon",
+    "to": "orestes",
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Iliad 9.142–143", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 119"}
+  },
+  {
+    "type": "parent",
+    "from": "clytemnestra",
+    "to": "orestes",
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Odyssey 3.309–310", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 119"}
+  },
+  {
+    "type": "parent",
+    "from": "menelaus",
+    "to": "hermione",
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Odyssey 4.12–14", "A": "Apollodorus 3.11.1"}
+  },
+  {
+    "type": "parent",
+    "from": "helen",
+    "to": "hermione",
+    "sources": ["E", "T", "A"],
+    "cite": {"E": "Odyssey 4.12–14", "A": "Apollodorus 3.11.1"}
+  },
+  {
+    "type": "parent",
+    "from": "labdacus",
+    "to": "laius",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "laius",
+    "to": "oedipus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "oedipus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "eteocles",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "polynices",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "antigone",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oedipus",
+    "to": "ismene",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "eteocles",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "polynices",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "antigone",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "jocasta",
+    "to": "ismene",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "pelops",
+    "to": "hippodamia",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "atreus",
+    "to": "aerope",
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 2.10"}
+  },
+  {
+    "type": "marriage",
+    "from": "pleisthenes",
+    "to": "aerope",
+    "sources": ["H", "T", "A"],
+    "cite": {"A": "Apollodorus 3.2.2"}
+  },
+  {
+    "type": "marriage",
+    "from": "agamemnon",
+    "to": "clytemnestra",
+    "sources": ["E", "H", "T", "A", "L"],
+    "cite": {"E": "Iliad 1.113–114", "A": "Apollodorus, Epitome 2.16", "L": "Hyginus, Fabulae 117"}
+  },
+  {
+    "type": "marriage",
+    "from": "menelaus",
+    "to": "helen",
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"A": "Apollodorus 3.10.9", "L": "Hyginus, Fabulae 78"}
+  },
+  {
+    "type": "marriage",
+    "from": "tyndareus",
+    "to": "leda",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.298", "A": "Apollodorus 3.10.5", "L": "Hyginus, Fabulae 78"}
+  },
+  {
+    "type": "marriage",
+    "from": "orestes",
+    "to": "hermione",
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 6.28"}
+  },
+  {
+    "type": "marriage",
+    "from": "pylades",
+    "to": "electra",
+    "sources": ["T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 6.28"}
+  },
+  {
+    "type": "marriage",
+    "from": "laius",
+    "to": "jocasta",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "oedipus",
+    "to": "jocasta",
+    "sources": ["E", "T", "A", "L"],
+    "note": "without knowing she was his mother"
+  },
+  {
+    "type": "affair",
+    "from": "thyestes",
+    "to": "aerope",
+    "sources": ["T", "A", "L"],
+    "note": "seduced Aerope, his brother’s wife",
+    "cite": {"A": "Apollodorus, Epitome 2.10–11", "L": "Hyginus, Fabulae 86"}
+  },
+  {
+    "type": "affair",
+    "from": "aegisthus",
+    "to": "clytemnestra",
+    "sources": ["E", "T"],
+    "note": "became the lover of Clytemnestra while Agamemnon was at Troy",
+    "cite": {"E": "Odyssey 3.263–272"}
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "leda",
+    "sources": ["T", "A", "L"],
+    "note": "came to Leda in the form of a swan",
+    "cite": {"A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 77"}
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "nemesis",
+    "sources": ["E", "A", "L"],
+    "note": "pursued Nemesis through many shapes",
+    "cite": {"E": "Cypria (in Athenaeus 8.334b)", "A": "Apollodorus 3.10.7", "L": "Hyginus, Astronomica 2.8"}
+  },
+  {
+    "type": "affair",
+    "from": "paris",
+    "to": "helen",
+    "sources": ["E", "T", "A"],
+    "note": "carried Helen off to Troy",
+    "cite": {"E": "Iliad 3.443–445", "A": "Apollodorus, Epitome 3.3"}
+  },
+  {
+    "type": "affair",
+    "from": "theseus",
+    "to": "helen",
+    "sources": ["T", "A", "L"],
+    "note": "abducted Helen when she was a girl",
+    "cite": {"A": "Apollodorus 3.10.7", "L": "Hyginus, Fabulae 79"}
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "tantalus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "punished Tantalus forever in the underworld",
+    "cite": {"E": "Odyssey 11.582–592", "A": "Apollodorus, Epitome 2.1", "L": "Hyginus, Fabulae 82"}
+  },
+  {
+    "type": "feud",
+    "from": "pelops",
+    "to": "oenomaus",
+    "sources": ["T", "A", "L"],
+    "note": "beat Oenomaus in the chariot race; the king died in the wreck",
+    "cite": {"A": "Apollodorus, Epitome 2.7", "L": "Hyginus, Fabulae 84"}
+  },
+  {
+    "type": "feud",
+    "from": "pelops",
+    "to": "myrtilus",
+    "sources": ["T", "A", "L"],
+    "note": "threw Myrtilus into the sea",
+    "cite": {"A": "Apollodorus, Epitome 2.8", "L": "Hyginus, Fabulae 84"}
+  },
+  {
+    "type": "feud",
+    "from": "artemis",
+    "to": "niobe",
+    "sources": ["E", "A", "L"],
+    "note": "killed the children of Niobe, with Apollo",
+    "cite": {"E": "Iliad 24.602–609", "A": "Apollodorus 3.5.6"}
+  },
+  {
+    "type": "feud",
+    "from": "atreus",
+    "to": "thyestes",
+    "sources": ["T", "A", "L"],
+    "note": "served Thyestes his own sons at a feast",
+    "cite": {"A": "Apollodorus, Epitome 2.13", "L": "Hyginus, Fabulae 88"}
+  },
+  {
+    "type": "feud",
+    "from": "aegisthus",
+    "to": "atreus",
+    "sources": ["A", "L"],
+    "note": "killed Atreus and gave the throne back to his father Thyestes",
+    "cite": {"A": "Apollodorus, Epitome 2.14", "L": "Hyginus, Fabulae 88"}
+  },
+  {
+    "type": "feud",
+    "from": "agamemnon",
+    "to": "artemis",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed a deer sacred to Artemis and boasted of it",
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 3.21", "L": "Hyginus, Fabulae 98"}
+  },
+  {
+    "type": "feud",
+    "from": "agamemnon",
+    "to": "iphigenia",
+    "sources": ["E", "T", "A", "L"],
+    "note": "sacrificed Iphigenia at Aulis",
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 3.22", "L": "Hyginus, Fabulae 98"}
+  },
+  {
+    "type": "feud",
+    "from": "clytemnestra",
+    "to": "agamemnon",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Agamemnon on his return from Troy",
+    "cite": {"E": "Odyssey 3.234–235; 24.96–97", "A": "Apollodorus, Epitome 6.23", "L": "Hyginus, Fabulae 117"}
+  },
+  {
+    "type": "feud",
+    "from": "aegisthus",
+    "to": "agamemnon",
+    "sources": ["E", "A"],
+    "note": "killed Agamemnon at a feast",
+    "cite": {"E": "Odyssey 1.35–36; 24.96–97", "A": "Apollodorus, Epitome 6.23"}
+  },
+  {
+    "type": "feud",
+    "from": "orestes",
+    "to": "clytemnestra",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "killed Clytemnestra, his own mother",
+    "cite": {"E": "Odyssey 3.309–310", "A": "Apollodorus, Epitome 6.25", "L": "Hyginus, Fabulae 119"}
+  },
+  {
+    "type": "feud",
+    "from": "orestes",
+    "to": "aegisthus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Aegisthus to avenge his father",
+    "cite": {"E": "Odyssey 1.298–300; 3.306–308", "A": "Apollodorus, Epitome 6.25", "L": "Hyginus, Fabulae 119"}
+  },
+  {
+    "type": "feud",
+    "from": "menelaus",
+    "to": "paris",
+    "sources": ["E"],
+    "note": "fought Paris in single combat",
+    "cite": {"E": "Iliad 3.340–382"}
+  },
+  {
+    "type": "feud",
+    "from": "laius",
+    "to": "chrysippus",
+    "sources": ["A", "L"],
+    "note": "carried off Chrysippus while teaching him to drive a chariot"
+  },
+  {
+    "type": "feud",
+    "from": "oedipus",
+    "to": "laius",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Laius at a crossroads, not knowing he was his father"
+  },
+  {
+    "type": "feud",
+    "from": "eteocles",
+    "to": "polynices",
+    "sources": ["T", "A", "L"],
+    "note": "killed Polynices at the gates of Thebes and died by his hand"
+  },
+  {
+    "type": "transform",
+    "from": "artemis",
+    "to": "iphigenia",
+    "sources": ["E", "H", "T", "A"],
+    "note": "replaced Iphigenia with a deer, or made her immortal",
+    "cite": {"E": "Cypria (Proclus’ summary)", "A": "Apollodorus, Epitome 3.22"}
+  },
+  {
+    "type": "curse",
+    "from": "myrtilus",
+    "to": "pelops",
+    "sources": ["T", "A"],
+    "note": "cursed Pelops and all his line as he fell into the sea",
+    "cite": {"A": "Apollodorus, Epitome 2.8"}
+  },
+  {
+    "type": "curse",
+    "from": "thyestes",
+    "to": "atreus",
+    "sources": ["T"],
+    "note": "cursed the house of Atreus after the feast"
+  },
+  {
+    "type": "curse",
+    "from": "pelops",
+    "to": "laius",
+    "sources": ["L"],
+    "note": "cursed Laius for abducting Chrysippus, in a tradition known only from later sources"
+  },
+  {
+    "type": "curse",
+    "from": "oedipus",
+    "to": "eteocles",
+    "sources": ["E", "T", "A"],
+    "note": "cursed his son Eteocles"
+  },
+  {
+    "type": "curse",
+    "from": "oedipus",
+    "to": "polynices",
+    "sources": ["E", "T", "A"],
+    "note": "cursed his son Polynices"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "uranus",
+    "sources": ["H"]
+  },
+  {
+    "type": "marriage",
+    "from": "uranus",
+    "to": "gaia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "cronus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "cronus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "rhea",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "rhea",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "oceanus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "oceanus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "tethys",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "tethys",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "coeus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "coeus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "phoebe",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "phoebe",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "dione",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "dione",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "aphrodite",
+    "sources": ["H"],
+    "note": "from the sea foam around his severed flesh"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "uranus",
+    "sources": ["H", "A"],
+    "note": "castrated Uranus with a sickle, at Gaia’s urging"
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "nemesis",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "nemesis",
+    "sources": ["L"],
+    "note": "Pausanias’s version"
+  },
+  {
+    "type": "marriage",
+    "from": "cronus",
+    "to": "rhea",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "hestia",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "hestia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "demeter",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "demeter",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "hades",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "hades",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "poseidon",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "poseidon",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "hera",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "hera",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cronus",
+    "to": "zeus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "rhea",
+    "to": "zeus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "cronus",
+    "sources": ["E", "H", "A", "L"],
+    "note": "overthrew Cronus and freed the brothers and sisters he had swallowed"
+  },
+  {
+    "type": "marriage",
+    "from": "oceanus",
+    "to": "tethys",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "metis",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "metis",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "dione",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "dione",
+    "sources": ["H"]
+  },
+  {
+    "type": "marriage",
+    "from": "coeus",
+    "to": "phoebe",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "coeus",
+    "to": "leto",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phoebe",
+    "to": "leto",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "atlas",
+    "to": "maia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "zeus",
+    "to": "hera",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "zeus",
+    "to": "metis",
+    "sources": ["H"],
+    "note": "his first wife"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "metis",
+    "sources": ["H", "A"],
+    "note": "swallowed Metis while she was pregnant with Athena"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "athena",
+    "sources": ["E", "H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "metis",
+    "to": "athena",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "ares",
+    "sources": ["E", "H", "A"],
+    "cite": {"A": "Apollodorus 1.3.1"}
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "ares",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hephaestus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "hephaestus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "leto",
+    "sources": ["E", "H", "A"],
+    "note": "lay with Leto, who bore him Apollo and Artemis"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "apollo",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "leto",
+    "to": "apollo",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "artemis",
+    "sources": ["E", "H", "A"],
+    "cite": {"A": "Apollodorus 1.4.1"}
+  },
+  {
+    "type": "parent",
+    "from": "leto",
+    "to": "artemis",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "maia",
+    "sources": ["E", "H", "A"],
+    "note": "visited Maia in her cave by night"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hermes",
+    "sources": ["E", "H", "A"],
+    "cite": {"E": "Homeric Hymn to Hermes 1–4; Odyssey 8.335", "A": "Apollodorus 3.10.2"}
+  },
+  {
+    "type": "parent",
+    "from": "maia",
+    "to": "hermes",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "semele",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "loved Semele, a mortal"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "dionysus",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "semele",
+    "to": "dionysus",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "semele",
+    "sources": ["A", "L"],
+    "note": "tricked Semele into asking Zeus to come to her as he came to Hera, and the sight killed her"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "persephone",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "demeter",
+    "to": "persephone",
+    "sources": ["E", "H"]
+  },
+  {
+    "type": "affair",
+    "from": "hades",
+    "to": "persephone",
+    "sources": ["E", "H", "A", "L"],
+    "note": "carried Persephone off to the underworld"
+  },
+  {
+    "type": "marriage",
+    "from": "hades",
+    "to": "persephone",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "aphrodite",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "dione",
+    "to": "aphrodite",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "hephaestus",
+    "to": "aphrodite",
+    "sources": ["E", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "ares",
+    "to": "aphrodite",
+    "sources": ["E", "L"],
+    "note": "became the lover of Aphrodite, Hephaestus’s wife"
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "pelops",
+    "sources": ["T"],
+    "note": "fell in love with the boy Pelops and carried him off to Olympus"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "niobe",
+    "sources": ["E", "A", "L"],
+    "note": "killed the children of Niobe, with Artemis"
+  },
+  {
+    "type": "feud",
+    "from": "niobe",
+    "to": "leto",
+    "sources": ["E", "A", "L"],
+    "note": "boasted that she had more children than Leto"
+  },
+  {
+    "type": "feud",
+    "from": "demeter",
+    "to": "pelops",
+    "sources": ["L"],
+    "note": "ate the shoulder of Pelops at Tantalus’s feast"
+  },
+  {
+    "type": "marriage",
+    "from": "cadmus",
+    "to": "harmonia",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "harmonia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aphrodite",
+    "to": "harmonia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "polydorus",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "polydorus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "semele",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "semele",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "agave",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "agave",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "polydorus",
+    "to": "labdacus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "agave",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "cadmus",
+    "to": "ares",
+    "sources": ["T", "A", "L"],
+    "note": "killed the serpent of Ares that guarded the spring of Thebes"
+  },
+  {
+    "type": "feud",
+    "from": "dionysus",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"],
+    "note": "drove the women of Thebes mad when Pentheus refused his rites, and they tore him apart"
+  },
+  {
+    "type": "feud",
+    "from": "agave",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"],
+    "note": "tore her son apart in a Bacchic frenzy, taking him for a wild beast"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "themis",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "mnemosyne",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "themis",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "mnemosyne",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "zeus",
+    "to": "themis",
+    "sources": ["H"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "mnemosyne",
+    "sources": ["H", "A"],
+    "note": "lay with Mnemosyne for nine nights"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "muses",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "mnemosyne",
+    "to": "muses",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "horae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "moirai",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "themis",
+    "to": "horae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "themis",
+    "to": "moirai",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "moirai",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "charites",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "oceanids",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "oceanids",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "atlas",
+    "to": "pleiades",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "erinyes",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "erinyes",
+    "sources": ["H", "A"],
+    "note": "from his spilled blood"
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "erinyes",
+    "sources": ["T"]
+  },
+  {
+    "type": "feud",
+    "from": "erinyes",
+    "to": "orestes",
+    "sources": ["T", "A", "L"],
+    "note": "hunted Orestes across Greece for killing his mother",
+    "cite": {"A": "Apollodorus, Epitome 6.25", "L": "Hyginus, Fabulae 119–120"}
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "crius",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "crius",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "hyperion",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "hyperion",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "theia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "theia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "iapetus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "iapetus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "hyperion",
+    "to": "theia",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hyperion",
+    "to": "helios",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "theia",
+    "to": "helios",
+    "sources": ["H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hyperion",
+    "to": "selene",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "theia",
+    "to": "selene",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hyperion",
+    "to": "eos",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "theia",
+    "to": "eos",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "atlas",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "prometheus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "epimetheus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iapetus",
+    "to": "menoetius",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "themis",
+    "to": "prometheus",
+    "sources": ["T"]
+  },
+  {
+    "type": "parent",
+    "from": "crius",
+    "to": "astraeus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "crius",
+    "to": "pallas",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "crius",
+    "to": "perses",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "coeus",
+    "to": "asteria",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phoebe",
+    "to": "asteria",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "perses",
+    "to": "asteria",
+    "sources": ["H"]
+  },
+  {
+    "type": "marriage",
+    "from": "astraeus",
+    "to": "eos",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "perses",
+    "to": "hecate",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "asteria",
+    "to": "hecate",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "prometheus",
+    "sources": ["H", "T", "A"],
+    "note": "chained Prometheus and sent an eagle to eat his liver"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "menoetius",
+    "sources": ["H", "A"],
+    "note": "struck Menoetius down with a thunderbolt"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "atlas",
+    "sources": ["H"],
+    "note": "set Atlas to hold up the sky at the ends of the earth"
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "asteria",
+    "sources": ["A", "L"],
+    "note": "pursued Asteria, who escaped him as a quail"
+  },
+  {
+    "type": "transform",
+    "from": "iphigenia",
+    "to": "hecate",
+    "sources": ["H"],
+    "note": "became Hecate, by the will of Artemis"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hebe",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "hebe",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "acrisius",
+    "to": "danae",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "danae",
+    "sources": ["E", "T", "A", "L"],
+    "note": "came to Danaë as a shower of gold"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "perseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "danae",
+    "to": "perseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "acrisius",
+    "sources": ["A", "L"],
+    "note": "killed Acrisius by accident with a discus, as the oracle foretold"
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "medusa",
+    "sources": ["H", "T", "A", "L"],
+    "note": "cut off Medusa’s head"
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "medusa",
+    "sources": ["H", "A", "L"],
+    "note": "lay with Medusa, who bore him Pegasus and Chrysaor"
+  },
+  {
+    "type": "marriage",
+    "from": "perseus",
+    "to": "andromeda",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "perseus",
+    "to": "alcaeus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromeda",
+    "to": "alcaeus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "perseus",
+    "to": "electryon",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromeda",
+    "to": "electryon",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "perseus",
+    "to": "sthenelus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromeda",
+    "to": "sthenelus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "pelops",
+    "to": "nicippe",
+    "sources": ["A"]
+  },
+  {
+    "type": "marriage",
+    "from": "sthenelus",
+    "to": "nicippe",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "sthenelus",
+    "to": "eurystheus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "nicippe",
+    "to": "eurystheus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "alcaeus",
+    "to": "amphitryon",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "electryon",
+    "to": "alcmene",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "amphitryon",
+    "to": "electryon",
+    "sources": ["H", "A"],
+    "note": "killed Electryon over cattle: in anger in Hesiod, by accident in Apollodorus"
+  },
+  {
+    "type": "marriage",
+    "from": "amphitryon",
+    "to": "alcmene",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "alcmene",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "came to Alcmene in Amphitryon’s likeness"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "heracles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "alcmene",
+    "to": "heracles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "amphitryon",
+    "to": "iphicles",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "alcmene",
+    "to": "iphicles",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "heracles",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "hated Heracles from before his birth, and sent him mad"
+  },
+  {
+    "type": "feud",
+    "from": "eurystheus",
+    "to": "heracles",
+    "sources": ["E", "T", "A", "L"],
+    "note": "set Heracles his labours"
+  },
+  {
+    "type": "parent",
+    "from": "menoeceus",
+    "to": "jocasta",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "menoeceus",
+    "to": "creon",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "creon",
+    "to": "megara",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "heracles",
+    "to": "megara",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "megara",
+    "sources": ["T", "L"],
+    "note": "killed Megara too, in the same madness"
+  },
+  {
+    "type": "marriage",
+    "from": "heracles",
+    "to": "deianira",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "deianira",
+    "to": "heracles",
+    "sources": ["H", "T", "A", "L"],
+    "note": "killed Heracles unknowingly, with the poisoned robe"
+  },
+  {
+    "type": "marriage",
+    "from": "heracles",
+    "to": "hebe",
+    "sources": ["E", "H", "T", "A"],
+    "note": "after he was made a god"
+  },
+  {
+    "type": "feud",
+    "from": "creon",
+    "to": "antigone",
+    "sources": ["T", "A"],
+    "note": "walled Antigone up alive for burying Polynices"
+  },
+  {
+    "type": "parent",
+    "from": "helios",
+    "to": "circe",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "circe",
+    "sources": ["E", "H", "A"],
+    "note": "Perse"
+  },
+  {
+    "type": "parent",
+    "from": "helios",
+    "to": "aeetes",
+    "sources": ["E", "H", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "aeetes",
+    "sources": ["E", "H"],
+    "note": "Perse"
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "salmoneus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "cretheus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "athamas",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "salmoneus",
+    "sources": ["H", "A", "L"],
+    "note": "struck Salmoneus with a thunderbolt for playing Zeus"
+  },
+  {
+    "type": "parent",
+    "from": "salmoneus",
+    "to": "tyro",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "tyro",
+    "sources": ["E", "H", "A"],
+    "note": "came to Tyro in the shape of the river Enipeus"
+  },
+  {
+    "type": "marriage",
+    "from": "cretheus",
+    "to": "tyro",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "pelias",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "pelias",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "cretheus",
+    "to": "aeson",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "aeson",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "pelias",
+    "to": "aeson",
+    "sources": ["A"],
+    "note": "took Aeson’s throne, and drove him to his death"
+  },
+  {
+    "type": "parent",
+    "from": "cadmus",
+    "to": "ino",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "harmonia",
+    "to": "ino",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "athamas",
+    "to": "nephele",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "athamas",
+    "to": "ino",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "athamas",
+    "to": "phrixus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "nephele",
+    "to": "phrixus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "athamas",
+    "to": "helle",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "nephele",
+    "to": "helle",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "ino",
+    "to": "phrixus",
+    "sources": ["A", "L"],
+    "note": "plotted to have Phrixus sacrificed"
+  },
+  {
+    "type": "parent",
+    "from": "aeson",
+    "to": "jason",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "pelias",
+    "to": "jason",
+    "sources": ["H", "T", "A", "L"],
+    "note": "sent Jason for the Golden Fleece"
+  },
+  {
+    "type": "feud",
+    "from": "aeetes",
+    "to": "jason",
+    "sources": ["T", "A", "L"],
+    "note": "set Jason the fire-breathing bulls and the dragon’s teeth"
+  },
+  {
+    "type": "parent",
+    "from": "aeetes",
+    "to": "medea",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "medea",
+    "sources": ["H", "A"],
+    "note": "Idyia"
+  },
+  {
+    "type": "parent",
+    "from": "aeetes",
+    "to": "absyrtus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "jason",
+    "to": "medea",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "absyrtus",
+    "sources": ["T", "A", "L"],
+    "note": "killed her brother Absyrtus"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "pelias",
+    "sources": ["T", "A", "L"],
+    "note": "tricked Pelias’s daughters into killing him"
+  },
+  {
+    "type": "parent",
+    "from": "creon-corinth",
+    "to": "glauce",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "jason",
+    "to": "glauce",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "glauce",
+    "sources": ["T", "A", "L"],
+    "note": "burned Glauce to death with a poisoned robe and crown"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "creon-corinth",
+    "sources": ["T", "A", "L"],
+    "note": "burned Creon with his daughter"
+  },
+  {
+    "type": "affair",
+    "from": "jason",
+    "to": "hypsipyle",
+    "sources": ["E", "T", "A", "L"],
+    "note": "became Hypsipyle’s lover on Lemnos, and had sons by her"
+  },
+  {
+    "type": "parent",
+    "from": "muses",
+    "to": "orpheus",
+    "sources": ["A"],
+    "note": "Calliope"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "dardanus",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pleiades",
+    "to": "dardanus",
+    "sources": ["H", "A", "L"],
+    "note": "Electra"
+  },
+  {
+    "type": "parent",
+    "from": "dardanus",
+    "to": "erichthonius",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "erichthonius",
+    "to": "tros",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tros",
+    "to": "ilus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tros",
+    "to": "assaracus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tros",
+    "to": "ganymede",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "ganymede",
+    "sources": ["E", "T", "A", "L"],
+    "note": "carried Ganymede off to Olympus to pour his wine"
+  },
+  {
+    "type": "parent",
+    "from": "ilus",
+    "to": "laomedon",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "assaracus",
+    "to": "capys",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "capys",
+    "to": "anchises",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "laomedon",
+    "to": "priam",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "laomedon",
+    "to": "tithonus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "laomedon",
+    "to": "hesione",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "laomedon",
+    "to": "poseidon",
+    "sources": ["E", "A", "L"],
+    "note": "refused Poseidon his wages for the walls of Troy"
+  },
+  {
+    "type": "feud",
+    "from": "laomedon",
+    "to": "apollo",
+    "sources": ["E", "A", "L"],
+    "note": "refused Apollo his wages for a year’s labour"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "laomedon",
+    "sources": ["E", "A", "L"],
+    "note": "sacked Troy when Laomedon cheated him of his horses"
+  },
+  {
+    "type": "marriage",
+    "from": "eos",
+    "to": "tithonus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "aphrodite",
+    "to": "anchises",
+    "sources": ["E", "H", "A", "L"],
+    "note": "came to Anchises on Mount Ida in the shape of a mortal girl"
+  },
+  {
+    "type": "parent",
+    "from": "anchises",
+    "to": "aeneas",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aphrodite",
+    "to": "aeneas",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "priam",
+    "to": "hecuba",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "hector",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "hector",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "paris",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "paris",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "cassandra",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "cassandra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "polyxena",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "polyxena",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "troilus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "troilus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "deiphobus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "deiphobus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "curse",
+    "from": "apollo",
+    "to": "cassandra",
+    "sources": ["T", "A", "L"],
+    "note": "made sure no one would ever believe Cassandra’s prophecies"
+  },
+  {
+    "type": "marriage",
+    "from": "hector",
+    "to": "andromache",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hector",
+    "to": "astyanax",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "andromache",
+    "to": "astyanax",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "deiphobus",
+    "to": "helen",
+    "sources": ["T", "A"],
+    "note": "after Paris died"
+  },
+  {
+    "type": "feud",
+    "from": "menelaus",
+    "to": "deiphobus",
+    "sources": ["A"],
+    "note": "killed Deiphobus on the night Troy fell"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "aeacus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aeacus",
+    "to": "peleus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "peleus",
+    "to": "thetis",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "peleus",
+    "to": "achilles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "thetis",
+    "to": "achilles",
+    "sources": ["E", "H", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "agamemnon",
+    "to": "achilles",
+    "sources": ["E", "A"],
+    "note": "took Briseis, Achilles’ prize, and lost him from the fighting"
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "troilus",
+    "sources": ["E", "A"],
+    "note": "ambushed Troilus outside Troy and killed him"
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "hector",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Hector, and dragged his body behind his chariot"
+  },
+  {
+    "type": "feud",
+    "from": "paris",
+    "to": "achilles",
+    "sources": ["E", "T", "A", "L"],
+    "note": "shot Achilles with an arrow, guided by Apollo"
+  },
+  {
+    "type": "parent",
+    "from": "achilles",
+    "to": "neoptolemus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "neoptolemus",
+    "to": "priam",
+    "sources": ["T", "A", "L"],
+    "note": "killed Priam at the altar of Zeus"
+  },
+  {
+    "type": "feud",
+    "from": "neoptolemus",
+    "to": "polyxena",
+    "sources": ["T", "L"],
+    "note": "sacrificed Polyxena on Achilles’ tomb"
+  },
+  {
+    "type": "affair",
+    "from": "neoptolemus",
+    "to": "andromache",
+    "sources": ["T", "A", "L"],
+    "note": "took Andromache as his prize"
+  },
+  {
+    "type": "marriage",
+    "from": "neoptolemus",
+    "to": "hermione",
+    "sources": ["E", "T", "A"],
+    "cite": {"A": "Apollodorus, Epitome 6.14"}
+  },
+  {
+    "type": "feud",
+    "from": "orestes",
+    "to": "neoptolemus",
+    "sources": ["T", "A"],
+    "note": "had Neoptolemus killed at Delphi, or killed him himself",
+    "cite": {"A": "Apollodorus, Epitome 6.14"}
+  },
+  {
+    "type": "affair",
+    "from": "agamemnon",
+    "to": "cassandra",
+    "sources": ["E", "T", "A"],
+    "note": "took Cassandra home from Troy as his prize",
+    "cite": {"E": "Odyssey 11.421–423", "A": "Apollodorus, Epitome 5.23; 6.23"}
+  },
+  {
+    "type": "feud",
+    "from": "clytemnestra",
+    "to": "cassandra",
+    "sources": ["E", "T", "A"],
+    "note": "killed Cassandra with Agamemnon",
+    "cite": {"E": "Odyssey 11.421–423", "A": "Apollodorus, Epitome 6.23"}
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "sons-of-megara",
+    "sources": ["T", "A", "L"],
+    "note": "killed his sons by Megara in a fit of madness sent by Hera"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "sons-of-megara",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "megara",
+    "to": "sons-of-megara",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "iolaus",
+    "to": "megara",
+    "sources": ["A", "L"],
+    "note": "after Heracles gave her to him"
+  },
+  {
+    "type": "parent",
+    "from": "iphicles",
+    "to": "iolaus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "heracles",
+    "to": "iole",
+    "sources": ["T", "A", "L"],
+    "note": "sacked Oechalia to take Iole, and sent her home to Deianira"
+  },
+  {
+    "type": "affair",
+    "from": "heracles",
+    "to": "omphale",
+    "sources": ["T", "A", "L"],
+    "note": "was sold to Omphale as a slave for a year, and fathered a son by her"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "hyllus",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deianira",
+    "to": "hyllus",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "hyllus",
+    "to": "iole",
+    "sources": ["T", "A", "L"],
+    "note": "as his dying father commanded"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "macaria",
+    "sources": ["T", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deianira",
+    "to": "macaria",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "telephus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "telephus",
+    "sources": ["E", "A", "L"],
+    "note": "wounded Telephus, and healed him with rust from the same spear"
+  },
+  {
+    "type": "parent",
+    "from": "heracles",
+    "to": "tlepolemus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "eurystheus",
+    "to": "hyllus",
+    "sources": ["T", "A"],
+    "note": "hounded Hyllus and the other children of Heracles out of every city in Greece"
+  },
+  {
+    "type": "feud",
+    "from": "hyllus",
+    "to": "eurystheus",
+    "sources": ["A"],
+    "note": "killed Eurystheus, and brought his head to Alcmene"
+  },
+  {
+    "type": "feud",
+    "from": "iolaus",
+    "to": "eurystheus",
+    "sources": ["T"],
+    "note": "was made young again for a day, and brought Eurystheus down"
+  },
+  {
+    "type": "feud",
+    "from": "alcmene",
+    "to": "eurystheus",
+    "sources": ["T", "A"],
+    "note": "took her revenge on Eurystheus"
+  },
+  {
+    "type": "affair",
+    "from": "hephaestus",
+    "to": "athena",
+    "sources": ["A", "L"],
+    "note": "tried to force Athena, and his seed fell on the earth"
+  },
+  {
+    "type": "parent",
+    "from": "hephaestus",
+    "to": "erichthonius-athens",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "erichthonius-athens",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "erichthonius-athens",
+    "to": "pandion",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion",
+    "to": "erechtheus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion",
+    "to": "procne",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion",
+    "to": "philomela",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "tereus",
+    "to": "procne",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "tereus",
+    "to": "philomela",
+    "sources": ["T", "A", "L"],
+    "note": "raped Philomela and cut out her tongue"
+  },
+  {
+    "type": "parent",
+    "from": "tereus",
+    "to": "itys",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "procne",
+    "to": "itys",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "procne",
+    "to": "itys",
+    "sources": ["T", "A", "L"],
+    "note": "killed her son Itys, and served him to Tereus"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "tereus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "erechtheus",
+    "to": "cecrops-ii",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "cecrops-ii",
+    "to": "pandion-ii",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandion-ii",
+    "to": "aegeus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "aegeus",
+    "to": "aethra",
+    "sources": ["A", "L"],
+    "note": "lay with Aethra in Troezen on his way home from Delphi"
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "aethra",
+    "sources": ["A", "L"],
+    "note": "lay with Aethra the same night as Aegeus"
+  },
+  {
+    "type": "parent",
+    "from": "aegeus",
+    "to": "theseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "theseus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aethra",
+    "to": "theseus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "aegeus",
+    "to": "medea",
+    "sources": ["A", "L"],
+    "note": "after she fled Corinth"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "theseus",
+    "sources": ["A", "L"],
+    "note": "tried to poison Theseus at his father’s table"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "aegeus",
+    "sources": ["A", "L"],
+    "note": "forgot to change his black sail, and his father threw himself into the sea"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "minos",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "europa",
+    "to": "minos",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "europa",
+    "sources": ["E", "H", "A", "L"],
+    "note": "carried Europa over the sea to Crete in the shape of a bull"
+  },
+  {
+    "type": "parent",
+    "from": "helios",
+    "to": "pasiphae",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "pasiphae",
+    "sources": ["A"],
+    "note": "Perse"
+  },
+  {
+    "type": "marriage",
+    "from": "minos",
+    "to": "pasiphae",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "curse",
+    "from": "poseidon",
+    "to": "pasiphae",
+    "sources": ["A"],
+    "note": "made Pasiphae fall in love with the bull Minos had refused to sacrifice"
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "minotaur",
+    "sources": ["T", "A", "L"],
+    "note": "by the bull from the sea"
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "androgeus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "androgeus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "ariadne",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "ariadne",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "phaedra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "phaedra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "aegeus",
+    "to": "androgeus",
+    "sources": ["A"],
+    "note": "sent Androgeus against the bull of Marathon, which killed him"
+  },
+  {
+    "type": "feud",
+    "from": "minos",
+    "to": "aegeus",
+    "sources": ["A", "L"],
+    "note": "made war on Athens for his son’s death, and demanded its children for the Minotaur"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "minotaur",
+    "sources": ["A", "L"],
+    "note": "killed the Minotaur in the Labyrinth"
+  },
+  {
+    "type": "affair",
+    "from": "theseus",
+    "to": "ariadne",
+    "sources": ["E", "H", "A", "L"],
+    "note": "carried Ariadne off from Crete, and did not keep her"
+  },
+  {
+    "type": "marriage",
+    "from": "dionysus",
+    "to": "ariadne",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "theseus",
+    "to": "phaedra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "theseus",
+    "to": "antiope",
+    "sources": ["A", "L"],
+    "note": "carried off Antiope, queen of the Amazons"
+  },
+  {
+    "type": "parent",
+    "from": "theseus",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "antiope",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "phaedra",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"],
+    "note": "accused Hippolytus of rape when he refused her"
+  },
+  {
+    "type": "curse",
+    "from": "theseus",
+    "to": "hippolytus",
+    "sources": ["T", "A", "L"],
+    "note": "cursed his son Hippolytus, and Poseidon’s bull killed him"
+  },
+  {
+    "type": "parent",
+    "from": "theseus",
+    "to": "demophon",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phaedra",
+    "to": "demophon",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "pirithous",
+    "sources": ["E"]
+  },
+  {
+    "type": "affair",
+    "from": "pirithous",
+    "to": "persephone",
+    "sources": ["A", "L"],
+    "note": "went down to the underworld to carry off Persephone"
+  },
+  {
+    "type": "feud",
+    "from": "hades",
+    "to": "theseus",
+    "sources": ["A", "L"],
+    "note": "bound Theseus and Pirithous to a chair of forgetfulness, until Heracles pulled Theseus free"
+  },
+  {
+    "type": "parent",
+    "from": "aeolus",
+    "to": "sisyphus",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hermes",
+    "to": "autolycus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "autolycus",
+    "to": "sisyphus",
+    "sources": ["L"],
+    "note": "kept stealing Sisyphus’ cattle, until Sisyphus marked their hooves"
+  },
+  {
+    "type": "affair",
+    "from": "sisyphus",
+    "to": "anticleia",
+    "sources": ["T", "L"],
+    "note": "lay with Anticleia while he was getting his cattle back from her father"
+  },
+  {
+    "type": "parent",
+    "from": "autolycus",
+    "to": "anticleia",
+    "sources": ["E", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "arcesius",
+    "sources": ["L"],
+    "note": "Ovid’s version"
+  },
+  {
+    "type": "parent",
+    "from": "arcesius",
+    "to": "laertes",
+    "sources": ["E", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "laertes",
+    "to": "anticleia",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "laertes",
+    "to": "odysseus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "anticleia",
+    "to": "odysseus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "sisyphus",
+    "to": "odysseus",
+    "sources": ["T", "L"],
+    "note": "as his enemies told it"
+  },
+  {
+    "type": "parent",
+    "from": "icarius",
+    "to": "penelope",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "odysseus",
+    "to": "penelope",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "odysseus",
+    "to": "telemachus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "penelope",
+    "to": "telemachus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "odysseus",
+    "to": "circe",
+    "sources": ["E", "H", "A", "L"],
+    "note": "stayed a year in Circe’s house, and in her bed"
+  },
+  {
+    "type": "parent",
+    "from": "odysseus",
+    "to": "telegonus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "circe",
+    "to": "telegonus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "atlas",
+    "to": "calypso",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "calypso",
+    "to": "odysseus",
+    "sources": ["E", "H", "A", "L"],
+    "note": "kept Odysseus on her island for seven years"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "polyphemus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "by the sea-nymph Thoosa"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "polyphemus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "blinded Polyphemus with a burning stake, and got away under his sheep"
+  },
+  {
+    "type": "feud",
+    "from": "polyphemus",
+    "to": "companions",
+    "sources": ["E", "T", "A", "L"],
+    "note": "shut Odysseus’ men in his cave and ate them, two at a time"
+  },
+  {
+    "type": "curse",
+    "from": "polyphemus",
+    "to": "odysseus",
+    "sources": ["E"],
+    "note": "prayed to his father that Odysseus come home late, alone, on a stranger’s ship, to trouble in his house"
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "odysseus",
+    "sources": ["E", "A"],
+    "note": "kept Odysseus wandering for years, for his son’s eye"
+  },
+  {
+    "type": "transform",
+    "from": "circe",
+    "to": "companions",
+    "sources": ["E", "A", "L"],
+    "note": "turned Odysseus’ men into pigs"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "companions",
+    "sources": ["E", "A"],
+    "note": "struck their ship with a thunderbolt, because they ate the cattle of the Sun"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "nausithous",
+    "sources": ["E"]
+  },
+  {
+    "type": "parent",
+    "from": "nausithous",
+    "to": "alcinous",
+    "sources": ["E"]
+  },
+  {
+    "type": "marriage",
+    "from": "alcinous",
+    "to": "arete",
+    "sources": ["E", "A"],
+    "note": "his brother’s daughter"
+  },
+  {
+    "type": "parent",
+    "from": "alcinous",
+    "to": "nausicaa",
+    "sources": ["E"]
+  },
+  {
+    "type": "parent",
+    "from": "arete",
+    "to": "nausicaa",
+    "sources": ["E"]
+  },
+  {
+    "type": "feud",
+    "from": "palamedes",
+    "to": "odysseus",
+    "sources": ["E", "A", "L"],
+    "note": "exposed Odysseus’ feigned madness by threatening his baby son"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "palamedes",
+    "sources": ["E", "T", "A", "L"],
+    "note": "had Palamedes killed, by drowning or by a forged charge of treason"
+  },
+  {
+    "type": "parent",
+    "from": "aeacus",
+    "to": "telamon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "telamon",
+    "to": "ajax",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "telamon",
+    "to": "hesione",
+    "sources": ["T", "A", "L"],
+    "note": "his prize when Heracles took Troy"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "ajax",
+    "sources": ["E", "T", "A", "L"],
+    "note": "won the arms of Achilles from Ajax, who killed himself"
+  },
+  {
+    "type": "feud",
+    "from": "suitors",
+    "to": "telemachus",
+    "sources": ["E"],
+    "note": "lay in wait to kill Telemachus on his way home"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "suitors",
+    "sources": ["E", "A", "L"],
+    "note": "came home as a beggar and shot the suitors down in his own hall"
+  },
+  {
+    "type": "feud",
+    "from": "telegonus",
+    "to": "odysseus",
+    "sources": ["A", "L"],
+    "note": "killed his father without knowing him, with a spear tipped with a stingray’s spine"
+  },
+  {
+    "type": "marriage",
+    "from": "telegonus",
+    "to": "penelope",
+    "sources": ["A", "L"],
+    "note": "after Odysseus’ death"
+  },
+  {
+    "type": "marriage",
+    "from": "telemachus",
+    "to": "circe",
+    "sources": ["L"],
+    "note": "after Odysseus’ death"
+  },
+  {
+    "type": "parent",
+    "from": "oeneus",
+    "to": "deianira",
+    "sources": ["H", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "althaea",
+    "to": "deianira",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oeneus",
+    "to": "meleager",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "althaea",
+    "to": "meleager",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "oeneus",
+    "to": "althaea",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "curse",
+    "from": "althaea",
+    "to": "meleager",
+    "sources": ["E"],
+    "note": "called on Hades and Persephone to kill her son for her brother’s death, and the Erinys heard"
+  },
+  {
+    "type": "feud",
+    "from": "althaea",
+    "to": "meleager",
+    "sources": ["T", "A", "L"],
+    "note": "burned the log Meleager’s life hung on, to avenge her brothers"
+  },
+  {
+    "type": "affair",
+    "from": "meleager",
+    "to": "atalanta",
+    "sources": ["A", "L"],
+    "note": "gave Atalanta the boar’s hide, for love"
+  },
+  {
+    "type": "parent",
+    "from": "atalanta",
+    "to": "parthenopaeus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "oeneus",
+    "to": "tydeus",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "adrastus",
+    "to": "argia",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "adrastus",
+    "to": "deipyle",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "polynices",
+    "to": "argia",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "tydeus",
+    "to": "deipyle",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "polynices",
+    "to": "thersander",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "argia",
+    "to": "thersander",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "tydeus",
+    "to": "diomedes",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deipyle",
+    "to": "diomedes",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "amphiaraus",
+    "to": "eriphyle",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "amphiaraus",
+    "to": "alcmaeon",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "eriphyle",
+    "to": "alcmaeon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "eriphyle",
+    "to": "amphiaraus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "took a necklace to send her husband to his death"
+  },
+  {
+    "type": "feud",
+    "from": "alcmaeon",
+    "to": "eriphyle",
+    "sources": ["A", "L"],
+    "note": "killed his mother, as his father had told him"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "capaneus",
+    "sources": ["T", "A", "L"],
+    "note": "struck Capaneus off the wall of Thebes with a thunderbolt, for his boast"
+  },
+  {
+    "type": "marriage",
+    "from": "capaneus",
+    "to": "evadne",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "tydeus",
+    "sources": ["A"],
+    "note": "turned away the immortality she had brought Tydeus, when she saw him eat his enemy’s brains"
+  },
+  {
+    "type": "feud",
+    "from": "diomedes",
+    "to": "aphrodite",
+    "sources": ["E", "A", "L"],
+    "note": "wounded Aphrodite in the hand at Troy"
+  },
+  {
+    "type": "feud",
+    "from": "diomedes",
+    "to": "ares",
+    "sources": ["E"],
+    "note": "wounded Ares with Athena guiding his spear"
+  },
+  {
+    "type": "feud",
+    "from": "diomedes",
+    "to": "palamedes",
+    "sources": ["E"],
+    "note": "drowned Palamedes with Odysseus, while he was out fishing"
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "tiresias",
+    "sources": ["A", "L"],
+    "note": "blinded Tiresias for saying women take more pleasure in love"
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "tiresias",
+    "sources": ["A"],
+    "note": "blinded Tiresias when he saw her bathing"
+  },
+  {
+    "type": "parent",
+    "from": "creon",
+    "to": "haemon",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "haemon",
+    "to": "antigone",
+    "sources": ["T", "L"],
+    "note": "betrothed, in Sophocles; married in secret, in Hyginus"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "creon",
+    "sources": ["T", "A", "L"],
+    "note": "made war on Creon to bury the Argive dead"
+  },
+  {
+    "type": "parent",
+    "from": "sisyphus",
+    "to": "glaucus-corinth",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "glaucus-corinth",
+    "to": "bellerophon",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "bellerophon",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "iobates",
+    "to": "stheneboea",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "iobates",
+    "to": "philonoe",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "proetus",
+    "to": "stheneboea",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "stheneboea",
+    "to": "bellerophon",
+    "sources": ["E", "T", "A", "L"],
+    "note": "accused Bellerophon of trying to seduce her, when he had refused her"
+  },
+  {
+    "type": "feud",
+    "from": "proetus",
+    "to": "bellerophon",
+    "sources": ["E", "A", "L"],
+    "note": "sent Bellerophon to Lycia with a letter asking for his death"
+  },
+  {
+    "type": "feud",
+    "from": "iobates",
+    "to": "bellerophon",
+    "sources": ["E", "A", "L"],
+    "note": "sent Bellerophon against the Chimera, the Solymi and the Amazons, hoping he would die"
+  },
+  {
+    "type": "feud",
+    "from": "bellerophon",
+    "to": "stheneboea",
+    "sources": ["T"],
+    "note": "carried Stheneboea off on Pegasus and dropped her into the sea"
+  },
+  {
+    "type": "marriage",
+    "from": "bellerophon",
+    "to": "philonoe",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "pegasus",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "medusa",
+    "to": "pegasus",
+    "sources": ["H", "A", "L"],
+    "note": "from her severed neck"
+  },
+  {
+    "type": "feud",
+    "from": "bellerophon",
+    "to": "chimera",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "killed the Chimera, shooting from the back of Pegasus"
+  },
+  {
+    "type": "feud",
+    "from": "pegasus",
+    "to": "bellerophon",
+    "sources": ["T"],
+    "note": "threw Bellerophon when he tried to ride up to Olympus"
+  },
+  {
+    "type": "parent",
+    "from": "bellerophon",
+    "to": "hippolochus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "philonoe",
+    "to": "hippolochus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "bellerophon",
+    "to": "laodamia",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "philonoe",
+    "to": "laodamia",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "laodamia",
+    "sources": ["E"],
+    "note": "lay with Laodamia, who bore him Sarpedon"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "sarpedon",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "laodamia",
+    "to": "sarpedon",
+    "sources": ["E"]
+  },
+  {
+    "type": "feud",
+    "from": "artemis",
+    "to": "laodamia",
+    "sources": ["E"],
+    "note": "killed Laodamia in anger"
+  },
+  {
+    "type": "parent",
+    "from": "hippolochus",
+    "to": "glaucus-lycia",
+    "sources": ["E"]
+  },
+  {
+    "type": "feud",
+    "from": "patroclus",
+    "to": "sarpedon",
+    "sources": ["E"],
+    "note": "killed Sarpedon, and Zeus let it happen"
+  },
+  {
+    "type": "feud",
+    "from": "hector",
+    "to": "patroclus",
+    "sources": ["E"],
+    "note": "killed Patroclus, who was wearing Achilles’ armour"
+  },
+  {
+    "type": "marriage",
+    "from": "asterion",
+    "to": "europa",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "rhadamanthys",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "europa",
+    "to": "rhadamanthys",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "rhadamanthys",
+    "to": "alcmene",
+    "sources": ["A"],
+    "note": "after Amphitryon’s death"
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "catreus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "catreus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "deucalion-crete",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "deucalion-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "deucalion-crete",
+    "to": "idomeneus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "catreus",
+    "to": "aerope",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "catreus",
+    "to": "clymene-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "catreus",
+    "to": "althaemenes",
+    "sources": ["A"]
+  },
+  {
+    "type": "feud",
+    "from": "catreus",
+    "to": "aerope",
+    "sources": ["T", "A"],
+    "note": "gave Aerope to Nauplius, to be drowned or sold abroad"
+  },
+  {
+    "type": "feud",
+    "from": "althaemenes",
+    "to": "catreus",
+    "sources": ["A"],
+    "note": "killed his father without knowing him, as the oracle had said"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "nauplius",
+    "sources": ["A"]
+  },
+  {
+    "type": "marriage",
+    "from": "nauplius",
+    "to": "clymene-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "nauplius",
+    "to": "palamedes",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "clymene-crete",
+    "to": "palamedes",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "minos",
+    "to": "glaucus-crete",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pasiphae",
+    "to": "glaucus-crete",
+    "sources": ["A"]
+  },
+  {
+    "type": "feud",
+    "from": "minos",
+    "to": "polyidus",
+    "sources": ["A", "L"],
+    "note": "shut Polyidus in the tomb with his dead son, until he brought him back"
+  },
+  {
+    "type": "parent",
+    "from": "daedalus",
+    "to": "icarus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "daedalus",
+    "to": "perdix",
+    "sources": ["A", "L"],
+    "note": "threw his nephew Perdix off the Acropolis, jealous of his inventions"
+  },
+  {
+    "type": "transform",
+    "from": "athena",
+    "to": "perdix",
+    "sources": ["L"],
+    "note": "caught Perdix as he fell, and turned him into a partridge"
+  },
+  {
+    "type": "feud",
+    "from": "minos",
+    "to": "daedalus",
+    "sources": ["A", "L"],
+    "note": "kept Daedalus and his son prisoners on Crete"
+  },
+  {
+    "type": "feud",
+    "from": "cocalus",
+    "to": "minos",
+    "sources": ["A", "L"],
+    "note": "had his daughters scald Minos to death in his bath, to keep Daedalus"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "talos",
+    "sources": ["A"],
+    "note": "pulled the nail from Talos’ ankle, and his ichor ran out"
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "inachus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "inachus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "inachus",
+    "to": "io",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "io",
+    "sources": ["H", "T", "A", "L"],
+    "note": "loved Io, and swore to Hera he had never touched her"
+  },
+  {
+    "type": "transform",
+    "from": "zeus",
+    "to": "io",
+    "sources": ["T", "A", "L"],
+    "note": "turned Io into a white cow to hide her from Hera"
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "io",
+    "sources": ["T", "A", "L"],
+    "note": "set hundred-eyed Argus to guard Io, then sent a gadfly to drive her across the world"
+  },
+  {
+    "type": "feud",
+    "from": "hermes",
+    "to": "argus",
+    "sources": ["T", "A", "L"],
+    "note": "killed Argus, at Zeus’ bidding, to free Io"
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "epaphus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "io",
+    "to": "epaphus",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "epaphus",
+    "to": "libya",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "libya",
+    "sources": ["A"],
+    "note": "loved Libya, who bore him twins"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "belus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "libya",
+    "to": "belus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "agenor",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "libya",
+    "to": "agenor",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "agenor",
+    "to": "cadmus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "agenor",
+    "to": "europa",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "danaus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "aegyptus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "cepheus",
+    "sources": ["T", "A"],
+    "note": "in Euripides, as Apollodorus reports"
+  },
+  {
+    "type": "parent",
+    "from": "belus",
+    "to": "phineus",
+    "sources": ["T", "A"],
+    "note": "in Euripides, as Apollodorus reports"
+  },
+  {
+    "type": "feud",
+    "from": "aegyptus",
+    "to": "danaus",
+    "sources": ["T", "A"],
+    "note": "drove Danaus out of Libya, with his fifty sons"
+  },
+  {
+    "type": "parent",
+    "from": "danaus",
+    "to": "danaids",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "danaus",
+    "to": "hypermnestra",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "danaus",
+    "to": "amymone",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "aegyptus",
+    "to": "sons-of-aegyptus",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "aegyptus",
+    "to": "lynceus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "danaids",
+    "to": "sons-of-aegyptus",
+    "sources": ["T", "A"],
+    "note": "their cousins"
+  },
+  {
+    "type": "feud",
+    "from": "danaids",
+    "to": "sons-of-aegyptus",
+    "sources": ["T", "A", "L"],
+    "note": "killed their husbands on their wedding night, all but one"
+  },
+  {
+    "type": "marriage",
+    "from": "lynceus",
+    "to": "hypermnestra",
+    "sources": ["A", "L"],
+    "note": "who spared him"
+  },
+  {
+    "type": "affair",
+    "from": "poseidon",
+    "to": "amymone",
+    "sources": ["A", "L"],
+    "note": "saved Amymone from a satyr, lay with her, and showed her the springs of Lerna"
+  },
+  {
+    "type": "parent",
+    "from": "amymone",
+    "to": "nauplius",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "lynceus",
+    "to": "abas",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hypermnestra",
+    "to": "abas",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "abas",
+    "to": "acrisius",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "abas",
+    "to": "proetus",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "acrisius",
+    "to": "proetus",
+    "sources": ["A", "L"],
+    "note": "quarrelled with Proetus in the womb, and later fought him for the kingdom of Argos"
+  },
+  {
+    "type": "marriage",
+    "from": "cepheus",
+    "to": "cassiopeia",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "cepheus",
+    "to": "andromeda",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "cassiopeia",
+    "to": "andromeda",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "cassiopeia",
+    "sources": ["A", "L"],
+    "note": "sent a flood and a sea monster, when she boasted she was lovelier than the Nereids"
+  },
+  {
+    "type": "transform",
+    "from": "perseus",
+    "to": "phineus",
+    "sources": ["A", "L"],
+    "note": "turned Phineus to stone with the Gorgon’s head"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "pontus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "nereus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pontus",
+    "to": "nereus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "phorcys",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pontus",
+    "to": "phorcys",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "ceto",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pontus",
+    "to": "ceto",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "marriage",
+    "from": "phorcys",
+    "to": "ceto",
+    "sources": ["H", "A"],
+    "note": "his sister"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "typhon",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tartarus",
+    "to": "typhon",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "hera",
+    "to": "typhon",
+    "sources": ["E"],
+    "note": "alone, in the Homeric Hymn to Apollo"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "typhon",
+    "sources": ["E", "H", "T", "A", "L"],
+    "note": "struck Typhon down with his thunderbolts"
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "echidna",
+    "sources": ["H"],
+    "note": "probably"
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "echidna",
+    "sources": ["H"],
+    "note": "probably"
+  },
+  {
+    "type": "parent",
+    "from": "tartarus",
+    "to": "echidna",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "echidna",
+    "sources": ["A"]
+  },
+  {
+    "type": "marriage",
+    "from": "typhon",
+    "to": "echidna",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "graeae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "graeae",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "gorgons",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "gorgons",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "medusa",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "medusa",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "ladon",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "ceto",
+    "to": "ladon",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "ladon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "ladon",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "graeae",
+    "sources": ["A", "L"],
+    "note": "stole the one eye of the Graeae, and gave it back only when they showed him the way"
+  },
+  {
+    "type": "parent",
+    "from": "nereus",
+    "to": "nereids",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "nereids",
+    "sources": ["H", "A"],
+    "note": "Doris"
+  },
+  {
+    "type": "parent",
+    "from": "nereus",
+    "to": "thetis",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "thetis",
+    "sources": ["H", "A"],
+    "note": "Doris"
+  },
+  {
+    "type": "feud",
+    "from": "nereids",
+    "to": "cassiopeia",
+    "sources": ["A"],
+    "note": "took offence at Cassiopeia’s boast, and Poseidon shared their anger"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "chrysaor",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "medusa",
+    "to": "chrysaor",
+    "sources": ["H", "A"],
+    "note": "from her severed neck"
+  },
+  {
+    "type": "parent",
+    "from": "chrysaor",
+    "to": "geryon",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "geryon",
+    "sources": ["H", "A"],
+    "note": "Callirhoe"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "orthus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "orthus",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "cerberus",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "cerberus",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "hydra",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "hydra",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "chimera",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "chimera",
+    "sources": ["H", "L"],
+    "note": "or the Hydra, or Ceto: Hesiod is unclear"
+  },
+  {
+    "type": "parent",
+    "from": "orthus",
+    "to": "nemean-lion",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "chimera",
+    "to": "nemean-lion",
+    "sources": ["H"],
+    "note": "or Echidna: Hesiod is unclear"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "nemean-lion",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "orthus",
+    "to": "sphinx",
+    "sources": ["H"]
+  },
+  {
+    "type": "parent",
+    "from": "chimera",
+    "to": "sphinx",
+    "sources": ["H"],
+    "note": "or Echidna: Hesiod is unclear"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "sphinx",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "sphinx",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "nemean-lion",
+    "sources": ["H", "T", "A", "L"],
+    "note": "choked the Nemean Lion, whose hide no weapon could pierce"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "hydra",
+    "sources": ["H", "T", "A", "L"],
+    "note": "killed the Hydra of Lerna"
+  },
+  {
+    "type": "feud",
+    "from": "iolaus",
+    "to": "hydra",
+    "sources": ["H", "A"],
+    "note": "helped Heracles kill the Hydra, burning the stumps of her necks"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "geryon",
+    "sources": ["H", "T", "A", "L"],
+    "note": "killed Geryon and drove off his red cattle"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "orthus",
+    "sources": ["H", "A"],
+    "note": "killed Orthus, Geryon’s dog"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "cerberus",
+    "sources": ["E", "T", "A", "L"],
+    "note": "dragged Cerberus up from Hades"
+  },
+  {
+    "type": "feud",
+    "from": "oedipus",
+    "to": "sphinx",
+    "sources": ["T", "A", "L"],
+    "note": "answered the Sphinx’s riddle, and she threw herself to her death"
+  },
+  {
+    "type": "marriage",
+    "from": "nyx",
+    "to": "erebus",
+    "sources": ["H"],
+    "note": "her brother"
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "hypnos",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "thanatos",
+    "sources": ["H", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "tityos",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "tityos",
+    "to": "leto",
+    "sources": ["E", "T", "A", "L"],
+    "note": "tried to rape Leto"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "tityos",
+    "sources": ["A", "L"],
+    "note": "shot Tityos for his assault on Leto"
+  },
+  {
+    "type": "feud",
+    "from": "artemis",
+    "to": "tityos",
+    "sources": ["T", "A"],
+    "note": "shot Tityos for his assault on Leto"
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "ixion",
+    "sources": ["T", "A", "L"],
+    "note": "bound Ixion to a fiery wheel, for trying to seduce Hera"
+  },
+  {
+    "type": "parent",
+    "from": "ixion",
+    "to": "pirithous",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "sisyphus",
+    "sources": ["E", "A", "L"],
+    "note": "condemned Sisyphus to roll a stone uphill for ever"
+  },
+  {
+    "type": "feud",
+    "from": "hades",
+    "to": "pirithous",
+    "sources": ["A"],
+    "note": "held Pirithous fast on the chair of forgetfulness"
+  },
+  {
+    "type": "parent",
+    "from": "oeagrus",
+    "to": "orpheus",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "apollo",
+    "to": "orpheus",
+    "sources": ["A"],
+    "note": "in name only, Apollodorus says"
+  },
+  {
+    "type": "marriage",
+    "from": "orpheus",
+    "to": "eurydice",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "maenads",
+    "to": "orpheus",
+    "sources": ["A", "L"],
+    "note": "tore Orpheus to pieces"
+  },
+  {
+    "type": "feud",
+    "from": "maenads",
+    "to": "pentheus",
+    "sources": ["T", "A", "L"],
+    "note": "tore Pentheus to pieces on the mountain"
+  },
+  {
+    "type": "parent",
+    "from": "cretheus",
+    "to": "pheres",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "pheres",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pheres",
+    "to": "admetus",
+    "sources": ["E", "T", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pelias",
+    "to": "alcestis",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "admetus",
+    "to": "alcestis",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "thanatos",
+    "sources": ["T", "A"],
+    "note": "wrestled Death at the tomb of Alcestis and brought her back"
+  },
+  {
+    "type": "parent",
+    "from": "nyx",
+    "to": "eris",
+    "sources": ["H"]
+  },
+  {
+    "type": "feud",
+    "from": "eris",
+    "to": "thetis",
+    "sources": ["E", "A", "L"],
+    "note": "threw the golden apple among the goddesses at the wedding of Thetis and Peleus"
+  },
+  {
+    "type": "feud",
+    "from": "hera",
+    "to": "paris",
+    "sources": ["E", "A", "L"],
+    "note": "hated Paris and Troy for judging Aphrodite the fairest"
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "paris",
+    "sources": ["E", "A", "L"],
+    "note": "hated Paris and Troy for judging Aphrodite the fairest"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "neleus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "tyro",
+    "to": "neleus",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "neleus",
+    "to": "nestor",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "neleus",
+    "sources": ["E", "H", "A"],
+    "note": "killed Neleus and all his sons but Nestor"
+  },
+  {
+    "type": "parent",
+    "from": "nestor",
+    "to": "antilochus",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "eos",
+    "to": "memnon",
+    "sources": ["E", "H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "tithonus",
+    "to": "memnon",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "memnon",
+    "to": "antilochus",
+    "sources": ["E", "T", "A"],
+    "note": "killed Antilochus, who stood in front of his father"
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "memnon",
+    "sources": ["E", "T", "A", "L"],
+    "note": "killed Memnon to avenge Antilochus"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "penthesilea",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "penthesilea",
+    "sources": ["E", "A"],
+    "note": "killed Penthesilea, and loved her as she died"
+  },
+  {
+    "type": "parent",
+    "from": "poeas",
+    "to": "philoctetes",
+    "sources": ["E", "T", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "philoctetes",
+    "sources": ["T", "A"],
+    "note": "left Philoctetes on Lemnos with his wound, and ten years later came back for his bow"
+  },
+  {
+    "type": "feud",
+    "from": "philoctetes",
+    "to": "paris",
+    "sources": ["E", "T", "A"],
+    "note": "shot Paris with the bow of Heracles"
+  },
+  {
+    "type": "parent",
+    "from": "oileus",
+    "to": "ajax-lesser",
+    "sources": ["E", "H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "ajax-lesser",
+    "to": "cassandra",
+    "sources": ["E", "A", "L"],
+    "note": "dragged Cassandra from the image of Athena"
+  },
+  {
+    "type": "feud",
+    "from": "athena",
+    "to": "ajax-lesser",
+    "sources": ["A"],
+    "note": "wrecked Ajax’s ship on his way home"
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "ajax-lesser",
+    "sources": ["E", "A"],
+    "note": "drowned Ajax when he boasted he had escaped the sea"
+  },
+  {
+    "type": "parent",
+    "from": "chryses",
+    "to": "chryseis",
+    "sources": ["E", "A"]
+  },
+  {
+    "type": "affair",
+    "from": "agamemnon",
+    "to": "chryseis",
+    "sources": ["E", "A"],
+    "note": "took Chryseis as his prize, and refused her father’s ransom"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "agamemnon",
+    "sources": ["E", "A"],
+    "note": "sent a plague on the Greeks when Agamemnon refused Chryses"
+  },
+  {
+    "type": "affair",
+    "from": "achilles",
+    "to": "briseis",
+    "sources": ["E", "A", "L"],
+    "note": "took Briseis as his prize, and loved her"
+  },
+  {
+    "type": "parent",
+    "from": "eetion",
+    "to": "andromache",
+    "sources": ["E", "T"]
+  },
+  {
+    "type": "feud",
+    "from": "achilles",
+    "to": "eetion",
+    "sources": ["E"],
+    "note": "sacked Thebe and killed Eetion and his seven sons"
+  },
+  {
+    "type": "parent",
+    "from": "priam",
+    "to": "helenus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "hecuba",
+    "to": "helenus",
+    "sources": ["E", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "helenus",
+    "sources": ["E", "T", "A"],
+    "note": "captured Helenus and made him tell how Troy could be taken"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "laocoon",
+    "sources": ["E", "A"],
+    "note": "sent two serpents over the sea to kill Laocoon"
+  },
+  {
+    "type": "feud",
+    "from": "neoptolemus",
+    "to": "astyanax",
+    "sources": ["E", "L"],
+    "note": "threw Astyanax from the walls of Troy"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "astyanax",
+    "sources": ["E", "T"],
+    "note": "killed Astyanax, or had the Greeks throw him from the walls"
+  },
+  {
+    "type": "feud",
+    "from": "acrisius",
+    "to": "danae",
+    "sources": ["T", "A", "L"],
+    "note": "shut Danaë away in a bronze chamber, then cast her and her baby into the sea in a chest"
+  },
+  {
+    "type": "feud",
+    "from": "polydectes",
+    "to": "danae",
+    "sources": ["T", "A"],
+    "note": "pressed Danaë to be his, until she fled to the altars"
+  },
+  {
+    "type": "feud",
+    "from": "polydectes",
+    "to": "perseus",
+    "sources": ["A"],
+    "note": "sent Perseus to fetch the Gorgon’s head, hoping he would not come back"
+  },
+  {
+    "type": "transform",
+    "from": "perseus",
+    "to": "polydectes",
+    "sources": ["T", "A", "L"],
+    "note": "turned Polydectes and his guests to stone with the Gorgon’s head"
+  },
+  {
+    "type": "transform",
+    "from": "athena",
+    "to": "medusa",
+    "sources": ["L"],
+    "note": "turned Medusa’s hair into snakes, after Poseidon lay with her in Athena’s temple"
+  },
+  {
+    "type": "feud",
+    "from": "gorgons",
+    "to": "perseus",
+    "sources": ["A"],
+    "note": "chased Perseus after he killed their sister, but could not see him under the cap of Hades"
+  },
+  {
+    "type": "transform",
+    "from": "perseus",
+    "to": "atlas",
+    "sources": ["L"],
+    "note": "turned Atlas into a mountain with the Gorgon’s head"
+  },
+  {
+    "type": "feud",
+    "from": "cassiopeia",
+    "to": "nereids",
+    "sources": ["A", "L"],
+    "note": "boasted that she, or her daughter, was more beautiful than the Nereids"
+  },
+  {
+    "type": "feud",
+    "from": "poseidon",
+    "to": "cepheus",
+    "sources": ["A", "L"],
+    "note": "sent a sea monster against the land of Cepheus"
+  },
+  {
+    "type": "feud",
+    "from": "perseus",
+    "to": "cetus",
+    "sources": ["T", "A", "L"],
+    "note": "killed the sea monster and set Andromeda free"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "augeas",
+    "sources": ["A"],
+    "note": "killed Augeas, who had cheated him of his pay for the stables"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "diomedes-thrace",
+    "sources": ["T", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "diomedes-thrace",
+    "sources": ["T", "A", "L"],
+    "note": "killed Diomedes of Thrace and drove off his man-eating mares"
+  },
+  {
+    "type": "parent",
+    "from": "ares",
+    "to": "hippolyta",
+    "sources": ["L"]
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "hippolyta",
+    "sources": ["A"],
+    "note": "killed Hippolyta, queen of the Amazons, and took her belt"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "atlas",
+    "sources": ["A"],
+    "note": "tricked Atlas into taking the sky back on his shoulders"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "ladon",
+    "sources": ["T", "L"],
+    "note": "killed the serpent that guarded the golden apples"
+  },
+  {
+    "type": "feud",
+    "from": "heracles",
+    "to": "nessus",
+    "sources": ["T", "A", "L"],
+    "note": "shot Nessus with an arrow dipped in the Hydra’s poison, when the centaur tried to carry off Deianira"
+  },
+  {
+    "type": "feud",
+    "from": "theseus",
+    "to": "bandits",
+    "sources": ["T", "A", "L"],
+    "note": "killed the bandits on the road from Troezen to Athens"
+  },
+  {
+    "type": "affair",
+    "from": "heracles",
+    "to": "hylas",
+    "sources": ["A", "L"],
+    "note": "loved Hylas, and lost him in Mysia"
+  },
+  {
+    "type": "parent",
+    "from": "agenor",
+    "to": "phineus-seer",
+    "sources": ["A"],
+    "note": "in one telling; in another, Poseidon"
+  },
+  {
+    "type": "parent",
+    "from": "poseidon",
+    "to": "phineus-seer",
+    "sources": ["A"]
+  },
+  {
+    "type": "curse",
+    "from": "poseidon",
+    "to": "phineus-seer",
+    "sources": ["A"],
+    "note": "blinded Phineus, in one telling, for showing the sons of Phrixus the way"
+  },
+  {
+    "type": "parent",
+    "from": "oceanids",
+    "to": "harpies",
+    "sources": ["H", "A", "L"],
+    "note": "Electra, wife of Thaumas"
+  },
+  {
+    "type": "feud",
+    "from": "harpies",
+    "to": "phineus-seer",
+    "sources": ["H", "A", "L"],
+    "note": "snatched and fouled every meal Phineus sat down to"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "colchian-dragon",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "colchian-dragon",
+    "sources": ["L"]
+  },
+  {
+    "type": "feud",
+    "from": "jason",
+    "to": "colchian-dragon",
+    "sources": ["T"],
+    "note": "killed the serpent that guarded the fleece"
+  },
+  {
+    "type": "feud",
+    "from": "medea",
+    "to": "colchian-dragon",
+    "sources": ["T", "A", "L"],
+    "note": "put the serpent to sleep with her drugs; in Euripides she kills it"
+  },
+  {
+    "type": "transform",
+    "from": "medea",
+    "to": "aeson",
+    "sources": ["L"],
+    "note": "made old Aeson young again with her herbs"
+  },
+  {
+    "type": "parent",
+    "from": "muses",
+    "to": "sirens",
+    "sources": ["A", "L"],
+    "note": "Melpomene, by the river Achelous"
+  },
+  {
+    "type": "feud",
+    "from": "sirens",
+    "to": "odysseus",
+    "sources": ["E", "A", "L"],
+    "note": "sang to lure Odysseus to his death; he heard them bound to the mast"
+  },
+  {
+    "type": "feud",
+    "from": "odysseus",
+    "to": "sirens",
+    "sources": ["A", "L"],
+    "note": "sailed past the Sirens bound to the mast; fated to die if a ship got by, they died"
+  },
+  {
+    "type": "parent",
+    "from": "phorcys",
+    "to": "scylla",
+    "sources": ["A"],
+    "note": "in one telling, by Crataeis"
+  },
+  {
+    "type": "parent",
+    "from": "typhon",
+    "to": "scylla",
+    "sources": ["L"]
+  },
+  {
+    "type": "parent",
+    "from": "echidna",
+    "to": "scylla",
+    "sources": ["L"]
+  },
+  {
+    "type": "transform",
+    "from": "circe",
+    "to": "scylla",
+    "sources": ["L"],
+    "note": "turned Scylla into a monster, jealous of Glaucus’ love for her"
+  },
+  {
+    "type": "feud",
+    "from": "scylla",
+    "to": "companions",
+    "sources": ["E", "A", "L"],
+    "note": "snatched six of Odysseus’ men from the deck and ate them"
+  },
+  {
+    "type": "feud",
+    "from": "helios",
+    "to": "companions",
+    "sources": ["E"],
+    "note": "made Zeus punish the men who ate his cattle"
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "cyclopes",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "cyclopes",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "gaia",
+    "to": "hundred-handed",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "uranus",
+    "to": "hundred-handed",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "feud",
+    "from": "uranus",
+    "to": "cyclopes",
+    "sources": ["H", "A"],
+    "note": "bound them under the earth"
+  },
+  {
+    "type": "feud",
+    "from": "uranus",
+    "to": "hundred-handed",
+    "sources": ["H", "A"],
+    "note": "bound them under the earth"
+  },
+  {
+    "type": "feud",
+    "from": "gaia",
+    "to": "uranus",
+    "sources": ["H", "A"],
+    "note": "made a sickle and set her sons against him"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "hestia",
+    "sources": ["H", "A"],
+    "note": "swallowed her at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "demeter",
+    "sources": ["H", "A"],
+    "note": "swallowed her at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "hera",
+    "sources": ["H", "A"],
+    "note": "swallowed her at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "hades",
+    "sources": ["H", "A"],
+    "note": "swallowed him at birth"
+  },
+  {
+    "type": "feud",
+    "from": "cronus",
+    "to": "poseidon",
+    "sources": ["H", "A"],
+    "note": "swallowed him at birth"
+  },
+  {
+    "type": "feud",
+    "from": "rhea",
+    "to": "cronus",
+    "sources": ["H", "A", "L"],
+    "note": "gave him a stone wrapped in swaddling clothes to swallow in place of Zeus"
+  },
+  {
+    "type": "feud",
+    "from": "metis",
+    "to": "cronus",
+    "sources": ["A"],
+    "note": "gave him a drug that made him bring up the children he had swallowed"
+  },
+  {
+    "type": "feud",
+    "from": "hundred-handed",
+    "to": "cronus",
+    "sources": ["H", "A"],
+    "note": "beat the Titans in battle and keep guard over them in Tartarus"
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "cyclopes",
+    "sources": ["T", "A"],
+    "note": "killed the Cyclopes, whose thunderbolt had struck down his son Asclepius"
+  },
+  {
+    "type": "feud",
+    "from": "creon",
+    "to": "polynices",
+    "sources": ["T", "A", "L"],
+    "note": "forbade anyone to bury Polynices and the Argive dead"
+  },
+  {
+    "type": "marriage",
+    "from": "epimetheus",
+    "to": "pandora",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "epimetheus",
+    "sources": ["H"],
+    "note": "sent him Pandora, a gift that was a punishment"
+  },
+  {
+    "type": "parent",
+    "from": "prometheus",
+    "to": "deucalion-flood",
+    "sources": ["H", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "epimetheus",
+    "to": "pyrrha",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "pandora",
+    "to": "pyrrha",
+    "sources": ["A", "L"]
+  },
+  {
+    "type": "marriage",
+    "from": "deucalion-flood",
+    "to": "pyrrha",
+    "sources": ["T", "A", "L"]
+  },
+  {
+    "type": "parent",
+    "from": "deucalion-flood",
+    "to": "hellen",
+    "sources": ["H", "A"]
+  },
+  {
+    "type": "parent",
+    "from": "pyrrha",
+    "to": "hellen",
+    "sources": ["A"]
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "hellen",
+    "sources": ["A"],
+    "note": "some say, in Apollodorus"
+  },
+  {
+    "type": "parent",
+    "from": "hellen",
+    "to": "aeolus",
+    "sources": ["H", "A"]
+  }
+]

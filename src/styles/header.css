@@ -1,0 +1,117 @@
+/* The brand is a small line; the branch being explored is the page’s title. */
+header{padding:16px 16px 6px;position:relative}
+.kicker{font:600 10.5px var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.kicker{display:flex;align-items:center;flex-wrap:wrap;column-gap:12px;row-gap:4px}
+/* the wordmark: a star whose south ray runs into a drop of ichor (gold), and “Ichor” in GFS Didot */
+.wordmark{height:27.7px;width:auto;display:block}
+.wm-ink{fill:var(--text)}
+.wm-mark{fill:var(--accent)}
+/* the lockup: “Ichor”, then the star and its drop standing between the word and the subtitle, which runs in two lines */
+.kicker{flex-wrap:nowrap;column-gap:0}
+.wm-sep{display:block;flex:0 0 auto;height:40px;width:auto;margin:0 12px 0 14px}
+.kicker .tagline{max-width:8em;font:400 16px/1.2 var(--display);letter-spacing:0;text-transform:none;color:var(--muted)}
+.branch-title{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.05;margin:8px 0 0}
+.branch-sub{font-family:var(--display);font-size:16px;color:var(--muted);margin-top:2px}
+@media (min-width:900px){
+  header{padding:22px 28px 8px}
+  .wordmark{height:32px}
+  .kicker{font-size:11px}
+  .wm-sep{height:46px;margin:0 14px 0 16px}
+  .kicker .tagline{font-size:18px}
+  .title-line{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:14px}
+  .branch-title{font-size:34px}
+  .branch-sub{font-size:19px;margin:0}
+}
+.branch-sub:empty{display:none}
+/* The family’s name already shows on the Family pill, so the page title is kept for screen readers and search only. */
+.title-line{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+
+/* light / dark switch: a moon in the light theme, a sun in the dark */
+.theme{flex:0 0 auto;width:34px;height:34px;display:grid;place-items:center;
+  background:var(--bg-2);border:1px solid var(--rule);border-radius:50%;color:var(--text);cursor:pointer;padding:0}
+.theme:hover{border-color:var(--muted)}
+.theme:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.theme svg{width:17px;height:17px;grid-area:1/1}
+.theme .moon{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linejoin:round}
+.theme .spark,.info .spark,.fit-float .spark{fill:currentColor;stroke:none}
+.theme .sun{fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round}
+.theme .sun .core{fill:currentColor;stroke:none}
+.theme .sun,.theme.dark .moon{display:none}
+.theme.dark .sun{display:block}
+
+/* family switcher: a pill in the controls, above the sources, opens the list of families */
+.famline{display:flex;align-items:center;gap:18px;padding:4px 0}
+.family-pick{position:relative}
+.family-btn{display:inline-flex;align-items:center}
+.family-btn .chev{width:11px;height:8px;margin-left:8px;fill:none;stroke:currentColor;
+  stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.family-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.family-btn:hover{border-color:var(--muted)}
+.family-btn:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+.family-menu{position:absolute;z-index:8;left:0;top:calc(100% + 8px);width:min(380px,calc(100vw - 32px));max-height:min(520px,70vh);overflow-y:auto;margin:0;padding:6px 0;list-style:none;
+  background:var(--bg-2);border:1px solid var(--rule);border-radius:2px;box-shadow:0 10px 28px var(--shadow)}
+.family-menu[hidden]{display:none}
+.family-menu li{padding:9px 16px;cursor:pointer;display:flex;flex-direction:column;gap:1px;outline:none}
+.family-menu li:hover,.family-menu li:focus{background:var(--bg)}
+.family-menu li[aria-selected="true"] .fm-label{color:var(--accent)}
+.fm-label{font:19px var(--display);color:var(--text)}
+.fm-note{font:12px var(--ui);color:var(--muted)}
+/* on phones the two labels stay, so the reader sees what each pill chooses */
+@media (max-width:899px){
+  .famline{gap:10px;position:relative}
+  .family-pick{position:static}   /* the list opens from the left edge of the row, full width */
+  .famline .row-label,#srcRow .row-label{display:inline;width:auto}
+  .famline .row-label{min-width:44px}
+  #srcRow .row-label{min-width:44px;margin-right:2px}
+}
+/* sources: pills on desktop, a pill with a list on phones */
+.src-pick{display:none}
+@media (max-width:899px){
+  .src-pick{display:flex}
+  #srcRow{display:none}
+}
+@media (prefers-reduced-motion:reduce){ .family-btn .chev{transition:none} }
+
+/* Guide: a word in the top right corner of the header */
+.info{position:absolute;top:10px;right:12px;height:34px;padding:0 14px;background:none;border:1px solid var(--rule);border-radius:17px;font:500 13px var(--ui);letter-spacing:.02em;color:var(--text);cursor:pointer}
+.info:hover{border-color:var(--muted)}
+.info[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
+.info:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+@media (min-width:900px){ .info{top:18px;right:24px} }
+/* Phones: the header is one line, the wordmark and Guide; the subtitle and the hint live in the Guide.
+   Below it, one line holds the Family and Source pills, then the theme switch and the whole-tree button (moved there by placeFit).
+   The header folds away while a card is open or once the tree is moved; the line of pills stays. */
+@media (max-width:899px){
+  header{display:flex;align-items:center;min-height:52px;padding:8px 16px}
+  .wordmark{height:24.3px}
+  /* the mark stands on the line between the Family and Source cells below it: they share the width left of the
+     two 46px tool cells evenly, so that line is at 50vw - 39px; the word ends at 86.2px and the mark is 16.9px wide */
+  .wm-sep{height:36px;margin:0 10px 0 max(10px, calc(50vw - 133.6px))}
+  .kicker .tagline{font-size:13.5px}
+  .info{top:9px}
+  body:is(.sheet,.folded) header{display:none}
+  /* when the header folds, the star and its drop stay at the start of the line of pills */
+  body:is(.sheet,.folded) .controls .mini-mark{display:block}
+  body .controls{flex-direction:row;flex-wrap:nowrap;align-items:center;gap:8px;padding:8px 16px;position:relative}
+  body .controls .famline{position:static;padding:0;min-width:0;flex:0 1 auto}
+  body .controls .famline .row-label{display:none}
+  body .controls .family-pick{min-width:0;max-width:100%}
+  body .controls .family-btn{max-width:100%;min-width:0}
+  #familyName,#srcName{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  body .controls .family-menu{left:16px;right:16px;width:auto}
+  body .srcline{display:contents}
+  /* the source note shows for a few seconds after the reader picks a source, then goes */
+  body .controls .src-note{display:none;position:absolute;left:16px;right:16px;top:calc(100% + 8px);z-index:4;padding:10px 14px;background:var(--bg-2);border:1px solid var(--rule);border-radius:10px;box-shadow:0 6px 20px var(--shadow);-webkit-line-clamp:4}
+  body .controls .src-note.show{display:-webkit-box}
+  body .controls .view-tools{position:static;margin-left:auto}
+  body .controls .theme{width:36px;height:36px}
+  body .controls .fit-float{flex:0 0 auto;width:36px;height:36px;padding:0;display:grid;place-items:center;border-radius:50%}
+}
+.mini-mark{display:none;flex:0 0 auto;width:13px;height:28px;margin-right:2px;fill:var(--accent)}
+.fit-float svg{display:none;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:899px){
+  body .controls .fit-float svg{display:block}
+  body .controls .fit-float span{display:none}
+}
+/* the narrowest phones have no room for the subtitle beside the mark: it stays in the Guide */
+@media (max-width:359px){ .kicker .tagline{display:none} }

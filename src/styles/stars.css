@@ -1,0 +1,90 @@
+/* The look: a modern star chart that keeps Hevelius’ idea. Colours are in tokens.css.
+   Clean ivory by day, graphite by night; figures as stars, the engravings as fine line drawings.
+   Gold stays ichor, red stays curses. */
+:root body{background:var(--dust,none),var(--glow,none),var(--bg);background-size:240px 240px,auto,auto}
+
+/* stars: a fine ring round a sparkle for the bright, the sparkle alone for the faint */
+:root .dot.star{fill:var(--figure);stroke:none}
+:root .star-ring{fill:none;stroke:var(--figure);stroke-width:1}
+:root .dot.star.other-cycle{fill:none;stroke:var(--figure);stroke-width:.9}
+:root .node.sel .dot.star,:root .node.ends .dot.star{fill:var(--accent)}
+:root .node.sel .star-ring,:root .node.ends .star-ring{stroke:var(--accent)}
+
+/* names as on a modern chart: gods and groups in spaced capitals, mortals in the display serif */
+:root .lbl{font-family:var(--display);font-size:16px}
+:root .lbl.god{font:600 11.5px var(--ui);letter-spacing:.18em;text-transform:uppercase;fill:var(--text)}
+:root .house{font:500 13px var(--ui);letter-spacing:.32em;text-transform:uppercase}
+
+/* hairlines */
+:root .edge.main{stroke-width:.8}
+/* a marriage is two hairlines: a wider line with a band of the background down its middle */
+:root .e-marriage .edge.main{stroke-width:2.8}
+:root .e-marriage .edge.inner{stroke-width:1.2}
+/* the lines of a selected figure, a story step, the thread or a Guide example come forward a little */
+:root .e.hot .edge.main{stroke-width:1.3}
+:root .e-marriage.hot .edge.main{stroke-width:3.6}
+:root .e-marriage.hot .edge.inner{stroke-width:1.2}
+/* the rows drawn as a star chart's graticule: dotted parallels with graduations, faint meridians,
+   and the divider between gods and mortals ruled and graduated like the ecliptic */
+:root .genrule{stroke:var(--rule);stroke-width:1;stroke-dasharray:1 3}
+:root .meridian{stroke:var(--rule);stroke-width:1;stroke-dasharray:1 4}
+:root .ticks{stroke:var(--rule);stroke-width:6;stroke-dasharray:1 39}
+:root .ticks.major{stroke:var(--line);stroke-width:8;stroke-dasharray:1 19;opacity:.55}
+:root .divider{stroke:var(--line);stroke-width:.8}
+/* row numerals read like the scale on a chart's margin */
+@media (min-width:900px){:root .rl{font:500 11px/1.3 var(--ui);letter-spacing:.2em}}
+:root .rl:not(.rl-divider)::before{content:"";display:inline-block;width:10px;height:1px;background:currentColor;vertical-align:middle;margin-right:8px;opacity:.6}
+
+/* card */
+:root .sec h3{font:600 10.5px var(--ui);letter-spacing:.2em;text-transform:uppercase}
+:root .sky-name{font:600 12px var(--ui);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+
+/* Hevelius’ engraving as a line drawing on the page: ink on ivory, light on the night.
+   A tap shows the plate as it is. */
+:root .sky-pic img{border:0;border-radius:10px;background:none;cursor:pointer;clip-path:inset(1.2% round 10px);
+  filter:grayscale(1) brightness(1.2) contrast(1.45);mix-blend-mode:multiply;transition:filter .3s}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .sky-pic img{filter:grayscale(1) invert(1) contrast(1.3) brightness(.95);mix-blend-mode:screen}
+}
+:root[data-theme="dark"] .sky-pic img{filter:grayscale(1) invert(1) contrast(1.3) brightness(.95);mix-blend-mode:screen}
+:root .sky-pic img.orig{filter:none;mix-blend-mode:normal}
+
+/* Buttons as the cells of a table: square corners, and buttons that belong together share their rules */
+:root :is(.tab,.act,.info,.theme,.fit-float,.nav-chip,.ft-all,.draft,.dock,.tools,.tools .act,.family-menu,.src-note,.sheet-close){border-radius:0}
+:root #srcRow{gap:0}
+:root #srcRow .tab + .tab{margin-left:-1px}
+:root #srcRow .tab[aria-pressed="true"],:root #srcRow .tab.on{position:relative;z-index:1}
+:root .view-tools{gap:0}
+:root .view-tools .fit-float{margin-left:-1px}
+:root .sheet-nav{gap:0}
+:root .nav-chip + .nav-chip{margin-left:-1px}
+:root .tools{gap:0;padding:0}
+:root .tools .act + .act{border-left:1px solid var(--rule)}
+/* on phones the line of pills is one row of a table: no boxes, only hairline dividers between the cells, which run the full height of the row */
+@media (max-width:899px){
+  :root body .controls{gap:0;padding:0 16px;align-items:stretch;background:var(--bg)}
+  :root body .controls .mini-mark{align-self:center;margin-right:12px}
+  :root body .controls :is(.family-btn,.theme,.fit-float){height:46px;border:0;background:none;box-shadow:none}
+  :root body .controls .famline,:root body .controls .family-pick,:root body .controls .view-tools{display:flex;align-items:stretch}
+  :root body .controls .family-btn{padding:0 14px}
+  :root body .controls > .famline:first-of-type .family-btn{padding-left:0}
+  :root body:is(.sheet,.folded) .controls > .famline:first-of-type .family-btn{padding-left:12px;border-left:1px solid var(--rule)}
+  :root body .controls .src-pick{border-left:1px solid var(--rule)}
+  /* the Family and Source cells share the line evenly, so the divider between them stays put under the logo’s mark */
+  :root body .controls > .famline:first-of-type,:root body .controls .src-pick{flex:1 1 0;min-width:0}
+  :root body .controls .view-tools{gap:0;border-left:1px solid var(--rule)}
+  :root body .controls :is(.theme,.fit-float){width:46px;margin:0}
+  :root body .controls .fit-float{border-left:1px solid var(--rule);margin-right:-16px}
+  :root body .controls .family-btn[aria-expanded="true"]{color:var(--accent)}
+  :root body:not(.sheet,.folded) .controls{border-top:1px solid var(--rule)}
+  /* the tools are the last row of the same table: a strip along the bottom edge, ruled on top, with dividers */
+  :root .tools{left:0;right:0;bottom:0;border:0;border-top:1px solid var(--rule);box-shadow:none;padding-bottom:env(safe-area-inset-bottom,0px)}
+  :root .tools .act{padding:14px 4px}
+  /* Guide is a cell of the header, as wide as the theme and whole-tree cells under it, and its divider runs into theirs */
+  :root header .info{top:0;bottom:0;right:0;height:auto;width:93px;padding:0;border:0;border-left:1px solid var(--rule);background:none}
+}
+:root :is(.read-as,.tour-end){gap:0}
+:root .read-as .tab + .tab,:root .tour-end .act + .act{margin-left:-1px}
+:root :is(.go,.story-nav .act){border-radius:0}
+/* Ariadne’s thread is one gold line, whatever links it follows */
+:root .e.thread .edge.main{stroke-width:1.6}
