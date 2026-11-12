@@ -50,6 +50,7 @@ npm run preview  # serve the build
   - `base.css` — page frame, box sizing, focus rings.
   - `header.css`, `controls.css`, `tree.css` (nodes and edge styles), `card.css` (figure card, shared by the panels), `curse-panel.css`, `thread-panel.css` — one file per component.
 - `vite.config.js` — splits the data at build time: the page’s code carries what the tree needs to draw itself, and the long texts only a card shows (stories, taglines, versions, art, sky, members, story steps) go into a second file, `texts.json`, fetched once the tree is up. The JSON in `data/` stays whole; to move a field from one part to the other, edit `TEXT_FIELDS` there.
+- `scripts/passages/` — tools for finding the passage where a source tells a link: `match.py` proposes candidates from saved texts (see its head), `find.py` searches one work, `works.txt` lists the works and their numbers on ToposText.
 - `scripts/check-data.mjs` — checks the JSON before every build: known figures and sources on every link, no link listed twice, story pairs that exist as relations. A problem stops the build and says where it is.
 
 The address names what is open, so it can be sent as a link: `?family=thebes`, `?figure=medea`, `?story=argonauts&step=3`, `?source=H`.
