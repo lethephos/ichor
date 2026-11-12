@@ -15,7 +15,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 
 - `docs/tree.md` — who sits on which row and why: the gods, the heroes’ rows I–VII, every family and house.
 - `docs/features.md` — each part of the interface, how it behaves and why: the source switcher, the card, stories and their camera, the thread, search, the opening, links, the build.
-- `docs/design.md` — the look, the palette, the logo, the header, the card bar, the Guide, with what was tried and dropped.
+- `docs/design.md` — the look, the palette, the logo, the header, the card bar, the Guide.
 - `README.md` — how to run it, the fields of each JSON file, what each source file holds.
 
 ## Rules
@@ -32,7 +32,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - All user-facing text in English, with typographic quotes and apostrophes.
 
 **The tree**
-- Rows count descent within each house, not time: “Lower means descended, not later.” Siblings share a row; a child whose parent shares the row drops a line below. A time-aligned layout was considered and rejected.
+- Rows count descent within each house, not time: “Lower means descended, not later.” Siblings share a row; a child whose parent shares the row drops a line below. The rows are never aligned by time: that would break one of those two.
 - Nothing in the data holds a position. Layout is computed from `generation` and the relations, so a new figure needs only JSON. Places stay fixed when the source changes.
 - Everyone goes into the one pool of data; families (`families` in `branches.json`) are views that keep the tree readable. A collective is one figure of `kind: group`.
 
@@ -66,7 +66,6 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - Stories told step by step, by all sources or as one source tells them; every family has at least one, and all have been checked against the sources.
 - Ariadne’s thread, search over the whole tree, the Guide with a tour, light and dark themes, the opening.
 - The address names what is open: `?family=thebes`, `?figure=medea`, `?story=argonauts&step=3`, `?source=H`.
-- The original prototype, `prototype/ichor-atreidae.html`, stays as the reference for behaviour and tone. The first five tasks (data into JSON, styles into tokens, automatic layout, visual polish, deploy) are done.
 
 ## Open questions
 
@@ -75,4 +74,4 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - Hesiod fragment numbering: Catalogue of Women fr. 23a (Merkelbach–West); the Most (Loeb) number still needs checking.
 - Next branches: to be decided.
 - A database: none for now (all data is static JSON, the theme pick is in localStorage). Left for the future, for features readers write to: accounts, favourites, comments, suggested corrections.
-- Exact citations, family by family. Done: the House of Atreus for Homer & epic, Apollodorus and Later writers (147 passages on 78 of its 84 links). To do there: Hesiod and Lyric & tragedy; then the other families. Three sources the data lists could not be found where expected and need a decision: Apollodorus for Ares as father of Oenomaus (the Epitome only says Ares gave him arms and horses), and Apollodorus missing from Iphigenia’s and Chrysothemis’ parents though Epitome 2.16 names both daughters.
+- Exact citations, family by family. Done: the House of Atreus for Homer & epic, Apollodorus and Later writers (151 passages on 80 of its 84 links). To do there: Hesiod and Lyric & tragedy; then the other families. Checking the passages also corrects the sources: where a listed source does not tell the link, it is taken off; where one tells it and was not listed, it is added.
