@@ -2260,7 +2260,7 @@
     "to": "absyrtus",
     "sources": ["T", "A", "L"],
     "note": "killed her brother Absyrtus",
-    "cite": {"T": "Euripides, Medea 160–169", "A": "Apollodorus 1.9.24"}
+    "cite": {"T": "Euripides, Medea 160–169", "A": "Apollodorus 1.9.24", "L": "Ovid, Tristia 3.9"}
   },
   {
     "type": "feud",
@@ -4266,15 +4266,23 @@
     "to": "io",
     "sources": ["H", "T", "A", "L"],
     "note": "loved Io, and swore to Hera he had never touched her",
-    "cite": {"T": "Aeschylus, Suppliant Maidens 524–564", "A": "Apollodorus 2.1.3", "L": "Hyginus, Fabulae 145"}
+    "cite": {"T": "Aeschylus, Suppliant Maidens 292–299", "A": "Apollodorus 2.1.3", "L": "Hyginus, Fabulae 145"}
   },
   {
     "type": "transform",
     "from": "zeus",
     "to": "io",
-    "sources": ["T", "A", "L"],
+    "sources": ["A", "L"],
     "note": "turned Io into a white cow to hide her from Hera",
-    "cite": {"A": "Apollodorus 2.1.3", "L": "Hyginus, Fabulae 145"}
+    "cite": {"A": "Apollodorus 2.1.3", "L": "Hyginus, Fabulae 145; Ovid, Metamorphoses 1.601–621"}
+  },
+  {
+    "type": "transform",
+    "from": "hera",
+    "to": "io",
+    "sources": ["T"],
+    "note": "turned Io into a cow herself, in Aeschylus’ Suppliants",
+    "cite": {"T": "Aeschylus, Suppliant Maidens 292–299"}
   },
   {
     "type": "feud",
