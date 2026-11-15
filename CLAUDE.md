@@ -69,7 +69,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 
 ## Open questions
 
-- Final name: Ichor or Stemma. Check domain and social handles.
+- The name is Ichor (the reader settled it; Stemma was the other candidate). A domain and social handles are still to be checked.
 - Images in cards: only from Wikimedia Commons or museums with open licences, always with credit. Each art entry with a picture has `image: {file, thumb, credit, licence, licence_url}` (`file` is the Commons file name, `thumb` its 960px thumbnail; paintings credit the painter, photos of sculpture credit the photographer with the CC licence linked). 36 of 37 works have one; the head of the Nemesis of Rhamnous has no open photo on Commons yet. Licence notes per artwork are in the verification document.
 - Hesiod fragment numbering: Catalogue of Women fr. 23a (Merkelbach–West); the Most (Loeb) number still needs checking.
 - Next branches: to be decided.
