@@ -238,7 +238,7 @@ export function renderNode(id){
     ${p.modern ? `<div class="sec"><h3>Not in the ancient sources</h3>${p.modern.map(t => `<div class="ver modern">${t}</div>`).join("")}</div>` : ""}
     ${p.sky ? skySec(p.sky) : ""}
     ${p.art ? `<div class="sec"><h3>In art</h3><ul class="rels art">${p.art.map(artItem).join("")}</ul></div>` : ""}
-    <p class="legend">Each link lists the sources that record it. Underlined artworks open a page about the work; the picture icon shows the work itself.</p>`);
+    <p class="legend">Each link lists the sources that record it; an underlined passage opens the text at that place. Underlined artworks open a page about the work; the picture icon shows the work itself.</p>`);
   wirePictures(card);
   const all = card.querySelector(".ft-all");
   if (all) all.onclick = () => { card.querySelectorAll(".ft-band.more").forEach(b => b.classList.remove("more")); all.remove(); };

@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 
 /* The data stays whole in /data, but the page loads it in two parts: what the tree needs to draw itself
    (names, rows, links, the outline of each story), then the long texts that only a card shows
-   (stories, taglines, versions, art, sky, members, and the text of each story step).
+   (stories, taglines, versions, art, sky, members, the text of each story step, and the passages of each link).
    `virtual:ichor-core` is part of the main bundle; the texts are a second file, `texts.json`, fetched once the tree is up. */
 const TEXT_FIELDS = ["story", "tagline", "versions", "art", "modern", "sky", "members", "members_note", "members_label", "count"];
 const file = name => fileURLToPath(new URL(`./data/${name}.json`, import.meta.url));
@@ -19,18 +19,22 @@ function splitTexts(){
       return q;
     });
     const outline = read("stories").map(s => ({...s, steps: s.steps.map(({text, ...step}) => step)}));
-    return `export const people = ${JSON.stringify(slim)};\nexport const stories = ${JSON.stringify(outline)};`;
+    // a link's passages show only in a card: they travel with the texts
+    const links = read("relations").map(({cite, ...r}) => r);
+    return `export const people = ${JSON.stringify(slim)};\nexport const stories = ${JSON.stringify(outline)};\nexport const relations = ${JSON.stringify(links)};`;
   };
   const texts = () => JSON.stringify({
     people: Object.fromEntries(read("people").map(p => [p.id, Object.fromEntries(TEXT_FIELDS.filter(k => k in p).map(k => [k, p[k]]))])),
-    stories: Object.fromEntries(read("stories").map(s => [s.id, s.steps.map(st => st.text)]))
+    stories: Object.fromEntries(read("stories").map(s => [s.id, s.steps.map(st => st.text)])),
+    cites: read("relations").map(r => r.cite || null),      // in the order of relations.json
+    passages: read("passages")                               // where each passage can be read online
   });
   return {
     name: "ichor-split-texts",
     resolveId(id){ if (id === CORE || id === TEXTS) return "\0" + id; },
     load(id){
       if (id !== "\0" + CORE && id !== "\0" + TEXTS) return;
-      ["people", "stories"].forEach(n => this.addWatchFile(file(n)));
+      ["people", "stories", "relations", "passages"].forEach(n => this.addWatchFile(file(n)));
       if (id === "\0" + CORE) return core();
       // the texts are a file of their own, so the page can ask for it again if the first try fails
       if (serving) return `export default ${JSON.stringify(DEV_URL)};`;
@@ -43,7 +47,7 @@ function splitTexts(){
         res.setHeader("Content-Type", "application/json"); res.end(texts());
       });
     },
-    handleHotUpdate({file: f, server}){ if (f === file("people") || f === file("stories")) server.ws.send({type: "full-reload"}); }
+    handleHotUpdate({file: f, server}){ if (["people", "stories", "relations", "passages"].some(n => f === file(n))) server.ws.send({type: "full-reload"}); }
   };
 }
 

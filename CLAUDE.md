@@ -50,7 +50,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - Keep it simple: no backend, no framework, one dependency (D3).
 - The files in `src/` are set up in a fixed order, each importing the one before it first (`state`, `theme`, `tree`, `camera`, `sheet`, `controls`, `find`, `figure`, `stories`, `guide`, `thread`, `intro`, `main`). That first import must stay.
 - `npm run check` checks the data and runs before every build; a slip in the JSON stops the deploy.
-- The build splits the data: the tree’s part goes with the code, the long texts a card shows come in a second file. A card waits for them through `whenTexts`. A new text field belongs in `TEXT_FIELDS` in `vite.config.js`.
+- The build splits the data: the tree’s part goes with the code, the long texts a card shows come in a second file. A card waits for them through `whenTexts`. A new text field belongs in `TEXT_FIELDS` in `vite.config.js`. The passages of the links travel in that second file too; after adding passages, run `scripts/passages/links.py` so they become links.
 
 **Working with the reader**
 - Visual changes are discussed step by step; most points in `docs/design.md` were settled with the reader, so ask before changing one.
