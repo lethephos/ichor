@@ -1,7 +1,7 @@
 /* The card as a container: its bar and section navigator, the phone sheet and its grip,
    the folding header, and closing whatever is open. */
 import * as d3 from "d3";
-import {SRC, N, STORIES} from "./data.js";
+import {SRC, N, STORIES, PASSAGES} from "./data.js";
 import {viewH} from "./camera.js";
 import {state, named, wide} from "./state.js";
 import {graphEl, svg, zoom, apply} from "./tree.js";
@@ -15,9 +15,13 @@ export const card = document.getElementById("card");
 /* ---------- card ---------- */
 const cardBody = document.getElementById("cardBody");
 /* The sources of a link, and under them the passages where it is told, for those checked so far (`cite` in relations.json);
-   with one source chosen, only its passage. */
+   with one source chosen, only its passage. A passage opens the text itself, at that place, in a new tab. */
+const passage = one => {
+  const at = PASSAGES[one];
+  return at ? `<a href="${at.startsWith("http") ? at : "https://topostext.org/work/" + at}" target="_blank" rel="noopener">${one}</a>` : one;
+};
 export const srcText = (src, cite) => {
-  const where = cite ? src.filter(s => cite[s] && (state.src==="all" || state.src===s)).map(s => cite[s]) : [];
+  const where = cite ? src.filter(s => cite[s] && (state.src==="all" || state.src===s)).map(s => cite[s].split("; ").map(passage).join("; ")) : [];
   return `<span class="srcs">${src.map(s => state.src===s ? `<b>${SRC[s]}</b>` : SRC[s]).join(", ")}</span>${where.length ? `<span class="cites">${where.join(" · ")}</span>` : ""}`;
 };
 export function sentence(e){

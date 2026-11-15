@@ -1,6 +1,5 @@
-import {people, stories} from "virtual:ichor-core";
+import {people, stories, relations} from "virtual:ichor-core";
 import textsUrl from "virtual:ichor-texts-url";
-import relations from "../data/relations.json";
 import sources from "../data/sources.json";
 import branches from "../data/branches.json";
 import olympians from "../data/olympians.json";
@@ -81,7 +80,7 @@ export function setFamily(id) {
   GENS = gens.map(g => (BRANCH.tiers || [])[g] || `Row ${g + 1}`);
   P = people_.map(p => ({...p, row: rowOf[p.generation], ...layout.pos[p.id]}));
   N = Object.fromEntries(P.map(p => [p.id, p]));
-  E = relations_.map((r, i) => ({...r, i, note: r.note || ""}));
+  E = relations_.map((r, i) => ({...r, i, note: r.note || "", base: r}));
   FOCUS = N[FAMILY.focus] ? FAMILY.focus : N[BRANCH.focus] ? BRANCH.focus : P[0].id;
 
   /* A divider sits above the first row at or below its generation, if rows lie on both sides. */
@@ -127,11 +126,16 @@ setFamily(new URLSearchParams(location.search).get("family"));
    (vite.config.js splits them). Anything that shows those texts goes through `whenTexts`, so a tap that comes
    before they do opens its card the moment they arrive. A failed load is tried again at the next such tap. */
 let textsIn = false, loading = null;
+// where each passage can be read online: "2#1.110" is a section of a work on ToposText, anything else a full address
+export let PASSAGES = {};
 function loadTexts() {
   return loading ||= fetch(textsUrl).then(r => r.ok ? r.json() : Promise.reject()).then(t => {
     const fill = p => Object.assign(p, t.people[p.id]);
     people.forEach(fill); P.forEach(fill);
     stories.forEach(s => s.steps.forEach((step, i) => { step.text = t.stories[s.id][i]; }));
+    relations.forEach((r, i) => { if (t.cites[i]) r.cite = t.cites[i]; });
+    E.forEach(e => { e.cite = e.base.cite; });
+    PASSAGES = t.passages;
     textsIn = true;
   }, () => { loading = null; });
 }
