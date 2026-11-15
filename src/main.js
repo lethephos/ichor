@@ -1,10 +1,10 @@
 /* The page: the family switcher, the address, opening and closing a figure, and the start.
    The parts call each other freely, but they are set up in a fixed order, each file importing the one
    before it first: state, theme, tree, camera, sheet, controls, find, figure, stories, guide, thread, intro, main. */
-import {whenTexts, FAMILY, FAMILIES, setFamily, sourceNote, familyOf, STORIES, N, ALL_STORIES, SRC, figureHome, BRANCH} from "./data.js";
+import {whenTexts, textsReady, FAMILY, FAMILIES, setFamily, sourceNote, familyOf, STORIES, N, ALL_STORIES, SRC, figureHome, BRANCH} from "./data.js";
 import {intro} from "./intro.js";
 import {state} from "./state.js";
-import {drawTree, apply} from "./tree.js";
+import {drawTree, apply, nodeSel} from "./tree.js";
 import {initialView, focusOn} from "./camera.js";
 import {resetMode, foldHeader} from "./sheet.js";
 import {hideHint, buildStories, srcNote, setSource, curseSel, threadBtn} from "./controls.js";
@@ -110,6 +110,8 @@ document.addEventListener("click", ev => { if (!familyMenu.hidden && !familyMenu
 document.getElementById("branchSub").textContent = BRANCH.subtitle || "";
 /* A card shows the long texts, so it opens once they are in (at once, but for a tap in the first moments). */
 export function select(id, move){
+  // a tap in the first moments, before the texts are in: the star answers at once, the card follows
+  if (!textsReady()) nodeSel.filter(d => d.id === id).classed("pulse", false).each(function(){ this.getBoundingClientRect(); }).classed("pulse", true);
   whenTexts(() => {
     if (!N[id]) return;
     state.mode = "node"; state.sel = id; state.path = null;
@@ -131,5 +133,8 @@ export function nodeClick(id){
 showFamily(); buildStories(); indexPeople(); drawTree();
 initialView();
 apply(false);
-openFromUrl(START);
+/* A figure or story named in the address is framed by the height of the header and the dock, and those settle only
+   when the web fonts are in (4px either way); so the card opens then, or after a second and a half at the latest. */
+if (START.has("figure") || START.has("story")) Promise.race([document.fonts ? document.fonts.ready : null, new Promise(r => setTimeout(r, 1500))]).then(() => openFromUrl(START));
+else openFromUrl(START);
 intro();

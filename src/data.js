@@ -139,6 +139,7 @@ function loadTexts() {
     textsIn = true;
   }, () => { loading = null; });
 }
+export const textsReady = () => textsIn;
 export function whenTexts(fn) { if (textsIn) fn(); else loadTexts().then(() => { if (textsIn) fn(); }); }
 loadTexts();
 
