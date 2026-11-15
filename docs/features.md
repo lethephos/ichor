@@ -4,7 +4,7 @@ Each part of the interface and how it behaves. `CLAUDE.md` has the short list; `
 
 ## The tree
 
-- 342 figures and 802 relations in rows computed from `generation`. The whole tree opens at the top, on Gaia and Uranus with the Titans below; each family opens on its own `focus`.
+- 342 figures and 803 relations in rows computed from `generation`. The whole tree opens at the top, on Gaia and Uranus with the Titans below; each family opens on its own `focus`.
 - A row grows a line downwards for a child whose parent shares the row (with its spouse), so lower always means descended. Figures on a line are never staggered: height means descent and nothing else.
 - Pan and pinch-zoom.
 

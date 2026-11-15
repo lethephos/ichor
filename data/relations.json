@@ -4277,6 +4277,14 @@
     "cite": {"A": "Apollodorus 2.1.3", "L": "Hyginus, Fabulae 145; Ovid, Metamorphoses 1.601–621"}
   },
   {
+    "type": "transform",
+    "from": "hera",
+    "to": "io",
+    "sources": ["T"],
+    "note": "turned Io into a cow herself, in Aeschylus’ Suppliants",
+    "cite": {"T": "Aeschylus, Suppliant Maidens 292–299"}
+  },
+  {
     "type": "feud",
     "from": "hera",
     "to": "io",
