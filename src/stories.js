@@ -33,7 +33,7 @@ export function openCurses(){
    reveal on the tree only the figures met so far, step n+1 shows the whole line at once. */
 /* Telling a story by one source uses only what is already in relations.json: a generation is
    told by a source when one of its links to the story so far is attested there. */
-export const STORY_TYPES = ["parent","curse","feud","affair","marriage","transform"];
+export const STORY_TYPES = ["parent","curse","feud","affair","marriage","transform","teacher"];
 const storyEdge = (c, e) => STORY_TYPES.includes(e.type) && c.pairs.some(p => samePair(e, p));
 // the step where each figure first enters the story (0-based); figures may come back in later steps
 function entries(c){
@@ -101,7 +101,7 @@ function altParents(id){
 const nextStep = (c, step, told) => { for (let i = step+1; i <= c.steps.length; i++) if (told[i-1]) return i; return c.steps.length + 1; };
 const prevStep = (c, step, told) => { for (let i = Math.min(step-1, c.steps.length); i >= 1; i--) if (told[i-1]) return i; return 0; };
 const whoLinks = ids => `<div class="who">${ids.map(id => `<button class="rel" data-go="${id}">${N[id].name}</button>`).join("")}</div>`;
-const ORDER = {curse:0, feud:1, affair:2, marriage:3, parent:4};
+const ORDER = {curse:0, feud:1, affair:2, marriage:3, teacher:3.5, parent:4};
 export function openCurse(key, step = 0){
   whenTexts(() => { if (STORIES[key]) tellStory(key, step); });   // a step shows its text, which may still be on its way
 }

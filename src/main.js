@@ -1,7 +1,7 @@
 /* The page: the family switcher, the address, opening and closing a figure, and the start.
    The parts call each other freely, but they are set up in a fixed order, each file importing the one
    before it first: state, theme, tree, camera, sheet, controls, find, figure, stories, guide, thread, sky, intro, main. */
-import {whenTexts, textsReady, FAMILY, FAMILIES, setFamily, sourceNote, familyOf, STORIES, N, ALL_STORIES, SRC, figureHome, BRANCH} from "./data.js";
+import {whenTexts, textsReady, FAMILY, FAMILIES, setFamily, sourceNote, familyOf, STORIES, N, ALL_STORIES, SRC, figureHome, storyHome, BRANCH} from "./data.js";
 import {intro} from "./intro.js";
 import {openSky, closeSky} from "./sky.js";
 import {state} from "./state.js";
@@ -98,7 +98,8 @@ function openFromUrl(q){
   if (q.has("sky") !== state.sky) setSky(q.has("sky"));
   if (q.get("view") === "sky") openSky(); else closeSky();
   if (story) {
-    const home = storyMove(story);
+    // a story the address names with no family opens in its own family, on any screen: there its figures sit close
+    const own = storyHome(story), home = storyMove(story) || (!q.has("family") && own.id !== FAMILY.id ? own : null);
     if (home) land(home);
     const step = Math.round(+q.get("step")) || 0;
     openCurse(story.id, Math.min(Math.max(step, 0), story.steps.length + 1));

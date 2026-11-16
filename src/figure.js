@@ -205,7 +205,7 @@ function wirePictures(root){
     }
   });
 }
-const FAMILY_LISTS = ["Born to", "Married", "Affairs", "Children"];
+const FAMILY_LISTS = ["Born to", "Raised by", "Married", "Affairs", "Children", "Raised"];
 export function renderNode(id){
   const p = N[id];
   const touches = e => e.from===id || e.to===id;
@@ -213,12 +213,14 @@ export function renderNode(id){
   const pick = (f, s) => E.filter(f).map(e => relItem(other(e), e, s));
   const groups = [
     ["Born to", pick(e => e.type==="parent" && e.to===id, false)],
+    ["Raised by", pick(e => e.type==="teacher" && e.to===id, true)],
     ["Married", pick(e => e.type==="marriage" && touches(e), false)],
     ["Affairs", pick(e => e.type==="affair" && touches(e), true)],
     ["Feuds & killings", pick(e => e.type==="feud" && touches(e), true)],
     ["Transformations", pick(e => e.type==="transform" && touches(e), true)],
     ["Curses", pick(e => e.type==="curse" && touches(e), true)],
-    ["Children", pick(e => e.type==="parent" && e.from===id, false)]
+    ["Children", pick(e => e.type==="parent" && e.from===id, false)],
+    ["Raised", pick(e => e.type==="teacher" && e.from===id, true)]
   ].filter(g => g[1].length);
   shell(`
     <div class="card-top"><span class="greek" lang="grc">${p.greek}</span><button class="close" data-close>Close</button></div>

@@ -6626,5 +6626,45 @@
     "sources": ["L"],
     "note": "turned Lycaon into a wolf",
     "cite": {"L": "Hyginus, Fabulae 176; Hyginus, Astronomica 2.4"}
+  },
+  {
+    "type": "teacher",
+    "from": "chiron",
+    "to": "jason",
+    "sources": ["H", "T"],
+    "note": "brought up Jason in his cave on Mount Pelion",
+    "cite": {"H": "Catalogue of Women fr. 13 (Evelyn-White)", "T": "Pindar, Nemean 3.53–54"}
+  },
+  {
+    "type": "teacher",
+    "from": "chiron",
+    "to": "asclepius",
+    "sources": ["T", "A", "L"],
+    "note": "raised Asclepius and taught him to heal",
+    "cite": {"T": "Pindar, Pythian 3.45–46; Pindar, Nemean 3.53–55", "A": "Apollodorus 3.10.3", "L": "Ovid, Metamorphoses 2.612–632; Hyginus, Astronomica 2.38"}
+  },
+  {
+    "type": "teacher",
+    "from": "chiron",
+    "to": "actaeon",
+    "sources": ["A"],
+    "note": "trained Actaeon as a hunter",
+    "cite": {"A": "Apollodorus 3.4.4"}
+  },
+  {
+    "type": "teacher",
+    "from": "chiron",
+    "to": "achilles",
+    "sources": ["H", "T", "L"],
+    "note": "brought up Achilles on Mount Pelion",
+    "cite": {"H": "Catalogue of Women fr. 68 (Evelyn-White)", "T": "Pindar, Nemean 3.43–52; Euripides, Iphigenia at Aulis 208–209", "L": "Pausanias 3.18.12; Hyginus, Astronomica 2.38"}
+  },
+  {
+    "type": "teacher",
+    "from": "maia",
+    "to": "arcas",
+    "sources": ["A"],
+    "note": "brought up Arcas in Arcadia",
+    "cite": {"A": "Apollodorus 3.8.2"}
   }
 ]

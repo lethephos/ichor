@@ -10,7 +10,7 @@ const errors = [];
 const fail = (where, what) => errors.push(`${where}: ${what}`);
 
 const GROUPS = new Set(sources.groups.map(g => g.id));
-const TYPES = new Set(["parent", "marriage", "affair", "feud", "transform", "curse"]);
+const TYPES = new Set(["parent", "marriage", "affair", "teacher", "feud", "transform", "curse"]);
 const KINDS = new Set(["god", "nymph", "mortal", "other-cycle", "group"]);
 const ids = new Set();
 const known = id => ids.has(id);

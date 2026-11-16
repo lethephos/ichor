@@ -76,7 +76,7 @@
         "notes": {"E": "In Homer and the Hymns, Dawn carries off Orion and Artemis shoots him, and Coronis bears Asclepius to Apollo.", "H": "In Hesiod, Artemis turns Callisto into a bear, and Earth sends a scorpion against Orion; Daphne and Hyacinthus fade.", "T": "In lyric and tragedy, Artemis shoots Coronis, Zeus strikes down Asclepius, and Apollo carries Cyrene to Libya.", "A": "In Apollodorus, Zeus turns Callisto into a bear, and Apollo flays Marsyas; Cyrene and Daphne fade.", "L": "In later writers, Hera turns Callisto into a bear, Daphne becomes a laurel, and a flower grows from Hyacinthus’ blood."},
         "focus": "apollo",
         "houses": [],
-        "figures": ["gaia", "cronus", "oceanus", "zeus", "hera", "leto", "poseidon", "eos", "philyra", "chiron", "peneus", "cyclopes", "apollo", "artemis", "athena", "heracles", "daphne", "cyrene", "phlegyas", "marsyas", "orion", "lycaon", "cadmus", "coronis", "ischys", "hyacinthus", "autonoe", "aristaeus", "callisto", "asclepius", "actaeon", "arcas"]
+        "figures": ["gaia", "cronus", "oceanus", "zeus", "hera", "leto", "poseidon", "eos", "philyra", "chiron", "peneus", "cyclopes", "apollo", "artemis", "athena", "heracles", "daphne", "cyrene", "phlegyas", "marsyas", "orion", "lycaon", "cadmus", "coronis", "ischys", "hyacinthus", "autonoe", "aristaeus", "callisto", "asclepius", "actaeon", "arcas", "jason", "achilles"]
       },
       {
         "id": "thebes",
