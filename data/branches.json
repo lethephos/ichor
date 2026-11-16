@@ -38,7 +38,7 @@
         "label": "The gods",
         "title": "The gods",
         "note": "From Gaia and Uranus to the younger gods.",
-        "notes": {"E": "In Homer, Aphrodite is the daughter of Zeus and Dione, and Hera bears Typhon alone.", "H": "In Hesiod, Aphrodite rises from the foam round Uranus’ severed flesh, and Hera bears Hephaestus alone.", "T": "Lyric and tragedy tell 8 of the 149 links among the gods; in Aeschylus, Night is the mother of the Erinyes.", "A": "In Apollodorus, Aphrodite is a daughter of Zeus and Dione, and Metis’ drug makes Cronus bring up his children.", "L": "Later writers tell 14 of the 149 links among the gods; in Pausanias, Nemesis is a daughter of Ocean."},
+        "notes": {"E": "In Homer, Aphrodite is the daughter of Zeus and Dione, and Hera bears Typhon alone.", "H": "In Hesiod, Aphrodite rises from the foam round Uranus’ severed flesh, and Hera bears Hephaestus alone.", "T": "Lyric and tragedy tell 8 of the 149 links among the gods; in Aeschylus, Night is the mother of the Erinyes.", "A": "In Apollodorus, Aphrodite is a daughter of Zeus and Dione, and Metis’ drug makes Cronus bring up his children.", "L": "Later writers tell 15 of the 149 links among the gods; in Pausanias, Nemesis is a daughter of Ocean."},
         "focus": "zeus",
         "figures": ["gaia", "uranus", "nyx", "cronus", "rhea", "oceanus", "tethys", "coeus", "phoebe", "atlas", "hestia", "demeter", "hades", "poseidon", "hera", "metis", "leto", "maia", "dione", "zeus", "nemesis", "athena", "apollo", "aphrodite", "hephaestus", "dionysus", "persephone", "ares", "hermes", "artemis", "themis", "mnemosyne", "erinyes", "oceanids", "pleiades", "muses", "horae", "moirai", "charites", "crius", "hyperion", "theia", "iapetus", "prometheus", "epimetheus", "menoetius", "helios", "selene", "eos", "astraeus", "pallas", "perses", "asteria", "hecate", "hebe", "circe", "cyclopes", "hundred-handed", "typhon", "tartarus"]
       },
@@ -56,19 +56,29 @@
         "label": "Zeus and his loves",
         "title": "Zeus and his loves",
         "note": "His wives and lovers, and the children they bore him.",
-        "notes": {"E": "In Homer, Zeus does not come to Leda as a swan, and in the Cypria Nemesis is Helen’s mother.", "H": "In Hesiod, Zeus marries Metis first, then Themis; Leda, Danaë and Ganymede fade.", "T": "In lyric and tragedy, Zeus comes to Leda as a swan and to Danaë as gold, but his marriage to Hera fades.", "A": "Apollodorus tells 64 of the 71 links here; Metis and Themis are not called Zeus’ wives, nor Tantalus his son.", "L": "In later writers, Nemesis flees Zeus through many shapes, and Asteria escapes him as a quail."},
+        "notes": {"E": "In Homer, Zeus does not come to Leda as a swan, and in the Cypria Nemesis is Helen’s mother.", "H": "In Hesiod, Zeus marries Metis first, then Themis; Leda, Danaë and Ganymede fade.", "T": "In lyric and tragedy, Zeus comes to Leda as a swan and to Danaë as gold, but his marriage to Hera fades.", "A": "Apollodorus tells 69 of the 78 links here; Metis and Themis are not called Zeus’ wives, nor Tantalus his son.", "L": "In later writers, Nemesis flees Zeus through many shapes, and Asteria escapes him as a quail."},
         "focus": "zeus",
-        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria", "hebe", "danae", "perseus", "alcmene", "heracles", "pleiades", "dardanus", "ganymede", "aeacus", "aegina", "antiope-thebes", "amphion", "zethus"]
+        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria", "hebe", "danae", "perseus", "alcmene", "heracles", "pleiades", "dardanus", "ganymede", "aeacus", "aegina", "antiope-thebes", "amphion", "zethus", "callisto", "arcas"]
+      },
+      {
+        "id": "apollo",
+        "label": "Apollo and Artemis",
+        "title": "Apollo, Artemis and the hunters",
+        "note": "The twins of Leto and those who crossed them: Apollo’s loves and his son the healer, Artemis’ hunters and huntresses, and Chiron, who taught half of them.",
+        "notes": {"E": "In Homer and the Hymns, Dawn carries off Orion and Artemis shoots him, and Coronis bears Asclepius to Apollo.", "H": "In Hesiod, Artemis turns Callisto into a bear, and Earth sends a scorpion against Orion; Daphne and Hyacinthus fade.", "T": "In lyric and tragedy, Artemis shoots Coronis, Zeus strikes down Asclepius, and Apollo carries Cyrene to Libya.", "A": "In Apollodorus, Zeus turns Callisto into a bear, and Apollo flays Marsyas; Cyrene and Daphne fade.", "L": "In later writers, Hera turns Callisto into a bear, Daphne becomes a laurel, and a flower grows from Hyacinthus’ blood."},
+        "focus": "apollo",
+        "houses": [],
+        "figures": ["gaia", "cronus", "oceanus", "zeus", "hera", "leto", "poseidon", "eos", "philyra", "chiron", "peneus", "cyclopes", "apollo", "artemis", "athena", "heracles", "daphne", "cyrene", "phlegyas", "marsyas", "orion", "lycaon", "cadmus", "coronis", "ischys", "hyacinthus", "autonoe", "aristaeus", "callisto", "asclepius", "actaeon", "arcas"]
       },
       {
         "id": "thebes",
         "label": "Thebes",
         "title": "Thebes, from Cadmus to Antigone",
         "note": "The house of Cadmus, the twins who walled the city, and the Labdacids.",
-        "notes": {"E": "In Homer, Oedipus kills his father, weds his mother and curses his sons, but no children are named as theirs.", "H": "Hesiod tells only Cadmus, Harmonia and their children; Laius and Oedipus fade.", "T": "In lyric and tragedy, Jocasta bears Oedipus four children, and Creon condemns Antigone.", "A": "Apollodorus tells 77 of the 80 links here, Laius and Chrysippus among them; Pelops’ curse and Dirce’s spring are missing.", "L": "In later writers, Pelops curses Laius for carrying off Chrysippus; Oedipus’ curse on his sons fades."},
+        "notes": {"E": "In Homer, Oedipus kills his father, weds his mother and curses his sons, but no children are named as theirs.", "H": "Hesiod tells only Cadmus, Harmonia and their children; Laius and Oedipus fade.", "T": "In lyric and tragedy, Jocasta bears Oedipus four children, and Creon condemns Antigone.", "A": "Apollodorus tells 84 of the 88 links here, Laius and Chrysippus among them; Pelops’ curse and Dirce’s spring are among the few missing.", "L": "In later writers, Pelops curses Laius for carrying off Chrysippus; Oedipus’ curse on his sons fades."},
         "houses": ["House of Labdacus"],
         "focus": "cadmus",
-        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops", "menoeceus", "creon", "ino", "nycteus", "lycus", "dirce", "nycteis", "antiope-thebes", "epopeus", "amphion", "zethus", "niobe", "niobids", "chloris", "leto", "apollo", "artemis"]
+        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops", "menoeceus", "creon", "ino", "nycteus", "lycus", "dirce", "nycteis", "antiope-thebes", "epopeus", "amphion", "zethus", "niobe", "niobids", "chloris", "leto", "apollo", "artemis", "autonoe", "aristaeus", "actaeon"]
       },
       {
         "id": "atreus",
@@ -139,7 +149,7 @@
         "label": "The Odyssey",
         "title": "The Odyssey",
         "note": "The house of Odysseus, the women who kept him and the enemies he made, on the way to Troy and the long way home.",
-        "notes": {"E": "In Homer, Laertes is Odysseus’ only father, and Polyphemus’ curse keeps him from home; Telegonus fades.", "H": "Hesiod tells 10 of the 56 links here, among them Circe and Calypso; Odysseus’ parents and wife fade.", "T": "In lyric and tragedy, Sisyphus lies with Anticleia and may be Odysseus’ father; the wanderings fade.", "A": "In Apollodorus, Telegonus kills Odysseus and marries Penelope, and Scylla is a daughter of Phorcys.", "L": "In later writers, Telemachus marries Circe, and Circe turns Scylla into a monster."},
+        "notes": {"E": "In Homer, Laertes is Odysseus’ only father, and Polyphemus’ curse keeps him from home; Telegonus fades.", "H": "Hesiod tells 10 of the 57 links here, among them Circe and Calypso; Odysseus’ parents and wife fade.", "T": "In lyric and tragedy, Sisyphus lies with Anticleia and may be Odysseus’ father; the wanderings fade.", "A": "In Apollodorus, Telegonus kills Odysseus and marries Penelope, and Scylla is a daughter of Phorcys.", "L": "In later writers, Telemachus marries Circe, and Circe turns Scylla into a monster."},
         "focus": "odysseus",
         "figures": ["zeus", "poseidon", "hermes", "helios", "atlas", "circe", "calypso", "aeolus", "sisyphus", "autolycus", "arcesius", "laertes", "anticleia", "icarius", "odysseus", "penelope", "telemachus", "telegonus", "polyphemus", "companions", "suitors", "nausithous", "alcinous", "arete", "nausicaa", "palamedes", "aeacus", "telamon", "hesione", "ajax", "sirens", "scylla", "muses", "phorcys"]
       },

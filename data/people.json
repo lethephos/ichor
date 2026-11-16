@@ -5861,5 +5861,315 @@
     "tagline": "The best athlete on Aegina, killed with a discus by his brothers.",
     "story": "Son of Aeacus and the Nereid Psamathe, half-brother of Peleus and Telamon. He outdid them at every sport. They plotted against him, killed him with a discus during a contest and hid the body in a wood. Aeacus found out, and drove both of them from Aegina.",
     "versions": "In Apollodorus the lot fell on Telamon, who threw the discus; in Pausanias Peleus threw it. Pindar will not tell the story. In Euripides, Menelaus throws the killing in Peleus’ face."
+  },
+  {
+    "id": "philyra",
+    "name": "Philyra",
+    "greek": "Φιλύρα",
+    "gender": "f",
+    "generation": 2,
+    "kind": "nymph",
+    "branch": "cursed-houses",
+    "role": "Oceanid, mother of Chiron",
+    "tagline": "Bore a centaur to Cronus.",
+    "story": "A daughter of Oceanus. Cronus lay with her, and she bore Chiron, half man and half horse.",
+    "versions": "In Hyginus, Cronus took the shape of a horse; when Philyra saw what she had borne, she asked Zeus to change her, and became a linden tree.",
+    "transformation": {
+      "text": "A linden tree.",
+      "sources": ["L"]
+    }
+  },
+  {
+    "id": "chiron",
+    "name": "Chiron",
+    "greek": "Χείρων",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "The wise centaur",
+    "tagline": "Teacher of heroes; immortal, until a wound made him wish he were not.",
+    "story": "Son of Cronus and Philyra, a centaur and immortal, and the most just of his kind. In his cave on Mount Pelion he brought up Jason, Asclepius, Actaeon and Achilles, and taught them healing and hunting. When Heracles was fighting the centaurs, one of his arrows struck Chiron in the knee. The wound would not heal and he could not die, until he gave up his immortality.",
+    "versions": "In Apollodorus, he consented to die in place of Prometheus. In Hyginus, Cronus lay with Philyra in the shape of a horse. Pindar wishes Chiron were still alive in his cave.",
+    "sky": {
+      "constellation": "Centaurus",
+      "text": "Hyginus says the Centaur is Chiron, who reared Asclepius and Achilles, and was set among the stars for his justice and care.",
+      "cite": "Hyginus, Astronomica 2.38",
+      "sources": ["L"],
+      "image": {
+        "file": "Johannes Hevelius - Centaurus.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Johannes_Hevelius_-_Centaurus.jpg/960px-Johannes_Hevelius_-_Centaurus.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
+  },
+  {
+    "id": "peneus",
+    "name": "Peneus",
+    "greek": "Πηνειός",
+    "gender": "m",
+    "generation": 2,
+    "kind": "god",
+    "branch": "cursed-houses",
+    "role": "River god of Thessaly",
+    "tagline": "A river whose daughter would not marry.",
+    "story": "The river of Thessaly, one of the sons of Oceanus and Tethys. His daughter Daphne ran from Apollo and became the laurel.",
+    "versions": "In Ovid, he wanted a son-in-law and grandchildren, and Daphne begged him to let her stay unmarried. Hyginus makes Cyrene his daughter too; in Pindar she is his granddaughter, through Hypseus, king of the Lapiths."
+  },
+  {
+    "id": "daphne",
+    "name": "Daphne",
+    "greek": "Δάφνη",
+    "gender": "f",
+    "generation": 4,
+    "kind": "nymph",
+    "branch": "cursed-houses",
+    "role": "Nymph, daughter of Peneus",
+    "tagline": "Ran from Apollo until she turned into a tree.",
+    "story": "Daughter of the river Peneus, who wanted no husband. Apollo fell in love with her and chased her; when she could run no further, she was changed into a laurel. Apollo took the laurel for his own tree, and wears its leaves.",
+    "versions": "In Ovid, Eros made Apollo love her, out of spite. In Hyginus, Earth took her in and changed her. Pausanias tells an Arcadian story: Leucippus, son of Oenomaus, dressed as a girl to hunt beside her, and was found out when her companions went to swim.",
+    "transformation": {
+      "text": "A laurel tree.",
+      "sources": ["L"]
+    }
+  },
+  {
+    "id": "cyrene",
+    "name": "Cyrene",
+    "greek": "Κυρήνη",
+    "gender": "f",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Huntress, mother of Aristaeus",
+    "tagline": "Wrestled a lion bare-handed while Apollo watched.",
+    "story": "A girl of the Lapiths who cared nothing for the loom, and guarded her father’s cattle with javelin and sword. Apollo saw her wrestling a lion alone, and asked Chiron who she was. He carried her off in his golden chariot to Libya, where the city of Cyrene bears her name, and there she bore him Aristaeus.",
+    "versions": "In Pindar, she is the daughter of Hypseus, king of the Lapiths, a grandson of the river Peneus. Hyginus makes her a daughter of Peneus. In Apollodorus, a Cyrene is the mother, by Ares, of Diomedes of Thrace."
+  },
+  {
+    "id": "phlegyas",
+    "name": "Phlegyas",
+    "greek": "Φλεγύας",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Father of Coronis",
+    "tagline": "A raider king whose daughter kept a secret from him.",
+    "story": "Father of Coronis, and the greatest soldier of his time, who lived by raiding. His daughter was with child by Apollo and hid it from him.",
+    "versions": "In Pindar, Coronis took a lover without her father’s knowledge; in Apollodorus, against his judgment."
+  },
+  {
+    "id": "marsyas",
+    "name": "Marsyas",
+    "greek": "Μαρσύας",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Satyr and piper",
+    "tagline": "Challenged a god at music, and was skinned for it.",
+    "story": "A satyr. Athena made the pipes and threw them away, because playing them puffed out her cheeks. Marsyas picked them up, learned to play, and challenged Apollo, the winner to do as he liked with the loser. Apollo won, hung him from a pine tree and flayed him.",
+    "versions": "In Apollodorus, Apollo won by playing his lyre upside down and telling Marsyas to do the same with his pipes. His father is Olympus in Apollodorus and Oeagrus in Hyginus; in Ovid, Olympus is his pupil. In Pausanias, Athena struck him for picking up the pipes."
+  },
+  {
+    "id": "orion",
+    "name": "Orion",
+    "greek": "Ὠρίων",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The giant hunter",
+    "tagline": "Boasted he would kill every beast on earth, and the earth sent a scorpion.",
+    "story": "A hunter of giant size. Poseidon gave him the power to walk across the sea. On Chios he was blinded by King Oenopion; he walked east with a boy on his shoulders to guide him, and the rays of the rising sun healed his eyes. Eos, the Dawn, fell in love with him and carried him off. He died by Artemis, or by a scorpion, and was set among the stars.",
+    "versions": "In Homer, the gods resented Dawn’s love, and Artemis shot him on Ortygia; Odysseus sees him still hunting in the underworld. In Hesiod, he is a son of Poseidon and Euryale, daughter of Minos; he threatened to kill every beast on earth, and Earth sent the scorpion. In Apollodorus he is born of the earth, and Artemis kills him for challenging her at the discus, or for attacking one of her maidens. In Hyginus, three gods made him from a bull’s hide buried in the earth, and Artemis killed him when he tried to rape her.",
+    "sky": {
+      "constellation": "Orion",
+      "text": "Homer already names Orion in the sky, watched by the Bear. Hesiod says Zeus set him among the stars at the prayer of Artemis and Leto, and the scorpion with him.",
+      "cite": "Odyssey 5.272–275; Hesiod, Astronomy fr. 4; Hyginus, Astronomica 2.26",
+      "sources": ["E", "H", "L"],
+      "image": {
+        "file": "Johannes Hevelius - Orion.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Johannes_Hevelius_-_Orion.jpg/960px-Johannes_Hevelius_-_Orion.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
+  },
+  {
+    "id": "lycaon",
+    "name": "Lycaon",
+    "greek": "Λυκάων",
+    "gender": "m",
+    "generation": 4,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Arcadia",
+    "tagline": "Served a god human flesh, to see if he would notice.",
+    "story": "Son of Pelasgus, king of Arcadia, and father of fifty sons and a daughter, Callisto. When Zeus came to his house as a guest, human flesh was set on the table to test whether he was a god. Zeus overturned the table and struck the house with lightning, and Lycaon became a wolf.",
+    "versions": "In Hesiod and in Hyginus’ book on the stars, the flesh was his own grandson Arcas, whom Zeus put together again. In Apollodorus the impious ones are his fifty sons, and in Hyginus’ Fabulae Zeus struck them down. In Ovid, Lycaon also planned to kill the sleeping god.",
+    "transformation": {
+      "text": "A wolf.",
+      "sources": ["L"]
+    }
+  },
+  {
+    "id": "coronis",
+    "name": "Coronis",
+    "greek": "Κορωνίς",
+    "gender": "f",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Mother of Asclepius",
+    "tagline": "Carried a god’s child, and took a mortal lover.",
+    "story": "Daughter of Phlegyas, from the plain of Dotium in Thessaly. Apollo loved her, and she was with child by him when she lay with Ischys, son of Elatus. She was killed for it, and Apollo took the child, Asclepius, from her body as it lay on the pyre.",
+    "versions": "In Pindar, Apollo knew of himself, and sent Artemis to shoot her. In Apollodorus and Ovid a raven brought him the news; he killed her himself, and turned the raven from white to black. In Pausanias, Hermes took the child from the flames; the Epidaurians said she bore him on their mountain and left him there, where a goat fed him."
+  },
+  {
+    "id": "ischys",
+    "name": "Ischys",
+    "greek": "Ἴσχυς",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Lover of Coronis",
+    "tagline": "Slept with the woman Apollo loved.",
+    "story": "Son of Elatus. Coronis took him as her lover while she carried Apollo’s child.",
+    "versions": "In Pindar he is a stranger from Arcadia; Apollodorus calls him the brother of Caeneus. In Hyginus, Zeus killed him with a thunderbolt."
+  },
+  {
+    "id": "hyacinthus",
+    "name": "Hyacinthus",
+    "greek": "Ὑάκινθος",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Prince of Sparta",
+    "tagline": "Loved by Apollo, and killed by his discus.",
+    "story": "A Spartan youth, the youngest and most beautiful son of Amyclas. Apollo loved him, and killed him by accident with a throw of the discus. His tomb was at Amyclae, under the statue of Apollo, and the Spartans kept the feast of the Hyacinthia for him.",
+    "versions": "In Ovid, a flower grew from his blood, marked with Apollo’s cry of grief. Apollodorus also knows a Hyacinthus, son of the Muse Clio and Pierus, whom the singer Thamyris loved before Apollo did. Pausanias mentions the West Wind, and doubts the whole story.",
+    "transformation": {
+      "text": "A flower grew from his blood.",
+      "sources": ["L"]
+    }
+  },
+  {
+    "id": "autonoe",
+    "name": "Autonoe",
+    "greek": "Αὐτονόη",
+    "gender": "f",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Daughter of Cadmus",
+    "tagline": "Lost her son to his own hounds.",
+    "story": "Daughter of Cadmus and Harmonia, sister of Semele, Ino and Agave. She married Aristaeus and bore Actaeon, who was killed by his own hounds on Mount Cithaeron. When Dionysus drove the women of Thebes mad, she ran on the same mountain with her sisters.",
+    "versions": "In Ovid, Pentheus begged her for mercy in Actaeon’s name, and it did not move her. In Pausanias, she left Thebes in grief and died in a village near Megara, where her tomb was shown."
+  },
+  {
+    "id": "aristaeus",
+    "name": "Aristaeus",
+    "greek": "Ἀρισταῖος",
+    "gender": "m",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Guardian of flocks",
+    "tagline": "Fed on nectar as a baby; lost his son to a pack of hounds.",
+    "story": "Son of Apollo and Cyrene, born in Libya. Hermes carried the baby to the Seasons and to Earth, who fed him nectar and ambrosia and made him immortal, a guardian of flocks. He married Autonoe, daughter of Cadmus, and their son was Actaeon.",
+    "versions": "Pindar gives him the names Agreus and Nomius, the hunter and the herdsman. In Pausanias, grief for Actaeon drove him from Greece, and he settled in Sardinia. In Hyginus, as king of Ceos he ended a plague of heat by asking Zeus for the summer winds.",
+    "immortal": {
+      "text": "Fed nectar and ambrosia by the Seasons and Earth, and made immortal.",
+      "sources": ["T", "L"]
+    }
+  },
+  {
+    "id": "callisto",
+    "name": "Callisto",
+    "greek": "Καλλιστώ",
+    "gender": "f",
+    "generation": 5,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Huntress of Artemis",
+    "tagline": "Loved by Zeus, turned into a bear, and hunted by her own son.",
+    "story": "Daughter of Lycaon, and a companion of Artemis, sworn to stay a maiden. Zeus lay with her. She was turned into a bear, and her son by Zeus was Arcas. Zeus set her among the stars as the Great Bear.",
+    "versions": "Who made her a bear? In Hesiod, Artemis, when she saw at the bath that Callisto was with child. In Apollodorus, Zeus, to hide her from Hera; Hera then had Artemis shoot her. In Ovid, Pausanias and Hyginus, Hera, out of jealousy. In Apollodorus, Zeus came to her in the shape of Artemis, or of Apollo. In Hesiod and Ovid, her own son hunted her, not knowing her, and Zeus lifted them both away. Apollodorus says others call her a nymph, or a daughter of Nycteus or of Ceteus.",
+    "transformation": {
+      "text": "A bear, then the Great Bear in the sky.",
+      "sources": ["H", "T", "A", "L"]
+    },
+    "sky": {
+      "constellation": "Ursa Major",
+      "text": "Zeus set Callisto among the stars as the Great Bear. Hyginus adds that she never sets, because Tethys, who nursed Hera, will not let her bathe in the Ocean.",
+      "cite": "Hesiod, Astronomy fr. 3; Apollodorus 3.8.2; Hyginus, Fabulae 177; Pausanias 8.3.6",
+      "sources": ["H", "A", "L"],
+      "image": {
+        "file": "Johannes Hevelius - Ursa Major.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Johannes_Hevelius_-_Ursa_Major.jpg/960px-Johannes_Hevelius_-_Ursa_Major.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
+  },
+  {
+    "id": "asclepius",
+    "name": "Asclepius",
+    "greek": "Ἀσκληπιός",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "The healer",
+    "tagline": "Healed so well he raised the dead, and Zeus struck him down for it.",
+    "story": "Son of Apollo and Coronis, taken from his dead mother on the pyre and given to the centaur Chiron, who taught him to heal. He cured every kind of sickness, and at last brought a dead man back to life. Zeus killed him with a thunderbolt. Apollo, in his anger, killed the Cyclopes who had made it, and for that had to serve a mortal, Admetus, for a year. His sons Machaon and Podalirius were the healers of the Greeks at Troy.",
+    "versions": "In Homer he is a healer taught by Chiron, and his father is not named. In Pindar he took gold to raise a dead man. In Apollodorus, Zeus feared that men would learn to rescue each other from death. Hyginus names the man raised: Glaucus, son of Minos, or Hippolytus. Apollodorus and Pausanias know another mother, Arsinoe, daughter of Leucippus, from verses under Hesiod’s name.",
+    "sky": {
+      "constellation": "Ophiuchus",
+      "text": "Hyginus says many take the Serpent Bearer for Asclepius, whom Zeus set among the stars for Apollo’s sake. He holds a snake because he once saw a snake bring a herb to revive another, and used the same herb to raise Glaucus.",
+      "cite": "Hyginus, Astronomica 2.14",
+      "sources": ["L"],
+      "image": {
+        "file": "Johannes Hevelius - Serpens and Serpentarius.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Johannes_Hevelius_-_Serpens_and_Serpentarius.jpg/960px-Johannes_Hevelius_-_Serpens_and_Serpentarius.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
+  },
+  {
+    "id": "actaeon",
+    "name": "Actaeon",
+    "greek": "Ἀκταίων",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "Hunter of Thebes",
+    "tagline": "Saw a goddess bathing, and was hunted down by his own hounds.",
+    "story": "Son of Aristaeus and Autonoe, grandson of Cadmus, and a hunter trained by Chiron. On Mount Cithaeron he came upon Artemis bathing. She turned him into a stag, and his own fifty hounds, not knowing him, tore him apart.",
+    "versions": "In Euripides, he had boasted that he was a better hunter than Artemis. Stesichorus said she threw a deerskin over him, to keep him from marrying Semele; in Apollodorus, Acusilaus said Zeus was angry with him for courting Semele. In Hyginus, he wanted to rape the goddess. Pausanias thinks the hounds simply went mad.",
+    "transformation": {
+      "text": "A stag, torn apart by his own hounds.",
+      "sources": ["A", "L"]
+    }
+  },
+  {
+    "id": "arcas",
+    "name": "Arcas",
+    "greek": "Ἀρκάς",
+    "gender": "m",
+    "generation": 6,
+    "kind": "mortal",
+    "branch": "cursed-houses",
+    "role": "King of Arcadia",
+    "tagline": "Almost speared a bear that was his mother.",
+    "story": "Son of Zeus and Callisto. When his mother died, Zeus took the baby and gave him to Maia to bring up in Arcadia. He became king after the sons of Lycaon, taught his people to sow grain, bake bread and weave, and the land was named Arcadia after him.",
+    "versions": "In Hesiod and Ovid, he hunted his mother in her bear shape, not knowing her, and Zeus lifted both of them into the sky; he is the Bear-Watcher, Boötes, beside her. In Hesiod, his grandfather Lycaon cut him up and served him to Zeus, who made him whole again."
   }
 ]
