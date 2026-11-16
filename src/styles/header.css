@@ -56,6 +56,10 @@ header{padding:16px 16px 6px;position:relative}
 .family-menu li[aria-selected="true"] .fm-label{color:var(--accent)}
 .fm-label{font:19px var(--display);color:var(--text)}
 .fm-note{font:12px var(--ui);color:var(--muted)}
+.family-menu .fm-group{padding:14px 16px 5px;font:600 10.5px var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:default;border-top:1px solid var(--rule);margin-top:6px}
+.family-menu .fm-group:hover{background:none}
+.fn-short{display:none}
+@media (max-width:899px){.fn-full{display:none}.fn-short{display:inline}}
 /* on phones the two labels stay, so the reader sees what each pill chooses */
 @media (max-width:899px){
   .famline{gap:10px;position:relative}

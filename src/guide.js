@@ -13,7 +13,7 @@ import {moveToFamily} from "./main.js";
 const infoBtn = document.getElementById("infoBtn");
 infoBtn.onclick = () => state.mode==="about" || state.mode==="tour" ? resetMode() : openAbout();
 /* The Guide is a live legend: each line style, the rule about rows and each source can be tapped to see it on the tree. */
-const DEMO_PAIRS = {parent:["atreus","agamemnon"], marriage:["zeus","hera"], affair:["zeus","leda"], feud:["atreus","thyestes"], transform:["zeus","io"], curse:["myrtilus","pelops"]};
+const DEMO_PAIRS = {parent:["atreus","agamemnon"], marriage:["zeus","hera"], affair:["zeus","leda"], teacher:["chiron","achilles"], feud:["atreus","thyestes"], transform:["zeus","io"], curse:["myrtilus","pelops"]};
 function demoEdge(type){
   const pick = E.find(e => e.type===type && samePair(e, DEMO_PAIRS[type]) && attested(e));
   return pick || E.filter(e => e.type===type && attested(e)).sort((a, b) => b.sources.length - a.sources.length)[0] || null;

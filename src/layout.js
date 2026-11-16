@@ -18,7 +18,7 @@ export const LEFT = 60;         // x of the leftmost figure; rules start at x = 
 export const RIGHT_PAD = 140;   // space after the rightmost figure
 export const BOTTOM_PAD = 85;   // space after the last row
 
-const PULL = {parent:1, marriage:1, affair:0.3, feud:0.2, curse:0.2, transform:0.1};
+const PULL = {parent:1, marriage:1, affair:0.3, teacher:0.2, feud:0.2, curse:0.2, transform:0.1};
 const INERTIA = 0.5;            // how strongly a figure holds its previous place
 const MIN_GAP = 92;             // minimum distance between neighbours on a row
 const LABEL_PAD = 24;           // extra room between two labels

@@ -49,7 +49,7 @@ function edgePath(e){
   const pad = (e.type==="curse"||e.type==="transform") ? RN+8 : RN+2;
   return `M${a.x+u1[0]*(RN+2)},${a.y+u1[1]*(RN+2)} Q${cx},${cy} ${b.x-u2[0]*pad},${b.y-u2[1]*pad}`;
 }
-const BASE = {parent:1.2, marriage:4, affair:1.2, feud:1.2, transform:1.8, curse:1.7};
+const BASE = {parent:1.2, marriage:4, affair:1.2, teacher:1.3, feud:1.2, transform:1.8, curse:1.7};
 export let edgeSel, nodeSel;
 /* The tree of the chosen family: rows, dividers and houses, then links, then figures. */
 export function drawTree(){
@@ -153,7 +153,7 @@ export function apply(animate){
     if (inPath) vis = true;
     const hot = (sel && (e.from===sel || e.to===sel)) || (inCurse && (!story || story.now.has(e.from) || story.now.has(e.to))) || inPath;
     // at rest, feuds and affairs stay faint so the bloodlines read first; they light up when selected
-    let op = (e.type==="curse"||e.type==="transform") ? 0.9 : (e.type==="feud"||e.type==="affair") ? 0.3 : 0.55;
+    let op = (e.type==="curse"||e.type==="transform") ? 0.9 : (e.type==="feud"||e.type==="affair") ? 0.3 : e.type==="teacher" ? 0.5 : 0.55;
     // in a large tree a link that runs far across it stays faint until one of its ends is chosen: near kin read first
     op *= reach(e);
     if (sel || curse || path || demo) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
