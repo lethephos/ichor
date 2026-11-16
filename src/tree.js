@@ -152,7 +152,8 @@ export function apply(animate){
     // at rest, feuds and affairs stay faint so the bloodlines read first; they light up when selected
     let op = (e.type==="curse"||e.type==="transform") ? 0.9 : (e.type==="feud"||e.type==="affair") ? 0.3 : 0.55;
     if (sel || curse || path || demo) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
-    if (sky) op = 0.07;
+    // in the sky layer only the links between two constellations stay: the family that is in the sky together
+    if (sky) op = inSky(N[e.from]) && inSky(N[e.to]) ? 0.8 : 0.07;
     if (!vis && !inCurse) op = 0;
     if (vis) { visible.add(e.from); visible.add(e.to); }
     const g = d3.select(this).classed("thread", inPath && !demo).classed("alt", isAlt).classed("hot", !!(hot && (sel || curse || path || demo)));

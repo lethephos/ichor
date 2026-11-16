@@ -1,10 +1,10 @@
 /* The controls round the tree: source pills, layer toggles, the Stories list,
    the phone tools strip and the Layers panel. */
-import {SRC_ALL_LABEL, SRC, SRC_FULL, sourceNote, STORIES} from "./data.js";
+import {SRC_ALL_LABEL, SRC, SRC_FULL, sourceNote, STORIES, P} from "./data.js";
 import {resetMode, shell, panelTop, card} from "./sheet.js";
-import {state, wide, LAYERS, SAMPLE} from "./state.js";
+import {state, wide, LAYERS, SAMPLE, inSky} from "./state.js";
 import {apply, nodeSel} from "./tree.js";
-import {keepInView} from "./camera.js";
+import {keepInView, fitTo, fitScale, MIN_PHONE_K} from "./camera.js";
 import {openFind} from "./find.js";
 import {renderNode} from "./figure.js";
 import {openCurse, openCurses} from "./stories.js";
@@ -83,6 +83,9 @@ export function setSky(on){
   state.sky = on;
   document.querySelectorAll("[data-sky]").forEach(b => b.setAttribute("aria-pressed", on));
   apply(true);
+  // the camera steps back to hold every constellation of this family, unless on a phone that would make them too small to read
+  const ids = P.filter(inSky).map(p => p.id);
+  if (on && !state.mode && ids.length > 1 && (wide() || fitScale(ids) >= MIN_PHONE_K)) fitTo(ids, true);
 }
 const skyBtn = document.createElement("button");
 skyBtn.className = "toggle sky-toggle"; skyBtn.dataset.sky = ""; skyBtn.setAttribute("aria-pressed","false");
