@@ -4,7 +4,7 @@ Each part of the interface and how it behaves. `CLAUDE.md` has the short list; `
 
 ## The tree
 
-- 342 figures and 803 relations in rows computed from `generation`. The whole tree opens at the top, on Gaia and Uranus with the Titans below; each family opens on its own `focus`.
+- 357 figures and 848 relations in rows computed from `generation`. The whole tree opens at the top, on Gaia and Uranus with the Titans below; each family opens on its own `focus`.
 - A row grows a line downwards for a child whose parent shares the row (with its spouse), so lower always means descended. Figures on a line are never staggered: height means descent and nothing else.
 - The order of figures on each row is kept (`data/order.json`). Adding a link moves nothing by more than a few pixels; adding a figure moves its neighbours aside and leaves the order as it was. Before this, one weak link could reorder half the rows of the whole tree.
 - Pan and pinch-zoom.

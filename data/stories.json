@@ -2567,5 +2567,238 @@
         "text": "Years later Telegonus, his son by Circe, comes to Ithaca looking for his father and, not knowing him, kills him with a spear tipped with a stingray’s spine. He takes the body to Circe, with Penelope and Telemachus. Telegonus marries Penelope, and Telemachus marries Circe."
       }
     ]
+  },
+  {
+    "id": "antiope",
+    "kind": "story",
+    "title": "Antiope and the walls of Thebes",
+    "lead": "A girl loved by Zeus, a usurper’s twenty years, twins raised by a herdsman, and a city walled by music.",
+    "pairs": [
+      ["polydorus", "nycteis"],
+      ["nycteus", "nycteis"],
+      ["nycteis", "labdacus"],
+      ["polydorus", "labdacus"],
+      ["nycteus", "antiope-thebes"],
+      ["zeus", "antiope-thebes"],
+      ["epopeus", "antiope-thebes"],
+      ["lycus", "epopeus"],
+      ["zeus", "amphion"],
+      ["antiope-thebes", "amphion"],
+      ["zeus", "zethus"],
+      ["antiope-thebes", "zethus"],
+      ["lycus", "dirce"],
+      ["dirce", "antiope-thebes"],
+      ["amphion", "dirce"],
+      ["zethus", "dirce"],
+      ["amphion", "lycus"],
+      ["zethus", "lycus"],
+      ["dionysus", "dirce"],
+      ["amphion", "laius"],
+      ["amphion", "niobe"],
+      ["amphion", "niobids"],
+      ["niobe", "niobids"],
+      ["niobe", "leto"],
+      ["apollo", "niobids"],
+      ["artemis", "niobids"],
+      ["amphion", "chloris"],
+      ["niobe", "chloris"]
+    ],
+    "steps": [
+      {
+        "label": "The regents",
+        "figures": ["polydorus", "nycteis", "nycteus", "lycus", "labdacus"],
+        "pairs": [
+          ["polydorus", "nycteis"],
+          ["nycteus", "nycteis"],
+          ["nycteis", "labdacus"],
+          ["polydorus", "labdacus"]
+        ],
+        "text": "Polydorus, son of Cadmus, marries Nycteis, daughter of Nycteus, and they have a son, Labdacus. The heirs of this house keep being left as children, and others rule for them. In Pausanias, Nycteus is guardian of the boy Labdacus. In Apollodorus, when Labdacus dies and leaves a son one year old, Laius, Nycteus’ brother Lycus takes power and holds it for twenty years."
+      },
+      {
+        "label": "Zeus",
+        "figures": ["antiope-thebes", "zeus"],
+        "pairs": [
+          ["nycteus", "antiope-thebes"],
+          ["zeus", "antiope-thebes"]
+        ],
+        "text": "Nycteus has another daughter, Antiope. Zeus lies with her; in Ovid he comes as a satyr. When she is with child, her father threatens her, and she runs away."
+      },
+      {
+        "label": "Sicyon",
+        "figures": ["epopeus"],
+        "pairs": [
+          ["epopeus", "antiope-thebes"],
+          ["lycus", "epopeus"]
+        ],
+        "text": "She reaches Sicyon, and its king, Epopeus, marries her. In Apollodorus, Nycteus kills himself in despair, but first charges Lycus to punish them both. Lycus marches on Sicyon, kills Epopeus and leads Antiope away."
+      },
+      {
+        "label": "Twins on the mountain",
+        "figures": ["amphion", "zethus"],
+        "pairs": [
+          ["zeus", "amphion"],
+          ["antiope-thebes", "amphion"],
+          ["zeus", "zethus"],
+          ["antiope-thebes", "zethus"]
+        ],
+        "text": "On the road home, at Eleutherae, Antiope gives birth to twins. They are left on the mountain. A herdsman finds them, raises them and names them Zethus and Amphion. Zethus grows up to keep cattle. Amphion plays the lyre that Hermes gave him."
+      },
+      {
+        "label": "Dirce",
+        "figures": ["dirce"],
+        "pairs": [
+          ["lycus", "dirce"],
+          ["dirce", "antiope-thebes"]
+        ],
+        "text": "Lycus and his wife Dirce keep Antiope locked up and treat her cruelly. One day her chains fall off of themselves. She slips past her guards and comes to the hut where her sons live, and asks them to take her in."
+      },
+      {
+        "label": "The bull",
+        "figures": ["amphion", "zethus", "dirce", "dionysus"],
+        "pairs": [
+          ["amphion", "dirce"],
+          ["zethus", "dirce"],
+          ["amphion", "lycus"],
+          ["zethus", "lycus"],
+          ["dionysus", "dirce"]
+        ],
+        "text": "In Hyginus, Zethus takes her for a runaway and turns her away, and Dirce, out on the mountain for the rites of Dionysus, finds her and drags her off to die. The herdsman tells the twins who she is. They run after them, free their mother, and tie Dirce by the hair to a bull. In Apollodorus they kill Lycus too, and throw Dirce’s body into the spring that bears her name; in Hyginus, Dionysus makes the spring rise from her body."
+      },
+      {
+        "label": "The walls",
+        "figures": ["laius"],
+        "pairs": [
+          ["amphion", "laius"]
+        ],
+        "text": "The twins rule Thebes and drive out the boy Laius; he finds shelter with Pelops, and there the curse on his house begins. They wall the city. When Amphion plays, the stones follow his lyre. Zethus marries Thebe, and the city takes her name."
+      },
+      {
+        "label": "Niobe",
+        "figures": ["niobe", "niobids", "leto", "apollo", "artemis"],
+        "pairs": [
+          ["amphion", "niobe"],
+          ["amphion", "niobids"],
+          ["niobe", "niobids"],
+          ["niobe", "leto"],
+          ["apollo", "niobids"],
+          ["artemis", "niobids"]
+        ],
+        "text": "Amphion marries Niobe, daughter of Tantalus. She bears him seven sons and seven daughters, and says she is more blessed in children than Leto, who has only two. Leto sends her two against them. Apollo shoots the sons as they hunt on Cithaeron; Artemis shoots the daughters in the house. Niobe goes home to Mount Sipylus and turns to stone, and the stone still weeps."
+      },
+      {
+        "label": "The one who lived",
+        "figures": ["chloris"],
+        "pairs": [
+          ["amphion", "chloris"],
+          ["niobe", "chloris"]
+        ],
+        "text": "One daughter, Chloris, is spared. Neleus of Pylos marries her, and she becomes the mother of Nestor, who will go to Troy an old man. In Pausanias, Zethus dies of grief for his own son, and the Thebans call Laius back to be king."
+      }
+    ]
+  },
+  {
+    "id": "aeacus",
+    "kind": "story",
+    "title": "The sons of Aeacus",
+    "lead": "A nymph carried off to an island, a people made from ants, and a brother killed at the games.",
+    "pairs": [
+      ["asopus", "aegina"],
+      ["zeus", "aegina"],
+      ["sisyphus", "zeus"],
+      ["zeus", "asopus"],
+      ["zeus", "sisyphus"],
+      ["zeus", "aeacus"],
+      ["aegina", "aeacus"],
+      ["aeacus", "endeis"],
+      ["aeacus", "peleus"],
+      ["endeis", "peleus"],
+      ["aeacus", "telamon"],
+      ["endeis", "telamon"],
+      ["nereus", "psamathe"],
+      ["aeacus", "psamathe"],
+      ["aeacus", "phocus"],
+      ["psamathe", "phocus"],
+      ["telamon", "phocus"],
+      ["peleus", "phocus"],
+      ["peleus", "thetis"],
+      ["peleus", "achilles"],
+      ["telamon", "hesione"],
+      ["telamon", "ajax"]
+    ],
+    "steps": [
+      {
+        "label": "The river’s daughter",
+        "figures": ["asopus", "aegina", "zeus"],
+        "pairs": [
+          ["asopus", "aegina"],
+          ["zeus", "aegina"]
+        ],
+        "text": "Asopus is a river, and has twenty daughters. Zeus carries off one of them, Aegina, to the island of Oenone. In Ovid he comes to her as a flame."
+      },
+      {
+        "label": "The informer",
+        "figures": ["sisyphus"],
+        "pairs": [
+          ["sisyphus", "zeus"],
+          ["zeus", "asopus"],
+          ["zeus", "sisyphus"]
+        ],
+        "text": "Asopus searches for her as far as Corinth. Sisyphus, its king, knows who took her. In Pausanias he will not say until the river gives him a spring on his citadel. Then he tells. Asopus goes after Zeus, and Zeus drives him back to his own streams with thunderbolts. For this, Apollodorus says, Sisyphus rolls his stone in the underworld."
+      },
+      {
+        "label": "The ants",
+        "figures": ["aeacus"],
+        "pairs": [
+          ["zeus", "aeacus"],
+          ["aegina", "aeacus"]
+        ],
+        "text": "On the island Aegina bears Aeacus, and the island takes her name. In Hesiod he grows up alone there, and Zeus turns the island’s ants into men and women for him. In Hyginus, Hera poisons the island’s water and its people die; Aeacus, watching a line of ants, begs his father for men, and Zeus turns the ants into men. They are the Myrmidons, the ant people."
+      },
+      {
+        "label": "Two mothers",
+        "figures": ["endeis", "peleus", "telamon", "nereus", "psamathe", "phocus"],
+        "pairs": [
+          ["aeacus", "endeis"],
+          ["aeacus", "peleus"],
+          ["endeis", "peleus"],
+          ["aeacus", "telamon"],
+          ["endeis", "telamon"],
+          ["nereus", "psamathe"],
+          ["aeacus", "psamathe"],
+          ["aeacus", "phocus"],
+          ["psamathe", "phocus"]
+        ],
+        "text": "Aeacus marries Endeis, and they have two sons, Peleus and Telamon. Then he wants Psamathe, a daughter of Nereus. In Apollodorus she turns herself into a seal to escape him. She bears him a third son, Phocus."
+      },
+      {
+        "label": "The discus",
+        "figures": ["phocus", "telamon", "peleus"],
+        "pairs": [
+          ["telamon", "phocus"],
+          ["peleus", "phocus"]
+        ],
+        "text": "Phocus is the best athlete of the three, and his brothers plot against him. In Apollodorus they draw lots; it falls to Telamon, who throws a discus at his head during a contest. In Pausanias, Peleus throws the stone, to please their mother. They hide the body in a wood. Pindar, singing for Aegina, will not tell it."
+      },
+      {
+        "label": "Exile",
+        "figures": ["thetis", "achilles", "hesione", "ajax"],
+        "pairs": [
+          ["peleus", "thetis"],
+          ["peleus", "achilles"],
+          ["telamon", "hesione"],
+          ["telamon", "ajax"]
+        ],
+        "text": "The murder comes out, and Aeacus drives both sons from the island. Telamon becomes king of Salamis, and his son is Ajax. Peleus goes north to Phthia and marries Thetis, Psamathe’s sister, and their son is Achilles. The two best fighters of the Greeks at Troy are grandsons of Aeacus."
+      },
+      {
+        "label": "The keys of Hades",
+        "figures": ["aeacus"],
+        "pairs": [
+          ["zeus", "aeacus"]
+        ],
+        "text": "Aeacus is the most pious of men. In Apollodorus, when the crops fail all over Greece, the oracles say that only his prayers can end it; he prays, and the land is delivered. After his death he is honoured in the house of Hades, and keeps its keys."
+      }
+    ]
   }
 ]
