@@ -33,7 +33,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 
 **The tree**
 - Rows count descent within each house, not time: “Lower means descended, not later.” Siblings share a row; a child whose parent shares the row drops a line below. The rows are never aligned by time: that would break one of those two.
-- Nothing in the data holds a position. Layout is computed from `generation` and the relations, so a new figure needs only JSON. Places stay fixed when the source changes. They do not stay fixed when the data changes: the layout settles afresh, and one new link can reorder rows across the whole tree (a link for Hera turning Io into a cow reordered 11 of 25), so compare the whole tree before and after a change to the relations.
+- Nothing in the data holds a position. Layout is computed from `generation` and the relations, so a new figure needs only JSON. Places stay fixed when the source changes. When the data changes, the order of figures on each row is kept (`data/order.json`, one list per family, written by `npm run order`; the data check asks for it when a figure is missing): a new link moves nothing by more than a few pixels, a new figure takes its place among its kin and its neighbours make room. `npm run order -- --afresh` lets every family find a new order from scratch; that reshuffles the tree, so it is a visual change to show first.
 - Everyone goes into the one pool of data; families (`families` in `branches.json`) are views that keep the tree readable. A collective is one figure of `kind: group`.
 
 **Look**
@@ -69,7 +69,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 
 ## Open questions
 
-- Final name: Ichor or Stemma. Check domain and social handles.
+- The name is Ichor (the reader settled it; Stemma was the other candidate). A domain and social handles are still to be checked.
 - Images in cards: only from Wikimedia Commons or museums with open licences, always with credit. Each art entry with a picture has `image: {file, thumb, credit, licence, licence_url}` (`file` is the Commons file name, `thumb` its 960px thumbnail; paintings credit the painter, photos of sculpture credit the photographer with the CC licence linked). 36 of 37 works have one; the head of the Nemesis of Rhamnous has no open photo on Commons yet. Licence notes per artwork are in the verification document.
 - Hesiod fragment numbering: Catalogue of Women fr. 23a (Merkelbach–West); the Most (Loeb) number still needs checking.
 - Next branches: to be decided.
