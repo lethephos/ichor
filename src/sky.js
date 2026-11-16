@@ -9,6 +9,9 @@ import {state, wide, inSky} from "./state.js";
 import {resetMode} from "./sheet.js";
 import {select, moveToFamily, syncUrl} from "./main.js";
 import skyUrl from "../data/sky.json?url";
+import ART_H from "../data/skyart.json";
+import ART_M from "../data/skyart-m.json";
+const ART = new URLSearchParams(location.search).get("art") === "m" ? ART_M : new URLSearchParams(location.search).get("art") === "0" ? {} : ART_H;   // trial
 
 const stage = document.getElementById("stage");
 const view = document.createElement("div");
@@ -27,7 +30,7 @@ const at = ([ra, dec]) => { const r = (90 - dec) * PX, a = ra * Math.PI / 180; r
 const PLEIADES = [56.75, 24.12];
 const mean = pts => [d3.mean(pts, p => p[0]), d3.mean(pts, p => p[1])];
 
-let drawn = false, loading = null, starSel, figSel, lineSel;
+let drawn = false, loading = null, starSel, figSel, lineSel, artSel;
 function load(){
   loading ||= fetch(skyUrl).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(draw).catch(() => { loading = null; });
   return loading;
@@ -49,6 +52,11 @@ function draw(sky){
     const a = h * 15 * Math.PI / 180, r = RIM + 13;
     grid.append("text").attr("class", "sky-hour").attr("x", r * Math.sin(a)).attr("y", -r * Math.cos(a)).attr("dy", "0.35em").attr("text-anchor", "middle").text(`${h}h`);
   });
+
+  // the figures as the old atlases drew them, faint under the stars
+  artSel = root.append("g").attr("class", "sky-art").selectAll("image").data(Object.entries(ART)).join("image")
+    .attr("href", ([, a]) => `/sky/${a.file}`).attr("width", ([, a]) => a.size[0]).attr("height", ([, a]) => a.size[1])
+    .attr("transform", ([, a]) => `matrix(${a.matrix})`);
 
   const path = d3.line();
   // a figure’s line breaks where it dips below the rim
@@ -142,6 +150,7 @@ export function syncSky(){
   figSel.selectAll(".sky-who").classed("off", p => !inSky(p)).classed("sel", p => state.mode === "node" && state.sel === p.id);
   const lit = new Set(figSel.data().filter(f => f.people.some(inSky)).map(f => f.code));
   lineSel.classed("off", ([k]) => !lit.has(k));
+  artSel.classed("off", ([k]) => !lit.has(k));
   uncrowd();
 }
 document.getElementById("skyClose").onclick = closeSky;
