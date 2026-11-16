@@ -7,7 +7,7 @@ import {state} from "./state.js";
 import {drawTree, apply, nodeSel} from "./tree.js";
 import {initialView, focusOn} from "./camera.js";
 import {resetMode, foldHeader} from "./sheet.js";
-import {hideHint, buildStories, srcNote, setSource, curseSel, threadBtn} from "./controls.js";
+import {hideHint, buildStories, srcNote, setSource, curseSel, threadBtn, setSky} from "./controls.js";
 import {indexPeople, ALL_KEY} from "./find.js";
 import {renderNode} from "./figure.js";
 import {storyMove, openCurse} from "./stories.js";
@@ -71,6 +71,7 @@ export function syncUrl(){
   set("story", story && story.id);
   set("step", story && state.step ? String(state.step) : null);
   set("source", state.src==="all" ? null : state.src);
+  set("sky", state.sky ? "1" : null);
   if (url.href !== location.href) history.replaceState(history.state, "", url);
   const title = fig ? `${fig.name} · Ichor` : story ? `${story.title} · Ichor` : FAMILY.id === FAMILIES[0].id ? SITE_TITLE : `${FAMILY.title} · Ichor`;
   if (document.title !== title) document.title = title;
@@ -87,6 +88,7 @@ function openFromUrl(q){
   };
   const src = q.get("source"), fig = q.get("figure"), story = ALL_STORIES.find(c => c.id === q.get("story"));
   if (src && SRC[src] && src !== state.src) setSource(src);
+  if (q.has("sky") !== state.sky) setSky(q.has("sky"));
   if (story) {
     const home = storyMove(story);
     if (home) land(home);

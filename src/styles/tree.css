@@ -22,6 +22,10 @@
 .imm{fill:var(--accent)}
 .lbl{font-family:var(--display);font-size:17px;fill:var(--text);paint-order:stroke;stroke:var(--bg);stroke-width:6px;stroke-linejoin:round;pointer-events:none}
 .lbl.god{fill:var(--muted)}
+/* the sky layer: a figure set among the stars carries its constellation’s name, in gold */
+.sky-lbl{display:none;font:600 9.5px var(--ui);letter-spacing:.14em;text-transform:uppercase;fill:var(--accent);paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round;pointer-events:none}
+.node.starred .sky-lbl{display:block}
+.node.starred .halo{stroke:var(--accent)}
 
 /* edges: stroke width is set from script, it changes with highlighting */
 .edge{fill:none}

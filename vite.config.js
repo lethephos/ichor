@@ -16,6 +16,7 @@ function splitTexts(){
     const slim = read("people").map(p => {
       const q = Object.fromEntries(Object.entries(p).filter(([k]) => !TEXT_FIELDS.includes(k)));
       if (p.versions) q.versions = true;   // the tree marks figures the sources disagree on
+      if (p.sky) q.sky = {constellation: p.sky.constellation, sources: p.sky.sources};   // the sky layer names the constellation under the figure
       return q;
     });
     const outline = read("stories").map(s => ({...s, steps: s.steps.map(({text, ...step}) => step)}));
