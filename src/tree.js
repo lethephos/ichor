@@ -127,6 +127,8 @@ export const zoom = d3.zoom().scaleExtent([0.2, 3])
   .on("end", () => { if (panned && !wide()) foldHeader(true); panned = false; });
 svg.call(zoom).on("dblclick.zoom", null);
 export const graphEl = document.getElementById("graph");
+const BIG = 150, NEAR = 280;
+const reach = e => { if (P.length <= BIG) return 1; const far = Math.abs(N[e.from].x - N[e.to].x); return far <= NEAR ? 1 : Math.max(0.16, Math.pow(NEAR / far, 1.3)); };
 /* animate: false for an instant change, true for the usual fade, or a duration in ms */
 export function apply(animate){
   const dur = animate===true ? 380 : animate || 0;
@@ -152,6 +154,8 @@ export function apply(animate){
     const hot = (sel && (e.from===sel || e.to===sel)) || (inCurse && (!story || story.now.has(e.from) || story.now.has(e.to))) || inPath;
     // at rest, feuds and affairs stay faint so the bloodlines read first; they light up when selected
     let op = (e.type==="curse"||e.type==="transform") ? 0.9 : (e.type==="feud"||e.type==="affair") ? 0.3 : 0.55;
+    // in a large tree a link that runs far across it stays faint until one of its ends is chosen: near kin read first
+    op *= reach(e);
     if (sel || curse || path || demo) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
     // in the sky layer only the links between two constellations stay: the family that is in the sky together
     if (sky) op = inSky(N[e.from]) && inSky(N[e.to]) ? 0.8 : 0.07;
