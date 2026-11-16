@@ -5922,5 +5922,335 @@
     "to": "aeolus",
     "sources": ["H", "A"],
     "cite": {"H": "Catalogue of Women fr. 4 (Evelyn-White)", "A": "Apollodorus 1.7.3"}
+  },
+  {
+    "type": "parent",
+    "from": "nycteus",
+    "to": "nycteis",
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.5.5"}
+  },
+  {
+    "type": "marriage",
+    "from": "polydorus",
+    "to": "nycteis",
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.5.5"}
+  },
+  {
+    "type": "parent",
+    "from": "nycteis",
+    "to": "labdacus",
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.5.5"}
+  },
+  {
+    "type": "parent",
+    "from": "nycteus",
+    "to": "antiope-thebes",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8; Pausanias 2.6.1"}
+  },
+  {
+    "type": "parent",
+    "from": "asopus",
+    "to": "antiope-thebes",
+    "sources": ["E"],
+    "note": "her father in the Odyssey",
+    "cite": {"E": "Odyssey 11.260–265"}
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "antiope-thebes",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.260–265", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8; Ovid, Metamorphoses 6.103–128"}
+  },
+  {
+    "type": "marriage",
+    "from": "epopeus",
+    "to": "antiope-thebes",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8"}
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "amphion",
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Odyssey 11.260–265", "T": "Aeschylus, Seven Against Thebes 526–528; Euripides, Heracles 26–34", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 9"}
+  },
+  {
+    "type": "parent",
+    "from": "antiope-thebes",
+    "to": "amphion",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.260–265", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8"}
+  },
+  {
+    "type": "parent",
+    "from": "zeus",
+    "to": "zethus",
+    "sources": ["E", "T", "A", "L"],
+    "cite": {"E": "Odyssey 11.260–265", "T": "Euripides, Heracles 26–34", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 9"}
+  },
+  {
+    "type": "parent",
+    "from": "antiope-thebes",
+    "to": "zethus",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.260–265", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8"}
+  },
+  {
+    "type": "marriage",
+    "from": "lycus",
+    "to": "dirce",
+    "sources": ["T", "A", "L"],
+    "cite": {"T": "Euripides, Heracles 26–34", "A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8"}
+  },
+  {
+    "type": "feud",
+    "from": "lycus",
+    "to": "epopeus",
+    "sources": ["A", "L"],
+    "note": "killed Epopeus and carried Antiope back to Thebes",
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8"}
+  },
+  {
+    "type": "feud",
+    "from": "dirce",
+    "to": "antiope-thebes",
+    "sources": ["A", "L"],
+    "note": "kept Antiope a prisoner and treated her cruelly",
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8; Pausanias 9.25.3"}
+  },
+  {
+    "type": "feud",
+    "from": "amphion",
+    "to": "dirce",
+    "sources": ["A", "L"],
+    "note": "tied Dirce to a bull, with Zethus",
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8; Pausanias 9.25.3"}
+  },
+  {
+    "type": "feud",
+    "from": "zethus",
+    "to": "dirce",
+    "sources": ["A", "L"],
+    "note": "tied Dirce to a bull, with Amphion",
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 8; Pausanias 9.25.3"}
+  },
+  {
+    "type": "feud",
+    "from": "amphion",
+    "to": "lycus",
+    "sources": ["A", "L"],
+    "note": "overthrew Lycus, with Zethus",
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Pausanias 9.5.6"}
+  },
+  {
+    "type": "feud",
+    "from": "zethus",
+    "to": "lycus",
+    "sources": ["A", "L"],
+    "note": "overthrew Lycus, with Amphion",
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Pausanias 9.5.6"}
+  },
+  {
+    "type": "transform",
+    "from": "dionysus",
+    "to": "dirce",
+    "sources": ["L"],
+    "note": "made a spring rise from her body",
+    "cite": {"L": "Hyginus, Fabulae 7"}
+  },
+  {
+    "type": "feud",
+    "from": "amphion",
+    "to": "laius",
+    "sources": ["A", "L"],
+    "note": "drove the boy Laius out of Thebes, with Zethus",
+    "cite": {"A": "Apollodorus 3.5.5", "L": "Hyginus, Fabulae 9"}
+  },
+  {
+    "type": "marriage",
+    "from": "amphion",
+    "to": "niobe",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 9; Ovid, Metamorphoses 6.165–183"}
+  },
+  {
+    "type": "parent",
+    "from": "amphion",
+    "to": "niobids",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 9"}
+  },
+  {
+    "type": "parent",
+    "from": "niobe",
+    "to": "niobids",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Iliad 24.602–609", "A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 9"}
+  },
+  {
+    "type": "feud",
+    "from": "apollo",
+    "to": "niobids",
+    "sources": ["E", "A", "L"],
+    "note": "shot the sons of Niobe",
+    "cite": {"E": "Iliad 24.602–609", "A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 9; Ovid, Metamorphoses 6.218–266"}
+  },
+  {
+    "type": "feud",
+    "from": "artemis",
+    "to": "niobids",
+    "sources": ["E", "A", "L"],
+    "note": "shot the daughters of Niobe",
+    "cite": {"E": "Iliad 24.602–609", "A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 9"}
+  },
+  {
+    "type": "parent",
+    "from": "amphion",
+    "to": "chloris",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 10"}
+  },
+  {
+    "type": "parent",
+    "from": "niobe",
+    "to": "chloris",
+    "sources": ["A", "L"],
+    "cite": {"A": "Apollodorus 3.5.6", "L": "Hyginus, Fabulae 10"}
+  },
+  {
+    "type": "marriage",
+    "from": "neleus",
+    "to": "chloris",
+    "sources": ["E", "A", "L"],
+    "cite": {"E": "Odyssey 11.281–286", "A": "Apollodorus 1.9.9", "L": "Hyginus, Fabulae 10; Pausanias 9.36.8"}
+  },
+  {
+    "type": "parent",
+    "from": "chloris",
+    "to": "nestor",
+    "sources": ["E", "A"],
+    "cite": {"E": "Odyssey 11.281–286", "A": "Apollodorus 1.9.9"}
+  },
+  {
+    "type": "parent",
+    "from": "oceanus",
+    "to": "asopus",
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "parent",
+    "from": "tethys",
+    "to": "asopus",
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "parent",
+    "from": "asopus",
+    "to": "aegina",
+    "sources": ["T", "A", "L"],
+    "cite": {"T": "Pindar, Isthmian 8.16–23", "A": "Apollodorus 3.12.6", "L": "Hyginus, Fabulae 52; Pausanias 2.29.2"}
+  },
+  {
+    "type": "affair",
+    "from": "zeus",
+    "to": "aegina",
+    "sources": ["T", "A", "L"],
+    "cite": {"T": "Pindar, Isthmian 8.16–23", "A": "Apollodorus 3.12.6", "L": "Hyginus, Fabulae 52; Pausanias 2.29.2"}
+  },
+  {
+    "type": "parent",
+    "from": "aegina",
+    "to": "aeacus",
+    "sources": ["T", "A", "L"],
+    "cite": {"T": "Pindar, Isthmian 8.16–23", "A": "Apollodorus 3.12.6", "L": "Hyginus, Fabulae 52"}
+  },
+  {
+    "type": "feud",
+    "from": "sisyphus",
+    "to": "zeus",
+    "sources": ["A", "L"],
+    "note": "told Asopus that Zeus had carried off his daughter",
+    "cite": {"A": "Apollodorus 1.9.3; 3.12.6", "L": "Pausanias 2.5.1"}
+  },
+  {
+    "type": "feud",
+    "from": "zeus",
+    "to": "asopus",
+    "sources": ["A"],
+    "note": "drove Asopus back to his streams with thunderbolts",
+    "cite": {"A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "marriage",
+    "from": "aeacus",
+    "to": "endeis",
+    "sources": ["A"],
+    "cite": {"A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "parent",
+    "from": "endeis",
+    "to": "peleus",
+    "sources": ["T", "A", "L"],
+    "cite": {"T": "Pindar, Nemean 5.7–13", "A": "Apollodorus 3.12.6", "L": "Pausanias 2.29.9"}
+  },
+  {
+    "type": "parent",
+    "from": "endeis",
+    "to": "telamon",
+    "sources": ["T", "A", "L"],
+    "cite": {"T": "Pindar, Nemean 5.7–13", "A": "Apollodorus 3.12.6", "L": "Pausanias 2.29.9"}
+  },
+  {
+    "type": "parent",
+    "from": "nereus",
+    "to": "psamathe",
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 240–264", "A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "affair",
+    "from": "aeacus",
+    "to": "psamathe",
+    "sources": ["H", "A"],
+    "cite": {"H": "Theogony 1003–1005", "A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "parent",
+    "from": "aeacus",
+    "to": "phocus",
+    "sources": ["H", "A", "L"],
+    "cite": {"H": "Theogony 1003–1005", "A": "Apollodorus 3.12.6", "L": "Ovid, Metamorphoses 7.661–684"}
+  },
+  {
+    "type": "parent",
+    "from": "psamathe",
+    "to": "phocus",
+    "sources": ["H", "T", "A"],
+    "cite": {"H": "Theogony 1003–1005", "T": "Pindar, Nemean 5.7–13", "A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "feud",
+    "from": "telamon",
+    "to": "phocus",
+    "sources": ["A"],
+    "note": "struck Phocus dead with a discus",
+    "cite": {"A": "Apollodorus 3.12.6"}
+  },
+  {
+    "type": "feud",
+    "from": "peleus",
+    "to": "phocus",
+    "sources": ["T", "A", "L"],
+    "note": "had a hand in the killing of Phocus, his half-brother",
+    "cite": {"T": "Euripides, Andromache 672–690", "A": "Apollodorus 3.12.6", "L": "Pausanias 2.29.9"}
   }
 ]

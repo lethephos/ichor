@@ -64,6 +64,7 @@ stories.forEach(s => {
   storyIds.add(s.id);
   if (!["curse", "story"].includes(s.kind)) fail(at, `unknown kind “${s.kind}”`);
   ["title", "lead"].forEach(k => { if (!s[k]) fail(at, `no ${k}`); });
+  if (!Array.isArray(s.pairs)) fail(at, "no pairs: the list of the links it highlights");
   checkPairs(at, s.pairs);
   s.steps.forEach((st, i) => {
     const step = `${at}, step ${i + 1}`;

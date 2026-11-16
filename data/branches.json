@@ -56,19 +56,19 @@
         "label": "Zeus and his loves",
         "title": "Zeus and his loves",
         "note": "His wives and lovers, and the children they bore him.",
-        "notes": {"E": "In Homer, Zeus does not come to Leda as a swan, and in the Cypria Nemesis is Helen’s mother.", "H": "In Hesiod, Zeus marries Metis first, then Themis; Leda, Danaë and Ganymede fade.", "T": "In lyric and tragedy, Zeus comes to Leda as a swan and to Danaë as gold, but his marriage to Hera fades.", "A": "Apollodorus tells 57 of the 64 links here; Metis and Themis are not called Zeus’ wives, nor Tantalus his son.", "L": "In later writers, Nemesis flees Zeus through many shapes, and Asteria escapes him as a quail."},
+        "notes": {"E": "In Homer, Zeus does not come to Leda as a swan, and in the Cypria Nemesis is Helen’s mother.", "H": "In Hesiod, Zeus marries Metis first, then Themis; Leda, Danaë and Ganymede fade.", "T": "In lyric and tragedy, Zeus comes to Leda as a swan and to Danaë as gold, but his marriage to Hera fades.", "A": "Apollodorus tells 64 of the 71 links here; Metis and Themis are not called Zeus’ wives, nor Tantalus his son.", "L": "In later writers, Nemesis flees Zeus through many shapes, and Asteria escapes him as a quail."},
         "focus": "zeus",
-        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria", "hebe", "danae", "perseus", "alcmene", "heracles", "pleiades", "dardanus", "ganymede", "aeacus"]
+        "figures": ["zeus", "hera", "metis", "leto", "maia", "demeter", "dione", "semele", "leda", "nemesis", "pluto", "athena", "apollo", "artemis", "ares", "hephaestus", "hermes", "dionysus", "persephone", "aphrodite", "tantalus", "helen", "castor", "polydeuces", "themis", "mnemosyne", "muses", "horae", "moirai", "charites", "asteria", "hebe", "danae", "perseus", "alcmene", "heracles", "pleiades", "dardanus", "ganymede", "aeacus", "aegina", "antiope-thebes", "amphion", "zethus"]
       },
       {
         "id": "thebes",
         "label": "Thebes",
         "title": "Thebes, from Cadmus to Antigone",
-        "note": "The house of Cadmus and the Labdacids.",
-        "notes": {"E": "In Homer, Oedipus kills his father, weds his mother and curses his sons, but no children are named as theirs.", "H": "Hesiod tells only Cadmus, Harmonia and their children; Laius and Oedipus fade.", "T": "In lyric and tragedy, Jocasta bears Oedipus four children, and Creon condemns Antigone.", "A": "Apollodorus tells 44 of the 46 links here, Laius and Chrysippus among them; only Pelops’ curse is missing.", "L": "In later writers, Pelops curses Laius for carrying off Chrysippus; Oedipus’ curse on his sons fades."},
+        "note": "The house of Cadmus, the twins who walled the city, and the Labdacids.",
+        "notes": {"E": "In Homer, Oedipus kills his father, weds his mother and curses his sons, but no children are named as theirs.", "H": "Hesiod tells only Cadmus, Harmonia and their children; Laius and Oedipus fade.", "T": "In lyric and tragedy, Jocasta bears Oedipus four children, and Creon condemns Antigone.", "A": "Apollodorus tells 77 of the 80 links here, Laius and Chrysippus among them; Pelops’ curse and Dirce’s spring are missing.", "L": "In later writers, Pelops curses Laius for carrying off Chrysippus; Oedipus’ curse on his sons fades."},
         "houses": ["House of Labdacus"],
         "focus": "cadmus",
-        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops", "menoeceus", "creon", "ino"]
+        "figures": ["zeus", "ares", "aphrodite", "dionysus", "cadmus", "harmonia", "polydorus", "agave", "semele", "pentheus", "labdacus", "laius", "jocasta", "oedipus", "eteocles", "polynices", "antigone", "ismene", "chrysippus", "pelops", "menoeceus", "creon", "ino", "nycteus", "lycus", "dirce", "nycteis", "antiope-thebes", "epopeus", "amphion", "zethus", "niobe", "niobids", "chloris", "leto", "apollo", "artemis"]
       },
       {
         "id": "atreus",
@@ -105,6 +105,16 @@
         "notes": {"E": "In Homer, Menelaus fights Paris and Achilles kills Troilus; Polyxena and Cassandra’s curse fade.", "H": "Hesiod tells Dardanus, Tithonus and Eos, and Aphrodite’s love for Anchises; Priam’s house fades.", "T": "In lyric and tragedy, Neoptolemus sacrifices Polyxena and Helen marries Deiphobus; Troy’s older kings fade.", "A": "Apollodorus tells 71 of the 74 links here; Hecuba is Troilus’ mother, and Menelaus kills Deiphobus.", "L": "In later writers, Neoptolemus throws Astyanax from the walls and sacrifices Polyxena; Paris and Helen fade."},
         "focus": "priam",
         "figures": ["zeus", "aphrodite", "apollo", "poseidon", "eos", "pleiades", "dardanus", "erichthonius", "tros", "ilus", "assaracus", "ganymede", "laomedon", "capys", "priam", "hecuba", "tithonus", "hesione", "anchises", "hector", "andromache", "paris", "cassandra", "polyxena", "troilus", "deiphobus", "aeneas", "astyanax", "heracles", "aeacus", "peleus", "thetis", "achilles", "neoptolemus", "helen", "menelaus", "agamemnon", "clytemnestra", "orestes", "hermione"]
+      },
+      {
+        "id": "aeacus",
+        "label": "The house of Aeacus",
+        "title": "The house of Aeacus, from Aegina to Achilles",
+        "note": "A river’s daughter carried off by Zeus, the just king she bore him, and his sons, who killed their brother and fathered Achilles and Ajax.",
+        "notes": {"E": "In Homer, Aeacus is a son of Zeus and the father of Peleus; his mother, his wife and Phocus fade.", "H": "Hesiod tells Psamathe’s love for Aeacus and the birth of Phocus; Aegina and Endeis fade.", "T": "In lyric and tragedy, Zeus carries Aegina to her island, and Peleus is taunted with the death of Phocus.", "A": "In Apollodorus, Sisyphus informs on Zeus, Psamathe turns into a seal, and Telamon throws the discus.", "L": "In later writers, Peleus throws the stone that kills Phocus; Psamathe fades."},
+        "focus": "aeacus",
+        "houses": [],
+        "figures": ["zeus", "nereus", "asopus", "aegina", "sisyphus", "aeacus", "endeis", "psamathe", "phocus", "peleus", "telamon", "thetis", "hesione", "achilles", "ajax"]
       },
       {
         "id": "heraclids",
