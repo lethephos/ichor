@@ -6170,6 +6170,18 @@
     "role": "King of Arcadia",
     "tagline": "Almost speared a bear that was his mother.",
     "story": "Son of Zeus and Callisto. When his mother died, Zeus took the baby and gave him to Maia to bring up in Arcadia. He became king after the sons of Lycaon, taught his people to sow grain, bake bread and weave, and the land was named Arcadia after him.",
-    "versions": "In Hesiod and Ovid, he hunted his mother in her bear shape, not knowing her, and Zeus lifted both of them into the sky; he is the Bear-Watcher, Boötes, beside her. In Hesiod, his grandfather Lycaon cut him up and served him to Zeus, who made him whole again."
+    "versions": "In Hesiod and Ovid, he hunted his mother in her bear shape, not knowing her, and Zeus lifted both of them into the sky; he is the Bear-Watcher, Boötes, beside her. In Hesiod, his grandfather Lycaon cut him up and served him to Zeus, who made him whole again.",
+    "sky": {
+      "constellation": "Boötes",
+      "text": "The Bear-Watcher, who follows the Great Bear round the pole. Hesiod, as the star books quote him, says he is Arcas, son of Callisto and Zeus; Hyginus adds that Zeus put together the boy Lycaon had served at his table.",
+      "cite": "Hesiod, Astronomy fr. 3; Hyginus, Astronomica 2.4",
+      "sources": ["H", "L"],
+      "image": {
+        "file": "Bootes.jpg",
+        "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Bootes.jpg/960px-Bootes.jpg",
+        "credit": "Johannes Hevelius, Uranographia (1690)",
+        "licence": "Public domain"
+      }
+    }
   }
 ]

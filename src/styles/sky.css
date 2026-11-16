@@ -18,6 +18,7 @@
 .sky-who:focus-visible{text-decoration:underline}
 .sky-what{font:600 9.5px var(--ui);letter-spacing:.14em;text-transform:uppercase;fill:var(--accent);paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round;pointer-events:none}
 .sky-fig.off,.sky-who.off{opacity:.3}
+.sky-fig.crowded .sky-label{display:none}
 #skyView.far .sky-what{display:none}
 #skyView.far .sky-who{font-size:13px}
 .sky-head{position:absolute;left:24px;top:14px;max-width:300px;pointer-events:none}

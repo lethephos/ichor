@@ -81,7 +81,18 @@ const zoom = d3.zoom().scaleExtent([0.12, 5]).on("zoom", ev => {
   figSel.select(".sky-label").attr("transform", `scale(${1 / k})`);
   starSel.attr("r", s => Math.max(0.55, (5.6 - s[2]) * 0.62) / Math.pow(k, 0.55));
   view.classList.toggle("far", k < 0.42);
-});
+}).on("end", uncrowd);
+/* Where names would run into each other, as on the whole sky, the later ones wait until the sky comes closer;
+   the open figure and the constellations a source keeps come first */
+function uncrowd(){
+  if (!drawn || view.hidden) return;
+  const kept = [], first = f => (f.people.some(p => state.sel === p.id) ? 0 : 2) + (f.people.some(inSky) ? 0 : 1);
+  figSel.classed("crowded", false).sort((a, b) => first(a) - first(b)).each(function(){
+    const b = this.querySelector(".sky-label").getBoundingClientRect();
+    const hit = kept.some(k => b.left < k.right + 4 && b.right > k.left - 4 && b.top < k.bottom + 2 && b.bottom > k.top - 2);
+    if (hit) this.classList.add("crowded"); else kept.push(b);
+  });
+}
 const size = () => [view.clientWidth - (wide() && document.getElementById("card").classList.contains("open") ? 420 : 0), view.clientHeight];
 function glide(t, animate){ (animate ? svg.transition().duration(600) : svg).call(zoom.transform, t); }
 /* The opening view: near enough to read the names, on Perseus, Andromeda and her parents, the family that is in the sky together */
@@ -130,6 +141,7 @@ export function syncSky(){
   figSel.selectAll(".sky-who").classed("off", p => !inSky(p)).classed("sel", p => state.mode === "node" && state.sel === p.id);
   const lit = new Set(figSel.data().filter(f => f.people.some(inSky)).map(f => f.code));
   lineSel.classed("off", ([k]) => !lit.has(k));
+  uncrowd();
 }
 document.getElementById("skyClose").onclick = closeSky;
 document.getElementById("fitFloat").addEventListener("click", () => { if (state.view === "sky" && drawn) whole(); });
