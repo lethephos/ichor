@@ -3,7 +3,7 @@
 import * as d3 from "d3";
 import {N, ROWY, ROWB, W, DIVIDERS, GENS, HOUSES, E, P, OLY, STORIES} from "./data.js";
 import "./theme.js";
-import {state, wide, edgeVisible, samePair, attested} from "./state.js";
+import {state, wide, edgeVisible, samePair, attested, inSky} from "./state.js";
 import {storyTimer} from "./camera.js";
 import {resetMode, foldHeader} from "./sheet.js";
 import {hideHint, syncTools} from "./controls.js";
@@ -101,6 +101,7 @@ export function drawTree(){
     if (OLY[d.id]) g.append("path").attr("class","oly " + OLY[d.id].in).attr("d","M0,-4 L4.5,3.5 L-4.5,3.5 Z").attr("transform",`translate(${-R-6},${-R-2})`).append("title").text(OLY[d.id].in==="all" ? "One of the Twelve Olympians" : "One of the Twelve in some lists");
     const caps = d.kind==="god" || d.kind==="group";
     g.append("text").attr("class","lbl" + (caps?" god":"")).attr("text-anchor","middle").attr("y", R + 18).text(d.name);
+    if (d.sky) g.append("text").attr("class","sky-lbl").attr("text-anchor","middle").attr("y", R + 33).text(d.sky.constellation);
   });
 }
 svg.on("click", () => { if (state.mode==="node") resetMode(); });
@@ -134,6 +135,8 @@ export function apply(animate){
   const story = curse && state.step>=1 && state.step<=curse.steps.length ? reveal(curse, state.step) : null;
   const path = state.mode==="thread" ? state.path : null;
   const demo = (state.mode==="about" || state.mode==="tour") && state.demo && !state.demo.missing ? state.demo : null;
+  // the sky layer: with nothing else open, the figures set among the stars stand out and the rest recede
+  const sky = state.sky && !sel && !curse && !path && !demo;
   const pathEdges = new Set(path ? path.edges : []);
   const pathNodes = new Set(path ? path.nodes : []);
   const visible = new Set();
@@ -149,6 +152,7 @@ export function apply(animate){
     // at rest, feuds and affairs stay faint so the bloodlines read first; they light up when selected
     let op = (e.type==="curse"||e.type==="transform") ? 0.9 : (e.type==="feud"||e.type==="affair") ? 0.3 : 0.55;
     if (sel || curse || path || demo) op = hot ? 1 : inCurse ? 0.45 : story ? 0.03 : 0.06;
+    if (sky) op = 0.07;
     if (!vis && !inCurse) op = 0;
     if (vis) { visible.add(e.from); visible.add(e.to); }
     const g = d3.select(this).classed("thread", inPath && !demo).classed("alt", isAlt).classed("hot", !!(hot && (sel || curse || path || demo)));
@@ -164,10 +168,12 @@ export function apply(animate){
     if (curse) return curse.nodes.has(d.id) ? 1 : 0.18;
     if (path) return pathNodes.has(d.id) ? 1 : 0.18;
     if (demo) return demo.nodes.has(d.id) ? 1 : 0.15;
+    if (sky) return inSky(d) ? 1 : 0.16;
     if (state.src!=="all") return (visible.has(d.id) || (d.transformation && d.transformation.sources.includes(state.src))) ? 1 : 0.18;
     return 1;
   };
   (dur ? nodeSel.transition().duration(dur) : nodeSel).style("opacity", nOp);
+  nodeSel.classed("starred", d => sky && inSky(d));
   nodeSel.selectAll(".imm").style("display", d => state.src==="all" || d.immortal.sources.includes(state.src) ? null : "none");
   nodeSel.selectAll(".badge").style("display", d => state.layers.transform && (state.src==="all" || d.transformation.sources.includes(state.src)) ? null : "none");
   syncTools();

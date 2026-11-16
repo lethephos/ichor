@@ -10,6 +10,8 @@
 .toggle{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;background:none;border:none;padding:4px 0;font:500 13px var(--ui);color:var(--text);cursor:pointer}
 .toggle[aria-pressed="false"]{opacity:.35}
 .toggle svg{width:26px;height:10px;overflow:visible}
+.sky-toggle{margin-left:10px;padding-left:16px;border-left:1px solid var(--rule)}
+.sky-toggle svg{width:12px;height:12px}
 .act{flex:0 0 auto;background:none;border:1px solid var(--rule);border-radius:2px;padding:5px 10px;font:500 13px var(--ui);color:var(--text);cursor:pointer}
 .act[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 select.act{appearance:none;-webkit-appearance:none;padding-right:22px;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 12px) 50%,calc(100% - 8px) 50%;background-size:4px 4px;background-repeat:no-repeat}

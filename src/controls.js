@@ -77,6 +77,18 @@ LAYERS.forEach(L => {
   b.onclick = () => toggleLayer(L.k);
   layerRow.appendChild(b);
 });
+/* The sky is a layer of another kind: not a sort of link, but the figures set among the stars. Off at first. */
+const SKY_ICON = `<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6,0 L7.6,4.4 L12,6 L7.6,7.6 L6,12 L4.4,7.6 L0,6 L4.4,4.4 Z" fill="var(--accent)"/></svg>`;
+export function setSky(on){
+  state.sky = on;
+  document.querySelectorAll("[data-sky]").forEach(b => b.setAttribute("aria-pressed", on));
+  apply(true);
+}
+const skyBtn = document.createElement("button");
+skyBtn.className = "toggle sky-toggle"; skyBtn.dataset.sky = ""; skyBtn.setAttribute("aria-pressed","false");
+skyBtn.innerHTML = `${SKY_ICON}In the sky`;
+skyBtn.onclick = () => setSky(!state.sky);
+layerRow.appendChild(skyBtn);
 export const curseSel = document.getElementById("curseSel");
 const curseFirst = curseSel.querySelector('option[value=""]');
 export function buildStories(){
@@ -113,8 +125,10 @@ function openLayers(){
   shell(`${panelTop("Δεσμοί")}
     <h2 class="card-name thread-title">Layers</h2>
     <p class="card-tag">Choose which kinds of link to draw.</p>
-    <ul class="opts">${LAYERS.map(L => `<li><button class="opt" data-layer="${L.k}" aria-pressed="${state.layers[L.k]}"><svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}</button></li>`).join("")}</ul>`);
+    <ul class="opts">${LAYERS.map(L => `<li><button class="opt" data-layer="${L.k}" aria-pressed="${state.layers[L.k]}"><svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>${L.label}</button></li>`).join("")}
+      <li><button class="opt" data-sky aria-pressed="${state.sky}">${SKY_ICON}In the sky</button></li></ul>`);
   card.querySelectorAll("[data-layer]").forEach(b => b.onclick = () => toggleLayer(b.dataset.layer));
+  card.querySelector("[data-sky]").onclick = () => setSky(!state.sky);
   apply(true);
   keepInView();
 }
