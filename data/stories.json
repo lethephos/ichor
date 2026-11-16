@@ -2800,5 +2800,157 @@
         "text": "Aeacus is the most pious of men. In Apollodorus, when the crops fail all over Greece, the oracles say that only his prayers can end it; he prays, and the land is delivered. After his death he is honoured in the house of Hades, and keeps its keys."
       }
     ]
+  },
+  {
+    "id": "asclepius",
+    "kind": "story",
+    "title": "The healer and the thunderbolt",
+    "lead": "A god’s child saved from his mother’s pyre, a centaur’s school, and a cure that went one step too far.",
+    "pairs": [
+      ["phlegyas", "coronis"],
+      ["apollo", "coronis"],
+      ["ischys", "coronis"],
+      ["artemis", "coronis"],
+      ["apollo", "asclepius"],
+      ["coronis", "asclepius"],
+      ["cronus", "philyra"],
+      ["cronus", "chiron"],
+      ["philyra", "chiron"],
+      ["zeus", "asclepius"],
+      ["apollo", "cyclopes"],
+      ["heracles", "chiron"]
+    ],
+    "steps": [
+      {
+        "label": "Coronis",
+        "figures": ["apollo", "coronis", "phlegyas"],
+        "pairs": [
+          ["phlegyas", "coronis"],
+          ["apollo", "coronis"]
+        ],
+        "text": "Coronis, daughter of Phlegyas, lives by Lake Boebias in Thessaly. Apollo loves her, and she is carrying his child."
+      },
+      {
+        "label": "The stranger",
+        "figures": ["ischys"],
+        "pairs": [
+          ["ischys", "coronis"]
+        ],
+        "text": "She does not wait for the wedding songs. A stranger comes from Arcadia, Ischys, son of Elatus, and she takes him to her bed without her father’s knowledge. In Pindar, Apollo knows it at once, at Delphi, from his own mind, which knows all things. In Apollodorus and Ovid a raven brings the news; Apollo curses the bird, and turns it from white to black."
+      },
+      {
+        "label": "The pyre",
+        "figures": ["artemis", "asclepius"],
+        "pairs": [
+          ["artemis", "coronis"],
+          ["apollo", "asclepius"],
+          ["coronis", "asclepius"]
+        ],
+        "text": "In Pindar, Apollo sends his sister, and Artemis shoots Coronis in her room; in Apollodorus and Ovid he kills her himself. Her kinsmen lay her on the pyre. As the fire runs round it, Apollo cannot bear to let his child die with her. The flames part for him, and he takes the boy from his mother’s body."
+      },
+      {
+        "label": "The centaur’s cave",
+        "figures": ["chiron", "cronus", "philyra"],
+        "pairs": [
+          ["cronus", "philyra"],
+          ["cronus", "chiron"],
+          ["philyra", "chiron"]
+        ],
+        "text": "He carries the child to Mount Pelion, to Chiron, son of Cronus and Philyra, the centaur who brings up heroes. Chiron teaches the boy, Asclepius, to heal: with spells, with potions, with bandages, with the knife."
+      },
+      {
+        "label": "The dead man",
+        "figures": ["zeus"],
+        "pairs": [
+          ["zeus", "asclepius"]
+        ],
+        "text": "He heals so well that at last he brings a dead man back to life; for gold, Pindar says. Hyginus names the man: Glaucus, son of Minos, or Hippolytus. Zeus kills healer and patient with one thunderbolt. In Apollodorus, he fears that men will learn to save one another from death."
+      },
+      {
+        "label": "The Cyclopes",
+        "figures": ["cyclopes"],
+        "pairs": [
+          ["apollo", "cyclopes"]
+        ],
+        "text": "Apollo cannot strike his father. He kills the Cyclopes, who forged the thunderbolt. Zeus would throw him into Tartarus, but Leto pleads for him, and instead he must serve a mortal for a year. He herds the cattle of Admetus in Thessaly, and every cow bears twins."
+      },
+      {
+        "label": "The arrow",
+        "figures": ["heracles", "chiron"],
+        "pairs": [
+          ["heracles", "chiron"]
+        ],
+        "text": "Chiron’s own end comes by accident. Heracles, fighting the centaurs, shoots at them as they crowd round Chiron, and the arrow lodges in Chiron’s knee. The wound cannot heal, and he cannot die. In Apollodorus, he gives up his immortality. Hyginus puts both in the sky: Chiron is the Centaur, and Asclepius the Serpent Bearer."
+      }
+    ]
+  },
+  {
+    "id": "callisto",
+    "kind": "story",
+    "title": "Callisto, the Great Bear",
+    "lead": "A huntress, a god, a bear, and three different gods blamed for it.",
+    "pairs": [
+      ["lycaon", "callisto"],
+      ["zeus", "callisto"],
+      ["artemis", "callisto"],
+      ["hera", "callisto"],
+      ["zeus", "arcas"],
+      ["callisto", "arcas"],
+      ["lycaon", "zeus"],
+      ["zeus", "lycaon"]
+    ],
+    "steps": [
+      {
+        "label": "The huntress",
+        "figures": ["lycaon", "callisto", "artemis"],
+        "pairs": [
+          ["lycaon", "callisto"]
+        ],
+        "text": "Callisto is the daughter of Lycaon, king of Arcadia. She hunts in the mountains with Artemis, dresses as the goddess does, and has sworn to stay a maiden."
+      },
+      {
+        "label": "Zeus",
+        "figures": ["zeus"],
+        "pairs": [
+          ["zeus", "callisto"]
+        ],
+        "text": "Zeus sees her. In Apollodorus he comes to her in the shape of Artemis herself, or of Apollo, and takes her against her will."
+      },
+      {
+        "label": "The bear",
+        "figures": ["hera"],
+        "pairs": [
+          ["artemis", "callisto"],
+          ["hera", "callisto"]
+        ],
+        "text": "She becomes a bear, and each source blames a different god. In Hesiod, Artemis sees at the bath that she is with child, and changes her in anger. In Apollodorus, Zeus changes her, to hide her from Hera. In Ovid, Pausanias and Hyginus, Hera does it herself, out of jealousy. In Apollodorus and Pausanias, Artemis then shoots the bear."
+      },
+      {
+        "label": "Arcas",
+        "figures": ["arcas"],
+        "pairs": [
+          ["zeus", "arcas"],
+          ["callisto", "arcas"]
+        ],
+        "text": "Her son is Arcas. In Apollodorus, Zeus takes the baby as she dies and gives him to Maia to bring up. He will be king, and the land will be called Arcadia after him."
+      },
+      {
+        "label": "The table of Lycaon",
+        "figures": ["lycaon"],
+        "pairs": [
+          ["lycaon", "zeus"],
+          ["zeus", "lycaon"]
+        ],
+        "text": "Zeus comes as a guest to Lycaon’s house. To test whether he is a god, human flesh is served to him; in Hesiod it is the boy Arcas, cut up by his own grandfather. Zeus overturns the table, burns the house with lightning, and puts the boy together again. Lycaon becomes a wolf."
+      },
+      {
+        "label": "The hunt",
+        "figures": ["arcas", "callisto"],
+        "pairs": [
+          ["callisto", "arcas"]
+        ],
+        "text": "Arcas grows up a hunter. In Ovid he is fifteen when he meets a bear in the forest that stands and stares at him, and he raises his spear. Zeus stops the blow and lifts them both into the sky: the Great Bear, and beside her the Bear-Watcher. In Hyginus, Tethys, who nursed Hera, never lets the Bear set in the Ocean."
+      }
+    ]
   }
 ]
