@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 
 const read = name => JSON.parse(readFileSync(new URL(`../data/${name}.json`, import.meta.url), "utf8"));
 const people = read("people"), relations = read("relations"), stories = read("stories");
-const sources = read("sources"), branches = read("branches"), olympians = read("olympians");
+const sources = read("sources"), branches = read("branches"), olympians = read("olympians"), order = read("order");
 
 const errors = [];
 const fail = (where, what) => errors.push(`${where}: ${what}`);
@@ -88,6 +88,10 @@ branches.forEach(b => {
     if (!known(f.focus)) fail(fam, `focus “${f.focus}” is not a figure`);
     else if (f.figures && !f.figures.includes(f.focus)) fail(fam, `focus ${f.focus} is not in the family`);
     Object.keys(f.notes || {}).forEach(k => { if (!GROUPS.has(k)) fail(fam, `a note for unknown source “${k}”`); });
+    // the kept order of the rows names every figure of the family, and no other
+    const mine = f.figures || [...ids], kept = new Set(order[f.id] || []);
+    const lost = mine.filter(id => !kept.has(id)), stray = [...kept].filter(id => !mine.includes(id));
+    if (lost.length || stray.length) fail(fam, `data/order.json is out of date (${[...lost, ...stray].slice(0, 4).join(", ")}): run “npm run order”`);
   });
 });
 

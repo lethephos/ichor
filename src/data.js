@@ -3,6 +3,7 @@ import textsUrl from "virtual:ichor-texts-url";
 import sources from "../data/sources.json";
 import branches from "../data/branches.json";
 import olympians from "../data/olympians.json";
+import order from "../data/order.json";
 import {tierLayout} from "./layout.js";
 
 /* ---------- sources ---------- */
@@ -73,7 +74,7 @@ export function setFamily(id) {
   // rows come from `generation`; a row nobody in the family sits on is left out
   const gens = [...new Set(people_.map(p => p.generation))].sort((a, b) => a - b);
   const rowOf = Object.fromEntries(gens.map((g, i) => [g, i]));
-  const layout = tierLayout(people_.map(p => ({...p, generation: rowOf[p.generation]})), relations_);
+  const layout = tierLayout(people_.map(p => ({...p, generation: rowOf[p.generation]})), relations_, order[FAMILY.id]);
   ROWY = layout.rowY; ROWB = layout.rowBottom;
   W = layout.width; H = layout.height;
   // row names come from the branch; rows it does not name are simply numbered

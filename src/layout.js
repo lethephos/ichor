@@ -5,6 +5,9 @@
    don’t collide. Repeated until it settles. Figures start in the order of people.json,
    which also breaks ties, so the result is stable.
 
+   Once found, the order of each row is kept in data/order.json (`npm run order` writes it) and the layout only
+   spreads the rows out again: a figure added later takes its place among the others without moving them about.
+
    A row can grow downwards. A child whose parent sits on the same row (Atlas and his
    daughters the Pleiades) goes on a line below the parent, inside the row, with its
    spouse. So lower on a row always means descended. */
@@ -27,21 +30,24 @@ const SUB_GAP = 78;             // vertical distance between two lines of one ro
 const labelWidth = name => name.length * CHAR_W;
 
 /* Least-squares placement of an ordered row: as close as possible to `want`,
-   keeping at least gaps[i] between figure i and i+1 (pool adjacent violators). */
-function place(want, gaps){
+   keeping at least gaps[i] between figure i and i+1 (pool adjacent violators).
+   With `weight`, a figure with more or stronger links counts for more: then no round shifts the tree as a whole,
+   and repeated rounds come to rest. */
+function place(want, gaps, weight){
   const off = [0];
   for (let i = 1; i < want.length; i++) off[i] = off[i-1] + gaps[i-1];
   const blocks = [];
   want.forEach((w, i) => {
-    blocks.push({sum: w - off[i], n: 1});
+    const k = weight ? weight[i] : 1;
+    blocks.push({sum: (w - off[i]) * k, n: k, count: 1});
     while (blocks.length > 1) {
       const b = blocks[blocks.length-1], a = blocks[blocks.length-2];
       if (a.sum/a.n <= b.sum/b.n) break;
-      a.sum += b.sum; a.n += b.n; blocks.pop();
+      a.sum += b.sum; a.n += b.n; a.count += b.count; blocks.pop();
     }
   });
   const out = [];
-  blocks.forEach(b => { for (let k = 0; k < b.n; k++) out.push(b.sum/b.n); });
+  blocks.forEach(b => { for (let k = 0; k < b.count; k++) out.push(b.sum/b.n); });
   return out.map((v, i) => v + off[i]);
 }
 
@@ -56,7 +62,7 @@ function families(people, relations){
   return Object.fromEntries(people.map(p => [p.id, size[find(p.id)] > 1 ? find(p.id) : null]));
 }
 
-export function tierLayout(people, relations){
+export function tierLayout(people, relations, kept){
   const name = Object.fromEntries(people.map(p => [p.id, p.name]));
   const fam = families(people, relations);
   const gen = Object.fromEntries(people.map(p => [p.id, p.generation]));
@@ -92,27 +98,60 @@ export function tierLayout(people, relations){
     + (fam[a] && fam[b] && fam[a]!==fam[b] ? FAMILY_GAP : 0);
   const gapsOf = row => row.slice(1).map((id, i) => gap(row[i], id));
 
-  // start: each row in data order, centred on 0
-  const x = {};
-  rows.forEach(row => {
-    const pos = place(row.map(() => 0), gapsOf(row));
-    const mid = (pos[0] + pos[pos.length-1]) / 2;
-    row.forEach((id, i) => x[id] = pos[i] - mid);
-  });
   const order = Object.fromEntries(people.map((p, i) => [p.id, i]));
-
-  for (let round = 0; round < ROUNDS; round++) {
-    const want = {};
-    people.forEach(({id}) => {
-      let s = INERTIA * x[id], w = INERTIA;
-      links[id].forEach(([j, wj]) => { s += wj * x[j]; w += wj; });
-      want[id] = s / w;
-    });
+  const x = {};
+  /* One round after another, every figure moves towards the figures it is linked to, and each row is spread out again.
+     With `free`, a row is also re-sorted by where its figures want to be: that is how an order is found in the first place. */
+  const settle = (rows, free) => {
     rows.forEach(row => {
-      row.sort((a, b) => (want[a] - want[b]) || (order[a] - order[b]));
-      const pos = place(row.map(id => want[id]), gapsOf(row));
-      row.forEach((id, i) => x[id] = pos[i]);
+      const pos = place(row.map(() => 0), gapsOf(row));
+      const mid = (pos[0] + pos[pos.length-1]) / 2;
+      row.forEach((id, i) => x[id] = pos[i] - mid);
     });
+    // a free search runs a set number of rounds; a kept order is spread until nothing moves any more
+    for (let round = 0, moved = 1; free ? round < ROUNDS : moved > 0.01 && round < 4000; round++) {
+      const was = {...x};
+      const want = {}, heft = {};
+      rows.flat().forEach(id => {
+        let s = INERTIA * x[id], w = INERTIA;
+        links[id].forEach(([j, wj]) => { if (x[j] !== undefined) { s += wj * x[j]; w += wj; } });
+        want[id] = s / w; heft[id] = w;
+      });
+      rows.forEach(row => {
+        if (free) row.sort((a, b) => (want[a] - want[b]) || (order[a] - order[b]));
+        const pos = place(row.map(id => want[id]), gapsOf(row), free ? null : row.map(id => heft[id]));
+        row.forEach((id, i) => x[id] = pos[i]);
+      });
+      // the tree as a whole may still slide sideways, which does not matter: only its shape has to stop changing
+      const d = Object.keys(x).map(id => x[id] - was[id]), slide = d.reduce((s, v) => s + v, 0) / d.length;
+      moved = Math.max(...d.map(v => Math.abs(v - slide)));
+      if (!free && typeof process !== "undefined" && process.env.ROUNDS_LOG && (moved <= 0.01 || round === 3999)) console.log("rounds", round + 1, "last move", moved.toFixed(3));
+    }
+  };
+  if (!kept) settle(rows, true);
+  else {
+    /* A kept order (data/order.json): the figures it names stay in that order on their rows, so the tree does not
+       reshuffle when the data grows. A newcomer goes where its links pull it, between the figures already there. */
+    const rank = Object.fromEntries(kept.map((id, i) => [id, i]));
+    const old = rows.map(row => row.filter(id => rank[id] !== undefined).sort((a, b) => rank[a] - rank[b]));
+    settle(old.filter(row => row.length), false);
+    const fresh = people.map(p => p.id).filter(id => rank[id] === undefined);
+    for (let pass = 0; pass < 3; pass++) fresh.forEach(id => {     // three passes: a newcomer may hang on another newcomer
+      let s = 0, w = 0;
+      links[id].forEach(([j, wj]) => { if (x[j] !== undefined) { s += wj * x[j]; w += wj; } });
+      if (w) x[id] = s / w;
+    });
+    rows.forEach((row, r) => {
+      const all = [...old[r]];
+      row.filter(id => rank[id] === undefined).forEach(id => {
+        // with no link to place it by, a newcomer goes to the end of its row
+        const at = x[id] === undefined ? all.length : all.findIndex(o => x[o] > x[id]);
+        all.splice(at < 0 ? all.length : at, 0, id);
+      });
+      row.splice(0, row.length, ...all);
+    });
+    Object.keys(x).forEach(id => delete x[id]);
+    settle(rows, false);
   }
 
   // heights: each line of a row below the one before
