@@ -34,6 +34,15 @@ select.act option{background:var(--bg-2);color:var(--text)}
   .dock .finder-list{top:auto;bottom:calc(100% + 12px)}
   /* with the card open, the dock centres on the part of the tree left beside it */
   #card.open ~ .dock{left:calc(50% - 210px);max-width:calc(100% - 480px)}
+  /* and draws itself tighter, so the layers still fit on one line and the tools on another */
+  #card.open ~ .dock{gap:8px 14px;padding:8px 12px}
+  #card.open ~ .dock #layerRow{column-gap:12px}
+  #card.open ~ .dock .toggle{font-size:12px;gap:5px}
+  #card.open ~ .dock .toggle svg{width:20px}
+  #card.open ~ .dock .sky-toggle{margin-left:0;padding-left:12px}
+  #card.open ~ .dock .sky-toggle svg{width:11px}
+  #card.open ~ .dock #curseSel{width:140px}
+  #card.open ~ .dock #finder{width:150px}
 }
 
 /* phones and narrow tablets: sources stay in view, everything else sits behind four buttons */
