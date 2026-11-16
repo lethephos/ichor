@@ -19,7 +19,7 @@ export const SAMPLE = {
   curse:`<line x1="0" y1="5" x2="22" y2="5" stroke="var(--curse)" stroke-width="1.8"/><path d="M20,1 L26,5 L20,9 z" fill="var(--curse)"/>`
 };
 
-export const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sky:false, sel:null, hover:null, mode:null, curseKey:null, step:0, pickOpen:false, path:null};
+export const state = {src:"all", layers:{parent:true, marriage:true, affair:true, feud:true, transform:true, curse:true}, sky:false, view:null, sel:null, hover:null, mode:null, curseKey:null, step:0, pickOpen:false, path:null};
 // a media query, not innerWidth: reading the width mid-pan forces a layout of the whole tree
 const WIDE = matchMedia("(min-width: 900px)");
 export const wide = () => WIDE.matches;

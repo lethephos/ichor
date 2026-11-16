@@ -1,7 +1,7 @@
 /* The opening: the mark lands in the header and the tree lights up. */
 import * as d3 from "d3";
 import {N} from "./data.js";
-import "./thread.js";
+import "./sky.js";
 import {graphEl, nodeSel, edgeSel} from "./tree.js";
 
 /* The tree lights up once the page has loaded: each star twinkles in from the top of the screen down

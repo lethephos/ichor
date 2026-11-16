@@ -9,6 +9,7 @@ import {resetMode, foldHeader} from "./sheet.js";
 import {hideHint, syncTools} from "./controls.js";
 import {reveal, STORY_TYPES} from "./stories.js";
 import {nodeClick, syncUrl} from "./main.js";
+import {syncSky} from "./sky.js";
 
 /* ---------- graph ---------- */
 export const svg = d3.select("#graph");
@@ -178,5 +179,6 @@ export function apply(animate){
   nodeSel.selectAll(".imm").style("display", d => state.src==="all" || d.immortal.sources.includes(state.src) ? null : "none");
   nodeSel.selectAll(".badge").style("display", d => state.layers.transform && (state.src==="all" || d.transformation.sources.includes(state.src)) ? null : "none");
   syncTools();
+  syncSky();
   syncUrl();
 }
