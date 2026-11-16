@@ -48,7 +48,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 
 **Code**
 - Keep it simple: no backend, no framework, one dependency (D3).
-- The files in `src/` are set up in a fixed order, each importing the one before it first (`state`, `theme`, `tree`, `camera`, `sheet`, `controls`, `find`, `figure`, `stories`, `guide`, `thread`, `intro`, `main`). That first import must stay.
+- The files in `src/` are set up in a fixed order, each importing the one before it first (`state`, `theme`, `tree`, `camera`, `sheet`, `controls`, `find`, `figure`, `stories`, `guide`, `thread`, `sky`, `intro`, `main`). That first import must stay.
 - `npm run check` checks the data and runs before every build; a slip in the JSON stops the deploy.
 - The build splits the data: the tree’s part goes with the code, the long texts a card shows come in a second file. A card waits for them through `whenTexts`. A new text field belongs in `TEXT_FIELDS` in `vite.config.js`. The passages of the links travel in that second file too; after adding passages, run `scripts/passages/links.py` so they become links.
 
@@ -65,6 +65,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - Figure card: who the figure is, a small family tree, feuds and fates, where the sources disagree, the stories they take part in, what is not ancient, the sky, art.
 - Stories told step by step, by all sources or as one source tells them; every family has at least one, and all have been checked against the sources.
 - Ariadne’s thread, search over the whole tree, the Guide with a tour, light and dark themes, the opening.
+- The sky: a layer that lights the figures set among the stars (`?sky=1`), and a sky map, a planisphere with every star to the fifth magnitude, where those figures stand in their constellations (`?view=sky`).
 - The address names what is open: `?family=thebes`, `?figure=medea`, `?story=argonauts&step=3`, `?source=H`.
 
 ## Open questions

@@ -1,8 +1,9 @@
 /* The page: the family switcher, the address, opening and closing a figure, and the start.
    The parts call each other freely, but they are set up in a fixed order, each file importing the one
-   before it first: state, theme, tree, camera, sheet, controls, find, figure, stories, guide, thread, intro, main. */
+   before it first: state, theme, tree, camera, sheet, controls, find, figure, stories, guide, thread, sky, intro, main. */
 import {whenTexts, textsReady, FAMILY, FAMILIES, setFamily, sourceNote, familyOf, STORIES, N, ALL_STORIES, SRC, figureHome, BRANCH} from "./data.js";
 import {intro} from "./intro.js";
+import {openSky, closeSky} from "./sky.js";
 import {state} from "./state.js";
 import {drawTree, apply, nodeSel} from "./tree.js";
 import {initialView, focusOn} from "./camera.js";
@@ -72,6 +73,7 @@ export function syncUrl(){
   set("step", story && state.step ? String(state.step) : null);
   set("source", state.src==="all" ? null : state.src);
   set("sky", state.sky ? "1" : null);
+  set("view", state.view);
   if (url.href !== location.href) history.replaceState(history.state, "", url);
   const title = fig ? `${fig.name} · Ichor` : story ? `${story.title} · Ichor` : FAMILY.id === FAMILIES[0].id ? SITE_TITLE : `${FAMILY.title} · Ichor`;
   if (document.title !== title) document.title = title;
@@ -89,6 +91,7 @@ function openFromUrl(q){
   const src = q.get("source"), fig = q.get("figure"), story = ALL_STORIES.find(c => c.id === q.get("story"));
   if (src && SRC[src] && src !== state.src) setSource(src);
   if (q.has("sky") !== state.sky) setSky(q.has("sky"));
+  if (q.get("view") === "sky") openSky(); else closeSky();
   if (story) {
     const home = storyMove(story);
     if (home) land(home);

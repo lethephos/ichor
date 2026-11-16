@@ -1,0 +1,36 @@
+/* The sky map: a planisphere over the tree. */
+#skyView{position:absolute;inset:0;z-index:1;background:var(--bg);overflow:hidden}
+#skyView[hidden]{display:none}
+#skyMap{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#skyMap:active{cursor:grabbing}
+.view-tools{z-index:2}
+.sky-grid circle,.sky-grid line{fill:none;stroke:var(--rule);stroke-width:1;vector-effect:non-scaling-stroke}
+.sky-grid .equator{stroke:var(--muted);stroke-dasharray:1 5;stroke-linecap:round}
+.sky-grid .rim{stroke:var(--muted)}
+.sky-hour{font:500 11px var(--ui);letter-spacing:.08em;fill:var(--muted)}
+.sky-stars circle{fill:var(--figure)}
+.sky-lines path{fill:none;stroke:var(--line);stroke-width:1;opacity:.22;vector-effect:non-scaling-stroke}
+.sky-lines.held path{stroke:var(--accent);opacity:.85;stroke-width:1.2}
+.sky-lines.held.off path{stroke:var(--line);opacity:.22}
+.sky-who{font:17px var(--display);fill:var(--text);paint-order:stroke;stroke:var(--bg);stroke-width:6px;stroke-linejoin:round;cursor:pointer}
+.sky-who:hover,.sky-who.sel{fill:var(--accent)}
+.sky-who:focus{outline:none}
+.sky-who:focus-visible{text-decoration:underline}
+.sky-what{font:600 9.5px var(--ui);letter-spacing:.14em;text-transform:uppercase;fill:var(--accent);paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round;pointer-events:none}
+.sky-fig.off,.sky-who.off{opacity:.3}
+#skyView.far .sky-what{display:none}
+#skyView.far .sky-who{font-size:13px}
+.sky-head{position:absolute;left:24px;top:14px;max-width:300px;pointer-events:none}
+.sky-head h2{margin:0;font:400 28px var(--display);color:var(--text)}
+.sky-head p{margin:4px 0 10px;font:13px/1.45 var(--ui);color:var(--muted)}
+.sky-head .act{pointer-events:auto;background:var(--bg)}
+.sky-credit{position:absolute;right:16px;bottom:8px;margin:0;font:11px var(--ui);color:var(--muted);pointer-events:none}
+body.sky-view .hint,body.sky-view .row-labels{display:none}
+body.sky-view #layerRow,body.sky-view .dock-sep{display:none}
+@media (min-width:900px){.sky-credit{bottom:104px}}
+@media (max-width:899px){
+  .sky-head{left:16px;top:10px;max-width:260px}
+  .sky-head h2{font-size:22px}
+  .sky-head p,.sky-head h2{display:none}
+  .sky-credit{left:16px;right:16px;bottom:74px;font-size:10px}
+}
