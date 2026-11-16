@@ -5719,7 +5719,21 @@
     "role": "Mother of Amphion and Zethus",
     "tagline": "Bore twins to Zeus, and spent years as her uncle’s prisoner.",
     "story": "Daughter of Nycteus. Zeus lay with her, and when her father threatened her she fled to Sicyon and married its king, Epopeus. Her uncle Lycus killed him and led her back; on the way, at Eleutherae, she bore twins, who were left on the mountain and raised by a herdsman. Lycus and his wife Dirce kept her locked up, until her chains fell off of themselves and she found her sons.",
-    "versions": "Homer calls her a daughter of the river Asopus, and tells only that she bore Zeus the two founders of Thebes. In Ovid, Zeus came to her as a satyr. One of Hyginus’ two accounts makes her the first wife of Lycus. In Pausanias, Dionysus drove her mad for Dirce’s death, and she wandered Greece until Phocus, a grandson of Sisyphus, cured and married her."
+    "versions": "Homer calls her a daughter of the river Asopus, and tells only that she bore Zeus the two founders of Thebes. In Ovid, Zeus came to her as a satyr. One of Hyginus’ two accounts makes her the first wife of Lycus. In Pausanias, Dionysus drove her mad for Dirce’s death, and she wandered Greece until Phocus, a grandson of Sisyphus, cured and married her.",
+    "art": [
+      {
+        "title": "Jupiter and Antiope",
+        "meta": "Antoine Watteau, c. 1716",
+        "where": "Louvre, Paris",
+        "url": "https://en.wikipedia.org/wiki/Jupiter_and_Antiope_(Watteau)",
+        "image": {
+          "file": "Antoine Watteau - Jupiter and Antiope - WGA25445.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Antoine_Watteau_-_Jupiter_and_Antiope_-_WGA25445.jpg/960px-Antoine_Watteau_-_Jupiter_and_Antiope_-_WGA25445.jpg",
+          "credit": "Antoine Watteau",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "epopeus",
@@ -5902,7 +5916,21 @@
         "credit": "Johannes Hevelius, Uranographia (1690)",
         "licence": "Public domain"
       }
-    }
+    },
+    "art": [
+      {
+        "title": "The Education of Achilles by the Centaur Chiron",
+        "meta": "Jean-Baptiste Regnault, 1782",
+        "where": "Louvre, Paris",
+        "url": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Regnault_001.jpg",
+        "image": {
+          "file": "Jean-Baptiste Regnault 001.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Jean-Baptiste_Regnault_001.jpg/960px-Jean-Baptiste_Regnault_001.jpg",
+          "credit": "Jean-Baptiste Regnault",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "peneus",
@@ -5932,7 +5960,21 @@
     "transformation": {
       "text": "A laurel tree.",
       "sources": ["L"]
-    }
+    },
+    "art": [
+      {
+        "title": "Apollo and Daphne",
+        "meta": "Piero del Pollaiuolo, c. 1470–80",
+        "where": "National Gallery, London",
+        "url": "https://en.wikipedia.org/wiki/Apollo_and_Daphne_(Pollaiuolo)",
+        "image": {
+          "file": "Pollaiolo, Piero del - Apollo and Daphne.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Pollaiolo%2C_Piero_del_-_Apollo_and_Daphne.jpg/960px-Pollaiolo%2C_Piero_del_-_Apollo_and_Daphne.jpg",
+          "credit": "Piero del Pollaiuolo",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "cyrene",
@@ -5971,7 +6013,21 @@
     "role": "Satyr and piper",
     "tagline": "Challenged a god at music, and was skinned for it.",
     "story": "A satyr. Athena made the pipes and threw them away, because playing them puffed out her cheeks. Marsyas picked them up, learned to play, and challenged Apollo, the winner to do as he liked with the loser. Apollo won, hung him from a pine tree and flayed him.",
-    "versions": "In Apollodorus, Apollo won by playing his lyre upside down and telling Marsyas to do the same with his pipes. His father is Olympus in Apollodorus and Oeagrus in Hyginus; in Ovid, Olympus is his pupil. In Pausanias, Athena struck him for picking up the pipes."
+    "versions": "In Apollodorus, Apollo won by playing his lyre upside down and telling Marsyas to do the same with his pipes. His father is Olympus in Apollodorus and Oeagrus in Hyginus; in Ovid, Olympus is his pupil. In Pausanias, Athena struck him for picking up the pipes.",
+    "art": [
+      {
+        "title": "The Flaying of Marsyas",
+        "meta": "Titian, c. 1570–76",
+        "where": "Archdiocesan Museum, Kroměříž",
+        "url": "https://en.wikipedia.org/wiki/Flaying_of_Marsyas_(Titian)",
+        "image": {
+          "file": "Titian - The Flaying of Marsyas.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Titian_-_The_Flaying_of_Marsyas.jpg/960px-Titian_-_The_Flaying_of_Marsyas.jpg",
+          "credit": "Titian",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "orion",
@@ -5996,7 +6052,22 @@
         "credit": "Johannes Hevelius, Uranographia (1690)",
         "licence": "Public domain"
       }
-    }
+    },
+    "art": [
+      {
+        "title": "Blind Orion Searching for the Rising Sun",
+        "meta": "Nicolas Poussin, 1658",
+        "where": "Metropolitan Museum of Art, New York",
+        "url": "https://en.wikipedia.org/wiki/Blind_Orion_Searching_for_the_Rising_Sun",
+        "image": {
+          "file": "Blind Orion Searching for the Rising Sun MET DP148490.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Blind_Orion_Searching_for_the_Rising_Sun_MET_DP148490.jpg/960px-Blind_Orion_Searching_for_the_Rising_Sun_MET_DP148490.jpg",
+          "credit": "Nicolas Poussin; Metropolitan Museum of Art",
+          "licence": "CC0",
+          "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      }
+    ]
   },
   {
     "id": "lycaon",
@@ -6026,7 +6097,21 @@
     "role": "Mother of Asclepius",
     "tagline": "Carried a god’s child, and took a mortal lover.",
     "story": "Daughter of Phlegyas, from the plain of Dotium in Thessaly. Apollo loved her, and she was with child by him when she lay with Ischys, son of Elatus. She was killed for it, and Apollo took the child, Asclepius, from her body as it lay on the pyre.",
-    "versions": "In Pindar, Apollo knew of himself, and sent Artemis to shoot her. In Apollodorus and Ovid a raven brought him the news; he killed her himself, and turned the raven from white to black. In Pausanias, Hermes took the child from the flames; the Epidaurians said she bore him on their mountain and left him there, where a goat fed him."
+    "versions": "In Pindar, Apollo knew of himself, and sent Artemis to shoot her. In Apollodorus and Ovid a raven brought him the news; he killed her himself, and turned the raven from white to black. In Pausanias, Hermes took the child from the flames; the Epidaurians said she bore him on their mountain and left him there, where a goat fed him.",
+    "art": [
+      {
+        "title": "Apollo and Coronis",
+        "meta": "Adam Elsheimer, c. 1606–08",
+        "where": "Walker Art Gallery, Liverpool",
+        "url": "https://commons.wikimedia.org/wiki/File:Adam_Elsheimer_-_Apollo_and_Coronis_-_Google_Art_Project.jpg",
+        "image": {
+          "file": "Adam Elsheimer - Apollo and Coronis - Google Art Project.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Adam_Elsheimer_-_Apollo_and_Coronis_-_Google_Art_Project.jpg/960px-Adam_Elsheimer_-_Apollo_and_Coronis_-_Google_Art_Project.jpg",
+          "credit": "Adam Elsheimer",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "ischys",
@@ -6056,7 +6141,21 @@
     "transformation": {
       "text": "A flower grew from his blood.",
       "sources": ["L"]
-    }
+    },
+    "art": [
+      {
+        "title": "The Death of Hyacinthos",
+        "meta": "Jean Broc, 1801",
+        "where": "Musée Sainte-Croix, Poitiers",
+        "url": "https://en.wikipedia.org/wiki/The_Death_of_Hyacinthos",
+        "image": {
+          "file": "Jean Broc - The Death of Hyacinthos.jpg",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Jean_Broc_-_The_Death_of_Hyacinthos.jpg",
+          "credit": "Jean Broc",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "autonoe",
@@ -6115,7 +6214,21 @@
         "credit": "Johannes Hevelius, Uranographia (1690)",
         "licence": "Public domain"
       }
-    }
+    },
+    "art": [
+      {
+        "title": "Diana and Callisto",
+        "meta": "Titian, 1556–59",
+        "where": "National Gallery, London, and National Galleries of Scotland, Edinburgh",
+        "url": "https://en.wikipedia.org/wiki/Diana_and_Callisto",
+        "image": {
+          "file": "Titian - Diana and Callisto - WGA22885.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Titian_-_Diana_and_Callisto_-_WGA22885.jpg/960px-Titian_-_Diana_and_Callisto_-_WGA22885.jpg",
+          "credit": "Titian",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "asclepius",
@@ -6157,7 +6270,21 @@
     "transformation": {
       "text": "A stag, torn apart by his own hounds.",
       "sources": ["A", "L"]
-    }
+    },
+    "art": [
+      {
+        "title": "Diana and Actaeon",
+        "meta": "Titian, 1556–59",
+        "where": "National Gallery, London, and National Galleries of Scotland, Edinburgh",
+        "url": "https://en.wikipedia.org/wiki/Diana_and_Actaeon",
+        "image": {
+          "file": "Titian - Diana and Actaeon - 1556-1559.jpg",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Titian_-_Diana_and_Actaeon_-_1556-1559.jpg/960px-Titian_-_Diana_and_Actaeon_-_1556-1559.jpg",
+          "credit": "Titian",
+          "licence": "Public domain"
+        }
+      }
+    ]
   },
   {
     "id": "arcas",

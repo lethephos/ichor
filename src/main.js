@@ -11,7 +11,7 @@ import {resetMode, foldHeader} from "./sheet.js";
 import {hideHint, buildStories, srcNote, setSource, curseSel, threadBtn, setSky} from "./controls.js";
 import {indexPeople, ALL_KEY} from "./find.js";
 import {renderNode} from "./figure.js";
-import {storyMove, openCurse} from "./stories.js";
+import {storyMove, openCurse, openCurses} from "./stories.js";
 import {runThread} from "./thread.js";
 
 /* ---------- header ---------- */
@@ -20,15 +20,19 @@ const SITE_TITLE = document.title;
 const START = new URLSearchParams(location.search);
 function showFamily(){
   document.getElementById("branchTitle").textContent = FAMILY.title;
-  document.getElementById("familyName").textContent = FAMILY.label;
+  // on phones the pill has room for a dozen letters: a long name gives way to its short form there
+  document.getElementById("familyName").innerHTML = `<span class="fn-full">${FAMILY.label}</span><span class="fn-short">${FAMILY.short || FAMILY.label}</span>`;
   familyItems.forEach(li => li.setAttribute("aria-selected", String(li.dataset.family === FAMILY.id)));
 }
 
 /* ---------- family switcher: a pill above the sources opens the list of families ---------- */
 const familyBtn = document.getElementById("familyBtn"), familyMenu = document.getElementById("familyMenu");
-familyMenu.innerHTML = FAMILIES.map(f => `<li role="option" aria-selected="${f.id===FAMILY.id}" data-family="${f.id}" tabindex="-1">
-  <span class="fm-label">${f.label}</span>${f.note ? `<span class="fm-note">${f.note}</span>` : ""}</li>`).join("");
-const familyItems = [...familyMenu.querySelectorAll("li")];
+const familyItem = f => `<li role="option" aria-selected="${f.id===FAMILY.id}" data-family="${f.id}" tabindex="-1">
+  <span class="fm-label">${f.label}</span>${f.note ? `<span class="fm-note">${f.note}</span>` : ""}</li>`;
+// the list is sorted under headings (gods, houses, journeys); a family with no group comes first, on its own
+familyMenu.innerHTML = FAMILIES.filter(f => !f.group).map(familyItem).join("") + (BRANCH.familyGroups || []).map(g =>
+  `<li class="fm-group" role="presentation">${g}</li>` + FAMILIES.filter(f => f.group === g).map(familyItem).join("")).join("");
+const familyItems = [...familyMenu.querySelectorAll("li[data-family]")];
 export function openFamilies(open){
   familyMenu.hidden = !open; familyBtn.setAttribute("aria-expanded", String(open));
   if (open) { document.getElementById("srcMenu").hidden = true; document.getElementById("srcBtn").setAttribute("aria-expanded", "false"); }
@@ -74,6 +78,7 @@ export function syncUrl(){
   set("source", state.src==="all" ? null : state.src);
   set("sky", state.sky ? "1" : null);
   set("view", state.view);
+  if (state.mode || state.view) document.getElementById("begin").hidden = true;   // the invitation to begin steps aside once anything is open
   if (url.href !== location.href) history.replaceState(history.state, "", url);
   const title = fig ? `${fig.name} · Ichor` : story ? `${story.title} · Ichor` : FAMILY.id === FAMILIES[0].id ? SITE_TITLE : `${FAMILY.title} · Ichor`;
   if (document.title !== title) document.title = title;
@@ -103,7 +108,7 @@ function openFromUrl(q){
   }
 }
 familyBtn.addEventListener("click", ev => { ev.stopPropagation(); openFamilies(familyMenu.hidden); });
-familyMenu.addEventListener("click", ev => { const li = ev.target.closest("li"); if (li) goFamily(li.dataset.family); });
+familyMenu.addEventListener("click", ev => { const li = ev.target.closest("li[data-family]"); if (li) goFamily(li.dataset.family); });
 familyMenu.addEventListener("keydown", ev => {
   const i = familyItems.indexOf(document.activeElement);
   if (ev.key==="ArrowDown") { ev.preventDefault(); familyItems[Math.min(i+1, familyItems.length-1)].focus(); }
@@ -135,6 +140,26 @@ export function nodeClick(id){
   select(id, true);
 }
 
+/* A first visit is offered three stories to begin with: the way in for a reader who does not know where to look.
+   It goes once a story is chosen or it is closed, and does not come back on that device. */
+const begin = document.getElementById("begin");
+const BEGUN = "ichor-begun", begun = () => { begin.hidden = true; try { localStorage.setItem(BEGUN, "1"); } catch(e) {} };
+function offerStories(){
+  let seen = false; try { seen = !!localStorage.getItem(BEGUN); } catch(e) {}
+  const picks = (BRANCH.begin || []).map(id => ALL_STORIES.find(c => c.id === id)).filter(Boolean);
+  if (seen || !picks.length || ["figure", "story", "view", "sky"].some(k => START.has(k))) return;
+  begin.innerHTML = `<span class="begin-say">Begin with a story</span>${picks.map(c => `<button class="act" data-begin="${c.id}">${c.title}</button>`).join("")}
+    <button class="act begin-all" data-begin="">All ${ALL_STORIES.length} stories</button><button class="begin-x" aria-label="Close">×</button>`;
+  begin.querySelectorAll("[data-begin]").forEach(b => b.onclick = () => {
+    begun();
+    const c = ALL_STORIES.find(c => c.id === b.dataset.begin);
+    if (!c) return openCurses();
+    const home = storyMove(c); if (home) moveToFamily(home.id);
+    openCurse(c.id);
+  });
+  begin.querySelector(".begin-x").onclick = begun;
+  begin.hidden = false;
+}
 showFamily(); buildStories(); indexPeople(); drawTree();
 initialView();
 apply(false);
@@ -142,4 +167,5 @@ apply(false);
    when the web fonts are in (4px either way); so the card opens then, or after a second and a half at the latest. */
 if (START.has("figure") || START.has("story")) Promise.race([document.fonts ? document.fonts.ready : null, new Promise(r => setTimeout(r, 1500))]).then(() => openFromUrl(START));
 else openFromUrl(START);
+offerStories();
 intro();

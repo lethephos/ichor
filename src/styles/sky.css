@@ -29,6 +29,6 @@ body.sky-view .hint,body.sky-view .row-labels{display:none}
 body.sky-view #layerRow,body.sky-view .dock-sep{display:none}
 @media (max-width:899px){
   /* on phones only the way back shows, at the upper right of the map */
-  .sky-head{left:auto;right:12px;top:10px;max-width:none}
+  .sky-head{left:auto;right:46px;top:10px;max-width:none;transform:translateX(50%)}
   .sky-head p,.sky-head h2{display:none}
 }

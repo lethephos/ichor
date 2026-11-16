@@ -49,7 +49,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 **Code**
 - Keep it simple: no backend, no framework, one dependency (D3).
 - The files in `src/` are set up in a fixed order, each importing the one before it first (`state`, `theme`, `tree`, `camera`, `sheet`, `controls`, `find`, `figure`, `stories`, `guide`, `thread`, `sky`, `intro`, `main`). That first import must stay.
-- `npm run check` checks the data and runs before every build; a slip in the JSON stops the deploy.
+- `npm run check` checks the data and runs before every build; a slip in the JSON stops the deploy. `npm run smoke` walks the built site in a browser and fails on any page error: run it before merging a change to the code or to the shape of the data.
 - The build splits the data: the tree’s part goes with the code, the long texts a card shows come in a second file. A card waits for them through `whenTexts`. A new text field belongs in `TEXT_FIELDS` in `vite.config.js`. The passages of the links travel in that second file too; after adding passages, run `scripts/passages/links.py` so they become links.
 
 **Working with the reader**
@@ -71,7 +71,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 ## Open questions
 
 - The name is Ichor (the reader settled it; Stemma was the other candidate). A domain and social handles are still to be checked.
-- Images in cards: only from Wikimedia Commons or museums with open licences, always with credit. Each art entry with a picture has `image: {file, thumb, credit, licence, licence_url}` (`file` is the Commons file name, `thumb` its 960px thumbnail; paintings credit the painter, photos of sculpture credit the photographer with the CC licence linked). 36 of 37 works have one; the head of the Nemesis of Rhamnous has no open photo on Commons yet. Licence notes per artwork are in the verification document.
+- Images in cards: only from Wikimedia Commons or museums with open licences, always with credit. Each art entry with a picture has `image: {file, thumb, credit, licence, licence_url}` (`file` is the Commons file name, `thumb` its 960px thumbnail; paintings credit the painter, photos of sculpture credit the photographer with the CC licence linked). 45 of 46 works have one; the head of the Nemesis of Rhamnous has no open photo on Commons yet. Licence notes per artwork are in the verification document.
 - Hesiod fragment numbering: Catalogue of Women fr. 23a (Merkelbach–West); the Most (Loeb) number still needs checking.
 - Next branches: to be decided.
 - A database: none for now (all data is static JSON, the theme pick is in localStorage). Left for the future, for features readers write to: accounts, favourites, comments, suggested corrections.

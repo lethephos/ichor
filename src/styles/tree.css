@@ -71,3 +71,19 @@
   .rl-divider{transform:translateY(calc(-100% - 5px))}
   .row-labels.off .rl{display:none}
 }
+
+/* the invitation to begin with a story, on a first visit */
+.begin{position:absolute;left:158px;top:40px;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:8px;animation:begin-in .6s 2.2s both}
+.begin[hidden]{display:none}
+@keyframes begin-in{from{opacity:0}to{opacity:1}}
+.begin-say{font:15px var(--display);color:var(--text);margin-right:4px}
+.begin .act{background:var(--bg-2);font:14px var(--display);padding:5px 12px;border-radius:0}
+.begin .act:hover{border-color:var(--accent)}
+.begin .begin-all{font:500 12px var(--ui);color:var(--muted)}
+.begin-x{background:none;border:none;padding:4px 8px;font:18px var(--ui);color:var(--muted);cursor:pointer}
+body.story .begin{display:none}
+@media (max-width:899px){
+  .begin{left:12px;right:12px;top:auto;bottom:calc(60px + env(safe-area-inset-bottom,0px));padding:10px 34px 12px 12px;background:var(--bg-2);border:1px solid var(--rule);gap:6px}
+  .begin-say{flex:1 0 100%}
+  .begin-x{position:absolute;right:2px;top:2px}
+}

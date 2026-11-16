@@ -120,6 +120,9 @@ export function openSky(){
   if (FAMILY.id !== FAMILIES[0].id) moveToFamily(FAMILIES[0].id);   // the sky holds figures from every family
   state.view = "sky";
   view.hidden = false; document.body.classList.add("sky-view");
+  // on phones the way back sits under the two buttons at the upper right, centred on the line between them
+  const head = view.querySelector(".sky-head"), tools = document.getElementById("viewTools").getBoundingClientRect();
+  head.style.right = wide() ? "" : `${Math.max(innerWidth - (tools.left + tools.width / 2), head.offsetWidth / 2 + 4)}px`;
   load().then(() => { if (drawn) frame(false); });
   syncSky(); syncUrl();
 }
