@@ -25,14 +25,10 @@
 .sky-head h2{margin:0;font:400 28px var(--display);color:var(--text)}
 .sky-head p{margin:4px 0 10px;font:13px/1.45 var(--ui);color:var(--muted)}
 .sky-head .act{pointer-events:auto;background:var(--bg)}
-.sky-credit{position:absolute;right:16px;bottom:8px;margin:0;font:11px var(--ui);color:var(--muted);pointer-events:none}
 body.sky-view .hint,body.sky-view .row-labels{display:none}
 body.sky-view #layerRow,body.sky-view .dock-sep{display:none}
-@media (min-width:900px){.sky-credit{bottom:104px}}
 @media (max-width:899px){
-  /* on phones the way back sits just above the Sky button that opened the map */
-  .sky-head{left:auto;right:0;top:auto;bottom:calc(47px + env(safe-area-inset-bottom,0px));max-width:none}
+  /* on phones only the way back shows, at the upper right of the map */
+  .sky-head{left:auto;right:12px;top:10px;max-width:none}
   .sky-head p,.sky-head h2{display:none}
-  .sky-head .act{display:block;min-width:20vw;padding:12px 10px;border-right:0;border-bottom:0;background:var(--bg-2);font-size:14px}
-  .sky-credit{left:12px;right:34vw;bottom:calc(54px + env(safe-area-inset-bottom,0px));font-size:10px}
 }

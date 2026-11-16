@@ -65,7 +65,7 @@ function openAbout(){
     <div class="sec"><h3>How to read it</h3><ul class="rels about">
       <li><span class="rel static">Tap a figure to open its card. Pinch or scroll to zoom, drag to move.</span></li>
       <li><span class="rel static">Family picks a part of the tree; Source shows only what one group of ancient writers tells.</span></li>
-      <li><span class="rel static">In the sky lights the figures the myths set among the stars, each with its constellation. Sky map shows them where they stand in the sky.</span></li>
+      <li><span class="rel static">In the sky lights the figures the myths set among the stars, each with its constellation. Sky map shows them where they stand in the sky. Its stars and constellation figures come from d3-celestial by Olaf Frohn (BSD licence).</span></li>
     </ul><ul class="opts">${item(`data-demo="rows"`, "Lower means descended, not later", "The rows I–VII count steps down each house, so the houses don’t line up in time.")}</ul></div>
     <div class="sec"><h3>The lines</h3><p class="demo-hint">Tap one to see an example on the tree.</p><ul class="opts">${LAYERS.map(L => item(`data-demo="${L.k}"`, L.label, "", `<svg viewBox="0 0 26 10" aria-hidden="true">${SAMPLE[L.k]}</svg>`)).join("")}</ul></div>
     <div class="sec"><h3>The sources</h3><p class="demo-hint">Tap one to show only what it tells; tap again for all versions.</p><ul class="opts">${Object.keys(SRC).map(k => item(`data-guide-src="${k}"`, SRC[k], SRC_FULL[k])).join("")}</ul></div>`);

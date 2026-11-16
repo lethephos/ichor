@@ -15,8 +15,7 @@ const view = document.createElement("div");
 view.id = "skyView"; view.hidden = true;
 view.innerHTML = `<svg id="skyMap" role="img" aria-label="Map of the sky with the constellations of Greek myth"></svg>
   <div class="sky-head"><h2>The sky</h2><p>The figures the myths set among the stars, where they stand. Tap a name to open its card.</p>
-    <button class="act" id="skyClose" type="button">← The tree</button></div>
-  <p class="sky-credit" id="skyCredit"></p>`;
+    <button class="act" id="skyClose" type="button">← The tree</button></div>`;
 stage.appendChild(view);
 const svg = d3.select("#skyMap"), root = svg.append("g");
 
@@ -36,7 +35,6 @@ function load(){
 function draw(sky){
   if (drawn) return;
   drawn = true;
-  document.getElementById("skyCredit").textContent = sky.credit;
   const code = Object.fromEntries(Object.entries(sky.names).map(([k, v]) => [v.name, k]));
   const figures = d3.groups(ALL_PEOPLE.filter(p => p.sky), p => p.sky.constellation)
     .map(([name, people]) => ({name, people, code: code[name], xy: mean((code[name] ? sky.lines[code[name]].flat() : [PLEIADES]).filter(p => p[1] >= SOUTH).map(at))}));   // the middle of the figure as drawn: right ascension wraps at 0h
