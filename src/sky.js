@@ -9,9 +9,7 @@ import {state, wide, inSky} from "./state.js";
 import {resetMode} from "./sheet.js";
 import {select, moveToFamily, syncUrl} from "./main.js";
 import skyUrl from "../data/sky.json?url";
-import ART_H from "../data/skyart.json";
-import ART_M from "../data/skyart-m.json";
-const ART = new URLSearchParams(location.search).get("art") === "m" ? ART_M : new URLSearchParams(location.search).get("art") === "0" ? {} : ART_H;   // trial
+import ART from "../data/skyart.json";
 
 const stage = document.getElementById("stage");
 const view = document.createElement("div");
@@ -80,6 +78,7 @@ function draw(sky){
   frame(false);
   syncSky();
 }
+
 const zoom = d3.zoom().scaleExtent([0.12, 5]).on("zoom", ev => {
   const k = ev.transform.k;
   root.attr("transform", ev.transform);
@@ -87,6 +86,8 @@ const zoom = d3.zoom().scaleExtent([0.12, 5]).on("zoom", ev => {
   figSel.select(".sky-label").attr("transform", `scale(${1 / k})`);
   starSel.attr("r", s => Math.max(0.55, (5.6 - s[2]) * 0.62) / Math.pow(k, 0.55));
   view.classList.toggle("far", k < 0.42);
+  // the drawings wait until the sky comes close: from afar a figure is only a smudge
+  view.style.setProperty("--art", Math.max(0, Math.min(1, (k - (wide() ? 0.55 : 0.42)) / (wide() ? 0.4 : 0.3))).toFixed(2));
 }).on("end", uncrowd);
 /* Where names would run into each other, as on the whole sky, the later ones wait until the sky comes closer;
    the open figure and the constellations a source keeps come first */
@@ -150,7 +151,8 @@ export function syncSky(){
   figSel.selectAll(".sky-who").classed("off", p => !inSky(p)).classed("sel", p => state.mode === "node" && state.sel === p.id);
   const lit = new Set(figSel.data().filter(f => f.people.some(inSky)).map(f => f.code));
   lineSel.classed("off", ([k]) => !lit.has(k));
-  artSel.classed("off", ([k]) => !lit.has(k));
+  const open = state.mode === "node" && figSel.data().find(f => f.people.some(p => p.id === state.sel));
+  artSel.classed("off", ([k]) => !lit.has(k)).classed("sel", ([k]) => !!open && open.code === k);
   uncrowd();
 }
 document.getElementById("skyClose").onclick = closeSky;
