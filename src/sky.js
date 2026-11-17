@@ -52,8 +52,9 @@ function draw(sky){
   });
 
   // the figures as the old atlases drew them, faint under the stars
+  // a drawing is fetched only when the sky is close enough to show it and it is near the screen
   artSel = root.append("g").attr("class", "sky-art").selectAll("image").data(Object.entries(ART)).join("image")
-    .attr("href", ([, a]) => `/sky/${a.file}`).attr("width", ([, a]) => a.size[0]).attr("height", ([, a]) => a.size[1])
+    .attr("width", ([, a]) => a.size[0]).attr("height", ([, a]) => a.size[1])
     .attr("transform", ([, a]) => `matrix(${a.matrix})`);
 
   const path = d3.line();
@@ -87,7 +88,13 @@ const zoom = d3.zoom().scaleExtent([0.12, 5]).on("zoom", ev => {
   starSel.attr("r", s => Math.max(0.55, (5.6 - s[2]) * 0.62) / Math.pow(k, 0.55));
   view.classList.toggle("far", k < 0.42);
   // the drawings wait until the sky comes close: from afar a figure is only a smudge
-  view.style.setProperty("--art", Math.max(0, Math.min(1, (k - (wide() ? 0.55 : 0.42)) / (wide() ? 0.4 : 0.3))).toFixed(2));
+  const art = Math.max(0, Math.min(1, (k - (wide() ? 0.55 : 0.42)) / (wide() ? 0.4 : 0.3)));
+  view.style.setProperty("--art", art.toFixed(2));
+  if (art > 0) artSel.filter(function () { return !this.hasAttribute("href"); }).each(function ([, a]) {
+    const m = a.matrix, [w, h] = a.size, [x, y] = ev.transform.apply([m[0] * w / 2 + m[2] * h / 2 + m[4], m[1] * w / 2 + m[3] * h / 2 + m[5]]);
+    const pad = 110 * k;
+    if (x > -pad && x < view.clientWidth + pad && y > -pad && y < view.clientHeight + pad) this.setAttribute("href", `/sky/${a.file}`);
+  });
 }).on("end", uncrowd);
 /* Where names would run into each other, as on the whole sky, the later ones wait until the sky comes closer;
    the open figure and the constellations a source keeps come first */
