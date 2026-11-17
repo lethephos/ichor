@@ -65,7 +65,7 @@ This file holds the rules and the short picture. The detail lives in `docs/`; re
 - Figure card: who the figure is, a small family tree, feuds and fates, where the sources disagree, the stories they take part in, what is not ancient, the sky, art.
 - Stories told step by step, by all sources or as one source tells them; every family has at least one, and all have been checked against the sources.
 - Ariadne’s thread, search over the whole tree, the Guide with a tour, light and dark themes, the opening.
-- The sky: a layer that lights the figures set among the stars (`?sky=1`), and a sky map, a planisphere with every star to the fifth magnitude, where those figures stand in their constellations (`?view=sky`); as the sky draws close, sixteen of them show faintly as Hevelius drew them.
+- The sky: a layer that lights the figures set among the stars (`?sky=1`), and a sky map, a planisphere with every star to the fifth magnitude, where those figures stand in their constellations (`?view=sky`); as the sky draws close, twenty of them show faintly as Hevelius drew them, all from one copy of his atlas.
 - The address names what is open: `?family=thebes`, `?figure=medea`, `?story=argonauts&step=3`, `?source=H`.
 
 ## Open questions
