@@ -9,6 +9,7 @@ import {state, wide, inSky} from "./state.js";
 import {resetMode} from "./sheet.js";
 import {select, moveToFamily, syncUrl} from "./main.js";
 import skyUrl from "../data/sky.json?url";
+import ART from "../data/skyart.json";
 
 const stage = document.getElementById("stage");
 const view = document.createElement("div");
@@ -27,7 +28,7 @@ const at = ([ra, dec]) => { const r = (90 - dec) * PX, a = ra * Math.PI / 180; r
 const PLEIADES = [56.75, 24.12];
 const mean = pts => [d3.mean(pts, p => p[0]), d3.mean(pts, p => p[1])];
 
-let drawn = false, loading = null, starSel, figSel, lineSel;
+let drawn = false, loading = null, starSel, figSel, lineSel, artSel;
 function load(){
   loading ||= fetch(skyUrl).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(draw).catch(() => { loading = null; });
   return loading;
@@ -49,6 +50,12 @@ function draw(sky){
     const a = h * 15 * Math.PI / 180, r = RIM + 13;
     grid.append("text").attr("class", "sky-hour").attr("x", r * Math.sin(a)).attr("y", -r * Math.cos(a)).attr("dy", "0.35em").attr("text-anchor", "middle").text(`${h}h`);
   });
+
+  // the figures as the old atlases drew them, faint under the stars
+  // a drawing is fetched only when the sky is close enough to show it and it is near the screen
+  artSel = root.append("g").attr("class", "sky-art").selectAll("image").data(Object.entries(ART)).join("image")
+    .attr("width", ([, a]) => a.size[0]).attr("height", ([, a]) => a.size[1])
+    .attr("transform", ([, a]) => `matrix(${a.matrix})`);
 
   const path = d3.line();
   // a figure’s line breaks where it dips below the rim
@@ -72,6 +79,7 @@ function draw(sky){
   frame(false);
   syncSky();
 }
+
 const zoom = d3.zoom().scaleExtent([0.12, 5]).on("zoom", ev => {
   const k = ev.transform.k;
   root.attr("transform", ev.transform);
@@ -79,6 +87,14 @@ const zoom = d3.zoom().scaleExtent([0.12, 5]).on("zoom", ev => {
   figSel.select(".sky-label").attr("transform", `scale(${1 / k})`);
   starSel.attr("r", s => Math.max(0.55, (5.6 - s[2]) * 0.62) / Math.pow(k, 0.55));
   view.classList.toggle("far", k < 0.42);
+  // the drawings wait until the sky comes close: from afar a figure is only a smudge
+  const art = Math.max(0, Math.min(1, (k - (wide() ? 0.55 : 0.42)) / (wide() ? 0.4 : 0.3)));
+  view.style.setProperty("--art", art.toFixed(2));
+  if (art > 0) artSel.filter(function () { return !this.hasAttribute("href"); }).each(function ([, a]) {
+    const m = a.matrix, [w, h] = a.size, [x, y] = ev.transform.apply([m[0] * w / 2 + m[2] * h / 2 + m[4], m[1] * w / 2 + m[3] * h / 2 + m[5]]);
+    const pad = 110 * k;
+    if (x > -pad && x < view.clientWidth + pad && y > -pad && y < view.clientHeight + pad) this.setAttribute("href", `/sky/${a.file}`);
+  });
 }).on("end", uncrowd);
 /* Where names would run into each other, as on the whole sky, the later ones wait until the sky comes closer;
    the open figure and the constellations a source keeps come first */
@@ -142,6 +158,8 @@ export function syncSky(){
   figSel.selectAll(".sky-who").classed("off", p => !inSky(p)).classed("sel", p => state.mode === "node" && state.sel === p.id);
   const lit = new Set(figSel.data().filter(f => f.people.some(inSky)).map(f => f.code));
   lineSel.classed("off", ([k]) => !lit.has(k));
+  const open = state.mode === "node" && figSel.data().find(f => f.people.some(p => p.id === state.sel));
+  artSel.classed("off", ([k]) => !lit.has(k)).classed("sel", ([k]) => !!open && open.code === k);
   uncrowd();
 }
 document.getElementById("skyClose").onclick = closeSky;
